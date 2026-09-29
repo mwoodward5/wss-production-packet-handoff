@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wss://ghost-agency/contracts/consent.schema.json",
+  "title": "Consent Record",
+  "description": "Per-channel consent state machine. NO outbound call or SMS may fire unless the matching channel is granted=true AND revoked_at is null AND proof exists. Email cold outreach is permitted under CAN-SPAM without prior consent but MUST honor suppression.",
+  "type": "object",
+  "required": ["channels", "updated_at"],
+  "properties": {
+    "channels": {
+      "type": "object",
+      "properties": {
+        "call":  { "$ref": "#/$defs/channel" },
+        "sms":   { "$ref": "#/$defs/channel" },
+        "email": { "$ref": "#/$defs/channel" }
+      }
+    },
+    "quiet_hours": { "type": "object", "properties": { "timezone": {"type":"string"}, "no_contact_before": {"type":"string","default":"08:00"}, "no_contact_after": {"type":"string","default":"20:00"} } },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "$defs": {
+    "channel": {
+      "type": "object",
+      "required": ["granted"],
+      "properties": {
+        "granted": { "type": "boolean", "default": false },
+        "granted_at": { "type": "string", "format": "date-time" },
+        "proof": { "type": "object", "description": "How consent was captured", "properties": {
+          "method": { "type": "string", "enum": ["web_form_optin", "email_reply_optin", "verbal_confirmed_recorded", "owner_internal_test"] },
+          "artifact_url": { "type": "string", "description": "Form event id, email message id, or recording ref" },
+          "ip": { "type": "string" },
+          "form_copy_version": { "type": "string", "description": "The exact disclosure text version shown at opt-in" }
+        }},
+        "revoked_at": { "type": "string", "format": "date-time", "description": "Set on STOP reply, unsubscribe, or verbal revocation. Irreversible without a NEW opt-in event." },
+        "suppressed": { "type": "boolean", "description": "On any revocation or bounce-hard, suppress across the channel permanently." }
+      }
+    }
+  }
+}

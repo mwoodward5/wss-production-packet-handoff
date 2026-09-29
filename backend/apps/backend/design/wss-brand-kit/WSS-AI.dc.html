@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #08080B; }
+  a { color: #9E90FF; text-decoration: none; }
+  a:hover { color: #B7ACFF; }
+  input, button { font-family: inherit; }
+  input::placeholder { color: #5F5E68; }
+  ::selection { background: rgba(124,108,246,.32); }
+  [data-reduce="1"] * { animation: none !important; transition: none !important; }
+  @keyframes wpulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+  @keyframes wspin { to { transform: rotate(360deg); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes revealX { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes loadbar { 0% { width: 0; opacity: 1; } 78% { width: 100%; opacity: 1; } 100% { width: 100%; opacity: 0; } }
+  @keyframes kb { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
+  @keyframes bldbar { from { width: 4%; } to { width: 96%; } }
+  @keyframes ring92 { from { stroke-dashoffset: 465; } to { stroke-dashoffset: 37; } }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+  @media (max-width: 1000px) {
+    [data-r="navlinks"], [data-r="navcta"] { display: none !important; }
+    [data-r="menubtn"] { display: flex !important; }
+    [data-r="herotel"] { display: none !important; }
+    [data-r="pricegrid"] { grid-template-columns: 1fr !important; }
+    [data-r="summary"] { position: static !important; }
+    [data-r="whygrid"] { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 760px) {
+    [data-r="proofgrid"] { grid-template-columns: 1fr 1fr !important; }
+    [data-r="gradegrid"] { grid-template-columns: 1fr !important; }
+    [data-r="mocknav"] { display: none !important; }
+    [data-r="footgrid"] { grid-template-columns: 1fr 1fr !important; }
+    [data-r="herocol"] { max-width: 100% !important; }
+  }
+  @media (max-width: 560px) {
+    [data-r="proofgrid"] { grid-template-columns: 1fr !important; }
+    [data-r="mockcards"] { grid-template-columns: 1fr !important; }
+    [data-r="footgrid"] { grid-template-columns: 1fr !important; }
+    [data-r="heroform"], [data-r="buildform"], [data-r="finalform"] { flex-direction: column !important; }
+    [data-r="heroform"] > button, [data-r="buildform"] > button, [data-r="finalform"] > button { width: 100% !important; padding-top: 15px !important; padding-bottom: 15px !important; }
+  }
+</style>
+</helmet>
+<div data-reduce="{{reduceFlag}}" style="font-family:'Hanken Grotesk',system-ui,sans-serif; color:#F2F2F5; background:#08080B; min-height:100vh; overflow-x:hidden; -webkit-font-smoothing:antialiased;">
+
+  <!-- ============================= NAV ============================= -->
+  <!-- DEV: header persists across routes. CTAs map to /build, /login, /pricing. -->
+  <div style="position:sticky; top:0; z-index:100; background:rgba(8,8,11,.72); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1200px; margin:0 auto; height:64px; padding:0 22px; display:flex; align-items:center; justify-content:space-between; gap:20px;">
+      <a href="#top" style="display:flex; align-items:center; gap:11px; color:inherit;">
+        <svg width="34" height="34" viewBox="0 0 64 64" style="display:block; flex:none;">
+          <defs><linearGradient id="nvg" x1="12" y1="32" x2="50" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4A6CF7"></stop><stop offset="1" stop-color="#8B5CF6"></stop></linearGradient></defs>
+          <rect width="64" height="64" rx="15" fill="#131318"></rect>
+          <rect x="0.5" y="0.5" width="63" height="63" rx="14.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"></rect>
+          <path d="M12 24 L21 42 L30 26 L39 42 L50 20" fill="none" stroke="url(#nvg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="50" cy="20" r="7" fill="#34D399" opacity="0.22"></circle>
+          <circle cx="50" cy="20" r="4" fill="#34D399"></circle>
+        </svg>
+        <div style="display:flex; align-items:baseline; gap:9px;">
+          <span style="font-weight:800; font-size:19px; letter-spacing:-.02em; color:#F2F2F5;">WSS</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; letter-spacing:.34em; color:#8A8994;">LABS</span>
+        </div>
+      </a>
+
+      <div data-r="navlinks" style="display:flex; align-items:center; gap:4px;">
+        <sc-for list="{{navLinks}}" as="l" hint-placeholder-count="6">
+          <a href="{{l.href}}" style="font-size:13.5px; font-weight:500; color:#B4B3BD; padding:8px 12px; border-radius:8px; transition:color .18s ease, background .18s ease;" style-hover="color:#F2F2F5; background:rgba(255,255,255,.05)">{{l.label}}</a>
+        </sc-for>
+      </div>
+
+      <div data-r="navcta" style="display:flex; align-items:center; gap:9px;">
+        <a href="Command%20Center.dc.html" style="font-size:13px; font-weight:600; color:#E7E7EA; padding:8px 14px; border:1px solid rgba(255,255,255,.12); border-radius:9px; transition:border-color .18s ease;" style-hover="border-color:rgba(255,255,255,.26); color:#fff">Open Command Center</a>
+        <a href="#build" onClick="{{focusBuild}}" style="font-size:13px; font-weight:700; color:#fff; padding:9px 16px; border-radius:9px; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); box-shadow:0 6px 16px rgba(124,108,246,.30); transition:transform .12s ease, box-shadow .2s ease;" style-hover="transform:translateY(-1px); box-shadow:0 9px 22px rgba(124,108,246,.42)">Build my website</a>
+      </div>
+
+      <button data-r="menubtn" onClick="{{toggleNav}}" aria-label="Menu" style="display:none; border:1px solid rgba(255,255,255,.12); background:#131318; color:#F2F2F5; width:40px; height:40px; border-radius:10px; cursor:pointer; align-items:center; justify-content:center;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+      </button>
+    </div>
+
+    <sc-if value="{{navOpen}}">
+      <div data-r="mobilemenu" style="border-top:1px solid rgba(255,255,255,.07); background:rgba(10,10,14,.98); padding:12px 22px 18px;">
+        <div style="max-width:1200px; margin:0 auto; display:flex; flex-direction:column; gap:2px;">
+          <sc-for list="{{navLinks}}" as="l" hint-placeholder-count="6">
+            <a href="{{l.href}}" onClick="{{closeNav}}" style="font-size:15px; font-weight:600; color:#D9D8E0; padding:12px 8px; border-bottom:1px solid rgba(255,255,255,.05);">{{l.label}}</a>
+          </sc-for>
+          <a href="#build" onClick="{{focusBuild}}" style="margin-top:12px; text-align:center; font-size:14.5px; font-weight:700; color:#fff; padding:13px; border-radius:11px; background:linear-gradient(135deg, #4A6CF7, #8B5CF6);">Build my website</a>
+          <a href="Command%20Center.dc.html" onClick="{{closeNav}}" style="margin-top:8px; text-align:center; font-size:14px; font-weight:600; color:#E7E7EA; padding:12px; border:1px solid rgba(255,255,255,.12); border-radius:11px;">Open Command Center</a>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============================= HERO ============================= -->
+  <div id="top" style="position:relative; min-height:clamp(640px, 93vh, 940px); overflow:hidden; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="position:absolute; top:0; left:0; right:0; height:2px; z-index:6; background:linear-gradient(90deg, #4A6CF7, #8B5CF6, #34D399); animation:loadbar 1.3s cubic-bezier(.3,.7,.3,1) forwards;"></div>
+
+    <!-- MEDIA MONTAGE (real trade footage drop targets) -->
+    <div data-r="heromontage" style="position:absolute; inset:0; z-index:0; display:grid; grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(2,1fr); gap:2px; background:#0A0A0E;">
+      <sc-for list="{{heroTrades}}" as="t" hint-placeholder-count="6">
+        <div style="position:relative; grid-column:{{t.col}}; grid-row:{{t.row}}; overflow:hidden;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{t.slot}}" shape="rect" fit="cover" placeholder="{{t.ph}}" hint-size="100%,100%"></x-import>
+          <sc-if value="{{showLabels}}">
+            <div style="position:absolute; left:12px; bottom:11px; z-index:3; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.72); text-shadow:0 1px 6px rgba(0,0,0,.8); pointer-events:none;">{{t.label}}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+
+    <!-- cinematic scrim: heavy left for legibility, lighter right to keep footage alive -->
+    <div style="position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(90deg, rgba(8,8,11,.97) 0%, rgba(8,8,11,.92) 38%, rgba(8,8,11,.62) 66%, rgba(8,8,11,.42) 100%);"></div>
+    <div style="position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(180deg, rgba(8,8,11,.55) 0%, transparent 30%, transparent 55%, rgba(8,8,11,.9) 100%);"></div>
+    <div style="position:absolute; top:-160px; left:-120px; width:900px; height:560px; z-index:1; pointer-events:none; background:radial-gradient(circle at 40% 40%, rgba(124,108,246,.22), transparent 62%);"></div>
+
+    <!-- CONTENT -->
+    <div style="position:relative; z-index:4; max-width:1200px; margin:0 auto; padding:clamp(46px,7vh,92px) 22px 40px; min-height:inherit; display:flex; flex-direction:column; justify-content:center;">
+      <div data-r="herocol" style="max-width:660px; animation:riseIn .7s cubic-bezier(.2,.7,.3,1) both;">
+        <div style="display:inline-flex; align-items:center; gap:8px; padding:6px 12px; background:rgba(19,19,24,.7); border:1px solid rgba(255,255,255,.1); border-radius:999px; margin-bottom:22px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#34D399; box-shadow:0 0 8px rgba(52,211,153,.7); animation:wpulse 1.6s infinite;"></span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#B4B3BD;">AI OPERATIONS FOR LOCAL BUSINESS</span>
+        </div>
+
+        <h1 style="margin:0; display:flex; align-items:baseline; gap:11px;">
+          <span style="font-weight:800; font-size:26px; letter-spacing:-.02em; color:#F2F2F5;">WSS Labs</span>
+        </h1>
+        <div style="font-weight:800; font-size:clamp(42px, 6.4vw, 80px); line-height:1.0; letter-spacing:-.035em; color:#F7F7FA; margin-top:10px;">Your complete<br>AI business team.</div>
+
+        <p style="font-size:clamp(16px,1.5vw,18.5px); line-height:1.6; color:#C2C1CB; max-width:560px; margin:22px 0 0;">We build your website <span style="color:#F2F2F5; font-weight:600;">before you buy it</span>, then run the systems that help people find you, contact you, and become customers. Finished in hours — not dragged across weeks of meetings.</p>
+
+        <!-- URL input, in the first viewport -->
+        <!-- DEV: submit -> POST /api/preview {url|name} -> SiteForge discover job; route /build -->
+        <div data-r="heroform" style="display:flex; gap:9px; margin-top:30px; max-width:540px;">
+          <div style="flex:1; display:flex; align-items:center; gap:10px; background:#101015; border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:0 14px; transition:border-color .2s ease;" style-focus="border-color:#7C6CF6">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M4 12a8 8 0 1016 0 8 8 0 00-16 0zM4 12h16M12 4c2.5 2.5 2.5 13 0 16M12 4c-2.5 2.5-2.5 13 0 16" stroke="#7C7B86" stroke-width="1.6"></path></svg>
+            <input value="{{biz}}" onInput="{{onBiz}}" onKeyDown="{{onBizKey}}" placeholder="yourbusiness.com  ·  or your business name" style="flex:1; min-width:0; background:transparent; border:0; outline:none; color:#F2F2F5; font-size:15px; padding:15px 0;">
+          </div>
+          <button onClick="{{startBuild}}" style="flex:none; border:0; cursor:pointer; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); color:#fff; font-size:15px; font-weight:700; padding:0 22px; border-radius:12px; box-shadow:0 8px 20px rgba(124,108,246,.34); transition:transform .12s ease, box-shadow .2s ease;" style-hover="transform:translateY(-1px); box-shadow:0 12px 28px rgba(124,108,246,.46)" style-active="transform:translateY(0)">Build my website</button>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:16px; margin-top:16px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#9B9AA4;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M20 6L9 17l-5-5" stroke="#34D399" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            No setup call required. Inspect the work before you activate it.
+          </div>
+        </div>
+        <a href="#examples" style="display:inline-flex; align-items:center; gap:7px; margin-top:22px; font-size:14.5px; font-weight:600; color:#D9D8E0;" style-hover="color:#fff">
+          See a finished example
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- floating telemetry chip: brief Command Center signal in-scene -->
+    <div data-r="herotel" style="position:absolute; z-index:4; right:28px; bottom:30px; width:268px; background:rgba(15,15,20,.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,.1); border-radius:15px; padding:15px 16px; box-shadow:0 20px 50px rgba(0,0,0,.5); animation:floaty 6s ease-in-out infinite;">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div style="display:flex; align-items:center; gap:7px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#34D399; box-shadow:0 0 8px rgba(52,211,153,.7); animation:wpulse 1.6s infinite;"></span>
+          <span style="font-size:12px; color:#C7C6CF; font-weight:600;">All systems ready</span>
+        </div>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#7C7B86;">live · {{clock}}</span>
+      </div>
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-top:14px; gap:12px;">
+        <div>
+          <div style="font-weight:700; font-size:24px; letter-spacing:-.01em; color:#F4F4F6; font-variant-numeric:tabular-nums;">1,240</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.08em; color:#6F6E79; text-transform:uppercase;">leads tracked</div>
+        </div>
+        <svg viewBox="0 0 96 30" preserveAspectRatio="none" style="width:120px; height:30px; overflow:visible;">
+          <path d="{{heroSpark}}" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" style="stroke-dasharray:200; stroke-dashoffset:200; animation:draw 1.4s ease .6s forwards;"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+    <!-- ===================== PROOF STRIP ===================== -->
+  <div id="proof" style="background:#0C0C11; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1200px; margin:0 auto; padding:20px 22px; display:grid; grid-template-columns:repeat(4,1fr); gap:14px;" data-r="proofgrid">
+      <div style="display:flex; align-items:flex-start; gap:11px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none; margin-top:1px;"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" fill="#7C6CF6"></path></svg>
+        <div><div style="font-size:13.5px; font-weight:700; color:#F2F2F5;">Built before you buy</div><div style="font-size:12.5px; color:#8A8994; margin-top:2px;">A finished preview first — then you decide.</div></div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:11px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none; margin-top:1px;"><circle cx="12" cy="12" r="9" stroke="#34D399" stroke-width="2"></circle><path d="M8 12l3 3 5-6" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <div><div style="font-size:13.5px; font-weight:700; color:#F2F2F5;">Hours, not months</div><div style="font-size:12.5px; color:#8A8994; margin-top:2px;">We cut the time, not the corners.</div></div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:11px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none; margin-top:1px;"><circle cx="12" cy="12" r="9" stroke="#6E8BFF" stroke-width="2"></circle><circle cx="12" cy="12" r="3.4" fill="#6E8BFF"></circle></svg>
+        <div><div style="font-size:13.5px; font-weight:700; color:#F2F2F5;">One system</div><div style="font-size:12.5px; color:#8A8994; margin-top:2px;">Website, calls, leads, follow-up, growth.</div></div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:11px;">
+        <span style="flex:none; font-weight:800; font-size:16px; color:#34D399; margin-top:1px;">$</span>
+        <div><div style="font-size:13.5px; font-weight:700; color:#F2F2F5;">$199/mo to activate</div><div style="font-size:12.5px; color:#8A8994; margin-top:2px;">Transparent pricing. Cancel anytime.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== BUILD FLOW (state machine) ===================== -->
+  <!-- DEV: SiteForge job pipeline. States: discovering→evidence→building→grading→ready.
+       Edge states (missing info / held for review / error) shown in #states. Nothing charges here. -->
+  <div id="build" style="position:relative; background:#08080B; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:900px; height:420px; pointer-events:none; background:radial-gradient(circle at 50% 40%, rgba(124,108,246,.14), transparent 64%);"></div>
+    <div style="position:relative; max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="text-align:center; max-width:680px; margin:0 auto;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">Built before you buy</div>
+        <h2 style="font-weight:800; font-size:clamp(30px,4vw,46px); letter-spacing:-.025em; line-height:1.05; margin:12px 0 0; color:#F5F5F8;">We build your site while you watch.</h2>
+        <p style="font-size:16px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">Enter a URL or name and follow every step — discovery, verification, design, and grading — to a finished preview. No account, no card, nothing sends.</p>
+      </div>
+
+      <!-- STEPPER -->
+      <div style="display:flex; align-items:center; justify-content:center; gap:0; margin:34px auto 0; max-width:760px;" data-r="stepper">
+        <sc-for list="{{steps}}" as="st" hint-placeholder-count="5">
+          <div style="display:flex; align-items:center; flex:1; min-width:0;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:8px; flex:none;">
+              <div style="width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:{{st.dot}}; box-shadow:{{st.ring}}; animation:{{st.anim}};">
+                <sc-if value="{{st.isDone}}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#08080B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></sc-if>
+                <sc-if value="{{st.isActive}}"><span style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:#fff;">{{st.num}}</span></sc-if>
+              </div>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.06em; color:{{st.ink}}; text-transform:uppercase; white-space:nowrap;">{{st.label}}</span>
+            </div>
+            <div style="flex:1; height:2px; background:{{st.dot}}; opacity:.4; margin:0 6px; margin-bottom:26px;"></div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- STAGE PANEL -->
+      <div style="margin-top:16px; background:#101015; border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:clamp(22px,3vw,34px); min-height:400px; display:flex; flex-direction:column; justify-content:center; overflow:hidden;">
+
+        <!-- IDLE -->
+        <sc-if value="{{isIdle}}">
+          <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; animation:fadeIn .4s ease;">
+            <svg width="52" height="52" viewBox="0 0 64 64" style="display:block;"><defs><linearGradient id="bfg" x1="12" y1="32" x2="50" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4A6CF7"></stop><stop offset="1" stop-color="#8B5CF6"></stop></linearGradient></defs><rect width="64" height="64" rx="15" fill="#131318"></rect><rect x="0.5" y="0.5" width="63" height="63" rx="14.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"></rect><path d="M12 24 L21 42 L30 26 L39 42 L50 20" fill="none" stroke="url(#bfg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="50" cy="20" r="4" fill="#34D399"></circle></svg>
+            <div style="font-weight:700; font-size:20px; color:#F2F2F5;">Point us at your business</div>
+            <div style="display:flex; gap:9px; width:100%; max-width:520px;" data-r="buildform">
+              <div style="flex:1; display:flex; align-items:center; gap:10px; background:#0A0A0E; border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:0 14px;" style-focus="border-color:#7C6CF6">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M4 12a8 8 0 1016 0 8 8 0 00-16 0zM4 12h16" stroke="#7C7B86" stroke-width="1.6"></path></svg>
+                <input value="{{biz}}" onInput="{{onBiz}}" onKeyDown="{{onBizKey}}" placeholder="yourbusiness.com" style="flex:1; min-width:0; background:transparent; border:0; outline:none; color:#F2F2F5; font-size:15px; padding:14px 0;">
+              </div>
+              <button onClick="{{startBuild}}" style="flex:none; border:0; cursor:pointer; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); color:#fff; font-size:15px; font-weight:700; padding:0 20px; border-radius:12px; box-shadow:0 8px 20px rgba(124,108,246,.32);">Build it</button>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+              <sc-for list="{{demoChips}}" as="ch" hint-placeholder-count="3">
+                <button onClick="{{ch.onClick}}" style="border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.03); color:#9B9AA4; font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:6px 12px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(124,108,246,.12); color:#C9C8D0; border-color:rgba(124,108,246,.3)">{{ch.label}}</button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- DISCOVERING -->
+        <sc-if value="{{isDiscovering}}">
+          <div style="animation:fadeIn .4s ease;">
+            <div style="display:flex; align-items:center; gap:14px;">
+              <span style="display:inline-block; width:22px; height:22px; border:3px solid rgba(124,108,246,.25); border-top-color:#7C6CF6; border-radius:50%; animation:wspin .8s linear infinite;"></span>
+              <div style="font-weight:700; font-size:19px; color:#F2F2F5;">Finding {{previewBiz}}…</div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#7C7B86; margin-top:8px;">Reading public sources — no account needed.</div>
+            <div style="display:flex; flex-direction:column; gap:2px; margin-top:22px; max-width:560px;">
+              <sc-for list="{{scanLines}}" as="l" hint-placeholder-count="4">
+                <div style="display:flex; align-items:center; gap:11px; padding:11px 0; border-bottom:1px solid rgba(255,255,255,.05); animation:riseIn .5s cubic-bezier(.2,.7,.3,1) backwards; animation-delay:calc(90ms * {{ $index }});">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="9" stroke="#34D399" stroke-width="2"></circle><path d="M8 12l3 3 5-6" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <span style="font-size:13.5px; color:#C9C8D0;">{{l}}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- EVIDENCE FOUND -->
+        <sc-if value="{{isEvidence}}">
+          <div style="animation:fadeIn .4s ease;">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+              <div>
+                <div style="font-weight:700; font-size:20px; color:#F2F2F5;">Here's what we found.</div>
+                <div style="font-size:13.5px; color:#9B9AA4; margin-top:4px;">Everything is checked before it reaches your site. You can correct anything.</div>
+              </div>
+              <div style="display:flex; align-items:center; gap:7px; padding:6px 12px; background:rgba(52,211,153,.12); border:1px solid rgba(52,211,153,.25); border-radius:999px;">
+                <span style="width:7px; height:7px; border-radius:50%; background:#34D399;"></span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.06em; color:#4ADCA6;">VERIFIED</span>
+              </div>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:10px; margin-top:20px;">
+              <sc-for list="{{evidenceFacts}}" as="f" hint-placeholder-count="6">
+                <div style="display:flex; align-items:center; gap:11px; background:#0C0C11; border:1px solid rgba(255,255,255,.07); border-radius:12px; padding:12px 14px; animation:riseIn .5s cubic-bezier(.2,.7,.3,1) backwards; animation-delay:calc(60ms * {{ $index }});">
+                  <sc-if value="{{f.ok}}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="10" fill="rgba(52,211,153,.16)"></circle><path d="M8 12l3 3 5-6" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></sc-if>
+                  <sc-if value="{{f.warn}}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="10" fill="rgba(224,164,74,.16)"></circle><path d="M12 8v5M12 16v.5" stroke="#E0A44A" stroke-width="2.2" stroke-linecap="round"></path></svg></sc-if>
+                  <div style="min-width:0;">
+                    <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:#6F6E79;">{{f.k}}</div>
+                    <div style="font-size:13.5px; font-weight:600; color:#ECECEF; margin-top:2px;">{{f.v}}</div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display:flex; gap:10px; margin-top:16px; flex-wrap:wrap;">
+              <sc-for list="{{evidenceSignals}}" as="g" hint-placeholder-count="3">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#9B9AA4; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07); border-radius:999px; padding:6px 12px;">{{g.label}} · <span style="color:#F2F2F5;">{{g.v}}</span></div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- BUILDING -->
+        <sc-if value="{{isBuilding}}">
+          <div style="animation:fadeIn .4s ease;">
+            <div style="font-weight:700; font-size:20px; color:#F2F2F5;">Building {{previewBiz}}…</div>
+            <div style="font-size:13.5px; color:#9B9AA4; margin-top:4px;">Assembling pages, copy, design, and lead capture from verified facts.</div>
+            <div style="height:10px; background:rgba(255,255,255,.06); border-radius:6px; overflow:hidden; margin-top:20px;">
+              <div style="height:100%; width:96%; background:linear-gradient(90deg, #4A6CF7, #8B5CF6, #34D399); border-radius:6px; animation:bldbar 1.7s cubic-bezier(.3,.7,.3,1) forwards;"></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:2px; margin-top:20px; max-width:620px;">
+              <sc-for list="{{buildLog}}" as="b" hint-placeholder-count="5">
+                <div style="display:flex; align-items:flex-start; gap:12px; padding:11px 0; border-bottom:1px solid rgba(255,255,255,.05); animation:riseIn .5s cubic-bezier(.2,.7,.3,1) backwards; animation-delay:calc(120ms * {{ $index }});">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none; margin-top:2px;"><circle cx="12" cy="12" r="9" stroke="#34D399" stroke-width="2"></circle><path d="M8 12l3 3 5-6" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <div><span style="font-size:13.5px; font-weight:600; color:#ECECEF;">{{b.t}}</span> <span style="font-size:13px; color:#8A8994;">— {{b.v}}</span></div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- GRADING -->
+        <sc-if value="{{isGrading}}">
+          <div style="display:grid; grid-template-columns:200px 1fr; gap:28px; align-items:center; animation:fadeIn .4s ease;" data-r="gradegrid">
+            <div style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+              <div style="position:relative; width:170px; height:170px;">
+                <svg width="170" height="170" viewBox="0 0 170 170" style="transform:rotate(-90deg);">
+                  <circle cx="85" cy="85" r="74" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="12"></circle>
+                  <circle cx="85" cy="85" r="74" fill="none" stroke="#34D399" stroke-width="12" stroke-linecap="round" stroke-dasharray="465" style="stroke-dashoffset:37; animation:ring92 1.3s cubic-bezier(.3,.7,.3,1) forwards;"></circle>
+                </svg>
+                <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                  <div style="font-weight:800; font-size:44px; letter-spacing:-.02em; color:#F4F4F6; font-variant-numeric:tabular-nums;">{{gradeScore}}</div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.14em; color:#6F6E79;">SITE SCORE</div>
+                </div>
+              </div>
+              <div style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#4ADCA6; letter-spacing:.06em;">GRADE {{gradeGrade}} · READY</div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div style="font-weight:700; font-size:19px; color:#F2F2F5;">Grading the finished site</div>
+              <sc-for list="{{gradeItems}}" as="g" hint-placeholder-count="5">
+                <div>
+                  <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                    <span style="font-size:13px; color:#C9C8D0;">{{g.label}}</span>
+                    <span style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#F2F2F5;">{{g.score}}</span>
+                  </div>
+                  <div style="height:8px; background:rgba(255,255,255,.06); border-radius:4px; overflow:hidden;">
+                    <div style="height:100%; width:{{g.w}}; background:linear-gradient(90deg,#149B77,#34D399); border-radius:4px; animation:revealX .9s cubic-bezier(.3,.7,.3,1) both; animation-delay:calc(80ms * {{ $index }});"></div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- PREVIEW READY -->
+        <sc-if value="{{isReady}}">
+          <div style="animation:riseIn .55s cubic-bezier(.2,.7,.3,1);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div style="flex:none; width:46px; height:46px; border-radius:12px; background:rgba(52,211,153,.14); display:flex; align-items:center; justify-content:center;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#34D399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <div>
+                  <div style="font-weight:800; font-size:22px; letter-spacing:-.01em; color:#F5F5F8;">Your preview is ready.</div>
+                  <div style="font-size:13.5px; color:#9B9AA4; margin-top:2px;">{{previewBiz}} — finished website, local plan, and opportunity report.</div>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:#0C0C11; border:1px solid rgba(52,211,153,.22); border-radius:12px;">
+                <span style="font-weight:800; font-size:22px; color:#34D399; font-variant-numeric:tabular-nums;">{{gradeScore}}</span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; color:#6F6E79; line-height:1.3;">SITE<br>SCORE</span>
+              </div>
+            </div>
+            <div style="display:flex; gap:10px; margin-top:22px; flex-wrap:wrap;">
+              <a href="#deliverable" style="border:0; cursor:pointer; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); color:#fff; font-size:14px; font-weight:700; padding:12px 20px; border-radius:11px; box-shadow:0 8px 20px rgba(124,108,246,.3);">View the evidence</a>
+              <a href="#pricing" style="border:1px solid rgba(255,255,255,.14); background:#17171C; color:#E7E7EA; font-size:14px; font-weight:600; padding:12px 20px; border-radius:11px;">Configure my system</a>
+              <a href="#contact" style="border:1px solid rgba(255,255,255,.14); background:#17171C; color:#E7E7EA; font-size:14px; font-weight:600; padding:12px 20px; border-radius:11px;">Talk to our team</a>
+              <button onClick="{{restartBuild}}" style="border:0; background:none; color:#8A8994; font-size:13.5px; font-weight:600; padding:12px 8px; cursor:pointer;" style-hover="color:#C9C8D0">Try another business</button>
+            </div>
+          </div>
+        </sc-if>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- ===================== COMPARISON ===================== -->
+  <div id="compare" style="background:#0C0C11; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="max-width:680px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">Compare the difference</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.6vw,42px); letter-spacing:-.025em; line-height:1.08; margin:12px 0 0; color:#F5F5F8;">Same business. A system that works while you do.</h2>
+        <p style="font-size:16px; line-height:1.6; color:#A5A4AE; margin:13px 0 0;">Drag to see the shift — from a page that just sits there to a site built to get found, answer fast, and turn visits into booked jobs. Every gap is missed potential, not a verdict.</p>
+      </div>
+
+      <div style="margin-top:30px; position:relative; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.1); box-shadow:0 30px 70px rgba(0,0,0,.45); user-select:none;">
+        <!-- browser chrome -->
+        <div style="height:38px; background:#17171C; border-bottom:1px solid rgba(255,255,255,.07); display:flex; align-items:center; gap:7px; padding:0 14px;">
+          <span style="width:11px; height:11px; border-radius:50%; background:#F26D6D;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:#E0A44A;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:#34D399;"></span>
+          <div style="margin-left:12px; flex:1; max-width:340px; height:22px; background:#0C0C11; border:1px solid rgba(255,255,255,.08); border-radius:6px; display:flex; align-items:center; padding:0 10px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6F6E79;">cedarstone.com</div>
+        </div>
+
+        <div style="position:relative; width:100%; aspect-ratio:16/9; background:#fff;" data-r="cmpframe">
+          <!-- AFTER (WSS premium site) — full -->
+          <div style="position:absolute; inset:0; background:#0E1512; display:flex; flex-direction:column; overflow:hidden;">
+            <div style="height:16%; background:#0B120F; display:flex; align-items:center; justify-content:space-between; padding:0 4%;">
+              <span style="font-weight:800; font-size:clamp(10px,1.5vw,17px); color:#fff; letter-spacing:-.01em;">Cedar &amp; Stone</span>
+              <div style="display:flex; gap:3%; align-items:center;">
+                <span style="font-size:clamp(7px,1vw,11px); color:#9FE8CC;">Services</span>
+                <span style="font-size:clamp(7px,1vw,11px); color:#9FE8CC;">Areas</span>
+                <span style="font-size:clamp(7px,1vw,11px); color:#0E1512; background:#34D399; padding:5% 8%; border-radius:6px; font-weight:700;">Free quote</span>
+              </div>
+            </div>
+            <div style="flex:1; position:relative; background:linear-gradient(120deg,#12211A,#0E1512); display:flex; flex-direction:column; justify-content:center; padding:0 5%;">
+              <div style="position:absolute; right:-4%; top:10%; width:42%; height:80%; border-radius:14px; background:linear-gradient(160deg,#1C3A2C,#122019); border:1px solid rgba(52,211,153,.2);"></div>
+              <div style="position:relative; max-width:60%;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:clamp(6px,.85vw,9px); letter-spacing:.14em; color:#57DBB1;">AUSTIN + 6 CITIES</span>
+                <div style="font-weight:800; font-size:clamp(15px,2.9vw,34px); line-height:1.05; letter-spacing:-.02em; color:#fff; margin-top:3%;">Landscapes built to last.</div>
+                <div style="display:flex; gap:2%; align-items:center; margin-top:5%;">
+                  <span style="font-size:clamp(7px,1.05vw,12px); color:#0E1512; background:#34D399; padding:2.4% 5%; border-radius:7px; font-weight:700;">Get a free quote</span>
+                  <span style="font-size:clamp(7px,1vw,11px); color:#CFEAE0;">★ 4.6 · 47 reviews</span>
+                </div>
+                <div style="display:flex; gap:3%; margin-top:6%;">
+                  <div style="width:28%; height:0; padding-bottom:9%; background:rgba(255,255,255,.06); border-radius:6px;"></div>
+                  <div style="width:28%; height:0; padding-bottom:9%; background:rgba(255,255,255,.06); border-radius:6px;"></div>
+                  <div style="width:28%; height:0; padding-bottom:9%; background:rgba(255,255,255,.06); border-radius:6px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BEFORE (typical current site) — clipped to left cmp% -->
+          <div style="position:absolute; inset:0; background:#EDEDEA; clip-path:inset(0 {{cmpRight}} 0 0); display:flex; flex-direction:column; overflow:hidden;">
+            <div style="height:14%; background:#3A4A5A; display:flex; align-items:center; justify-content:center;">
+              <span style="font-family:Georgia,serif; font-size:clamp(9px,1.5vw,16px); color:#fff; letter-spacing:.04em;">CEDAR &amp; STONE LANDSCAPING</span>
+            </div>
+            <div style="height:7%; background:#556575; display:flex; align-items:center; justify-content:center; gap:5%;">
+              <span style="font-size:clamp(5px,.8vw,9px); color:#D6DDE4;">Home</span>
+              <span style="font-size:clamp(5px,.8vw,9px); color:#D6DDE4;">About</span>
+              <span style="font-size:clamp(5px,.8vw,9px); color:#D6DDE4;">Gallery</span>
+              <span style="font-size:clamp(5px,.8vw,9px); color:#D6DDE4;">Contact</span>
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 6%;">
+              <div style="font-family:Georgia,serif; font-size:clamp(11px,2vw,22px); color:#37414B;">Welcome to our website</div>
+              <div style="width:52%; height:0; padding-bottom:22%; background:repeating-linear-gradient(45deg,#C9CCC7,#C9CCC7 8px,#BEC1BC 8px,#BEC1BC 16px); margin-top:4%; border:1px solid #AEB1AC; display:flex; align-items:center; justify-content:center;"></div>
+              <div style="font-size:clamp(6px,1vw,11px); color:#6A7078; margin-top:4%;">Call us today: (512) 555-0142</div>
+            </div>
+          </div>
+
+          <!-- divider + handle -->
+          <div style="position:absolute; top:0; bottom:0; left:{{cmpW}}; width:2px; background:#fff; box-shadow:0 0 12px rgba(0,0,0,.4); pointer-events:none;"></div>
+          <div style="position:absolute; top:50%; left:{{cmpW}}; transform:translate(-50%,-50%); width:42px; height:42px; border-radius:50%; background:#fff; box-shadow:0 4px 14px rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; pointer-events:none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" stroke="#131318" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+          <!-- labels -->
+          <div style="position:absolute; top:14px; left:14px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; color:#37414B; background:rgba(255,255,255,.85); padding:4px 9px; border-radius:6px; pointer-events:none;">TYPICAL CURRENT SITE</div>
+          <div style="position:absolute; top:14px; right:14px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; color:#0E1512; background:rgba(52,211,153,.9); padding:4px 9px; border-radius:6px; pointer-events:none;">YOUR WSS SITE</div>
+          <!-- drag control -->
+          <input type="range" min="0" max="100" value="{{cmp}}" onInput="{{setCmp}}" aria-label="Compare" style="position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize;">
+        </div>
+      </div>
+      <div style="text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6F6E79; margin-top:12px;">← drag to compare →</div>
+    </div>
+  </div>
+
+  <!-- ===================== WHY AI LOWERS COST ===================== -->
+  <div id="why" style="background:#08080B; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="max-width:720px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">Why it costs less</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">The lower price comes from less waste, not less work.</h2>
+        <p style="font-size:16.5px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">A traditional build spends most of its budget on coordination — meetings, handoffs, and five vendors waiting on each other. WSS removes the delay. The same finished quality, without paying for the process.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:34px;" data-r="whygrid">
+        <div style="background:#101015; border:1px solid rgba(255,255,255,.07); border-radius:18px; padding:26px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; color:#8A8994; text-transform:uppercase;">The traditional way</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#E9B96A; background:rgba(224,164,74,.12); border:1px solid rgba(224,164,74,.24); padding:3px 8px; border-radius:999px;">weeks–months</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:2px; margin-top:16px;">
+            <sc-for list="{{tradWay}}" as="t" hint-placeholder-count="5">
+              <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.05);">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="flex:none; margin-top:1px;"><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,.18)" stroke-width="1.8"></circle><path d="M9 9l6 6M15 9l-6 6" stroke="#6F6E79" stroke-width="1.8" stroke-linecap="round"></path></svg>
+                <span style="font-size:14px; color:#9B9AA4;">{{t}}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="position:relative; background:#101015; border:1px solid rgba(124,108,246,.28); border-radius:18px; padding:26px; overflow:hidden;">
+          <div style="position:absolute; top:-40px; right:-30px; width:200px; height:140px; background:radial-gradient(circle at 60% 40%, rgba(124,108,246,.22), transparent 66%); pointer-events:none;"></div>
+          <div style="position:relative;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; color:#B7ACFF; text-transform:uppercase;">The WSS way</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4ADCA6; background:rgba(52,211,153,.12); border:1px solid rgba(52,211,153,.24); padding:3px 8px; border-radius:999px;">hours</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:2px; margin-top:16px;">
+              <sc-for list="{{wssWay}}" as="w" hint-placeholder-count="5">
+                <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.05);">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="flex:none; margin-top:1px;"><circle cx="12" cy="12" r="10" fill="rgba(52,211,153,.16)"></circle><path d="M8 12l3 3 5-6" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <span style="font-size:14px; color:#D9D8E0;">{{w}}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:20px; font-size:15px; color:#C2C1CB; text-align:center; font-weight:600;">We cut the time, not the corners. You keep your identity — WSS supplies the operating system.</div>
+    </div>
+  </div>
+
+    <!-- ===================== AI STAFF ===================== -->
+  <div id="staff" style="background:#0C0C11; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="max-width:720px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">The complete AI staff</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">A coordinated team — without the payroll.</h2>
+        <p style="font-size:16.5px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">You get the output of a full growth team working together, all day. One system for your website, calls, leads, follow-up, and growth.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; margin-top:32px;">
+        <sc-for list="{{staff}}" as="a" hint-placeholder-count="7">
+          <div style="position:relative; background:#101015; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:20px; overflow:hidden; transition:transform .2s ease, border-color .2s ease;" style-hover="transform:translateY(-3px); border-color:rgba(255,255,255,.14)">
+            <div style="position:absolute; top:-30px; right:-20px; width:140px; height:100px; background:radial-gradient(circle at 60% 40%, {{a.glow}}, transparent 68%); pointer-events:none;"></div>
+            <div style="position:relative;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div style="flex:none; width:42px; height:42px; border-radius:12px; background:{{a.bg}}; color:{{a.fg}}; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:17px;">{{a.g}}</div>
+                <div>
+                  <div style="font-weight:700; font-size:16.5px; color:#F2F2F5;">{{a.name}}</div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; color:{{a.fg}};">{{a.role}}</div>
+                </div>
+              </div>
+              <p style="font-size:13.5px; line-height:1.55; color:#9B9AA4; margin:14px 0 0;">{{a.d}}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== DELIVERABLE VIEWER ===================== -->
+  <!-- DEV: reads the SiteForge preview artifact for the business; read-only until activation. -->
+  <div id="deliverable" style="background:#08080B; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="max-width:720px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">View the evidence</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">See exactly what we found, changed, and why.</h2>
+        <p style="font-size:16.5px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">The full preview for <span style="color:#F2F2F5; font-weight:600;">{{previewBiz}}</span> — inspect every part before you decide anything.</p>
+      </div>
+
+      <!-- tabs -->
+      <div style="display:flex; gap:3px; margin-top:26px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.07); border-radius:12px; padding:4px; overflow-x:auto;" data-r="delivtabs">
+        <sc-for list="{{delivTabs}}" as="t" hint-placeholder-count="4">
+          <button onClick="{{t.onClick}}" style="border:0; cursor:pointer; white-space:nowrap; font-family:'Hanken Grotesk',sans-serif; font-size:13.5px; font-weight:600; padding:9px 16px; border-radius:9px; background:{{t.bg}}; color:{{t.fg}}; box-shadow:{{t.shadow}}; transition:background .2s ease, color .2s ease;">{{t.label}}</button>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:16px; background:#101015; border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:clamp(18px,2.6vw,26px); min-height:440px;">
+
+        <!-- WEBSITE -->
+        <sc-if value="{{showWebsite}}">
+          <div style="animation:fadeIn .35s ease;">
+            <div style="border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,.1);">
+              <div style="height:34px; background:#17171C; display:flex; align-items:center; gap:7px; padding:0 13px; border-bottom:1px solid rgba(255,255,255,.07);">
+                <span style="width:10px; height:10px; border-radius:50%; background:#F26D6D;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#E0A44A;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#34D399;"></span>
+                <div style="margin-left:10px; flex:1; max-width:320px; height:20px; background:#0C0C11; border:1px solid rgba(255,255,255,.08); border-radius:6px; display:flex; align-items:center; padding:0 10px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6F6E79;">cedarstone.com</div>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#4ADCA6; background:rgba(52,211,153,.12); padding:3px 8px; border-radius:999px;">SCORE 92</span>
+              </div>
+              <!-- premium site mock -->
+              <div style="background:#0E1512;">
+                <div style="height:56px; display:flex; align-items:center; justify-content:space-between; padding:0 26px; border-bottom:1px solid rgba(255,255,255,.06);">
+                  <span style="font-weight:800; font-size:18px; color:#fff;">Cedar &amp; Stone</span>
+                  <div style="display:flex; gap:20px; align-items:center;" data-r="mocknav">
+                    <span style="font-size:13px; color:#B8D8CB;">Services</span>
+                    <span style="font-size:13px; color:#B8D8CB;">Service areas</span>
+                    <span style="font-size:13px; color:#B8D8CB;">Reviews</span>
+                    <span style="font-size:13px; color:#0E1512; background:#34D399; padding:8px 15px; border-radius:8px; font-weight:700;">Free quote</span>
+                  </div>
+                </div>
+                <div style="position:relative; padding:44px 26px 40px; overflow:hidden;">
+                  <div style="position:absolute; right:-40px; top:20px; width:44%; height:82%; border-radius:16px; background:linear-gradient(160deg,#1C3A2C,#0F1D16); border:1px solid rgba(52,211,153,.18);"></div>
+                  <div style="position:relative; max-width:56%;">
+                    <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#57DBB1;">LANDSCAPING · AUSTIN + 6 CITIES</span>
+                    <div style="font-weight:800; font-size:clamp(24px,3.4vw,38px); line-height:1.05; letter-spacing:-.02em; color:#fff; margin-top:12px;">Landscapes built to last.</div>
+                    <p style="font-size:14px; color:#B8D8CB; line-height:1.5; margin:12px 0 0; max-width:400px;">Design, build, and maintenance from a crew Austin has trusted for 12 years.</p>
+                    <div style="display:flex; gap:12px; align-items:center; margin-top:20px;">
+                      <span style="font-size:14px; color:#0E1512; background:#34D399; padding:11px 20px; border-radius:9px; font-weight:700;">Get a free quote</span>
+                      <span style="font-size:13px; color:#0E1512; background:#fff; padding:11px 18px; border-radius:9px; font-weight:600;">Call (512) 555-0142</span>
+                    </div>
+                    <div style="display:flex; gap:16px; align-items:center; margin-top:18px; font-size:12.5px; color:#8FBFAC;">
+                      <span>★★★★★ 4.6 · 47 reviews</span><span>·</span><span>Licensed &amp; insured</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; padding:0 26px 30px;" data-r="mockcards">
+                  <div style="background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:11px; padding:16px;"><div style="width:26px; height:26px; border-radius:8px; background:rgba(52,211,153,.16);"></div><div style="font-size:14px; font-weight:700; color:#EAF4EF; margin-top:12px;">Design &amp; build</div><div style="font-size:12px; color:#8FBFAC; margin-top:5px;">Patios, retaining walls, full yards.</div></div>
+                  <div style="background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:11px; padding:16px;"><div style="width:26px; height:26px; border-radius:8px; background:rgba(110,139,255,.16);"></div><div style="font-size:14px; font-weight:700; color:#EAF4EF; margin-top:12px;">Maintenance</div><div style="font-size:12px; color:#8FBFAC; margin-top:5px;">Weekly care that keeps it sharp.</div></div>
+                  <div style="background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:11px; padding:16px;"><div style="width:26px; height:26px; border-radius:8px; background:rgba(124,108,246,.16);"></div><div style="font-size:14px; font-weight:700; color:#EAF4EF; margin-top:12px;">Irrigation</div><div style="font-size:12px; color:#8FBFAC; margin-top:5px;">Smart watering, lower bills.</div></div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:16px;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9B9AA4; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07); border-radius:999px; padding:6px 12px;">Mobile-ready</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9B9AA4; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07); border-radius:999px; padding:6px 12px;">Quote form + click-to-call</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9B9AA4; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07); border-radius:999px; padding:6px 12px;">7 pages</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9B9AA4; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07); border-radius:999px; padding:6px 12px;">Reviews embedded</span>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- PLAN -->
+        <sc-if value="{{showPlan}}">
+          <div style="animation:fadeIn .35s ease;">
+            <div style="font-weight:700; font-size:18px; color:#F2F2F5;">Local optimization plan</div>
+            <div style="font-size:13.5px; color:#9B9AA4; margin-top:4px;">Exactly what we do to help people nearby find and choose you.</div>
+            <div style="display:flex; flex-direction:column; gap:2px; margin-top:16px;">
+              <sc-for list="{{planItems}}" as="p" hint-placeholder-count="5">
+                <div style="display:flex; align-items:flex-start; gap:14px; padding:16px 0; border-bottom:1px solid rgba(255,255,255,.05);">
+                  <div style="flex:none; width:30px; height:30px; border-radius:9px; background:rgba(124,108,246,.14); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#B7ACFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+                  <div style="flex:1; min-width:0;">
+                    <div style="font-size:14.5px; font-weight:700; color:#ECECEF;">{{p.h}}</div>
+                    <div style="font-size:13px; color:#9B9AA4; margin-top:3px;">{{p.d}}</div>
+                  </div>
+                  <span style="flex:none; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.06em; color:#8A8994; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:999px; padding:4px 10px;">{{p.tag}}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- REPORT -->
+        <sc-if value="{{showReport}}">
+          <div style="animation:fadeIn .35s ease;">
+            <div style="font-weight:700; font-size:18px; color:#F2F2F5;">Opportunity report</div>
+            <div style="font-size:13.5px; color:#9B9AA4; margin-top:4px;">The size of the opening in your market — measured, not guessed.</div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:18px;">
+              <sc-for list="{{reportStats}}" as="r" hint-placeholder-count="4">
+                <div style="background:#0C0C11; border:1px solid rgba(255,255,255,.07); border-radius:14px; padding:18px;">
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.04em; color:#6F6E79; text-transform:uppercase;">{{r.label}}</div>
+                  <div style="font-weight:800; font-size:30px; color:#F4F4F6; margin-top:10px; font-variant-numeric:tabular-nums;">{{r.el}}</div>
+                  <div style="font-size:12px; color:#84838E; margin-top:3px;">{{r.sub}}</div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:2px; margin-top:18px;">
+              <sc-for list="{{reportFindings}}" as="f" hint-placeholder-count="4">
+                <div style="display:flex; align-items:flex-start; gap:12px; padding:13px 0; border-bottom:1px solid rgba(255,255,255,.05);">
+                  <span style="flex:none; margin-top:5px; width:8px; height:8px; border-radius:50%; background:{{f.tone}};"></span>
+                  <div><span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.06em; color:{{f.tone}}; text-transform:uppercase;">{{f.label}}</span><div style="font-size:14px; color:#C9C8D0; margin-top:3px;">{{f.text}}</div></div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- CALL PREP -->
+        <sc-if value="{{showCallprep}}">
+          <div style="animation:fadeIn .35s ease;">
+            <div style="font-weight:700; font-size:18px; color:#F2F2F5;">Call prep</div>
+            <div style="font-size:13.5px; color:#9B9AA4; margin-top:4px;">If you'd rather talk, your team already has the context. No re-explaining.</div>
+            <div style="display:flex; flex-direction:column; gap:12px; margin-top:18px;">
+              <sc-for list="{{callPrep}}" as="c" hint-placeholder-count="4">
+                <div style="background:#0C0C11; border:1px solid rgba(255,255,255,.07); border-radius:12px; padding:16px 18px;">
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.06em; color:#7C6CF6; text-transform:uppercase;">{{c.q}}</div>
+                  <div style="font-size:14.5px; color:#D9D8E0; margin-top:6px;">{{c.a}}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- ===================== LOCAL INTELLIGENCE ===================== -->
+  <div id="intel" style="background:#0C0C11; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="max-width:720px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">Growth · local-market intelligence</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">Get found where your customers already look.</h2>
+        <p style="font-size:16.5px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">Search, maps, and now AI assistants all decide who to recommend nearby. We make sure your business is the clear, consistent answer.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(258px,1fr)); gap:12px; margin-top:32px;">
+        <sc-for list="{{intel}}" as="i" hint-placeholder-count="8">
+          <div style="background:#101015; border:1px solid rgba(255,255,255,.07); border-radius:14px; padding:18px; transition:border-color .2s ease;" style-hover="border-color:rgba(255,255,255,.14)">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+              <div style="display:flex; align-items:center; gap:9px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="10" fill="rgba(52,211,153,.14)"></circle><path d="M8 12l3 3 5-6" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span style="font-size:13.5px; font-weight:700; color:#ECECEF;">{{i.label}}</span>
+              </div>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.06em; color:#4ADCA6; background:rgba(52,211,153,.1); border:1px solid rgba(52,211,153,.2); padding:3px 8px; border-radius:999px; white-space:nowrap;">{{i.v}}</span>
+            </div>
+            <p style="font-size:12.5px; line-height:1.5; color:#8A8994; margin:11px 0 0;">{{i.d}}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SITEFORGE SEQUENCE ===================== -->
+  <div id="how" style="background:#08080B; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="max-width:720px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">How it works · SiteForge</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">Seven steps. Hours, not months.</h2>
+        <p style="font-size:16.5px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">The same sequence runs for every business. You only pay after step five — once you've seen the finished result.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:32px;">
+        <sc-for list="{{forge}}" as="f" hint-placeholder-count="7">
+          <div style="position:relative; background:#101015; border:1px solid rgba(255,255,255,.07); border-radius:15px; padding:20px; overflow:hidden;">
+            <div style="position:absolute; top:-14px; right:6px; font-weight:800; font-size:64px; letter-spacing:-.03em; color:rgba(255,255,255,.035);">{{f.n}}</div>
+            <div style="position:relative;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; color:#7C6CF6;">{{f.n}}</span>
+              <div style="font-weight:700; font-size:17px; color:#F2F2F5; margin-top:8px;">{{f.h}}</div>
+              <p style="font-size:13px; line-height:1.5; color:#9B9AA4; margin:6px 0 0;">{{f.d}}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; margin-top:20px; padding:14px 18px; background:rgba(52,211,153,.06); border:1px solid rgba(52,211,153,.18); border-radius:12px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="9" stroke="#34D399" stroke-width="2"></circle><path d="M12 7v5l3 2" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span style="font-size:14px; color:#CFEAE0;">Steps 1–5 are free to inspect. Nothing charges, sends, or goes live until you approve at step 6.</span>
+      </div>
+    </div>
+  </div>
+
+    <!-- ===================== COMMAND CENTER PREVIEW ===================== -->
+  <!-- DEV: signed-in customers land here at /login. Read-only marketing preview below. -->
+  <div id="command" style="background:#0C0C11; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <div style="max-width:640px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">Your Command Center</div>
+          <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">One calm place to see it all working.</h2>
+          <p style="font-size:16.5px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">Leads, calls, reviews, and reporting — in plain language, updated live. Ask for a change and it happens.</p>
+        </div>
+        <a href="Command%20Center.dc.html" style="flex:none; font-size:14px; font-weight:700; color:#fff; padding:12px 20px; border-radius:11px; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); box-shadow:0 8px 20px rgba(124,108,246,.3);">Open Command Center</a>
+      </div>
+
+      <div style="margin-top:28px; background:#0B0B0F; border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:20px; box-shadow:0 30px 70px rgba(0,0,0,.4); background-image:radial-gradient(900px 300px at 50% -120px, rgba(124,108,246,.1), transparent 60%);">
+        <!-- mini top bar -->
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:11px;">
+            <svg width="34" height="34" viewBox="0 0 64 64" style="display:block;"><defs><linearGradient id="ccg" x1="12" y1="32" x2="50" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4A6CF7"></stop><stop offset="1" stop-color="#8B5CF6"></stop></linearGradient></defs><rect width="64" height="64" rx="15" fill="#131318"></rect><rect x="0.5" y="0.5" width="63" height="63" rx="14.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"></rect><path d="M12 24 L21 42 L30 26 L39 42 L50 20" fill="none" stroke="url(#ccg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="50" cy="20" r="4" fill="#34D399"></circle></svg>
+            <div><div style="font-weight:700; font-size:16px; color:#F2F2F5; line-height:1;">Command Center</div><div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.18em; color:#6F6E79; margin-top:3px;">CEDAR &amp; STONE</div></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div style="display:flex; align-items:center; gap:7px; padding:7px 12px; background:#15151A; border:1px solid rgba(255,255,255,.09); border-radius:999px;"><span style="width:7px; height:7px; border-radius:50%; background:#34D399; box-shadow:0 0 8px rgba(52,211,153,.7); animation:wpulse 1.6s infinite;"></span><span style="font-size:12px; color:#C7C6CF; font-weight:500;">All systems ready</span></div>
+            <div style="display:flex; align-items:center; gap:7px; padding:7px 12px; background:#15151A; border:1px solid rgba(255,255,255,.09); border-radius:999px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A8994;">live · {{clock}}</span></div>
+          </div>
+        </div>
+        <!-- KPI tiles -->
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-top:16px;">
+          <sc-for list="{{ccKpis}}" as="k" hint-placeholder-count="4">
+            <div style="position:relative; background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:14px; padding:16px; overflow:hidden;">
+              <div style="position:absolute; top:-30px; right:-20px; width:140px; height:100px; background:radial-gradient(circle at 60% 40%, {{k.glow}}, transparent 68%); pointer-events:none;"></div>
+              <div style="position:relative;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px;">
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.04em; color:#6F6E79; text-transform:uppercase;">{{k.label}}</span>
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; color:#4ADCA6; background:rgba(52,211,153,.12); padding:3px 7px; border-radius:999px;">{{k.delta}}</span>
+                </div>
+                <div style="font-weight:700; font-size:27px; color:#F4F4F6; margin-top:10px; font-variant-numeric:tabular-nums;">{{k.el}}</div>
+                <div style="font-size:11.5px; color:#84838E; margin-top:2px;">{{k.sub}}</div>
+                <svg viewBox="0 0 96 30" preserveAspectRatio="none" style="width:100%; height:20px; margin-top:10px; display:block; overflow:visible;"><path d="{{k.spark}}" fill="none" stroke="{{k.stroke}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path></svg>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PRICING / CONFIGURATOR ===================== -->
+  <!-- DEV: Activate -> POST /api/checkout (Stripe). Create account -> /signup (auth). Success -> /login.
+       No real charge, email, or deployment happens in this prototype. -->
+  <div id="pricing" style="background:#08080B; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="max-width:720px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">Configure my system</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">Start at $199/month. Add only what you want.</h2>
+        <p style="font-size:16.5px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">Everything to launch and run your site is in the base. Add agents and growth as you grow — change it anytime.</p>
+      </div>
+
+      <!-- CONFIG -->
+      <sc-if value="{{isConfig}}">
+        <div style="display:grid; grid-template-columns:1.55fr 1fr; gap:16px; margin-top:30px; align-items:start;" data-r="pricegrid">
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <!-- base -->
+            <div style="background:#101015; border:1px solid rgba(124,108,246,.28); border-radius:16px; padding:22px; position:relative; overflow:hidden;">
+              <div style="position:absolute; top:-40px; right:-30px; width:200px; height:130px; background:radial-gradient(circle at 60% 40%, rgba(124,108,246,.2), transparent 66%); pointer-events:none;"></div>
+              <div style="position:relative; display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                <div><div style="font-weight:700; font-size:18px; color:#F2F2F5;">Website activation</div><div style="font-size:13px; color:#9B9AA4; margin-top:3px;">Everything you need to launch and operate.</div></div>
+                <div style="text-align:right;"><span style="font-weight:800; font-size:30px; color:#F4F4F6;">$199</span><span style="font-size:13px; color:#8A8994;">/mo</span></div>
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 16px; margin-top:16px;">
+                <sc-for list="{{baseFeatures}}" as="f" hint-placeholder-count="6">
+                  <div style="display:flex; align-items:center; gap:9px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M20 6L9 17l-5-5" stroke="#34D399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size:13.5px; color:#D9D8E0;">{{f}}</span></div>
+                </sc-for>
+              </div>
+            </div>
+            <!-- add-ons -->
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#6F6E79; text-transform:uppercase; margin:4px 2px;">Add to your system</div>
+            <sc-for list="{{addons}}" as="a" hint-placeholder-count="10">
+              <div onClick="{{a.onToggle}}" style="display:flex; align-items:center; gap:14px; background:{{a.cardBg}}; border:1px solid {{a.cardBorder}}; border-radius:13px; padding:15px 17px; cursor:pointer; transition:border-color .2s ease, background .2s ease;">
+                <div style="flex:1; min-width:0;">
+                  <div style="font-size:14.5px; font-weight:700; color:#ECECEF;">{{a.label}}</div>
+                  <div style="font-size:12.5px; color:#8A8994; margin-top:2px;">{{a.d}}</div>
+                </div>
+                <span style="flex:none; font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600; color:{{a.priceColor}};">{{a.priceLabel}}</span>
+                <div style="flex:none; width:40px; height:22px; border-radius:999px; background:{{a.trackBg}}; position:relative; transition:background .2s ease;">
+                  <div style="position:absolute; top:2px; left:{{a.knobX}}; width:18px; height:18px; border-radius:50%; background:#fff; box-shadow:0 1px 4px rgba(0,0,0,.4); transition:left .2s cubic-bezier(.3,.7,.3,1);"></div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+
+          <!-- summary (sticky) -->
+          <div data-r="summary" style="position:sticky; top:82px; background:#101015; border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:22px; box-shadow:0 20px 50px rgba(0,0,0,.35);">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#6F6E79; text-transform:uppercase;">Your monthly total</div>
+            <div style="display:flex; align-items:baseline; gap:6px; margin-top:8px;">
+              <span style="font-weight:800; font-size:46px; letter-spacing:-.02em; color:#F5F5F8; font-variant-numeric:tabular-nums;">{{monthlyTotalLabel}}</span>
+              <span style="font-size:15px; color:#8A8994;">/mo</span>
+            </div>
+            <div style="font-size:12.5px; color:#84838E; margin-top:4px;">$199 base + {{selectedCount}} add-on(s)</div>
+            <div style="height:1px; background:rgba(255,255,255,.08); margin:18px 0;"></div>
+            <div style="display:flex; flex-direction:column; gap:9px;">
+              <div style="display:flex; align-items:center; gap:9px; font-size:13px; color:#B4B3BD;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#34D399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>No setup call required</div>
+              <div style="display:flex; align-items:center; gap:9px; font-size:13px; color:#B4B3BD;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#34D399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>Inspect the work first</div>
+              <div style="display:flex; align-items:center; gap:9px; font-size:13px; color:#B4B3BD;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#34D399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>Cancel anytime</div>
+            </div>
+            <button onClick="{{goCheckout}}" style="width:100%; border:0; cursor:pointer; margin-top:20px; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); color:#fff; font-size:15px; font-weight:700; padding:14px; border-radius:12px; box-shadow:0 10px 24px rgba(124,108,246,.34); transition:transform .12s ease;" style-hover="transform:translateY(-1px)">Activate this website</button>
+            <a href="#contact" style="display:block; text-align:center; margin-top:12px; font-size:13px; font-weight:600; color:#9B9AA4;">or talk to our team first</a>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- CHECKOUT -->
+      <sc-if value="{{isCheckout}}">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:30px; align-items:start; animation:fadeIn .35s ease;" data-r="pricegrid">
+          <div style="background:#101015; border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:24px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="#34D399" stroke-width="1.8"></rect><path d="M8 10V7a4 4 0 018 0v3" stroke="#34D399" stroke-width="1.8"></path></svg>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; color:#4ADCA6;">SECURE CHECKOUT</span>
+            </div>
+            <div style="font-weight:700; font-size:19px; color:#F2F2F5; margin-top:14px;">Create your account</div>
+            <div style="display:flex; flex-direction:column; gap:12px; margin-top:16px;">
+              <div><div style="font-size:12px; color:#8A8994; margin-bottom:6px;">Work email</div><div style="background:#0A0A0E; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:13px 14px; font-size:14px; color:#6F6E79;">you@yourbusiness.com</div></div>
+              <div><div style="font-size:12px; color:#8A8994; margin-bottom:6px;">Card details</div><div style="background:#0A0A0E; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:13px 14px; display:flex; align-items:center; justify-content:space-between; font-size:14px; color:#6F6E79;"><span>•••• •••• •••• 4242</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px;">12 / 28</span></div></div>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; margin-top:14px; padding:11px 13px; background:rgba(110,139,255,.07); border:1px solid rgba(110,139,255,.2); border-radius:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="9" stroke="#6E8BFF" stroke-width="1.8"></circle><path d="M12 8v.5M12 11v5" stroke="#6E8BFF" stroke-width="1.8" stroke-linecap="round"></path></svg>
+              <span style="font-size:12.5px; color:#B9C4E8;">Design preview — no real charge, email, or deployment occurs here.</span>
+            </div>
+            <button onClick="{{placeOrder}}" style="width:100%; border:0; cursor:pointer; margin-top:16px; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); color:#fff; font-size:15px; font-weight:700; padding:14px; border-radius:12px; box-shadow:0 10px 24px rgba(124,108,246,.34);">Create my account &amp; activate</button>
+            <button onClick="{{resetCheckout}}" style="width:100%; border:0; background:none; cursor:pointer; margin-top:10px; color:#8A8994; font-size:13px; font-weight:600;">← Back to configure</button>
+          </div>
+          <div style="background:#0C0C11; border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:24px;">
+            <div style="font-weight:700; font-size:16px; color:#F2F2F5;">Order summary</div>
+            <div style="display:flex; flex-direction:column; margin-top:14px;">
+              <sc-for list="{{orderLines}}" as="l" hint-placeholder-count="3">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid rgba(255,255,255,.05);">
+                  <span style="font-size:13.5px; color:#C9C8D0;">{{l.label}}</span>
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#ECECEF;">{{l.priceLabel}}</span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display:flex; align-items:baseline; justify-content:space-between; margin-top:16px;">
+              <span style="font-size:14px; font-weight:700; color:#F2F2F5;">Total</span>
+              <span><span style="font-weight:800; font-size:26px; color:#F5F5F8;">{{monthlyTotalLabel}}</span><span style="font-size:13px; color:#8A8994;">/mo</span></span>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- SUCCESS -->
+      <sc-if value="{{isSuccess}}">
+        <div style="margin-top:30px; background:#101015; border:1px solid rgba(52,211,153,.25); border-radius:18px; padding:clamp(28px,4vw,44px); text-align:center; position:relative; overflow:hidden; animation:riseIn .55s cubic-bezier(.2,.7,.3,1);" data-r="successpanel">
+          <div style="position:absolute; top:-80px; left:50%; transform:translateX(-50%); width:600px; height:300px; background:radial-gradient(circle at 50% 40%, rgba(52,211,153,.18), transparent 64%); pointer-events:none;"></div>
+          <div style="position:relative;">
+            <div style="width:64px; height:64px; border-radius:18px; background:rgba(52,211,153,.14); display:flex; align-items:center; justify-content:center; margin:0 auto;">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#34D399" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+            <div style="font-weight:800; font-size:clamp(26px,3.4vw,36px); letter-spacing:-.02em; color:#F5F5F8; margin-top:20px;">You're live.</div>
+            <p style="font-size:16px; color:#A5A4AE; max-width:460px; margin:12px auto 0; line-height:1.55;">Your site is activated, hosting and security are on, and your Command Center is ready. We'll email onboarding next steps.</p>
+            <div style="display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; margin-top:20px;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4ADCA6; background:rgba(52,211,153,.1); border:1px solid rgba(52,211,153,.22); border-radius:999px; padding:6px 12px;">SITE LIVE</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4ADCA6; background:rgba(52,211,153,.1); border:1px solid rgba(52,211,153,.22); border-radius:999px; padding:6px 12px;">HOSTING ON</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#B7ACFF; background:rgba(124,108,246,.1); border:1px solid rgba(124,108,246,.24); border-radius:999px; padding:6px 12px;">COMMAND CENTER READY</span>
+            </div>
+            <div style="display:flex; gap:10px; justify-content:center; margin-top:24px; flex-wrap:wrap;">
+              <a href="Command%20Center.dc.html" style="font-size:14px; font-weight:700; color:#fff; padding:13px 22px; border-radius:11px; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); box-shadow:0 8px 20px rgba(124,108,246,.3);">Open Command Center</a>
+              <button onClick="{{resetCheckout}}" style="border:1px solid rgba(255,255,255,.14); background:#17171C; color:#E7E7EA; font-size:14px; font-weight:600; padding:13px 22px; border-radius:11px; cursor:pointer;">Back to plan</button>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+
+    <!-- ===================== EXAMPLES ===================== -->
+  <div id="examples" style="background:#0C0C11; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="max-width:720px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">Examples</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">Finished sites, built before the business signed up.</h2>
+        <p style="font-size:16.5px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">Every one was designed, graded, and ready to inspect — no meetings required. Here's the before-and-after in plain numbers.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:16px; margin-top:32px;">
+        <sc-for list="{{examples}}" as="e" hint-placeholder-count="6">
+          <div style="background:#101015; border:1px solid rgba(255,255,255,.08); border-radius:16px; overflow:hidden; transition:transform .2s ease, border-color .2s ease;" style-hover="transform:translateY(-4px); border-color:rgba(255,255,255,.16)">
+            <!-- mini preview -->
+            <div style="border-bottom:1px solid rgba(255,255,255,.06);">
+              <div style="height:28px; background:#17171C; display:flex; align-items:center; gap:6px; padding:0 12px;">
+                <span style="width:8px; height:8px; border-radius:50%; background:#F26D6D;"></span>
+                <span style="width:8px; height:8px; border-radius:50%; background:#E0A44A;"></span>
+                <span style="width:8px; height:8px; border-radius:50%; background:#34D399;"></span>
+              </div>
+              <div style="position:relative; height:150px; background:linear-gradient(150deg, {{e.accent2}}, #0E1512); overflow:hidden; padding:18px 20px; display:flex; flex-direction:column; justify-content:center;">
+                <div style="position:absolute; right:-30px; bottom:-30px; width:130px; height:130px; border-radius:50%; background:{{e.accent}}; opacity:.22;"></div>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.14em; color:rgba(255,255,255,.75);">{{e.trade}}</span>
+                <div style="font-weight:800; font-size:20px; letter-spacing:-.01em; color:#fff; margin-top:6px; max-width:75%; line-height:1.1;">{{e.name}}</div>
+                <div style="display:inline-flex; align-items:center; gap:8px; margin-top:14px;">
+                  <span style="font-size:11px; font-weight:700; color:#0E1512; background:{{e.accent}}; padding:6px 12px; border-radius:7px;">Free quote</span>
+                  <span style="font-size:10.5px; color:rgba(255,255,255,.82);">★ 4.6</span>
+                </div>
+              </div>
+            </div>
+            <!-- meta -->
+            <div style="padding:16px 18px 18px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+                <div style="font-weight:700; font-size:15.5px; color:#F2F2F5;">{{e.name}}</div>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6F6E79;">{{e.city}}</span>
+              </div>
+              <!-- before/after scores -->
+              <div style="display:flex; align-items:center; gap:12px; margin-top:14px;">
+                <div style="flex:1;">
+                  <div style="display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#8A8994; margin-bottom:4px;"><span>BEFORE</span><span>{{e.before}}</span></div>
+                  <div style="height:6px; background:rgba(255,255,255,.06); border-radius:3px; overflow:hidden;"><div style="height:100%; width:{{e.beforeW}}; background:#6F6E79; border-radius:3px;"></div></div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none; margin-top:8px;"><path d="M5 12h14M13 6l6 6-6 6" stroke="#4ADCA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <div style="flex:1;">
+                  <div style="display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#4ADCA6; margin-bottom:4px;"><span>AFTER</span><span>{{e.after}}</span></div>
+                  <div style="height:6px; background:rgba(255,255,255,.06); border-radius:3px; overflow:hidden;"><div style="height:100%; width:{{e.afterW}}; background:linear-gradient(90deg,#149B77,#34D399); border-radius:3px;"></div></div>
+                </div>
+              </div>
+              <div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:14px;">
+                <sc-for list="{{e.tags}}" as="tag" hint-placeholder-count="3">
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9B9AA4; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07); border-radius:999px; padding:4px 9px;">{{tag}}</span>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="text-align:center; margin-top:26px;">
+        <a href="#build" style="display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:700; color:#fff; padding:13px 24px; border-radius:12px; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); box-shadow:0 8px 20px rgba(124,108,246,.3);">Build mine — free to inspect
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== STATES LIBRARY ===================== -->
+  <!-- DEV: reference states for the /build + /checkout flows and support. Component library with all states. -->
+  <div id="states" style="background:#08080B; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="max-width:720px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">Every case, handled</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">The system knows what to do at every step.</h2>
+        <p style="font-size:16.5px; line-height:1.6; color:#A5A4AE; margin:14px 0 0;">From first search to signed-in customer — including missing info, human review, and retries. Nothing dead-ends.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin-top:30px;">
+        <sc-for list="{{stateCards}}" as="s" hint-placeholder-count="14">
+          <div style="background:#101015; border:1px solid rgba(255,255,255,.07); border-radius:13px; padding:15px 16px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+              <span style="width:9px; height:9px; border-radius:50%; background:{{s.tone}}; box-shadow:0 0 8px {{s.tone}};"></span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.08em; color:{{s.tone}};">{{s.mono}}</span>
+            </div>
+            <div style="font-weight:700; font-size:14.5px; color:#ECECEF; margin-top:12px;">{{s.label}}</div>
+            <div style="font-size:12px; line-height:1.45; color:#8A8994; margin-top:5px;">{{s.d}}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+    <!-- ===================== FAQ ===================== -->
+  <div id="faq" style="background:#0C0C11; border-bottom:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:820px; margin:0 auto; padding:clamp(56px,8vh,90px) 22px;">
+      <div style="text-align:center; max-width:640px; margin:0 auto;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.2em; color:#7C6CF6; text-transform:uppercase;">Questions</div>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.8vw,44px); letter-spacing:-.025em; line-height:1.06; margin:12px 0 0; color:#F5F5F8;">Answered plainly.</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-top:30px;">
+        <sc-for list="{{faqs}}" as="f" hint-placeholder-count="8">
+          <div style="background:#101015; border:1px solid rgba(255,255,255,.08); border-radius:14px; overflow:hidden;">
+            <button onClick="{{f.onClick}}" style="width:100%; text-align:left; border:0; background:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 20px;">
+              <span style="font-size:15.5px; font-weight:600; color:#ECECEF;">{{f.q}}</span>
+              <span style="flex:none; font-weight:400; font-size:22px; color:#7C6CF6; line-height:1;">{{f.sign}}</span>
+            </button>
+            <sc-if value="{{f.open}}">
+              <div style="padding:0 20px 20px; animation:fadeIn .3s ease;">
+                <p style="font-size:14.5px; line-height:1.6; color:#9B9AA4; margin:0; max-width:640px;">{{f.a}}</p>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FINAL CTA + CONTACT ===================== -->
+  <div id="contact" style="position:relative; background:#08080B; border-bottom:1px solid rgba(255,255,255,.07); overflow:hidden;">
+    <div style="position:absolute; top:-140px; left:50%; transform:translateX(-50%); width:1000px; height:480px; pointer-events:none; background:radial-gradient(circle at 50% 40%, rgba(124,108,246,.16), transparent 62%);"></div>
+    <div style="position:relative; max-width:1000px; margin:0 auto; padding:clamp(60px,9vh,110px) 22px; text-align:center;">
+      <h2 style="font-weight:800; font-size:clamp(32px,5vw,60px); letter-spacing:-.03em; line-height:1.02; margin:0; color:#F7F7FA;">See your finished website<br>before you decide.</h2>
+      <p style="font-size:17px; line-height:1.6; color:#B4B3BD; max-width:540px; margin:18px auto 0;">Enter your business. We'll build it, grade it, and show you the plan — free to inspect. Activate only if it's right.</p>
+
+      <div style="display:flex; gap:9px; margin:30px auto 0; max-width:520px;" data-r="finalform">
+        <div style="flex:1; display:flex; align-items:center; gap:10px; background:#101015; border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:0 14px;" style-focus="border-color:#7C6CF6">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M4 12a8 8 0 1016 0 8 8 0 00-16 0zM4 12h16" stroke="#7C7B86" stroke-width="1.6"></path></svg>
+          <input value="{{biz}}" onInput="{{onBiz}}" onKeyDown="{{onBizKey}}" placeholder="yourbusiness.com" style="flex:1; min-width:0; background:transparent; border:0; outline:none; color:#F2F2F5; font-size:15px; padding:15px 0;">
+        </div>
+        <button onClick="{{startBuild}}" style="flex:none; border:0; cursor:pointer; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); color:#fff; font-size:15px; font-weight:700; padding:0 22px; border-radius:12px; box-shadow:0 8px 20px rgba(124,108,246,.34);">Build my website</button>
+      </div>
+      <div style="font-size:13px; color:#8A8994; margin-top:14px;">No setup call required · Inspect the work before you activate it · $199/mo</div>
+
+      <!-- human contact -->
+      <div style="display:inline-flex; align-items:center; gap:18px; margin-top:34px; padding:16px 22px; background:#101015; border:1px solid rgba(255,255,255,.09); border-radius:14px; flex-wrap:wrap; justify-content:center;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div style="width:38px; height:38px; border-radius:11px; background:rgba(110,139,255,.14); display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6c0 8 6 14 14 14l2-3-4-2-2 2c-2-1-5-4-6-6l2-2-2-4-3 1z" stroke="#6E8BFF" stroke-width="1.6" stroke-linejoin="round"></path></svg></div>
+          <div style="text-align:left;"><div style="font-size:13.5px; font-weight:700; color:#ECECEF;">Prefer a person?</div><div style="font-size:12.5px; color:#8A8994;">Talk to our team — Mon–Fri, 8–5 CT.</div></div>
+        </div>
+        <a href="tel:+15125550142" style="font-size:14px; font-weight:700; color:#E7E7EA; padding:11px 18px; border:1px solid rgba(255,255,255,.14); border-radius:10px;">Talk to our team</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <div style="background:#0A0A0E;">
+    <div style="max-width:1200px; margin:0 auto; padding:44px 22px 30px;">
+      <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:28px;" data-r="footgrid">
+        <div>
+          <div style="display:flex; align-items:center; gap:11px;">
+            <svg width="32" height="32" viewBox="0 0 64 64" style="display:block;"><defs><linearGradient id="ftg" x1="12" y1="32" x2="50" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4A6CF7"></stop><stop offset="1" stop-color="#8B5CF6"></stop></linearGradient></defs><rect width="64" height="64" rx="15" fill="#131318"></rect><rect x="0.5" y="0.5" width="63" height="63" rx="14.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"></rect><path d="M12 24 L21 42 L30 26 L39 42 L50 20" fill="none" stroke="url(#ftg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="50" cy="20" r="4" fill="#34D399"></circle></svg>
+            <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-weight:800; font-size:17px; color:#F2F2F5;">WSS</span><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.34em; color:#8A8994;">LABS</span></div>
+          </div>
+          <p style="font-size:13px; line-height:1.55; color:#8A8994; margin:14px 0 0; max-width:290px;">Your complete AI business team. We build your website before you buy it, then run the systems that grow it.</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#5F5E68; margin-top:16px;">wss-ai.com</div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; color:#6F6E79; text-transform:uppercase;">Product</div>
+          <div style="display:flex; flex-direction:column; gap:10px; margin-top:14px;">
+            <a href="#deliverable" style="font-size:13.5px; color:#B4B3BD;">Websites</a>
+            <a href="#intel" style="font-size:13.5px; color:#B4B3BD;">Growth &amp; local SEO</a>
+            <a href="#staff" style="font-size:13.5px; color:#B4B3BD;">AI receptionist</a>
+            <a href="#staff" style="font-size:13.5px; color:#B4B3BD;">Reputation</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; color:#6F6E79; text-transform:uppercase;">Company</div>
+          <div style="display:flex; flex-direction:column; gap:10px; margin-top:14px;">
+            <a href="#how" style="font-size:13.5px; color:#B4B3BD;">How it works</a>
+            <a href="#examples" style="font-size:13.5px; color:#B4B3BD;">Examples</a>
+            <a href="#pricing" style="font-size:13.5px; color:#B4B3BD;">Pricing</a>
+            <a href="#contact" style="font-size:13.5px; color:#B4B3BD;">Support</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; color:#6F6E79; text-transform:uppercase;">Account</div>
+          <div style="display:flex; flex-direction:column; gap:10px; margin-top:14px;">
+            <a href="#pricing" style="font-size:13.5px; color:#B4B3BD;">Create account</a>
+            <a href="Command%20Center.dc.html" style="font-size:13.5px; color:#B4B3BD;">Open Command Center</a>
+            <a href="#build" style="font-size:13.5px; color:#B4B3BD;">Build my website</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:34px; padding-top:20px; border-top:1px solid rgba(255,255,255,.07);">
+        <div style="display:flex; gap:18px; flex-wrap:wrap;">
+          <a href="Legal.dc.html#privacy" style="font-size:12.5px; color:#8A8994;">Privacy</a>
+          <a href="Legal.dc.html#terms" style="font-size:12.5px; color:#8A8994;">Terms</a>
+          <a href="Legal.dc.html#accessibility" style="font-size:12.5px; color:#8A8994;">Accessibility</a>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#5F5E68;">© 2026 Woodward Software Labs · Prototype — nothing charges, sends, or deploys</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== DEVELOPER SPEC OVERLAY (toggle: devAnnotations) ===================== -->
+  <sc-if value="{{dev}}">
+    <div style="position:fixed; left:16px; bottom:16px; z-index:200; width:320px; max-height:70vh; overflow-y:auto; background:rgba(11,11,15,.96); backdrop-filter:blur(12px); border:1px solid rgba(124,108,246,.3); border-radius:14px; padding:16px; box-shadow:0 24px 60px rgba(0,0,0,.6);">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span style="width:7px; height:7px; border-radius:50%; background:#7C6CF6;"></span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; color:#B7ACFF;">DEVELOPER SPEC · ROUTES</span>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.9; color:#9B9AA4; margin-top:10px;">
+        <div>/ · /build · /websites · /growth</div>
+        <div>/ai-receptionist · /reputation</div>
+        <div>/examples · /how-it-works · /pricing</div>
+        <div>/signup · /login · /checkout · /support</div>
+        <div>/legal/privacy · /terms · /accessibility</div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; color:#B7ACFF; margin-top:14px;">BUTTON → ROUTE</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.8; color:#9B9AA4; margin-top:6px;">
+        <div>Build my website → /build</div>
+        <div>See example → /examples</div>
+        <div>Activate this website → /checkout</div>
+        <div>Create my account → /signup</div>
+        <div>Open Command Center → /login</div>
+        <div>Talk to our team → tel / schedule</div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; color:#B7ACFF; margin-top:14px;">INTEGRATIONS</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.8; color:#9B9AA4; margin-top:6px;">
+        <div>Auth · session @ /login /signup</div>
+        <div>SiteForge · preview build job</div>
+        <div>Stripe · /checkout activation</div>
+        <div>Support · human handoff</div>
+        <div>Command Center · customer dashboard</div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;reduceMotion&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Motion&quot; },
+  &quot;showTradeLabels&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Hero&quot; },
+  &quot;devAnnotations&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Developer&quot; }
+}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const R = React;
+    this.CountUp = function CountUp(p) {
+      const to = Number(p.to) || 0, dur = p.dur || 1100, fmt = p.fmt;
+      const ref = R.useRef(0); const setTick = R.useState(0)[1];
+      R.useEffect(function () {
+        let raf; const from = ref.current; const t0 = performance.now();
+        const ease = function (x) { return 1 - Math.pow(1 - x, 3); };
+        const step = function (t) {
+          const k = Math.min(1, (t - t0) / dur);
+          ref.current = from + (to - from) * ease(k);
+          setTick(function (x) { return x + 1; });
+          if (k < 1) raf = requestAnimationFrame(step);
+        };
+        raf = requestAnimationFrame(step);
+        return function () { cancelAnimationFrame(raf); };
+      }, [to]);
+      return fmt ? fmt(ref.current) : String(Math.round(ref.current));
+    };
+
+    this._flow = [];
+    this.state = {
+      navOpen: false,
+      biz: '',
+      stage: 'idle',          // idle · discovering · evidence · building · grading · ready
+      delivTab: 'website',
+      cmp: 50,
+      addons: { seo: true, gbp: true, recept: false, followup: true, reputation: false, content: false, ads: false, analytics: false, priority: false, domain: false },
+      co: 'config',           // config · checkout · success
+      faqOpen: 0,
+      previewBiz: 'Cedar & Stone Landscaping',
+      previewTrade: 'Landscaping · Austin, TX'
+    };
+  }
+
+  componentDidMount() {
+    this._tick = setInterval(() => this.forceUpdate(), 1000);
+    this._nav = (e) => {
+      const path = e.composedPath ? e.composedPath() : [];
+      let a = null;
+      for (let i = 0; i < path.length; i++) {
+        const n = path[i];
+        if (n && n.tagName === 'A') { const h = n.getAttribute && n.getAttribute('href'); if (h && h.charAt(0) === '#') { a = n; break; } }
+      }
+      if (!a) return;
+      const id = a.getAttribute('href').slice(1);
+      if (!id || id === 'top') { if (id === 'top') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); } return; }
+      e.preventDefault();
+      this.scrollToId(id);
+    };
+    document.addEventListener('click', this._nav, true);
+  }
+  componentWillUnmount() { if (this._tick) clearInterval(this._tick); this.clearFlow(); if (this._nav) document.removeEventListener('click', this._nav, true); }
+
+  clearFlow() { this._flow.forEach(t => clearTimeout(t)); this._flow = []; }
+
+  scrollToId(id) {
+    try {
+      const find = (root) => {
+        let el = root.getElementById ? root.getElementById(id) : root.querySelector('[id="' + id + '"]');
+        if (el) return el;
+        const all = root.querySelectorAll('*');
+        for (let i = 0; i < all.length; i++) { if (all[i].shadowRoot) { const f = find(all[i].shadowRoot); if (f) return f; } }
+        return null;
+      };
+      const el = find(document);
+      if (el) { const y = el.getBoundingClientRect().top + window.pageYOffset - 70; window.scrollTo({ top: y, behavior: 'smooth' }); }
+    } catch (e) {}
+  }
+
+  pad2(n){ return String(n).padStart(2,'0'); }
+  clockStr() { const d=new Date(); let h=d.getHours(); const m=this.pad2(d.getMinutes()); const ap=h>=12?'PM':'AM'; h=h%12; if(h===0)h=12; return h+':'+m+' '+ap; }
+
+  sparkPath(vals){ const w=96,h=30,pad=3; const mn=Math.min(...vals),mx=Math.max(...vals),rng=(mx-mn)||1; const st=(w-pad*2)/(vals.length-1); return 'M'+vals.map((v,i)=>(pad+i*st).toFixed(1)+' '+(h-pad-((v-mn)/rng)*(h-pad*2)).toFixed(1)).join(' L '); }
+
+  deriveBiz(v){
+    v=(v||'').trim();
+    if(!v) return { name:'Cedar & Stone Landscaping', trade:'Landscaping · Austin, TX' };
+    let name;
+    if(v.indexOf(' ')>-1 && !/^https?:|\.[a-z]{2,}/i.test(v)) { name = v; }
+    else { let s=v.replace(/^https?:\/\//i,'').replace(/^www\./i,'').split('/')[0].split('.')[0].replace(/[-_]+/g,' '); name=s; }
+    name = name.replace(/\s+/g,' ').trim().replace(/\b\w/g, m => m.toUpperCase());
+    return { name: name || 'Your Business', trade:'Local business' };
+  }
+
+  toggleNav(){ this.setState(s=>({navOpen:!s.navOpen})); }
+  closeNav(){ this.setState({navOpen:false}); }
+  focusBuild(e){ this.setState({navOpen:false}); }
+
+  startBuild(override){
+    const raw = (typeof override === 'string') ? override : this.state.biz;
+    const b = this.deriveBiz(raw);
+    this.clearFlow();
+    this.setState({ biz: raw, stage:'discovering', previewBiz:b.name, previewTrade:b.trade, delivTab:'website' });
+    this.scrollToId('build');
+    const seq = [['evidence',1600],['building',1800],['grading',2400],['ready',1700]];
+    let acc=0;
+    seq.forEach(([st,d])=>{ acc+=d; this._flow.push(setTimeout(()=>this.setState({stage:st}), acc)); });
+  }
+  restartBuild(){ this.clearFlow(); this.setState({ stage:'idle' }); }
+
+  setDelivTab(t){ this.setState({delivTab:t}); }
+  setCmp(e){ this.setState({cmp:Number(e.target.value)}); }
+  toggleAddon(id){ this.setState(s=>({ addons:{...s.addons, [id]:!s.addons[id]} })); }
+  setFaq(i){ this.setState(s=>({ faqOpen: s.faqOpen===i ? -1 : i })); }
+  goCheckout(){ this.setState({co:'checkout'}); this.scrollToId('pricing'); }
+  placeOrder(){ this.setState({co:'success'}); }
+  resetCheckout(){ this.setState({co:'config'}); }
+
+  seg(active){ return { bg: active?'rgba(255,255,255,.10)':'transparent', fg: active?'#F2F2F5':'#84838E', shadow: active?'inset 0 0 0 1px rgba(255,255,255,.12)':'none' }; }
+
+  renderVals(){
+    const s = this.state;
+    const reduce = this.props.reduceMotion === true;
+    const showLabels = this.props.showTradeLabels !== false;
+    const dev = this.props.devAnnotations === true;
+    const mkInt = to => React.createElement(this.CountUp, { to, dur:1100, fmt: x => Math.round(x).toLocaleString('en-US') });
+    const mkPct = to => React.createElement(this.CountUp, { to, dur:1100, fmt: x => x.toFixed(1) + '%' });
+
+    // ---- NAV ----
+    const navLinks = [
+      { label:'How it works', href:'#how' },
+      { label:'Websites', href:'#deliverable' },
+      { label:'Growth', href:'#intel' },
+      { label:'AI staff', href:'#staff' },
+      { label:'Examples', href:'#examples' },
+      { label:'Pricing', href:'#pricing' }
+    ];
+
+    // ---- HERO ----
+    const heroTrades = [
+      { key:'land', label:'Landscaping', ph:'Landscaping', slot:'hero-land', col:'1 / span 2', row:'1' },
+      { key:'roof', label:'Roofing',     ph:'Roofing',     slot:'hero-roof', col:'3 / span 1', row:'1' },
+      { key:'exc',  label:'Excavation',  ph:'Excavation',  slot:'hero-exc',  col:'4 / span 1', row:'1' },
+      { key:'elec', label:'Electrical',  ph:'Electrical',  slot:'hero-elec', col:'1 / span 1', row:'2' },
+      { key:'pool', label:'Pool & spa',  ph:'Pool & spa',  slot:'hero-pool', col:'2 / span 2', row:'2' },
+      { key:'home', label:'Home service',ph:'Home service',slot:'hero-home', col:'4 / span 1', row:'2' }
+    ];
+
+    // ---- BUILD FLOW ----
+    const order = ['discovering','evidence','building','grading','ready'];
+    const idx = order.indexOf(s.stage);
+    const stepDefs = [['discovering','Discover'],['evidence','Verify'],['building','Build'],['grading','Grade'],['ready','Preview']];
+    const steps = stepDefs.map(([k,l],i)=>{
+      const st = idx<0 ? 'todo' : (i<idx ? 'done' : i===idx ? 'active' : 'todo');
+      return { key:k, label:l, num:String(i+1),
+        dot: st==='done' ? '#34D399' : st==='active' ? '#7C6CF6' : 'rgba(255,255,255,.12)',
+        ink: st==='todo' ? '#6F6E79' : '#F2F2F5',
+        ring: st==='active' ? '0 0 0 4px rgba(124,108,246,.18)' : 'none',
+        anim: (st==='active' && !reduce) ? 'wpulse 1.6s infinite' : 'none',
+        isDone: st==='done', isActive: st==='active' };
+    });
+
+    const evidenceFacts = [
+      { k:'Business name', v: s.previewBiz, ok:true },
+      { k:'Category', v:'Landscaping contractor', ok:true },
+      { k:'Service area', v:'Austin + 6 nearby cities', ok:true },
+      { k:'Phone & hours', v:'Found · Mon–Sat 7–6', ok:true },
+      { k:'Google profile', v:'Claimed · 47 reviews · 4.6★', ok:true },
+      { k:'Existing website', v:'Dated · not mobile-ready', ok:false }
+    ].map(f => ({ ...f, warn: !f.ok }));
+    const scanLines = [
+      'Located the business and its category',
+      'Matched public listings and map profile',
+      'Pulled hours, services, and reviews',
+      'Mapped nearby competitors and searches'
+    ];
+    const demoChips = [
+      ['cedarstone.com', 'Try: Cedar & Stone'],
+      ['ridgewayroofing.com', 'Try: Ridgeway Roofing'],
+      ['harborpointdental.com', 'Try: Harbor Point Dental']
+    ].map(([v, l]) => ({ label: l, onClick: () => this.startBuild(v) }));
+    const evidenceSignals = [
+      { label:'Public listings', v:'12 matched' },
+      { label:'Photos found', v:'38 usable' },
+      { label:'Competitors mapped', v:'9 local' }
+    ];
+    const buildLog = [
+      { t:'Structure', v:'7 pages · services, service areas, reviews, contact' },
+      { t:'Copy', v:'Written from verified facts — no invented claims' },
+      { t:'Design', v:'Premium template tuned to the trade' },
+      { t:'Lead capture', v:'Quote form + click-to-call wired' },
+      { t:'Local SEO', v:'Schema, maps, and nearby search language' }
+    ];
+    const gradeItems = [
+      { label:'Speed & mobile', score:96 },
+      { label:'Local SEO', score:92 },
+      { label:'Trust & reviews', score:88 },
+      { label:'Lead capture', score:94 },
+      { label:'Content depth', score:90 }
+    ].map(g => ({ ...g, w: g.score + '%' }));
+    const gradeScore = 92;
+
+    // ---- DELIVERABLE VIEWER ----
+    const delivTabs = [
+      { key:'website', label:'Website' },
+      { key:'plan', label:'Local optimization plan' },
+      { key:'report', label:'Opportunity report' },
+      { key:'callprep', label:'Call prep' }
+    ].map(t => ({ ...t, active: s.delivTab===t.key, onClick: () => this.setDelivTab(t.key), ...this.seg(s.delivTab===t.key) }));
+
+    const planItems = [
+      { h:'Google Business Profile', d:'Claim, categorize, add services, hours, and 20 geo-tagged photos.', tag:'Week 1' },
+      { h:'Directory consistency', d:'Fix name, address, phone across 40+ directories and map apps.', tag:'Week 1' },
+      { h:'Service-area pages', d:'A page for each city you serve, with local language and proof.', tag:'Week 2' },
+      { h:'Review engine', d:'Automatic review requests after each completed job.', tag:'Ongoing' },
+      { h:'Structured data', d:'LocalBusiness + service schema so search and AI understand you.', tag:'Week 1' }
+    ];
+    const reportStats = [
+      { label:'Monthly "near me" searches', el: mkInt(2400), sub:'in your service area' },
+      { label:'Est. calls you\'re missing', el: mkInt(31), sub:'per month, off-hours' },
+      { label:'Local rank opportunity', el: mkInt(9), sub:'competitors ahead today' },
+      { label:'Projected reach lift', el: mkPct(58), sub:'first 90 days' }
+    ];
+    const reportFindings = [
+      { tone:'#E0A44A', label:'Missed potential', text:'Your current site isn\'t mobile-ready — most local searches are on a phone.' },
+      { tone:'#E0A44A', label:'Missed potential', text:'No lead form or click-to-call, so after-hours interest goes nowhere.' },
+      { tone:'#34D399', label:'Clear win', text:'Strong review score — we surface it everywhere buyers decide.' },
+      { tone:'#34D399', label:'Clear win', text:'Six nearby cities with demand and no dominant local site yet.' }
+    ];
+    const callPrep = [
+      { q:'Who is calling', a: s.previewBiz + ' — owner-operated ' + '· 12 years in business' },
+      { q:'Why now', a:'Peak season demand + a competitor just refreshed their site' },
+      { q:'What they get today', a:'A finished site, lead capture, and a local plan — before paying' },
+      { q:'Likely questions', a:'“Is the price real?” · “Do I keep my brand?” · “How fast are edits?”' }
+    ];
+
+    // ---- WHY AI ----
+    const tradWay = [
+      'Discovery meetings and scheduling', 'Design rounds and revisions',
+      'Separate writers, developers, SEO, and support vendors', 'Long handoffs, unclear ownership',
+      'You pay for coordination and delay'
+    ];
+    const wssWay = [
+      'Verifies your business from public + supplied evidence', 'Builds the full preview before purchase',
+      'One coordinated system, not five vendors', 'Shows what changed and why',
+      'Activates only when you choose to proceed'
+    ];
+
+    // ---- AI STAFF ----
+    const tints = [
+      { bg:'rgba(124,108,246,.16)', fg:'#B7ACFF', glow:'rgba(124,108,246,.22)' },
+      { bg:'rgba(110,139,255,.16)', fg:'#A9BCFB', glow:'rgba(110,139,255,.2)' },
+      { bg:'rgba(52,211,153,.15)', fg:'#6FE3BE', glow:'rgba(52,211,153,.2)' },
+      { bg:'rgba(224,164,74,.16)', fg:'#F0CE93', glow:'rgba(224,164,74,.2)' }
+    ];
+    const staff = [
+      { g:'B', name:'Builder', role:'Designs and ships your site', d:'Turns verified facts into a finished, premium website tuned to your trade.' },
+      { g:'L', name:'Local Search Analyst', role:'Maps your market', d:'Finds the searches, competitors, and gaps in your service area — then plans the wins.' },
+      { g:'R', name:'Receptionist', role:'Answers calls, SMS & chat', d:'Picks up when you can\'t, books the job, and never lets a lead sit.' },
+      { g:'F', name:'Follow-up Agent', role:'Replies and nurtures', d:'Responds in seconds, follows up on quotes, and keeps conversations warm.' },
+      { g:'V', name:'Reputation Agent', role:'Reviews & trust signals', d:'Requests reviews after each job and keeps your rating working for you.' },
+      { g:'E', name:'Editor', role:'Same-day changes', d:'Ask in plain language — new photos, prices, hours, pages — done that day.' },
+      { g:'P', name:'Reporting Agent', role:'Shows what it earned', d:'Plain-language reporting on calls, leads, and where they came from.' }
+    ].map((a,i)=>({ ...a, ...tints[i%tints.length] }));
+
+    // ---- LOCAL INTELLIGENCE ----
+    const intel = [
+      { label:'Verified business facts', v:'Confirmed', ok:true, d:'Name, address, hours, and services checked against public records.' },
+      { label:'Google Business Profile', v:'Optimized', ok:true, d:'Claimed, categorized, and complete with photos and services.' },
+      { label:'Directory consistency', v:'40+ synced', ok:true, d:'One matching name, address, and phone everywhere it appears.' },
+      { label:'Nearby search language', v:'Mapped', ok:true, d:'The real phrases customers in your area type and say.' },
+      { label:'Structured data (schema)', v:'Applied', ok:true, d:'LocalBusiness and service markup search engines trust.' },
+      { label:'Maps & service area', v:'Pinned', ok:true, d:'Accurate pins, radius, and a page for every city you serve.' },
+      { label:'Voice search', v:'Answered', ok:true, d:'Ready for "near me" and spoken-question results.' },
+      { label:'AI-answer visibility', v:'Surfacing', ok:true, d:'Structured so AI assistants can find and recommend you.' }
+    ];
+
+    // ---- SITEFORGE ----
+    const forge = [
+      { n:'01', h:'Discover', d:'We find your business and the market around it.' },
+      { n:'02', h:'Verify', d:'Every fact is checked before it goes on the page.' },
+      { n:'03', h:'Design', d:'A premium site is built and tuned to your trade.' },
+      { n:'04', h:'Grade', d:'Speed, SEO, trust, and lead capture are scored.' },
+      { n:'05', h:'Preview', d:'You inspect the finished site and the plan — free.' },
+      { n:'06', h:'Activate', d:'Approve, and it goes live with hosting and support.' },
+      { n:'07', h:'Improve', d:'Edits, reporting, and optional agents, ongoing.' }
+    ];
+
+    // ---- COMMAND CENTER PREVIEW ----
+    const ccKpis = [
+      { label:'Leads in system', el: mkInt(1240), delta:'+124', sub:'total tracked', stroke:'#7C6CF6', glow:'rgba(124,108,246,.28)', spark:this.sparkPath([18,22,26,30,34,38,42,47]) },
+      { label:'Calls answered', el: mkInt(86), delta:'+11', sub:'this week', stroke:'#34D399', glow:'rgba(52,211,153,.24)', spark:this.sparkPath([8,10,9,12,14,13,16,18]) },
+      { label:'Open rate', el: mkPct(45.4), delta:'+3.1%', sub:'1,199 opens', stroke:'#34D399', glow:'rgba(52,211,153,.24)', spark:this.sparkPath([40,43,41,46,44,48,45,47]) },
+      { label:'New reviews', el: mkInt(23), delta:'+6', sub:'4.7★ average', stroke:'#7C6CF6', glow:'rgba(124,108,246,.28)', spark:this.sparkPath([2,3,4,4,6,7,9,12]) }
+    ];
+
+    // ---- CONFIGURATOR ----
+    const baseFeatures = ['Finished website', 'Hosting & security', 'Lead capture', 'Same-day editing', 'Reporting', 'Customer Command Center'];
+    const addonDefs = [
+      { id:'seo', label:'Local SEO & market plan', d:'Rank in your service area', price:149 },
+      { id:'gbp', label:'Google Business Profile & Maps', d:'Claimed and optimized', price:79 },
+      { id:'reputation', label:'Reputation & review support', d:'Earn and manage reviews', price:89 },
+      { id:'recept', label:'AI phone receptionist', d:'Answers and books calls', price:129 },
+      { id:'followup', label:'SMS & email reply agent', d:'Instant, warm follow-up', price:99 },
+      { id:'content', label:'Content & service-area expansion', d:'More pages, more reach', price:119 },
+      { id:'ads', label:'Paid lead generation', d:'Managed local ads', price:199 },
+      { id:'analytics', label:'Analytics & call intelligence', d:'See every source', price:59 },
+      { id:'priority', label:'Priority edits & support', d:'Front of the line', price:49 },
+      { id:'domain', label:'Domain & business email', d:'you@yourbusiness.com', price:19 }
+    ];
+    const addons = addonDefs.map(a => {
+      const sel = !!s.addons[a.id];
+      return { ...a, selected: sel, onToggle: () => this.toggleAddon(a.id), priceLabel: '+$'+a.price+'/mo',
+        cardBorder: sel ? 'rgba(52,211,153,.32)' : 'rgba(255,255,255,.07)',
+        cardBg: sel ? 'rgba(52,211,153,.05)' : '#101015',
+        trackBg: sel ? '#34D399' : 'rgba(255,255,255,.14)',
+        knobX: sel ? '20px' : '2px',
+        priceColor: sel ? '#4ADCA6' : '#8A8994' };
+    });
+    const addTotal = addonDefs.reduce((n,a)=> n + (s.addons[a.id] ? a.price : 0), 0);
+    const monthlyTotal = 199 + addTotal;
+    const selectedCount = addonDefs.filter(a=>s.addons[a.id]).length;
+    const orderLines = [{ label:'Website activation', price:199 }]
+      .concat(addonDefs.filter(a=>s.addons[a.id]).map(a=>({label:a.label, price:a.price})))
+      .map(l => ({ ...l, priceLabel: '$'+l.price+'/mo' }));
+
+    // ---- EXAMPLES ----
+    const examples = [
+      { name:'Cedar & Stone Landscaping', trade:'Landscaping', city:'Austin, TX', accent:'#34D399', accent2:'#149B77', before:41, after:96, tags:['Quote form','Service areas','4.6★ reviews'] },
+      { name:'Ridgeway Roofing', trade:'Roofing', city:'Denver, CO', accent:'#E0A44A', accent2:'#B97F2E', before:38, after:94, tags:['Storm response','Financing','Gallery'] },
+      { name:'Harbor Point Dental', trade:'Dental', city:'Portland, OR', accent:'#6E8BFF', accent2:'#4A6CF7', before:52, after:97, tags:['Online booking','New patients','Insurance'] },
+      { name:'Summit Auto Detailing', trade:'Automotive', city:'Mesa, AZ', accent:'#7C6CF6', accent2:'#5B49D6', before:44, after:95, tags:['Packages','Book online','Before/after'] },
+      { name:'Blue Fig Café', trade:'Cafe', city:'Santa Fe, NM', accent:'#F0A98E', accent2:'#D07A5A', before:49, after:93, tags:['Menu','Order ahead','Hours'] },
+      { name:'Kline HVAC & Air', trade:'HVAC', city:'Tulsa, OK', accent:'#57DBB1', accent2:'#2A9E7B', before:36, after:92, tags:['24/7 line','Maintenance','Coupons'] }
+    ].map(e=>({ ...e, beforeW: e.before+'%', afterW: e.after+'%' }));
+
+    // ---- STATES LIBRARY ----
+    const stateCards = [
+      { label:'Initial', tone:'#6F6E79', mono:'READY', d:'Enter a URL or business name to begin.' },
+      { label:'Discovering business', tone:'#7C6CF6', mono:'WORKING', d:'Finding your business in public sources.' },
+      { label:'Evidence found', tone:'#34D399', mono:'VERIFIED', d:'Facts confirmed and shown to you.' },
+      { label:'Building', tone:'#7C6CF6', mono:'BUILDING', d:'Assembling pages, copy, and design.' },
+      { label:'Grading', tone:'#6E8BFF', mono:'SCORING', d:'Speed, SEO, trust, and capture graded.' },
+      { label:'Preview ready', tone:'#34D399', mono:'READY', d:'Inspect the finished site and plan.' },
+      { label:'Missing information', tone:'#E0A44A', mono:'NEEDS INPUT', d:'A couple of facts to confirm — optional.' },
+      { label:'Held for human review', tone:'#E0A44A', mono:'IN REVIEW', d:'A person checks edge cases before preview.' },
+      { label:'Configure plan', tone:'#7C6CF6', mono:'CONFIG', d:'Pick add-ons; see the price update live.' },
+      { label:'Checkout', tone:'#6E8BFF', mono:'SECURE', d:'Encrypted checkout. Cancel anytime.' },
+      { label:'Purchase success', tone:'#34D399', mono:'ACTIVE', d:'Site goes live; Command Center opens.' },
+      { label:'Signed-in customer', tone:'#34D399', mono:'ONLINE', d:'Your live dashboard and controls.' },
+      { label:'Error / retry', tone:'#F26D6D', mono:'RETRY', d:'Something failed — retry, nothing lost.' },
+      { label:'Support / contact', tone:'#6E8BFF', mono:'HUMAN', d:'Talk to a person whenever you want.' }
+    ];
+
+    // ---- FAQ ----
+    const faqs = [
+      { q:'Do I really get a finished website before I pay?', a:'Yes. We build a complete, working preview of your site and a local plan first. You inspect all of it — then decide whether to activate.' },
+      { q:'How can the price be this low?', a:'The lower price comes from less waste, not less work. We remove weeks of meetings, handoffs, and repetitive production — the quality of the finished system stays high.' },
+      { q:'Will my business keep its identity?', a:'Always. Your name, brand, and voice stay yours. WSS supplies the operating system underneath — the website, the follow-up, the reporting.' },
+      { q:'What if my information is wrong or missing?', a:'You can correct anything before activating. If we\'re missing a detail, we ask — and hold the preview until it\'s right.' },
+      { q:'Do I have to talk to a salesperson?', a:'No setup call required. Everything is inspectable on your own time. A human is available whenever you want one.' },
+      { q:'Who owns the website and content?', a:'You do. The site is built for your business, and your content is yours to keep.' },
+      { q:'How fast are edits after launch?', a:'Same day for most requests. Ask in plain language — the Editor handles photos, prices, hours, and new pages.' },
+      { q:'Can I cancel?', a:'Yes, anytime. No long contracts. You keep your domain and content.' }
+    ].map((f,i)=>({ ...f, open: s.faqOpen===i, onClick: () => this.setFaq(i), sign: s.faqOpen===i ? '\u2212' : '+' }));
+
+    return {
+      reduceFlag: reduce ? '1' : '0', showLabels, dev,
+      clock: this.clockStr(),
+      heroSpark: this.sparkPath([12,16,14,20,24,22,30,38,44]),
+      navLinks, navOpen: s.navOpen,
+      toggleNav: () => this.toggleNav(), closeNav: () => this.closeNav(), focusBuild: () => this.focusBuild(),
+      heroTrades,
+      biz: s.biz, onBiz: e => this.setState({biz:e.target.value}), onBizKey: e => { if(e.key==='Enter') this.startBuild(); },
+      startBuild: () => this.startBuild(), restartBuild: () => this.restartBuild(),
+
+      stage: s.stage, isIdle: s.stage==='idle',
+      isDiscovering: s.stage==='discovering', isEvidence: s.stage==='evidence',
+      isBuilding: s.stage==='building', isGrading: s.stage==='grading', isReady: s.stage==='ready',
+      flowActive: s.stage!=='idle', notReady: s.stage!=='ready',
+      steps, previewBiz: s.previewBiz, previewTrade: s.previewTrade,
+      evidenceFacts, evidenceSignals, buildLog, gradeItems, gradeScore, gradeGrade: gradeScore>=90?'A':'A\u2212',
+      scanLines, demoChips,
+
+      delivTabs, delivTab: s.delivTab,
+      showWebsite: s.delivTab==='website', showPlan: s.delivTab==='plan', showReport: s.delivTab==='report', showCallprep: s.delivTab==='callprep',
+      setDelivTab: t => this.setDelivTab(t),
+      planItems, reportStats, reportFindings, callPrep,
+
+      tradWay, wssWay, staff, intel, forge, ccKpis,
+
+      baseFeatures, addons, monthlyTotal, monthlyTotalLabel: '$'+monthlyTotal, selectedCount, addTotal,
+      co: s.co, isConfig: s.co==='config', isCheckout: s.co==='checkout', isSuccess: s.co==='success',
+      orderLines, goCheckout: () => this.goCheckout(), placeOrder: () => this.placeOrder(), resetCheckout: () => this.resetCheckout(),
+
+      cmp: s.cmp, cmpW: s.cmp+'%', cmpRight: (100-s.cmp)+'%', setCmp: e => this.setCmp(e),
+      examples, stateCards, faqs
+    };
+  }
+}
+</script>
+</body>
+</html>

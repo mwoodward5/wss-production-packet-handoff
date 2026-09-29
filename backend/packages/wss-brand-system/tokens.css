@@ -1,0 +1,48 @@
+/* WSS Labs brand tokens v1.0 */
+:root {
+  /* core */
+  --wss-void: #08080B;
+  --wss-carbon: #131318;
+  --wss-ink: #F2F2F5;
+  --wss-slate: #9B9AA4;
+  --wss-graphite: #6F6E79;
+  --wss-hairline: rgba(255,255,255,.07);
+
+  /* accent */
+  --wss-violet: #7C6CF6;
+  --wss-blue: #4A6CF7;
+  --wss-green: #34D399;
+
+  /* semantic */
+  --wss-sky: #6E8BFF;
+  --wss-ember: #E0A44A;
+  --wss-rose: #F26D6D;
+
+  /* gradients */
+  --wss-grad-signal: linear-gradient(135deg, #4A6CF7 0%, #8B5CF6 100%);
+  --wss-grad-pulse: linear-gradient(135deg, #0E6B52 0%, #34D399 100%);
+
+  /* type */
+  --wss-font-ui: "Hanken Grotesk", system-ui, sans-serif;
+  --wss-font-mono: "IBM Plex Mono", monospace;
+
+  /* shell */
+  --wss-shell-bg: radial-gradient(1100px 460px at 50% -160px, rgba(124,108,246,.13), transparent 62%), #08080B;
+  --wss-shell-panel: linear-gradient(150deg, rgba(255,255,255,.09), rgba(255,255,255,.028));
+  --wss-shell-panel-strong: linear-gradient(150deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  --wss-shell-focus: 0 0 0 3px rgba(124,108,246,.24), 0 0 0 1px rgba(255,255,255,.08) inset;
+  --wss-shell-shadow: 0 24px 70px rgba(0,0,0,.5);
+
+  /* email-safe */
+  --wss-email-bg: #F7F7FA;
+  --wss-email-ink: #16151B;
+  --wss-email-muted: #5F5E68;
+  --wss-email-line: rgba(22,21,27,.10);
+  --wss-email-link: #4A6CF7;
+
+  /* report-safe */
+  --wss-report-bg: #0D0D11;
+  --wss-report-ink: #F2F2F5;
+  --wss-report-muted: #8C8B96;
+  --wss-report-line: rgba(255,255,255,.08);
+}

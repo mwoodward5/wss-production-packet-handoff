@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "client_slug": "REPLACE-with-kebab-case-slug",
+  "files": {
+    "client": "client.json",
+    "brand": "brand.json",
+    "seo": "seo.json",
+    "services": "services.json",
+    "cities": "cities.json",
+    "reviews": "reviews.json",
+    "faqs": "faqs.json",
+    "social": "social.json",
+    "trust": "trust.json",
+    "hero": "hero.json",
+    "widget": "widget.json",
+    "internal_links": "internal-links.json",
+    "voice_search": "voice-search.json",
+    "sitemap_hints": "sitemap-hints.json",
+    "assets": "assets-manifest.json",
+    "citations": "citations-targets.csv",
+    "llms": "llms.txt"
+  },
+  "content_dir": "content/",
+  "assets_dir": "assets/"
+}

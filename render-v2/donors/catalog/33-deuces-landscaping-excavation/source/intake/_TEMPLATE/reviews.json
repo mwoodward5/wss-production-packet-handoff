@@ -1,0 +1,6 @@
+{
+  "aggregate": { "ratingValue": 0, "reviewCount": 0 },
+  "items": [
+    { "author": "", "rating": 5, "date": "", "body": "", "source": "google" }
+  ]
+}

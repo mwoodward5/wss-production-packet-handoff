@@ -1,0 +1,140 @@
+{
+ "id": "caldwell-atelier-project",
+ "source": "6f2464df-1947-44a2-87ce-b61bb6b4a1ee",
+ "palette": {
+  "vars": {
+   "--paper": "45 41% 94%",
+   "--paper-2": "42 36% 89%",
+   "--ink": "168 33% 6%",
+   "--ink-soft": "174 4% 31%",
+   "--plum": "355 62% 32%",
+   "--plum-glow": "355 70% 44%",
+   "--steel": "174 4% 31%",
+   "--steel-glow": "174 10% 45%",
+   "--gold": "41 51% 83%",
+   "--gold-soft": "41 60% 92%",
+   "--teal": "var(--plum)",
+   "--teal-glow": "var(--plum-glow)",
+   "--tan": "var(--gold)",
+   "--tan-soft": "var(--gold-soft)",
+   "--maroon": "355 62% 32%",
+   "--maroon-glow": "355 70% 44%",
+   "--maroon-deep": "355 70% 22%",
+   "--background": "var(--paper)",
+   "--foreground": "var(--ink)",
+   "--card": "45 50% 97%",
+   "--card-foreground": "var(--ink)",
+   "--popover": "45 50% 97%",
+   "--popover-foreground": "var(--ink)",
+   "--primary": "var(--teal)",
+   "--primary-foreground": "var(--ink)",
+   "--secondary": "var(--ink)",
+   "--secondary-foreground": "var(--paper)",
+   "--muted": "42 28% 90%",
+   "--muted-foreground": "var(--ink-soft)",
+   "--accent": "var(--tan)",
+   "--accent-foreground": "var(--ink)",
+   "--destructive": "0 70% 45%",
+   "--destructive-foreground": "0 0% 98%",
+   "--border": "42 18% 82%",
+   "--input": "42 18% 82%",
+   "--ring": "var(--teal)",
+   "--grad-ink": "linear-gradient(135deg, hsl(var(--ink)) 0%, hsl(174 28% 14%) 100%)",
+   "--grad-teal": "linear-gradient(135deg, hsl(var(--teal)) 0%, hsl(var(--teal-glow)) 100%)",
+   "--grad-gold": "linear-gradient(135deg, hsl(var(--tan)) 0%, hsl(var(--tan-soft)) 100%)",
+   "--grad-paper": "linear-gradient(180deg, hsl(var(--paper)) 0%, hsl(var(--paper-2)) 100%)",
+   "--sidebar-background": "var(--paper)",
+   "--sidebar-foreground": "var(--ink)",
+   "--sidebar-primary": "var(--teal)",
+   "--sidebar-primary-foreground": "var(--ink)",
+   "--sidebar-accent": "42 28% 90%",
+   "--sidebar-accent-foreground": "var(--ink)",
+   "--sidebar-border": "42 18% 82%",
+   "--sidebar-ring": "var(--teal)"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "168 33% 5%",
+   "--foreground": "45 41% 94%",
+   "--paper": "168 33% 5%",
+   "--paper-2": "168 28% 9%",
+   "--ink": "45 41% 94%",
+   "--ink-soft": "45 12% 75%",
+   "--card": "168 28% 9%",
+   "--card-foreground": "45 41% 94%",
+   "--popover": "168 28% 9%",
+   "--popover-foreground": "45 41% 94%",
+   "--primary": "355 70% 50%",
+   "--primary-foreground": "45 41% 94%",
+   "--secondary": "45 41% 94%",
+   "--secondary-foreground": "168 33% 5%",
+   "--muted": "168 22% 12%",
+   "--muted-foreground": "45 12% 70%",
+   "--accent": "41 51% 83%",
+   "--accent-foreground": "168 33% 5%",
+   "--border": "168 22% 16%",
+   "--input": "168 22% 16%",
+   "--ring": "355 70% 50%",
+   "--plum": "355 70% 50%",
+   "--plum-glow": "355 80% 62%",
+   "--gold": "41 51% 83%",
+   "--teal": "355 70% 50%",
+   "--teal-glow": "355 80% 62%",
+   "--tan": "41 51% 83%",
+   "--maroon": "355 70% 50%",
+   "--maroon-glow": "355 80% 62%",
+   "--maroon-deep": "355 70% 30%"
+  }
+ },
+ "fonts": {
+  "display": "Anton",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+ },
+ "radius": "0rem",
+ "shadows": [
+  "0 30px 80px -30px hsl(var(--teal) / 0.45), 0 8px 24px -12px hsl(var(--ink) / 0.22)",
+  "0 18px 50px -18px hsl(var(--teal) / 0.55)",
+  "inset 0 1px 0 hsl(0 0% 100% / 0.65), inset 0 -1px 0 hsl(var(--ink) / 0.06), 0 20px 60px -20px hsl(var(--ink) / 0.22)",
+  "0 0 12px #ff3b3b, 0 0 0 3px hsl(0 0% 100% / 0.15)"
+ ],
+ "keyframes": [
+  {
+   "name": "magic-sweep",
+   "css": "@keyframes magic-sweep { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }"
+  },
+  {
+   "name": "mesh-drift",
+   "css": "@keyframes mesh-drift { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } }"
+  },
+  {
+   "name": "kenburns",
+   "css": "@keyframes kenburns { 0% { transform: scale(1.05) translate(0, 0); } 100% { transform: scale(1.18) translate(-2%, -1%); } }"
+  },
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "float-slow",
+   "css": "@keyframes float-slow { 0%,100% { transform: translateY(0) translateX(0); } 50% { transform: translateY(-12px) translateX(6px); } }"
+  },
+  {
+   "name": "pulse-ring",
+   "css": "@keyframes pulse-ring { 0% { transform: scale(0.9); opacity: .7; } 100% { transform: scale(2); opacity: 0; } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "gradient-text",
+  "aurora",
+  "marquee",
+  "noise",
+  "ken-burns",
+  "glow",
+  "shimmer",
+  "float",
+  "gradient-heavy",
+  "mesh-gradient"
+ ]
+}

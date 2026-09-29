@@ -1,0 +1,99 @@
+{
+ "id": "radiant-vision-legacy",
+ "source": "4f780298-cc58-477f-a3d3-142255e01c9c",
+ "palette": {
+  "vars": {
+   "--ink": "oklch(0.985 0.006 80)",
+   "--smoke": "oklch(0.96 0.008 80)",
+   "--graphite": "oklch(0.91 0.010 80)",
+   "--bone": "oklch(0.18 0.010 60)",
+   "--brass": "oklch(0.52 0.115 55)",
+   "--brass-deep": "oklch(0.42 0.115 50)",
+   "--hairline": "oklch(0.18 0.010 60 / 0.22)",
+   "--background": "var(--ink)",
+   "--foreground": "var(--bone)",
+   "--card": "var(--smoke)",
+   "--card-foreground": "var(--bone)",
+   "--popover": "var(--smoke)",
+   "--popover-foreground": "var(--bone)",
+   "--primary": "var(--brass)",
+   "--primary-foreground": "oklch(0.98 0 0)",
+   "--secondary": "var(--graphite)",
+   "--secondary-foreground": "var(--bone)",
+   "--muted": "var(--graphite)",
+   "--muted-foreground": "oklch(0.34 0.012 70)",
+   "--accent": "var(--brass)",
+   "--accent-foreground": "oklch(0.98 0 0)",
+   "--destructive": "oklch(0.58 0.18 25)",
+   "--destructive-foreground": "oklch(0.98 0 0)",
+   "--border": "var(--hairline)",
+   "--input": "var(--hairline)",
+   "--ring": "var(--brass)",
+   "--hero-ink": "oklch(0.10 0.010 60)",
+   "--hero-bone": "oklch(0.96 0.012 80)",
+   "--hero-brass": "oklch(0.78 0.10 75)",
+   "--grain-opacity": "0.05",
+   "--photo-filter": "brightness(1.06) contrast(1.03) saturate(1.06)"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--ink": "oklch(0.10 0.008 60)",
+   "--smoke": "oklch(0.14 0.008 60)",
+   "--graphite": "oklch(0.19 0.008 60)",
+   "--bone": "oklch(0.94 0.012 80)",
+   "--brass": "oklch(0.78 0.10 75)",
+   "--brass-deep": "oklch(0.58 0.085 70)",
+   "--hairline": "oklch(0.94 0.012 80 / 0.22)",
+   "--background": "var(--ink)",
+   "--foreground": "var(--bone)",
+   "--primary-foreground": "var(--ink)",
+   "--accent-foreground": "var(--ink)",
+   "--muted-foreground": "oklch(0.78 0.012 80)",
+   "--grain-opacity": "0.12",
+   "--photo-filter": "brightness(1.0) contrast(1.04) saturate(1.0)"
+  }
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter Tight",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.25rem",
+ "shadows": [
+  "inset 0 1px 0 oklch(1 0 0 / 0.4),\n    0 30px 60px -30px oklch(0.18 0.01 60 / 0.18)",
+  "inset 0 1px 0 oklch(0.94 0.012 80 / 0.05),\n    0 30px 60px -30px oklch(0 0 0 / 0.7)"
+ ],
+ "keyframes": [
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "shimmer",
+   "css": "@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }"
+  },
+  {
+   "name": "float-y",
+   "css": "@keyframes float-y { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }"
+  },
+  {
+   "name": "curtain",
+   "css": "@keyframes curtain { 0% { transform: translateY(0); } 100% { transform: translateY(-101%); } }"
+  },
+  {
+   "name": "slow-zoom",
+   "css": "@keyframes slow-zoom { from { transform: scale(1.08); } to { transform: scale(1.18); } }"
+  },
+  {
+   "name": "draw-line",
+   "css": "@keyframes draw-line { to { stroke-dashoffset: 0; } }"
+  }
+ ],
+ "signatures": [
+  "gradient-text",
+  "marquee",
+  "noise",
+  "shimmer",
+  "float"
+ ]
+}

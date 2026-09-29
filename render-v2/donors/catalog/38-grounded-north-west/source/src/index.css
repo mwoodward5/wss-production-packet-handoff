@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Grounded North West — clean Washington residential contractor design system
+   Red / White / Navy. All colors HSL. Tokens only. */
+
+@layer base {
+  :root {
+    /* Surfaces — clean white */
+    --background: 210 30% 99%;
+    --foreground: 220 40% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 12%;
+
+    /* Primary — trust navy */
+    --primary: 218 70% 28%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 214 88% 48%;
+
+    /* Secondary — flag red */
+    --secondary: 0 72% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 25% 95%;
+    --muted-foreground: 220 15% 38%;
+
+    --accent: 210 90% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 218 25% 88%;
+    --input: 218 25% 90%;
+    --ring: 218 70% 28%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: radial-gradient(ellipse at 18% 0%, hsl(214 88% 92% / 0.9), transparent 55%),
+                     radial-gradient(ellipse at 82% 100%, hsl(0 72% 92% / 0.7), transparent 60%),
+                     linear-gradient(180deg, hsl(210 40% 99%), hsl(214 35% 97%));
+    --gradient-copper: linear-gradient(135deg, hsl(218 70% 28%), hsl(214 88% 48%));
+    --gradient-trust: linear-gradient(135deg, hsl(218 70% 28%), hsl(0 72% 48%));
+    --gradient-card: linear-gradient(160deg, hsl(0 0% 100%), hsl(214 30% 97%));
+    --gradient-line: linear-gradient(90deg, transparent, hsl(218 70% 35% / 0.45), transparent);
+
+    /* Shadows */
+    --shadow-glow: 0 18px 50px -18px hsl(218 70% 28% / 0.35);
+    --shadow-elevated: 0 24px 60px -28px hsl(218 50% 25% / 0.25);
+    --shadow-inset: inset 0 1px 0 hsl(0 0% 100% / 0.6);
+
+    --transition-base: 400ms cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 40% 12%;
+    --sidebar-primary: 218 70% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 95%;
+    --sidebar-accent-foreground: 220 40% 12%;
+    --sidebar-border: 218 25% 88%;
+    --sidebar-ring: 218 70% 28%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4 { font-family: "Fraunces", "Playfair Display", Georgia, serif; letter-spacing: -0.02em; }
+  body, p, a, li, button, input, textarea, label { font-family: "Inter Tight", "Inter", system-ui, sans-serif; }
+}
+
+@layer components {
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(218 50% 25% / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(218 50% 25% / 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .copper-text {
+    background: var(--gradient-trust);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hairline { height: 1px; background: var(--gradient-line); }
+
+  .topo-bg {
+    background-image:
+      radial-gradient(ellipse 800px 280px at 30% 40%, transparent 50%, hsl(218 50% 30% / 0.05) 51%, transparent 52%),
+      radial-gradient(ellipse 1000px 360px at 30% 40%, transparent 60%, hsl(218 50% 30% / 0.04) 61%, transparent 62%),
+      radial-gradient(ellipse 1200px 440px at 30% 40%, transparent 70%, hsl(218 50% 30% / 0.03) 71%, transparent 72%);
+  }
+
+  .mono { font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace; font-feature-settings: "ss01"; letter-spacing: 0.02em; }
+
+  .conduit-flow {
+    background: linear-gradient(90deg,
+      transparent 0%,
+      hsl(214 88% 48% / 0) 20%,
+      hsl(214 88% 55% / 0.8) 50%,
+      hsl(214 88% 48% / 0) 80%,
+      transparent 100%);
+    background-size: 200% 100%;
+    animation: conduit-pan 4s linear infinite;
+  }
+
+  .ambient-orb {
+    background: radial-gradient(circle, hsl(214 88% 60% / 0.35), transparent 65%);
+    filter: blur(60px);
+    animation: orb-drift 14s ease-in-out infinite;
+  }
+
+  .scanline { display: none; }
+
+  .clip-hero-asym {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 92% 100%, 0 100%);
+  }
+  .clip-hero-blade {
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
+  }
+}
+
+@layer utilities {
+  @keyframes conduit-pan {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  @keyframes orb-drift {
+    0%, 100% { transform: translate3d(0,0,0) scale(1); opacity: 0.85; }
+    50% { transform: translate3d(40px,-30px,0) scale(1.1); opacity: 1; }
+  }
+  @keyframes ticker {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+  .animate-ticker { animation: ticker 16s linear infinite; }
+  @keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(0 72% 48% / 0.55); }
+    50% { box-shadow: 0 0 0 8px hsl(0 72% 48% / 0); }
+  }
+  .pulse-dot { animation: pulse-dot 2s ease-out infinite; }
+}
+
+/* Hide Lovable editor badge on published site */
+html body #lovable-badge,
+html body #lovable-badge * {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* The donor tokens and named font stacks remain the fallback. No remote font fetch. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

@@ -1,0 +1,50 @@
+{
+ "id": "builder-showcase-site",
+ "source": "dd874d6d-4029-49bd-ad06-bef07ba50356",
+ "palette": {
+  "vars": {
+   "--background": "oklch(0.965 0.004 90)",
+   "--foreground": "oklch(0.18 0.012 250)",
+   "--card": "oklch(1 0 0)",
+   "--card-foreground": "oklch(0.18 0.012 250)",
+   "--popover": "oklch(1 0 0)",
+   "--popover-foreground": "oklch(0.18 0.012 250)",
+   "--ink": "oklch(0.20 0.012 250)",
+   "--primary": "oklch(0.20 0.012 250)",
+   "--primary-foreground": "oklch(0.985 0.004 90)",
+   "--secondary": "oklch(0.93 0.005 90)",
+   "--secondary-foreground": "oklch(0.18 0.012 250)",
+   "--muted": "oklch(0.92 0.005 90)",
+   "--muted-foreground": "oklch(0.45 0.012 250)",
+   "--gold": "oklch(0.74 0.18 55)",
+   "--gold-foreground": "oklch(0.18 0.012 250)",
+   "--accent": "oklch(0.74 0.18 55)",
+   "--accent-foreground": "oklch(0.18 0.012 250)",
+   "--coral": "oklch(0.58 0.16 35)",
+   "--destructive": "oklch(0.55 0.22 27)",
+   "--destructive-foreground": "oklch(0.985 0 0)",
+   "--border": "oklch(0.88 0.005 90)",
+   "--input": "oklch(0.88 0.005 90)",
+   "--ring": "oklch(0.74 0.18 55)",
+   "--gradient-warm": "linear-gradient(135deg, oklch(0.78 0.18 60), oklch(0.62 0.18 35))",
+   "--gradient-ink": "linear-gradient(180deg, oklch(0.24 0.012 250), oklch(0.13 0.012 250))"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Archivo Black",
+  "body": "Manrope",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap"
+ },
+ "radius": "0.5rem",
+ "shadows": [
+  "0 20px 50px -20px oklch(0.18 0.02 250 / 0.30)",
+  "0 0 60px -10px oklch(0.74 0.18 55 / 0.45)",
+  "0 8px 30px -12px oklch(0.18 0.02 250 / 0.18)"
+ ],
+ "keyframes": [],
+ "signatures": [
+  "gradient-text",
+  "glow"
+ ]
+}

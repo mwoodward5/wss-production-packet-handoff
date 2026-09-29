@@ -1,0 +1,16 @@
+# Local-first runtime image for the WSS shared-site router
+# (apps/site-router). Zero runtime npm dependencies — plain Node 22.
+# The tiny HTTP server entry is mounted at runtime from infra/site-router/
+# so this image is a pristine copy of the app.
+FROM node:22-bookworm-slim
+
+ENV NODE_ENV=production
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY api ./api
+COPY lib ./lib
+COPY package.json ./
+
+EXPOSE 3000
+CMD ["node", "/opt/server.cjs"]

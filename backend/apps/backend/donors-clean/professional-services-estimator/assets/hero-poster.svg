@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Marked-up plan sheet with quantity takeoff annotations">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0.35" y2="1">
+    <stop offset="0" stop-color="#0a0f1c"/><stop offset="0.55" stop-color="#151d33"/><stop offset="1" stop-color="#22304f"/>
+  </linearGradient>
+  <linearGradient id="glow" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#93b1ff" stop-opacity="0.85"/><stop offset="1" stop-color="#93b1ff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#22304f"/><stop offset="1" stop-color="#070a12"/>
+  </linearGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="26"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#sky)"/>
+<circle cx="1180" cy="250" r="230" fill="url(#glow)" filter="url(#soft)" opacity="0.75"/>
+<rect y="560" width="1600" height="440" fill="url(#ground)"/>
+<g stroke="#0a1220" stroke-opacity="0.28" stroke-width="3">
+<path d="M0 0 V1000"/><path d="M84 0 V1000"/><path d="M168 0 V1000"/><path d="M252 0 V1000"/><path d="M336 0 V1000"/><path d="M420 0 V1000"/><path d="M504 0 V1000"/><path d="M588 0 V1000"/><path d="M672 0 V1000"/><path d="M756 0 V1000"/><path d="M840 0 V1000"/><path d="M924 0 V1000"/><path d="M1008 0 V1000"/><path d="M1092 0 V1000"/><path d="M1176 0 V1000"/><path d="M1260 0 V1000"/><path d="M1344 0 V1000"/><path d="M1428 0 V1000"/><path d="M1512 0 V1000"/><path d="M1596 0 V1000"/>
+<path d="M0 0 H1600"/><path d="M0 84 H1600"/><path d="M0 168 H1600"/><path d="M0 252 H1600"/><path d="M0 336 H1600"/><path d="M0 420 H1600"/><path d="M0 504 H1600"/><path d="M0 588 H1600"/><path d="M0 672 H1600"/><path d="M0 756 H1600"/><path d="M0 840 H1600"/><path d="M0 924 H1600"/></g>
+<g fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="5"><rect x="300" y="300" width="420" height="300"/><rect x="820" y="380" width="480" height="360"/><path d="M300 300 L820 380"/></g>
+<rect width="1600" height="1000" fill="#070a12" opacity="0.18"/>
+</svg>

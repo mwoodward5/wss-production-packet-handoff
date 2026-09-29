@@ -1,0 +1,15 @@
+# {{BUSINESS_NAME}}
+
+> Concrete and general contracting serving {{CITY}}, {{STATE}}.
+
+- Business: {{BUSINESS_NAME}}
+- Trade: Concrete & General Contracting
+- Serves: {{CITY}}, {{STATE}}
+- Located in: {{ADDRESS_CITY}}, {{STATE}}
+- Services: Commercial concrete; foundations & excavation; flatwork & driveways; concrete demolition; commercial renovation; home renovation; flooring
+
+## Lead capture
+
+- Estimate form: /#estimate
+- Contact page: /contact
+- 4-step quote estimator: /contact#estimate

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paragon Flight Training — cinematic aviation design system.
+   All colors HSL. No ad-hoc colors in components. */
+
+@layer base {
+  :root {
+    /* Core surfaces — deep aviation night sky */
+    --background: 215 45% 7%;
+    --foreground: 200 20% 96%;
+
+    --surface: 215 40% 10%;
+    --surface-elevated: 215 38% 13%;
+
+    --card: 215 40% 10%;
+    --card-foreground: 200 20% 96%;
+
+    --popover: 215 45% 9%;
+    --popover-foreground: 200 20% 96%;
+
+    /* Primary — runway gold / approach lights */
+    --primary: 38 92% 56%;
+    --primary-foreground: 215 50% 8%;
+    --primary-glow: 42 100% 65%;
+
+    /* Secondary — instrument cyan */
+    --secondary: 195 85% 50%;
+    --secondary-foreground: 215 50% 8%;
+
+    --muted: 215 30% 16%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 195 85% 50%;
+    --accent-foreground: 215 50% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 200 20% 96%;
+
+    --border: 215 30% 18%;
+    --input: 215 30% 16%;
+    --ring: 38 92% 56%;
+
+    --radius: 0.25rem;
+
+    /* Brand-specific tokens */
+    --sky-deep: 215 50% 8%;
+    --sky-mid: 210 45% 14%;
+    --sky-haze: 200 35% 22%;
+    --runway: 38 92% 56%;
+    --runway-glow: 42 100% 65%;
+    --instrument: 195 85% 50%;
+    --horizon: 28 95% 55%;
+    --armed: 150 75% 55%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(215 50% 8% / 0.2) 0%, hsl(215 50% 8% / 0.55) 55%, hsl(215 50% 8% / 0.95) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(215 50% 8%) 0%, hsl(210 45% 14%) 100%);
+    --gradient-runway: linear-gradient(135deg, hsl(38 92% 56%) 0%, hsl(28 95% 55%) 100%);
+    --gradient-instrument: linear-gradient(135deg, hsl(195 85% 50%) 0%, hsl(210 80% 45%) 100%);
+    --gradient-divider: linear-gradient(90deg, transparent, hsl(38 92% 56% / 0.6), transparent);
+
+    /* Shadows */
+    --shadow-runway: 0 10px 40px -10px hsl(38 92% 56% / 0.45);
+    --shadow-deep: 0 30px 80px -20px hsl(215 80% 4% / 0.7);
+    --shadow-glow: 0 0 60px hsl(42 100% 65% / 0.35);
+    --shadow-instrument: 0 0 30px hsl(195 85% 50% / 0.35);
+
+    /* Type — aviation wayfinding pairing (Barlow Condensed headings, Public Sans body, JetBrains Mono cockpit labels) */
+    --font-display: 'Barlow Condensed', 'Oswald', system-ui, sans-serif;
+    --font-body: 'Public Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* sidebar (unused but keep tokens) */
+    --sidebar-background: 215 40% 10%;
+    --sidebar-foreground: 200 20% 96%;
+    --sidebar-primary: 38 92% 56%;
+    --sidebar-primary-foreground: 215 50% 8%;
+    --sidebar-accent: 215 30% 16%;
+    --sidebar-accent-foreground: 200 20% 96%;
+    --sidebar-border: 215 30% 18%;
+    --sidebar-ring: 38 92% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.005em;
+    text-transform: none;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.4);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-primary;
+  }
+
+  .display-xl {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    line-height: 0.92;
+    text-transform: uppercase;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .horizon-line {
+    height: 1px;
+    background: var(--gradient-divider);
+  }
+
+  .hud-tag {
+    @apply font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground;
+  }
+}
+
+/* Accessibility — honor user motion preference globally.
+   Neutralizes CSS keyframe animations, marquees, parallax drifts,
+   pulses, and transitions so nothing moves while text is being read.
+   Framer-motion components additionally read the same media query
+   via useReducedMotion() and skip transforms entirely. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .bg-gradient-sky { background-image: var(--gradient-sky); }
+  .bg-gradient-runway { background-image: var(--gradient-runway); }
+  .bg-gradient-instrument { background-image: var(--gradient-instrument); }
+  .shadow-runway { box-shadow: var(--shadow-runway); }
+  .shadow-deep { box-shadow: var(--shadow-deep); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+}

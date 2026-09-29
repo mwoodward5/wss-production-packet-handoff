@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["src/wss/main.tsx","vite.config.ts"],"exclude":["node_modules"]}

@@ -1,0 +1,95 @@
+{
+ "id": "atlanta-cinematic-glow",
+ "source": "67d11296-3a10-48b3-b6ff-87b2fd181bd1",
+ "palette": {
+  "vars": {
+   "--background": "0 0% 100%",
+   "--foreground": "24 14% 10%",
+   "--ink": "24 14% 10%",
+   "--ink-deep": "24 14% 5%",
+   "--ivory": "24 14% 12%",
+   "--ivory-deep": "25 8% 30%",
+   "--champagne": "36 60% 38%",
+   "--champagne-soft": "36 50% 50%",
+   "--molten": "36 78% 42%",
+   "--espresso": "25 25% 12%",
+   "--paper": "0 0% 100%",
+   "--paper-soft": "36 22% 97%",
+   "--hairline": "24 10% 88%",
+   "--card": "0 0% 100%",
+   "--card-foreground": "24 14% 10%",
+   "--popover": "0 0% 100%",
+   "--popover-foreground": "24 14% 10%",
+   "--primary": "36 78% 42%",
+   "--primary-foreground": "0 0% 100%",
+   "--secondary": "36 20% 96%",
+   "--secondary-foreground": "24 14% 10%",
+   "--muted": "36 18% 94%",
+   "--muted-foreground": "24 10% 35%",
+   "--accent": "36 60% 50%",
+   "--accent-foreground": "0 0% 100%",
+   "--destructive": "0 70% 45%",
+   "--destructive-foreground": "0 0% 100%",
+   "--border": "24 10% 88%",
+   "--input": "24 10% 88%",
+   "--ring": "36 78% 42%",
+   "--gradient-molten": "linear-gradient(135deg, hsl(36 78% 42%), hsl(38 90% 55%), hsl(28 60% 35%))",
+   "--gradient-glass": "linear-gradient(135deg, hsl(24 14% 10% / 0.04), hsl(24 14% 10% / 0.01))",
+   "--sidebar-background": "0 0% 100%",
+   "--sidebar-foreground": "24 14% 10%",
+   "--sidebar-primary": "36 78% 42%",
+   "--sidebar-primary-foreground": "0 0% 100%",
+   "--sidebar-accent": "36 20% 96%",
+   "--sidebar-accent-foreground": "24 14% 10%",
+   "--sidebar-border": "24 10% 88%",
+   "--sidebar-ring": "36 78% 42%"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+ },
+ "radius": "0.125rem",
+ "shadows": [
+  "0 24px 60px -28px hsl(24 14% 10% / 0.25), 0 0 0 1px hsl(36 78% 42% / 0.12)",
+  "0 40px 100px -40px hsl(24 14% 10% / 0.25)",
+  "0 0 40px hsl(36 78% 42% / 0.18)"
+ ],
+ "keyframes": [
+  {
+   "name": "fadeUp",
+   "css": "@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "kenBurns",
+   "css": "@keyframes kenBurns { from { transform: scale(1.04) translate(0, 0); } to { transform: scale(1.12) translate(-1%, 0.5%); } }"
+  },
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "vmarquee",
+   "css": "@keyframes vmarquee { from { transform: translateY(0); } to { transform: translateY(-50%); } }"
+  },
+  {
+   "name": "pulseDot",
+   "css": "@keyframes pulseDot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.45; transform: scale(0.85); } }"
+  },
+  {
+   "name": "foilFlow",
+   "css": "@keyframes foilFlow { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "gradient-text",
+  "marquee",
+  "noise",
+  "ken-burns",
+  "glow",
+  "gradient-heavy"
+ ]
+}

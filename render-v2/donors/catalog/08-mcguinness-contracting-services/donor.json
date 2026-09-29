@@ -1,0 +1,416 @@
+{
+  "version": 2,
+  "key": "08-mcguinness-contracting-services",
+  "name": "McGuinness Contracting Services",
+  "category": "concrete",
+  "vertical": "concrete",
+  "requested_vertical": "general contractor",
+  "routing_conflict": true,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "dd874d6d-4029-49bd-ad06-bef07ba50356",
+  "lovable_source_commit": "4854ef6157d3ce6edfeb9b701301fe3fbe078ada",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "dd874d6d-4029-49bd-ad06-bef07ba50356",
+    "ref": "4854ef6157d3ce6edfeb9b701301fe3fbe078ada",
+    "repository": "https://github.com/mwoodward5/builder-showcase-site",
+    "git_tree": "630410d01f7b18f0a58dbb10ca2720e206f6d8c9"
+  },
+  "classification": "MULTI_PAGE",
+  "routes": [
+    "/",
+    "/sitemap"
+  ],
+  "design_tokens": {
+    "fonts": {
+      "display": "Archivo Black, Archivo, ui-sans-serif, system-ui, sans-serif",
+      "body": "Manrope, ui-sans-serif, system-ui, sans-serif"
+    },
+    "colors": {
+      "background": "oklch(0.965 0.004 90)",
+      "foreground": "oklch(0.18 0.012 250)",
+      "ink": "oklch(0.20 0.012 250)",
+      "card": "oklch(1 0 0)",
+      "accent_gold": "oklch(0.74 0.18 55)",
+      "accent_coral": "oklch(0.58 0.16 35)",
+      "border": "oklch(0.88 0.005 90)"
+    },
+    "border_radius": "0.5rem",
+    "shadows": {
+      "card": "0 8px 30px -12px oklch(0.18 0.02 250 / 0.18)",
+      "elegant": "0 20px 50px -20px oklch(0.18 0.02 250 / 0.30)",
+      "glow": "0 0 60px -10px oklch(0.74 0.18 55 / 0.45)"
+    }
+  },
+  "hero_contract": {
+    "section_id": "top",
+    "height": "min-h-[100svh]",
+    "background_color": "oklch(0.20 0.012 250)",
+    "texture_overlay": "radial-gradient + repeating-linear-gradient scanlines (18% opacity) + SVG fractal noise (8% opacity)",
+    "accent_glow": "radial blur-3xl opacity-25 mix-blend-screen right-[-15%]",
+    "left_ruler": {
+      "visible_desktop": true,
+      "hidden_mobile": true,
+      "text": "{CLIENT_NAME} · {VERTICAL} · {CITY} · {STATE}"
+    },
+    "layout": "12-column grid (7 cols headline/metrics, 5 cols estimate widget)",
+    "video_replacement_slot": {
+      "tag": "video",
+      "props": {
+        "autoPlay": true,
+        "loop": true,
+        "muted": true,
+        "playsInline": true,
+        "className": "absolute inset-0 h-full w-full object-cover pointer-events-none"
+      },
+      "scrim": "bg-black/60 backdrop-blur-[0.5px]"
+    },
+    "estimate_widget": {
+      "inputs": [
+        "project_type",
+        "approx_size",
+        "surface_condition",
+        "timeline"
+      ],
+      "action": "mailto"
+    }
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_cinematic",
+      "section": "Hero",
+      "role": "hero",
+      "aspect_ratio": "16:9",
+      "crop": "object-cover object-center",
+      "current_asset": "CSS texture overlay with warm radial glow",
+      "replacement_type": "10s looping MP4 video or high-res hero photograph"
+    },
+    {
+      "slot_id": "work_project_1",
+      "section": "Work",
+      "role": "project_primary",
+      "aspect_ratio": "4:5",
+      "crop": "object-cover object-center",
+      "current_asset": "/work-driveway.jpg",
+      "replacement_type": "Client residential/commercial driveway pour"
+    },
+    {
+      "slot_id": "work_project_2",
+      "section": "Work",
+      "role": "project_secondary",
+      "aspect_ratio": "4:3",
+      "crop": "object-cover object-center",
+      "current_asset": "/work-sidewalk.jpg",
+      "replacement_type": "Client sidewalk / municipal approach pour"
+    },
+    {
+      "slot_id": "work_project_3",
+      "section": "Work",
+      "role": "project_decorative",
+      "aspect_ratio": "4:3",
+      "crop": "object-cover object-center",
+      "current_asset": "/work-stamped.jpg",
+      "replacement_type": "Client stamped patio or colored finish"
+    },
+    {
+      "slot_id": "work_project_4",
+      "section": "Work",
+      "role": "project_industrial",
+      "aspect_ratio": "4:3",
+      "crop": "object-cover object-center",
+      "current_asset": "src/assets/industrial-plant.jpg.asset.json",
+      "replacement_type": "Client facility / plant / structural flatwork job"
+    },
+    {
+      "slot_id": "why_craftsman_photo",
+      "section": "Why",
+      "role": "owner_crew",
+      "aspect_ratio": "4:5",
+      "crop": "object-cover object-top",
+      "current_asset": "https://pagehub-ticket-assets-20260520.vercel.app/ricardo-website-edits-20260520/concrete-worker.jpg",
+      "replacement_type": "Authentic photo of business owner or crew leader on jobsite"
+    },
+    {
+      "slot_id": "brand_logo",
+      "section": "Nav & Footer",
+      "role": "logo",
+      "aspect_ratio": "1:1",
+      "crop": "object-contain",
+      "current_asset": "src/assets/mc-logo.png",
+      "replacement_type": "Client monogram or square logo"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business_name",
+      "selector": "BUSINESS.name",
+      "type": "string"
+    },
+    {
+      "key": "short_name",
+      "selector": "BUSINESS.shortName",
+      "type": "string"
+    },
+    {
+      "key": "industry",
+      "selector": "BUSINESS.industry",
+      "type": "string"
+    },
+    {
+      "key": "phone_display",
+      "selector": "BUSINESS.phone",
+      "type": "string"
+    },
+    {
+      "key": "phone_tel",
+      "selector": "BUSINESS.phoneTel",
+      "type": "string"
+    },
+    {
+      "key": "email",
+      "selector": "BUSINESS.email",
+      "type": "string"
+    },
+    {
+      "key": "city",
+      "selector": "BUSINESS.city",
+      "type": "string"
+    },
+    {
+      "key": "region",
+      "selector": "BUSINESS.region",
+      "type": "string"
+    },
+    {
+      "key": "area_served",
+      "selector": "BUSINESS.areaServed",
+      "type": "string[]",
+      "length": 12
+    },
+    {
+      "key": "services_list",
+      "selector": "services",
+      "type": "object[]",
+      "length": 9
+    },
+    {
+      "key": "faq_items",
+      "selector": "faqs",
+      "type": "object[]",
+      "length": 5
+    },
+    {
+      "key": "process_steps",
+      "selector": "steps",
+      "type": "object[]",
+      "length": 4
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "hero_status_eyebrow",
+      "component": "Hero.tsx",
+      "format": "Pulsing indicator + '{STATUS_MESSAGE}'"
+    },
+    {
+      "slot": "hero_metrics_rail",
+      "component": "Hero.tsx",
+      "format": "3-column definition list (dt uppercase tracking, dd font-display)"
+    },
+    {
+      "slot": "why_owner_badge",
+      "component": "Why.tsx",
+      "format": "Floating card bottom-left of owner photo"
+    },
+    {
+      "slot": "work_category_pills",
+      "component": "Work.tsx",
+      "format": "Backdrop-blur amber badges top-left of each photo"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "GeneralContractor",
+      "location": "src/routes/index.tsx"
+    },
+    {
+      "type": "WebSite",
+      "location": "src/routes/index.tsx"
+    },
+    {
+      "type": "FAQPage",
+      "location": "src/routes/index.tsx"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "slot": "meta_geo",
+      "keys": [
+        "geo.region",
+        "geo.placename",
+        "geo.position",
+        "ICBM"
+      ]
+    },
+    {
+      "slot": "hero_copy_geo",
+      "mentions": [
+        "Olmsted Township, Ohio",
+        "Lake Erie",
+        "Cuyahoga County"
+      ]
+    },
+    {
+      "slot": "area_cities_grid",
+      "component": "Area.tsx",
+      "count": 12
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "slot": "faq_direct_answers",
+      "component": "Faq.tsx",
+      "style": "Affirmative concise sentences"
+    },
+    {
+      "slot": "hero_estimate_terms",
+      "component": "Hero.tsx",
+      "style": "Plain spoken project intents"
+    }
+  ],
+  "map_location_slot": {
+    "section": "Area.tsx",
+    "aspect_ratio": "5:4",
+    "provider": "OpenStreetMap / Google Maps Embed",
+    "coordinates": {
+      "lat": 41.37,
+      "lng": -81.9067
+    }
+  },
+  "content_density": {
+    "hero": "High density (split headline + interactive tool)",
+    "services": "Balanced 9-card grid (12-25 words per card)",
+    "work": "Image-first masonry (minimal text overlay)",
+    "why": "Dual column balanced (photo + 4 bullet points)",
+    "process": "Minimalist 4-step horizontal rail",
+    "faq": "5 concise collapsible items"
+  },
+  "mobile_rules": {
+    "breakpoint_390": {
+      "ruler_hidden": true,
+      "h1_size": "text-[2.75rem]",
+      "widget_stacked": true,
+      "gallery_columns": 1,
+      "sticky_cta_bar_active": true
+    },
+    "breakpoint_768": {
+      "ruler_active": true,
+      "gallery_columns": 2,
+      "services_columns": 2
+    },
+    "breakpoint_1440": {
+      "full_hero_grid": true,
+      "services_columns": 4,
+      "process_columns": 4
+    }
+  },
+  "non_negotiables": [
+    "Headings must remain Archivo Black in uppercase",
+    "Body font must remain Manrope",
+    "Background color must remain concrete cream oklch(0.965 0.004 90)",
+    "Ink sections must remain oklch(0.20 0.012 250)",
+    "Primary accents must remain Safety Amber and Rust Coral",
+    "Border radius must remain compact industrial 0.5rem (rounded-sm)",
+    "All gallery and why images must have dark gradient overlays to guarantee white text contrast",
+    "Hero must retain the interactive estimate calculation module on desktop right"
+  ],
+  "safe_replacements": [
+    "business_name",
+    "owner_name",
+    "phone_numbers",
+    "email_addresses",
+    "city_names",
+    "service_titles_and_descriptions",
+    "hero_background_video_or_image",
+    "work_gallery_images",
+    "crew_photo",
+    "monogram_logo",
+    "map_coordinates",
+    "faq_questions_and_answers"
+  ],
+  "leak_terms": [
+    "McGuinness Contracting Services"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Archivo Black",
+      "Archivo",
+      "ui-sans-serif",
+      "system-ui",
+      "sans-serif",
+      "Manrope"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.965 0.004 90)",
+    "oklch(0.18 0.012 250)",
+    "oklch(0.20 0.012 250)",
+    "oklch(1 0 0)",
+    "oklch(0.74 0.18 55)",
+    "oklch(0.58 0.16 35)",
+    "oklch(0.88 0.005 90)"
+  ],
+  "fonts": [
+    "Archivo Black",
+    "Archivo",
+    "ui-sans-serif",
+    "system-ui",
+    "sans-serif",
+    "Manrope"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "6cb3198abbf954072f7905c03f03b76c29258d1c2614bf964bc12001a43c686f",
+    "files": {
+      "assets/index-COn36_Kp.css": "78a952060c4eed30eb446b988b1a73db87d10b9149c6af8bb9dec8e71adb5fb6",
+      "assets/index-Cq51Vz9m.js": "9c7d24395009ac7f83b8ae3056c600e74c17c8a76c7946a5cfe52bdbf86251fa",
+      "index.html": "0862501d00a394921808adbccefd0f8023c8de8e511a56429eb9c9dfe7250c3a",
+      "sitemap/index.html": "0862501d00a394921808adbccefd0f8023c8de8e511a56429eb9c9dfe7250c3a"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

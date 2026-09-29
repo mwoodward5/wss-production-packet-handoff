@@ -1,0 +1,84 @@
+{
+  "url": "https://wss-test-ramon-roofing-fort-worth.wss-ai.com/",
+  "transport": {
+    "https": true,
+    "protocol": null,
+    "compression": "br",
+    "ttfb_ms": 316,
+    "status": 200
+  },
+  "vitals": {
+    "status": "measured",
+    "lcp_ms": 3056,
+    "cls": 1.003,
+    "inp_ms": 29,
+    "inp_kind": "synthetic",
+    "ttfb_ms": 2816,
+    "protocol": "h2",
+    "compressed": true,
+    "contrast": {
+      "checked": 243,
+      "worst": 1,
+      "worstText": "(817) 924-1645",
+      "fails": [
+        {
+          "text": "Serving Fort Worth Since 1995",
+          "ratio": 3.58,
+          "need": 4.5
+        },
+        {
+          "text": "Request quote",
+          "ratio": 3.58,
+          "need": 4.5
+        },
+        {
+          "text": "(817) 924-1645",
+          "ratio": 1,
+          "need": 4.5
+        },
+        {
+          "text": "Storm / Leak — urgent",
+          "ratio": 1.54,
+          "need": 4.5
+        },
+        {
+          "text": "Storm / Leak — urgent",
+          "ratio": 1.54,
+          "need": 4.5
+        },
+        {
+          "text": "Storm / Leak — urgent",
+          "ratio": 1.54,
+          "need": 4.5
+        },
+        {
+          "text": "Request an inspection",
+          "ratio": 1,
+          "need": 4.5
+        },
+        {
+          "text": "Request an inspection",
+          "ratio": 1,
+          "need": 4.5
+        }
+      ],
+      "failCount": 40
+    },
+    "keyboard": {
+      "focusable_count": 58,
+      "first_focus": {
+        "tag": "A",
+        "text": "Skip to content",
+        "outline": "auto 1px",
+        "boxShadow": "none"
+      }
+    },
+    "budget": {
+      "lcp": 2000,
+      "inp": 200,
+      "cls": 0.05,
+      "ttfb": 600
+    }
+  },
+  "measured_at": "2026-07-30T03:00:29.462Z"
+}

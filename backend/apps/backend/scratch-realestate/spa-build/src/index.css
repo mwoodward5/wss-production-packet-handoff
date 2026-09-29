@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Waterline donor design system — deep charcoal, warm ivory, champagne gold.
+   Fonts (Playfair Display / Inter) load from the WSS shell (index.html), not a
+   CSS @import, so the preconnect hints actually help. */
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 220 15% 15%;
+    --card: 40 15% 95%;
+    --card-foreground: 220 15% 15%;
+    --popover: 40 20% 97%;
+    --popover-foreground: 220 15% 15%;
+    --primary: 220 12% 20%;
+    --primary-foreground: 40 20% 97%;
+    --secondary: 35 15% 90%;
+    --secondary-foreground: 220 12% 20%;
+    --muted: 35 10% 92%;
+    --muted-foreground: 220 8% 50%;
+    --accent: 38 50% 65%;
+    --accent-foreground: 220 15% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 38 50% 65%;
+    --radius: 0.25rem;
+    --gold: 38 50% 65%;
+    --gold-light: 38 40% 78%;
+    --gold-dark: 38 55% 45%;
+    --charcoal: 220 15% 15%;
+    --charcoal-light: 220 10% 25%;
+    --ivory: 40 20% 97%;
+    --ivory-dark: 40 15% 92%;
+    --stone: 35 10% 75%;
+    --stone-light: 35 10% 85%;
+    --sand: 35 20% 88%;
+    --ocean: 185 25% 40%;
+    --ocean-light: 185 20% 60%;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    cursor: none;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  @media (pointer: coarse) {
+    * { cursor: auto; }
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-charcoal { background-color: hsl(var(--charcoal)); }
+  .bg-ivory { background-color: hsl(var(--ivory)); }
+  .bg-sand { background-color: hsl(var(--sand)); }
+  .text-charcoal { color: hsl(var(--charcoal)); }
+  .text-ivory { color: hsl(var(--ivory)); }
+  .text-stone { color: hsl(var(--stone)); }
+  .border-gold { border-color: hsl(var(--gold)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer components {
+  .luxury-section {
+    @apply px-6 md:px-12 lg:px-20 xl:px-32;
+  }
+
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-up.revealed { opacity: 1; transform: translateY(0); }
+
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-scale.revealed { opacity: 1; transform: scale(1); }
+
+  .reveal-clip {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-clip.revealed { clip-path: inset(0 0 0 0); }
+
+  .luxury-divider { width: 60px; height: 1px; background: hsl(var(--gold)); }
+
+  .luxury-divider-animate {
+    width: 0; height: 1px; background: hsl(var(--gold));
+    transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .luxury-divider-animate.revealed { width: 60px; }
+
+  .img-luxury { transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+  .img-luxury:hover { transform: scale(1.03); }
+
+  .marquee-track {
+    display: flex;
+    animation: marquee 30s linear infinite;
+    width: max-content;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+
+  .shimmer-btn { position: relative; overflow: hidden; }
+  .shimmer-btn::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(120deg, transparent, hsl(var(--ivory) / 0.2), transparent);
+    animation: shimmer-slide 3s ease-in-out infinite;
+  }
+
+  .ken-burns { animation: ken-burns 20s ease-in-out infinite alternate; }
+
+  .horizontal-scroll-container {
+    display: flex; gap: 1.5rem;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    scrollbar-width: none; -ms-overflow-style: none;
+    scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+  }
+  .horizontal-scroll-container::-webkit-scrollbar { display: none; }
+  .horizontal-scroll-item { scroll-snap-align: start; flex-shrink: 0; }
+}
+
+/* Custom cursor styles */
+.custom-cursor-dot {
+  position: fixed;
+  top: -4px; left: -4px;
+  width: 8px; height: 8px;
+  background: hsl(var(--gold));
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: opacity 0.3s;
+  will-change: transform;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: -20px; left: -20px;
+  width: 40px; height: 40px;
+  border: 1px solid hsl(var(--gold) / 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  transition: opacity 0.3s, transform 0.15s;
+  will-change: transform;
+}
+
+/* Preloader line animation */
+.preloader-line {
+  animation: draw-line 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  width: 0;
+}
+
+/* Preloader ring draw */
+.preloader-ring {
+  animation: draw-ring 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+@keyframes draw-ring {
+  from { stroke-dashoffset: 565; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Film grain */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Section transition gradients */
+.section-transition-down {
+  position: relative;
+}
+.section-transition-down::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, hsl(var(--ivory)));
+  pointer-events: none;
+  z-index: 1;
+}
+.section-transition-up {
+  position: relative;
+}
+.section-transition-up::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, transparent, hsl(var(--charcoal)));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gold glow on hover for cards */
+.gold-glow-hover {
+  transition: box-shadow 0.6s ease;
+}
+.gold-glow-hover:hover {
+  box-shadow: 0 0 40px hsl(var(--gold) / 0.08), 0 0 80px hsl(var(--gold) / 0.04);
+}
+
+/* Divider glow pulse */
+.luxury-divider-glow {
+  animation: divider-glow 3s ease-in-out infinite;
+}
+@keyframes divider-glow {
+  0%, 100% { box-shadow: none; }
+  50% { box-shadow: 0 0 12px hsl(var(--gold) / 0.3); }
+}
+
+html { scroll-behavior: smooth; }
+
+@keyframes text-glimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+::selection {
+  background: hsl(var(--gold) / 0.3);
+  color: hsl(var(--charcoal));
+}
+
+@media (pointer: coarse) {
+  .custom-cursor-dot, .custom-cursor-ring { display: none; }
+}
+
+/* Reduced motion: the design's drift, marquee, shimmer and reveal choreography
+   all stand down; content renders in its final resting state. The hero video
+   ladder carries its own guard (it never arms), this handles the CSS side. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal-up, .reveal-scale, .reveal-clip {
+    opacity: 1; transform: none; clip-path: none;
+  }
+  .luxury-divider-animate { width: 60px; }
+}

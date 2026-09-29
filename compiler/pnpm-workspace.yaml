@@ -1,0 +1,5 @@
+packages:
+  - "engine/*"
+allowBuilds:
+  esbuild: true
+  sharp: true

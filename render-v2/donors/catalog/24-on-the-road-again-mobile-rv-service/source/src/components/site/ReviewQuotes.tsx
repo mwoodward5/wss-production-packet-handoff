@@ -1,0 +1,3 @@
+import { WSS } from '@/wss/bridge';
+import { Section, SectionHeader } from './Sections';
+export function ReviewQuotes(){if(!WSS.trust.reviews.length)return null;return <Section className="!pt-2"><SectionHeader eyebrow="Reviews" title="Customer reviews"/><div className="mt-8 grid md:grid-cols-3 gap-4">{WSS.trust.reviews.map((r,i)=><figure key={i} className="rounded-2xl border border-border bg-card p-6"><blockquote>{r.text}</blockquote><figcaption className="mt-4 text-sm text-muted-foreground">{r.author}{r.rating!==null&&<span> · {r.rating}/5</span>} · <a href={r.sourceUrl}>Source</a></figcaption></figure>)}</div></Section>}

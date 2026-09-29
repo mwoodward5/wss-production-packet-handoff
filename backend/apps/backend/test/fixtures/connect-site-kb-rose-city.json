@@ -1,0 +1,244 @@
+{
+  "captured_at": "2026-08-11T09:28:07.508Z",
+  "captured_from": {
+    "table": "ghost_agency_prospects",
+    "prospect_id": "wss-test-rose-city-heating-air-portland",
+    "deployed_page": "https://wss-test-rose-city-heating-and-air-portland.wss-ai.com/"
+  },
+  "row": {
+    "prospect_id": "wss-test-rose-city-heating-air-portland",
+    "business_name": "Rose City Heating & Air",
+    "phone": "(503) 636-5371",
+    "email": "comfort@rosecityheating.com",
+    "status": "line_queued",
+    "preview_url": "https://wss-test-rose-city-heating-and-air-portland.wss-ai.com/",
+    "record": {
+      "build_ready": {
+        "mirror_request": {
+          "slug": "wss-test-rose-city-heating-air-portland",
+          "brand": {
+            "logo": "https://rosecityheating.com/images/rose-city-heating-and-air-logo.png",
+            "accent": "#ee3349",
+            "logo_sha256": "5eb4a1f16f90df872af5e669846dea38053393e127b44be6db0201f887effc59",
+            "accent_source": "https://rosecityheating.com/images/rose-city-heating-and-air-logo.png"
+          },
+          "donor": "hvac-premier",
+          "facts": {
+            "city": "Portland",
+            "email": "comfort@rosecityheating.com",
+            "phone": "(503) 636-5371",
+            "state": "OR",
+            "county": "Multnomah County",
+            "rating": 4.9,
+            "address": "8946 SW Barbur Blvd, Portland, OR 97219, USA",
+            "socials": [
+              {
+                "url": "https://www.facebook.com/rosecityheating",
+                "label": "Facebook",
+                "handle": "rosecityheating",
+                "network": "facebook",
+                "provenance": "own_site_link"
+              },
+              {
+                "url": "https://www.linkedin.com/company/rose-city-heating-&-air",
+                "label": "LinkedIn",
+                "handle": "rose-city-heating-&-air",
+                "network": "linkedin",
+                "provenance": "own_site_link"
+              },
+              {
+                "url": "https://www.bbb.org/us/or/portland/profile/heating-and-air-conditioning/rose-city-refrigeration-heating-air-llc-1296-75000555",
+                "label": "BBB",
+                "handle": "rose-city-refrigeration-heating-air-llc",
+                "network": "bbb",
+                "provenance": "named_match"
+              },
+              {
+                "url": "https://nextdoor.com/pages/rose-city-heating-air-portland-or-1/",
+                "label": "Nextdoor",
+                "handle": "rose-city-heating-air-portland-or-1",
+                "network": "nextdoor",
+                "provenance": "named_match"
+              }
+            ],
+            "industry": "hvac",
+            "latitude": 45.459758199999996,
+            "place_id": "ChIJC9MnV2kLlVQRfc0VcPz4PNU",
+            "longitude": -122.70687509999998,
+            "postal_code": "97219",
+            "profile_url": "https://maps.google.com/?cid=15365429791777213821&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+            "review_count": 608,
+            "business_name": "Rose City Heating & Air"
+          },
+          "content": {
+            "hours": [
+              {
+                "day": "monday",
+                "text": "7:00 AM – 4:00 PM"
+              },
+              {
+                "day": "tuesday",
+                "text": "7:00 AM – 4:00 PM"
+              },
+              {
+                "day": "wednesday",
+                "text": "7:00 AM – 4:00 PM"
+              },
+              {
+                "day": "thursday",
+                "text": "7:00 AM – 4:00 PM"
+              },
+              {
+                "day": "friday",
+                "text": "7:00 AM – 4:00 PM"
+              },
+              {
+                "day": "saturday",
+                "text": "7:00 AM – 3:00 PM"
+              },
+              {
+                "day": "sunday",
+                "text": "7:00 AM – 3:00 PM"
+              }
+            ],
+            "reviews": [
+              {
+                "text": "Rose City was wonderful to work with from start to finish. Their estimate was reasonable , financing good and the quality of the equipment was excellent. Their technicians, Scott, Ryan and Rickie were excellent. They arrived on time and patiently answered all of my questions. For the central A/ C they sent an electrician to make sure all was perfect. Time will tell as my new A/C will be put to the test this weekend as temperatures reach 100.What made me choose Rose City was their sales person , Sterling, who actually has installed HVAC systems.",
+                "author": "Jan Shuler",
+                "rating": 5,
+                "avatarUrl": "https://lh3.googleusercontent.com/a-/ALV-UjX6Ff7lVWeKTBtwEGj6n_WnIf2FewGQe0xE6XZiJGvlmpGLfmY=s128-c0x00000000-cc-rp-mo-ba2",
+                "publishedAt": "2026-06-09T22:15:30.490798843Z"
+              },
+              {
+                "text": "Ryan was on time, respectful, knowledable, and great to work with. We recently had another contractor (not rose city) who tried to pressure us to replace our system with various scare tactics after we signed up through a promotion for a furnace tune up. Instead we went to Rose City for a second opinion. Ryan checked our furnace and found while old, the system was completely safe to use. He was communicative, and provided excellent service. We plan to run our furnace until it stops, and then we will look to Rose City first on options for replacement.\n\nI'd recommend Rose City to anyone for transparent pricing, great service, and a trustworthy service.",
+                "author": "Charlie Thorne",
+                "rating": 5,
+                "avatarUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVkUflXfXU924muRwVrXUuikc_fBcxP892RbuU8x0YMCUpGzpVBtw=s128-c0x00000000-cc-rp-mo",
+                "publishedAt": "2026-04-20T19:03:17.404205870Z"
+              },
+              {
+                "text": "We’re so glad we chose Rose City for our minisplit replacement. They exceeded our expectations at every step: They were courteous, clear, and friendly in their communication, including when we asked dozens of questions about our options.\n\nThey worked quickly and cleaned everything up, honestly better than any other contractors we’ve worked with!\n\nTheir quote was also the most competitive (lowest cost!) of the five we received from different companies. On the surface it seemed like their quote didn’t include everything the competitors did, but after we asked more questions we realized that wasn’t the case. The quotes they email over just look less detailed that some of the big private equity HVAC companies that unnecessarily itemize every tiny detail.\n\nWe’re planning on working with Rose City for our ongoing minisplit maintenance, too, because we’ve been so happy with them!",
+                "author": "Danielle Meinert",
+                "rating": 5,
+                "avatarUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXgdnBzlfRF6UWslgPoq83gh7wrseQu3qOhueCiCoskKB1NnC1dIA=s128-c0x00000000-cc-rp-mo-ba3",
+                "publishedAt": "2026-06-13T23:30:20.248457224Z"
+              },
+              {
+                "text": "Ryan was so helpful, nice, and polite. He fixed the unit very quickly and gave me some pointers as well. I was also happy to get an appointment so quick right after a hot weekend.",
+                "author": "Roger Dessert",
+                "rating": 5,
+                "publishedAt": "2026-06-16T22:54:48.597485162Z"
+              },
+              {
+                "text": "Loyal customer for the last 6 years. Fantastic job on replacements and service. Ryan just did an awesome job servicing our units. Super knowledgeable, diligent. Could not ask for more.",
+                "author": "Patrick Weiss",
+                "rating": 5,
+                "publishedAt": "2026-05-06T04:12:46.954025516Z"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "island": {
+    "version": "wss-content-v1",
+    "facts": {
+      "business_name": "Rose City Heating & Air",
+      "city": "Portland",
+      "address_city": "Portland",
+      "state": "OR",
+      "phone": "(503) 636-5371",
+      "phone_digits": "5036365371",
+      "email": "comfort@rosecityheating.com",
+      "address": "8946 SW Barbur Blvd, Portland, OR 97219",
+      "license": "",
+      "rating": 4.9,
+      "review_count": 608,
+      "logo_url": "/assets/client-logo.png",
+      "site_url": "https://wss-test-rose-city-heating-and-air-portland.wss-ai.com/"
+    },
+    "services": [
+      {
+        "name": "Photo Gallery"
+      },
+      {
+        "name": "Comfort Club"
+      },
+      {
+        "name": "Filter Club"
+      },
+      {
+        "name": "Products"
+      },
+      {
+        "name": "Furnaces"
+      },
+      {
+        "name": "Air Conditioners"
+      },
+      {
+        "name": "Heat Pumps"
+      },
+      {
+        "name": "Air Quality"
+      },
+      {
+        "name": "Thermostats"
+      },
+      {
+        "name": "Water Heaters"
+      },
+      {
+        "name": "Zoning"
+      },
+      {
+        "name": "Ductless"
+      }
+    ],
+    "faqs": [],
+    "reviews": [
+      {
+        "text": "Ryan was so helpful, nice, and polite. He fixed the unit very quickly and gave me some pointers as well. I was also happy to get an appointment so quick right after a hot weekend.",
+        "author": "Roger Dessert",
+        "rating": 5,
+        "publishedAt": "2026-06-16T22:54:48.000Z"
+      },
+      {
+        "text": "We’re so glad we chose Rose City for our minisplit replacement. They exceeded our expectations at every step: They were courteous, clear, and friendly in their communication, including when we asked dozens of questions about our options.\n\nThey worked quickly and cleaned everything up, honestly better than any other contractors we’ve worked with!\n\nTheir quote was also the most competitive (lowest cost!) of the five we received from different companies. On the surface it seemed like their quote didn’t include everything the competitors did, but after we asked more questions we realized that wasn’t the case. The quotes they email over just look less detailed that some of the big private equity HVAC companies that unnecessarily itemize every tiny detail.\n\nWe’re planning on working with Rose City for our ongoing minisplit maintenance, too, because we’ve been so happy with them!",
+        "author": "Danielle Meinert",
+        "rating": 5,
+        "publishedAt": "2026-06-13T23:30:20.000Z"
+      },
+      {
+        "text": "Rose City was wonderful to work with from start to finish. Their estimate was reasonable , financing good and the quality of the equipment was excellent. Their technicians, Scott, Ryan and Rickie were excellent. They arrived on time and patiently answered all of my questions. For the central A/ C they sent an electrician to make sure all was perfect. Time will tell as my new A/C will be put to the test this weekend as temperatures reach 100.What made me choose Rose City was their sales person , Sterling, who actually has installed HVAC systems.",
+        "author": "Jan Shuler",
+        "rating": 5,
+        "publishedAt": "2026-06-09T22:15:30.000Z"
+      },
+      {
+        "text": "Loyal customer for the last 6 years. Fantastic job on replacements and service. Ryan just did an awesome job servicing our units. Super knowledgeable, diligent. Could not ask for more.",
+        "author": "Patrick Weiss",
+        "rating": 5,
+        "publishedAt": "2026-05-06T04:12:46.000Z"
+      },
+      {
+        "text": "Ryan was on time, respectful, knowledable, and great to work with. We recently had another contractor (not rose city) who tried to pressure us to replace our system with various scare tactics after we signed up through a promotion for a furnace tune up. Instead we went to Rose City for a second opinion. Ryan checked our furnace and found while old, the system was completely safe to use. He was communicative, and provided excellent service. We plan to run our furnace until it stops, and then we will look to Rose City first on options for replacement.\n\nI'd recommend Rose City to anyone for transparent pricing, great service, and a trustworthy service.",
+        "author": "Charlie Thorne",
+        "rating": 5,
+        "publishedAt": "2026-04-20T19:03:17.000Z"
+      }
+    ],
+    "areas": [],
+    "hours": [
+      "Monday: 7:00 AM – 4:00 PM",
+      "Tuesday: 7:00 AM – 4:00 PM",
+      "Wednesday: 7:00 AM – 4:00 PM",
+      "Thursday: 7:00 AM – 4:00 PM",
+      "Friday: 7:00 AM – 4:00 PM",
+      "Saturday: 7:00 AM – 3:00 PM",
+      "Sunday: 7:00 AM – 3:00 PM"
+    ],
+    "about": ""
+  }
+}

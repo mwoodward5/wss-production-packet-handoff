@@ -1,0 +1,343 @@
+{
+  "version": 2,
+  "key": "03-mhb-build-llc",
+  "name": "MHB Build, LLC",
+  "category": "general contractor",
+  "vertical": "general contractor",
+  "requested_vertical": "general contractor",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "a81032f8-c0a5-4232-bd1d-c9cc0113c326",
+  "lovable_source_commit": "17991569b1f9f496afc1cd66209b9004204eeea5",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "a81032f8-c0a5-4232-bd1d-c9cc0113c326",
+    "ref": "17991569b1f9f496afc1cd66209b9004204eeea5",
+    "repository": "https://github.com/mwoodward5/lakebluff-movers-powerhouse",
+    "git_tree": "d66a8b1479aca98bf973360e1360e535415d0f24"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/services",
+    "/services/:slug",
+    "/projects",
+    "/service-area",
+    "/about",
+    "/contact",
+    "*"
+  ],
+  "design_tokens": {
+    "background": "hsl(36 26% 95%)",
+    "foreground": "hsl(215 35% 11%)",
+    "primary": "hsl(215 40% 13%)",
+    "accent": "hsl(22 78% 46%)",
+    "accent_glow": "hsl(24 90% 58%)",
+    "ink": "hsl(215 45% 7%)",
+    "secondary": "hsl(36 18% 90%)",
+    "border": "hsl(215 14% 86%)",
+    "radius": "0.75rem",
+    "font_display": "Fraunces, Georgia, serif",
+    "font_sans": "Inter, system-ui, sans-serif",
+    "font_mono": "JetBrains Mono, monospace"
+  },
+  "hero_contract": {
+    "component": "src/components/site/PremiumHero.tsx",
+    "min_height": "92vh",
+    "background_layers": [
+      "bg-gradient-ink",
+      "blueprint-grid",
+      "radial-glow",
+      "aurora-conic",
+      "parallax-halos"
+    ],
+    "replacement_strategy": "Place a 10s looping client video (framing, build elevation, or vehicle) at z-index -20 with opacity 0.35 and mix-blend-luminosity behind the existing blueprint grid layer to preserve contrast and typography."
+  },
+  "media_slots": [
+    {
+      "route": "/",
+      "slot": "Hero Background",
+      "role": "hero",
+      "aspect_ratio": "16:9",
+      "priority": "anchor"
+    },
+    {
+      "route": "/",
+      "slot": "Recent Work Mosaic (6 images)",
+      "role": "work_mosaic",
+      "aspect_ratio": "4:3 and 1:1",
+      "priority": "high"
+    },
+    {
+      "route": "/projects",
+      "slot": "Portfolio Masonry (33 slots)",
+      "role": "project_gallery",
+      "aspect_ratio": "variable",
+      "priority": "high"
+    },
+    {
+      "route": "/services/:slug",
+      "slot": "Trade Proof Grid (1-4 images)",
+      "role": "service_evidence",
+      "aspect_ratio": "4:3",
+      "priority": "medium"
+    },
+    {
+      "route": "/about",
+      "slot": "Sidebar Feature",
+      "role": "company_proof",
+      "aspect_ratio": "16:9",
+      "priority": "medium"
+    }
+  ],
+  "content_slots": [
+    {
+      "field": "business.name",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "field": "business.legalName",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "field": "business.phone",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "field": "business.email",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "field": "business.city",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "field": "business.state",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "field": "business.region",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "field": "business.geo",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "field": "services",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "field": "details",
+      "file": "src/pages/ServiceDetail.tsx"
+    },
+    {
+      "field": "faqs",
+      "file": "src/pages/Index.tsx"
+    }
+  ],
+  "trust_slots": [
+    {
+      "location": "Hero Top Bar",
+      "type": "license_or_years_badge"
+    },
+    {
+      "location": "Hero Router Footer",
+      "type": "google_rating_badge"
+    },
+    {
+      "location": "Homepage Section 02",
+      "type": "stat_counters"
+    },
+    {
+      "location": "Recent Work Strip",
+      "type": "real_photo_guarantee"
+    },
+    {
+      "location": "About Quick Facts",
+      "type": "license_and_insurance_rows"
+    }
+  ],
+  "schema_slots": [
+    {
+      "schema": "GeneralContractor",
+      "file": "src/lib/schema.ts"
+    },
+    {
+      "schema": "Organization",
+      "file": "src/lib/schema.ts"
+    },
+    {
+      "schema": "WebSite",
+      "file": "src/lib/schema.ts"
+    },
+    {
+      "schema": "Service",
+      "file": "src/lib/schema.ts"
+    },
+    {
+      "schema": "FAQPage",
+      "file": "src/lib/schema.ts"
+    },
+    {
+      "schema": "BreadcrumbList",
+      "file": "src/lib/schema.ts"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "element": "Meta Geo Position",
+      "target": "index.html"
+    },
+    {
+      "element": "LLM Knowledge Base",
+      "target": "public/llms.txt"
+    },
+    {
+      "element": "Full LLM Knowledge Base",
+      "target": "public/llms-full.txt"
+    },
+    {
+      "element": "Google Map Iframe",
+      "target": "src/pages/ServiceArea.tsx"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "route": "/",
+      "target": "FAQ Accordion conversational responses"
+    },
+    {
+      "route": "/services/:slug",
+      "target": "Hero intro statement with location and trade pairing"
+    }
+  ],
+  "map_location_slot": {
+    "route": "/service-area",
+    "component": "iframe",
+    "query": "Independence, KY",
+    "directions_url": "https://www.google.com/maps/dir/?api=1&destination=Independence%2C%20KY"
+  },
+  "content_density": {
+    "hero": "moderate_editorial",
+    "services_list": "dense_structured",
+    "projects": "dense_visual_masonry",
+    "about": "moderate_narrative",
+    "contact": "clean_form_intake"
+  },
+  "mobile_rules": {
+    "viewport_breakpoint_mobile": "390px",
+    "viewport_breakpoint_tablet": "768px",
+    "viewport_breakpoint_desktop": "1440px",
+    "mobile_nav": "Full screen overlay with h-11 pill CTAs",
+    "hero_h1_mobile": "2.75rem leading-[0.94]",
+    "gallery_columns_mobile": 1,
+    "gallery_columns_desktop": 4
+  },
+  "non_negotiables": [
+    "Retain Fraunces serif headings paired with Inter body and JetBrains Mono metadata",
+    "Retain warm bone canvas, deep slate ink, and warm copper craft accents",
+    "Retain SVG architectural grain and blueprint grid overlays",
+    "Do not substitute unrelated stock construction imagery",
+    "Do not fabricate star ratings, testimonials, or licensing claims without verification"
+  ],
+  "safe_replacements": [
+    "business.name",
+    "business.legalName",
+    "business.phone",
+    "business.email",
+    "business.city",
+    "business.state",
+    "business.region",
+    "business.geo",
+    "services array",
+    "service descriptions & bullets",
+    "project photo paths and captions",
+    "Google Maps destination parameters"
+  ],
+  "leak_terms": [
+    "MHB Build, LLC"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "Georgia",
+      "serif",
+      "Inter",
+      "system-ui",
+      "sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "hsl(36 26% 95%)",
+    "hsl(215 35% 11%)",
+    "hsl(215 40% 13%)",
+    "hsl(22 78% 46%)",
+    "hsl(24 90% 58%)",
+    "hsl(215 45% 7%)"
+  ],
+  "fonts": [
+    "Fraunces",
+    "Georgia",
+    "serif",
+    "Inter",
+    "system-ui",
+    "sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "4a08b8673860b05d113fb77f9bab0f9e682f9260120351a31ab7f2bd3a758533",
+    "files": {
+      "assets/App-Dd4znKQX.js": "451bf333b2e648337a936bf0279b2d7c4fa328f74eb284911effd4739159633d",
+      "assets/bridge-pQPxVaT8.js": "03df501c4907ef70795507279e7e87bfcbc1dbd238ef51e86c051704f65e95b6",
+      "assets/index-BAqpH0cB.js": "2c66371626e6e7012872f4321934d444aa556672c280c92a84a8de7431533f70",
+      "assets/index-BoTEbj92.css": "679815edb10ab9b4af4efdf8f2d09841ac9a28fb70ea4d508c79fc51b075dc82",
+      "index.html": "00b1fdf3762af60697cb34884bf47237795c30e3b515ca98a41451908184bdf0"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED",
+  "data_island_id": "wss-client-data",
+  "content_render_targets": {
+    "services": [{ "path": "/", "selector": "section.section:has(ol > li > a[href^='/services/'])" }]
+  },
+  "content_channel_availability": {
+    "faqs": "unavailable_until_stable_native_target",
+    "reviews": "unavailable_until_source_bound_render",
+    "hours": "unavailable_until_source_bound_render",
+    "areas": "unavailable_until_source_bound_render"
+  }
+}

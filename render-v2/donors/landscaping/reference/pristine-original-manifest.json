@@ -1,0 +1,81 @@
+{
+  "captured_at": "2026-09-27T23:04:51.609641+00:00",
+  "project_id": "bac7c069-3279-4616-a0ee-e4e447042003",
+  "source_ref": "ecd99943844c7b92edd3898521ea29bcced88457",
+  "published_url": "https://greenfront-site-builder.lovable.app/",
+  "index_sha256": "e1d1c1d315bacd460761230a9b623c0dbdcec6a323b168234710a61ce07d7508",
+  "assets": {
+    "~flock.js": {
+      "url": "https://greenfront-site-builder.lovable.app/~flock.js",
+      "sha256": "a86e084b4f82709814be6c15fd6305daa783fda87ad95402da9a4d3a1dd6d748",
+      "bytes": 21296
+    },
+    "assets/index-DaST-DNZ.css": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/index-DaST-DNZ.css",
+      "sha256": "62a9c16434d4ceccf4185f95f118c76b97e395e7edac817d29fddf5c5b9f387d",
+      "bytes": 75119
+    },
+    "assets/index-BC-USkSX.js": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/index-BC-USkSX.js",
+      "sha256": "7c749526b9b9d8541c20071515652038a11bdc9934375ac43eefcc0ad32ded86",
+      "bytes": 243209
+    },
+    "assets/logo-DmLsujVp.png": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/logo-DmLsujVp.png",
+      "sha256": "6822c4a368806719a966d4d2c888abeb3be834b2a36e508a68d66e2a0a5e4b16",
+      "bytes": 122568
+    },
+    "assets/grass-texture-DzVvb9xl.jpg": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/grass-texture-DzVvb9xl.jpg",
+      "sha256": "f65d7e4cb2e88471d8c424fda29bac141b3cec511b60ec2dc1a7fc2cc8fd4c0a",
+      "bytes": 118602
+    },
+    "assets/hero-lawn-BktA-aJ_.jpg": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/hero-lawn-BktA-aJ_.jpg",
+      "sha256": "cd757ea1dc459bc73adc7db478d61a46c23cea0b3ccd01bba9cf0af9402f2b6d",
+      "bytes": 493662
+    },
+    "favicon.png": {
+      "url": "https://greenfront-site-builder.lovable.app/favicon.png",
+      "sha256": "6822c4a368806719a966d4d2c888abeb3be834b2a36e508a68d66e2a0a5e4b16",
+      "bytes": 122568
+    },
+    "assets/lawn-care-BXlCqdkr.jpg": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/lawn-care-BXlCqdkr.jpg",
+      "sha256": "060354abb5c187f0f029ec03e2c0350e074de1fd0e9fc6472aa726a297622bdd",
+      "bytes": 893701
+    },
+    "assets/hardscape-D8TUe0NT.jpg": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/hardscape-D8TUe0NT.jpg",
+      "sha256": "76060b0ace6014d23579cda77e68502d5d6d998ce58e8734b22532c8f6b0c12a",
+      "bytes": 408308
+    },
+    "assets/landscape-design-c418103C.jpg": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/landscape-design-c418103C.jpg",
+      "sha256": "f050935b30f6e2d272b89bc141179e79be31ac9b36dea98b99f28d10d2d6719b",
+      "bytes": 829543
+    },
+    "assets/brick-house-DiVtcxte.jpg": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/brick-house-DiVtcxte.jpg",
+      "sha256": "66ae04eaa4e129812e9ab9fb1f2a7fbddf4ace953c500220ec1a579ff4bf7db3",
+      "bytes": 481416
+    },
+    "assets/seasonal-awApi40l.jpg": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/seasonal-awApi40l.jpg",
+      "sha256": "625bbf422d716a7a4c0a3b81eed8d8846e417627214dc14f26e22931c5e753fb",
+      "bytes": 820699
+    },
+    "assets/truck-BGNAbCFe.jpg": {
+      "url": "https://greenfront-site-builder.lovable.app/assets/truck-BGNAbCFe.jpg",
+      "sha256": "4e5009580360cd46efbed78380e74cf6282cff6741cadbcd69a8b41cfd94fa95",
+      "bytes": 1022464
+    },
+    "__l5e/assets-v1/8d593daf-1e06-4be9-9758-acf6f2351ab9/greenfront-hero-motion.mp4": {
+      "sha256": "f6a89cb1c04e3f6f9bff2170a9405e38e1903ea4c4204a5e7cb85a9a32941057",
+      "bytes": 44948351,
+      "source": "Previously downloaded original movie, fixed hash; reference-only, not client proof"
+    }
+  },
+  "errors": [],
+  "purpose": "Unmodified design reference only. Contains donor identity and must not be published as Burns or other client."
+}

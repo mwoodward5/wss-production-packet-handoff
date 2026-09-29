@@ -1,0 +1,121 @@
+{
+  "note": "SiteForge commercial catalog. stripe_price_id values are VERIFIED LIVE Stripe Prices on acct_1QS0oRLEuaGjNcch (Woodward Software LLC), matched by stripe_lookup_key and amount. Checkout prefers stripe_price_id and falls back to inline price_data. Live charging is OFF by default: it requires BOTH a live secret key (STRIPE_SECRET_KEY=sk_live_...) AND the explicit opt-in flag STRIPE_ALLOW_LIVE=1. Without both, the app runs Stripe TEST mode (sk_test_...) or the built-in mock checkout - never a real charge.",
+  "plans": [
+    {
+      "key": "free",
+      "name": "Free Preview",
+      "tagline": "See your website before you spend anything.",
+      "price_cents": 0,
+      "interval": null,
+      "stripe_lookup_key": null,
+      "limits": { "projects": 1, "generations_per_month": 5, "publish": false, "custom_domain": false, "multipage_export": false, "edit_requests": false, "addons": [] },
+      "features": [
+        "1 website with up to 5 new versions each month",
+        "We gather details from your current website",
+        "A clear quality report with every version",
+        "A private preview link you can share"
+      ]
+    },
+    {
+      "key": "starter",
+      "name": "Host & Care",
+      "tagline": "Your website, published and looked after.",
+      "price_cents": 2900,
+      "interval": "month",
+      "stripe_lookup_key": "siteforge_starter_monthly",
+      "stripe_price_id": "price_1TqWFXLEuaGjNcchH6XeU6yf",
+      "limits": { "projects": 1, "generations_per_month": 5, "publish": true, "custom_domain": true, "multipage_export": false, "edit_requests": false, "addons": [] },
+      "features": [
+        "Publish 1 website at your own web address",
+        "Secure hosting and ongoing technical care included",
+        "Up to 5 new website versions each month",
+        "Search-engine setup included"
+      ]
+    },
+    {
+      "key": "pro",
+      "name": "Care+",
+      "tagline": "We handle your edits and help local customers find you.",
+      "price_cents": 9900,
+      "interval": "month",
+      "stripe_lookup_key": "siteforge_pro_monthly",
+      "stripe_price_id": "price_1TqWFvLEuaGjNcchYfKhbpbK",
+      "highlight": true,
+      "limits": { "projects": 3, "generations_per_month": 20, "publish": true, "custom_domain": true, "multipage_export": true, "edit_requests": true, "growth_hub": true, "prompt_edits_per_month": -1, "addons": ["seo_boost"] },
+      "features": [
+        "Up to 3 published sites",
+        "Edit requests handled for you",
+        "Ongoing help appearing in local and AI-powered search",
+        "Larger multi-page websites when they fit your business",
+        "Up to 20 new website versions each month"
+      ]
+    },
+    {
+      "key": "agency",
+      "name": "Agency",
+      "tagline": "Create and manage beautiful websites for your clients.",
+      "price_cents": 19900,
+      "interval": "month",
+      "stripe_lookup_key": "siteforge_agency_monthly",
+      "stripe_price_id": "price_1TqWFxLEuaGjNcch7WVeh08N",
+      "limits": { "projects": 10, "generations_per_month": 60, "publish": true, "custom_domain": true, "multipage_export": true, "edit_requests": true, "growth_hub": true, "prompt_edits_per_month": -1, "white_label": true, "client_workspaces": true, "api_access": true, "addons": ["seo_boost", "white_label"] },
+      "features": [
+        "10 client websites with your own branding",
+        "Simple monthly pricing with no usage credits",
+        "Up to 60 new website versions each month",
+        "Every client website checked for originality",
+        "Priority service"
+      ]
+    }
+  ],
+  "one_time": [
+    {
+      "key": "build",
+      "name": "Done-For-You Build",
+      "price_cents": 49500,
+      "stripe_lookup_key": "siteforge_dfy_build",
+      "stripe_price_id": "price_1TqWFyLEuaGjNcchwPdj38wP",
+      "description": "We gather your business details, improve the photos and files you provide, and build the website for you. Includes 1 year of Host & Care."
+    },
+    {
+      "key": "build_pro",
+      "name": "Done-For-You Build Pro",
+      "price_cents": 99500,
+      "stripe_lookup_key": "siteforge_dfy_build_pro",
+      "stripe_price_id": "price_1TqWG0LEuaGjNcchXdYMhYXo",
+      "description": "Everything in Done-For-You Build, plus a cinematic video opening, extra pages, priority delivery, and 1 year of Care+."
+    }
+  ],
+  "addons": [
+    {
+      "key": "voice_ai",
+      "name": "AI Voice Receptionist",
+      "price_cents": 7900,
+      "interval": "month",
+      "stripe_lookup_key": "siteforge_addon_voice_ai",
+      "stripe_price_id": "price_1TqWG1LEuaGjNcchhPBP1r2w",
+      "description": "A trained voice agent answers your business line, books jobs, and texts you transcripts. Wired to your site's call CTAs.",
+      "requires_plan": ["starter", "pro", "agency"]
+    },
+    {
+      "key": "seo_boost",
+      "name": "Local SEO Boost",
+      "price_cents": 4900,
+      "interval": "month",
+      "stripe_lookup_key": "siteforge_addon_seo_boost",
+      "stripe_price_id": "price_1TqWG2LEuaGjNcchkVGqXmLQ",
+      "description": "We keep your business details consistent online, improve your Google presence, update your search setup, and send a simple monthly visibility report.",
+      "requires_plan": ["starter"]
+    },
+    {
+      "key": "ai_concierge",
+      "name": "AI Site Concierge",
+      "price_cents": 2900,
+      "interval": "month",
+      "stripe_lookup_key": "siteforge_addon_concierge",
+      "stripe_price_id": "price_1TqWG4LEuaGjNcchEG5BKZ35",
+      "description": "On-site chat trained on your services and reviews. Captures quotes 24/7, hands off to email or the Voice Receptionist.",
+      "requires_plan": ["starter", "pro", "agency"]
+    }
+  ]
+}

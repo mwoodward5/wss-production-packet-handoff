@@ -1,0 +1,390 @@
+{
+  "project_name": "Bajo El Filo",
+  "vertical": "Boutique Martial Arts Academy / Elite Combat Retreat",
+  "classification": "Premier",
+  "routes": [
+    {
+      "path": "/",
+      "file": "src/routes/index.tsx",
+      "type": "flagship_monograph",
+      "sections": [
+        "hero",
+        "promise_strip",
+        "three_doors",
+        "the_teacher",
+        "the_place",
+        "the_vertical",
+        "art_atlas",
+        "epigraph_interstitial",
+        "edge_progression",
+        "seminars_worldwide",
+        "faq_block",
+        "closing_band"
+      ]
+    },
+    {
+      "path": "/training",
+      "file": "src/routes/training.tsx",
+      "type": "program_deep_dive",
+      "sections": [
+        "page_hero",
+        "baja_chapter",
+        "program_blocks",
+        "closing_cta"
+      ]
+    },
+    {
+      "path": "/seminars",
+      "file": "src/routes/seminars.tsx",
+      "type": "touring_and_hosting",
+      "sections": [
+        "page_hero",
+        "world_map_lead",
+        "host_details",
+        "closing_cta"
+      ]
+    },
+    {
+      "path": "/arts",
+      "file": "src/routes/arts.tsx",
+      "type": "catalogue_directory",
+      "sections": [
+        "page_hero",
+        "art_atlas",
+        "closing_cta"
+      ]
+    },
+    {
+      "path": "/arts/$slug",
+      "file": "src/routes/arts.$slug.tsx",
+      "type": "individual_monograph",
+      "sections": [
+        "art_hero",
+        "history_and_lineage",
+        "principles_grid",
+        "curriculum_split",
+        "proof_media",
+        "closing_cta"
+      ]
+    },
+    {
+      "path": "/media",
+      "file": "src/routes/media.tsx",
+      "type": "proof_archive",
+      "sections": [
+        "page_hero",
+        "filter_sticky_rail",
+        "media_grid",
+        "closing_cta"
+      ]
+    },
+    {
+      "path": "/contact",
+      "file": "src/routes/contact.tsx",
+      "type": "high_intent_inquiry",
+      "sections": [
+        "page_hero",
+        "expectations_column",
+        "inquiry_form"
+      ]
+    }
+  ],
+  "design_tokens": {
+    "colors": {
+      "ink": "oklch(0.155 0.010 60)",
+      "ink_2": "oklch(0.20 0.010 60)",
+      "bone": "oklch(0.955 0.014 82)",
+      "bone_dim": "oklch(0.84 0.014 82)",
+      "paper": "oklch(0.965 0.014 82)",
+      "paper_ink": "oklch(0.22 0.010 60)",
+      "paper_steel": "oklch(0.52 0.012 60)",
+      "steel": "oklch(0.72 0.014 240)",
+      "edge": "oklch(0.74 0.09 78)",
+      "seal": "oklch(0.46 0.16 25)",
+      "brass": "oklch(0.72 0.09 75)",
+      "sambo": "oklch(0.55 0.19 27)",
+      "hairline": "oklch(1 0 0 / 12%)",
+      "hairline_ink": "oklch(0 0 0 / 12%)"
+    },
+    "typography": {
+      "serif_heading": "Fraunces, Cormorant Garamond, serif",
+      "sans_body": "Inter Tight, Inter, sans-serif",
+      "mono_numeral": "JetBrains Mono, monospace"
+    },
+    "radii": {
+      "card": "4px",
+      "button": "9999px"
+    },
+    "transitions": {
+      "blade_clip_top": "clip-blade",
+      "blade_clip_bottom": "clip-blade-b",
+      "shimmer_timing": "8s linear infinite"
+    }
+  },
+  "hero_contract": {
+    "route": "/",
+    "container_height": "min-h-dvh",
+    "video_mechanics": "autoPlay muted loop playsInline preload='metadata'",
+    "aspect_ratio": "21:9 or 16:9 widescreen",
+    "vignette": "Dual linear and radial oklch ink mix",
+    "headline_scale": "clamp(2.4rem, 6.4vw, 6rem)",
+    "chapter_mark": "ChapterMark I (seal)",
+    "cta_primary": "Pill button (bg-bone text-ink)",
+    "cta_secondary": "Border-bottom link (border-edge text-bone)",
+    "live_status_card": "Glass container (Currently Booking Cabo intensives)"
+  },
+  "media_slots": [
+    {
+      "slot_id": "MED-01",
+      "route": "/",
+      "section": "hero",
+      "role": "hero_cinematic",
+      "recommended_aspect": "16:9 or 21:9",
+      "preferred_content": "10-15s slow-motion footage of headmaster/team"
+    },
+    {
+      "slot_id": "MED-02",
+      "route": "/",
+      "section": "three_doors",
+      "role": "service_door_in_person",
+      "recommended_aspect": "3:4",
+      "preferred_content": "Action video of private 1:1 training"
+    },
+    {
+      "slot_id": "MED-03",
+      "route": "/",
+      "section": "three_doors",
+      "role": "service_door_remote",
+      "recommended_aspect": "3:4",
+      "preferred_content": "Video analysis / technical solo drill"
+    },
+    {
+      "slot_id": "MED-04",
+      "route": "/",
+      "section": "three_doors",
+      "role": "service_door_seminars",
+      "recommended_aspect": "3:4",
+      "preferred_content": "High-energy clinic or seminar demonstration"
+    },
+    {
+      "slot_id": "MED-05",
+      "route": "/",
+      "section": "the_teacher",
+      "role": "founder_proof_rail_1",
+      "recommended_aspect": "3:4",
+      "preferred_content": "Technical blade disarm or precision drill"
+    },
+    {
+      "slot_id": "MED-06",
+      "route": "/",
+      "section": "the_teacher",
+      "role": "founder_proof_rail_2",
+      "recommended_aspect": "3:4",
+      "preferred_content": "Combat SAMBO throw or mat transition"
+    },
+    {
+      "slot_id": "MED-07",
+      "route": "/",
+      "section": "the_teacher",
+      "role": "founder_proof_rail_3",
+      "recommended_aspect": "3:4",
+      "preferred_content": "Historical fencing or classical sword sparring"
+    },
+    {
+      "slot_id": "MED-08",
+      "route": "/",
+      "section": "the_teacher",
+      "role": "founder_proof_rail_4",
+      "recommended_aspect": "3:4",
+      "preferred_content": "Headmaster with founding lineage master"
+    },
+    {
+      "slot_id": "MED-11",
+      "route": "/training",
+      "section": "baja_chapter",
+      "role": "facility_environment",
+      "recommended_aspect": "16:9",
+      "preferred_content": "Coastal retreat pavilion or outdoor mat"
+    }
+  ],
+  "content_slots": [
+    {
+      "field": "business_name",
+      "location": "SiteHeader, SiteFooter, Hero",
+      "source": "src/data/copy.ts"
+    },
+    {
+      "field": "founder_name",
+      "location": "TheTeacher, PromiseStrip, Bio",
+      "source": "src/data/copy.ts"
+    },
+    {
+      "field": "lineage_receipts",
+      "location": "TheTeacher, ArtsDetail",
+      "source": "src/data/arts.ts"
+    },
+    {
+      "field": "geographic_base",
+      "location": "ThePlace, SeminarsMap",
+      "source": "src/components/home/ThePlace.tsx"
+    },
+    {
+      "field": "daily_rhythm",
+      "location": "ThePlace 6-Beat Scheduler",
+      "source": "src/components/home/ThePlace.tsx"
+    },
+    {
+      "field": "curriculum_stages",
+      "location": "EdgeProgression",
+      "source": "src/data/edge-progression.ts"
+    },
+    {
+      "field": "faq_entries",
+      "location": "FAQBlock",
+      "source": "src/data/copy.ts"
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "lineage_certificates",
+      "section": "the_teacher",
+      "treatment": "Hairline accredited receipt list"
+    },
+    {
+      "type": "verified_host_gyms",
+      "section": "seminars_worldwide",
+      "treatment": "Two-way synced interactive world map pins"
+    },
+    {
+      "type": "live_cohort_status",
+      "section": "hero",
+      "treatment": "Floating glass pill with breathing status indicator"
+    },
+    {
+      "type": "curriculum_status_chips",
+      "section": "edge_progression",
+      "treatment": "Confirmed / Media-backed / Pending badges"
+    },
+    {
+      "type": "red_chop_seal",
+      "section": "scroll_frames",
+      "treatment": "Physical vermilion stamp impression"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "SportsActivityLocation",
+      "route": "__root.tsx",
+      "mode": "schema_only"
+    },
+    {
+      "type": "FAQPage",
+      "route": "/",
+      "mode": "both"
+    },
+    {
+      "type": "Service",
+      "route": "/training",
+      "mode": "both"
+    },
+    {
+      "type": "Course",
+      "route": "/",
+      "mode": "both"
+    },
+    {
+      "type": "BreadcrumbList",
+      "route": "/arts/$slug",
+      "mode": "both"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "query": "Elite martial arts training in Cabo San Lucas",
+      "route": "/",
+      "section": "hero"
+    },
+    {
+      "query": "Verified master combat lineages",
+      "route": "/",
+      "section": "the_teacher"
+    },
+    {
+      "query": "Host an international blade arts clinic",
+      "route": "/seminars",
+      "section": "host_details"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "intent": "Inquire for private Cabo training",
+      "target_url": "/contact"
+    },
+    {
+      "intent": "Check if beginners can train",
+      "target_url": "/#faq"
+    },
+    {
+      "intent": "Online coaching format",
+      "target_url": "/training"
+    }
+  ],
+  "map_location_slot": {
+    "component": "src/components/home/ThePlace.tsx",
+    "provider": "Google Maps JS API (vector styled)",
+    "styling": "Cartographer antique parchment and deep sea slate",
+    "coordinates": {
+      "lat": 22.8905,
+      "lng": -109.9167
+    },
+    "timezone": "America/Mazatlan"
+  },
+  "content_density": {
+    "minimal_zones": [
+      "hero",
+      "promise_strip",
+      "epigraph_interstitial"
+    ],
+    "rich_zones": [
+      "the_teacher",
+      "edge_progression",
+      "arts_detail"
+    ],
+    "max_reviews": 4,
+    "max_core_services": 3
+  },
+  "mobile_rules": {
+    "breakpoint_small": "390px",
+    "nav_behavior": "Full-screen ink drawer overlay with serif links",
+    "card_behavior": "Touch swipe horizontal rails for proof media",
+    "tap_target_min": "48px"
+  },
+  "non_negotiables": [
+    "No hardcoded non-semantic CSS colors",
+    "Strict alternation between dark ink and light museum paper bands",
+    "Preservation of ScrollFrame papyrus frames with turned brass dowels and seal chop",
+    "Fraunces serif for headings vs. Inter Tight for technical text",
+    "Roman numeral chapter markers (I–IX)",
+    "No generic review widgets or SaaS purple gradients"
+  ],
+  "safe_replacements": [
+    "founder_name",
+    "business_name",
+    "hero_video_asset",
+    "proof_video_assets",
+    "facility_location_and_coordinates",
+    "lineage_and_curriculum_text",
+    "faq_questions_and_answers",
+    "contact_destination_email"
+  ],
+  "lovable_classification": "High-Authority Master Monograph",
+  "classification_basis": "7 distinct documented routes; WSS scope label only",
+  "project_id": "e8bc0582-7262-4c3c-9292-53359399c02b",
+  "project_url": "https://lovable.dev/projects/e8bc0582-7262-4c3c-9292-53359399c02b",
+  "source_plan_file": "37-blade-edge-design-lovable-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

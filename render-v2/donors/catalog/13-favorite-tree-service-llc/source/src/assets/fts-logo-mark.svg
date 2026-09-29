@@ -1,0 +1,15 @@
+<svg width="288" height="288" viewBox="0 0 288 288" xmlns="http://www.w3.org/2000/svg">
+  <title>Favorite Tree Service mark</title>
+  <defs>
+    <linearGradient id="ftsAmber" x1="66" y1="262" x2="194" y2="282" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CF8C2F"/>
+      <stop offset="1" stop-color="#A96C24"/>
+    </linearGradient>
+  </defs>
+  <circle cx="144" cy="144" r="118" stroke="#B6B1A3" stroke-width="8" fill="none"/>
+  <path d="M144 46L196 98H170L212 146H184L228 210H60L104 146H76L118 98H92L144 46Z" fill="#103322"/>
+  <rect x="132" y="190" width="24" height="44" rx="6" fill="#08160F"/>
+  <path d="M76 226C112 246 176 246 212 226" stroke="url(#ftsAmber)" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M92 98H196" stroke="#08160F" stroke-opacity="0.14" stroke-width="6" stroke-linecap="round"/>
+  <path d="M76 146H212" stroke="#08160F" stroke-opacity="0.12" stroke-width="6" stroke-linecap="round"/>
+</svg>

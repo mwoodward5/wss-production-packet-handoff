@@ -1,0 +1,444 @@
+{
+  "version": 2,
+  "key": "06-el-construction",
+  "name": "EL Construction",
+  "category": "concrete",
+  "vertical": "concrete",
+  "requested_vertical": "general contractor",
+  "routing_conflict": true,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "ec977d63-95c1-4527-ba2b-367637d9d247",
+  "lovable_source_commit": "8a6d1fa80ca0d1da3b8f3eb2161c11f458c9e8d6",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "ec977d63-95c1-4527-ba2b-367637d9d247",
+    "ref": "8a6d1fa80ca0d1da3b8f3eb2161c11f458c9e8d6",
+    "repository": "https://github.com/mwoodward5/digi-dream",
+    "git_tree": "92cc5ac7748af9a8608c5f18d7fea3408c47a258"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/about",
+    "/contact",
+    "/commercial-concrete",
+    "/foundations-excavation",
+    "/flatwork-driveways",
+    "/concrete-demolition",
+    "/commercial-renovation",
+    "/home-renovation",
+    "/flooring-services",
+    "/service-area",
+    "/service-area/$citySlug"
+  ],
+  "design_tokens": {
+    "primary": "oklch(0.105 0.004 75)",
+    "primary_foreground": "oklch(0.985 0.004 85)",
+    "accent_gold": "oklch(0.74 0.105 79)",
+    "gold_foreground": "oklch(0.13 0.008 75)",
+    "background": "oklch(0.985 0.004 85)",
+    "surface": "oklch(0.965 0.008 80)",
+    "card": "oklch(1 0 0)",
+    "border": "oklch(0.9 0.01 85)",
+    "font_display": "\"Fraunces\", \"Playfair Display\", Georgia, serif",
+    "font_sans": "\"Inter\", ui-sans-serif, system-ui, -apple-system, sans-serif",
+    "radius_button": "9999px",
+    "radius_card": "1.5rem"
+  },
+  "hero_contract": {
+    "location": "src/routes/index.tsx -> <HeroVideo />",
+    "media_type": "video_mp4_with_webp_poster_fallback",
+    "poster_path": "src/assets/hero-concrete.webp",
+    "video_full_source": "/__l5e/assets-v1/27154553-fc26-4fb4-bb78-17f362330b04/hero-video.mp4",
+    "recommended_duration_seconds": 10,
+    "overlay_gradient": "linear-gradient(to top, oklch(0.105 0.004 75), oklch(0.105 0.004 75 / 0.7), oklch(0.105 0.004 75 / 0.3))",
+    "mesh_overlay": true,
+    "adaptive_streaming": true,
+    "headline_structure": "{City} HQ. Crews across all of {Region}."
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_video",
+      "route": "/",
+      "role": "hero",
+      "aspect_ratio": "16:9",
+      "format": "mp4",
+      "replacement_variable": "HERO_VIDEO_FULL"
+    },
+    {
+      "slot_id": "hero_poster",
+      "route": "/",
+      "role": "hero_poster",
+      "aspect_ratio": "16:9",
+      "format": "webp",
+      "replacement_variable": "heroImg"
+    },
+    {
+      "slot_id": "logo_header",
+      "route": "global",
+      "role": "brand_logo",
+      "aspect_ratio": "2.17:1",
+      "format": "jpg/png/svg",
+      "replacement_variable": "logoAsset"
+    },
+    {
+      "slot_id": "service_1",
+      "route": "/",
+      "role": "commercial-concrete",
+      "aspect_ratio": "4:3",
+      "format": "webp",
+      "replacement_variable": "serviceImages['commercial-concrete']"
+    },
+    {
+      "slot_id": "service_2",
+      "route": "/",
+      "role": "foundations-excavation",
+      "aspect_ratio": "4:3",
+      "format": "webp",
+      "replacement_variable": "serviceImages['foundations-excavation']"
+    },
+    {
+      "slot_id": "service_3",
+      "route": "/",
+      "role": "flatwork-driveways",
+      "aspect_ratio": "4:3",
+      "format": "webp",
+      "replacement_variable": "serviceImages['flatwork-driveways']"
+    },
+    {
+      "slot_id": "service_4",
+      "route": "/",
+      "role": "concrete-demolition",
+      "aspect_ratio": "4:3",
+      "format": "webp",
+      "replacement_variable": "serviceImages['concrete-demolition']"
+    },
+    {
+      "slot_id": "service_5",
+      "route": "/",
+      "role": "commercial-renovation",
+      "aspect_ratio": "4:3",
+      "format": "webp",
+      "replacement_variable": "serviceImages['commercial-renovation']"
+    },
+    {
+      "slot_id": "service_6",
+      "route": "/",
+      "role": "home-renovation",
+      "aspect_ratio": "4:3",
+      "format": "webp",
+      "replacement_variable": "serviceImages['home-renovation']"
+    },
+    {
+      "slot_id": "service_7",
+      "route": "/",
+      "role": "flooring-services",
+      "aspect_ratio": "4:3",
+      "format": "webp",
+      "replacement_variable": "serviceImages['flooring-services']"
+    },
+    {
+      "slot_id": "gallery_grid",
+      "route": "/",
+      "role": "project_gallery",
+      "count": 12,
+      "aspect_ratio": "1:1",
+      "format": "webp",
+      "replacement_variable": "projectPhotos"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "site.name",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.legalName",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.phone",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.phoneTel",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.email",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.hours",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.city",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.state",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.region",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.url",
+      "type": "url",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.placeId",
+      "type": "string",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.mapEmbed",
+      "type": "url",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.mapLink",
+      "type": "url",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "site.reviewLink",
+      "type": "url",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "services",
+      "type": "array",
+      "source": "src/lib/site.ts"
+    },
+    {
+      "key": "citiesData",
+      "type": "array",
+      "source": "src/lib/cities-data.ts"
+    }
+  ],
+  "trust_slots": [
+    {
+      "component": "TrustChips",
+      "target": "hero_sub_badge_strip"
+    },
+    {
+      "component": "Marquee",
+      "target": "infinite_trust_ticker"
+    },
+    {
+      "component": "StatCounter",
+      "target": "numeric_proof_grid"
+    },
+    {
+      "component": "InShortBlock",
+      "target": "editorial_authority_block"
+    },
+    {
+      "component": "Testimonials",
+      "target": "google_review_carousel"
+    },
+    {
+      "component": "ProjectGallery",
+      "target": "field_proof_grid"
+    }
+  ],
+  "schema_slots": [
+    {
+      "id": "LocalBusiness",
+      "file": "src/lib/schema.ts",
+      "target": "localBusinessSchema"
+    },
+    {
+      "id": "Service",
+      "file": "src/lib/schema.ts",
+      "target": "servicePageSchemaGraph"
+    },
+    {
+      "id": "CityLocalBusiness",
+      "file": "src/lib/schema.ts",
+      "target": "cityLocalBusinessSchema"
+    },
+    {
+      "id": "FAQPage",
+      "file": "src/lib/schema.ts",
+      "target": "faqSchema"
+    },
+    {
+      "id": "BreadcrumbList",
+      "file": "src/lib/schema.ts",
+      "target": "breadcrumbSchema"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "type": "direct_answers",
+      "component": "src/routes/index.tsx -> Quick answers"
+    },
+    {
+      "type": "pricing_ranges",
+      "component": "src/components/ServiceLayout.tsx -> Cost Breakdown"
+    },
+    {
+      "type": "city_soil_answers",
+      "component": "src/lib/cities-data.ts -> body"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "component": "FAQ.tsx",
+      "pattern": "conversational_first_sentence_answers"
+    }
+  ],
+  "map_location_slot": {
+    "route": "/contact",
+    "embed_url_variable": "site.mapEmbed",
+    "direct_link_variable": "site.mapLink",
+    "coordinates": "site.geo"
+  },
+  "content_density": {
+    "homepage": "high_visual_with_compact_factual_copy",
+    "service_pages": "deep_editorial_authority_1400_plus_words",
+    "city_pages": "localized_soil_and_neighborhood_authority",
+    "max_services": 8,
+    "max_gallery": 12
+  },
+  "mobile_rules": {
+    "viewport_390": {
+      "header_logo_width": "132px",
+      "sticky_call_bar": true,
+      "card_columns": 1,
+      "min_tap_target": "44px"
+    },
+    "viewport_768": {
+      "header_logo_width": "145px",
+      "sticky_call_bar": true,
+      "card_columns": 2,
+      "gallery_columns": 3
+    },
+    "viewport_1440": {
+      "header_logo_width": "170px",
+      "sticky_call_bar": false,
+      "card_columns": 4,
+      "gallery_columns": 4
+    }
+  },
+  "non_negotiables": [
+    "rounded_full_pill_buttons",
+    "gold_accent_tokens_oklch_0_74_0_105_79",
+    "architectural_black_primary_oklch_0_105_0_004_75",
+    "serif_display_font_fraunces_playfair",
+    "tilt_card_hover_physics",
+    "persistent_mobile_sticky_call_bar",
+    "lcp_optimized_poster_before_hero_video"
+  ],
+  "safe_replacements": [
+    "all_values_in_site_ts",
+    "all_entries_in_cities_data_ts",
+    "all_faqs_and_in_short_strings",
+    "logo_asset_and_favicons",
+    "hero_video_mp4_and_poster_webp",
+    "service_and_project_webp_images",
+    "google_reviews_array_in_testimonials"
+  ],
+  "leak_terms": [
+    "EL Construction"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "Playfair Display",
+      "Georgia",
+      "serif",
+      "Inter",
+      "ui-sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.105 0.004 75)",
+    "oklch(0.985 0.004 85)",
+    "oklch(0.74 0.105 79)",
+    "oklch(0.13 0.008 75)",
+    "oklch(0.985 0.004 85)"
+  ],
+  "fonts": [
+    "Fraunces",
+    "Playfair Display",
+    "Georgia",
+    "serif",
+    "Inter",
+    "ui-sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "6b54b28d27354b86dc6d5dfac5f1de5c2f51d02feadf00dbadc372c2896a8bb0",
+    "files": {
+      "assets/browser-BqgdQ5e6.js": "6b1a29189326c3b317cd5baf0851a6bf960099e40892f876bd7ccbc1dd42f2f5",
+      "assets/index-CKOjG_gv.css": "3274e1d5afa00f265bf3f453445fdd0bc5bbd35252755892371a77e648af51ff",
+      "assets/index-DV62ReBo.js": "e6531fa299b0156ca8a3960441317497903b7191f3bca77c84a2d5be684a35c0",
+      "index.html": "132e5adb65b727e6933b95568ac4fb5d27845659de9669e27909278afd00df32"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED",
+  "data_island_id": "wss-client-data",
+  "content_render_targets": {
+    "services": [
+      {
+        "path": "/",
+        "selector": "section:has(.mt-12.grid.gap-5)"
+      }
+    ]
+  },
+  "content_channel_availability": {
+    "faqs": "unavailable_until_source_bound_render_proof",
+    "reviews": "unavailable_until_source_bound_render_proof",
+    "hours": "unavailable_until_source_bound_render_proof",
+    "areas": "unavailable_until_source_bound_render_proof"
+  }
+}

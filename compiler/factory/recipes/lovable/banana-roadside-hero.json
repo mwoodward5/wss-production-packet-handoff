@@ -1,0 +1,104 @@
+{
+ "id": "banana-roadside-hero",
+ "source": "1e039e20-1795-491e-a87a-674e5fb46abe",
+ "palette": {
+  "vars": {
+   "--banana": "oklch(0.86 0.18 95)",
+   "--banana-deep": "oklch(0.78 0.19 80)",
+   "--asphalt": "oklch(0.18 0.012 60)",
+   "--cream": "oklch(0.985 0.012 95)",
+   "--background": "oklch(0.99 0.008 95)",
+   "--foreground": "oklch(0.18 0.012 60)",
+   "--card": "oklch(1 0 0)",
+   "--card-foreground": "oklch(0.18 0.012 60)",
+   "--popover": "oklch(1 0 0)",
+   "--popover-foreground": "oklch(0.18 0.012 60)",
+   "--primary": "oklch(0.86 0.18 95)",
+   "--primary-foreground": "oklch(0.18 0.012 60)",
+   "--secondary": "oklch(0.96 0.018 90)",
+   "--secondary-foreground": "oklch(0.22 0.012 60)",
+   "--muted": "oklch(0.96 0.012 90)",
+   "--muted-foreground": "oklch(0.45 0.018 70)",
+   "--accent": "oklch(0.92 0.05 90)",
+   "--accent-foreground": "oklch(0.22 0.012 60)",
+   "--destructive": "oklch(0.58 0.22 27)",
+   "--destructive-foreground": "oklch(0.99 0 0)",
+   "--border": "oklch(0.91 0.012 90)",
+   "--input": "oklch(0.92 0.012 90)",
+   "--ring": "oklch(0.78 0.19 80)",
+   "--gradient-sun": "linear-gradient(135deg, var(--banana) 0%, var(--banana-deep) 100%)",
+   "--gradient-asphalt": "linear-gradient(180deg, oklch(0.22 0.012 60) 0%, oklch(0.12 0.012 60) 100%)"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "oklch(0.14 0.012 60)",
+   "--foreground": "oklch(0.97 0.012 95)",
+   "--card": "oklch(0.18 0.012 60)",
+   "--card-foreground": "oklch(0.97 0.012 95)",
+   "--popover": "oklch(0.18 0.012 60)",
+   "--popover-foreground": "oklch(0.97 0.012 95)",
+   "--primary": "oklch(0.86 0.18 95)",
+   "--primary-foreground": "oklch(0.14 0.012 60)",
+   "--secondary": "oklch(0.24 0.012 60)",
+   "--secondary-foreground": "oklch(0.97 0.012 95)",
+   "--muted": "oklch(0.22 0.012 60)",
+   "--muted-foreground": "oklch(0.7 0.018 70)",
+   "--accent": "oklch(0.28 0.04 80)",
+   "--accent-foreground": "oklch(0.97 0.012 95)",
+   "--destructive": "oklch(0.7 0.19 22)",
+   "--destructive-foreground": "oklch(0.14 0.012 60)",
+   "--border": "oklch(1 0 0 / 12%)",
+   "--input": "oklch(1 0 0 / 15%)",
+   "--ring": "oklch(0.78 0.19 80)"
+  }
+ },
+ "fonts": {
+  "display": "Bebas Neue",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.875rem",
+ "shadows": [
+  "0 10px 30px -10px color-mix(in oklab, var(--banana-deep) 55%, transparent)",
+  "0 4px 20px -8px color-mix(in oklab, var(--asphalt) 20%, transparent)",
+  "0 22px 50px -22px color-mix(in oklab, var(--asphalt) 35%, transparent)",
+  "inset 0 0 0 1px rgba(255,255,255,0.06),\n    0 40px 100px -30px rgba(0,0,0,0.7)"
+ ],
+ "keyframes": [
+  {
+   "name": "brand-shimmer",
+   "css": "@keyframes brand-shimmer { 0% { transform: translateX(-120%) skewX(-12deg); opacity: 0; } 20% { opacity: 0.5; } 50% { opacity: 0.85; } 80% { opacity: 0.5; } 100% { transform: translateX(220%) skewX(-12deg); opacity: 0; } }"
+  },
+  {
+   "name": "sun-pulse",
+   "css": "@keyframes sun-pulse { 0%, 100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--banana) 60%, transparent); } 50% { box-shadow: 0 0 0 14px color-mix(in oklab, var(--banana) 0%, transparent); } }"
+  },
+  {
+   "name": "ken-burns",
+   "css": "@keyframes ken-burns { 0% { transform: scale(1.04) translate3d(0,0,0); } 100% { transform: scale(1.14) translate3d(-1.5%, -1%, 0); } }"
+  },
+  {
+   "name": "soft-rise",
+   "css": "@keyframes soft-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "hero-drift-a",
+   "css": "@keyframes hero-drift-a { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(-30px,40px,0) scale(1.08); } }"
+  },
+  {
+   "name": "hero-drift-b",
+   "css": "@keyframes hero-drift-b { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(40px,-30px,0) scale(1.1); } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "gradient-text",
+  "parallax",
+  "marquee",
+  "noise",
+  "ken-burns",
+  "glow",
+  "shimmer",
+  "gradient-heavy"
+ ]
+}

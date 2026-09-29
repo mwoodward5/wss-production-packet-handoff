@@ -1,0 +1,61 @@
+{
+ "id": "xaviers-cinematic-canvas",
+ "source": "f707cc11-42cf-4106-b1ad-628684ac727a",
+ "palette": {
+  "vars": {
+   "--background": "38 30% 96%",
+   "--foreground": "25 25% 10%",
+   "--card": "38 30% 98%",
+   "--card-foreground": "25 25% 10%",
+   "--popover": "38 30% 98%",
+   "--popover-foreground": "25 25% 10%",
+   "--primary": "25 30% 12%",
+   "--primary-foreground": "38 35% 96%",
+   "--secondary": "35 22% 88%",
+   "--secondary-foreground": "25 25% 14%",
+   "--muted": "35 18% 90%",
+   "--muted-foreground": "25 12% 36%",
+   "--accent": "38 45% 58%",
+   "--accent-foreground": "25 30% 10%",
+   "--destructive": "0 70% 42%",
+   "--destructive-foreground": "38 35% 96%",
+   "--border": "30 18% 82%",
+   "--input": "30 18% 82%",
+   "--ring": "38 45% 58%",
+   "--gold": "38 55% 56%",
+   "--gold-soft": "40 60% 78%",
+   "--onyx": "24 14% 8%",
+   "--ivory": "38 40% 96%",
+   "--grad-editorial": "linear-gradient(180deg, hsl(38 30% 96% / 0) 0%, hsl(38 30% 96% / 0.6) 60%, hsl(38 30% 96%) 100%)",
+   "--grad-onyx": "linear-gradient(180deg, hsl(24 14% 8% / 0) 0%, hsl(24 14% 8% / 0.55) 55%, hsl(24 14% 8% / 0.92) 100%)",
+   "--grad-gold": "linear-gradient(135deg, hsl(38 60% 70%), hsl(38 45% 50%))",
+   "--sidebar-background": "0 0% 98%",
+   "--sidebar-foreground": "240 5.3% 26.1%",
+   "--sidebar-primary": "240 5.9% 10%",
+   "--sidebar-primary-foreground": "0 0% 98%",
+   "--sidebar-accent": "240 4.8% 95.9%",
+   "--sidebar-accent-foreground": "240 5.9% 10%",
+   "--sidebar-border": "220 13% 91%",
+   "--sidebar-ring": "217.2 91.2% 59.8%"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Cormorant Garamond",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+ },
+ "radius": "0.25rem",
+ "shadows": [
+  "0 30px 80px -30px hsl(24 14% 8% / 0.45)",
+  "0 18px 40px -22px hsl(24 14% 8% / 0.35)"
+ ],
+ "keyframes": [],
+ "signatures": [
+  "marquee",
+  "noise",
+  "ken-burns",
+  "shimmer",
+  "gradient-heavy"
+ ]
+}

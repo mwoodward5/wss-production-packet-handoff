@@ -1,0 +1,99 @@
+{
+  "to": "woodwardsoftware@gmail.com",
+  "subject": "5 mirrors live — the value story, measured",
+  "intro": "Five businesses, five premium mirrors, all revealable, all in the wss-test namespace. The engine showed its real speed today: when Music City and ENCO needed their own photos placed, the full re-mirror took 23 and 18 seconds each. Every number below was measured on the live site — nothing estimated, nothing invented.",
+  "mirrors": [
+    {
+      "business": "Ramon Roofing — Fort Worth, TX",
+      "url": "https://wss-test-ramon-roofing-fort-worth.wss-ai.com/",
+      "revealable": true,
+      "score": "86/101 proven (7 n/a)",
+      "accent": "#C53F34 (measured from their own SVG)",
+      "phone": "(817) 924-1645",
+      "donor": "roofing-falcon-clean",
+      "notes": "4.9★ across 85 reviews, attested. Four real authority pages, source archived for Riley (28/28).",
+      "byGroup": {"SEO Foundations":{"met":17,"total":20},"E-E-A-T":{"met":11,"total":15},"Schema":{"met":11,"total":13},"Technical":{"met":11,"total":12},"Performance":{"met":9,"total":15},"Accessibility":{"met":6,"total":10},"Local/GEO":{"met":8,"total":10},"Voice/AI":{"met":9,"total":9},"Conversion":{"met":4,"total":4}},
+      "runtime": {"lcp_ms": 320, "cls": 0.003, "ttfb_ms": 120},
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/67b321d0-5f9f-4840-972e-9c1870c1885a/scratchpad/ship/wss-test-ramon-roofing-fort-worth.png"
+    },
+    {
+      "business": "Lyons Roofing — Tucson, AZ",
+      "url": "https://wss-test-lyons-roofing-tucson.wss-ai.com/",
+      "revealable": true,
+      "score": "87/101 proven (7 n/a)",
+      "accent": "lion red",
+      "phone": "(520) 900-1442",
+      "donor": "roofing-falcon-clean",
+      "photos": "2/4 slots — their site exposes few usable originals",
+      "notes": "4.6★/152 attested, ROC# 348074 on-page. Tucson location, not the Phoenix HQ.",
+      "byGroup": {"SEO Foundations":{"met":17,"total":20},"E-E-A-T":{"met":10,"total":15},"Schema":{"met":11,"total":13},"Technical":{"met":11,"total":12},"Performance":{"met":9,"total":15},"Accessibility":{"met":6,"total":10},"Local/GEO":{"met":10,"total":10},"Voice/AI":{"met":9,"total":9},"Conversion":{"met":4,"total":4}},
+      "runtime": {"lcp_ms": 360, "cls": 0.002, "ttfb_ms": 152},
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/67b321d0-5f9f-4840-972e-9c1870c1885a/scratchpad/ship/wss-test-lyons-roofing-tucson.png"
+    },
+    {
+      "business": "Music City Roofers — Nashville, TN",
+      "url": "https://wss-test-music-city-roofers-nashville.wss-ai.com/",
+      "revealable": true,
+      "score": "86/101 proven (7 n/a)",
+      "accent": "navy, measured from their own logo",
+      "phone": "(615) 802-4999",
+      "donor": "roofing-falcon-clean",
+      "photos": "4/4 slots — their real gallery photos",
+      "notes": "4.7★/874 attested. Re-mirrored today with their own gallery photos after the first pass shipped empty slots — the full re-mirror took 23 seconds.",
+      "byGroup": {"SEO Foundations":{"met":17,"total":20},"E-E-A-T":{"met":9,"total":15},"Schema":{"met":11,"total":13},"Technical":{"met":11,"total":12},"Performance":{"met":9,"total":15},"Accessibility":{"met":6,"total":10},"Local/GEO":{"met":10,"total":10},"Voice/AI":{"met":9,"total":9},"Conversion":{"met":4,"total":4}},
+      "runtime": {"lcp_ms": 332, "cls": 0.002, "ttfb_ms": 103},
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/67b321d0-5f9f-4840-972e-9c1870c1885a/scratchpad/ship/wss-test-music-city-roofers-nashville.png"
+    },
+    {
+      "business": "Kingdom Plumbing — Las Vegas, NV",
+      "url": "https://wss-test-kingdom-plumbing-las-vegas.wss-ai.com/",
+      "revealable": true,
+      "score": "82/101 proven (7 n/a)",
+      "accent": "#e05909 (their brand orange, corroborated in their live CSS)",
+      "phone": "(702) 213-6112",
+      "donor": "plumbing-premier",
+      "photos": "5/5 slots — their own staff photos, transcoded from webp",
+      "notes": "Ships WITHOUT a star rating on purpose: nothing attested their self-claimed 4.9/595, so we don't assert it. NV license #0085422 on-page.",
+      "byGroup": {"SEO Foundations":{"met":17,"total":20},"E-E-A-T":{"met":9,"total":15},"Schema":{"met":11,"total":13},"Technical":{"met":11,"total":12},"Performance":{"met":9,"total":15},"Accessibility":{"met":6,"total":10},"Local/GEO":{"met":6,"total":10},"Voice/AI":{"met":9,"total":9},"Conversion":{"met":4,"total":4}},
+      "runtime": {"lcp_ms": 420, "cls": 0.002, "ttfb_ms": 168},
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/67b321d0-5f9f-4840-972e-9c1870c1885a/scratchpad/ship/wss-test-kingdom-plumbing-las-vegas.png"
+    },
+    {
+      "business": "ENCO Plumbing, Inc. — The Colony, TX",
+      "url": "https://wss-test-enco-plumbing-the-colony.wss-ai.com/",
+      "revealable": true,
+      "score": "86/101 proven (7 n/a)",
+      "accent": "#003eac (from their logo)",
+      "phone": "(214) 222-4464",
+      "donor": "plumbing-premier",
+      "photos": "5/5 slots — their own job photos",
+      "notes": "4.9★/403 attested. Founded-1994 story intact, RMP#35843 on-page, no address published because they publish none. Re-mirrored today with photos in 18 seconds.",
+      "byGroup": {"SEO Foundations":{"met":17,"total":20},"E-E-A-T":{"met":10,"total":15},"Schema":{"met":11,"total":13},"Technical":{"met":11,"total":12},"Performance":{"met":9,"total":15},"Accessibility":{"met":6,"total":10},"Local/GEO":{"met":9,"total":10},"Voice/AI":{"met":9,"total":9},"Conversion":{"met":4,"total":4}},
+      "runtime": {"lcp_ms": 348, "cls": 0.002, "ttfb_ms": 123},
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/67b321d0-5f9f-4840-972e-9c1870c1885a/scratchpad/ship/wss-test-enco-plumbing-the-colony.png"
+    }
+  ],
+  "carries": [
+    "Their own logo in header and footer, brand colour measured from their own artwork",
+    "Their real services, areas, hours and FAQs — truth-law enforced by the gate, nothing invented",
+    "Real /about, /service-areas, /faq (and /team where attested) pages with ~5,000 words of first-party content each",
+    "Full schema graph + llms.txt for AI and voice answers — 9/9 on the Voice/AI axis on every mirror",
+    "Sitemap, genuine 404, service worker, mobile, HTTPS on h2 with brotli",
+    "Source archived to Supabase so Riley can voice-edit every one of them"
+  ],
+  "flags": [
+    "The Google Maps Embed key is not yet authorized for *.wss-ai.com — the coverage map can render a Google error box until you enable the API and allowlist the referrer (~5 minutes, your side)",
+    "Accent contrast has real weaknesses: ENCO's 'Family owned since 1994' hero line measures 1.7:1 over the dark water, and every mirror has hero-overlay text below WCAG ratios. The contrast pass is queued.",
+    "The donor's generic service categories still lead the page above the client's real services — donor-consumes-content is the next engine change",
+    "Lyons carries only 2 of 4 photo slots; their site exposes few usable originals",
+    "Kingdom deliberately ships with no star rating — the 4.9/595 on their own site wasn't attested by any third source"
+  ],
+  "riley": "The missing half is now real: every mirror's source is archived to Supabase (27–30/30 files each), which is exactly what Riley needs to make a live edit. What has NOT happened yet: an end-to-end demonstration — a call to Riley changing a logo on one of these five and the change going live — and site-edit-targets.js still needs to resolve wss-test slugs to a deploy target Ghost owns. Call it READY TO PROVE, not proven. Don't put it in front of a prospect until we've watched it happen once.",
+  "client_ids": "Each mirror gets a Client ID Riley can look up on a call, and the email-drop path — prospect forwards photos or materials, Riley applies them to the live site — is the design for the next wiring pass. It is not live today.",
+  "next": [
+    "You: authorize the Maps Embed API key for *.wss-ai.com referrers",
+    "You: walk the five mirrors and approve or reject plumbing-premier as the new plumbing donor",
+    "Queued: donor consumes the client's real services so THEIR work leads the page; the contrast pass; socials, typography and credential badges carried over (the Lyons fidelity gap)",
+    "Queued per your note tonight: full Vercel usage audit — find and kill the cannon-fodder projects driving the bill"
+  ]
+}

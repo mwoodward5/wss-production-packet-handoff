@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://grounded.wss-ai.com/sitemap.xml

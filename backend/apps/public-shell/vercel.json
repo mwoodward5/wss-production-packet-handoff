@@ -1,0 +1,39 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "codex/**": false,
+      "design/**": false,
+      "zcode/**": false,
+      "chatgpt/**": false
+    }
+  },
+  "ignoreCommand": "git rev-parse --verify HEAD^ >/dev/null 2>&1 && git diff --quiet HEAD^ HEAD -- .",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/pricing",
+      "destination": "/pricing/index.html"
+    },
+    {
+      "source": "/demo",
+      "destination": "/demo/index.html"
+    },
+    {
+      "source": "/factory-os",
+      "destination": "/factory-os/index.html"
+    },
+    {
+      "source": "/previews/dallas-roofers",
+      "destination": "/previews/dallas-roofers/index.html"
+    },
+    {
+      "source": "/intake",
+      "destination": "/intake/index.html"
+    },
+    {
+      "source": "/report",
+      "destination": "/report/index.html"
+    }
+  ]
+}

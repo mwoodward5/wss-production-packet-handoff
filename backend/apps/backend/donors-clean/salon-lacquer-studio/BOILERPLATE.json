@@ -1,0 +1,125 @@
+{
+  "name": "salon-lacquer-studio",
+  "vertical": "salon",
+  "label": "Lacquer-class — editorial-light nail salon one-pager, booking-first (A+ static rebuild of the verbatim design)",
+  "source": "Verbatim WSS port of github:mwoodward5/bb-nails-concept (cloned at C:/ports/bb-nails-concept, source commit cd1a613, port branch wss-verbatim-tokenized). Built from the actual project source at token level: every identity string (business name, geography, phone, email, logo, profile, site URL) is a WSS token; the six-layer editorial hero, the appointment strip, the lookbook grid, the finish atlas, the service chapters and the concierge form shipped exactly as designed until the 2026-09-02 A+ static rebuild, which re-expressed the same DNA as a zero-framework static page (see stack and notes).",
+  "source_project": {
+    "provider": "github",
+    "repo": "mwoodward5/bb-nails-concept",
+    "source_sha": "cd1a613",
+    "port_mode": "verbatim source port, tokenized identity; A+ static rebuild 2026-09-02; hero video ladder"
+  },
+  "sanitised": "2026-08-02",
+  "rebuilt": "2026-09-02",
+  "stack": "Static A+ rebuild (2026-09-02): one hand-authored index.html (real header/main/footer markup, no framework, no CDN, no external requests — the Google Fonts @import left with the SPA page; Italiana/Cormorant/Manrope are NAMED in the system stacks and fall through locally) + one hand-authored stylesheet at assets/index-lacquer.css. Progressive enhancement only — the first inline script adds .js to <html> before first paint, and every sizzle layer (staggered reveals, count-up stats, scroll-progress rule, glass chips, CTA light-sweep, petal drift, polish-gloss sweep, lamp pulse, hero video arming) is inert without JS or under prefers-reduced-motion (the stylesheet pins html:not(.js) .reveal-up/.reveal-scale/.reveal-clip fully visible). The compiled Vite React bundle assets/index-Baa4jKTo.js.raw is retained UNLOADED: it is the ladder-donor contract artifact (the marked hidden+poster hero video mount the library's hero-video-fallback gate reads), the h1-lines/areaServed/__WSS_CONTENT__ contract the donor gate reads, and the compiled evidence for the identity scan; the static page never references it. The former SPA stylesheet (index-BGg2NQmT.css) was removed when this rebuild replaced it; the one .js.raw chunk keeps the Vercel transpile guard.",
+  "donor_business_name": "BB Nails and Spa",
+  "donor_phone": "(971) 347-3274",
+  "donor_email": "hello@bb-nails.com",
+  "donor_city": "",
+  "donor_domain": "bb-nails.com",
+  "persons": [],
+  "socials": [],
+  "zips": [],
+  "geo": [],
+  "account_ids": [],
+  "donor_city_note": "Portland is tokenized out everywhere; declaring it as an identity atom would substring-fail any legitimate Portland prospect (the Tempe/temperature trap). Same for the donor's metro satellites (Beaverton/Gresham/Lake Oswego), its highways (US-26/I-84/I-5) and its neighborhood lists — all EXCISED at source and replaced by the island-driven service-area template.",
+  "consumes_content": false,
+  "renders": [],
+  "renders_note": "Since the 2026-09-02 static rebuild the page renders only trade-generic marketing frames (the service menu mosaic, the studio collage, the finish lookbook, the appointment steps) tokenized to the client's facts. The former window.__WSS_CONTENT__ bridge lived in the compiled SPA and left with the SPA page; the engine's shared content-inject island now provides the verified services, FAQs, reviews, coverage, hours and the lead-capture form on every mirror (the electrical-livewire / realestate-waterline shape — the Hays kill lesson), so no donor-local stub can swallow content or leads, and no claimed channel needs an audited native target.",
+  "photo_slots": [
+    "assets/hero-hands-DGSJ4_Ym.webp",
+    "assets/nail-art-1-lyngA-1x.webp",
+    "assets/nail-art-2-DesNIY0q.webp",
+    "assets/nail-art-3-DaoNxvdD.webp",
+    "assets/nail-art-4-CTBhEz12.webp",
+    "assets/nail-art-5-C5V2kTW9.webp",
+    "assets/nail-art-6-Bkvytckh.webp"
+  ],
+  "photo_slots_note": "Six lookbook gallery slots for the PROSPECT'S own work plus the hero photograph (hero-hands, the poster under the video rung); donor originals are stock/generated (agent-verified), no real client photography. salon-interior/technique/polish-flatlay are design furniture for the studio collage and the gallery variants, not slots. The static lookbook frames are captioned as FINISHES, never as customer work, so the donor stock never claims a portfolio it does not own.",
+  "hero_note": "NO hero_wash manifest entry, deliberately (landscaping-evergreen precedent): this hero owns its own pixels — the ivory editorial floor, the hero-hands photograph (also the video poster), the wine-tinted veil, petal drift, polish gloss and film grain sit UNDER the text and OVER any armed video. A second engine-side scrim would flatten the photography and the video rung. The 2026-08-13 wash entry was removed when the verbatim rebuild landed and stays removed through the 2026-09-02 static rebuild.",
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-salon.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-salon.mp4",
+    "poster": "assets/hero-hands-DGSJ4_Ym.webp",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (operations drop-in, no code change — no owned clip exists yet, the path IS the deployment)",
+      "the design photograph (hero-hands, the shipped poster layer)",
+      "the drawn hero composition (the ivory floor, veil and grain always painted underneath)"
+    ],
+    "note": "Owner's order, 2026-08-17: verbatim design, live video rung. Since the 2026-09-02 static rebuild the hero markup itself mounts <video data-hero-video muted loop playsinline preload=none hidden> with the poster photograph permanently painted beneath it, so the poster IS the complete hero with zero JS; the universal ladder runtime in index.html arms rungs only when their bytes shipped, reduced motion never arms the video, mobile is poster-first with a tap-to-play glass chip, and the clip pauses when the hero scrolls away or the tab hides. The retained (unloaded) compiled bundle carries its own marked mount for the ladder contract."
+  },
+  "media": [],
+  "spa_routes": [],
+  "spa_routes_note": "One document; sections are #id anchors (#top, #credibility, #menu, #studio, #lookbook, #appointment, #testimonials, #faq, #book, #contact), every one carrying scroll-margin-block-start. No client routing of any kind since the 2026-09-02 static rebuild — there is no SPA to declare routes for.",
+  "prerendered_routes": [
+    "/"
+  ],
+  "prerendered_note": "Fully static since the 2026-09-02 rebuild — index.html ships the complete page as real header/main/footer markup in source order, so crawlers and no-JS visitors read every word. JS adds sizzle only (reveals, count-ups, scroll progress, hero clip arming), each gated behind the pre-paint .js class and prefers-reduced-motion.",
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [],
+    "catchAll": "* -> 404 page"
+  },
+  "lead_endpoint": null,
+  "lead_endpoint_note": "No donor-native form since the 2026-09-02 static rebuild — the in-bundle appointments POST /api/appointments left with the SPA page (the retained chunk is unloaded contract evidence, not a running app; a static form POSTing cross-origin without fetch is fragile UX). Conversion runs through the tel:/mailto: rails plus Book-an-appointment CTAs aimed at #contact, all token-driven and collapse-guarded. The engine's content-inject lead-capture island (POST /api/quote-request) provides the form path on every mirror, so no stub endpoint could silently swallow leads.",
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "ADDRESS_CITY",
+    "STATE",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "GEO_LAT",
+    "GEO_LNG",
+    "LICENSE",
+    "PROFILE_URL",
+    "LOGO_URL",
+    "RATING",
+    "REVIEW_COUNT",
+    "REVIEW_TEXT",
+    "REVIEW_AUTHOR",
+    "HERO_HEADLINE",
+    "HERO_LINE_A",
+    "HERO_LINE_B",
+    "HERO_LINE_C",
+    "SITE_URL",
+    "PREVIEW_URL",
+    "PREVIEW_DOMAIN"
+  ],
+  "tokens_note": "Collapse is implemented two ways. (1) Markup-side [[NEED:TOKEN]] / [[NEED:!TOKEN]] phrase markers around every weld of an OPTIONAL token in the static page: blank PHONE removes the header call chip, the drawer call row, the hero call CTA (a Book-an-appointment anchor takes the primary slot), the CTA-band call button, the contact call rail and the footer phone segment, and reroutes the walk-in and booking-change FAQs to the page's contact options; blank EMAIL removes the contact and footer mail rails; blank LOGO_URL renders the BUSINESS_NAME wordmark instead of a broken image; blank PROFILE_URL renders the service-area copy without the profile link; blank LICENSE removes the hero license chip, the studio credentials card, the contact credentials rail and the footer license line; blank OWNER_NAME swaps the studio sentence to the business-led reading; blank DOMAIN drops canonical/og:url/og:image/twitter:image and the footer domain segment; blank GEO drops the geo.position meta (data-collapse-if-empty) and the JSON-LD geo node. The testimonial section rides data-collapse-if-empty=REVIEW_TEXT (island-only truth law: with no verified quote the whole section collapses AND its header/drawer/footer Reviews links collapse with it via NEED guards), and RATING/REVIEW_COUNT chips and count-ups exist only when the pair is verified. The static h1 is HERO_HEADLINE — the engine-composed client headline, never a baked donor sentence. Dialable links are href=tel:{{PHONE_DIGITS}} everywhere (the hydrator normalizes them), so a phone-less build carries no dangling tel: href and no bare '+1' literal. (2) robots.txt SITE_URL rides a NEED phrase marker. HERO_LINE_A/B/C and the STATE/island tokens remain listed because the retained (unloaded) compiled bundle still spends them in its bytes — its hydration contract is the donor gate's, unchanged.",
+  "classification": {
+    "verticalFamilies": [
+      "personal-craft"
+    ],
+    "conversionArchetypes": [
+      "booking-request"
+    ],
+    "shape": "editorial-light-spa",
+    "routeDepth": "flat",
+    "photoDemand": "high"
+  },
+  "classification_note": "booking-request: conversion runs through the Book-an-appointment CTAs aimed at #contact plus the tel:/mailto: rails; the hero carries data-cta hero-call (collapses without a verified phone) and hero-quote, the dock carries dock-call/dock-quote. There is no emergency-call archetype — nobody books a manicure at 2am.",
+  "notes": "Ported 2026-08-17 in the verbatim salon lane; the donor's Portland-metro service-area subsystem (area records with highway routes and drive times, the hand-written cityServiceCopy matrix, the metro map pins, the sitemap's city×service URLs) was replaced at source by an island-driven template — a mirror's coverage is the CLIENT'S verified coverage. The header wordmark renders {{LOGO_URL}} when supplied, else the typeset {{BUSINESS_NAME}} (the donor's BB monogram favicon was replaced by a neutral polish-bottle mark). A+ REBUILD 2026-09-02 (zcode/salon-lacquer-studio-a-plus): the SPA page was replaced by the static build described in stack — same DNA (ivory editorial hero with the wine veil, petal drift, polish gloss, grain and a >=0.62 ivory scrim floor holding #111-family ink above 4.5:1; appointment strip; service-menu mosaic with number watermarks; framed studio collage; finish lookbook; appointment steps; island-only testimonials; FAQ accordion; slab CTA band with lamp-light glow and count-ups; concierge contact rails) re-expressed in palette-var CSS. The stylesheet consumes 17 distinct --wss-* properties with achromatic fallbacks only (no hardcoded brand hex anywhere — the swept #791526 family stays swept); hero accent treatments are var(--wss-accent) color-mix stops with a flat-accent fallback and no -webkit-text-fill-color anywhere; three commented VARIANT blocks per required section type (hero, services, gallery, testimonials, process, FAQ, CTA) with exactly one active each; hero h1 is clamp(2.25rem,6vw,5.5rem)/20ch/balanced; every interactive element is >=48px, all text >=16px, primary CTAs go full-width under 480px, a safe-area-padded action dock pins the mobile fold, and zero horizontal scroll exists at 390px. The hero-video-fallback contract is shipped twice over: the static page mounts <video data-hero-video> hidden-with-poster with kill-switch CSS and a paint-under surface, and the retained unloaded bundle keeps the compiled marked mount the library gate reads.",
+  "registered_on": "2026-08-02",
+  "installed_at": "apps/backend/donors-clean/salon-lacquer-studio",
+  "truth_law_removals": [
+    "No source-business service copy, Portland-metro geography, source phone/email, or source image is present in shipped markup or code.",
+    "No stock or generated photograph is presented as customer work; only ownership-gated photo slots can reveal. The static lookbook captions read as finishes, never as a portfolio.",
+    "Reviews render only from verified review payloads; the static testimonials section exists only when a verified quote does (data-collapse-if-empty) and collapses with its nav links.",
+    "No sanitation/license/warranty/badge claim is invented; the studio's sanitation copy describes process, not credentials.",
+    "No prices, durations or hours ship in the static page — those facts ride the engine's verified content island (hours/services) or the conversation; the donor's template menu defaults never reach a mirror's loudest copy.",
+    "Zero bare token names in any shipped chunk (scanbare2 across the seven .js chunks: 0 hits) and, since the static rebuild, zero token residue in the shell under the full token set."
+  ],
+  "unretired": true
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Template / preview default — switch the dynamic /robots.txt route
+# (SEO.robotsPolicy = "index") once intake is applied for a real client.

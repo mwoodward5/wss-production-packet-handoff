@@ -1,0 +1,250 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * DN Electric LTD — Couture Design System
+ * Brand: deep matte black, electric gold/yellow, warm white
+ * Personality: Master-craftsman, Colorado Front Range, premium trade
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-bone: var(--bone);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-deep: var(--gold-deep);
+  --color-copper: var(--copper);
+
+  --font-display: "Anton", "Bebas Neue", "Impact", sans-serif;
+  --font-sans: "Inter", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", monospace;
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Truth-aligned palette */
+  --ink: oklch(0.14 0.01 80);          /* near-black, warm */
+  --ink-2: oklch(0.22 0.012 80);       /* charcoal */
+  --bone: oklch(0.97 0.008 85);        /* warm white */
+  --gold: oklch(0.83 0.155 88);        /* #EEC22E */
+  --gold-soft: oklch(0.88 0.13 92);    /* #FDD15F */
+  --gold-deep: oklch(0.68 0.14 78);    /* burnished */
+  --copper: oklch(0.62 0.12 50);       /* copper accent for amperage cues */
+
+  --background: var(--bone);
+  --foreground: var(--ink);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--bone);
+  --secondary: oklch(0.95 0.005 85);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.94 0.005 85);
+  --muted-foreground: oklch(0.45 0.008 80);
+  --accent: var(--gold);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.9 0.01 80);
+  --input: oklch(0.9 0.01 80);
+  --ring: var(--gold);
+
+  /* Composed tokens */
+  --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 60%, var(--gold-deep) 100%);
+  --gradient-ink: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+  --gradient-spark: radial-gradient(circle at 30% 20%, color-mix(in oklab, var(--gold) 60%, transparent), transparent 60%);
+  --shadow-couture: 0 30px 60px -20px color-mix(in oklab, var(--ink) 35%, transparent);
+  --shadow-gold: 0 18px 40px -12px color-mix(in oklab, var(--gold) 55%, transparent);
+  --shadow-inset-rule: inset 0 -1px 0 0 color-mix(in oklab, var(--ink) 12%, transparent);
+
+  --tracking-display: -0.02em;
+  --tracking-eyebrow: 0.2em;
+
+  --ease-couture: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.dark {
+  --background: var(--ink);
+  --foreground: var(--bone);
+  --card: var(--ink-2);
+  --card-foreground: var(--bone);
+  --primary: var(--gold);
+  --primary-foreground: var(--ink);
+  --muted: oklch(0.25 0.012 80);
+  --muted-foreground: oklch(0.7 0.01 80);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: var(--ink);
+  }
+}
+
+@layer components {
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-eyebrow);
+    font-size: 0.72rem;
+    color: color-mix(in oklab, var(--ink) 70%, transparent);
+  }
+
+  .display {
+    font-family: var(--font-display);
+    letter-spacing: var(--tracking-display);
+    line-height: 0.92;
+    text-transform: uppercase;
+  }
+
+  /* Couture rule line with gold tick */
+  .rule-tick {
+    position: relative;
+    display: inline-block;
+    padding-left: 2.5rem;
+  }
+  .rule-tick::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 2rem;
+    height: 2px;
+    background: var(--gold);
+    transform: translateY(-50%);
+  }
+
+  .ticker-mask {
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+
+  .grid-blueprint {
+    background-image:
+      linear-gradient(color-mix(in oklab, var(--gold) 20%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in oklab, var(--gold) 20%, transparent) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .noise {
+    position: relative;
+  }
+  .noise::after {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.7'/></svg>");
+  }
+}
+
+@layer utilities {
+  @keyframes spark {
+    0%, 100% { opacity: 0.2; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-2px); }
+  }
+  .animate-spark { animation: spark 2.4s var(--ease-couture) infinite; }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .animate-ticker { animation: ticker 38s linear infinite; }
+
+  @keyframes wire-flow {
+    from { stroke-dashoffset: 200; }
+    to   { stroke-dashoffset: 0; }
+  }
+  .animate-wire { animation: wire-flow 4s var(--ease-couture) infinite; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-rise { animation: rise 0.7s var(--ease-couture) both; }
+}
+
+@layer utilities {
+  /* DN Electric signature — lightning strike across letterforms */
+  @keyframes bolt-strike {
+    0%, 50%   { stroke-dashoffset: 240; opacity: 0; }
+    52%       { stroke-dashoffset: 240; opacity: 1; }
+    58%       { stroke-dashoffset: 0;   opacity: 1; }
+    62%       { stroke-dashoffset: 0;   opacity: 0.9; }
+    66%       { stroke-dashoffset: 0;   opacity: 0; }
+    100%      { stroke-dashoffset: 0;   opacity: 0; }
+  }
+  /* Junction-node pulse — fires on each bolt strike */
+  @keyframes node-pulse {
+    0%, 54%  { opacity: 0; transform: scale(0.6); transform-box: fill-box; transform-origin: center; }
+    58%      { opacity: 1; transform: scale(1.6); transform-box: fill-box; transform-origin: center; }
+    66%      { opacity: 0.7; transform: scale(1); transform-box: fill-box; transform-origin: center; }
+    72%, 100% { opacity: 0; transform: scale(0.6); transform-box: fill-box; transform-origin: center; }
+  }
+  /* Live current bead running along the baseline */
+  @keyframes current-run {
+    from { transform: translateX(-15%); }
+    to   { transform: translateX(115%); }
+  }
+}
+
+@layer utilities {
+  /* Slow cinematic drift on the hero background video — the "camera move" */
+  @keyframes hero-drift {
+    0%   { transform: translate(-50%, -50%) scale(1.00) translate3d(0, 0, 0); }
+    100% { transform: translate(-50%, -50%) scale(1.06) translate3d(-1.2%, 0.6%, 0); }
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "schema": "wss-render-v2-target-catalog-v1",
+  "count": 40,
+  "production_ready_count": 1,
+  "spa_v2_import_required_count": 20,
+  "rows": [
+    {
+      "category": "tattoo",
+      "aliases": [
+        "tattoo artist",
+        "tattoo artists",
+        "tattoo shop"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "tattoo-aurelia",
+      "state": "master-search-required",
+      "legacy_fallback": "tattoo-aurelia",
+      "parity_frozen": false
+    },
+    {
+      "category": "med spa",
+      "aliases": [
+        "medical spa",
+        "medspa"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "medspa-luma",
+      "state": "master-search-required",
+      "legacy_fallback": "medspa-luma",
+      "parity_frozen": false
+    },
+    {
+      "category": "real estate agent",
+      "aliases": [
+        "realtor",
+        "realtors",
+        "real estate agency",
+        "real estate broker",
+        "realty"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "realestate-waterline",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "realestate-waterline",
+      "lovable_project_id": "1546dbe3-d7dc-4e96-82b9-66c7fa1a854e",
+      "lovable_project_name": "wss-donor-realestate-waterline",
+      "spa_v2_donor": "donors/real-estate-agent/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "auto detailing",
+      "aliases": [
+        "car detailing",
+        "detailer"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "cardetailing-ab-professional",
+      "state": "master-search-required",
+      "legacy_fallback": "cardetailing-ab-professional",
+      "parity_frozen": false
+    },
+    {
+      "category": "roofing",
+      "aliases": [
+        "roofer",
+        "roofers"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "roofing-falcon-clean",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "roofing-falcon-clean",
+      "lovable_project_id": "61a04a5f-5cb8-4078-a2da-1b60f17fc4a3",
+      "lovable_project_name": "Falcon Roofing LLC",
+      "spa_v2_donor": "donors/roofing/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "hvac",
+      "aliases": [
+        "heating and air",
+        "air conditioning"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "hvac-premier",
+      "state": "master-search-required",
+      "legacy_fallback": "hvac-premier",
+      "parity_frozen": false
+    },
+    {
+      "category": "plumbing",
+      "aliases": [
+        "plumber",
+        "plumbers"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "plumbing-clean",
+      "state": "master-search-required",
+      "legacy_fallback": "plumbing-clean",
+      "parity_frozen": false
+    },
+    {
+      "category": "concrete",
+      "aliases": [
+        "concrete contractor"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "concrete-elconstruction",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "concrete-elconstruction",
+      "lovable_project_id": "ec977d63-95c1-4527-ba2b-367637d9d247",
+      "lovable_project_name": "EL Construction",
+      "spa_v2_donor": "donors/concrete/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "electrical",
+      "aliases": [
+        "electrician",
+        "electricians",
+        "electrical contractor"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "electrical-livewire",
+      "state": "master-search-required",
+      "legacy_fallback": "electrical-livewire",
+      "parity_frozen": false
+    },
+    {
+      "category": "masonry",
+      "aliases": [
+        "mason"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "concrete-elconstruction",
+      "state": "master-search-required",
+      "legacy_fallback": "concrete-elconstruction",
+      "parity_frozen": false
+    },
+    {
+      "category": "general contractor",
+      "aliases": [
+        "general contracting",
+        "carpenter",
+        "carpenters",
+        "carpentry",
+        "construction",
+        "construction company",
+        "framing",
+        "cabinetry",
+        "trim carpentry"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "general-contractor-clean",
+      "state": "master-search-required",
+      "legacy_fallback": "general-contractor-clean",
+      "parity_frozen": false
+    },
+    {
+      "category": "landscaping",
+      "aliases": [
+        "landscaper",
+        "hardscaping",
+        "gardening",
+        "garden services",
+        "lawn garden"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "landscaping-evergreen",
+      "state": "spa-v2-ready",
+      "legacy_fallback": "landscaping-evergreen",
+      "lovable_project_id": "bac7c069-3279-4616-a0ee-e4e447042003",
+      "lovable_project_name": "Greenfront",
+      "spa_v2_donor": "donors/landscaping/source/",
+      "parity_frozen": true
+    },
+    {
+      "category": "tree service",
+      "aliases": [
+        "tree services",
+        "tree removal",
+        "stump grinding",
+        "arborist",
+        "arborists"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "treeservice-sanchez-clean",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "treeservice-sanchez-clean",
+      "lovable_project_id": "a721eb23-b861-48cf-9b79-e6e88d5be2ca",
+      "lovable_project_name": "Sanchez Tree Service",
+      "spa_v2_donor": "donors/tree-service/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "fencing",
+      "aliases": [
+        "fence contractor"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "fencing-sterling",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "fencing-sterling",
+      "lovable_project_id": "0acdc5c4-0d0c-49c6-895e-da0b0b45c46b",
+      "lovable_project_name": "Sterling Fence",
+      "spa_v2_donor": "donors/fencing/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "septic",
+      "aliases": [
+        "septic tank",
+        "sewer",
+        "drain field",
+        "septic pumping"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "septic-wheeler-onepage",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "septic-wheeler-onepage",
+      "lovable_project_id": "50f73118-9f32-446a-8a3b-231a447e92c8",
+      "lovable_project_name": "Wheeler Grading Septic One Page",
+      "spa_v2_donor": "donors/septic/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "pools",
+      "aliases": [
+        "pool",
+        "pool repair",
+        "pool service",
+        "swimming pool"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "pools-dlux",
+      "state": "master-search-required",
+      "legacy_fallback": "pools-dlux",
+      "parity_frozen": false
+    },
+    {
+      "category": "painting",
+      "aliases": [
+        "painter",
+        "interior painting",
+        "exterior painting",
+        "house painting"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "painting-gold-specimen",
+      "state": "master-search-required",
+      "legacy_fallback": "painting-gold-specimen",
+      "parity_frozen": false
+    },
+    {
+      "category": "auto repair",
+      "aliases": [
+        "auto shop",
+        "mechanic",
+        "car repair"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "autorepair-multi-service",
+      "state": "master-search-required",
+      "legacy_fallback": "autorepair-multi-service",
+      "parity_frozen": false
+    },
+    {
+      "category": "insulation",
+      "aliases": [
+        "spray foam",
+        "attic insulation"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "insulation-goodnews",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "insulation-goodnews",
+      "lovable_project_id": "563c5863-d341-4d06-a48f-e32683c24e8c",
+      "lovable_project_name": "Good News Site",
+      "spa_v2_donor": "donors/insulation/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "handyman",
+      "aliases": [
+        "handyman services",
+        "property maintenance"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "handyman-848-property-services",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "handyman-848-property-services",
+      "lovable_project_id": "a218c6fb-f767-4728-9cee-9871ef148fc1",
+      "lovable_project_name": "848 Property Services",
+      "spa_v2_donor": "donors/handyman/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "mattress store",
+      "aliases": [
+        "mattress"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "furniture-boxdrop-greenville",
+      "state": "master-search-required",
+      "legacy_fallback": "furniture-boxdrop-greenville",
+      "parity_frozen": false
+    },
+    {
+      "category": "roadside assistance",
+      "aliases": [
+        "towing",
+        "tow truck"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "roadside-banana",
+      "state": "master-search-required",
+      "legacy_fallback": "roadside-banana",
+      "parity_frozen": false
+    },
+    {
+      "category": "cleaning",
+      "aliases": [
+        "house cleaning",
+        "maid service",
+        "housekeeping"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "cleaning-tobys-onepage",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "cleaning-tobys-onepage",
+      "lovable_project_id": "bb1940f9-b9a0-4880-bdc8-c68f02b6d62a",
+      "lovable_project_name": "Tobys Cleaning",
+      "spa_v2_donor": "donors/cleaning/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "home improvement",
+      "aliases": [
+        "remodeling",
+        "home renovation"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "homeimprovement-southern",
+      "state": "master-search-required",
+      "legacy_fallback": "homeimprovement-southern",
+      "parity_frozen": false
+    },
+    {
+      "category": "rv repair",
+      "aliases": [
+        "mobile rv repair"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "rvrepair-ontheroadagain",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "rvrepair-ontheroadagain",
+      "lovable_project_id": "f9cbfac3-15fd-493a-b553-c4e620f3a9f0",
+      "lovable_project_name": "On The Road Again Mobile RV Service - Multi Page Premier",
+      "spa_v2_donor": "donors/rv-repair/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "synthetic turf",
+      "aliases": [],
+      "source": "legacy_fallback_only",
+      "donor": "landscaping-evergreen",
+      "state": "master-search-required",
+      "legacy_fallback": "landscaping-evergreen",
+      "parity_frozen": false
+    },
+    {
+      "category": "parking lot striping",
+      "aliases": [
+        "parking striping"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "striping-precision-onepage",
+      "state": "master-search-required",
+      "legacy_fallback": "striping-precision-onepage",
+      "parity_frozen": false
+    },
+    {
+      "category": "black car service",
+      "aliases": [
+        "black car"
+      ],
+      "source": "lovable_exact_master",
+      "donor": "blackcar-ocride",
+      "state": "spa-v2-import-required",
+      "legacy_fallback": "blackcar-ocride",
+      "lovable_project_id": "5f381dcb-8440-4913-9389-25400f884f6d",
+      "lovable_project_name": "OC Ride Luxury",
+      "spa_v2_donor": "donors/black-car-service/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "craniosacral",
+      "aliases": [
+        "craniosacral therapy"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "craniosacral-trillium",
+      "state": "master-search-required",
+      "legacy_fallback": "craniosacral-trillium",
+      "parity_frozen": false
+    },
+    {
+      "category": "private chef",
+      "aliases": [
+        "personal chef"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "personachef-montage-onepage",
+      "state": "master-search-required",
+      "legacy_fallback": "personachef-montage-onepage",
+      "parity_frozen": false
+    },
+    {
+      "category": "beverage",
+      "aliases": [
+        "beverage e-commerce"
+      ],
+      "source": "legacy_fallback_only",
+      "donor": "beverage-cocolove",
+      "state": "master-search-required",
+      "legacy_fallback": "beverage-cocolove",
+      "parity_frozen": false
+    },
+    {
+      "category": "massage",
+      "aliases": [
+        "massage therapist"
+      ],
+      "source": "lovable_exact_master",
+      "lovable_project_id": "ac972956-1c53-455d-bbf4-c8185dba51c3",
+      "lovable_project_name": "Trillium Wellness",
+      "state": "spa-v2-import-required",
+      "spa_v2_donor": "donors/massage/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "epoxy flooring",
+      "aliases": [],
+      "source": "lovable_exact_master",
+      "lovable_project_id": "d6d4d75c-4b5f-4c7e-96ff-f0f3cfaf8d2e",
+      "lovable_project_name": "Legacy Epoxy Shine",
+      "state": "spa-v2-import-required",
+      "spa_v2_donor": "donors/epoxy-flooring/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "appliance repair",
+      "aliases": [],
+      "source": "lovable_exact_master",
+      "lovable_project_id": "f21467b7-4402-4964-b419-6a04eb78ffac",
+      "lovable_project_name": "Preventive Appliance Repair",
+      "state": "spa-v2-import-required",
+      "spa_v2_donor": "donors/appliance-repair/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "building materials",
+      "aliases": [],
+      "source": "lovable_exact_master",
+      "lovable_project_id": "05426ce4-592b-48c2-90a5-3556c3b36fb3",
+      "lovable_project_name": "JKB Materials LLC - Single Scroll",
+      "state": "spa-v2-import-required",
+      "spa_v2_donor": "donors/building-materials/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "excavation",
+      "aliases": [
+        "excavating",
+        "land clearing",
+        "grading",
+        "site work"
+      ],
+      "source": "lovable_exact_master",
+      "lovable_project_id": "ad2171ff-b290-4bdd-a71d-ab778e1f6c9e",
+      "lovable_project_name": "Dirtworks Digital",
+      "state": "spa-v2-import-required",
+      "spa_v2_donor": "donors/excavation/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "hypnotherapy",
+      "aliases": [],
+      "source": "lovable_exact_master",
+      "lovable_project_id": "645eaa8b-70d3-4795-ac37-12cb4f9c5127",
+      "lovable_project_name": "Mantra Wellness Site (49)",
+      "state": "spa-v2-import-required",
+      "spa_v2_donor": "donors/hypnotherapy/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "nail studio",
+      "aliases": [
+        "nail salon",
+        "nail salons"
+      ],
+      "source": "lovable_exact_master",
+      "lovable_project_id": "2c3dc5d9-097c-4b58-9ef4-474a79b9f9b8",
+      "lovable_project_name": "BB Nails Concept",
+      "state": "spa-v2-import-required",
+      "spa_v2_donor": "donors/nail-studio/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "home remodeling",
+      "aliases": [
+        "remodeler",
+        "remodeling contractor"
+      ],
+      "source": "lovable_exact_master",
+      "lovable_project_id": "cfd022fd-a3ee-4ed5-a77d-d7743b1945e2",
+      "lovable_project_name": "Pepper Structural",
+      "state": "spa-v2-import-required",
+      "spa_v2_donor": "donors/home-remodeling/source/",
+      "parity_frozen": false
+    },
+    {
+      "category": "photographer",
+      "aliases": [
+        "photography"
+      ],
+      "source": "lovable_exact_master",
+      "lovable_project_id": "0540c65d-6184-4db2-a72f-5f53446de0e2",
+      "lovable_project_name": "Brentwood Lens",
+      "state": "spa-v2-import-required",
+      "spa_v2_donor": "donors/photographer/source/",
+      "parity_frozen": false
+    }
+  ],
+  "master_search_required_count": 19,
+  "legacy_primary_count": 0
+}

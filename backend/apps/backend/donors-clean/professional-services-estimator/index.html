@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{BUSINESS_NAME}} — Construction Estimating &amp; Takeoffs, {{CITY}}, {{REGION}}</title>
+<meta name="description" content="{{BUSINESS_NAME}} delivers line-item quantity takeoffs, priced bid packages and scope letters for contractors in 48 hours. Fixed fees.[[NEED:PHONE]] Call {{PHONE}}.[[/NEED]][[NEED:!PHONE]] Send the plan set online.[[/NEED]]">
+<link rel="canonical" href="https://{{DOMAIN}}/" data-domain-meta>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{BUSINESS_NAME}}">
+<meta property="og:title" content="{{BUSINESS_NAME}} — Construction Estimating &amp; Takeoffs, {{CITY}}, {{REGION}}">
+<meta property="og:description" content="{{BUSINESS_NAME}} delivers line-item quantity takeoffs, priced bid packages and scope letters for contractors in 48 hours. Fixed fees.[[NEED:PHONE]] Call {{PHONE}}.[[/NEED]][[NEED:!PHONE]] Send the plan set online.[[/NEED]]">
+<meta property="og:url" content="https://{{DOMAIN}}/" data-domain-meta>
+<meta property="og:image" content="https://{{DOMAIN}}/assets/hero-poster.svg" data-domain-meta>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{BUSINESS_NAME}} — Construction Estimating &amp; Takeoffs, {{CITY}}, {{REGION}}">
+<meta name="twitter:description" content="{{BUSINESS_NAME}} delivers line-item quantity takeoffs, priced bid packages and scope letters for contractors in 48 hours. Fixed fees.[[NEED:PHONE]] Call {{PHONE}}.[[/NEED]][[NEED:!PHONE]] Send the plan set online.[[/NEED]]">
+<meta name="geo.position" content="{{GEO}}">
+<meta name="geo.region" content="{{REGION}}">
+<link rel="icon" href="{{LOGO_URL}}">
+<link rel="stylesheet" href="assets/style.css">
+<!-- Hero enhancement bundle: mounts the ladder-marked video (hidden, no
+     static src) into the hero and runs the surface-first/tap-to-play
+     control. The hero is complete without it - the painted hero surface
+     and the plan-sheet illustration below are the no-JS hero. -->
+<script src="assets/index-professional-services-estimator.js" defer></script>
+<style data-wss-hero-fallback>
+  /* THE HERO CLIP CAN NEVER PRESENT AS A BLACK RECTANGLE: the marked video
+     paints the firm's own hero surface beneath any frame, hidden means
+     hidden even where a preflight resets video display, and a clip that
+     failed every ladder rung is hidden outright so the site's own hero
+     composition shows instead. */
+  video[data-hero-video] { background: hsl(215 20% 12%); }
+  video[data-hero-video][hidden] { display: none !important; }
+  video[data-hero-video][data-hero-dead] { display: none !important; }
+</style>
+<!-- .js before first paint; the page is fully visible and usable with JS off -->
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "{{BUSINESS_NAME}}",
+  "legalName": "{{BUSINESS_NAME}}",
+  "url": "https://{{DOMAIN}}/",
+  "logo": "{{LOGO_URL}}",
+  "image": "https://{{DOMAIN}}/assets/hero-poster.svg",
+[[NEED:PHONE]]  "telephone": "{{PHONE}}",
+[[/NEED]][[NEED:EMAIL]]  "email": "{{EMAIL}}",
+[[/NEED]][[NEED:OWNER_NAME]]  "founder": { "@type": "Person", "name": "{{OWNER_NAME}}" },
+[[/NEED]][[NEED:PROFILE_URL]]  "sameAs": ["{{PROFILE_URL}}"],
+[[/NEED]]
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{CITY}}",
+    "addressRegion": "{{REGION}}",[[NEED:POSTAL]]
+    "postalCode": "{{POSTAL}}",[[/NEED]]
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "{{CITY}}" },[[NEED:COUNTY]]
+    { "@type": "AdministrativeArea", "name": "{{COUNTY}}" }[[/NEED]]
+  ],[[NEED:LICENSE]]
+  "identifier": "{{LICENSE}}",[[/NEED]]
+  "description": "{{BUSINESS_NAME}} delivers line-item quantity takeoffs, priced bid packages and scope letters for contractors in 48 hours. Fixed fees.[[NEED:PHONE]] Call {{PHONE}}.[[/NEED]][[NEED:!PHONE]] Send the plan set online.[[/NEED]]"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://{{DOMAIN}}/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://{{DOMAIN}}/#services" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "{{BUSINESS_NAME}}",
+      "url": "https://{{DOMAIN}}/",
+      "potentialAction": { "@type": "ReadAction", "target": "https://{{DOMAIN}}/#contact" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="#top">
+      <!-- logo luminance plate: keeps a light logo visible on a light header and vice versa -->
+      <span class="logo-plate"><img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}} logo" width="46" height="46" onerror="this.src='assets/mark-fallback.svg'"></span>
+      <span class="brand-text">
+        <span class="brand-name" data-display-name>{{BUSINESS_NAME}}</span>
+        <span class="brand-locality">{{CITY}}, {{REGION}}</span>
+      </span>
+    </a>
+    <span class="header-chips">[[NEED:LICENSE]]
+      <span class="chip">Registered {{LICENSE}}</span>[[/NEED]]
+      <span class="chip">48-hour turnaround</span>
+    </span>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    [[NEED:PHONE]]<a class="btn btn-primary header-cta" href="tel:{{PHONE_DIGITS}}">Upload plans</a>[[/NEED]][[NEED:!PHONE]]<a class="btn btn-primary header-cta" href="#upload">Upload plans</a>[[/NEED]]
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================================================
+       SECTION: HERO — 3 variants, deterministically selectable.
+       ACTIVE: hero/video (THE HERO VIDEO LAW). The poster stands alone
+       as a complete hero image when the engine has no clip. Copy is held
+       in the left safe column, never in the center-safe zone.
+       VARIANT: hero/split-right — swap .hero-grid columns, poster in the
+         right visual card, flat --wss-surface-alt background.
+       VARIANT: hero/editorial-slab — no media, .slab background with the
+         accent mesh glow only, single 20ch headline column + stat strip.
+       ============================================================ -->
+  <section class="hero on-slab grain" id="top">
+    <div class="hero-media">
+      <!-- The ladder-marked <video data-hero-video> is mounted here by the
+           deferred hero bundle (assets/index-professional-services-estimator.js),
+           hidden with no static src; the painted hero surface and the plan-sheet
+           illustration beside it are the complete zero-JS hero. -->
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="shell hero-inner">
+      <div class="hero-grid">
+        <div class="hero-safe">
+          <p class="eyebrow">Construction estimating for contractors — {{CITY}}, {{REGION}}</p>
+          <h1><span class="hero-word" style="--d:60ms">Takeoffs</span> <span class="hero-word" style="--d:115ms">and</span> <span class="hero-word" style="--d:170ms">bid</span> <span class="hero-word" style="--d:225ms">packages</span> <span class="accent-line">delivered in 48 hours</span></h1>
+          <p class="hero-lede">Upload the plan set. Get a line-item quantity takeoff, priced bid package and a scope letter your client can actually read — without adding an estimator to payroll.</p>
+          <div class="btn-row">[[NEED:PHONE]]
+            <a class="btn btn-primary" href="tel:{{PHONE_DIGITS}}">Upload plans</a>[[/NEED]][[NEED:!PHONE]]
+            <a class="btn btn-primary" href="#upload">Upload plans</a>[[/NEED]]
+            <a class="btn btn-ghost" href="#contact">See a sample takeoff</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <img src="assets/hero-poster.svg" alt="Marked-up plan sheet with quantity takeoff annotations" width="800" height="1000" loading="eager" decoding="async">
+        </div>
+      </div>
+      <div class="stat-strip">
+        <div class="stat reveal"><b data-count-to="48" data-suffix="hr">48</b><span>Standard bid turnaround</span></div>
+        <div class="stat reveal"><b data-count-to="31" data-suffix="%">31</b><span>Median client bid-hit ratio</span></div>
+        <div class="stat reveal"><b data-count-to="1400" data-suffix="+">1400</b><span>Bid packages produced</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: TICKER — VARIANT: ticker/marquee (active)
+       VARIANT: ticker/static-chip-row · VARIANT: ticker/none -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Quantity takeoff</span>
+      <span>Bid packages</span>
+      <span>Scope letters</span>
+      <span>Change orders</span>
+      <span>Value engineering</span>
+      <span>Cost databases</span>
+      <span>Subcontractor levelling</span>
+      <span>Budget checks</span>
+      <span>Quantity takeoff</span>
+      <span>Bid packages</span>
+      <span>Scope letters</span>
+      <span>Change orders</span>
+      <span>Value engineering</span>
+      <span>Cost databases</span>
+      <span>Subcontractor levelling</span>
+      <span>Budget checks</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION: SERVICES — exactly one services block on the page.
+       ACTIVE: services/bento
+       VARIANT: services/three-column-cards — .bento { grid-template-columns: repeat(3,1fr) } and drop .card-wide
+       VARIANT: services/list-rail — <ol class="rail"> of service names with a single supporting paragraph
+       ============================================================ -->
+  <!-- SECTION: TRUST STRIP — VARIANT: trust/inline-badge-rail (active)
+       VARIANT: trust/three-up-cards · VARIANT: trust/single-guarantee-line
+       Every claim is token-backed or process-backed; no invented awards. -->
+  <section class="trust-strip" id="trust" aria-label="Credentials and guarantees">
+    <div class="shell">
+      <ul class="badge-rail">
+        <li class="badge"><span class="badge-mark" aria-hidden="true">&#10003;</span><span><strong>[[NEED:LICENSE]]Registered {{LICENSE}}[[/NEED]][[NEED:!LICENSE]]Registered where required[[/NEED]]</strong><br>estimators, not a software login</span></li>
+        <li class="badge"><span class="badge-mark" aria-hidden="true">&#9711;</span><span><strong>Fixed fees</strong><br>quoted in writing before work starts</span></li>
+        <li class="badge"><span class="badge-mark" aria-hidden="true">&#9200;</span><span><strong>48-hour turnaround</strong><br>standard, with rush on request</span></li>
+        <li class="badge"><span class="badge-mark" aria-hidden="true">&#9878;</span><span><strong>NDA on request</strong><br>signed before documents arrive</span></li>
+        <li class="badge"><span class="badge-mark" aria-hidden="true">&#9998;</span><span><strong>Nationwide</strong><br>plan sets by upload, not drive time</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="services" class="alt">
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="eyebrow">Deliverables</p>
+        <h2>What lands in your inbox</h2>
+        <p>Every engagement produces documents you can send straight to the owner or the GC — not a spreadsheet you have to rebuild.</p>
+      </div>
+      <div class="bento">
+        <article class="card reveal card-wide">
+          <span class="card-icon" aria-hidden="true">01</span>
+          <h3>Quantity takeoff</h3>
+          <p>Line-item quantities by CSI division, tied to sheet and detail references so any number can be traced back.</p>
+          <a class="card-link" href="#contact">See a sample <span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">02</span>
+          <h3>Priced bid package</h3>
+          <p>Your labour rates, your markup, current regional material pricing, delivered in your own bid format.</p>
+          <a class="card-link" href="#contact">Request a bid package <span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">03</span>
+          <h3>Scope letter</h3>
+          <p>Inclusions, exclusions and clarifications written plainly, so disputes get settled by the document.</p>
+          <a class="card-link" href="#contact">See a scope letter <span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">04</span>
+          <h3>Subcontractor levelling</h3>
+          <p>Sub quotes normalised to a common scope so you compare like with like before you commit a number.</p>
+          <a class="card-link" href="#contact">Level my quotes <span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">05</span>
+          <h3>Change order support</h3>
+          <p>Independent pricing and backup for change orders and claims, sized for the argument you are having.</p>
+          <a class="card-link" href="#contact">Price a change order <span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">06</span>
+          <h3>Budget &amp; VE reviews</h3>
+          <p>Conceptual budgets at DD and value-engineering options with the cost impact of each one stated.</p>
+          <a class="card-link" href="#contact">Book a budget review <span aria-hidden="true">&rarr;</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION: PROCESS — VARIANT: process/numeral-rail (active)
+       VARIANT: process/vertical-timeline · VARIANT: process/two-up-steps -->
+  <section id="process" class="slab grain">
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="eyebrow">Engagement</p>
+        <h2>Five steps from plan set to submitted bid</h2>
+      </div>
+      <ol class="rail">
+        <li class="reveal"><h3>Upload</h3><p>Send the plan set, specs and addenda. PDF, DWG or a shared folder link — we work from whatever you have.</p></li>
+        <li class="reveal"><h3>Scope confirmation</h3><p>Within four hours you get a written scope confirmation and a fixed fee. Nothing starts before you approve it.</p></li>
+        <li class="reveal"><h3>Takeoff</h3><p>Digital takeoff by division, with RFI-worthy gaps flagged rather than quietly assumed.</p></li>
+        <li class="reveal"><h3>Pricing</h3><p>Your rates and markup applied, regional material pricing current to the week of the bid.</p></li>
+        <li class="reveal"><h3>Delivery &amp; review</h3><p>Deliverables plus a thirty-minute call to walk the assumptions before you submit.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SECTION: ABOUT — one paragraph, reader-facing eyebrow -->
+  <section id="about" class="alt">
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="eyebrow">The firm</p>
+        <h2>Estimators, not a software subscription</h2>
+      </div>
+      <p class="reveal">[[NEED:OWNER_NAME]]{{OWNER_NAME}} founded[[/NEED]][[NEED:!OWNER_NAME]]The firm behind[[/NEED]] {{BUSINESS_NAME}} after two decades of preconstruction work, on a simple premise: most contractors lose bids to bad estimating capacity, not to bad pricing. We are estimators on staff — no offshore handoff, no unattended AI takeoff — [[NEED:LICENSE]]working under registration {{LICENSE}}[[/NEED]][[NEED:!LICENSE]]working[[/NEED]] out of {{CITY}}, {{REGION}}, and serving contractors nationwide. Fees are fixed and quoted before work starts, and we will tell you when a plan set is too incomplete to bid responsibly.</p>
+      <div class="partners reveal" style="margin-top:2rem">
+        <span>Fixed fees, quoted first</span>
+        <span>48-hour standard turnaround</span>
+[[NEED:LICENSE]]        <span>Registered {{LICENSE}}</span>
+[[/NEED]]
+        <span>NDA on request</span>
+        <span>Estimators on staff</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: TESTIMONIALS — VARIANT: testimonials/cards (active)
+       VARIANT: testimonials/single-pullquote · VARIANT: testimonials/logo-and-quote-split -->
+  <section id="reviews">
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="eyebrow">Client feedback</p>
+        <h2>What contractors say</h2>
+      </div>
+
+      <!-- Rating chips are guarded: a build with no rating tokens shows the
+           review wall with no invented numbers. [engine-request] rating atoms. -->
+      <ul class="rating-chips reveal">
+        [[NEED:RATING]]<li class="rating-chip"><span class="rating-num">{{RATING}}</span><span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>average rating</span></li>[[/NEED]]
+        [[NEED:REVIEW_COUNT]]<li class="rating-chip"><span class="rating-num">{{REVIEW_COUNT}}</span><span>verified reviews</span></li>[[/NEED]]
+        [[NEED:PROFILE_URL]]<li class="rating-chip"><a href="{{PROFILE_URL}}" rel="nofollow noopener">Read every review on our public profile</a></li>[[/NEED]]
+        <li class="rating-chip"><span class="rating-num">100%</span><span>of jobs closed with a final walkthrough</span></li>
+      </ul>
+      <div class="reviews">
+        <article class="review reveal">
+          <p class="stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote>We bid four times as much work without hiring. Their scope letters have ended two arguments before they started.</blockquote>
+          <div class="review-who"><span class="avatar" aria-hidden="true">RC</span><span><strong>Renée C.</strong><br><span class="brand-locality" style="display:inline">Commercial GC, {{REGION}}</span></span></div>
+        </article>
+        <article class="review reveal">
+          <p class="stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote>The levelling matrix caught a sub who excluded controls. That one catch covered a year of fees.</blockquote>
+          <div class="review-who"><span class="avatar" aria-hidden="true">MT</span><span><strong>Marcus T.</strong><br><span class="brand-locality" style="display:inline">Mechanical sub, Phoenix, AZ</span></span></div>
+        </article>
+        <article class="review reveal">
+          <p class="stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote>Forty-eight hours, every time, and the flagged RFI items are consistently the ones that matter.</blockquote>
+          <div class="review-who"><span class="avatar" aria-hidden="true">AO</span><span><strong>Adaora O.</strong><br><span class="brand-locality" style="display:inline">Design-build, {{CITY}}, {{REGION}}</span></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: FAQ — one FAQ block, every answer under 300 characters -->
+  <section id="faq" class="alt">
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="eyebrow">Before you send plans</p>
+        <h2>Straight answers on outsourced estimating</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal"><summary>How is the fee calculated?</summary><p>A fixed fee quoted after we see the plan set, based on scope and sheet count. You approve it before any work begins.</p></details>
+        <details class="reveal"><summary>Whose pricing do you use?</summary><p>Yours wherever you have it — your labour rates, crews and markup. We supply current regional material pricing for the rest.</p></details>
+        <details class="reveal"><summary>Do you sign NDAs?</summary><p>Yes, on request and before receiving documents. We never bid work ourselves, so there is no conflict of interest.</p></details>
+        <details class="reveal"><summary>What if the plans are incomplete?</summary><p>We flag the gaps as RFI items rather than assuming through them, and we will tell you when a set is not bidable.</p></details>
+        <details class="reveal"><summary>Can you hit a shorter deadline?</summary><p>Often. Twenty-four hour turnaround is available on a rush fee where our estimator capacity allows it that week.</p></details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION: OFFER BAND — VARIANT: offer/finance-and-capacity (active)
+       VARIANT: offer/single-guarantee-ribbon · VARIANT: offer/two-column-terms
+       Financing language is framing only: no APR, no lender, no rate claim.
+       Capacity ribbon reads the real month at runtime; static copy holds with JS off. -->
+  <section id="offer" class="slab grain">
+    <div class="shell offer-grid">
+      <div class="reveal">
+        <p class="eyebrow">What it costs</p>
+        <h2>Priced before the work, not after</h2>
+        <p>Scope, fee and turnaround are agreed in writing before anything starts. You get a fixed number for the bid and a clear list of what would change it.</p>
+        <ul class="chip-row">
+          <li class="chip">Fixed written scope</li>
+          <li class="chip">No surprise line items</li>
+          <li class="chip">Turnaround in writing</li>
+        </ul>
+      </div>
+      <aside class="capacity reveal" data-capacity>
+        <p class="eyebrow">Current schedule</p>
+        <p class="capacity-line">Taking new bid bookings for <strong data-season-month>this season</strong>.</p>
+        <p class="capacity-note">Send the plan set and we will confirm the next estimator slot and the fixed fee in writing the same working day.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#upload">Send the plan set</a>
+          [[NEED:PHONE]]<a class="btn btn-ghost" href="sms:{{PHONE_DIGITS}}">Text us instead</a>[[/NEED]]
+        </div>
+      </aside>
+    </div>
+  </section>
+
+
+  <!-- SECTION: CTA — VARIANT: cta/panel (active)
+       VARIANT: cta/full-bleed-slab · VARIANT: cta/split-form-and-call -->
+  <section id="contact">
+    <div class="shell">
+      <div class="cta-panel reveal">
+        <p class="eyebrow">Bid calendar</p>
+        <h2>Send the plan set, get a fee in four hours</h2>
+        <p>Upload plans, specs and addenda. You will have a written scope confirmation and a fixed fee the same working day.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#upload">Send the plan set</a>
+          [[NEED:PHONE]]<a class="btn btn-ghost" href="sms:{{PHONE_DIGITS}}">Text the plans</a>[[/NEED]]
+          [[NEED:EMAIL]]<a class="btn btn-ghost" href="mailto:{{EMAIL}}">Email {{EMAIL}}</a>[[/NEED]]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- VARIANT: b2b/upload-and-calculator (default). Alternatives:
+     b2b/quote-form-only — replaces the dropzone with an inline RFQ form.
+     b2b/pricing-table — three fixed-fee tiers instead of the calculator. -->
+<section class="b2b" id="upload" aria-labelledby="upload-h">
+  <div class="shell">
+    <p class="eyebrow">Start a bid</p>
+    <h2 id="upload-h" class="section-head">Send the plan set</h2>
+    <ul class="audience">
+      <li>General contractors</li><li>Mechanical &amp; electrical subs</li>
+      <li>Design-build firms</li><li>Owner's reps</li><li>Specialty trades</li>
+    </ul>
+    <form class="dropzone" method="post"[[NEED:EMAIL]] action="mailto:{{EMAIL}}"[[/NEED]] enctype="multipart/form-data">
+      <strong>Upload plans, specs and addenda</strong>
+      <span>PDF, DWG or a shared folder link. Written scope confirmation and a fixed fee within four working hours.</span>
+      <label class="visually-hidden" for="plans">Plan set files</label>
+      <input id="plans" name="plans" type="file" multiple style="margin-top:1rem">
+      <button class="dz-cta" type="submit">[[NEED:EMAIL]]Send to {{EMAIL}}[[/NEED]][[NEED:!EMAIL]]Send the plan set[[/NEED]]</button>
+    </form>
+  </div>
+</section>
+
+<!-- VARIANT: b2b/bid-hit-calculator (default). Alternatives:
+     b2b/roi-table — static table of fee vs. recovered estimator hours.
+     b2b/none — omit for engagements sold purely by consultation. -->
+<section class="b2b" id="calculator" aria-labelledby="calc-h" style="background:var(--wss-surface-alt)">
+  <div class="shell">
+    <p class="eyebrow">Bid economics</p>
+    <h2 id="calc-h" class="section-head">Bid-hit ratio calculator</h2>
+    <p class="section-lede">Enter your last twelve months. The arithmetic runs in your browser; nothing is sent anywhere. Without JavaScript, divide bids won by bids submitted — the same number.</p>
+    <div class="calc">
+      <div>
+        <p><label for="bids">Bids submitted</label><input id="bids" name="bids" type="number" min="1" step="1" value="40" inputmode="numeric"></p>
+        <p><label for="wins">Bids won</label><input id="wins" name="wins" type="number" min="0" step="1" value="9" inputmode="numeric"></p>
+        <p><label for="value">Average contract value (USD)</label><input id="value" name="value" type="number" min="0" step="1000" value="180000" inputmode="numeric"></p>
+      </div>
+      <div class="calc-out">
+        <p>Current hit ratio<output id="ratio" for="bids wins">22.5%</output></p>
+        <p>Each additional win is worth <output id="perwin" for="value">$180,000</output> in booked revenue.</p>
+      </div>
+    </div>
+    <div class="offer" style="margin-top:1.75rem">
+      <span class="ribbon">First bid package</span>
+      <p><strong>Your first takeoff is fee-capped at $450.</strong> One plan set, full line-item takeoff and scope letter, so you can judge the work before committing to a volume agreement.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var b=document.getElementById('bids'),w=document.getElementById('wins'),
+      v=document.getElementById('value'),r=document.getElementById('ratio'),p=document.getElementById('perwin');
+  if(!b||!w||!v||!r||!p)return;
+  function fmt(n){return '$'+Math.max(0,Math.round(n)).toLocaleString('en-US');}
+  function calc(){
+    var bn=parseFloat(b.value)||0,wn=parseFloat(w.value)||0,vn=parseFloat(v.value)||0;
+    r.textContent = bn>0 ? (Math.min(wn,bn)/bn*100).toFixed(1)+'%' : '—';
+    p.textContent = fmt(vn);
+  }
+  [b,w,v].forEach(function(el){el.addEventListener('input',calc);});
+  calc();
+})();
+</script>
+
+  <!-- ENGINE INJECTION POINT: engine blocks are inserted here, before <footer> -->
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <h3 data-display-name>{{BUSINESS_NAME}}</h3>
+        <p>Quantity takeoffs, bid packages, scope letters and change order support for contractors nationwide, from {{CITY}}, {{REGION}}.</p>
+        [[NEED:LICENSE]]<p>License {{LICENSE}}</p>[[/NEED]]
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>[[NEED:PHONE]]<a href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a><br>[[/NEED]][[NEED:EMAIL]]<a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br>[[/NEED]][[NEED:PROFILE_URL]]<a href="{{PROFILE_URL}}" rel="nofollow">Reviews &amp; profile</a>[[/NEED]]</p>
+      </div>
+      <div>
+        <h3>Service area</h3>
+        <p>{{CITY}}, {{REGION}}[[NEED:POSTAL]] {{POSTAL}}[[/NEED]][[NEED:COUNTY]]<br>{{COUNTY}}[[/NEED]][[NEED:GEO]]<br><span class="visually-hidden">Coordinates {{GEO}}</span>[[/NEED]]</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <p><a href="#services">Services</a><br><a href="#process">Process</a><br><a href="#reviews">Reviews</a><br><a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> {{BUSINESS_NAME}}.[[NEED:OWNER_NAME]] Owned and operated by {{OWNER_NAME}}.[[/NEED]]</span>
+      <span data-domain-meta>{{DOMAIN}}</span>
+    </div>
+  </div>
+</footer>
+
+<!-- exactly one floater, on the single z-index scale -->
+[[NEED:PHONE]]<a class="floater" href="tel:{{PHONE_DIGITS}}">Upload plans</a>[[/NEED]][[NEED:!PHONE]]<a class="floater" href="#upload">Upload plans</a>[[/NEED]]
+
+<script>
+(function () {
+  var d = document, r = d.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // display-name path: parenthetical/internal qualifiers never render at 128px
+  d.querySelectorAll('[data-display-name]').forEach(function (el) {
+    var raw = el.textContent, t = raw.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s{2,}/g, ' ').trim();
+    if (t && t !== raw.trim()) el.textContent = t.replace(/[,;:\s]+$/, '');
+  });
+
+  var y = d.querySelector('[data-year]'); if (y) y.textContent = new Date().getFullYear();
+
+  var btn = d.querySelector('.nav-toggle');
+  if (btn) btn.addEventListener('click', function () {
+    var open = r.classList.toggle('nav-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e, i) {
+        if (!e.isIntersecting) return;
+        e.target.style.transitionDelay = Math.min(i * 75, 450) + 'ms';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    // FIRST-IMPRESSION LAW (2026-09-04 robustness lane, additive to the
+    // capture-safety timer below): the hidden state is now PROGRESSIVE
+    // ENHANCEMENT. Each section is marked reveal-armed BEFORE it is
+    // observed, and the root gate class is what allows the stylesheet to
+    // hide anything at all. If this script never runs — a blocking
+    // extension, a parser hiccup, any JS failure — no gate class ever
+    // lands, so every section is visible by default and the page can
+    // never present as a raw dump.
+    d.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('reveal-armed'); io.observe(el); });
+    document.documentElement.classList.add('js-reveal-armed');
+
+    // CAPTURE SAFETY (2026-09-03 render-regression lane): a full-page
+    // screenshot, a PDF print, or any non-interactive renderer never
+    // scrolls, so the observer never fires below the fold and .js .reveal
+    // sits at opacity 0 — the page then reads as a broken unstyled dump in
+    // exactly the artifacts an owner judges builds by. Anything the observer
+    // has not reached by the timer reveals instantly (no transition, so a
+    // capture mid-window still lands fully painted): scrolling visitors keep
+    // the staggered entrance, and no context can ever ship a hidden section.
+    setTimeout(function () {
+      d.querySelectorAll('.reveal:not(.in)').forEach(function (el) {
+        el.style.transition = 'none';
+        el.classList.add('in');
+      });
+    }, 1600);
+
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target, to = parseFloat(el.getAttribute('data-count-to'));
+        co.unobserve(el);
+        if (reduce || isNaN(to)) return;
+        var suffix = el.getAttribute('data-suffix') || '', dec = (to % 1 !== 0) ? 1 : 0, t0 = 0;
+        function tick(ts) {
+          if (!t0) t0 = ts;
+          var k = Math.min((ts - t0) / 900, 1);
+          el.textContent = (to * (1 - Math.pow(1 - k, 3))).toFixed(dec) + suffix;
+          if (k < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.5 });
+    d.querySelectorAll('[data-count-to]').forEach(function (el) { co.observe(el); });
+  } else {
+    d.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // magnetic nudge, desktop pointers only, transform-only
+  if (!reduce && window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 1024px)').matches) {
+    d.querySelectorAll('.btn-primary').forEach(function (b) {
+      b.addEventListener('mousemove', function (e) {
+        var box = b.getBoundingClientRect();
+        b.style.transform = 'translate(' + ((e.clientX - box.left - box.width / 2) / 9).toFixed(2) + 'px,' +
+          ((e.clientY - box.top - box.height / 2) / 9 - 2).toFixed(2) + 'px)';
+      });
+      b.addEventListener('mouseleave', function () { b.style.transform = ''; });
+    });
+  }
+})();
+</script>
+
+<script>
+/* Prompt A behaviours: lightbox (captions, keyboard, swipe), before/after
+   drag slider, seasonal capacity line. Everything below is enhancement only —
+   with JS off the gallery links open full-size assets, the slider degrades to
+   labelled side-by-side frames, and the capacity line reads as static copy. */
+(function () {
+  var d = document, r = d.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- seasonal capacity ---------- */
+  var m = d.querySelector('[data-season-month]');
+  if (m) {
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var now = new Date(), next = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+    m.textContent = months[now.getMonth()] + ' and ' + months[next.getMonth()];
+  }
+
+  /* ---------- before / after ---------- */
+  d.querySelectorAll('[data-ba]').forEach(function (fig) {
+    var stage = fig.querySelector('.ba-stage'), range = fig.querySelector('[data-ba-range]');
+    function set(p) {
+      p = Math.max(0, Math.min(100, p));
+      fig.style.setProperty('--ba-pos', p + '%');
+      fig.style.setProperty('--ba-num', p);
+      if (range && Number(range.value) !== Math.round(p)) range.value = Math.round(p);
+    }
+    set(range ? Number(range.value) : 52);
+    if (range) range.addEventListener('input', function () { set(Number(range.value)); });
+    var dragging = false;
+    function fromEvent(e) {
+      var box = stage.getBoundingClientRect();
+      var x = (e.touches ? e.touches[0].clientX : e.clientX) - box.left;
+      set((x / box.width) * 100);
+    }
+    stage.addEventListener('pointerdown', function (e) { dragging = true; stage.setPointerCapture(e.pointerId); fromEvent(e); });
+    stage.addEventListener('pointermove', function (e) { if (dragging) fromEvent(e); });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) {
+      stage.addEventListener(t, function () { dragging = false; });
+    });
+  });
+
+  /* ---------- lightbox ---------- */
+  var root = d.querySelector('[data-lightbox-root]');
+  var shots = [].slice.call(d.querySelectorAll('a.shot[data-lb]'));
+  if (root && shots.length) {
+    var img = root.querySelector('[data-lb-img]'),
+        cap = root.querySelector('[data-lb-caption]'),
+        count = root.querySelector('[data-lb-count]'),
+        i = 0, opener = null;
+
+    function show(n) {
+      i = (n + shots.length) % shots.length;
+      var a = shots[i], thumb = a.querySelector('img');
+      img.src = a.getAttribute('href');
+      img.alt = thumb ? thumb.getAttribute('alt') : '';
+      cap.textContent = a.getAttribute('data-caption') || (thumb ? thumb.getAttribute('alt') : '');
+      count.textContent = '(' + (i + 1) + ' of ' + shots.length + ')';
+      // prefetch neighbours only once the viewer is open — thumbs stay lazy
+      [shots[(i + 1) % shots.length], shots[(i - 1 + shots.length) % shots.length]].forEach(function (nb) {
+        var pre = new Image(); pre.src = nb.getAttribute('href');
+      });
+    }
+    function open(n, from) {
+      opener = from || null;
+      show(n);
+      root.hidden = false; r.classList.add('lb-open');
+      root.querySelector('.lb-close').focus();
+    }
+    function close() {
+      root.hidden = true; r.classList.remove('lb-open');
+      if (opener) opener.focus();
+    }
+    shots.forEach(function (a, n) {
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault(); open(n, a);
+      });
+    });
+    root.querySelectorAll('[data-lb-close]').forEach(function (b) { b.addEventListener('click', close); });
+    root.querySelector('[data-lb-prev]').addEventListener('click', function () { show(i - 1); });
+    root.querySelector('[data-lb-next]').addEventListener('click', function () { show(i + 1); });
+    d.addEventListener('keydown', function (e) {
+      if (root.hidden) return;
+      if (e.key === 'Escape') { close(); }
+      else if (e.key === 'ArrowLeft') { show(i - 1); }
+      else if (e.key === 'ArrowRight') { show(i + 1); }
+      else if (e.key === 'Tab') {
+        var f = [].slice.call(root.querySelectorAll('button'));
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && d.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && d.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    var x0 = null;
+    root.addEventListener('touchstart', function (e) { x0 = e.changedTouches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 45) show(dx < 0 ? i + 1 : i - 1);
+    }, { passive: true });
+    if (reduce) { img.style.transition = 'none'; }
+  }
+})();
+</script>
+
+<!-- THE HERO VIDEO LADDER, as data. The runtime walks it top-down and arms
+     the first rung whose bytes shipped in this build; a rung that errors
+     steps down to the next. The client's own clip always outranks ours.
+     The <video> element is mounted by the deferred hero bundle
+     (assets/index-professional-services-estimator.js) marked data-hero-video
+     with no static src and hidden; the walker's MutationObserver picks it up
+     on mount. No WSS fallback bytes ship yet - an unlit ladder leaves the
+     painted hero surface exactly as it was. -->
+<script type="application/json" id="hero-video-ladder">
+  { "sources": ["assets/hero-client-estimating.mp4", "assets/hero-fallback-estimating.mp4"] }
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var heroRungs=(function(){try{return (JSON.parse(document.getElementById("hero-video-ladder").textContent)||{}).sources||[];}catch(e){return [];}})();
+  if(!heroRungs.length||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  function arm(clip,i){
+    var src=heroRungs[i];
+    if(!src){clip.setAttribute("data-hero-dead","1");clip.hidden=true;clip.removeAttribute("src");try{clip.load()}catch(e){}return;}
+    clip.src=src.charAt(0)==="/" ? src : "/"+src;
+    clip.addEventListener("loadeddata",function(){clip.hidden=false;clip.removeAttribute("data-hero-dead");clip.setAttribute("data-hero-armed","1");clip.setAttribute("data-hero-ready","1");},{once:true});
+    clip.addEventListener("error",function(){clip.setAttribute("data-hero-dead","1");clip.hidden=true;clip.removeAttribute("src");try{clip.load()}catch(e){}arm(clip,i+1);},{once:true});
+  }
+  var mounted=document.querySelector("video[data-hero-video]");
+  if(mounted){arm(mounted,0);return;}
+  var mo=new MutationObserver(function(){
+    var clip=document.querySelector("video[data-hero-video]");
+    if(clip){mo.disconnect();arm(clip,0);}
+  });
+  mo.observe(document.documentElement,{childList:true,subtree:true});
+  setTimeout(function(){mo.disconnect();},20000);
+})();
+</script>
+</body>
+</html>

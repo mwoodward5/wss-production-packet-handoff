@@ -1,0 +1,6 @@
+{
+ "extends":"./tsconfig.json",
+ "include":["src/wss-main.tsx","src/wss-app.tsx","src/lib/wss-normalize.d.ts","vite.wss.config.ts"],
+ "exclude":["src/router.tsx","src/routeTree.gen.ts","src/routes/__root.tsx"],
+ "compilerOptions":{"allowJs":true,"checkJs":false}
+}

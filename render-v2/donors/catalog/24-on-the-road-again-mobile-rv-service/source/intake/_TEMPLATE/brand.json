@@ -1,0 +1,12 @@
+{
+  "primaryColor": "",
+  "accentColor": "",
+  "neutralColor": "",
+  "fontHeading": "",
+  "fontBody": "",
+  "logoLight": "logo-light.webp",
+  "logoDark": "logo-dark.webp",
+  "logoHeightPx": 72,
+  "heroVariant": "cinematic-video",
+  "borderRadius": "lg"
+}

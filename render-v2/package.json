@@ -1,0 +1,12 @@
+{
+  "name": "wss-render-v2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "check": "node tools/check-all.cjs",
+    "build:landscaping": "node build/compile-spa.cjs landscaping",
+    "fixture:burns": "node build/build-fixture.cjs fixtures/burns-record.json"
+  }
+}

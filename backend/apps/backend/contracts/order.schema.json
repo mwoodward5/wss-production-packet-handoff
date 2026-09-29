@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wss://ghost-agency/contracts/order.schema.json",
+  "title": "Order / Entitlement",
+  "description": "Written ONLY by the Stripe webhook handler after signature verification. This row is the sole authority for 'paid'. Checkout session creation NEVER creates this row.",
+  "type": "object",
+  "required": ["order_id", "prospect_id", "offer_tier", "stripe", "state", "created_at"],
+  "properties": {
+    "order_id": { "type": "string" },
+    "prospect_id": { "type": "string" },
+    "packet_id": { "type": "string" },
+    "offer_tier": { "type": "string", "enum": ["launch_499", "growth_799", "authority_1299", "custom"] },
+    "stripe": {
+      "type": "object",
+      "required": ["customer_id", "subscription_id", "checkout_session_id", "webhook_event_id"],
+      "properties": {
+        "customer_id": {"type":"string"}, "subscription_id": {"type":"string"},
+        "checkout_session_id": {"type":"string"},
+        "webhook_event_id": {"type":"string","description":"Idempotency key — reject duplicate event ids"},
+        "livemode": {"type":"boolean"}
+      }
+    },
+    "state": { "type": "string", "enum": ["paid_pending_build", "build_dispatched", "build_complete", "delivered", "active", "past_due", "dunning", "canceled", "refunded"] },
+    "delivery": {
+      "type": "object",
+      "properties": {
+        "site_url": {"type":"string"},
+        "custom_domain": {"type":"string"},
+        "domain_status": {"type":"string","enum":["none","purchased","dns_pending","live"]},
+        "receipt_email_message_id": {"type":"string"},
+        "delivered_at": {"type":"string","format":"date-time"}
+      }
+    },
+    "support_plan": { "type": "object", "properties": { "monthly_edit_quota": {"type":"integer"}, "sla_hours": {"type":"integer","default":48} } },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}

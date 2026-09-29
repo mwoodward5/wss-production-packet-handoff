@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mhbbuild.wss-ai.com/sitemap.xml

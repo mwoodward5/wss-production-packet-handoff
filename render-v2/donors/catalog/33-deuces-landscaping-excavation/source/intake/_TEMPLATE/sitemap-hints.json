@@ -1,0 +1,4 @@
+{
+  "priorityRoutes": ["/", "/services", "/contact"],
+  "changefreqOverrides": { "/blog": "weekly" }
+}

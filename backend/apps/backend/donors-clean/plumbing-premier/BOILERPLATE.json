@@ -1,0 +1,383 @@
+{
+  "name": "plumbing-premier",
+  "vertical": "plumbing",
+  "label": "Premier",
+  "source": "Verbatim WSS port of the user-supplied Lovable project Yellow Rose Plumbing (yellowroseplumbing.com), source checkout 2026-08-17. Built from the actual project source at token level: every identity string (business name, Boerne/San Antonio/Hill Country geography and neighborhoods, phone, email, owner, license, place_id, socials, domain, GTM + Supabase account ids, owner portrait, rose logo and favicons) is a WSS token or was removed. The design ships exactly as designed — Fraunces/Inter typography, the navy/gold ticket-counter system, cinematic copper-pipe hero with the triage card, service-flow schematic, problem-to-fix ticket cards, heaters/remodels bands, route-grid coverage with embedded map, review prompt, request form, four-section city pages, deep service pages with repair-vs-replace callouts, the blog, about and contact long-form. The WSS content bridge (window.__WSS_CONTENT__) renders verified client services/faqs on real builds; template defaults render only in standalone preview.",
+  "source_project": {
+    "provider": "Lovable",
+    "project_id": "",
+    "source_domain": "yellowroseplumbing.com",
+    "port_mode": "verbatim source port; tokenized identity; WSS content bridge"
+  },
+  "sanitised": "2026-08-17",
+  "rebuilt": "2026-08-17",
+  "stack": "compiled Vite React SPA (react-router + shadcn/ui) + Tailwind CSS + Fraunces/Inter via Google Fonts; static hosting, no request-time build",
+  "donor_business_name": "Yellow Rose Plumbing",
+  "donor_phone": "(210) 901-0236",
+  "donor_email": "brandon@yellowroseplumbing.com",
+  "donor_city": "Boerne",
+  "donor_county": "Kendall County",
+  "donor_domain": "yellowroseplumbing.com",
+  "persons": [
+    "Brandon Barnett",
+    "Brandon",
+    "Barnett",
+    "Karter Doucette",
+    "Doucette",
+    "K. Doucette",
+    "Harter Custom Pumping",
+    "CJS Plumbing",
+    "Lucky's Gallatin Plumbing"
+  ],
+  "persons_note": "Brandon Barnett is the source project's owner-identity (owner, master plumber, portrait, voice of the long-form copy); the Karter Doucette entries are the identity declaration inherited from this donor's previous clean-room build, kept so the leak gate stays armed against both generations of donor bytes. None may ever survive hydration.",
+  "socials": [
+    "https://www.facebook.com/Plumbtx/",
+    "Plumbtx",
+    "ChIJk1mjUJuUtKsRlwYvK4IcbYk"
+  ],
+  "zips": [
+    "78006",
+    "78063"
+  ],
+  "geo": [
+    "29.795",
+    "-98.732"
+  ],
+  "account_ids": [
+    "GTM-TWLZFW6W",
+    "btfpicjqkoubwsmrrhbu"
+  ],
+  "notes": "Pre-compiled Vite dist. Identity lives in one hydrated config module (src/lib/business.ts at source): phone/email/owner/license/rating/geo/profile values are [[NEED:X]]-guarded consts, so an optional fact collapses its construct at hydration time instead of shipping an empty tel:/mailto/anchor. Call CTAs additionally carry runtime predicates on the hydrated consts. The shell's ld+json telephone/email lines are whole-line NEED guards (no empty structured-data field). The request form's Supabase edge-function submit was removed at source (account-id leak + dead endpoint for a donor): on real builds the engine's injected lead-capture listener intercepts the submit; standalone preview resolves locally. The hero carries the marked ladder video over the photograph, under the cream scrims. The review prompt's starter snippets are tokenized blank canvases, never fabricated testimonials. No veteran-owned, license, or rating claim ships unverified: badge/license/rating surfaces are NEED-guarded tokens.",
+  "consumes_content": true,
+  "content_render_targets": {
+    "services": [
+      {
+        "path": "/",
+        "selector": "main > section:nth-of-type(3)"
+      }
+    ],
+    "faqs": [
+      {
+        "path": "/",
+        "selector": "main > section:nth-of-type(9)"
+      }
+    ]
+  },
+  "renders": [
+    "services",
+    "faq"
+  ],
+  "renders_note": "The compiled bundle renders verified services and faqs itself via the window.__WSS_CONTENT__ bridge (declared in consumes_content): verified services render as the home page's problem-to-fix ticket cards AND as the request form's service select; verified faqs render as the home FAQ (and feed its FAQPage schema). Verified coverage areas extend the city-landing system (header/footer/city pages). Reviews and about are NOT island-driven; the engine injects its shared blocks for those.",
+  "photo_slots": [
+    "assets/water-heater-DUmyxTEf.jpg",
+    "assets/remodel-CxrxpC_H.jpg",
+    "assets/leak-detection-BvP8Jb28.jpg",
+    "assets/water-softener-Cab2Abl1.jpg",
+    "assets/service-slab-leak-CLoaMRdu.jpg",
+    "assets/service-drain-CavauHuP.jpg",
+    "assets/service-tankless-uZ7iig2M.jpg",
+    "assets/service-softener-BZUHi3nW.jpg",
+    "assets/service-reroute-CWxm6oRE.jpg",
+    "assets/hill-country-Dk1AGe_V.jpg",
+    "assets/hero-plumber-BQApchPL.jpg"
+  ],
+  "photo_slot_prominence": [
+    "assets/hero-plumber-BQApchPL.jpg",
+    "assets/water-heater-DUmyxTEf.jpg",
+    "assets/remodel-CxrxpC_H.jpg",
+    "assets/leak-detection-BvP8Jb28.jpg",
+    "assets/water-softener-Cab2Abl1.jpg",
+    "assets/service-slab-leak-CLoaMRdu.jpg",
+    "assets/service-drain-CavauHuP.jpg",
+    "assets/service-tankless-uZ7iig2M.jpg",
+    "assets/service-softener-BZUHi3nW.jpg",
+    "assets/service-reroute-CWxm6oRE.jpg",
+    "assets/hill-country-Dk1AGe_V.jpg"
+  ],
+  "photo_slots_note": "Eleven slots in design order (home bands first, then service-page heroes, then the city-page hero, then the about-page owner card). The hero photograph (assets/hero-pipes-Cw1Fb6mm.jpg) is the cinematic layer and the video poster, not a slot. On real builds the engine overwrites slots with ownership-gated client photographs. photo_slot_prominence promotes the referenced owner-card photo so instrument-widget plumbing builds show a real client photo before lower service artwork consumes the bank.",
+  "hero_floor": {
+    "selector": "section:has(video[data-hero-video])",
+    "why": "Visual QA round 1, 2026-09-01: the instrument-widget plumbing hero needs a proven copy scrim over the busy gradient and hero media before hydration settles the triage card."
+  },
+  "hero_note": "The donor owns its hero directly: a full-bleed copper-fittings photograph with cream directional scrims, aurora mesh, grid pattern, glass eyebrow chip, two-line display H1 (HERO_LINE_A/HERO_LINE_B), premium gold call pill + free-quote pill, trust strip, and the floating glass triage card with its four route rows and floating stat chip. No hero_wash entry: the photography sits under text-safe scrims already; hero_floor hardens the copy band.",
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-plumbing.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-plumbing.mp4",
+    "poster": "assets/hero-pipes-Cw1Fb6mm.jpg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (REAL bytes ship today: the design's own generic plumbing b-roll reel, a 2240509-byte faststart mp4 renamed at source so rung 2 plays on every build as-is)",
+      "the design photograph (hero-pipes, the shipped cinematic layer and poster)",
+      "the drawn hero composition (scrims, aurora and grid always painted underneath)"
+    ],
+    "note": "Owner's order: a source site with a hero video ships that video. The marked <video data-hero-video> sits over the photograph and under the cream scrims, hidden until the ladder runtime in index.html arms a rung whose bytes shipped; an error steps down silently, and reduced motion never arms. The engine writes an approved clip to client_video_path (mp4 only — the slot extension is binding); never a borrowed or fabricated clip."
+  },
+  "spa_routes": [
+    "/repairs-leak-detection",
+    "/water-heaters-softeners",
+    "/remodels-new-builds",
+    "/slab-leak-repair",
+    "/drain-cleaning",
+    "/tankless-installation",
+    "/water-line-reroute",
+    "/water-softener-install",
+    "/free-quote",
+    "/about",
+    "/blog",
+    "/contact"
+  ],
+  "spa_routes_note": "Client-side routes this compiled donor owns. The engine rewrites these to index.html explicitly so a real 404 can serve every OTHER unmatched path without breaking the donor nav. Dynamic routes (/services/:slug, /plumber/:city, /blog/:slug) resolve inside the SPA; unknown city slugs fall back to the tokenized home-base city template, unknown blog slugs to the SPA 404.",
+  "classification": {
+    "verticalFamilies": [
+      "home-services-repair"
+    ],
+    "conversionArchetypes": [
+      "request-quote"
+    ],
+    "shape": "multi-page-spa-ticket-counter",
+    "routeDepth": "deep",
+    "photoDemand": "high"
+  },
+  "visual_dna": {
+    "reference": "Yellow Rose Plumbing (Lovable)",
+    "hero": "copper-fittings cinematic photo, cream scrims, glass triage card, two-line display H1 with gradient italic second line",
+    "depth": [
+      "aurora mesh blobs (gold/rose/navy)",
+      "blueprint grid pattern",
+      "glass panels with gold under-glow shadows",
+      "copper hairline dividers",
+      "numbered mono ticket codes (TK-01, Z-01, step 01-04)",
+      "pipe-divider schematic lines"
+    ],
+    "section_rhythm": [
+      "cinematic hero + triage card",
+      "service-flow pipe schematic (01-04)",
+      "problem-to-fix ticket cards",
+      "dark heaters/softeners band",
+      "remodels photo band",
+      "dark route-grid coverage + embedded map",
+      "request service + review prompt",
+      "gold CTA banner",
+      "FAQ ledger"
+    ],
+    "mobile": "single-column conversion path, sticky glass call/quote bar after scroll, numbered accordion menus, no horizontal overflow",
+    "motion": "scroll-reveal fade-ups, aurora blob drift, ping badge; fully suppressed for reduced motion"
+  },
+  "lead_endpoint": {
+    "url": "https://ghost.wss-ai.com/api/quote-request",
+    "payload": [
+      "slug",
+      "name",
+      "phone",
+      "email",
+      "service",
+      "message",
+      "website"
+    ],
+    "slug_source": "window.location.hostname.split('.')[0]",
+    "honeypot": "company"
+  },
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "CITY",
+    "ADDRESS_CITY",
+    "STATE",
+    "REGION",
+    "HERO_HEADLINE",
+    "HERO_LINE_A",
+    "HERO_LINE_B",
+    "OWNER_NAME",
+    "EMAIL",
+    "ADDRESS",
+    "ZIP",
+    "GEO_LAT",
+    "GEO_LNG",
+    "RATING",
+    "REVIEW_COUNT",
+    "LICENSE",
+    "PROFILE_URL",
+    "LOGO_URL",
+    "SITE_URL",
+    "HERO_ACCENT",
+    "HERO_BADGE"
+  ],
+  "schema_note": "The donor carries a content-free-safe Plumber/FAQPage graph (telephone/email whole-line NEED-guarded so no empty field ships). The bundle builds the richer runtime graph (LocalBusiness/Organization/WebSite/Service/HowTo/BlogPosting/city pages) from the hydrated config with runtime predicates dropping blank optional fields. The shared content injector adds the verified service/review/FAQ/coverage graph when verified content exists.",
+  "truth_law_removals": [
+    "No source-business service copy, Boerne/San Antonio/Hill Country geography or neighborhood names, source phone/email/owner/license, place_id, socials, or account ids are present in shipped bytes.",
+    "The source owner's portrait and the rose logo/favicons do not ship; the logo hydrates from LOGO_URL and the owner card renders a generic plumbing photo slot.",
+    "The 5.0-on-Google trust claim and the RMP 44984 license badge are NEED-guarded tokens — blank until the engine verifies the client's own rating/license.",
+    "Hardness, soil, and cost claims were genericized to test-first guidance; no unverified local claim ships.",
+    "Reviews render only from verified review payloads; the review prompt offers copyable neutral starter text, never fabricated proof.",
+    "No free-estimate, same-day, licensed/insured or warranty claim is invented — every credential surface is token-gated."
+  ],
+  "unretired": true,
+  "retired_for_outreach": true,
+  "retired_on": "2026-07-30",
+  "retirement_history": "Retired as an OUTREACH target category alongside roofing (retained and fully buildable; vertical unchanged — facts.industry=plumbing still resolves here). On 2026-08-17 the clean-room v2 dist was replaced by the Yellow Rose verbatim source port, which clears the premium visual bar the old CSS-only composition could not.",
+  "alias_verticals": [
+    "plumber",
+    "drain cleaning",
+    "water heater"
+  ],
+  "registered_on": "2026-07-29",
+  "installed_at": "apps/backend/donors-clean/plumbing-premier",
+  "lineage": "premier",
+  "requiredTokens": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "LICENSE",
+    "PROFILE_URL",
+    "LOGO_URL"
+  ],
+  "fictionalIdentity": {
+    "businessName": "Vantage Point Plumbing",
+    "owner": "Corinne Ashby",
+    "phones": [
+      "+17025550184",
+      "702-555-0184",
+      "(702) 555-0184",
+      "702.555.0184"
+    ],
+    "emails": [
+      "care@vantagepointplumbing.com",
+      "dispatch@vantagepointplumbing.com",
+      "ashby@vantagepointplumbing.com"
+    ],
+    "domain": "vantagepointplumbing.com",
+    "city": "Las Vegas",
+    "region": "NV",
+    "county": "Clark County",
+    "postal": "89117",
+    "geo": "36.1699;-115.1398",
+    "license": "NV-C1-0087233",
+    "profileUrl": "https://maps.example.com/place/vantage-point-plumbing",
+    "logoUrl": "assets/logo-fallback.svg"
+  },
+  "paletteDefaults": {
+    "accent": "#0f7f6c",
+    "accentInk": "#0b6053",
+    "accentText": "#ffffff",
+    "surface": "#fcfdfc",
+    "surfaceAlt": "#eef4f2",
+    "slab": "#0d1917",
+    "slabInk": "#f0f7f5",
+    "text": "#0e1815",
+    "border": "#d3e0dc"
+  },
+  "variants": {
+    "hero": [
+      "hero/video",
+      "hero/split-right",
+      "hero/editorial-slab"
+    ],
+    "services": [
+      "services/bento",
+      "services/three-column-cards",
+      "services/list-rail"
+    ],
+    "gallery": [
+      "gallery/masonry-grid",
+      "gallery/before-after-pairs",
+      "gallery/wide-filmstrip"
+    ],
+    "testimonials": [
+      "testimonials/cards",
+      "testimonials/single-pullquote",
+      "testimonials/logo-and-quote-split"
+    ],
+    "process": [
+      "process/numeral-rail",
+      "process/vertical-timeline",
+      "process/two-up-steps"
+    ],
+    "faq": [
+      "faq/accordion",
+      "faq/two-column",
+      "faq/inline-list"
+    ],
+    "cta": [
+      "cta/panel",
+      "cta/full-bleed-slab",
+      "cta/split-form-and-call"
+    ],
+    "ticker": [
+      "ticker/marquee",
+      "ticker/static-chip-row",
+      "ticker/none"
+    ]
+  },
+  "heroVideo": {
+    "slot": "main > section.hero video[data-desktop-autoplay]",
+    "poster": "assets/hero-poster.svg",
+    "note": "Video variant is default when the engine has a clip; poster hero serves otherwise."
+  },
+  "engineInjectionPoint": "ENGINE INJECTION POINT comment immediately before <footer>",
+  "identity": {
+    "atoms": {
+      "names": [
+        "Yellow Rose Plumbing"
+      ],
+      "people": [
+        "Brandon Barnett",
+        "Brandon",
+        "Barnett",
+        "Karter Doucette",
+        "Doucette",
+        "K. Doucette",
+        "Harter Custom Pumping",
+        "CJS Plumbing",
+        "Lucky's Gallatin Plumbing"
+      ],
+      "phones": [
+        "+12109010236",
+        "2109010236",
+        "210-901-0236",
+        "(210) 901-0236",
+        "210.901.0236"
+      ],
+      "emails": [
+        "brandon@yellowroseplumbing.com"
+      ],
+      "domains": [
+        "yellowroseplumbing.com",
+        "https://www.facebook.com/Plumbtx/",
+        "Plumbtx",
+        "ChIJk1mjUJuUtKsRlwYvK4IcbYk"
+      ],
+      "cities": [
+        "Boerne"
+      ],
+      "regions": [],
+      "counties": [
+        "Kendall County"
+      ],
+      "zips": [
+        "78006",
+        "78063"
+      ],
+      "geo": [
+        "29.795",
+        "-98.732"
+      ],
+      "license": [
+        "GTM-TWLZFW6W"
+      ],
+      "account_ids": [
+        "GTM-TWLZFW6W",
+        "btfpicjqkoubwsmrrhbu"
+      ]
+    },
+    "note": "Donor-side identity atoms, declared so lib/mirror-engine/scan.js identityScan() builds a non-empty atom list. Never shipped: hydrate.js drops BOILERPLATE.json from the output tree."
+  }
+}

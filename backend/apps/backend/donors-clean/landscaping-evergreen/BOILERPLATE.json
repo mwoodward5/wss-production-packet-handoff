@@ -1,0 +1,326 @@
+{
+  "name": "landscaping-evergreen",
+  "vertical": "landscaping",
+  "label": "Greenfront — cinematic photo-led landscaping donor",
+  "source": "Verbatim WSS port of the user-approved Lovable project bac7c069-3279-4616-a0ee-e4e447042003 (Greenfront Birmingham Bloom), owner-supplied source zip 2026-08-17. Built from the actual project source at token level: every identity string (business name, geography, phone, email, maps, socials, logo) is a WSS token; typography (Fraunces/Inter), the glass sticky header, the six-layer cinematic hero, the Property Care Planner widget, services, gallery, seasonal planner, service-area map, FAQ and footer ship exactly as designed. Since the a-plus static rebuild (2026-09, owner-approved direction) the shipped page is a hand-authored static shell; the engine's content injector renders verified client services/faqs/reviews into the shell's declared render targets, and the template's own copy is the standalone-preview default.",
+  "source_project": {
+    "provider": "Lovable",
+    "project_id": "bac7c069-3279-4616-a0ee-e4e447042003",
+    "source_sha": "98d351312da490f008fdc6db5ccab497ac603dea",
+    "port_mode": "verbatim source port; tokenized identity; WSS content bridge"
+  },
+  "sanitised": "2026-08-16",
+  "rebuilt": "2026-08-19",
+  "stack": "compiled Vite React (shadcn/ui) bundle + Tailwind CSS + Fraunces/Inter via Google Fonts; static hosting, no request-time build",
+  "donor_business_name": "Greenfront Lawn & Landscape",
+  "donor_phone": "(205) 603-4987",
+  "donor_email": "greenfrontbham@gmail.com",
+  "donor_city": "Birmingham, AL",
+  "donor_county": "Jefferson County",
+  "donor_domain": "greenfront-site-builder.lovable.app",
+  "persons": [],
+  "persons_note": "The source project does not supply owner/testimonial identities to this donor. Its business identity, phone, email, Birmingham/Meadowbrook geography, map target and source photographs are explicitly donor identity and may never survive hydration.",
+  "socials": [],
+  "zips": ["35203"],
+  "geo": ["33.5186", "-86.8104"],
+  "account_ids": [],
+  "consumes_content": true,
+  "content_render_targets": {
+    "services": [
+      {
+        "path": "/",
+        "selector": "section#services"
+      }
+    ],
+    "faqs": [
+      {
+        "path": "/",
+        "selector": "section#faq"
+      }
+    ],
+    "reviews": [
+      {
+        "path": "/",
+        "selector": "section#reviews"
+      }
+    ]
+  },
+  "renders": [
+    "services",
+    "faq",
+    "reviews"
+  ],
+  "renders_note": "Static-shell contract (2026-09-04): the engine's content injector renders verified services, faqs and reviews into the shell's own sections via the content_render_targets selectors (section#services, section#faq, section#reviews — all present in the static page). Reviews land on the design's clean cards with the honest review-ask card when a verified profile exists; there are no template testimonials to fall back to beyond the standalone-preview copy. About/coverage are NOT design sections; the engine injects its shared blocks for those.",
+  "photo_slots": [
+    "assets/hero-lawn-BktA-aJ_.jpg",
+    "assets/lawn-care-BXlCqdkr.jpg",
+    "assets/landscape-design-c418103C.jpg",
+    "assets/brick-house-DiVtcxte.jpg",
+    "assets/hardscape-D8TUe0NT.jpg",
+    "assets/seasonal-awApi40l.jpg",
+    "assets/truck-BGNAbCFe.jpg"
+  ],
+  "photo_slots_note": "FLAT ARRAY OF DIST-RELATIVE PATHS — the only shape engine.js reads. Slot 1 (added 2026-08-19, the concrete-elconstruction rung-3 pattern) is the hero photograph: it is the full-bleed cinematic hero layer, the hero_video poster AND the large final gallery tile, so a filled slot 1 puts the client's own photograph in all three places at once. Slots 2-6 are the gallery tiles in design order; slot 7 (truck) is the 'why' portrait. Every slot is referenced by the compiled bundle (verified against the built tree 2026-08-19). grass-texture is a background texture, not a slot. Filenames are content-hashed by Vite: REGENERATE THIS ARRAY FROM THE BUILT TREE ON EVERY REBUILD (the 2026-08-19 rebuild left every image hash unchanged).",
+  "hero_note": "The design still paints its own six-layer hero (full-bleed photograph, morning-light glow, topographic contours, leaf-vein texture, planning grid, organic bed form, glass property-care panel) — but the hero is now MEASURED: hero_wash declares the selector so the engine's heroWash and mobile_fold passes can find it. The live Keane Landscaping build (2026-08-19) failed with mobile_fold donor_hero_unmeasured precisely because the previous manifest declared nothing. The design's own full-bleed hero IMG covers the wash pixels on the only route, so opting in cannot re-introduce the 2026-08-16 double-scrim flattening; what it buys is a measurable hero, the owner's mobile fold, and a client photograph washed behind the hero when one is verified.",
+  "hero_wash": {
+    "selector": "section#top",
+    "background": "#0b1e11",
+    "text_color": "#ffffff",
+    "pages_verified": [],
+    "verified": "Render-proven 2026-08-19 on a local serve of this exact dist (scratch-landscaping/prove-staged-landscaping.cjs): section#top is the hero and its first child is the design's own full-bleed hero IMG (absolute inset-0, object-cover) which covers the wash on the single route, so pages_verified is the checked-and-explained empty list — the hvac-brandforge shape. The recorded colours are the RAW donor hero sample (deep evergreen section background hsl 140 45 8 = #0b1e11 behind white display type), used only when the theme pass does not apply."
+  },
+  "hero_wash_note": "ON 2026-08-19. The shipped scrim is derived by engine.js from the THEME pass slab/slabInk exactly as on hvac-premier and concrete-elconstruction; the raw sample above is the fallback when the theme pass does not apply. History, kept honest: the 2026-08-16 Greenfront port deliberately dropped hero_wash because the OLD shared wash double-scrimmed the previous CSS-only donor — but with no selector declared, heroWash AND mobile_fold both reported donor_hero_unmeasured on every live build (measured on Keane Landscaping, Wylie TX). On this design the full-bleed hero IMG owns the visible pixels and the wash sits behind it, so the selector is safe to declare. mobile_mute is deliberately empty for the function pass; muting the decorative SVG veils on the mobile fold is the visual pass's call.",
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-landscaping.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-landscaping.mp4",
+    "poster": "assets/hero-lawn-BktA-aJ_.jpg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (operations drop-in, no code change)",
+      "the design photograph (hero-lawn, the shipped cinematic layer)",
+      "the drawn hero composition (always painted underneath)"
+    ],
+    "note": "Owner's order, 2026-08-17: verbatim design, live video rung. The marked <video> sits behind the design's own overlay stack (morning light, hero gradient, topo, veins, grid, leaves) and reveals only when the ladder runtime arms a rung whose bytes shipped. Never a borrowed clip; reduced motion never arms."
+  },
+  "spa_routes": [],
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [],
+    "catchAll": "* -> 404 page"
+  },
+  "classification": {
+    "verticalFamilies": [
+      "property-transformation"
+    ],
+    "conversionArchetypes": [
+      "request-estimate"
+    ],
+    "shape": "single-page-static-cinematic",
+    "routeDepth": "shallow",
+    "photoDemand": "high"
+  },
+  "visual_dna": {
+    "reference": "Greenfront Birmingham Bloom",
+    "hero": "full-screen client photo with glass utility card and layered landscape-design motifs",
+    "depth": [
+      "morning-light radial wash",
+      "topographic contours",
+      "leaf-vein texture",
+      "property-plan grid",
+      "organic bed form",
+      "floating blurred leaf shapes"
+    ],
+    "section_rhythm": [
+      "organic hero curve",
+      "accent contact ribbon",
+      "warm service field",
+      "asymmetric client-work gallery",
+      "dark story band",
+      "clean review cards",
+      "seasonal planner",
+      "map/FAQ",
+      "cinematic CTA finish"
+    ],
+    "mobile": "single-column conversion path, visible semantic H1, full-width CTAs, no horizontal overflow",
+    "motion": "hero depth drift and micro-interactions; fully suppressed for reduced motion"
+  },
+  "lead_endpoint": {
+    "url": "https://ghost.wss-ai.com/api/quote-request",
+    "payload": [
+      "slug",
+      "name",
+      "phone",
+      "email",
+      "message",
+      "website"
+    ],
+    "slug_source": "window.location.hostname.split('.')[0]",
+    "honeypot": "website"
+  },
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "CITY",
+    "ADDRESS_CITY",
+    "STATE",
+    "REGION",
+    "HERO_HEADLINE",
+    "OWNER_NAME",
+    "EMAIL",
+    "ADDRESS",
+    "ZIP",
+    "GEO_LAT",
+    "GEO_LNG",
+    "RATING",
+    "REVIEW_COUNT",
+    "LICENSE",
+    "HERO_LINE_A",
+    "HERO_LINE_B",
+    "HERO_LINE_C",
+    "PROFILE_URL",
+    "LOGO_URL",
+    "SITE_URL",
+    "HERO_ACCENT",
+    "HERO_BADGE"
+  ],
+  "schema_note": "The donor carries a content-free-safe WebSite/Organization/LocalBusiness graph. The shared content injector adds the richer service/review/FAQ/coverage graph when verified content exists.",
+  "truth_law_removals": [
+    "No source-business service copy, Birmingham geography, source phone/email, testimonial or source image is present in shipped markup.",
+    "No stock or generated landscaping photograph is used as customer work. Only ownership-gated photo slots can reveal.",
+    "The seasonal planner is explicitly general planning guidance and does not assert a treatment, cadence, price or guarantee for the customer.",
+    "Reviews render only from verified review payloads and remain on high-contrast cards rather than a client photograph.",
+    "No free-estimate, same-day, licensed/insured or warranty claim is invented."
+  ],
+  "unretired": true,
+  "retired_on": "2026-08-08",
+  "retirement_history": "The old static donor was temporarily closed for guaranteed broken image slots, then reopened after repair. On 2026-08-16 its utilitarian visual shell was replaced by the Greenfront clean-room port because the old CSS-only/hero-wash composition failed the premium visual bar on live Grass Works and Thrive landscaping builds.",
+  "fixes_2026_08_19": [
+    {
+      "what": "The compiled hero baked the sentence 'Lawn care service in CITY, STATE - designed around your property' with only city/state token slots, so no fact about the client could reach the h1.",
+      "found_by": "Live sameness gate on the Keane Landscaping (Wylie TX) build: rendered_h1_not_client_derived — the rendered h1 carried neither the business name nor the composed headline.",
+      "fix": "The h1 now renders the engine's composed identity lines: HERO_LINE_A token (their proven motto, else their business name), HERO_LINE_B token (trade + market city) under the design's underline stroke, and HERO_LINE_C token (a verified rating sentence) which collapses at render when blank via a whole-string-literal const. The br after line A is the mobile-fold contract for slogan-led builds.",
+      "file": "src/pages/Index.tsx (source tree; compiled into assets/index-Bti5VGBl.js)"
+    },
+    {
+      "what": "No hero_wash entry meant heroWash AND mobile_fold both reported donor_hero_unmeasured on every build from this donor.",
+      "fix": "hero_wash declared with the real hero selector (section#top) and the raw hero sample colours; see hero_wash_note for why this cannot re-introduce the old double-scrim."
+    },
+    {
+      "what": "The design had no reviews surface, so verified island reviews had nowhere to render and the engine appended its shared block under the design instead.",
+      "fix": "A reviews section (island-only, truth-law: no template testimonials, review-ask card only when a verified profile exists, else full collapse) now ships between the dark story band and the seasonal planner — the position the visual DNA always named ('clean review cards'). renders[] declares it so the engine no longer appends a duplicate."
+    },
+    {
+      "what": "The hero photograph was not a photo slot, so a prospect's own photo could never fill the hero, the video poster or the large gallery tile.",
+      "fix": "assets/hero-lawn-BktA-aJ_.jpg is now slot 1 (the concrete-elconstruction rung-3 pattern: filled hero photo and video poster are the same image)."
+    }
+  ],
+  "fixes_2026_08_20": [
+    {
+      "what": "Owner walkthrough punch list (video review of the live wss-test-absolute-lawn-care-landscaping-houston build), function half.",
+      "items": [
+        "NAV: the 'Lawn Care' and 'Landscape' items pointed at ids that never rendered; the maps link fell back to a dead #area anchor. Nav is now Services / Work / Reviews (conditional, exactly like its section) / Planner / Contact / FAQ — every href resolves to a real section — and the maps chip renders only when a verified profile exists. Anchor jumps clear the fixed header (scroll-margin-top) and scroll smoothly only when motion is welcome.",
+        "HEADER PHONE PILL: fill and ink now read from ONE pair — the engine's slab/slab-ink variables with the design's primary pair as the standalone fallback — so a theme pass that repoints the primary pair asymmetrically (the live light-mode dark-on-dark pill) can no longer split them. Hover shifts brightness, never the pair.",
+        "HERO INK GUARD: hero text rides donor-owned --hero-ink (warm white) instead of the theme's slab ink, because the hero backdrop is the design's own dark photograph in every theme; alpha steps for the /90 and /85 inks are proven against the recorded hero sample in the harness."
+      ]
+    },
+    {
+      "what": "Owner walkthrough punch list, visual half (cheap-now items; the rest is the visual pass).",
+      "items": [
+        "The headline underline traces itself through the line once (stroke-dash draw, reduced-motion-safe: the stroke sits complete with no animation).",
+        "Review cards carry the reviewer's verified Google face (googleusercontent-gated, the engine's own rule) with an initials monogram fallback, and a 'Google' source label ONLY on reviews carrying fields the verified Google lane alone emits (rating numeral, verified face, or publish date) — an intake-lane testimonial gets no badge it cannot prove.",
+        "Season cards: ink moved onto the card's own foreground pair and a 0.07-opacity wash of the seasonal photo slot (the client's own image on real builds) warms the flat dark boxes.",
+        "The Find/contact section moved above the planner and its links became floating obsidian chips (staggered drift, suppressed under reduced motion).",
+        "Footer carries the muted 'Built by wss-ai.com' attribution linking to https://wss-ai.com (owner's lead-gen loop)."
+      ]
+    }
+  ],
+  "fixes_2026_09_04": [
+    {
+      "what": "A-plus finalization lane on the static shell: the last CI run showed the shared hero-ssr fixture pinning this donor to the retired full-bleed SPA family while every other check passed.",
+      "items": [
+        "IDENTITY ATOMS: donor_county declared and zips/geo populated (Birmingham donor identity, plumbing-clean's one-zip scale) so the leak gate has real buckets for county, zip and coordinate leaks instead of relying on name/phone/email alone.",
+        "OPTIONAL WELDS: the last three bare welds guarded — geo.position meta ([[NEED:GEO]]), the three county rows of the service-x-city grid (whole cell collapses without a county, mirroring the phone-optional rule that a blank token removes the construct rather than emptying it), and the footer {{DOMAIN}} attribution span.",
+        "HERO LADDER MADE REAL: the marked video now mounts data-hero-video hidden — the previous shell carried the walker and ladder island but the video never carried the marker, so no rung could ever arm. The walker reveals it on loadedmetadata; an exhausted ladder re-hides it; reduced motion never arms. The design photograph paints the .hero-media fold underneath (rung 3, always painted) so no-JS, reduced-motion and slow-clip views all land on the photo, never a blank slab.",
+        "BRAND-ASSET GATE (the 6/50 dry_run_500_donor_identity_detected rows): the donor shipped a fallback mark named logo-fallback.svg — a filename matching the fleet's donor-brand-asset leak regex (assets/logo-*.svg), so every build from this donor 500'd its own identity gate on a shipped file. Renamed to client-logo-fallback.svg (the merged siblings' exact convention: same bytes, same onerror role, the client- prefix the scan explicitly exempts).",
+        "SHARED FIXTURE RE-PINNED: test/hero-ssr-prerender.test.js now treats this donor family-aware (the exact change #683 made for the plumbing fixture) — the static shell reports {present:true, family:\"static\", reason:\"static_h1_already_present\"} and the no-JS guarantees (exactly one <h1>, business name, trade/market line) hold in the served markup. The SPA-mount bridge shape stays supported for any future revert."
+      ]
+    }
+  ],
+  "alias_verticals": [
+    "landscaper",
+    "lawn care",
+    "yard"
+  ],
+  "registered_on": "2026-08-02",
+  "installed_at": "apps/backend/donors-clean/landscaping-evergreen",
+  "paletteDefaults": {
+    "accent": "#4a7c3f",
+    "accentInk": "#365d2d",
+    "accentText": "#ffffff",
+    "surface": "#fdfdfb",
+    "surfaceAlt": "#f0f3ec",
+    "slab": "#161d14",
+    "slabInk": "#f2f6ee",
+    "text": "#131a11",
+    "border": "#d8ded1"
+  },
+  "variants": {
+    "hero": [
+      "hero/video",
+      "hero/split-right",
+      "hero/editorial-slab"
+    ],
+    "services": [
+      "services/bento",
+      "services/three-column-cards",
+      "services/list-rail"
+    ],
+    "gallery": [
+      "gallery/masonry-grid",
+      "gallery/before-after-pairs",
+      "gallery/wide-filmstrip"
+    ],
+    "testimonials": [
+      "testimonials/cards",
+      "testimonials/single-pullquote",
+      "testimonials/logo-and-quote-split"
+    ],
+    "process": [
+      "process/numeral-rail",
+      "process/vertical-timeline",
+      "process/two-up-steps"
+    ],
+    "faq": [
+      "faq/accordion",
+      "faq/two-column",
+      "faq/inline-list"
+    ],
+    "cta": [
+      "cta/panel",
+      "cta/full-bleed-slab",
+      "cta/split-form-and-call"
+    ],
+    "ticker": [
+      "ticker/marquee",
+      "ticker/static-chip-row",
+      "ticker/none"
+    ]
+  },
+  "fictionalIdentity": {
+    "businessName": "Hollow Creek Landscape",
+    "owner": "Iris Vandermeer",
+    "phones": [
+      "+18285550114",
+      "828-555-0114",
+      "(828) 555-0114",
+      "828.555.0114"
+    ],
+    "emails": [
+      "studio@hollowcreekland.com",
+      "dispatch@hollowcreekland.com",
+      "vandermeer@hollowcreekland.com"
+    ],
+    "domain": "hollowcreekland.com",
+    "city": "Asheville",
+    "region": "NC",
+    "county": "Buncombe County",
+    "postal": "28801",
+    "geo": "35.5951;-82.5515",
+    "license": "NC-LC-8842",
+    "profileUrl": "https://maps.example.com/place/hollow-creek-landscape",
+    "logoUrl": "assets/client-logo-fallback.svg"
+  },
+  "engineInjectionPoint": "ENGINE INJECTION POINT comment immediately before <footer>",
+  "heroVideo": {
+    "slot": "section.hero .hero-media video[data-hero-video]",
+    "poster": "assets/hero-poster.svg",
+    "note": "Static-shell contract (2026-09-04): the marked <video> mounts hidden with its poster and the .hero-media paint-under photograph; the page's own ladder walker arms the #hero-video-ladder rungs and removes [hidden] only on loadedmetadata. Reduced motion never arms (walker guard plus the reduced-motion display:none rule). data-desktop-autoplay stays on the element as the design's desktop hook."
+  },
+  "a_plus_static_rebuild": {
+    "note": "The a-plus lane ships a static multi-section page (the owner-approved design direction) over the verbatim SPA assets: the compiled bundle, css and design photographs still ship whole, the hero ladder island + walker live in the shell, and every identity string stays tokenized. The page loads the compiled css first and assets/design.css second so the engine's unlayered theme/plate/floor overrides (appended to the alphabetically-last stylesheet, the compiled css) still apply."
+  }
+}

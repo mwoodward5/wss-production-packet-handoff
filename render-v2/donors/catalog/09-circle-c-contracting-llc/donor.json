@@ -1,0 +1,328 @@
+{
+  "version": 2,
+  "key": "09-circle-c-contracting-llc",
+  "name": "Circle C Contracting, LLC",
+  "category": "excavation",
+  "vertical": "excavation",
+  "requested_vertical": "general contractor",
+  "routing_conflict": true,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "0320b2df-7290-4e5f-8c6d-db0d772e37ce",
+  "lovable_source_commit": "8996e4f040393344459d02d222558e2a1603eedd",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "0320b2df-7290-4e5f-8c6d-db0d772e37ce",
+    "ref": "8996e4f040393344459d02d222558e2a1603eedd",
+    "repository": "https://github.com/mwoodward5/circlec-scroll-showcase",
+    "git_tree": "0d404669bf427f26c0e1a6aae84eda96170702e9"
+  },
+  "classification": "CINEMATIC",
+  "routes": [
+    "/"
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "oklch(0.985 0.008 80)",
+      "foreground": "oklch(0.18 0.02 60)",
+      "card": "oklch(1 0 0)",
+      "primary": "oklch(0.22 0.02 60)",
+      "secondary": "oklch(0.94 0.015 75)",
+      "accent": "oklch(0.78 0.16 65)",
+      "accent_amber": "oklch(0.82 0.16 70)",
+      "brand_clay": "oklch(0.55 0.13 50)",
+      "brand_steel": "oklch(0.32 0.015 250)",
+      "brand_ink": "oklch(0.16 0.015 60)"
+    },
+    "typography": {
+      "display": "Oswald, Impact, system-ui, sans-serif",
+      "body": "Inter, system-ui, sans-serif"
+    },
+    "radii": {
+      "base": "0.5rem",
+      "cards": "1rem"
+    },
+    "shadows": {
+      "card": "0 8px 24px -12px oklch(0.16 0.015 60 / 0.18)",
+      "deep": "0 24px 60px -20px oklch(0.16 0.015 60 / 0.35)",
+      "glow_amber": "0 30px 80px -30px oklch(0.78 0.16 65 / 0.55)"
+    }
+  },
+  "hero_contract": {
+    "type": "Surveyor Plat Sheet Split",
+    "desktop_spine_width_px": 220,
+    "media_clip_path": "polygon(0 0, 100% 0, 100% 100%, 8% 100%)",
+    "parallax_enabled": true,
+    "motion_elements": [
+      "trench_line_draw",
+      "dust_motes"
+    ],
+    "subsurface_artifact": "SoilProfile.tsx",
+    "seasonal_playbook": "FieldConditions.tsx"
+  },
+  "media_slots": [
+    {
+      "id": "hero_plate",
+      "role": "hero",
+      "route": "/",
+      "section": "Hero",
+      "aspect_ratio": "16:9",
+      "recommended_content": "Excavator trenching on rural site",
+      "crop_behavior": "object-cover with right-bias scale"
+    },
+    {
+      "id": "service_water_sewer",
+      "role": "service_main",
+      "route": "/",
+      "section": "Services",
+      "aspect_ratio": "4:3",
+      "recommended_content": "Water and sewer line installation"
+    },
+    {
+      "id": "service_septic",
+      "role": "service_secondary",
+      "route": "/",
+      "section": "Services",
+      "aspect_ratio": "16:9",
+      "recommended_content": "Septic system installation"
+    },
+    {
+      "id": "gallery_grid_01_11",
+      "role": "gallery",
+      "route": "/",
+      "section": "Work",
+      "aspect_ratio": "4:5",
+      "recommended_content": "11 authentic jobsite proof photographs"
+    }
+  ],
+  "content_slots": [
+    {
+      "slot": "business_name",
+      "value": "Circle C Contracting, LLC"
+    },
+    {
+      "slot": "phone",
+      "value": "(712) 420-9512",
+      "href": "tel:+17124209512"
+    },
+    {
+      "slot": "email",
+      "value": "info@circle-c-contracting.com",
+      "href": "mailto:info@circle-c-contracting.com"
+    },
+    {
+      "slot": "location_city",
+      "value": "Onawa"
+    },
+    {
+      "slot": "location_region",
+      "value": "Iowa"
+    },
+    {
+      "slot": "coordinates",
+      "lat": 42.0269,
+      "lng": -96.0972,
+      "elevation": "1,043 FT"
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "technical_stamp",
+      "location": "Hero Work Order Card",
+      "label": "REV A · New Request"
+    },
+    {
+      "type": "turnaround_commitment",
+      "location": "Hero Work Order Card",
+      "label": "Typical response: same business day"
+    },
+    {
+      "type": "operational_pillars",
+      "location": "Why Us Section",
+      "count": 4
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "engine": "schema.org",
+      "file": "src/routes/__root.tsx"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "target": "ServiceArea",
+      "coverage": "Monona County and surrounding communities",
+      "towns_count": 12
+    },
+    {
+      "target": "KnowledgeBase",
+      "file": "public/llms.txt"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "intent": "near_me_trenching",
+      "section": "Services"
+    },
+    {
+      "intent": "emergency_pipe_repair",
+      "section": "Contact"
+    }
+  ],
+  "map_location_slot": {
+    "engine": "OpenStreetMap Leaflet Iframe",
+    "marker_lat": 42.0269,
+    "marker_lng": -96.0972,
+    "hq_label": "Onawa, IA"
+  },
+  "content_density": {
+    "headline_style": "Compressed monumental uppercase",
+    "copy_density": "Sparse, factual, foreman-briefing tone",
+    "imagery_dominance": "High (authentic heavy equipment jobsite photos)"
+  },
+  "mobile_rules": {
+    "breakpoint_sm": "640px",
+    "breakpoint_md": "768px",
+    "breakpoint_lg": "1024px",
+    "sticky_dock_active": true,
+    "hero_spine_collapsed_on_mobile": true
+  },
+  "non_negotiables": [
+    "Preserve Oswald font for display headings",
+    "Preserve safety amber accent against deep charcoal/ink surfaces",
+    "Preserve SoilProfile.tsx subsurface diagram",
+    "Retain dual-action phone/quote conversion hierarchy"
+  ],
+  "safe_replacements": [
+    "business_name",
+    "phone_number",
+    "email_address",
+    "jobsite_photos",
+    "service_area_towns",
+    "geographic_coordinates"
+  ],
+  "leak_terms": [
+    "Circle C Contracting, LLC",
+    "Circle C Contracting",
+    "circle-c-contracting.com",
+    "info@circle-c-contracting.com",
+    "(712) 420-9512",
+    "17124209512",
+    "Onawa",
+    "Monona County",
+    "42.0269",
+    "-96.0972"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Oswald",
+      "Impact",
+      "system-ui",
+      "sans-serif",
+      "Inter"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.985 0.008 80)",
+    "oklch(0.18 0.02 60)",
+    "oklch(1 0 0)",
+    "oklch(0.22 0.02 60)",
+    "oklch(0.94 0.015 75)",
+    "oklch(0.78 0.16 65)",
+    "oklch(0.82 0.16 70)",
+    "oklch(0.55 0.13 50)"
+  ],
+  "fonts": [
+    "Oswald",
+    "Impact",
+    "system-ui",
+    "sans-serif",
+    "Inter"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "82ccdd39c53797d41ccae9f73cc6ee3ab19fe5853d6c499689d2e5fc25bdfde4",
+    "files": {
+      "assets/index-BgVMCrG1.css": "3616378ea6f9ea7651993a34c3f4829e737a15543b22ca2d1e66db8276b7b211",
+      "assets/index-Ci6oY2oT.js": "9482e8c54259243148a20c557af5a932cc5f82c62a2c83e253f3ac833890d4b3",
+      "index.html": "c3c1b38c5013eff8056315f688fbdfd999d0661018f9832ee13c20f8cf2ef3cf"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED",
+  "data_island_id": "wss-client-data",
+  "content_render_targets": {
+    "services": [
+      {
+        "path": "/",
+        "selector": "#services article"
+      }
+    ],
+    "about": [
+      {
+        "path": "/",
+        "selector": "#why p"
+      }
+    ],
+    "faqs": [
+      {
+        "path": "/",
+        "selector": "#faq"
+      }
+    ],
+    "reviews": [
+      {
+        "path": "/",
+        "selector": "#reviews"
+      }
+    ],
+    "hours": [
+      {
+        "path": "/",
+        "selector": "#contact .space-y-4 > p"
+      }
+    ],
+    "areas": [
+      {
+        "path": "/",
+        "selector": "#area ul"
+      }
+    ]
+  },
+  "content_channel_availability": {
+    "process": "unavailable_until_source_bound_render"
+  }
+}

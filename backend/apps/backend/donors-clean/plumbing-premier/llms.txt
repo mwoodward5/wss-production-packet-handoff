@@ -1,0 +1,17 @@
+# {{BUSINESS_NAME}}
+
+> Residential plumbing serving {{CITY}}, {{STATE}}.
+
+- Business: {{BUSINESS_NAME}}
+- Trade: Plumbing
+- Serves: {{CITY}}, {{STATE}}
+- Located in: {{ADDRESS_CITY}}, {{STATE}}
+- Website: {{SITE_URL}}
+[[NEED:ADDRESS]]- Address: {{ADDRESS}}
+[[/NEED]][[NEED:PHONE]]- Phone: {{PHONE}}
+[[/NEED]][[NEED:EMAIL]]- Email: {{EMAIL}}
+[[/NEED]][[NEED:LICENSE]]- License: {{LICENSE}}
+[[/NEED]][[NEED:RATING,REVIEW_COUNT]]- Rating: {{RATING}} from {{REVIEW_COUNT}} reviews
+[[/NEED]]
+Services: repairs, leak detection, drain cleaning, water heater and softener replacement, water line reroutes, remodels, new construction plumbing.
+Quotes are firm, written, and given before any work starts. No price is published online.

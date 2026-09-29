@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-07-09T20:10:45.459Z",
+  "safetyHold": {
+    "status": {
+      "ok": true,
+      "reviewHold": true,
+      "dripBatch": 0,
+      "outreachSender": {
+        "ok": true,
+        "domain": "go.wss-ai.com"
+      },
+      "outreachDns": {
+        "ok": true,
+        "checks": {
+          "dkim": true,
+          "spf": true,
+          "dmarc": true,
+          "mx": true
+        }
+      }
+    },
+    "drip": {
+      "ok": true,
+      "mode": "review_hold",
+      "job": "drip-scheduler",
+      "evaluated": 0,
+      "sent": 0,
+      "reason": "GHOST_AGENCY_REVIEW_HOLD is active"
+    }
+  },
+  "publicReplay": {
+    "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/nMwaXp_D4Z195PxeSZeuOguf/",
+    "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/nMwaXp_D4Z195PxeSZeuOguf/ghost-report.json",
+    "scan": {
+      "ok": true,
+      "internal": [],
+      "rawPlaces": [],
+      "malformed": []
+    }
+  },
+  "richard": {
+    "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/zvDpFw0bSkQn6hWjNRq3TxC0/",
+    "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/zvDpFw0bSkQn6hWjNRq3TxC0/ghost-report.json",
+    "renderer": "05-build-v7",
+    "qc_passed": true,
+    "scan": {
+      "ok": true,
+      "internal": [],
+      "rawPlaces": [],
+      "malformed": []
+    }
+  },
+  "outreachEmail": {
+    "ok": true,
+    "resendId": "5e164c22-9eed-4d3d-9c61-c3336c765e16",
+    "from": "Mark <hello@go.wss-ai.com>",
+    "providerVerified": true,
+    "sentTo": "woo***",
+    "note": "One acquisition-path proof email sent to the configured owner address only."
+  },
+  "liveSends": 1,
+  "liveCharges": 0
+}

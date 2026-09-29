@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/main.tsx", "src/spa.tsx", "vite.spa.config.ts"],
+  "compilerOptions": { "types": ["vite/client", "node"] }
+}

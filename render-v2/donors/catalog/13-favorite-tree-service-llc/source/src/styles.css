@@ -1,0 +1,415 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Favorite Tree Service brand: Forest Midnight + Weathered Ivory + Signal Amber */
+  /* Weathered Ivory #F2F0E8 */
+  --background: oklch(0.957 0.008 95);
+  /* Forest Midnight #08160F */
+  --foreground: oklch(0.16 0.02 155);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0.02 155);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0.02 155);
+
+  /* Canopy Green #103322 */
+  --primary: oklch(0.27 0.05 155);
+  --primary-foreground: oklch(0.957 0.008 95);
+  /* Evergreen Lift #1E5A3A */
+  --primary-glow: oklch(0.45 0.09 153);
+
+  /* Natural Metal tone */
+  --secondary: oklch(0.85 0.008 95);
+  --secondary-foreground: oklch(0.22 0.03 155);
+
+  --muted: oklch(0.92 0.008 95);
+  --muted-foreground: oklch(0.42 0.012 150);
+
+  /* Signal Amber #CF8C2F */
+  --accent: oklch(0.71 0.135 70);
+  --accent-foreground: oklch(0.16 0.02 155);
+
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.98 0.01 100);
+
+  /* Natural Metal #B6B1A3 */
+  --border: oklch(0.86 0.008 95);
+  --input: oklch(0.86 0.008 95);
+  --ring: oklch(0.71 0.135 70);
+
+  /* Forest Midnight surface for hero/footer */
+  --surface: oklch(0.16 0.02 155);
+  --surface-foreground: oklch(0.957 0.008 95);
+
+  --gradient-hero:
+    radial-gradient(ellipse 70% 60% at 18% 30%, oklch(0.45 0.09 153 / 0.35), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 10%, oklch(0.71 0.135 70 / 0.18), transparent 65%),
+    linear-gradient(170deg, oklch(0.18 0.025 155) 0%, oklch(0.08 0.015 155) 100%);
+  --gradient-cta: linear-gradient(135deg, oklch(0.74 0.135 70), oklch(0.62 0.13 55));
+  --gradient-card: linear-gradient(145deg, oklch(0.22 0.03 155 / 0.85), oklch(0.12 0.02 155 / 0.92));
+  --gradient-amber-line: linear-gradient(90deg, transparent, oklch(0.71 0.135 70 / 0.9), transparent);
+
+  --shadow-glow: 0 0 0 1px oklch(0.71 0.135 70 / 0.18), 0 30px 80px -20px oklch(0.08 0.015 155 / 0.65);
+  --shadow-elegant: 0 40px 100px -30px oklch(0.08 0.015 155 / 0.55);
+  --shadow-amber: 0 14px 50px -12px oklch(0.71 0.135 70 / 0.55);
+
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --font-sans: "Manrope", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .bg-hero {
+    background: var(--gradient-hero);
+  }
+  .bg-cta-gradient {
+    background: var(--gradient-cta);
+  }
+  .bg-card-gradient {
+    background: var(--gradient-card);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  .shadow-amber {
+    box-shadow: var(--shadow-amber);
+  }
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  .text-glow {
+    text-shadow: 0 0 30px oklch(0.55 0.15 150 / 0.5);
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 oklch(0.78 0.16 75 / 0.5); }
+    50% { box-shadow: 0 0 0 12px oklch(0.78 0.16 75 / 0); }
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2.4s ease-in-out infinite;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fade-up 0.7s ease-out both;
+  }
+
+  @keyframes hero-glow {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+  .animate-hero-glow {
+    animation: hero-glow 6s ease-in-out infinite;
+  }
+
+  /* Subtle cinematic Ken Burns drift for hero/photo cards */
+  @keyframes ken-burns {
+    0% { transform: scale(1.06) translate3d(0, 0, 0); }
+    50% { transform: scale(1.12) translate3d(-1.5%, -1%, 0); }
+    100% { transform: scale(1.06) translate3d(0, 0, 0); }
+  }
+  .animate-ken-burns {
+    animation: ken-burns 22s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  @keyframes yard-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); }
+    50% { transform: translate3d(0.5rem, -0.35rem, 0) rotate(1deg); }
+  }
+  .animate-yard-drift {
+    animation: yard-drift 14s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-pulse-glow,
+    .animate-fade-up,
+    .animate-hero-glow,
+    .animate-ken-burns,
+    .animate-yard-drift,
+    .text-shimmer {
+      animation: none;
+    }
+  }
+
+  /* Slow shimmer sweep for branded headline accent */
+  @keyframes shimmer-sweep {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--primary-glow) 0%,
+      oklch(0.85 0.18 95) 45%,
+      var(--primary-glow) 70%,
+      var(--primary-glow) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shimmer-sweep 8s ease-in-out infinite;
+  }
+
+  /* Dark gradient for FAQ panel */
+  .bg-faq-dark {
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 0%, oklch(0.32 0.08 150 / 0.45), transparent 70%),
+      radial-gradient(ellipse 50% 40% at 100% 100%, oklch(0.45 0.14 150 / 0.30), transparent 70%),
+      linear-gradient(180deg, oklch(0.16 0.025 150) 0%, oklch(0.10 0.02 150) 100%);
+  }
+}
+
+@layer utilities {
+  /* Premium FT hero composition utilities */
+  .bg-fts-hero {
+    background:
+      radial-gradient(ellipse 60% 50% at 15% 35%, oklch(0.45 0.09 153 / 0.32), transparent 60%),
+      radial-gradient(ellipse 45% 45% at 92% 12%, oklch(0.71 0.135 70 / 0.18), transparent 65%),
+      linear-gradient(170deg, oklch(0.18 0.025 155) 0%, oklch(0.06 0.012 155) 100%);
+  }
+
+  .fts-amber-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, oklch(0.71 0.135 70 / 0.85), transparent);
+  }
+
+  .fts-grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  @keyframes amber-radiate {
+    0%, 100% { opacity: 0.55; transform: scale(1); }
+    50% { opacity: 0.95; transform: scale(1.08); }
+  }
+  .animate-amber-radiate {
+    animation: amber-radiate 5s ease-in-out infinite;
+  }
+
+  @keyframes slow-parallax {
+    0% { transform: translate3d(0, 0, 0) scale(1.08); }
+    50% { transform: translate3d(-1.2%, -0.6%, 0) scale(1.12); }
+    100% { transform: translate3d(0, 0, 0) scale(1.08); }
+  }
+  .animate-slow-parallax {
+    animation: slow-parallax 26s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  @keyframes hairline-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  .animate-hairline-sweep {
+    animation: hairline-sweep 7s linear infinite;
+  }
+
+  .text-amber-accent {
+    color: oklch(0.74 0.135 70);
+  }
+
+  /* Refined ivory/metal divider used between dark sections */
+  .fts-metal-rule {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, oklch(0.72 0.012 95 / 0.45), transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-amber-radiate,
+    .animate-slow-parallax,
+    .animate-hairline-sweep {
+      animation: none;
+    }
+  }
+}
+
+/* =========================================================
+   FLAGSHIP 3.0 — Editorial Heritage hero tokens (FT3)
+   Fresh palette unique to this build; OKLCH only.
+   ========================================================= */
+:root {
+  /* Loam — deep walnut-forest base (background) */
+  --ft3-loam: oklch(0.18 0.022 120);
+  /* Cream — warm bone for serif type */
+  --ft3-cream: oklch(0.94 0.018 92);
+  /* Sage — muted heritage green secondary */
+  --ft3-sage: oklch(0.55 0.06 145);
+  /* Accent — burnt copper (jewel tone) */
+  --ft3-accent: oklch(0.68 0.155 55);
+
+  --font-serif-display: "Fraunces", "Cormorant Garamond", "Source Serif Pro", Georgia, serif;
+}
+
+@layer utilities {
+  .ft3-hero {
+    background: var(--ft3-loam);
+    font-family: var(--font-sans);
+  }
+
+  .font-serif {
+    font-family: var(--font-serif-display);
+    font-feature-settings: "ss01", "salt", "liga";
+  }
+
+  /* Editorial duotone over the hero video — amber/sage cast */
+  .ft3-video {
+    filter: contrast(1.04) saturate(0.55) brightness(0.78) sepia(0.18) hue-rotate(-12deg);
+  }
+  .ft3-poster {
+    filter: contrast(1.05) saturate(0.6) brightness(0.78) sepia(0.18) hue-rotate(-12deg);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ft3-video { display: none; }
+  }
+
+  /* Heavy fractal-noise grain layer */
+  .ft3-grain {
+    opacity: 0.28;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* Schematic gentle drift */
+  .ft3-schematic {
+    animation: ft3-schematic-drift 22s ease-in-out infinite;
+    transform-origin: center;
+  }
+  @keyframes ft3-schematic-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.18; }
+    50% { transform: translate3d(-0.6%, -0.4%, 0) scale(1.015); opacity: 0.22; }
+  }
+
+  /* Headline word reveal */
+  .ft3-word {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: ft3-word-in 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+  @keyframes ft3-word-in {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .ft3-fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: ft3-word-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft3-word, .ft3-fade-up {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+    .ft3-schematic { animation: none; }
+  }
+
+  /* Range slider styling for the Quote Configurator */
+  .ft3-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 9999px;
+    outline: none;
+    cursor: pointer;
+  }
+  .ft3-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: var(--ft3-cream);
+    border: 2px solid var(--ft3-accent);
+    box-shadow: 0 4px 14px -2px rgba(0,0,0,0.5);
+    cursor: grab;
+    transition: transform 0.15s ease;
+  }
+  .ft3-slider::-webkit-slider-thumb:active { transform: scale(1.1); cursor: grabbing; }
+  .ft3-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: var(--ft3-cream);
+    border: 2px solid var(--ft3-accent);
+    cursor: grab;
+  }
+}
+

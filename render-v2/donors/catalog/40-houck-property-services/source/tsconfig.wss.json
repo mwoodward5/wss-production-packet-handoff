@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["src/main.tsx","src/lib/wss-bridge.ts","src/lib/client-site-data.d.cts","src/routes/index.tsx","src/components/houck/*.tsx","vite.wss.config.ts"]}

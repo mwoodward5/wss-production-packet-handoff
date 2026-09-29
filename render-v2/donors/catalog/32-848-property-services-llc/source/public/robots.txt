@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://848propertyservices.com/sitemap.xml
+
+# IndexNow key (Bing, Yandex, Seznam, Naver auto-indexing)
+# Verifies ownership for instant URL submission protocol.
+# Key file: /848propertyservices-indexnow-7f3a9c2e1b4d4e8a9c0d5f6e7a8b9c0d.txt

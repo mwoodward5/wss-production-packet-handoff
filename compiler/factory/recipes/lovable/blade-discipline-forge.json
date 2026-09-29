@@ -1,0 +1,98 @@
+{
+ "id": "blade-discipline-forge",
+ "source": "e8bc0582-7262-4c3c-9292-53359399c02b",
+ "palette": {
+  "vars": {
+   "--ink": "oklch(0.155 0.010 60)",
+   "--ink-2": "oklch(0.20 0.010 60)",
+   "--ink-3": "oklch(0.25 0.010 60)",
+   "--bone": "oklch(0.955 0.014 82)",
+   "--bone-dim": "oklch(0.84 0.014 82)",
+   "--paper": "oklch(0.965 0.014 82)",
+   "--paper-2": "oklch(0.92 0.016 80)",
+   "--paper-ink": "oklch(0.22 0.010 60)",
+   "--paper-steel": "oklch(0.52 0.012 60)",
+   "--steel": "oklch(0.72 0.014 240)",
+   "--edge": "oklch(0.74 0.09 78)",
+   "--edge-deep": "oklch(0.55 0.09 68)",
+   "--sambo": "oklch(0.55 0.19 27)",
+   "--seal": "oklch(0.46 0.16 25)",
+   "--brass": "oklch(0.72 0.09 75)",
+   "--hairline": "oklch(1 0 0 / 12%)",
+   "--hairline-ink": "oklch(0 0 0 / 12%)",
+   "--background": "var(--ink)",
+   "--foreground": "var(--bone)",
+   "--card": "var(--ink-2)",
+   "--card-foreground": "var(--bone)",
+   "--popover": "var(--ink-2)",
+   "--popover-foreground": "var(--bone)",
+   "--primary": "var(--bone)",
+   "--primary-foreground": "var(--ink)",
+   "--secondary": "var(--ink-2)",
+   "--secondary-foreground": "var(--bone)",
+   "--muted": "var(--ink-2)",
+   "--muted-foreground": "var(--steel)",
+   "--accent": "var(--edge)",
+   "--accent-foreground": "var(--ink)",
+   "--destructive": "var(--sambo)",
+   "--destructive-foreground": "var(--bone)",
+   "--border": "var(--hairline)",
+   "--input": "var(--hairline)",
+   "--ring": "var(--edge)",
+   "--sidebar": "var(--ink-2)",
+   "--sidebar-foreground": "var(--bone)",
+   "--sidebar-primary": "var(--bone)",
+   "--sidebar-primary-foreground": "var(--ink)",
+   "--sidebar-accent": "var(--edge)",
+   "--sidebar-accent-foreground": "var(--ink)",
+   "--sidebar-border": "var(--hairline)",
+   "--sidebar-ring": "var(--edge)",
+   "--chart-1": "var(--edge)",
+   "--chart-2": "var(--steel)",
+   "--chart-3": "var(--sambo)",
+   "--chart-4": "var(--bone-dim)",
+   "--chart-5": "var(--bone)"
+  },
+  "mode": "dark"
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter Tight",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter+Tight:wght@400;500;600&display=swap"
+ },
+ "radius": "4px",
+ "shadows": [],
+ "keyframes": [
+  {
+   "name": "bef-fade-up",
+   "css": "@keyframes bef-fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "bef-edge-in",
+   "css": "@keyframes bef-edge-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }"
+  },
+  {
+   "name": "bef-inkwash",
+   "css": "@keyframes bef-inkwash { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }"
+  },
+  {
+   "name": "bef-breath",
+   "css": "@keyframes bef-breath { 0%, 100% { opacity: 0.55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }"
+  },
+  {
+   "name": "bef-stamp-in",
+   "css": "@keyframes bef-stamp-in { 0% { opacity: 0; transform: scale(1.35) rotate(-6deg); filter: blur(2px); } 60% { opacity: 1; transform: scale(0.94) rotate(1deg); filter: blur(0); } 100% { opacity: 1; transform: scale(1) rotate(0); filter: blur(0); } }"
+  },
+  {
+   "name": "bef-brand-shimmer",
+   "css": "@keyframes bef-brand-shimmer { 0% { background-position: -180% 0; } 45% { background-position: 280% 0; } 100% { background-position: 280% 0; } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "gradient-text",
+  "noise",
+  "glow",
+  "shimmer"
+ ]
+}

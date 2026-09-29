@@ -1,0 +1,2 @@
+# Preserve exact snapshot and donor bytes; hashes are byte-sensitive.
+* -text

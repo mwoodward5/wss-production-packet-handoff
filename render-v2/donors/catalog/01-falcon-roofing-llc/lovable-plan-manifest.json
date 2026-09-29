@@ -1,0 +1,360 @@
+{
+  "project_name": "Falcon Roofing LLC",
+  "vertical": "Roofing & Exterior Contracting",
+  "classification": "Premier",
+  "routes": [
+    {
+      "path": "/",
+      "component": "src/pages/Index.tsx",
+      "purpose": "Primary conversion landing page and service overview"
+    },
+    {
+      "path": "/roof-replacement",
+      "component": "src/pages/RoofReplacement.tsx",
+      "purpose": "Residential architectural shingle replacement authority"
+    },
+    {
+      "path": "/roof-repair",
+      "component": "src/pages/RoofRepair.tsx",
+      "purpose": "Leak triage, storm-damage diagnostics, and flashing repair"
+    },
+    {
+      "path": "/commercial-roofing",
+      "component": "src/pages/Commercial.tsx",
+      "purpose": "Commercial low-slope TPO and EPDM membrane systems"
+    },
+    {
+      "path": "/gutters-siding-trim",
+      "component": "src/pages/GuttersSiding.tsx",
+      "purpose": "Seamless gutters, siding, fascia, and exterior protection"
+    },
+    {
+      "path": "/service-area",
+      "component": "src/pages/ServiceAreaPage.tsx",
+      "purpose": "Regional geographic authority and municipal coverage hub"
+    },
+    {
+      "path": "/contact",
+      "component": "src/pages/Contact.tsx",
+      "purpose": "Direct quote intake, verified NAP, and interactive map"
+    }
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "hsl(36 30% 97%)",
+      "foreground": "hsl(220 18% 11%)",
+      "primary": "hsl(220 18% 11%)",
+      "primary_foreground": "hsl(36 30% 97%)",
+      "accent": "hsl(43 71% 64%)",
+      "accent_glow": "hsl(45 86% 72%)",
+      "secondary": "hsl(215 12% 90%)",
+      "muted": "hsl(35 18% 93%)",
+      "muted_foreground": "hsl(220 8% 38%)",
+      "border": "hsl(220 10% 84%)",
+      "signal": "hsl(46 96% 52%)"
+    },
+    "typography": {
+      "display": "Plus Jakarta Sans, system-ui, sans-serif",
+      "sans": "Inter, system-ui, sans-serif",
+      "mono": "JetBrains Mono, IBM Plex Mono, monospace"
+    },
+    "border_radius": {
+      "base": "0.375rem",
+      "tight_subelements": "2px"
+    },
+    "textures": [
+      "blueprint-grid",
+      "blueprint-grid-dark",
+      "tape-strip",
+      "page-hero-scan"
+    ]
+  },
+  "hero_contract": {
+    "viewport_height_desktop": "88vh",
+    "viewport_height_mobile": "86vh",
+    "media_layer": "src/components/HeroMedia.tsx",
+    "required_scrim": "bg-gradient-hero-strong",
+    "motion_effects": [
+      "hero-flash",
+      "hero-bolt-svg",
+      "blueprint-grid-dark"
+    ],
+    "interactive_widget": {
+      "name": "Roof Command A-01",
+      "slots": 9,
+      "triage_channels": [
+        "tel:",
+        "mailto:",
+        "internal_routes"
+      ]
+    }
+  },
+  "media_slots": [
+    {
+      "slot_id": "MED-01",
+      "route": "/",
+      "section": "Hero",
+      "semantic_role": "Primary Hero Plate",
+      "ideal_ratio": "16:9",
+      "object_position": "center 35%",
+      "asset_key": "heroRoof"
+    },
+    {
+      "slot_id": "MED-02",
+      "route": "/",
+      "section": "ResVsCommercial",
+      "semantic_role": "Residential Spec Plate",
+      "ideal_ratio": "16:10",
+      "object_position": "center",
+      "asset_key": "residential"
+    },
+    {
+      "slot_id": "MED-03",
+      "route": "/",
+      "section": "ResVsCommercial",
+      "semantic_role": "Commercial Spec Plate",
+      "ideal_ratio": "16:10",
+      "object_position": "center",
+      "asset_key": "commercial"
+    },
+    {
+      "slot_id": "MED-04",
+      "route": "/service-area",
+      "section": "ServiceArea",
+      "semantic_role": "Regional Aerial Backdrop",
+      "ideal_ratio": "16:10",
+      "object_position": "center 50%",
+      "asset_key": "serviceAreaMap"
+    },
+    {
+      "slot_id": "MED-05",
+      "route": "/roof-replacement",
+      "section": "PageHero",
+      "semantic_role": "Replacement Authority Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "residential"
+    },
+    {
+      "slot_id": "MED-06",
+      "route": "/roof-repair",
+      "section": "PageHero",
+      "semantic_role": "Repair Authority Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "residential"
+    },
+    {
+      "slot_id": "MED-07",
+      "route": "/commercial-roofing",
+      "section": "PageHero",
+      "semantic_role": "Commercial Authority Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "commercial"
+    },
+    {
+      "slot_id": "MED-08",
+      "route": "/gutters-siding-trim",
+      "section": "PageHero",
+      "semantic_role": "Gutters & Siding Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "gutters"
+    },
+    {
+      "slot_id": "MED-09",
+      "route": "/service-area",
+      "section": "PageHero",
+      "semantic_role": "Service Hub Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "process"
+    }
+  ],
+  "content_slots": [
+    {
+      "slot": "BUSINESS.name",
+      "target_file": "src/lib/business.ts",
+      "usage": "Legal business name site-wide and in schema"
+    },
+    {
+      "slot": "BUSINESS.phoneDisplay",
+      "target_file": "src/lib/business.ts",
+      "usage": "Visible phone formatting across 9 locations"
+    },
+    {
+      "slot": "BUSINESS.phoneTel",
+      "target_file": "src/lib/business.ts",
+      "usage": "Click-to-call link href"
+    },
+    {
+      "slot": "BUSINESS.email",
+      "target_file": "src/lib/business.ts",
+      "usage": "Direct contact, lead notifications, and footer"
+    },
+    {
+      "slot": "BUSINESS.owner",
+      "target_file": "src/lib/business.ts",
+      "usage": "Owner-led trust messaging and process steps"
+    },
+    {
+      "slot": "BUSINESS.street",
+      "target_file": "src/lib/business.ts",
+      "usage": "Physical street address"
+    },
+    {
+      "slot": "BUSINESS.city",
+      "target_file": "src/lib/business.ts",
+      "usage": "Headquarters municipality"
+    },
+    {
+      "slot": "BUSINESS.region",
+      "target_file": "src/lib/business.ts",
+      "usage": "State abbreviation (e.g. OH)"
+    },
+    {
+      "slot": "BUSINESS.postal",
+      "target_file": "src/lib/business.ts",
+      "usage": "ZIP / Postal code"
+    },
+    {
+      "slot": "BUSINESS.serviceArea",
+      "target_file": "src/lib/business.ts",
+      "usage": "Array of 10 primary municipalities covered"
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "Top Spec Bar",
+      "location": "src/components/Header.tsx",
+      "type": "License / Accreditation String"
+    },
+    {
+      "slot": "Hero Jurisdictional Stamp",
+      "location": "src/components/sections/Hero.tsx",
+      "type": "Territory & Postal Code Proof"
+    },
+    {
+      "slot": "BBB Trust Button",
+      "location": "src/components/Footer.tsx",
+      "type": "External verified profile gateway"
+    },
+    {
+      "slot": "Contact Page BBB Card",
+      "location": "src/pages/Contact.tsx",
+      "type": "BBB A- Rating Verification Gateway"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "RoofingContractor",
+      "target_file": "src/lib/schema.ts",
+      "binding": "localBusinessSchema"
+    },
+    {
+      "type": "Service",
+      "target_file": "src/lib/schema.ts",
+      "binding": "serviceSchema"
+    },
+    {
+      "type": "FAQPage",
+      "target_file": "src/lib/schema.ts",
+      "binding": "faqSchema"
+    },
+    {
+      "type": "Organization",
+      "target_file": "src/lib/schema.ts",
+      "binding": "organizationSchema"
+    },
+    {
+      "type": "WebSite",
+      "target_file": "src/lib/schema.ts",
+      "binding": "websiteSchema"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "location": "Hero & PageHero Subtitles",
+      "role": "Direct answer machine-quotable service statements"
+    },
+    {
+      "location": "ServiceArea Coverage Matrix",
+      "role": "Near-me municipal intent and postal targeting"
+    },
+    {
+      "location": "Authority Page Body Blocks",
+      "role": "Zoning, building codes, and severe weather response"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "component": "src/components/sections/Faq.tsx",
+      "pattern": "Conversational natural question matching spoken query"
+    },
+    {
+      "component": "src/pages/RoofReplacement.tsx",
+      "pattern": "First-sentence concise speakable answer"
+    }
+  ],
+  "map_location_slot": {
+    "coordinates": {
+      "lat": 40.1581,
+      "lng": -83.0752
+    },
+    "interactive_components": [
+      "src/components/sections/ServiceArea.tsx",
+      "src/pages/Contact.tsx",
+      "src/pages/ServiceAreaPage.tsx"
+    ],
+    "deep_links": [
+      "Google Maps Search API",
+      "Apple Maps Protocol"
+    ]
+  },
+  "content_density": {
+    "hero_headline_max_words": 6,
+    "services_count": 4,
+    "process_steps_count": 4,
+    "authority_page_word_count_target": 1400,
+    "homepage_faq_count": 5
+  },
+  "mobile_rules": {
+    "breakpoint_sm": "640px",
+    "breakpoint_md": "768px",
+    "breakpoint_lg": "1024px",
+    "sticky_dock_active": "< 1024px",
+    "sticky_dock_component": "src/components/StickyMobileCta.tsx",
+    "tap_target_min_height": "48px"
+  },
+  "non_negotiables": [
+    "Preserve monospace uppercase eyebrows with tracking-0.22em",
+    "Strict 2px to 6px industrial corner radius; zero pill or circular buttons",
+    "Preserve blueprint-grid and tape-strip architectural styling",
+    "Maintain alternating dark graphite and warm plaster section backgrounds",
+    "HeroMedia must maintain poster fallback before video mount",
+    "All media assets must be bundled through src/lib/assets.ts",
+    "No fabricated reviews, licenses, or ratings without certified proof",
+    "Maintain 50/50 split StickyMobileCta on viewports below 1024px"
+  ],
+  "safe_replacements": [
+    "BUSINESS object in src/lib/business.ts",
+    "ASSETS bundled image files in src/lib/assets.ts",
+    "--accent and --accent-glow HSL values in src/index.css",
+    "Client logo files in public/ and src/assets/",
+    "SYSTEMS service definitions in src/components/sections/Services.tsx",
+    "Authority text copy on inner service routes",
+    "FAQ question and answer content across all pages",
+    "Google Tag Manager and Analytics IDs in index.html"
+  ],
+  "lovable_classification": "Commercial & Residential Trade Contractor",
+  "classification_basis": "Seven documented routes, including dedicated service, area, and contact pages",
+  "project_id": "61a04a5f-5cb8-4078-a2da-1b60f17fc4a3",
+  "project_url": "https://lovable.dev/projects/61a04a5f-5cb8-4078-a2da-1b60f17fc4a3",
+  "source_plan_file": "01-falcon-roofing-llc-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:23:37.451126Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

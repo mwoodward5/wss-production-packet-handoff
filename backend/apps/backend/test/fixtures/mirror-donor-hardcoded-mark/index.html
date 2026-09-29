@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{BUSINESS_NAME}} — {{CITY}}, {{STATE}}</title>
+  <link rel="canonical" href="{{SITE_URL}}" />
+</head>
+<body>
+  <header>
+    <!-- THE DEFECT, PRESERVED ON PURPOSE. This donor draws its own mark inline
+         and exposes no logo slot anywhere. The engine still fetches the
+         client's logo and still writes the client logo asset (which serves 200,
+         image/png) - but nothing points at it, so every mirror built from this
+         donor renders THIS glyph, byte-identical across every company.
+         The brand gate must fail here. Do not "fix" this file. -->
+    <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="2" y="2" width="44" height="44" rx="14" fill="#EDF4F2" />
+      <circle cx="12" cy="13" r="3.5" fill="#E09154" />
+    </svg>
+    <span class="brand-word">{{BUSINESS_NAME}}</span>
+    <a class="phone" href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>
+  </header>
+  <main>
+    <h1>{{HERO_HEADLINE}}</h1>
+    <p class="locale">{{CITY}}, {{STATE}}</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,350 @@
+{
+  "name": "plumbing-clean",
+  "vertical": "plumbing",
+  "label": "Clean",
+  "source": "Verbatim WSS port of the owner-supplied Lovable project harter_pumping_site_1 (the Harter Custom Pumping 'Dispatch' design: editorial agricultural brutalism - slurry-black, raw cream, signal gold, oxidized copper). Built from the actual project source at token level: every identity string (business name, geography, phone, email, address, maps, coordinates, counties, founding-year claims) is a WSS token or a WSSC-bridged array; the newspaper furniture - utility ticker, issue line, six-layer parallax hero with glassmorphism OPS-INSTRUMENT HUD and annotation pins, gold dispatch ticker, animated liquid-wave SVG, marquee, manifesto with drop cap, three monumental service cards, copper CTA band, annotated technical-reference showcase, field-plate gallery mosaic, the three-tool workshop (Drip Meter, Water Heater Check, seasonal schedule), process timeline, region band with registration-marked map, review cards, FAQ ledger, brutalist quote form and colophon footer - ships exactly as designed, compiled as a static client SPA (TanStack Router route tree running client-side, Vite + Tailwind v4 build).",
+  "source_project": {
+    "provider": "Lovable",
+    "project_dir": "C:/ports/harter_pumping_site_1",
+    "port_mode": "verbatim source port; TanStack-routes design recompiled as a static client SPA; tokenized identity; WSS content bridge; hero video rung"
+  },
+  "sanitised": "2026-08-16",
+  "rebuilt": "2026-08-17",
+  "stack": "compiled Vite React (TanStack Router client-side, Tailwind CSS v4) bundle + Anton/Fraunces/Inter/JetBrains Mono via Google Fonts; static hosting, no request-time build",
+  "donor_business_name": "Harter Custom Pumping, Inc.",
+  "donor_phone": "563-875-8730",
+  "donor_email": "harters@yousq.net",
+  "donor_city": "Dyersville",
+  "donor_domain": "hartercustompumping.com",
+  "persons": [
+    "Harter"
+  ],
+  "donor_county": "Dubuque County",
+  "zips": [
+    "52040"
+  ],
+  "geo": [
+    "42.4844",
+    "-91.1232"
+  ],
+  "persons_note": "The source design's identity - the Harter name, its 1993/32-year heritage ornaments (Est. MCMXCIII, Vol. 32, 'thirty-two years', 'The Harter Family', the Hwy 136 field note, the HCP-DYE fingerprint comment), the Dyersville/Northeast-Iowa geography, the seven-county coverage lists, the septic/manure service copy and the 24/7 dispatch claims - is explicitly donor identity and none of it survives in any shipped byte. Where the furniture required copy, the claim is either a token (CITY, STATE, HERO_HEADLINE), a WSSC-bridged array (areas/services/faqs/reviews), or generic plumbing copy the fleet already proved on live builds.",
+  "socials": [],
+  "account_ids": [],
+  "consumes_content": true,
+  "content_render_targets": {
+    "services": [
+      {
+        "path": "/",
+        "selector": "section#services"
+      }
+    ],
+    "faqs": [
+      {
+        "path": "/",
+        "selector": "main > section:nth-of-type(13)"
+      }
+    ]
+  },
+  "renders": [
+    "services",
+    "faq"
+  ],
+  "renders_note": "The compiled bundle renders verified services and faqs itself via the window.__WSS_CONTENT__ bridge: services into the home service cards and the /services route tree, faqs into the home LEDGER band. Island areas surface only as footer echoes, so coverage is not claimed: the engine's shared service-area block fills the gap and stays floor-auditable.",
+  "photo_slots": [
+    "assets/hero-poster.svg",
+    "assets/gallery-truck-side--xD2eLS2.jpg",
+    "assets/gallery-tank-lid-BatIwjcb.jpg",
+    "assets/gallery-hose-coil-u1y-5BXu.jpg",
+    "assets/gallery-barn-C_WGOXwk.jpg",
+    "assets/hero-detail-fitting-CjWkqcPK.jpg",
+    "assets/hands-brass-CJB7pltG.jpg",
+    "assets/cgi-pump-Cr9Tib_S.jpg"
+  ],
+  "photo_slot_prominence": [
+    "assets/hero-poster.svg",
+    "assets/hero-detail-fitting-CjWkqcPK.jpg",
+    "assets/gallery-truck-side--xD2eLS2.jpg",
+    "assets/gallery-tank-lid-BatIwjcb.jpg",
+    "assets/gallery-hose-coil-u1y-5BXu.jpg",
+    "assets/gallery-barn-C_WGOXwk.jpg",
+    "assets/hands-brass-CJB7pltG.jpg",
+    "assets/cgi-pump-Cr9Tib_S.jpg"
+  ],
+  "photo_slots_note": "Eight slots in design order, THE FIRST being the hero-poster slot itself (assets/hero-poster.svg): the falcon-family wiring that brings the donor under lib/mirror-engine/hero-poster.js — the pass re-owns that slot per build (a provenance- and region-gated prospect photograph when one qualifies, the manifest's REAL hero_video.poster photograph — assets/hero-cgi-flagship-Dla_-qtr.jpg, not the drawn placeholder — otherwise) and holds the compile-time ships assertion over it. The four field-plate gallery mosaic images (home Gallery + /projects route) and the three detail plates follow (macro fitting in the hero strip + contact band, brass hands and the CGI render as service-card thumbs + showcase). hero-topo-map and topo-fields are background textures/maps, not slots. On real builds the engine overwrites slots with ownership-gated client photographs. photo_slot_prominence re-ranks the FILL order (owner verdict, 2026-09-01: the client's own photos must appear HIGH, not buried under donor sections): the hero poster slot is the first-second surface, then the hero-strip detail plate renders above the Gallery mosaic, so it takes the next owned photograph; the mosaic follows in design order; donor stock fills every gap from the bottom up.",
+  "hero_floor": {
+    "selector": "#top",
+    "why": "Visual QA round 1, 2026-09-01: the instrument-widget plumbing hero can put H1/subcopy over a busy cinematic gradient before the widget settles. The engine appends the same proven hero contrast floor used by fencing without editing the donor bundle."
+  },
+  "hero_note": "The donor owns its hero directly: the parallax flagship stage (aurora backplate, topo texture, grid paper, film grain, gradient veils, moving sheen, scanline, registration marks) paints first, the marked <video> reveals above it only when a ladder rung arms. There is no hero_wash manifest entry - the design's own six-layer stack owns the pixels - but hero_floor hardens the copy band.",
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-plumbing-clean.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-plumbing-clean.mp4",
+    "poster": "assets/hero-cgi-flagship-Dla_-qtr.jpg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (REAL bytes ship today: the donor-owned monochrome plumbing reel, the 1939853-byte mp4 this donor has always owned, copied from assets/hero.mp4 at re-stage; rung 2 plays on every build as-is)",
+      "the design photograph (hero-cgi-flagship, the cinematic layer and the baked-in poster)",
+      "the drawn slurry-dark hero composition (aurora + gradients under everything)"
+    ],
+    "note": "Owner's order: verbatim design, live video rung. The marked <video> carries autoPlay/muted/loop/playsInline/preload=metadata/hidden + the oversized grayscale crop look, sits ABOVE the design's own photograph inside the stage, and reveals only when the ladder runtime in index.html arms a rung whose bytes shipped; an error steps down silently; reduced motion never arms the video rungs (runtime guard plus the display:none CSS on the marked element). The engine writes an approved clip to client_video_path (mp4 only); never a borrowed or fabricated clip."
+  },
+  "spa_routes": [
+    "/services",
+    "/projects",
+    "/service-area",
+    "/faq",
+    "/contact"
+  ],
+  "spa_routes_note": "Client-side routes this compiled donor owns (TanStack Router, recompiled as a static SPA). The engine rewrites these to index.html explicitly so a real 404.html can serve every OTHER unmatched path without breaking the donor nav. /projects is new furniture from the verbatim source (the field-plate gallery route).",
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [
+      "/services",
+      "/projects",
+      "/service-area",
+      "/faq",
+      "/contact"
+    ],
+    "catchAll": "* -> 404 (root notFoundComponent renders in-SPA)"
+  },
+  "classification": {
+    "verticalFamilies": [
+      "home-repair"
+    ],
+    "conversionArchetypes": [
+      "request-estimate"
+    ],
+    "shape": "multi-route-editorial-cinematic",
+    "routeDepth": "shallow",
+    "photoDemand": "high"
+  },
+  "visual_dna": {
+    "reference": "Harter Custom Pumping 'The Dispatch' (Lovable, harter_pumping_site_1)",
+    "hero": "fixed utility ticker + glass nav over a six-layer parallax flagship stage with glassmorphism OPS-INSTRUMENT HUD, floating annotation pins, gold dispatch ticker and an animated liquid-wave SVG footer",
+    "depth": [
+      "aurora radial backplate",
+      "topographic map texture (parallax)",
+      "newspaper grid paper",
+      "halftone film grain",
+      "gradient veils + moving sheen + scanline",
+      "corner registration marks throughout"
+    ],
+    "section_rhythm": [
+      "six-layer hero with HUD instrument",
+      "gold dispatch ticker + field-note strip",
+      "giant type marquee",
+      "manifesto magazine spread with drop cap",
+      "three monumental service cards",
+      "copper CTA band",
+      "annotated technical-reference showcase",
+      "field-plate gallery mosaic",
+      "three-widget planning workshop",
+      "process timeline",
+      "bone CTA band",
+      "region band with registration-marked map",
+      "review cards (verified only)",
+      "FAQ ledger",
+      "brutalist quote form",
+      "newspaper colophon footer"
+    ],
+    "mobile": "single-column conversion path, visible semantic H1, full-width CTAs, no horizontal overflow",
+    "motion": "hero parallax + HUD sweep + marquees + micro-interactions; fully suppressed for reduced motion"
+  },
+  "brand_secondary_slot": "--brand-secondary",
+  "brand_secondary_note": "This donor opts in to the client's SECOND logo colour. --brand-secondary defaults to var(--accent-glow) (an unbranded build is unchanged) and --copper is the role that spends it: section eyebrows, step numbers, the full-width CTA band, the hero aurora wash, headline accent italics and form focus borders. Re-porting this donor without the slot silently returns the mirror to black-and-gold.",
+  "surface_slot": "--slurry-src",
+  "surface_note": "THE SURFACES ARE DERIVED, AND THAT IS THE POINT. --slurry-src is the bare oklch() the brand pass re-hues; --slurry (ink) is a color-mix() of it toward a pure neutral built from the black/white keywords. capture-brand applySurfaceToCss budgets chroma as max(donorC, 0.03+(1-L)*0.06), so ANY bare oklch surface at 12 percent lightness is forced to chroma 0.083 no matter how near-neutral the donor drew it - the amplification that turned every blue-logo client's page indigo-violet. The mix fraction is the saturation dial that formula does not offer. RE-PORTING THIS DONOR AS PLAIN oklch() SURFACES SILENTLY RESTORES THE PURPLE. Verify with a render, not a diff.",
+  "accent_contrast_note": "The accent is FLOORED on the dark bands (--gold inside .bg-slurry, oklch max(l,0.70)) because one accent has to work on both paper and slurry. The rule uses relative colour syntax directly (browsers without it keep the plain accent rather than a broken value). The engine's injected sections carry their own ceiling.",
+  "logo_note": "The header mark is sized by HEIGHT (--wss-logo-h, 2.5/2.75/3rem tiers) with a max-width cap, and renders the client logo from LOGO_URL when the engine supplies one, else the BUSINESS_NAME wordmark in the design's display face. NEVER size this logo with transform:scale(): it moves paint and leaves the layout box behind.",
+  "lead_endpoint": {
+    "url": "https://ghost.wss-ai.com/api/quote-request",
+    "payload": [
+      "slug",
+      "name",
+      "phone",
+      "email",
+      "message",
+      "website"
+    ],
+    "slug_source": "window.location.hostname.split('.')[0]",
+    "honeypot": "website",
+    "note": "The design's own form mails to EMAIL when verified; the engine's capture-phase lead listener (content-inject) intercepts submit first, and the form still confirms to the user when no email exists."
+  },
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "CITY",
+    "ADDRESS_CITY",
+    "STATE",
+    "REGION",
+    "HERO_HEADLINE",
+    "HERO_ACCENT",
+    "HERO_BADGE",
+    "OWNER_NAME",
+    "EMAIL",
+    "ADDRESS",
+    "ZIP",
+    "GEO_LAT",
+    "GEO_LNG",
+    "LICENSE",
+    "PROFILE_URL",
+    "LOGO_URL",
+    "SITE_URL"
+  ],
+  "schema_note": "The shell carries a content-free-safe Plumber + FAQPage graph; the ld+json telephone/email properties are NEED-guarded whole (including the comma), areaServed carries CITY and STATE - places, never the business name. No hours are asserted (the source's 24/7 dispatch claim is unverified for clients). The shared content injector adds the richer service/review/FAQ/coverage graph when verified content exists.",
+  "truth_law_removals": [
+    "No source-business service copy, septic/manure trade copy, Dyersville/Northeast-Iowa geography, seven-county lists, source phone/email/address, coordinates, founding-year or family-owner identity, or source image identity is present in shipped markup.",
+    "No stock or generated photograph is used as customer work. Only ownership-gated photo slots can reveal.",
+    "The planning tools are explicitly general guidance (EPA drip figure, typical water-heater windows, an illustrative seasonal-demand chart) and assert no price, guarantee or booking for the customer.",
+    "Reviews render only from verified review payloads and the whole section collapses when none exist.",
+    "No free-estimate, same-day, 24/7, licensed/insured or warranty claim is invented; LICENSE renders only when verified."
+  ],
+  "unretired": true,
+  "retired_on": "2026-08-08",
+  "retirement_history": "Retired as an OUTREACH target category alongside roofing on 2026-07-30, unretired 2026-08-04 ('turn on everything'). On 2026-08-17 the hand-sanitised static SPA was replaced by this verbatim source port of the same Lovable design family: identical identity atoms, richer furniture (HUD instrument, annotation pins, tools workshop, CTA bands, gallery mosaic, projects route), WSS content bridge, and the WSS-owned clip re-homed at assets/hero-fallback-plumbing-clean.mp4.",
+  "registered_on": "2026-08-02",
+  "installed_at": "apps/backend/donors-clean/plumbing-clean",
+  "lineage": "clean",
+  "requiredTokens": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "LICENSE",
+    "PROFILE_URL",
+    "LOGO_URL"
+  ],
+  "fictionalIdentity": {
+    "businessName": "Copper Row Plumbing",
+    "owner": "Nate Bellamy",
+    "phones": [
+      "+16155550139",
+      "615-555-0139",
+      "(615) 555-0139",
+      "615.555.0139"
+    ],
+    "emails": [
+      "dispatch@copperrowplumbing.com",
+      "dispatch@copperrowplumbing.com",
+      "bellamy@copperrowplumbing.com"
+    ],
+    "domain": "copperrowplumbing.com",
+    "city": "Nashville",
+    "region": "TN",
+    "county": "Davidson County",
+    "postal": "37203",
+    "geo": "36.1627;-86.7816",
+    "license": "TN-CMC-64411",
+    "profileUrl": "https://maps.example.com/place/copper-row-plumbing",
+    "logoUrl": "assets/client-logo-fallback.svg"
+  },
+  "paletteDefaults": {
+    "accent": "#2563a8",
+    "accentInk": "#1b4a80",
+    "accentText": "#ffffff",
+    "surface": "#ffffff",
+    "surfaceAlt": "#eef2f7",
+    "slab": "#101821",
+    "slabInk": "#eff4f9",
+    "text": "#0f1620",
+    "border": "#d5dde6"
+  },
+  "variants": {
+    "hero": [
+      "hero/video",
+      "hero/split-right",
+      "hero/editorial-slab"
+    ],
+    "services": [
+      "services/bento",
+      "services/three-column-cards",
+      "services/list-rail"
+    ],
+    "gallery": [
+      "gallery/masonry-grid",
+      "gallery/before-after-pairs",
+      "gallery/wide-filmstrip"
+    ],
+    "testimonials": [
+      "testimonials/cards",
+      "testimonials/single-pullquote",
+      "testimonials/logo-and-quote-split"
+    ],
+    "process": [
+      "process/numeral-rail",
+      "process/vertical-timeline",
+      "process/two-up-steps"
+    ],
+    "faq": [
+      "faq/accordion",
+      "faq/two-column",
+      "faq/inline-list"
+    ],
+    "cta": [
+      "cta/panel",
+      "cta/full-bleed-slab",
+      "cta/split-form-and-call"
+    ],
+    "ticker": [
+      "ticker/marquee",
+      "ticker/static-chip-row",
+      "ticker/none"
+    ]
+  },
+  "heroVideo": {
+    "slot": "SPA-mounted video[data-hero-video] (the bundle's hero component; the ladder runtime arms the first rung whose bytes shipped) — the donor ships NO static <video>: the photo-first stage is the zero-JS hero (final-qa Class A fix, 2026-09)",
+    "poster": "assets/hero-poster.svg",
+    "note": "Video layer exists only when the SPA mounts the marked element AND a ladder rung shipped; the stage photograph serves otherwise. (the donor band wrappers are div.sect blocks, not <section> elements: the library pins this donor to the compiled shape for section reorders — buildSectionCatalog keys on <section>+heading — so the static rebuild keeps its bands as divs with the .sect class carrying the band rhythm.)"
+  },
+  "engineInjectionPoint": "ENGINE INJECTION POINT comment immediately before <footer>",
+  "identity": {
+    "atoms": {
+      "names": [
+        "Harter Custom Pumping, Inc."
+      ],
+      "people": [
+        "Harter"
+      ],
+      "phones": [
+        "+15638758730",
+        "5638758730",
+        "563-875-8730",
+        "(563) 875-8730",
+        "563.875.8730"
+      ],
+      "emails": [
+        "harters@yousq.net"
+      ],
+      "domains": [
+        "hartercustompumping.com"
+      ],
+      "cities": [
+        "Dyersville"
+      ],
+      "regions": [],
+      "counties": [
+        "Dubuque County"
+      ],
+      "zips": [
+        "52040"
+      ],
+      "geo": [
+        "42.4844",
+        "-91.1232"
+      ],
+      "license": [],
+      "account_ids": []
+    },
+    "note": "Donor-side identity atoms, declared so lib/mirror-engine/scan.js identityScan() builds a non-empty atom list. Never shipped: hydrate.js drops BOILERPLATE.json from the output tree."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "preview": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/e686HhDBao2PtWXofJW4HVZA/",
+  "checks": {
+    "desktop": {
+      "status": 200,
+      "videoAdvanced": true,
+      "videoStart": 0,
+      "videoEnd": 1.12222,
+      "errors": [
+        "Failed to load resource: the server responded with a status of 403 ()"
+      ],
+      "overflow": false,
+      "brokenImages": 0,
+      "loadedImages": 17,
+      "serviceCards": 8,
+      "servicePhotos": 8,
+      "heroHeight": 720,
+      "h1FontSize": "68px",
+      "stickyDisplay": "flex",
+      "mapSatellite": true,
+      "mapEmbedApi": true,
+      "purchaseHref": "purchase/"
+    },
+    "mobile": {
+      "status": 200,
+      "videoAdvanced": true,
+      "videoStart": 0,
+      "videoEnd": 1.140103,
+      "errors": [
+        "Failed to load resource: the server responded with a status of 403 ()"
+      ],
+      "overflow": false,
+      "brokenImages": 0,
+      "loadedImages": 17,
+      "serviceCards": 8,
+      "servicePhotos": 8,
+      "heroHeight": 641,
+      "h1FontSize": "43.2px",
+      "stickyDisplay": "none",
+      "mapSatellite": true,
+      "mapEmbedApi": true,
+      "purchaseHref": "purchase/"
+    }
+  },
+  "publicScan": {
+    "ok": true,
+    "internalTerms": [],
+    "rawPlaceTypes": [],
+    "malformedLocations": []
+  },
+  "videoRange": {
+    "status": 206,
+    "contentType": "video/mp4",
+    "acceptRanges": "bytes",
+    "contentRange": "bytes 0-1/4972546"
+  },
+  "purchaseRedirect": {
+    "status": 302,
+    "toGhostCheckout": true
+  },
+  "robots": {
+    "status": 200,
+    "disallowAll": true
+  },
+  "reportStatus": 200
+}

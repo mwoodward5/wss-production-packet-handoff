@@ -1,0 +1,76 @@
+[
+  {
+    "business": "Lyons Roofing",
+    "vertical": "roofing",
+    "city": "Tucson",
+    "state": "AZ",
+    "site": "https://www.lyonsroofing.com/",
+    "logo_url": null,
+    "accent": null,
+    "notes": [
+      "site fetch failed: The operation was aborted due to timeout"
+    ]
+  },
+  {
+    "business": "Kingdom Plumbing",
+    "vertical": "plumbing",
+    "city": "Las Vegas",
+    "state": "NV",
+    "site": "https://www.kingdomplumbing.com/",
+    "logo_url": "https://kingdomplumbing.com/images/logo-800.webp",
+    "accent": "#2f1f20",
+    "notes": [],
+    "site_status": 200,
+    "palette": [
+      "#2f1f20",
+      "#261b1a",
+      "#271c27",
+      "#121610"
+    ]
+  },
+  {
+    "business": "Ramon Roofing",
+    "vertical": "roofing",
+    "city": "Fort Worth",
+    "state": "TX",
+    "site": "https://www.ramonroofing.com/",
+    "logo_url": "https://www.ramonroofing.com/hubfs/RR%20Main%20Logo.svg",
+    "accent": null,
+    "notes": [
+      "decode failed: Command failed: ffmpeg -v error -i C:\\Users\\Main\\AppData\\Loc"
+    ],
+    "site_status": 200
+  },
+  {
+    "business": "Music City Roofers",
+    "vertical": "roofing",
+    "city": "Nashville",
+    "state": "TN",
+    "site": "https://www.musiccityroofers.com/",
+    "logo_url": "https://www.musiccityroofers.com/img/logo.svg",
+    "accent": null,
+    "notes": [
+      "decode failed: Command failed: ffmpeg -v error -i C:\\Users\\Main\\AppData\\Loc"
+    ],
+    "site_status": 200
+  },
+  {
+    "business": "ENCO Plumbing, Inc.",
+    "vertical": "plumbing",
+    "city": "The Colony",
+    "state": "TX",
+    "site": "https://www.encoplumbing.com/",
+    "logo_url": "https://encoplumbing.com/wp-content/uploads/2025/09/Mini-Logo-1.png",
+    "accent": "#48704b",
+    "notes": [],
+    "site_status": 200,
+    "palette": [
+      "#48704b",
+      "#466d4a",
+      "#2b432e",
+      "#121c14",
+      "#003dac",
+      "#142015"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+# {{BUSINESS_NAME}}
+
+> Landscaping and grounds work serving {{CITY}}, {{STATE}}.
+
+- Business: {{BUSINESS_NAME}}
+- Trade: Landscaping
+- Serves: {{CITY}}, {{STATE}}
+- Located in: {{ADDRESS_CITY}}, {{STATE}}
+- Website: {{SITE_URL}}
+[[NEED:ADDRESS]]- Address: {{ADDRESS}}
+[[/NEED]][[NEED:PHONE]]- Phone: {{PHONE}}
+[[/NEED]][[NEED:EMAIL]]- Email: {{EMAIL}}
+[[/NEED]][[NEED:LICENSE]]- License: {{LICENSE}}
+[[/NEED]][[NEED:RATING,REVIEW_COUNT]]- Rating: {{RATING}} from {{REVIEW_COUNT}} reviews
+[[/NEED]]
+Estimates are given after a site visit. No price is published online.

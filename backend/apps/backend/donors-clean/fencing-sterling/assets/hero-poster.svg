@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Cedar privacy fence line at dusk">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0.35" y2="1">
+    <stop offset="0" stop-color="#0f1d18"/><stop offset="0.55" stop-color="#1d3b30"/><stop offset="1" stop-color="#2c5343"/>
+  </linearGradient>
+  <linearGradient id="glow" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#8fd0ae" stop-opacity="0.85"/><stop offset="1" stop-color="#8fd0ae" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2c5343"/><stop offset="1" stop-color="#0b1512"/>
+  </linearGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="26"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#sky)"/>
+<circle cx="1180" cy="250" r="230" fill="url(#glow)" filter="url(#soft)" opacity="0.75"/>
+<rect y="470" width="1600" height="530" fill="url(#ground)"/>
+<g stroke="#0d1b26" stroke-opacity="0.55" stroke-width="12" fill="none">
+<path d="M60 470 v300"/><path d="M160 470 v300"/><path d="M260 470 v300"/><path d="M360 470 v300"/><path d="M460 470 v300"/><path d="M560 470 v300"/><path d="M660 470 v300"/><path d="M760 470 v300"/><path d="M860 470 v300"/><path d="M960 470 v300"/><path d="M1060 470 v300"/><path d="M1160 470 v300"/><path d="M1260 470 v300"/><path d="M1360 470 v300"/><path d="M1460 470 v300"/><path d="M1560 470 v300"/>
+<path d="M40 560 H1580"/><path d="M40 690 H1580"/></g>
+<rect width="1600" height="1000" fill="#0b1512" opacity="0.18"/>
+</svg>

@@ -1,0 +1,138 @@
+{
+  "name": "professional-services-estimator",
+  "vertical": "estimating",
+  "hero_wash": {
+    "selector": "section.hero",
+    "background": "#131A24",
+    "text_color": "#F4F6F9",
+    "pages_verified": [
+      "/"
+    ],
+    "verified": "Render-proven on this donor shape 2026-09-02: section.hero is the painted slab hero (grain + scrim over the plan-sheet illustration), and heroWashCss applied to this spec clears AA - the copy column sits on the donor's own scrim floor holding >=0.6 combined alpha under the copy, which keeps #fff-family hero ink above 4.5:1 on the raw illustration and on any video frame, independent of the client palette. background and text_color are the raw dark hero sample; the engine wash rides on top, and the same selector drives the mobile fold."
+  },
+  "hero_wash_note": "background and text_color are the raw dark hero sample from the template's design system (ink-blue slab, near-white ink); the shipped scrim comes from the theme pass.",
+  "label": "Estimator - B2B construction-estimating one-pager (new family, 2026-09-02): painted video-ladder hero, deliverables bento, sample-output gallery, engagement rail, the firm, client feedback, FAQ, plan-upload dropzone and bid-hit calculator",
+  "wordmarkFill": "#131A24",
+  "source": "New B2B family (2026-09-02, Lovable a-plus lane): a fictional-identity one-page template for outsourced construction estimating - hand-authored index.html (ink-blue slab hero with grain, ticker, deliverables bento, SVG sample-output gallery, numeral engagement rail, the-firm about, client-feedback cards, glass FAQ, bid-calendar CTA, a plan-upload dropzone and an offline bid-hit-ratio calculator), hand-authored stylesheet on --wss-* properties, one hero-layer bundle. There is NO real source business - the identity below is the template's own fictional demo identity, and the design is deliberately free of local-trades artifacts: no maps embed, no hours table, no review carousel, because an estimating firm sells nationwide capacity, not a service radius.",
+  "sanitised": "2026-09-02",
+  "stack": "Static A+ build (2026-09-02): one hand-authored index.html (real header/main/footer markup, no framework, no CDN, no external requests) + one hand-authored stylesheet at assets/style.css (consuming --wss-* properties throughout; hex literals exist only as the token declarations themselves) + one script asset, assets/index-professional-services-estimator.js (the hero video layer: mounts the ladder-marked <video data-hero-video> hidden with no static src and runs the surface-first/tap-to-play control; the hero is complete without it and reduced motion never mounts the clip). Progressive enhancement only - the first inline script adds .js to <html> before first paint, and every sizzle layer (scroll reveals, count-up stats, hero clip arming, magnetic CTA nudge, the calculator) is inert without JS or under prefers-reduced-motion. The bid-hit calculator is pure client-side arithmetic with literal defaults in the markup, so a no-JS visitor reads the same numbers.",
+  "donor_business_name": "Northbeam Estimating Partners",
+  "donor_phone": "(720) 555-0161",
+  "donor_email": "bids@northbeamestimating.com",
+  "donor_city": "Denver",
+  "donor_county": "Denver County",
+  "donor_domain": "northbeamestimating.com",
+  "persons": [],
+  "fabricated_persons": [
+    "Devrim Kalvachev",
+    "Renee C.",
+    "Marcus T.",
+    "Adaora O."
+  ],
+  "socials": [],
+  "zips": [
+    "80202"
+  ],
+  "geo": [
+    "39.7392",
+    "-104.9903"
+  ],
+  "account_ids": [
+    "+17205550161",
+    "7205550161",
+    "720-555-0161",
+    "720.555.0161",
+    "CO-EST-40921",
+    "https://maps.example.com/place/northbeam-estimating-partners"
+  ],
+  "consumes_content": false,
+  "renders": [],
+  "renders_note": "Fixed template copy throughout; it does not consume the engine's content-inject islands (the engine appends its authority block - services, coverage, FAQ, reviews, hours - at the ENGINE INJECTION POINT before the footer, and this one-pager leaves that seam intact). Every business-specific string is a token, and every token that can be unverified collapses its own UI at hydration (see tokens_note).",
+  "photo_slots": [
+    "assets/hero-poster.svg",
+    "assets/grain.svg"
+  ],
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-estimating.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-estimating.mp4",
+    "poster": "assets/hero-poster.svg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (an operations drop-in; no bytes ship today, so this rung arms the day a vetted clip lands - no code change)",
+      "the painted hero surface and the plan-sheet illustration (the head's data-wss-hero-fallback block plus the hero-visual img - the always-painted rung)",
+      "the drawn ink-blue hero composition (slab, grain and scrim layers under everything)"
+    ],
+    "note": "The marked <video data-hero-video muted loop playsinline preload=none hidden> is MOUNTED by the hero layer bundle (assets/index-professional-services-estimator.js, the ladder-donor mount contract: hidden, no static src; no raster poster - the CSS surface is the always-painted rung), over the drawn hero that IS the complete zero-JS hero; the ladder runtime in index.html observes for the mount and arms rungs only when their bytes shipped (none ship today, so the walker stays dormant and the surface stays painted), reduced motion never mounts or arms the video, mobile is surface-first with tap-to-play, and the clip pauses when the hero scrolls away or the tab hides."
+  },
+  "spa_routes": [],
+  "spa_routes_note": "One document; sections are #id anchors (#top, #services, #work, #process, #about, #reviews, #faq, #contact, #upload, #calculator). No client routing of any kind since the 2026-09-02 static rebuild.",
+  "prerendered_routes": [
+    "/"
+  ],
+  "prerendered_note": "Fully static since the 2026-09-02 rebuild — index.html ships the complete page as real header/main/footer markup in source order, so crawlers and no-JS visitors read every word. JS adds sizzle only (reveals, count-ups, hero clip arming), each gated behind the pre-paint .js class and prefers-reduced-motion.",
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [],
+    "catchAll": "* -> 404 page"
+  },
+  "classification": {
+    "verticalFamilies": [
+      "professional-services",
+      "construction-back-office"
+    ],
+    "conversionArchetypes": [
+      "request-estimate"
+    ],
+    "shape": "b2b-onepager",
+    "routeDepth": "flat",
+    "photoDemand": "low"
+  },
+  "classification_note": "request-estimate, B2B: conversion routes through the plan-upload dropzone, the bid-calendar CTA panel and the tel:/mailto: rails. The header CTA, hero call button, CTA-panel call button, footer phone segment and the floater all collapse or re-anchor when the firm has no verified phone, each falling back to the #upload dropzone. The calculator is an offline bid-hit-ratio tool, not a lead trap - nothing is sent anywhere.",
+  "lead_endpoint": null,
+  "lead_endpoint_note": "No donor-native form since the static rebuild. The design converts through tel:/mailto: links and #contact anchors, all token-driven and collapse-guarded. The engine's content-inject lead-capture island (POST /api/quote-request) provides the form path on every mirror, so no stub endpoint could silently swallow leads.",
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "STATE",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "ADDRESS_CITY",
+    "PROFILE_URL",
+    "LICENSE",
+    "LOGO_URL",
+    "HERO_HEADLINE",
+    "SITE_URL"
+  ],
+  "tokens_note": "Collapse is [[NEED:TOKEN]] / [[NEED:!TOKEN]] phrase markers around every weld of an OPTIONAL token: blank PHONE removes the header CTA (a plan-upload anchor takes the slot), the hero call button, the CTA-panel call button, the footer phone segment and the ld+json telephone line, and flips the floater plus the meta/OG sentences to online-request copy; blank EMAIL removes the mailto rails; blank LICENSE removes the license chip, the partners chip, the footer license line and the ld+json identifier; blank OWNER_NAME swaps the about sentence to the business-led reading and drops the footer ownership clause and the ld+json founder; blank COUNTY unwelds every county mention from copy, headings and the ld+json areaServed entry; blank POSTAL drops the schema postalCode and the footer ZIP; blank GEO drops the geo.position meta and the footer coordinates; blank PROFILE_URL drops the ld+json sameAs and the footer profile link. Dialable links are href=tel:{{PHONE_DIGITS}} everywhere, so a phone-less build carries no dangling tel: href.",
+  "truth_law_removals": [
+    "This is a NEW fictional family - there is no real source business. The demo identity (Northbeam Estimating Partners, its NAP, phones, domain, registration, profile link) is declared as identity atoms so the gate can never return clean for arbitrary bytes and any accidental hardcode of the demo identity is blocked.",
+    "The template's stats (48hr turnaround, 31% median bid-hit, 1400+ packages, the $450 first-bid cap) are design furniture, not claims - the engine's verified-trust islands override them on real builds, and RATING/REVIEW_COUNT are never invented.",
+    "The template's client-feedback cards are fictional demo voices (declared in fabricated_persons); the content-inject reviews island supersedes them, and no reviewer content is ever fabricated as a real person's words.",
+    "B2B guardrails: no maps embed, no hours table, no review carousel, no service-radius towns - an estimating firm sells nationwide capacity, so nothing in the design pretends a walk-in trade radius."
+  ],
+  "identity_atoms_note": "The atoms are the template's own FICTIONAL demo identity (name, NAP, phones in every format, domain, registration, profile link, zip, geo). None of it appears in the installed bytes - every identity string is a token - but the scan needs real needles so it can never return clean for arbitrary bytes. donor_city Denver and donor_county Denver County are PLACE atoms (client-excusable, scan.js BF-5); the account_ids bucket deliberately carries only phones/registration/profile so no real Denver prospect can ever be falsely blocked.",
+  "notes": "NEW FAMILY A-PLUS BUILD 2026-09-02 (lovable/professional-services-estimator-a-plus): the first B2B donor of the library, built as the static template described in stack - ink-blue design system on --wss-* properties, painted slab hero with grain and word-by-word display headline, ticker, deliverables bento, SVG sample-output gallery, numeral engagement rail, the-firm about with partners strip, client-feedback cards, glass accordion FAQ, bid-calendar CTA panel, plan-upload dropzone, offline bid-hit calculator, four-column footer and a single floater. CI-repair pass 2 (fix2/professional-services-estimator): restored the WSS manifest schema with the fictional identity atoms so the identity gate can fire; canonical 'estimating' vertical with estimating/takeoff aliases; REPAIRED the incoming index.html whose document tail was spliced mid-script and duplicated (calculator script cut mid-function, two extra copies of footer/floater/main-script, a stray </body></html> in the middle); NEED-guarded every OPTIONAL token weld; added the data-wss-hero-fallback kill-switch + paint-under style block, the ladder island and the walker runtime, and the ladder-donor mount bundle assets/index-professional-services-estimator.js; renamed assets/logo-fallback.svg -> mark-fallback.svg (a logo-* filename is a donor brand asset the identity scan must block); restored the realestate-waterline family to its merged main state after the branch carried a stale copy.",
+  "registered_on": "2026-09-02",
+  "installed_at": "apps/backend/donors-clean/professional-services-estimator",
+  "alias_verticals": [
+    "construction estimating",
+    "estimating service",
+    "estimator",
+    "takeoff service",
+    "bid estimating",
+    "quantity takeoff",
+    "cost estimating",
+    "professional services"
+  ],
+  "alias_note": "Applied by lib/donor-verticals.js from data/donor-verticals.json. The engine itself still resolves ONLY the exact \"vertical\" value above."
+}

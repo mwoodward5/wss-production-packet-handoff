@@ -1,0 +1,22 @@
+{
+  "colorSpace": "hsl",
+  "colors": {
+    "background": "0 0% 4%",
+    "foreground": "0 0% 100%",
+    "primary": "43 55% 48%",
+    "muted-foreground": "240 4% 65%",
+    "border": "0 0% 15%"
+  },
+  "radius": "0px",
+  "fonts": {
+    "body": "Plus Jakarta Sans",
+    "display": "Playfair Display",
+    "mono": "JetBrains Mono"
+  },
+  "signature": "Sharp corners + gold #C9A84C accent + serif italic display over black.",
+  "motion": {
+    "easing": "[0.23, 1, 0.32, 1]",
+    "hero-fade-in": "3s scale 1.15 -> 1",
+    "shimmer-sweep": "1.5s infinite on button hover"
+  }
+}

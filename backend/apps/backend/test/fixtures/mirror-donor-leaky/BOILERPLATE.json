@@ -1,0 +1,14 @@
+{
+  "name": "mirror-donor-leaky",
+  "vertical": "roofing-leaky-fixture",
+  "label": "Test fixture donor with DELIBERATE identity leaks - must never pass the identity scan",
+  "wordmarkFill": "#f5f5f4",
+  "source": "synthetic:test-fixture",
+  "sanitised": "never",
+  "donor_business_name": "Falconhurst Fixture Roofing",
+  "donor_phone": "(999) 555-0177",
+  "donor_email": "office@falconhurst-fixture.invalid",
+  "donor_city": "Tucson",
+  "donor_domain": "falconhurst-fixture.invalid",
+  "persons": ["M. Fixtureone", "Mikey Falconhurst"]
+}

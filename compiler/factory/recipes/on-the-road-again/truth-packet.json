@@ -1,0 +1,64 @@
+{
+  "schema_version": "siteforge-truth-packet-v1",
+  "prospect_id": "prosp_otra_2026_07_15",
+  "business_name": "On The Road Again Mobile RV Service",
+  "legal_name": null,
+  "vertical": "mobile-rv-repair",
+  "phone_e164": null,
+  "email": null,
+  "street_address": null,
+  "city": null,
+  "state": null,
+  "postal_code": null,
+  "website_url": "https://otramobilerv.com",
+  "lovable_preview_url": "https://site-whisperer-855.lovable.app",
+  "lovable_project_id": "f9cbfac3-15fd-493a-b553-c4e620f3a9f0",
+  "google_place_id": null,
+  "services": [
+    {
+      "name": "mobile RV repair (site-labeled)",
+      "evidence": {
+        "source": "reverse-audit-2026-07-15",
+        "citation": "siteforge-reverse-audit.md \u00a7 anchor / lovable project name",
+        "verified_at": "2026-07-15",
+        "verification_kind": "labeled_by_source"
+      },
+      "verified": false,
+      "owner_input_required": true
+    }
+  ],
+  "license_credentials": [],
+  "established_year": null,
+  "hours": [],
+  "service_area_cities": [],
+  "reviews": [],
+  "logos": [
+    {
+      "url": null,
+      "source": null,
+      "verified": false,
+      "owner_input_required": true,
+      "evidence": null
+    }
+  ],
+  "photos": [],
+  "trust_signals": [],
+  "notes": [
+    "The read-only audit connector did not expose contact fields, addresses, phone, hours, licences, reviews, or photos for the anchor project.",
+    "Every displayed fact in a live V8 build MUST cite evidence.source + citation + verified_at. Owner input is REQUIRED for phone, address, hours, services, licences, reviews, and photos before this truth packet is production-ready.",
+    "This truth packet is deliberately incomplete. Correction #9 forbids fabricated golden proof; where evidence is missing we say so instead of inventing values."
+  ],
+  "evidence_gaps": [
+    "phone_e164",
+    "street_address",
+    "city",
+    "state",
+    "postal_code",
+    "hours",
+    "reviews",
+    "license_credentials",
+    "photos",
+    "logos[0].url",
+    "google_place_id"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+ "id": "step-scroll-site",
+ "source": "9cdcdee0-5a91-4749-8440-b6d52b239716",
+ "palette": {
+  "vars": {
+   "--background": "oklch(0.975 0.012 80)",
+   "--foreground": "oklch(0.20 0.03 255)",
+   "--card": "oklch(1 0 0)",
+   "--card-foreground": "oklch(0.20 0.03 255)",
+   "--popover": "oklch(1 0 0)",
+   "--popover-foreground": "oklch(0.20 0.03 255)",
+   "--ink": "oklch(0.24 0.07 258)",
+   "--primary": "oklch(0.24 0.07 258)",
+   "--primary-foreground": "oklch(0.975 0.012 80)",
+   "--secondary": "oklch(0.95 0.018 80)",
+   "--secondary-foreground": "oklch(0.24 0.07 258)",
+   "--muted": "oklch(0.94 0.014 80)",
+   "--muted-foreground": "oklch(0.46 0.03 255)",
+   "--gold": "oklch(0.80 0.14 80)",
+   "--gold-foreground": "oklch(0.24 0.07 258)",
+   "--accent": "oklch(0.80 0.14 80)",
+   "--accent-foreground": "oklch(0.24 0.07 258)",
+   "--coral": "oklch(0.55 0.16 30)",
+   "--pine": "oklch(0.42 0.07 145)",
+   "--destructive": "oklch(0.55 0.22 27)",
+   "--destructive-foreground": "oklch(0.985 0 0)",
+   "--border": "oklch(0.9 0.014 80)",
+   "--input": "oklch(0.9 0.014 80)",
+   "--ring": "oklch(0.80 0.14 80)",
+   "--gradient-warm": "linear-gradient(135deg, oklch(0.84 0.14 82), oklch(0.72 0.13 55))",
+   "--gradient-ink": "linear-gradient(180deg, oklch(0.28 0.08 258), oklch(0.18 0.05 258))",
+   "--gradient-pine": "linear-gradient(135deg, oklch(0.46 0.08 145), oklch(0.30 0.06 200))"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Public Sans",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Public+Sans:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.75rem",
+ "shadows": [
+  "0 20px 50px -20px oklch(0.20 0.07 258 / 0.30)",
+  "0 0 60px -10px oklch(0.80 0.14 80 / 0.55)",
+  "0 8px 30px -12px oklch(0.20 0.07 258 / 0.20)"
+ ],
+ "keyframes": [],
+ "signatures": [
+  "gradient-text",
+  "glow"
+ ]
+}

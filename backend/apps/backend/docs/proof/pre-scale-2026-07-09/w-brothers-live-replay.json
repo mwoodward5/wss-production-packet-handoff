@@ -1,0 +1,98 @@
+{
+  "build": {
+    "ok": true,
+    "prospect_id": "public-surface-live-proof-20260709",
+    "business_name": "W BROTHERS LANDSCAPE, Inc.",
+    "status": "previewed",
+    "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/nMwaXp_D4Z195PxeSZeuOguf/ghost-report.json",
+    "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/nMwaXp_D4Z195PxeSZeuOguf/",
+    "renderer": "05-build-v7",
+    "required_renderer": "05-build-v7",
+    "qc_passed": true,
+    "grade": "B",
+    "persistence": "live_upsert",
+    "truth_packet": {
+      "meta": {
+        "version": "goldilocks.v1",
+        "source": "captured-production-replay",
+        "bounded": true
+      },
+      "identity": {
+        "name": {
+          "value": "W BROTHERS LANDSCAPE, Inc.",
+          "confidence": 0.95
+        },
+        "city": {
+          "value": "Orange CA",
+          "confidence": 0.95
+        },
+        "state": {
+          "value": "TX",
+          "confidence": 0.2
+        },
+        "category": {
+          "value": "landscaping",
+          "confidence": 0.95
+        }
+      },
+      "services": [
+        "landscaper",
+        "point_of_interest",
+        "establishment",
+        "general_contractor"
+      ],
+      "photos": [],
+      "reviewThemes": {
+        "count": 0,
+        "themes": [],
+        "quotes": []
+      },
+      "opportunities": []
+    },
+    "dispatch": {
+      "mode": "http_dispatch",
+      "configured": true,
+      "ok": true,
+      "status": 200,
+      "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/nMwaXp_D4Z195PxeSZeuOguf/ghost-report.json",
+      "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/nMwaXp_D4Z195PxeSZeuOguf/",
+      "ready": true,
+      "renderer": "05-build-v7",
+      "required_renderer": "05-build-v7",
+      "qc_passed": true,
+      "grade": "B",
+      "score": 82,
+      "blocked": []
+    },
+    "prospect": {
+      "id": "public-surface-live-proof-20260709",
+      "prospect_id": "public-surface-live-proof-20260709",
+      "businessName": "W BROTHERS LANDSCAPE, Inc.",
+      "business_name": "W BROTHERS LANDSCAPE, Inc.",
+      "industry": "landscaping",
+      "city": "Orange CA",
+      "state": "TX",
+      "ownerEmail": "",
+      "email": "",
+      "phone": "",
+      "address": "",
+      "currentWebsite": "http://wbroslandscape.com/",
+      "current_website": "http://wbroslandscape.com/",
+      "services": [
+        "landscaper",
+        "point_of_interest",
+        "establishment",
+        "general_contractor"
+      ],
+      "source": "full-run",
+      "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/nMwaXp_D4Z195PxeSZeuOguf/ghost-report.json",
+      "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/nMwaXp_D4Z195PxeSZeuOguf/"
+    }
+  },
+  "scan": {
+    "ok": true,
+    "internal": [],
+    "rawPlaces": [],
+    "malformed": []
+  }
+}

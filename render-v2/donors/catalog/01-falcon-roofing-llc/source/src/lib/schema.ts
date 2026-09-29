@@ -1,0 +1,10 @@
+import {BUSINESS,NAP_LINE} from './business';
+import {CLIENT,PLAN} from './wss';
+const absolute=(path:string)=>new URL(path,BUSINESS.url).href;
+export const organizationSchema={'@context':'https://schema.org','@type':'Organization',name:BUSINESS.name,url:BUSINESS.url,logo:absolute(CLIENT.identity.logoOnLight),telephone:BUSINESS.phoneDisplay,...(BUSINESS.email?{email:BUSINESS.email}:{})};
+export const websiteSchema={'@context':'https://schema.org','@type':'WebSite',name:BUSINESS.name,url:BUSINESS.url};
+const geo=PLAN.localPresence?.mapAndDirections?.geo;
+export const localBusinessSchema={...organizationSchema,'@type':'RoofingContractor',image:absolute(CLIENT.hero.poster),address:{'@type':'PostalAddress',addressLocality:BUSINESS.city,addressRegion:BUSINESS.region},areaServed:BUSINESS.serviceArea,sameAs:CLIENT.trust.socials,...(CLIENT.trust.mapUrl?{hasMap:CLIENT.trust.mapUrl}:{}),...(geo?.verified&&geo.schemaAllowed&&Number.isFinite(geo.lat)&&Number.isFinite(geo.lng)&&Math.abs(geo.lat)<=90&&Math.abs(geo.lng)<=180?{geo:{'@type':'GeoCoordinates',latitude:geo.lat,longitude:geo.lng}}:{})};
+export const serviceSchema=(name:string,description:string,slug:string)=>({'@context':'https://schema.org','@type':'Service',name,description,url:absolute(slug),provider:localBusinessSchema,areaServed:BUSINESS.serviceArea});
+export const faqSchema=(faqs:{q:string;a:string}[])=>({'@context':'https://schema.org','@type':'FAQPage',mainEntity:faqs.map(({q,a})=>({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}}))});
+export {NAP_LINE};

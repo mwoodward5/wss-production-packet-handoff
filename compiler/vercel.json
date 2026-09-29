@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "fluid": false,
+  "buildCommand": "node scripts/vercel-build.mjs",
+  "outputDirectory": "app/public",
+  "functions": {
+    "api/index.mjs": {
+      "maxDuration": 300,
+      "memory": 3009,
+      "includeFiles": "{app/config/**,app/public/**,asset-pipeline/**,copy-voice/**,factory/heroes/**,factory/lib/**,factory/pipeline/**,factory/recipes/**,generator-queue-v5.schema.json,qc-audit/**,scripts/forge.mjs}",
+      "excludeFiles": "{app/data,app/scripts,app/test,factory/proof,generated-sites,master-glue-kitchen,packets,proof,razzle-fx-kitchen,site-superpowers-kitchen,web}/**"
+    }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }]
+}

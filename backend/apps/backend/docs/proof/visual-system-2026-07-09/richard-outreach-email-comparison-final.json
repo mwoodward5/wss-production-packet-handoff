@@ -1,0 +1,35 @@
+{
+  "subject": "Richard Diaz Landscape & Masonry - local visibility report + private preview",
+  "rows": [
+    {
+      "key": "local_search_focus",
+      "label": "Nearby customer searches",
+      "current": "The current site does not clearly organize its strongest services around nearby customer search intent.",
+      "preview": "One compact local plan focuses the site on landscape design orange, masonry orange, hardscaping orange, concrete orange. It limits page depth instead of creating thin, repetitive location pages."
+    },
+    {
+      "key": "trust_signals",
+      "label": "Trust signals found online",
+      "current": "Directory and profile matches still need verification before they can be claimed.",
+      "preview": "The launch checklist is ready to add only the directory, review, and profile signals that can be verified."
+    },
+    {
+      "key": "local_context",
+      "label": "Map and nearby context",
+      "current": "A verified location or coordinate pair is available.",
+      "preview": "The preview uses a satellite map, directions, a verified City, ST location, geographic business markup, and one honest service-area page."
+    },
+    {
+      "key": "answer_content",
+      "label": "Search, AI, and voice answers",
+      "current": "Current question coverage was not assumed.",
+      "preview": "A short set of visible customer questions is paired with matching FAQ and speakable markup so search and voice tools can understand the same answers people read."
+    },
+    {
+      "key": "nap_mismatch",
+      "label": "Contact consistency",
+      "current": "The website phone does not match the Google business profile",
+      "preview": "One verified phone and address set is used across the pages, map, and search markup."
+    }
+  ]
+}

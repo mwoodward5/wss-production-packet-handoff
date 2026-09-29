@@ -1,0 +1,65 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://boxdroprhodeisland.com/#localbusiness",
+  "name": "BoxDrop Mattress & Furniture Rhode Island",
+  "alternateName": "BoxDrop Rhode Island",
+  "url": "https://boxdroprhodeisland.com",
+  "telephone": "+14013657993",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "601 Metacom Ave",
+    "addressLocality": "Warren",
+    "addressRegion": "RI",
+    "postalCode": "02885",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7201467,
+    "longitude": -71.270509
+  },
+  "sameAs": [
+    "https://www.facebook.com/BoxDropRhodeIsland/",
+    "https://www.youtube.com/channel/UCgO5yXQ7Djv1WJCOgUqNJMw",
+    "https://www.yelp.com/biz/boxdrop-mattress-and-furniture-rhode-island-warren-2",
+    "https://www.mapquest.com/us/rhode-island/boxdrop-mattress-furniture-rhode-island-378434569",
+    "https://maps.google.com/?cid=10475203548171513435",
+    "https://boxdropri.setmore.com/"
+  ],
+  "areaServed": [
+    "Warren",
+    "Bristol",
+    "Barrington",
+    "Tiverton",
+    "East Providence",
+    "Providence",
+    "Warwick",
+    "Auburn",
+    "Ocean Grove",
+    "Fall River",
+    "Swansea",
+    "Somerset",
+    "Seekonk",
+    "East Bay Rhode Island",
+    "Greater Providence",
+    "South Coast Massachusetts"
+  ],
+  "knowsAbout": [
+    "mattresses",
+    "discount mattresses",
+    "furniture",
+    "sectionals",
+    "sofas",
+    "recliners",
+    "adjustable beds",
+    "mattress financing",
+    "mattress delivery"
+  ],
+  "verificationNotes": {
+    "inventory": "Inventory changes often. Call or text before visiting if you need a specific size, brand, style, or configuration.",
+    "pricing": "Do not publish specific item prices unless confirmed from current inventory. Use 'discount-style pricing' and 'up to 60% off retail pricing' only where consistent with business source truth.",
+    "financing": "Financing options may be available. Approval, down payment, same-as-cash terms, and promotional offers depend on provider, applicant, item, and current program details.",
+    "reviews": "Do not create fake reviews, ratings, aggregateRating, reviewCount, awards, or customer quotes. Only use real, attributable review text if manually verified from GBP/Facebook and approved."
+  }
+}

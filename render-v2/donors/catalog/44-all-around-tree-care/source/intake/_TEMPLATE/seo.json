@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://example.com",
+  "siteName": "",
+  "titleSuffix": "",
+  "defaultDescription": "",
+  "defaultOgImage": "/og-default.jpg",
+  "twitterHandle": "",
+  "gscVerification": "",
+  "bingVerification": "",
+  "ga4Id": "",
+  "gtmId": "",
+  "clarityId": "",
+  "indexnowKey": "",
+  "robotsPolicy": "index",
+  "locale": "en_US"
+}

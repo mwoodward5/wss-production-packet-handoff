@@ -1,0 +1,282 @@
+{
+  "project_name": "Landscape Connection, Inc.",
+  "vertical": "Landscape Design & Build Contractor",
+  "classification": "Single-page",
+  "routes": [
+    {
+      "path": "/",
+      "type": "landing_page",
+      "sections": [
+        "Nav",
+        "Hero",
+        "TrustBar",
+        "Services",
+        "Process",
+        "Gallery",
+        "Areas",
+        "QuoteCTA",
+        "Footer"
+      ]
+    }
+  ],
+  "design_tokens": {
+    "colors": {
+      "cream": "oklch(0.985 0.012 95)",
+      "sand": "oklch(0.94 0.02 90)",
+      "ink": "oklch(0.22 0.02 150)",
+      "leaf": "oklch(0.58 0.16 145)",
+      "leaf_deep": "oklch(0.38 0.12 150)",
+      "gold": "oklch(0.74 0.13 75)",
+      "card": "oklch(1 0 0)",
+      "border": "oklch(0.9 0.015 95)"
+    },
+    "typography": {
+      "display": "Fraunces, ui-serif, Georgia, serif",
+      "sans": "Inter, ui-sans-serif, system-ui, sans-serif",
+      "heading_weight": "500",
+      "heading_tracking": "-0.02em"
+    },
+    "radii": {
+      "button": "9999px",
+      "card": "1rem",
+      "banner": "1.5rem",
+      "chip": "0.75rem"
+    },
+    "gradients": {
+      "hero_overlay": "linear-gradient(180deg, oklch(0.15 0.02 150 / 0.15) 0%, oklch(0.12 0.02 150 / 0.75) 100%)",
+      "cta_card": "linear-gradient(135deg, oklch(0.58 0.16 145), oklch(0.42 0.13 150))"
+    }
+  },
+  "hero_contract": {
+    "height": "min-h-[78vh]",
+    "content_alignment": "bottom",
+    "overlay_style": "var(--gradient-hero)",
+    "video_replacement": {
+      "element": "video",
+      "attributes": {
+        "autoPlay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "className": "h-full w-full object-cover"
+      }
+    },
+    "ctas": [
+      {
+        "label": "Primary Consultation",
+        "variant": "solid_white_pill",
+        "href": "#quote"
+      },
+      {
+        "label": "Call Phone",
+        "variant": "glass_outline_pill",
+        "href": "tel:[phone]"
+      }
+    ]
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_media",
+      "target": "Hero background",
+      "recommended_role": "10s cinematic video or landscape project photo",
+      "aspect_ratio": "16:9 or 21:9",
+      "object_fit": "cover"
+    },
+    {
+      "slot_id": "badge_1",
+      "target": "TrustBar emblem 1",
+      "recommended_role": "Regional award or certification seal",
+      "aspect_ratio": "1:1 or 3:2",
+      "object_fit": "contain"
+    },
+    {
+      "slot_id": "badge_2",
+      "target": "TrustBar emblem 2",
+      "recommended_role": "State contractor or industry association badge",
+      "aspect_ratio": "1:1 or 3:2",
+      "object_fit": "contain"
+    },
+    {
+      "slot_id": "portfolio_main",
+      "target": "Gallery featured card (col-span-4 row-span-2)",
+      "recommended_role": "Flagship estate or full-yard transformation",
+      "aspect_ratio": "16:10",
+      "object_fit": "cover"
+    },
+    {
+      "slot_id": "portfolio_secondary_1",
+      "target": "Gallery upper right card (col-span-2)",
+      "recommended_role": "Custom masonry, pool surround, or retaining wall",
+      "aspect_ratio": "4:3",
+      "object_fit": "cover"
+    },
+    {
+      "slot_id": "portfolio_secondary_2",
+      "target": "Gallery lower right card (col-span-2)",
+      "recommended_role": "Turf, drought-tolerant garden, or outdoor living space",
+      "aspect_ratio": "4:3",
+      "object_fit": "cover"
+    },
+    {
+      "slot_id": "logo_light_nav",
+      "target": "Header navigation",
+      "recommended_role": "Dark/colored horizontal logo on transparent background",
+      "aspect_ratio": "3:1 to 4:1",
+      "object_fit": "contain"
+    },
+    {
+      "slot_id": "logo_dark_footer",
+      "target": "Footer brand area",
+      "recommended_role": "White/inverted horizontal logo on transparent background",
+      "aspect_ratio": "3:1 to 4:1",
+      "object_fit": "contain"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business_name",
+      "location": "Nav, Hero, Footer, Title, Schema"
+    },
+    {
+      "key": "phone",
+      "location": "Nav, Hero CTA, Quote CTA, Footer, tel link"
+    },
+    {
+      "key": "email",
+      "location": "Quote CTA mailto link, Schema"
+    },
+    {
+      "key": "license_number",
+      "location": "TrustBar, Quote Checklist, Footer"
+    },
+    {
+      "key": "services_quad",
+      "location": "Services Section cards 01 through 04"
+    },
+    {
+      "key": "process_steps",
+      "location": "Process Section items 01 through 04"
+    },
+    {
+      "key": "service_areas",
+      "location": "Hero geo chip, Areas pill grid, Footer list"
+    },
+    {
+      "key": "guarantee_points",
+      "location": "Quote banner right-hand check list"
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "TrustBar",
+      "allowed_proof": [
+        "state_license",
+        "affiliations",
+        "verified_awards"
+      ]
+    },
+    {
+      "slot": "Hero Chip",
+      "allowed_proof": [
+        "years_in_business",
+        "region_tenure",
+        "google_rating"
+      ]
+    },
+    {
+      "slot": "QuoteCTA Checklist",
+      "allowed_proof": [
+        "free_estimates",
+        "licensing",
+        "warranties",
+        "financing"
+      ]
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "HomeAndConstructionBusiness",
+      "mount": "Root head script tag"
+    },
+    {
+      "type": "AggregateRating",
+      "mount": "Root head or TrustBar"
+    },
+    {
+      "type": "Service",
+      "mount": "Root head offer catalog"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "slot": "hero_headline",
+      "query_target": "best landscape contractor in [city]"
+    },
+    {
+      "slot": "services_intro",
+      "query_target": "what services does [company] provide in [area]"
+    },
+    {
+      "slot": "areas_grid",
+      "query_target": "does [company] serve [city]"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "slot": "services_heading",
+      "conversational_pattern": "One team for the whole yard from design to install"
+    },
+    {
+      "slot": "areas_heading",
+      "conversational_pattern": "Proudly serving [Region and surrounding cities]"
+    }
+  ],
+  "map_location_slot": {
+    "section": "Areas",
+    "integration": "Clickable city pill queries / Google Place ID redirection",
+    "nap_consistency": "Byte-identical match with Google Business Profile"
+  },
+  "content_density": {
+    "hero": "Minimal, visual-dominant",
+    "services": "Symmetrical 4-card structure, 25 words max per card",
+    "process": "4 linear stages, uncluttered",
+    "gallery": "Pure visual bento without overlay noise",
+    "conversion": "High density trust verification"
+  },
+  "mobile_rules": {
+    "max_width": "100%",
+    "nav_action": "Retain logo and quote button only",
+    "hero_cta": "Full-width vertical stack",
+    "gallery_layout": "Stack into single column at 288px height",
+    "services_layout": "Single column card stack",
+    "areas_grid": "2 columns"
+  },
+  "non_negotiables": [
+    "Retain Fraunces serif display for all section headings",
+    "Maintain rounded-full pill buttons for all interactive calls to action",
+    "Preserve oklch organic earthy palette (no pure black or stark white)",
+    "Maintain dark gradient overlay on hero media to guarantee 100% contrast",
+    "Maintain 4-card service and 4-step process structure"
+  ],
+  "safe_replacements": [
+    "client_name",
+    "client_phone",
+    "client_email",
+    "client_license",
+    "client_city_list",
+    "client_service_descriptions",
+    "client_award_badges",
+    "client_portfolio_imagery",
+    "client_hero_video"
+  ],
+  "lovable_classification": "Premium Local Trades / Outdoor Living",
+  "classification_basis": "1 distinct documented routes; WSS scope label only",
+  "project_id": "bd298097-cb1c-44a9-a04f-2bd9474bf604",
+  "project_url": "https://lovable.dev/projects/bd298097-cb1c-44a9-a04f-2bd9474bf604",
+  "source_plan_file": "04-clovis-landscaping-premium-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:35:06.118141Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

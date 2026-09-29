@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #08080B; }
+  a { color: #9E90FF; text-decoration: none; }
+  a:hover { color: #B7ACFF; }
+  input, button { font-family: inherit; }
+  input::placeholder { color: #5F5E68; }
+  ::selection { background: rgba(124,108,246,.32); }
+  [data-reduce="1"] * { animation: none !important; transition: none !important; }
+  @keyframes wpulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes revealX { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes loadbar { 0% { width: 0; opacity: 1; } 78% { width: 100%; opacity: 1; } 100% { width: 100%; opacity: 0; } }
+  @keyframes eventIn { 0% { opacity: 0; transform: translateY(-8px); } 100% { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 860px) {
+    [data-r="ccgrid2"] { grid-template-columns: 1fr !important; }
+    [data-r="ccright"] { order: -1; }
+  }
+  @media (max-width: 620px) {
+    [data-r="cctabs"] { overflow-x: auto; }
+    [data-r="leadhead"], [data-r="leadrow"] { grid-template-columns: 1.6fr 0.9fr 0.7fr !important; }
+    [data-r="leadhide"] { display: none !important; }
+  }
+</style>
+</helmet>
+<div data-reduce="{{reduceFlag}}" style="position:relative; font-family:'Hanken Grotesk',system-ui,sans-serif; color:#F2F2F5; background:radial-gradient(1100px 460px at 50% -160px, rgba(124,108,246,.13), transparent 62%), #08080B; min-height:100vh; padding:22px 22px 60px; -webkit-font-smoothing:antialiased;">
+  <div style="position:fixed; top:0; left:0; height:2px; z-index:50; background:linear-gradient(90deg, #4A6CF7, #8B5CF6, #34D399); animation:loadbar 1.15s cubic-bezier(.3,.7,.3,1) forwards;"></div>
+  <div style="max-width:1180px; margin:0 auto; display:flex; flex-direction:column; gap:15px;">
+
+    <!-- TOP BAR -->
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:13px;">
+        <svg width="40" height="40" viewBox="0 0 64 64" style="display:block;"><defs><linearGradient id="cg0" x1="12" y1="32" x2="50" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4A6CF7"></stop><stop offset="1" stop-color="#8B5CF6"></stop></linearGradient></defs><rect width="64" height="64" rx="15" fill="#131318"></rect><rect x="0.5" y="0.5" width="63" height="63" rx="14.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"></rect><path d="M12 24 L21 42 L30 26 L39 42 L50 20" fill="none" stroke="url(#cg0)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:120; stroke-dashoffset:120; animation:draw 1s ease .25s forwards;"></path><circle cx="50" cy="20" r="7" fill="#34D399" opacity="0.22"></circle><circle cx="50" cy="20" r="4" fill="#34D399" style="animation:wpulse 1.8s .8s infinite;"></circle></svg>
+        <div>
+          <div style="font-weight:700; font-size:18px; letter-spacing:-.01em; line-height:1; color:#F2F2F5;">Command Center</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#6F6E79; margin-top:4px;">Cedar &amp; Stone Landscaping</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:9px; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:7px; padding:7px 12px; background:#15151A; border:1px solid rgba(255,255,255,.09); border-radius:999px;"><span style="width:8px; height:8px; border-radius:50%; background:#34D399; box-shadow:0 0 8px rgba(52,211,153,.7); animation:wpulse 1.6s infinite;"></span><span style="font-size:12.5px; color:#C7C6CF; font-weight:500;">All systems ready</span></div>
+        <div style="display:flex; align-items:center; gap:7px; padding:7px 12px; background:#15151A; border:1px solid rgba(255,255,255,.09); border-radius:999px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A8994;">live · {{clock}}</span></div>
+        <a href="WSS-AI.dc.html" style="font-size:12.5px; font-weight:600; color:#E7E7EA; padding:8px 13px; border:1px solid rgba(255,255,255,.12); border-radius:999px;" style-hover="border-color:rgba(255,255,255,.26)">View live site ↗</a>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div style="display:flex; gap:8px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+      <div data-r="cctabs" style="display:flex; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.07); border-radius:12px; padding:4px; gap:2px;">
+        <sc-for list="{{tabs}}" as="t" hint-placeholder-count="5">
+          <button onClick="{{t.onClick}}" style="border:0; cursor:pointer; white-space:nowrap; font-family:'Hanken Grotesk',sans-serif; font-size:13.5px; font-weight:600; padding:8px 16px; border-radius:9px; background:{{t.bg}}; color:{{t.fg}}; box-shadow:{{t.shadow}}; transition:background .25s ease, color .25s ease;">{{t.label}}</button>
+        </sc-for>
+      </div>
+      <a href="WSS-AI.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6F6E79;">← wss-ai.com</a>
+    </div>
+
+    <!-- EDITOR COMMAND BAR -->
+    <div style="background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:14px; padding:12px 12px 14px;">
+      <div style="display:flex; align-items:center; gap:11px;">
+        <div style="flex:none; width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); display:flex; align-items:center; justify-content:center; box-shadow:0 5px 14px rgba(124,108,246,.32);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 20l4-1 10-10-3-3L5 16l-1 4z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"></path></svg></div>
+        <input value="{{cmd}}" onInput="{{onCmd}}" onKeyDown="{{onCmdKey}}" placeholder="Ask the Editor for a change…   e.g. update my hours · add a photo to Gallery · change a price" style="flex:1; min-width:0; background:transparent; border:0; outline:none; color:#F2F2F5; font-size:14px; padding:6px 2px;">
+        <button onClick="{{run}}" style="flex:none; border:0; cursor:pointer; background:linear-gradient(135deg, #4A6CF7, #8B5CF6); color:#fff; font-size:13.5px; font-weight:600; padding:9px 20px; border-radius:10px; box-shadow:0 6px 16px rgba(124,108,246,.30);">Request</button>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:11px;">
+        <sc-for list="{{chips}}" as="ch" hint-placeholder-count="4">
+          <button onClick="{{ch.onClick}}" style="border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03); color:#9B9AA4; font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:5px 11px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(124,108,246,.12); color:#C9C8D0; border-color:rgba(124,108,246,.3)">{{ch.label}}</button>
+        </sc-for>
+      </div>
+      <sc-if value="{{hasConsole}}">
+        <div style="margin-top:12px; border-top:1px solid rgba(255,255,255,.06); padding-top:11px; display:flex; flex-direction:column; gap:7px;">
+          <sc-for list="{{console}}" as="ln" hint-placeholder-count="1">
+            <div style="display:flex; gap:11px; align-items:baseline; animation:eventIn .45s cubic-bezier(.2,.7,.3,1) both;">
+              <span style="flex:none; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#5F5E68;">{{ln.ts}}</span>
+              <span style="flex:none; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4ADCA6;">✓</span>
+              <span style="font-size:12.5px; color:#C9C8D0;">{{ln.text}}</span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+
+    <!-- ============ OVERVIEW ============ -->
+    <sc-if value="{{showOverview}}">
+      <div data-screen-label="CC Overview" style="display:flex; flex-direction:column; gap:15px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px;">
+          <sc-for list="{{kpis}}" as="k" hint-placeholder-count="4">
+            <div style="position:relative; background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:17px; overflow:hidden; animation:riseIn .5s cubic-bezier(.2,.7,.3,1) backwards; animation-delay:calc(55ms * {{ $index }});">
+              <div style="position:absolute; top:-30px; right:-20px; width:150px; height:100px; background:radial-gradient(circle at 60% 40%, {{k.glow}}, transparent 68%); pointer-events:none;"></div>
+              <div style="position:relative;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px;">
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.04em; color:#6F6E79; text-transform:uppercase;">{{k.label}}</span>
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; color:#4ADCA6; background:rgba(52,211,153,.12); padding:3px 7px; border-radius:999px;">{{k.delta}}</span>
+                </div>
+                <div style="font-weight:700; font-size:29px; color:#F4F4F6; margin-top:10px; font-variant-numeric:tabular-nums;">{{k.value}}</div>
+                <div style="font-size:11.5px; color:#84838E; margin-top:2px;">{{k.sub}}</div>
+                <svg viewBox="0 0 96 30" preserveAspectRatio="none" style="width:100%; height:20px; margin-top:11px; display:block; overflow:visible;"><path d="{{k.spark}}" fill="none" stroke="{{k.stroke}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" style="stroke-dasharray:200; stroke-dashoffset:200; animation:draw 1.1s ease .3s forwards;"></path></svg>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="display:flex; gap:16px; flex-wrap:wrap; padding:12px 16px; background:#101015; border:1px solid rgba(255,255,255,.06); border-radius:12px;">
+          <sc-for list="{{statRow}}" as="st" hint-placeholder-count="3">
+            <div style="display:flex; align-items:center; gap:8px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6F6E79; text-transform:uppercase; letter-spacing:.04em;">{{st.label}}</span><span style="font-size:13.5px; font-weight:700; color:#ECECEF;">{{st.value}}</span></div>
+          </sc-for>
+        </div>
+
+        <div data-r="ccgrid2" style="display:grid; grid-template-columns:1.35fr 1fr; gap:14px;">
+          <div style="background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:20px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div style="font-weight:600; font-size:16px; color:#F2F2F5;">Recent activity</div>
+              <div style="display:flex; align-items:center; gap:7px;"><span style="width:7px; height:7px; border-radius:50%; background:#34D399; box-shadow:0 0 8px rgba(52,211,153,.7); animation:wpulse 1.6s infinite;"></span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6F6E79;">live</span></div>
+            </div>
+            <div style="display:flex; flex-direction:column; margin-top:10px;">
+              <sc-for list="{{activity}}" as="ev" hint-placeholder-count="6">
+                <div style="display:flex; align-items:center; gap:12px; padding:11px 2px; border-bottom:1px solid rgba(255,255,255,.045);">
+                  <div style="flex:none; width:30px; height:30px; border-radius:9px; background:{{ev.tint}}; color:{{ev.fg}}; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:12px;">{{ev.letter}}</div>
+                  <div style="flex:1; min-width:0;"><div style="font-size:13px; color:#ECECEF; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"><span style="font-weight:600;">{{ev.who}}</span> <span style="color:#84838E;">{{ev.action}}</span></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#7C7B86; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ev.sub}}</div></div>
+                  <div style="flex:none; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#5F5E68;">{{ev.when}}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div data-r="ccright" style="display:flex; flex-direction:column; gap:14px;">
+            <div style="position:relative; background:#131318; border:1px solid rgba(52,211,153,.2); border-radius:16px; padding:20px; overflow:hidden;">
+              <div style="position:absolute; top:-40px; right:-30px; width:180px; height:120px; background:radial-gradient(circle at 60% 40%, rgba(52,211,153,.16), transparent 68%); pointer-events:none;"></div>
+              <div style="position:relative;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div style="font-weight:600; font-size:15px; color:#F2F2F5;">Your website</div>
+                  <span style="display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#4ADCA6; background:rgba(52,211,153,.12); padding:4px 9px; border-radius:999px;"><span style="width:6px; height:6px; border-radius:50%; background:#34D399; animation:wpulse 1.6s infinite;"></span>LIVE</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:14px; margin-top:14px;">
+                  <div style="flex:none; width:58px; height:58px; border-radius:14px; background:rgba(52,211,153,.12); display:flex; flex-direction:column; align-items:center; justify-content:center;"><span style="font-weight:800; font-size:22px; color:#34D399; line-height:1;">92</span><span style="font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:.1em; color:#6F6E79;">SCORE</span></div>
+                  <div style="min-width:0;"><div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#9E90FF;">cedarstone.com</div><div style="font-size:12px; color:#84838E; margin-top:4px;">Last edit 2h ago — added 3 photos to Gallery</div></div>
+                </div>
+                <button onClick="{{focusEditor}}" style="width:100%; margin-top:14px; border:1px solid rgba(255,255,255,.12); background:#17171C; color:#E7E7EA; font-size:13px; font-weight:600; padding:10px; border-radius:10px; cursor:pointer;" style-hover="border-color:rgba(255,255,255,.24)">Request an edit</button>
+              </div>
+            </div>
+            <div style="background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:20px;">
+              <div style="font-weight:600; font-size:15px; color:#F2F2F5;">Next best actions</div>
+              <div style="display:flex; flex-direction:column; gap:2px; margin-top:10px;">
+                <sc-for list="{{actions}}" as="a" hint-placeholder-count="3">
+                  <button onClick="{{a.onToggle}}" style="display:flex; align-items:center; gap:11px; border:0; background:none; cursor:pointer; text-align:left; padding:9px 2px; border-bottom:1px solid rgba(255,255,255,.045);">
+                    <span style="flex:none; width:20px; height:20px; border-radius:6px; border:1.5px solid {{a.border}}; background:{{a.box}}; display:flex; align-items:center; justify-content:center;"><sc-if value="{{a.done}}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#08080B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></sc-if></span>
+                    <span style="font-size:13.5px; color:{{a.ink}}; text-decoration:{{a.strike}};">{{a.label}}</span>
+                  </button>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ LEADS ============ -->
+    <sc-if value="{{showLeads}}">
+      <div data-screen-label="CC Leads" style="background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:20px; animation:fadeIn .35s ease;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; gap:12px; flex-wrap:wrap;">
+          <div style="font-weight:600; font-size:16px; color:#F2F2F5;">Leads</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6F6E79;">click a row for contact details</div>
+        </div>
+        <div data-r="leadhead" style="display:grid; grid-template-columns:1.8fr 1.2fr 1fr 0.9fr 0.7fr; gap:12px; padding:10px 6px; border-bottom:1px solid rgba(255,255,255,.06); font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:#5F5E68;">
+          <div>Name</div><div data-r="leadhide">Service</div><div>Source</div><div>Status</div><div style="text-align:right;">When</div>
+        </div>
+        <sc-for list="{{leads}}" as="l" hint-placeholder-count="8">
+          <div style="animation:riseIn .45s cubic-bezier(.2,.7,.3,1) backwards; animation-delay:calc(40ms * {{ $index }});">
+            <div onClick="{{l.onToggle}}" data-r="leadrow" style="display:grid; grid-template-columns:1.8fr 1.2fr 1fr 0.9fr 0.7fr; gap:12px; align-items:center; padding:13px 6px; border-bottom:1px solid rgba(255,255,255,.045); cursor:pointer; border-radius:8px;" style-hover="background:rgba(255,255,255,.025)">
+              <div style="display:flex; align-items:center; gap:10px; min-width:0;"><div style="flex:none; width:30px; height:30px; border-radius:8px; background:{{l.avBg}}; color:{{l.avFg}}; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:12px;">{{l.initials}}</div><span style="font-size:13.5px; font-weight:600; color:#ECECEF; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{l.name}}</span></div>
+              <div data-r="leadhide" style="font-size:13px; color:#9B9AA4;">{{l.service}}</div>
+              <div style="font-size:12.5px; color:#9B9AA4;">{{l.source}}</div>
+              <div><span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; color:{{l.stFg}}; background:{{l.stBg}}; padding:4px 9px; border-radius:999px;">{{l.status}}</span></div>
+              <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#7C7B86;">{{l.when}}</div>
+            </div>
+            <sc-if value="{{l.open}}">
+              <div style="background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:14px 16px; margin:2px 6px 12px; animation:riseIn .3s ease;">
+                <div style="display:flex; gap:24px; flex-wrap:wrap;">
+                  <div><div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#6F6E79; text-transform:uppercase;">Phone</div><div style="font-size:13.5px; color:#ECECEF; margin-top:3px;">{{l.phone}}</div></div>
+                  <div><div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#6F6E79; text-transform:uppercase;">Service</div><div style="font-size:13.5px; color:#ECECEF; margin-top:3px;">{{l.service}}</div></div>
+                  <div style="flex:1; min-width:180px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#6F6E79; text-transform:uppercase;">Note</div><div style="font-size:13.5px; color:#C9C8D0; margin-top:3px;">{{l.note}}</div></div>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <!-- ============ CALLS ============ -->
+    <sc-if value="{{showCalls}}">
+      <div data-screen-label="CC Calls" style="display:flex; flex-direction:column; gap:14px; animation:fadeIn .35s ease;">
+        <div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:rgba(110,139,255,.06); border:1px solid rgba(110,139,255,.2); border-radius:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M4 6c0 8 6 14 14 14l2-3-4-2-2 2c-2-1-5-4-6-6l2-2-2-4-3 1z" stroke="#6E8BFF" stroke-width="1.6" stroke-linejoin="round"></path></svg>
+          <span style="font-size:14px; color:#B9C4E8;">Your AI receptionist answered <span style="color:#fff; font-weight:700;">86 of 86 calls</span> this week — after hours and while you're on the job.</span>
+        </div>
+        <div style="background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:20px;">
+          <div style="font-weight:600; font-size:16px; color:#F2F2F5; margin-bottom:6px;">Call log</div>
+          <sc-for list="{{calls}}" as="c" hint-placeholder-count="6">
+            <div style="display:flex; align-items:center; gap:14px; padding:13px 4px; border-bottom:1px solid rgba(255,255,255,.045); animation:riseIn .45s cubic-bezier(.2,.7,.3,1) backwards; animation-delay:calc(45ms * {{ $index }});">
+              <div style="flex:none; width:34px; height:34px; border-radius:9px; background:{{c.tint}}; color:{{c.fg}}; display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6c0 8 6 14 14 14l2-3-4-2-2 2c-2-1-5-4-6-6l2-2-2-4-3 1z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path></svg></div>
+              <div style="flex:1; min-width:0;"><div style="font-size:13.5px; font-weight:600; color:#ECECEF;">{{c.caller}}</div><div style="font-size:12.5px; color:#8A8994;">{{c.intent}}</div></div>
+              <div style="flex:none;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; color:{{c.outFg}}; background:{{c.outBg}}; padding:4px 10px; border-radius:999px;">{{c.outcome}}</span></div>
+              <div style="flex:none; width:60px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#7C7B86;">{{c.dur}}</div>
+              <div style="flex:none; width:64px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#5F5E68;">{{c.when}}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ REVIEWS ============ -->
+    <sc-if value="{{showReviews}}">
+      <div data-screen-label="CC Reviews" data-r="ccgrid2" style="display:grid; grid-template-columns:0.85fr 1.4fr; gap:14px; animation:fadeIn .35s ease;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:22px; text-align:center;">
+            <div style="font-weight:800; font-size:52px; color:#F4F4F6; line-height:1;">4.7</div>
+            <div style="color:#E0A44A; font-size:18px; letter-spacing:2px; margin-top:6px;">★★★★★</div>
+            <div style="font-size:12.5px; color:#84838E; margin-top:6px;">47 reviews · +6 this month</div>
+            <div style="display:flex; flex-direction:column; gap:6px; margin-top:18px;">
+              <sc-for list="{{dist}}" as="d" hint-placeholder-count="5">
+                <div style="display:flex; align-items:center; gap:9px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6F6E79; width:10px;">{{d.star}}</span><div style="flex:1; height:7px; background:rgba(255,255,255,.06); border-radius:4px; overflow:hidden;"><div style="height:100%; width:{{d.w}}; background:#E0A44A; border-radius:4px; animation:revealX .8s cubic-bezier(.3,.7,.3,1) both;"></div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#7C7B86; width:22px; text-align:right;">{{d.n}}</span></div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="background:#131318; border:1px solid rgba(52,211,153,.2); border-radius:16px; padding:18px;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; color:#6F6E79; text-transform:uppercase;">Reputation agent</div>
+            <div style="font-size:13.5px; color:#C9C8D0; margin-top:8px; line-height:1.5;">Sent <span style="color:#F2F2F5; font-weight:700;">31 review requests</span> after completed jobs this month. Auto-request is <span style="color:#4ADCA6; font-weight:700;">on</span>.</div>
+          </div>
+        </div>
+        <div style="background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:20px;">
+          <div style="font-weight:600; font-size:16px; color:#F2F2F5; margin-bottom:6px;">Recent reviews</div>
+          <sc-for list="{{reviews}}" as="r" hint-placeholder-count="5">
+            <div style="padding:14px 2px; border-bottom:1px solid rgba(255,255,255,.045); animation:riseIn .45s cubic-bezier(.2,.7,.3,1) backwards; animation-delay:calc(45ms * {{ $index }});">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;"><div style="display:flex; align-items:center; gap:10px;"><div style="flex:none; width:30px; height:30px; border-radius:50%; background:{{r.avBg}}; color:{{r.avFg}}; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:12px;">{{r.initials}}</div><span style="font-size:13.5px; font-weight:600; color:#ECECEF;">{{r.name}}</span></div><span style="color:#E0A44A; font-size:12px; letter-spacing:1px;">{{r.stars}}</span></div>
+              <div style="font-size:13px; color:#9B9AA4; margin-top:8px; line-height:1.5;">{{r.text}}</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#5F5E68; margin-top:6px;">{{r.when}}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ REPORTS ============ -->
+    <sc-if value="{{showReports}}">
+      <div data-screen-label="CC Reports" style="display:flex; flex-direction:column; gap:14px; animation:fadeIn .35s ease;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px;">
+          <sc-for list="{{repStats}}" as="s" hint-placeholder-count="4">
+            <div style="background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:18px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.04em; color:#6F6E79; text-transform:uppercase;">{{s.label}}</div><div style="font-weight:700; font-size:27px; color:#F4F4F6; margin-top:9px; font-variant-numeric:tabular-nums;">{{s.value}}</div><div style="font-size:12px; color:#84838E; margin-top:2px;">{{s.sub}}</div></div>
+          </sc-for>
+        </div>
+        <div style="background:#131318; border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:22px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
+            <div style="font-weight:600; font-size:16px; color:#F2F2F5;">Leads per week</div>
+            <button onClick="{{exportCsv}}" style="border:1px solid rgba(255,255,255,.10); background:#17171C; border-radius:999px; padding:7px 14px; cursor:pointer; font-size:12.5px; font-weight:600; color:#E7E7EA;">Export CSV</button>
+          </div>
+          <svg viewBox="0 0 560 170" preserveAspectRatio="none" style="width:100%; height:180px; display:block; overflow:visible; margin-top:14px;">
+            <sc-for list="{{repGrid}}" as="g" hint-placeholder-count="3"><line x1="0" y1="{{g.y}}" x2="560" y2="{{g.y}}" stroke="rgba(255,255,255,.06)" stroke-width="1" vector-effect="non-scaling-stroke"></line></sc-for>
+            <path d="{{repArea}}" fill="rgba(124,108,246,.16)" stroke="none" style="opacity:0; animation:fadeIn .8s ease .7s forwards;"></path>
+            <path d="{{repLine}}" fill="none" stroke="#7C6CF6" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" style="stroke-dasharray:1400; stroke-dashoffset:1400; animation:draw 1.4s cubic-bezier(.4,0,.2,1) .3s forwards;"></path>
+          </svg>
+          <div style="display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#5F5E68; margin-top:6px;"><span>8 wks ago</span><span>4 wks</span><span>this week</span></div>
+        </div>
+      </div>
+    </sc-if>
+
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#5F5E68; text-align:center; margin-top:8px;">WSS LABS · CUSTOMER COMMAND CENTER · DEMO DATA · NOTHING SENDS OR CHARGES FROM THIS PROTOTYPE</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;reduceMotion&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Motion&quot; }
+}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this._eid = 0;
+    this.state = { tab:'overview', cmd:'', console:[], expanded:{}, actionsDone:{} };
+  }
+  componentDidMount(){ this._tick = setInterval(()=>this.forceUpdate(), 1000); }
+  componentWillUnmount(){ if(this._tick) clearInterval(this._tick); }
+
+  pad2(n){ return String(n).padStart(2,'0'); }
+  clockStr(){ const d=new Date(); let h=d.getHours(); const m=this.pad2(d.getMinutes()); const ap=h>=12?'PM':'AM'; h=h%12; if(h===0)h=12; return h+':'+m+' '+ap; }
+  sparkPath(v){ const w=96,h=30,p=3; const mn=Math.min(...v),mx=Math.max(...v),r=(mx-mn)||1,st=(w-p*2)/(v.length-1); return 'M'+v.map((x,i)=>(p+i*st).toFixed(1)+' '+(h-p-((x-mn)/r)*(h-p*2)).toFixed(1)).join(' L '); }
+  seg(a){ return { bg:a?'rgba(255,255,255,.10)':'transparent', fg:a?'#F2F2F5':'#84838E', shadow:a?'inset 0 0 0 1px rgba(255,255,255,.12)':'none' }; }
+
+  run(override){
+    const raw = ((typeof override==='string'?override:this.state.cmd)||'').trim();
+    if(!raw) return;
+    const text = 'Editor queued: “'+raw+'” — we\'ll send a preview to approve before anything changes.';
+    this.setState(s=>({ cmd:'', console:[{ id:++this._eid, ts:this.clockStr(), text }, ...s.console].slice(0,4) }));
+  }
+  focusEditor(){ try{ const i=document.querySelector('input'); if(i) i.focus(); }catch(e){} }
+  toggleLead(id){ this.setState(s=>({ expanded:{...s.expanded, [id]:!s.expanded[id]} })); }
+  toggleAction(i){ this.setState(s=>({ actionsDone:{...s.actionsDone, [i]:!s.actionsDone[i]} })); }
+
+  exportCsv(){
+    const rows=[['Name','Service','Source','Status','When']];
+    this._leads.forEach(l=>rows.push([l.name,l.service,l.source,l.status,l.when]));
+    const csv=rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\n');
+    const b=new Blob([csv],{type:'text/csv'}); const u=URL.createObjectURL(b);
+    const a=document.createElement('a'); a.href=u; a.download='command-center-leads.csv'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(u);
+  }
+
+  renderVals(){
+    const s=this.state;
+    const reduce = this.props.reduceMotion===true;
+
+    const tabDefs=[['overview','Overview'],['leads','Leads'],['calls','Calls'],['reviews','Reviews'],['reports','Reports']];
+    const tabs=tabDefs.map(([v,l])=>({ label:l, onClick:()=>this.setState({tab:v}), ...this.seg(v===s.tab) }));
+
+    const chips=['update my hours','add a photo to Gallery','change a service price','add a service-area page'].map(t=>({label:t, onClick:()=>this.run(t)}));
+    const consoleLines=s.console.map(l=>({ id:l.id, ts:l.ts, text:l.text }));
+
+    const kpis=[
+      { label:'New leads', value:'38', delta:'+12', sub:'this week', stroke:'#7C6CF6', glow:'rgba(124,108,246,.28)', spark:this.sparkPath([10,14,12,18,22,20,28,38]) },
+      { label:'Calls answered', value:'86', delta:'+11', sub:'AI receptionist', stroke:'#34D399', glow:'rgba(52,211,153,.24)', spark:this.sparkPath([8,10,9,12,14,13,16,18]) },
+      { label:'New reviews', value:'23', delta:'+6', sub:'4.7★ average', stroke:'#7C6CF6', glow:'rgba(124,108,246,.28)', spark:this.sparkPath([2,3,4,4,6,7,9,12]) },
+      { label:'Site visitors', value:'1,240', delta:'+8.2%', sub:'this month', stroke:'#34D399', glow:'rgba(52,211,153,.24)', spark:this.sparkPath([40,48,44,52,58,54,62,71]) }
+    ];
+    const statRow=[ {label:'Avg response',value:'42s'}, {label:'Booking rate',value:'61%'}, {label:'Uptime',value:'100%'}, {label:'Est. pipeline',value:'$18.4k'} ];
+
+    const AT={ lead:{letter:'L',fg:'#B7ACFF',tint:'rgba(124,108,246,.18)',action:'sent a new lead'}, call:{letter:'C',fg:'#A9BCFB',tint:'rgba(110,139,255,.18)',action:'call answered'}, review:{letter:'R',fg:'#F0CE93',tint:'rgba(224,164,74,.18)',action:'left a review'}, edit:{letter:'E',fg:'#6FE3BE',tint:'rgba(52,211,153,.16)',action:'made an edit'} };
+    const activity=[
+      {t:'lead',who:'Marcus T.',sub:'Free quote · Patios',when:'2m'},
+      {t:'call',who:'Dana R.',sub:'Booked · Tue 9:00 AM',when:'18m'},
+      {t:'review',who:'Owen K.',sub:'★★★★★ “Fantastic crew, on time.”',when:'1h'},
+      {t:'edit',who:'Editor',sub:'Added 3 photos to Gallery',when:'2h'},
+      {t:'lead',who:'Priya S.',sub:'Message · Irrigation',when:'3h'},
+      {t:'call',who:'Grant W.',sub:'Message taken · after hours',when:'5h'}
+    ].map(e=>{ const m=AT[e.t]; return { letter:m.letter, fg:m.fg, tint:m.tint, action:m.action, who:e.who, sub:e.sub, when:e.when }; });
+
+    const actLabels=['Add 2 photos to “Patios”','Reply to 1 new review','Confirm holiday hours'];
+    const actions=actLabels.map((label,i)=>{ const done=!!s.actionsDone[i]; return { label, done, onToggle:()=>this.toggleAction(i),
+      border: done?'#34D399':'rgba(255,255,255,.2)', box: done?'#34D399':'transparent', ink: done?'#6F6E79':'#D9D8E0', strike: done?'line-through':'none' }; });
+
+    const ST={ New:{f:'#B7ACFF',b:'rgba(124,108,246,.16)'}, Contacted:{f:'#A9BCFB',b:'rgba(110,139,255,.14)'}, Booked:{f:'#4ADCA6',b:'rgba(52,211,153,.14)'}, Won:{f:'#6FE3BE',b:'rgba(52,211,153,.2)'} };
+    this._leads=[
+      {name:'Marcus Torres',service:'Patio design & build',source:'Website',status:'New',when:'2m',phone:'(512) 555-0148',note:'Wants a flagstone patio + fire pit, ~400 sq ft. Ready this spring.'},
+      {name:'Dana Reyes',service:'Weekly maintenance',source:'Google',status:'Booked',when:'18m',phone:'(512) 555-0132',note:'Booked a walkthrough Tue 9 AM. Corner lot, wants edging + beds.'},
+      {name:'Priya Shah',service:'Irrigation repair',source:'Call',status:'Contacted',when:'3h',phone:'(512) 555-0177',note:'Zone 3 not running. Texted a quote, awaiting reply.'},
+      {name:'Grant Wells',service:'Retaining wall',source:'Website',status:'New',when:'5h',phone:'(512) 555-0119',note:'Slope failing after rain. Sent intake form + photos.'},
+      {name:'Sofia Blanco',service:'Full yard redesign',source:'Google',status:'Contacted',when:'1d',phone:'(512) 555-0163',note:'New build, blank yard. Budget-conscious, phased plan offered.'},
+      {name:'Neil Park',service:'Sod install',source:'Website',status:'Won',when:'2d',phone:'(512) 555-0155',note:'Signed — 2,000 sq ft Bermuda. Scheduled next week.'},
+      {name:'Ava Lin',service:'Drainage',source:'Call',status:'Booked',when:'2d',phone:'(512) 555-0104',note:'French drain quote booked for Thu.'},
+      {name:'Tom Hale',service:'Tree & shrub care',source:'Google',status:'New',when:'3d',phone:'(512) 555-0190',note:'Quarterly plan inquiry. Send maintenance packages.'}
+    ];
+    const leads=this._leads.map((l,i)=>{ const st=ST[l.status]; const parts=l.name.split(' '); return { ...l, id:'ld'+i, initials:(parts[0][0]+(parts[1]?parts[1][0]:'')), avBg:'rgba(124,108,246,.16)', avFg:'#B7ACFF', stFg:st.f, stBg:st.b, open:!!s.expanded['ld'+i], onToggle:()=>this.toggleLead('ld'+i) }; });
+
+    const OC={ Booked:{f:'#4ADCA6',b:'rgba(52,211,153,.14)',tint:'rgba(52,211,153,.16)',fg:'#6FE3BE'}, 'Message taken':{f:'#A9BCFB',b:'rgba(110,139,255,.14)',tint:'rgba(110,139,255,.16)',fg:'#A9BCFB'}, 'Info given':{f:'#9B9AA4',b:'rgba(255,255,255,.06)',tint:'rgba(255,255,255,.06)',fg:'#9B9AA4'} };
+    const calls=[
+      {caller:'Dana Reyes',intent:'“Do you do weekly maintenance?”',outcome:'Booked',dur:'2:14',when:'18m'},
+      {caller:'Unknown · after hours',intent:'“Emergency drainage — yard flooding.”',outcome:'Message taken',dur:'1:02',when:'5h'},
+      {caller:'Grant Wells',intent:'“Quote for a retaining wall?”',outcome:'Message taken',dur:'1:47',when:'6h'},
+      {caller:'Local · 512',intent:'“What areas do you serve?”',outcome:'Info given',dur:'0:38',when:'8h'},
+      {caller:'Ava Lin',intent:'“Can someone look at drainage Thursday?”',outcome:'Booked',dur:'2:31',when:'1d'},
+      {caller:'Unknown',intent:'“Do you offer financing?”',outcome:'Info given',dur:'0:52',when:'1d'}
+    ].map(c=>{ const o=OC[c.outcome]; return { ...c, outFg:o.f, outBg:o.b, tint:o.tint, fg:o.fg }; });
+
+    const dcounts=[38,6,2,1,0]; const dmax=Math.max(...dcounts);
+    const dist=[5,4,3,2,1].map((star,i)=>({ star, n:dcounts[i], w:(dcounts[i]/dmax*100).toFixed(0)+'%' }));
+    const reviews=[
+      {name:'Owen Kessler',stars:'★★★★★',text:'Fantastic crew — on time, clean, and the patio looks incredible. Already booked them for maintenance.',when:'1h ago'},
+      {name:'Rae Underwood',stars:'★★★★★',text:'Quoted fast and stuck to it. The new beds transformed our front yard.',when:'2d ago'},
+      {name:'Mateo Cruz',stars:'★★★★☆',text:'Great work on the irrigation. Small scheduling mixup but they made it right.',when:'5d ago'},
+      {name:'Lena Ford',stars:'★★★★★',text:'They redesigned our whole backyard in phases so we could budget it. Thrilled.',when:'1w ago'},
+      {name:'Sam Ortiz',stars:'★★★★★',text:'Responsive, professional, and the retaining wall is rock solid. Highly recommend.',when:'2w ago'}
+    ].map(r=>{ const p=r.name.split(' '); return { ...r, initials:p[0][0]+(p[1]?p[1][0]:''), avBg:'rgba(224,164,74,.16)', avFg:'#F0CE93' }; });
+
+    const repStats=[ {label:'Leads',value:'142',sub:'last 30 days'}, {label:'Calls answered',value:'310',sub:'100% pickup'}, {label:'New reviews',value:'23',sub:'4.7★ avg'}, {label:'Est. pipeline value',value:'$18.4k',sub:'from tracked leads'} ];
+    const weeks=[14,18,16,22,26,24,31,38]; const W=560,H=170,pT=12,pB=10,pL=6,pR=6; const mx=Math.max(...weeks);
+    const xA=i=>pL+i*((W-pL-pR)/(weeks.length-1)); const yA=v=>pT+(1-v/mx)*(H-pT-pB);
+    const repLine='M'+weeks.map((v,i)=>xA(i).toFixed(1)+' '+yA(v).toFixed(1)).join(' L ');
+    const repArea=repLine+' L '+xA(weeks.length-1).toFixed(1)+' '+(H-pB)+' L '+xA(0).toFixed(1)+' '+(H-pB)+' Z';
+    const repGrid=[0,0.5,1].map(t=>({ y:(pT+(1-t)*(H-pT-pB)).toFixed(1) }));
+
+    return {
+      reduceFlag: reduce?'1':'0', clock:this.clockStr(),
+      tabs, showOverview:s.tab==='overview', showLeads:s.tab==='leads', showCalls:s.tab==='calls', showReviews:s.tab==='reviews', showReports:s.tab==='reports',
+      cmd:s.cmd, onCmd:e=>this.setState({cmd:e.target.value}), onCmdKey:e=>{ if(e.key==='Enter') this.run(); }, run:()=>this.run(), focusEditor:()=>this.focusEditor(),
+      chips, console:consoleLines, hasConsole:consoleLines.length>0,
+      kpis, statRow, activity, actions,
+      leads, calls, dist, reviews, repStats, repLine, repArea, repGrid, exportCsv:()=>this.exportCsv()
+    };
+  }
+}
+</script>
+</body>
+</html>

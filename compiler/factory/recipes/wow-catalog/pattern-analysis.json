@@ -1,0 +1,1166 @@
+{
+  "totalStudied": 97,
+  "aTier": 94,
+  "widgets": [
+    [
+      "faq accordion",
+      22
+    ],
+    [
+      "faq-accordion",
+      22
+    ],
+    [
+      "count-up-stats-band",
+      6
+    ],
+    [
+      "count-up stats band",
+      5
+    ],
+    [
+      "masonry-gallery-lightbox",
+      5
+    ],
+    [
+      "marquee-service-ticker",
+      5
+    ],
+    [
+      "marquee service ticker",
+      4
+    ],
+    [
+      "testimonial-carousel",
+      4
+    ],
+    [
+      "google maps iframe embed",
+      4
+    ],
+    [
+      "testimonial carousel",
+      3
+    ],
+    [
+      "portfolio-masonry-gallery",
+      3
+    ],
+    [
+      "google-maps-iframe-embed",
+      3
+    ],
+    [
+      "google-maps-embed",
+      3
+    ],
+    [
+      "google maps embed",
+      2
+    ],
+    [
+      "external booking widget integration",
+      2
+    ],
+    [
+      "marquee-ticker",
+      2
+    ],
+    [
+      "sticky-mobile-call-bar",
+      2
+    ],
+    [
+      "sticky-header-call-bar",
+      2
+    ],
+    [
+      "faq-accordion-group",
+      2
+    ],
+    [
+      "multi-field-contact-form-with-dropdown",
+      2
+    ],
+    [
+      "sticky-navigation-header",
+      2
+    ],
+    [
+      "sticky-header-navigation",
+      2
+    ],
+    [
+      "satellite-map-with-directions",
+      2
+    ],
+    [
+      "sticky header with click-to-call",
+      2
+    ],
+    [
+      "process-timeline-stepper",
+      2
+    ],
+    [
+      "contact-form-with-validation",
+      2
+    ],
+    [
+      "openstreetmap embed",
+      2
+    ],
+    [
+      "masonry gallery lightbox",
+      2
+    ],
+    [
+      "coco grove virtual farm game",
+      1
+    ],
+    [
+      "newsletter subscription form",
+      1
+    ],
+    [
+      "shopping cart drawer",
+      1
+    ],
+    [
+      "floating icon marquee",
+      1
+    ],
+    [
+      "count-up stats (modalities/days)",
+      1
+    ],
+    [
+      "service card hover states",
+      1
+    ],
+    [
+      "gallery-frame-slider-with-counter",
+      1
+    ],
+    [
+      "signature-signed-badge-composition",
+      1
+    ],
+    [
+      "multi-step-style-contact-form-with-budget-selector",
+      1
+    ],
+    [
+      "hover-triggered-service-image-previews",
+      1
+    ],
+    [
+      "grain-texture-overlay-component",
+      1
+    ],
+    [
+      "particle-canvas-overlay",
+      1
+    ],
+    [
+      "chat-widget-floating",
+      1
+    ],
+    [
+      "sticky-glassmorphism-header",
+      1
+    ],
+    [
+      "interactive-fleet-grid-with-hover-states",
+      1
+    ],
+    [
+      "hurley service atlas (interactive map pins)",
+      1
+    ],
+    [
+      "prime paving window (seasonal calendar card)",
+      1
+    ],
+    [
+      "multi-step estimate configurator",
+      1
+    ],
+    [
+      "live verified pulsing indicator",
+      1
+    ],
+    [
+      "count-up stats for business years",
+      1
+    ],
+    [
+      "yardage & load estimator (interactive sliders)",
+      1
+    ],
+    [
+      "glass-morphism contact cards",
+      1
+    ],
+    [
+      "welcome-audio-player",
+      1
+    ],
+    [
+      "google-maps-service-area-iframe",
+      1
+    ],
+    [
+      "logo-marquee-strip",
+      1
+    ],
+    [
+      "instant-estimator-calculator",
+      1
+    ],
+    [
+      "filmstrip-horizontal-process-timeline",
+      1
+    ],
+    [
+      "google-satellite-map-embed",
+      1
+    ],
+    [
+      "sticky-header-cta",
+      1
+    ],
+    [
+      "floating-business-card-badge",
+      1
+    ],
+    [
+      "count-up-stats-bar",
+      1
+    ],
+    [
+      "photo-gallery-lightbox",
+      1
+    ]
+  ],
+  "sections": [
+    [
+      "faq-accordion",
+      15
+    ],
+    [
+      "footer-multi-column",
+      12
+    ],
+    [
+      "hero",
+      8
+    ],
+    [
+      "cta-band-final",
+      8
+    ],
+    [
+      "marquee-service-ticker",
+      8
+    ],
+    [
+      "footer",
+      7
+    ],
+    [
+      "faq-accordion (common questions)",
+      6
+    ],
+    [
+      "stats-band-count-up",
+      5
+    ],
+    [
+      "portfolio-masonry-gallery",
+      5
+    ],
+    [
+      "footer-multi-column-detailed",
+      5
+    ],
+    [
+      "footer-multi-column-nap",
+      5
+    ],
+    [
+      "hero-cinematic-split",
+      4
+    ],
+    [
+      "faq-accordion-questions",
+      3
+    ],
+    [
+      "faq-accordion-stack",
+      3
+    ],
+    [
+      "stats-band-horizontal",
+      3
+    ],
+    [
+      "process-timeline-steps",
+      3
+    ],
+    [
+      "testimonial-carousel-with-source",
+      3
+    ],
+    [
+      "process-timeline-horizontal",
+      3
+    ],
+    [
+      "process-timeline-numbered-steps",
+      3
+    ],
+    [
+      "footer-sitemap",
+      2
+    ],
+    [
+      "portfolio-masonry-recent-work",
+      2
+    ],
+    [
+      "process-timeline-4-steps",
+      2
+    ],
+    [
+      "footer-with-sitemap",
+      2
+    ],
+    [
+      "footer-comprehensive-links",
+      2
+    ],
+    [
+      "portfolio-grid-masonry",
+      2
+    ],
+    [
+      "process-timeline-01-04",
+      2
+    ],
+    [
+      "faq-accordion-section",
+      2
+    ],
+    [
+      "process-timeline-vertical",
+      2
+    ],
+    [
+      "faq-accordion-simple",
+      2
+    ],
+    [
+      "cta-band",
+      2
+    ],
+    [
+      "process-timeline-3-step",
+      2
+    ],
+    [
+      "faq-accordion-list",
+      2
+    ],
+    [
+      "review-carousel-with-source",
+      2
+    ],
+    [
+      "hero-cinematic-overlay",
+      2
+    ],
+    [
+      "portfolio-masonry-grid",
+      2
+    ],
+    [
+      "split-editorial-about-us",
+      2
+    ],
+    [
+      "footer-multi-column-minimal",
+      2
+    ],
+    [
+      "cta-band-final (ready when you are)",
+      2
+    ],
+    [
+      "review-carousel-with-source-attribution",
+      2
+    ],
+    [
+      "voice-search-faq-accordion",
+      2
+    ]
+  ],
+  "trust": [
+    [
+      "licensed & insured mention",
+      2
+    ],
+    [
+      "licensed & insured badge",
+      2
+    ],
+    [
+      "free estimates promise",
+      2
+    ],
+    [
+      "licensed & insured label",
+      2
+    ],
+    [
+      "bbb profile link (accredited)",
+      2
+    ],
+    [
+      "facebook business page link",
+      2
+    ],
+    [
+      "10+ years in business",
+      2
+    ],
+    [
+      "50k+ happy customers stats",
+      1
+    ],
+    [
+      "5★ average rating badge",
+      1
+    ],
+    [
+      "verified customer labels on testimonials",
+      1
+    ],
+    [
+      "roots4change partnership mention",
+      1
+    ],
+    [
+      "eco-friendly aluminum packaging claims",
+      1
+    ],
+    [
+      "100% pure coconut / 0 preservatives claims",
+      1
+    ],
+    [
+      "google-reviews",
+      1
+    ],
+    [
+      "trusted local practitioner badge",
+      1
+    ],
+    [
+      "physical address (451 pecan st)",
+      1
+    ],
+    [
+      "7-days-open stat",
+      1
+    ],
+    [
+      "medical disclaimer text",
+      1
+    ],
+    [
+      "service area mentions (pasadena, pearland, etc.)",
+      1
+    ],
+    [
+      "6+ years-in-business",
+      1
+    ],
+    [
+      "200+ sessions delivered",
+      1
+    ],
+    [
+      "5-star rating mention",
+      1
+    ],
+    [
+      "reply-within-24-hours guarantee",
+      1
+    ],
+    [
+      "atlanta-based location signaling",
+      1
+    ],
+    [
+      "tcp license #34211",
+      1
+    ],
+    [
+      "established 2012 label",
+      1
+    ],
+    [
+      "5.0 star rating stats",
+      1
+    ],
+    [
+      "verified reviews via yelp badge",
+      1
+    ],
+    [
+      "50+ years in business (since 1976)",
+      1
+    ],
+    [
+      "bbb a+ accredited since 1999 badge",
+      1
+    ],
+    [
+      "3 generations family-run mention",
+      1
+    ],
+    [
+      "verified institutional clients list (mcdonald's, centura health)",
+      1
+    ],
+    [
+      "no money up front / payment on completion promise",
+      1
+    ],
+    [
+      "5.0★ rating with 500+ projects dug",
+      1
+    ],
+    [
+      "12 years on the iron (experience)",
+      1
+    ],
+    [
+      "family owned & operated badge",
+      1
+    ],
+    [
+      "local references with city names in reviews",
+      1
+    ],
+    [
+      "1,500+ five-star google reviews",
+      1
+    ],
+    [
+      "bbb accredited badge",
+      1
+    ],
+    [
+      "verified google review badges",
+      1
+    ]
+  ],
+  "aeo": [
+    [
+      "click-to-call phone prominence in header and multiple body sections",
+      4
+    ],
+    [
+      "click-to-call phone prominence in header and hero",
+      3
+    ],
+    [
+      "click-to-call phone in header and sticky mobile presence",
+      3
+    ],
+    [
+      "footer nap (name, address, phone) consistency",
+      3
+    ],
+    [
+      "footer nap (name-address-phone) consistency",
+      3
+    ],
+    [
+      "faq block with structured q&a content",
+      3
+    ],
+    [
+      "click-to-call phone prominence in header and footer",
+      3
+    ],
+    [
+      "footer nap consistency (name, address, phone)",
+      3
+    ],
+    [
+      "speakable answer paragraphs in faq section",
+      3
+    ],
+    [
+      "click-to-call phone prominence in header and body",
+      2
+    ],
+    [
+      "short speakable answer paragraphs in faq section",
+      2
+    ],
+    [
+      "faq block structured q&a",
+      2
+    ],
+    [
+      "speakable-ready short answer paragraphs in faq section",
+      2
+    ],
+    [
+      "short speakable answer paragraphs in the faq section",
+      2
+    ],
+    [
+      "faq block structured q&a (e.g., 'are you licensed and insured?')",
+      1
+    ],
+    [
+      "explicit service-area cities listed (selmer, adamsville, bethel springs, savannah, etc.)",
+      1
+    ],
+    [
+      "click-to-call phone in header and sticky mobile footer links",
+      1
+    ],
+    [
+      "sms/text-us cta ('text us send a photo for a faster quote')",
+      1
+    ],
+    [
+      "footer nap consistency (578 crabtree rd, selmer, tn 38375)",
+      1
+    ],
+    [
+      "embedded hours block (7am–7pm · 7 days)",
+      1
+    ],
+    [
+      "google business profile link via google reviews link",
+      1
+    ],
+    [
+      "review carousel with attributed google review sources",
+      1
+    ],
+    [
+      "h2 in question format: 'how much does a coverage review cost?', 'which carriers and plans do you compare?'",
+      1
+    ],
+    [
+      "faq block with structured q&a (frequently asked section)",
+      1
+    ],
+    [
+      "short 'speakable' answer paragraphs in faq and 'how it works' steps",
+      1
+    ],
+    [
+      "explicit service-area cities listed: slidell, la; multi-state licensed mentioned",
+      1
+    ],
+    [
+      "click-to-call phone in header (855-646-5269) and sticky mobile feel (though not explicitly sticky, very prominent)",
+      1
+    ],
+    [
+      "sms/text-us cta: 'text (985) 590-3681' and 'open vince\\'s sms card' link",
+      1
+    ],
+    [
+      "footer nap: vince gore, slidell, la 70460, license # 4694303",
+      1
+    ],
+    [
+      "embedded hours: mon–fri 8am–7pm ct · sat by appointment",
+      1
+    ],
+    [
+      "review-like context: 'no fee. no call center. just answers.' and 'licensed agent affiliated with healthmarkets'",
+      1
+    ],
+    [
+      "h2/h3 question format in faq section ('are you licensed and insured in colorado?', 'when do i need a panel upgrade?')",
+      1
+    ],
+    [
+      "structured faq accordion block with detailed answers",
+      1
+    ],
+    [
+      "speakable-ready short answer paragraphs in 'the dn method' and founder section",
+      1
+    ],
+    [
+      "near-me phrases in copy: 'dn electric ltd is proud to serve longmont, co and the surrounding area'",
+      1
+    ],
+    [
+      "explicit service-area cities listed: longmont, boulder, loveland, fort collins, arvada, frederick, denver",
+      1
+    ],
+    [
+      "click-to-call phone prominence in header, hero, and sticky footer links",
+      1
+    ],
+    [
+      "footer nap (name, address, phone) consistency with specific zip (80501)",
+      1
+    ],
+    [
+      "embedded hours block (mon-fri 8-5, sat-sun by appointment)",
+      1
+    ],
+    [
+      "review attributed source mentioned (bbb business review link)",
+      1
+    ],
+    [
+      "question-format h2s in faq: 'who offers landscape design in ogden, utah?', 'can bch help with irrigation and turf together?'",
+      1
+    ],
+    [
+      "faq schema structured q&a in json-ld",
+      1
+    ],
+    [
+      "short speakable answer paragraphs in faq block",
+      1
+    ],
+    [
+      "explicit service-area cities listed: ogden, south ogden, north ogden, pleasant view, roy, etc. (15 total)",
+      1
+    ],
+    [
+      "click-to-call phone prominent in header and sticky mobile pill",
+      1
+    ],
+    [
+      "footer nap consistency (name, address/region, phone)",
+      1
+    ],
+    [
+      "embedded hours: mon-fri 7am - 6pm",
+      1
+    ],
+    [
+      "localbusiness json-ld with geo-coordinates and areaserved",
+      1
+    ],
+    [
+      "review carousel potential (mentioned as 'selected work' with cinematic descriptions)",
+      1
+    ],
+    [
+      "breadcrumbs visible and in json-ld",
+      1
+    ]
+  ],
+  "maps": [
+    [
+      "google-maps-embed",
+      41
+    ],
+    [
+      "directions-button",
+      21
+    ],
+    [
+      "no-map",
+      17
+    ],
+    [
+      "apple-maps-link",
+      12
+    ],
+    [
+      "satellite-imagery",
+      9
+    ],
+    [
+      "atlas-style-pin-map",
+      8
+    ],
+    [
+      "custom-mapbox-maplibre",
+      4
+    ]
+  ],
+  "remixable": [
+    [
+      "service-marquee-ticker-with-star-dividers",
+      2
+    ],
+    [
+      "marquee-service-ticker-band",
+      2
+    ],
+    [
+      "virtual-farm-rewards-widget (coco grove)",
+      1
+    ],
+    [
+      "product-card-with-custom-badge-and-add-to-cart",
+      1
+    ],
+    [
+      "floating-icon-marquee-divider",
+      1
+    ],
+    [
+      "stats-band-with-illustrated-numbers",
+      1
+    ],
+    [
+      "mission-split-section-with-icon-grid",
+      1
+    ],
+    [
+      "dark-cinematic-hero-with-floating-product-composites",
+      1
+    ],
+    [
+      "cream-paper-studio-highlight-card",
+      1
+    ],
+    [
+      "serif-hero-with-cinematic-botanical-media",
+      1
+    ],
+    [
+      "dual-stat-modality-counter-badge",
+      1
+    ],
+    [
+      "split-editorial-wellness-guide-layout",
+      1
+    ],
+    [
+      "google-review-invitation-band-with-location-keywords",
+      1
+    ],
+    [
+      "disclaimer-in-short-text-block",
+      1
+    ],
+    [
+      "dark-cinematic-hero-with-floating-gallery-frames",
+      1
+    ],
+    [
+      "diamond-stats-strip-integrated-in-hero",
+      1
+    ],
+    [
+      "signed-photographer-letter-composition",
+      1
+    ],
+    [
+      "editorial-service-grid-with-hover-image-reveal",
+      1
+    ],
+    [
+      "high-contrast-serif-mixed-italic-headline",
+      1
+    ],
+    [
+      "signature-frame-gallery-counter",
+      1
+    ],
+    [
+      "dark-cinematic-hero-with-particle-canvas-overlay",
+      1
+    ],
+    [
+      "luxury-gold-accented-service-grid-cards",
+      1
+    ],
+    [
+      "fleet-card-with-passenger-capacity-badge",
+      1
+    ],
+    [
+      "yelp-verified-testimonial-card-composition",
+      1
+    ],
+    [
+      "location-badge-service-area-grid",
+      1
+    ],
+    [
+      "signed-owner-style-footer-license-strip",
+      1
+    ],
+    [
+      "hurley-service-atlas-card-with-neighborhood-pins",
+      1
+    ],
+    [
+      "seasonal-prime-paving-calendar-widget",
+      1
+    ],
+    [
+      "4-step-estimate-configurator-with-property-tiles",
+      1
+    ],
+    [
+      "dark-cinematic-hero-with-fraunces-italic-accents",
+      1
+    ],
+    [
+      "institutional-client-trust-marquee",
+      1
+    ],
+    [
+      "process-step-grid-with-cream-paper-cards",
+      1
+    ],
+    [
+      "industrial-glass-estimator-widget",
+      1
+    ],
+    [
+      "blueprint-style-eyebrow-labels",
+      1
+    ],
+    [
+      "heavy-industrial-dark-hero",
+      1
+    ],
+    [
+      "construction-yellow-accent-system",
+      1
+    ],
+    [
+      "marquee-service-ticker-strip",
+      1
+    ],
+    [
+      "atlas-style-service-area-grid",
+      1
+    ],
+    [
+      "welcome-audio-quick-intro-widget",
+      1
+    ],
+    [
+      "industrial-dark-hero-with-bebas-neue-typography",
+      1
+    ],
+    [
+      "european-marque-luxury-logo-strip",
+      1
+    ],
+    [
+      "verified-google-review-carousel-cards",
+      1
+    ],
+    [
+      "neighborhood-chip-service-area-layout",
+      1
+    ],
+    [
+      "yellow-accent-industrial-button-set",
+      1
+    ],
+    [
+      "glassmorphism-instant-estimator-card",
+      1
+    ],
+    [
+      "filmstrip-process-timeline-widget",
+      1
+    ],
+    [
+      "dark-cinematic-hero-with-floating-widget",
+      1
+    ],
+    [
+      "property-service-grid-with-status-eyebrows",
+      1
+    ],
+    [
+      "satellite-map-contact-split",
+      1
+    ],
+    [
+      "floating-badge-identity-widget-hero",
+      1
+    ],
+    [
+      "sticky-owner-direct-call-badge-with-status-dot",
+      1
+    ],
+    [
+      "high-contrast-gold-on-dark-cinematic-theme",
+      1
+    ],
+    [
+      "detailed-county-service-area-grid",
+      1
+    ],
+    [
+      "jobsite-photo-counter-gallery-strip",
+      1
+    ],
+    [
+      "dark-mode-toggle-system",
+      1
+    ],
+    [
+      "interactive-project-router-tile-grid",
+      1
+    ],
+    [
+      "cinematic-status-bar-with-local-time-and-file-number",
+      1
+    ],
+    [
+      "numbered-faq-accordion-with-plus-toggle",
+      1
+    ],
+    [
+      "marquee-service-ticker-with-diamond-stars",
+      1
+    ],
+    [
+      "dark-cinematic-hero-with-grid-texture-overlay",
+      1
+    ]
+  ],
+  "verticals": [
+    [
+      "landscaping",
+      3
+    ],
+    [
+      "roofing contractor",
+      3
+    ],
+    [
+      "hvac contractor",
+      3
+    ],
+    [
+      "landscaping-and-excavation",
+      2
+    ],
+    [
+      "landscaping (tree services)",
+      2
+    ],
+    [
+      "fence contractor",
+      2
+    ],
+    [
+      "plumbing services",
+      2
+    ],
+    [
+      "beverage-wellness",
+      1
+    ],
+    [
+      "wellness (hypnosis and reiki)",
+      1
+    ],
+    [
+      "photography",
+      1
+    ],
+    [
+      "luxury-black-car-service",
+      1
+    ],
+    [
+      "landscaping (asphalt paving)",
+      1
+    ],
+    [
+      "landscaping (excavation focus)",
+      1
+    ],
+    [
+      "roadside assistance & automotive services",
+      1
+    ],
+    [
+      "landscaping (fencing)",
+      1
+    ],
+    [
+      "landscaping/handyman (home improvement)",
+      1
+    ],
+    [
+      "roofing-restoration",
+      1
+    ],
+    [
+      "martial-arts-training",
+      1
+    ],
+    [
+      "landscaping and property maintenance",
+      1
+    ],
+    [
+      "mobile rv repair & service",
+      1
+    ],
+    [
+      "landscaping / roofing / exterior contracting",
+      1
+    ],
+    [
+      "landscaping (tree care)",
+      1
+    ],
+    [
+      "excavation and dirtwork",
+      1
+    ],
+    [
+      "concrete-construction-and-demolition",
+      1
+    ],
+    [
+      "landscaping (arborist/tree-service)",
+      1
+    ],
+    [
+      "handyman",
+      1
+    ],
+    [
+      "handyman-remodeling",
+      1
+    ],
+    [
+      "photography (wedding & portrait)",
+      1
+    ],
+    [
+      "wellness (hypnosis and holistic therapy)",
+      1
+    ],
+    [
+      "drywall and plastering services",
+      1
+    ]
+  ]
+}

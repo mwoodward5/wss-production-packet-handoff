@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["src/main.tsx","src/wss/**/*","src/components/card-concrete/**/*","src/routes/privacy.tsx","src/routes/terms.tsx"],"exclude":["node_modules"]}

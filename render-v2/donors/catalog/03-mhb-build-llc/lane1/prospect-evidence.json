@@ -1,0 +1,190 @@
+{
+  "observed_at": "2026-09-29T04:15:08.484921+00:00",
+  "prospect_id": "lm-0bae1aca222b62397715a5b736155e88c5e45f9c",
+  "business_name": "Bespoke Design & Construction",
+  "website": "https://www.cobblestoneconstructionllc.com/",
+  "compiled_at": "2026-09-26T08:16:15.691Z",
+  "stored_certified_flag": true,
+  "certification": {
+    "status": "certified",
+    "version": "intake-genie-content-cert-v1",
+    "issuer": "wss-intake-genie-bridge",
+    "certified_at": "2026-09-26T08:16:15.691Z",
+    "expires_at": "2026-10-26T08:16:15.691Z",
+    "packet_sha256": "77ee6ae010402af3db45d1c66b6c733c2691f5c08ba70dd9c47a012e5ba9b370",
+    "packet_version": "intake-genie-v2",
+    "packet_location": "prospect_record:genie_canonical_packet"
+  },
+  "certification_signature_reverified": false,
+  "facts": {
+    "name": "Bespoke Design & Construction",
+    "category": "general contracting",
+    "city": "Northeast Ohio",
+    "state": "OH",
+    "website": "https://www.cobblestoneconstructionllc.com/",
+    "services": [
+      "Whole House Renovation",
+      "Kitchen Remodeling",
+      "Bathroom Remodeling",
+      "Additions",
+      "Exterior Projects",
+      "Bedroom Remodeling",
+      "Basement Finishing",
+      "Garage Conversions",
+      "Major Remodeling",
+      "Aging in Place"
+    ]
+  },
+  "visitor_file_paths": [
+    "content/home.md"
+  ],
+  "service_source_evidence": [
+    {
+      "value": "Whole House Renovation",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    },
+    {
+      "value": "Kitchen Remodeling",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    },
+    {
+      "value": "Bathroom Remodeling",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    },
+    {
+      "value": "Additions",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    },
+    {
+      "value": "Exterior Projects",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    },
+    {
+      "value": "Bedroom Remodeling",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    },
+    {
+      "value": "Basement Finishing",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    },
+    {
+      "value": "Garage Conversions",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    },
+    {
+      "value": "Major Remodeling",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    },
+    {
+      "value": "Aging in Place",
+      "status": "verified",
+      "verified": true,
+      "source_url": "https://www.cobblestoneconstructionllc.com/",
+      "observed_at": "2026-09-26T08:16:15.678Z",
+      "verification_status": "source observation",
+      "source_observations": [
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/",
+        "https://www.cobblestoneconstructionllc.com/contact-cleveland-ohio-general-contractor/",
+        "https://www.cobblestoneconstructionllc.com/cleveland-ohio-complete-home-renovation-services/home-remodeling/"
+      ]
+    }
+  ],
+  "actual_adapter_repro": {
+    "ok": false,
+    "code": "construction_service_copy_unbound"
+  },
+  "trust_channels": {
+    "reviews": 0
+  }
+}

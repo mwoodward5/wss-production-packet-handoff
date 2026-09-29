@@ -1,0 +1,7 @@
+import { WSS } from '@/wss/bridge';
+function JsonLd({data}:{data:unknown}) {return <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(data).replace(/</g,'\\u003c')}}/>;}
+export function LocalBusinessSchema(){return <JsonLd data={{'@context':'https://schema.org','@type':'LocalBusiness',name:WSS.identity.businessName,url:WSS.identity.website,telephone:WSS.identity.phoneTel.slice(4),...(WSS.identity.email?{email:WSS.identity.email}:{}),address:{'@type':'PostalAddress',addressLocality:WSS.identity.city,addressRegion:WSS.identity.state},areaServed:WSS.trust.areas}}/>;}
+export function OrganizationSchema(){return <JsonLd data={{'@context':'https://schema.org','@type':'Organization',name:WSS.identity.businessName,url:WSS.identity.website,logo:new URL(WSS.identity.logoOnDark,WSS.identity.website).href,sameAs:WSS.trust.socials}}/>;}
+export function WebSiteSchema(){return <JsonLd data={{'@context':'https://schema.org','@type':'WebSite',name:WSS.identity.businessName,url:WSS.identity.website}}/>;}
+export function BreadcrumbSchema({items}:{items:{name:string;url:string}[]}){return <JsonLd data={{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:items.map((i,n)=>({'@type':'ListItem',position:n+1,name:i.name,item:i.url}))}}/>;}
+export function SpeakableSchema({url}:{url:string}){return <JsonLd data={{'@context':'https://schema.org','@type':'WebPage',url,speakable:{'@type':'SpeakableSpecification',cssSelector:['h1','[data-speakable-answer]']}}}/>;}

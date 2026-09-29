@@ -1,0 +1,244 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-ink: var(--ink);
+  --color-bone: var(--bone);
+  --color-volt: var(--volt);
+  --color-volt-deep: var(--volt-deep);
+  --color-clay: var(--clay);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+:root {
+  /* 848 Property Services brand — black / volt-green / bone */
+  --radius: 0.25rem;
+
+  --ink: oklch(0.13 0.01 230);          /* deep near-black */
+  --bone: oklch(0.97 0.005 90);         /* warm off-white */
+  --volt: oklch(0.92 0.22 130);         /* signature electric lime */
+  --volt-deep: oklch(0.82 0.21 130);
+  --clay: oklch(0.55 0.08 60);          /* warm wood accent */
+
+  --background: var(--bone);
+  --foreground: var(--ink);
+  --surface: oklch(0.10 0.01 230);
+  --surface-foreground: var(--bone);
+
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink);
+
+  --primary: var(--ink);
+  --primary-foreground: var(--bone);
+  --secondary: oklch(0.94 0.01 90);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.94 0.01 90);
+  --muted-foreground: oklch(0.45 0.02 230);
+  --accent: var(--volt);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: var(--bone);
+  --border: oklch(0.88 0.005 90);
+  --input: oklch(0.88 0.005 90);
+  --ring: var(--volt);
+
+  --font-display: 'Fraunces', 'Playfair Display', ui-serif, Georgia, serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  ::selection { background: var(--volt); color: var(--ink); }
+}
+
+@layer components {
+  .container-edge { @apply mx-auto w-full max-w-[1400px] px-6 md:px-10 lg:px-16; }
+
+  /* Couture display headline */
+  .display-xl {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    font-size: clamp(2.75rem, 7vw, 6.5rem);
+  }
+  .display-lg {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    font-size: clamp(2rem, 4.5vw, 4rem);
+  }
+  .display-md {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+  }
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-weight: 600;
+  }
+
+  /* Volt CTA — signature button */
+  .btn-volt {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 0.5rem;
+    background: var(--volt);
+    color: var(--ink);
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    border-radius: 0;
+    transition: transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s, background .2s;
+    box-shadow: 6px 6px 0 0 var(--ink);
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+  }
+  .btn-volt:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 0 var(--ink); background: var(--volt-deep); }
+  .btn-volt:active { transform: translate(0,0); box-shadow: 3px 3px 0 0 var(--ink); }
+
+  .btn-ghost-ink {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    color: var(--ink); font-weight: 600;
+    border-bottom: 2px solid var(--ink);
+    padding: 0.25rem 0;
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.18em;
+    transition: gap .2s;
+  }
+  .btn-ghost-ink:hover { gap: 0.85rem; }
+
+  .btn-ghost-bone {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    color: var(--bone); font-weight: 600;
+    border-bottom: 2px solid var(--volt);
+    padding: 0.25rem 0;
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.18em;
+  }
+
+  /* Editorial number badge */
+  .num-badge {
+    font-family: var(--font-display);
+    font-feature-settings: "lnum";
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--volt);
+  }
+
+  /* Hairline divider */
+  .hairline { height: 1px; background: currentColor; opacity: 0.15; }
+
+  /* Diagonal/ticker marquee */
+  .marquee {
+    display: flex; gap: 3rem; white-space: nowrap;
+    animation: marquee 38s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Tape-measure gauge in hero widget */
+  .tick { width: 1px; background: currentColor; opacity: 0.4; }
+
+  /* Frame for editorial images */
+  .frame-ink {
+    position: relative;
+    box-shadow: 0 30px 60px -25px rgba(0,0,0,0.45);
+  }
+  .frame-ink::after {
+    content: ""; position: absolute; inset: 0;
+    border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+    pointer-events: none;
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0; transform: translateY(20px);
+    animation: reveal .9s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  @keyframes reveal {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Hero underline draw */
+  .hero-stroke {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240;
+    animation: draw 1.4s .8s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  /* Hero blueprint sweep */
+  .hero-sweep { animation: sweep 7s linear infinite; }
+  @keyframes sweep {
+    0%   { transform: translateY(0); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
+
+  /* Hide scrollbar utility (filter strips, horizontal scrollers) */
+  .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+
+  /* Original font stacks retained. No external font fetch in the isolated bundle. */
+}
+
+/* Preserve donor motion for standard mode; honor accessibility preferences. */
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+ .reveal { opacity: 1 !important; transform: none !important; }
+}

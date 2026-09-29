@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — WSS Connect</title>
+<meta name="theme-color" content="#08080B">
+<style>
+  :root{ --void:#08080B; --card:#1C1C24; --ink:#F7F7FA; --slate:#B4B3BE; --hair:rgba(255,255,255,.10);
+    --violet:#8B7BFF; --blue:#5A7BFF; --grad:linear-gradient(135deg,#5A7BFF 0%,#8B5CF6 100%); }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--void);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:48px 22px 90px}
+  .mark{display:flex;align-items:center;gap:11px;font-weight:800;font-size:20px;margin-bottom:6px}
+  .mark b{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .updated{color:var(--slate);font-size:14px;margin-bottom:34px}
+  h1{font-size:30px;margin:0 0 6px}
+  h2{font-size:19px;margin:34px 0 10px;color:var(--ink)}
+  p,li{color:var(--slate)}
+  li{margin-bottom:8px}
+  a{color:#9db0ff}
+  table{width:100%;border-collapse:collapse;margin-top:14px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--hair);font-size:15px;color:var(--slate)}
+  th{color:var(--ink);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+  .box{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:18px 20px;margin-top:34px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark"><b>WSS</b> Connect</div>
+  <h1>Privacy Policy</h1>
+  <div class="updated">Last updated: July 18, 2026</div>
+
+  <p>WSS Connect, operated by WSS Labs, is a unified inbox that consolidates a business's incoming
+  messages — from text, email, phone/voicemail, website chat, and connected platforms — into one
+  place, and lets that business reply. This policy explains what data WSS Connect handles, why, and
+  how it's protected.</p>
+
+  <h2>1. Who this policy covers</h2>
+  <p>This policy applies to businesses using WSS Connect (the "account holder") and, where relevant, to
+  the customers or leads who message that business through a connected channel. WSS Labs acts as a
+  service provider to the business account holder for the purpose of routing and displaying those
+  messages — we do not sell message content or contact data to third parties.</p>
+
+  <h2>2. What we collect</h2>
+  <table>
+    <tr><th>Data</th><th>Why</th></tr>
+    <tr><td>Message content (text, email, chat, call transcripts/voicemail, social DMs)</td>
+        <td>Displayed to the business owner in their inbox so they can respond to leads and customers.</td></tr>
+    <tr><td>Contact info of the sender (phone number, email address, or platform profile)</td>
+        <td>So the business owner knows who's messaging and can reply through the right channel.</td></tr>
+    <tr><td>OAuth access tokens for connected platforms (e.g. a Facebook Page or Instagram Business account)</td>
+        <td>Used server-side only, to fetch and send messages on that platform. Tokens are never sent to
+          or stored in the browser.</td></tr>
+    <tr><td>Account holder's PIN / access token</td>
+        <td>Authenticates the business owner into their own inbox.</td></tr>
+  </table>
+
+  <h2>3. Connected platforms</h2>
+  <p>When a business connects a platform such as Facebook, Instagram, LinkedIn, X, TikTok, or Google
+  through WSS Connect, we request only the permissions needed to read and send messages on that
+  platform on the business's behalf (for example, Meta's <code>pages_messaging</code> and
+  <code>instagram_manage_messages</code> scopes). Each platform's own privacy policy also governs
+  how it handles data — connecting through WSS Connect does not change your rights or obligations
+  under that platform's policy.</p>
+
+  <h2>4. How data is stored and protected</h2>
+  <ul>
+    <li>Message and connector data is stored in an access-controlled database (Supabase/PostgreSQL)
+      with row-level security enabled.</li>
+    <li>All traffic between WSS Connect and our servers is encrypted in transit (HTTPS).</li>
+    <li>Platform access tokens are used only by our server-side functions and are never exposed to the
+      browser or included in any client-side response.</li>
+    <li>We do not sell message content, contact information, or connector data to third parties.</li>
+  </ul>
+
+  <h2>5. Data retention</h2>
+  <p>We retain messages and connector data for as long as the business account remains active with WSS
+  Labs, so the inbox stays complete and useful. A business owner can request deletion of their account's
+  message history and disconnection of any platform at any time by contacting us.</p>
+
+  <h2>6. Your choices</h2>
+  <ul>
+    <li>Disconnect any connected platform at any time — this revokes WSS Connect's access token for
+      that platform.</li>
+    <li>Request a copy or deletion of your business's message data by contacting us below.</li>
+  </ul>
+
+  <h2>7. Changes to this policy</h2>
+  <p>We may update this policy as WSS Connect adds new connected channels or features. We'll update the
+  "Last updated" date above when we do.</p>
+
+  <div class="box">
+    <h2 style="margin-top:0">Contact</h2>
+    <p style="margin-bottom:0">Questions about this policy, or a data request? Email
+      <a href="mailto:mark@woodwarddigitalmarketing.com">mark@woodwarddigitalmarketing.com</a>.</p>
+  </div>
+</div>
+</body>
+</html>

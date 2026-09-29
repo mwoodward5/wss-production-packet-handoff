@@ -1,0 +1,34 @@
+[
+  {
+    "name": "M and M Heating and Cooling",
+    "theirs": "https://mmheatingandcooling.com/",
+    "ours": "https://wss-test-m-and-m-heating-and-cooling-llc-bridgeport.wss-ai.com/"
+  },
+  {
+    "name": "Summit Heat and Air Tulsa",
+    "theirs": "https://summitheatandair.com/",
+    "ours": "https://wss-test-summit-heat-and-air-tulsa-tulsa.wss-ai.com/"
+  },
+  {
+    "name": "Holt Plumbing Company",
+    "theirs": "https://www.holtplumbing.com/",
+    "ours": "https://wss-test-holt-plumbing-company-nashville.wss-ai.com/"
+  },
+  {
+    "name": "Modern Furnace and Air Conditioning",
+    "theirs": "https://modernhvacutah.com/",
+    "ours": "https://wss-test-modern-furnace-and-air-conditioning-llc-ma.wss-ai.com/"
+  },
+  {
+    "name": "The Chill Brothers",
+    "ours": "https://wss-test-the-chill-brothers-spring.wss-ai.com/"
+  },
+  {
+    "name": "Oklahoma Air Conditioning",
+    "ours": "https://wss-test-oklahoma-air-conditioning-oklahoma-city.wss-ai.com/"
+  },
+  {
+    "name": "Armoured Plumbing",
+    "ours": "https://wss-test-armoured-plumbing-inc-roseville.wss-ai.com/"
+  }
+]

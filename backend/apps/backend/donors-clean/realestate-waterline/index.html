@@ -1,0 +1,1159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!--
+      realestate-waterline — A+ static rebuild (2026-09-02).
+
+      Zero-framework, zero-CDN, static-first donor. Everything the visitor
+      needs is in this markup, in source order; JavaScript only adds sizzle
+      (reveals, count-ups, scroll progress, hero video arming) and every one
+      of those extras is gated behind the .js class this document sets BEFORE
+      first paint plus prefers-reduced-motion, so no-JS and reduced-motion
+      visitors see the complete page. The palette is consumed exclusively
+      through the mirror engine's --wss-* custom properties (with achromatic
+      fallbacks), so the same bytes pass AA under both light and dark client
+      palettes.
+    -->
+
+    <!-- Progressive enhancement flag: set before the stylesheet loads so
+         .js-gated styles never flash. -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <title>Real Estate Agent in {{CITY}}, {{REGION}} | {{BUSINESS_NAME}}</title>
+    <meta
+      name="description"
+      content="{{BUSINESS_NAME}} represents buyers, sellers, investors and relocating clients in the {{CITY}}, {{REGION}} real estate market[[NEED:COUNTY]] and across {{COUNTY}}[[/NEED]] — private consultations, listing strategy and buyer advisory.[[NEED:PHONE]] Call {{PHONE}}.[[/NEED]][[NEED:!PHONE]] Book a private consultation.[[/NEED]]"
+    />
+    <meta name="author" content="{{BUSINESS_NAME}}" />
+    <!-- GEO is a verified "lat,lng" pair; the whole tag collapses when it is blank. -->
+    <meta name="geo.position" content="{{GEO}}" data-collapse-if-empty="GEO" />
+    [[NEED:DOMAIN]]<link rel="canonical" href="https://{{DOMAIN}}/" data-domain-meta />[[/NEED]]
+
+    <meta property="og:title" content="Real Estate Agent in {{CITY}}, {{REGION}} | {{BUSINESS_NAME}}" />
+    <meta
+      property="og:description"
+      content="Elevated real estate representation in {{CITY}}, {{REGION}} — buyer advisory, listing strategy, valuation and relocation support."
+    />
+    <meta property="og:type" content="website" />
+    [[NEED:DOMAIN]]<meta property="og:url" content="https://{{DOMAIN}}/" data-domain-meta />[[/NEED]]
+    <meta property="og:locale" content="en_US" />
+    [[NEED:DOMAIN]]<meta property="og:image" content="https://{{DOMAIN}}/assets/hero-waterfront-ChfRm_1l.jpg" data-domain-meta />[[/NEED]]
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Real Estate Agent in {{CITY}}, {{REGION}} | {{BUSINESS_NAME}}" />
+    <meta
+      name="twitter:description"
+      content="Elevated real estate representation in {{CITY}}, {{REGION}} — buyer advisory, listing strategy, valuation and relocation support."
+    />
+    [[NEED:DOMAIN]]<meta name="twitter:image" content="https://{{DOMAIN}}/assets/hero-waterfront-ChfRm_1l.jpg" data-domain-meta />[[/NEED]]
+
+    <!-- LocalBusiness graph (RealEstateAgent is the vertical's schema).
+         OPTIONAL facts ride NEED phrase markers so a blank token never
+         leaves a dangling comma or an invented fact. -->
+    <script type="application/ld+json" data-domain-meta>
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "{{BUSINESS_NAME}}",
+      [[NEED:DOMAIN]]"url": "https://{{DOMAIN}}/",[[/NEED]]
+      [[NEED:PHONE]]"telephone": "{{PHONE}}",[[/NEED]]
+      [[NEED:EMAIL]]"email": "{{EMAIL}}",[[/NEED]]
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ADDRESS_CITY}}",
+        "addressRegion": "{{REGION}}",
+        [[NEED:POSTAL]]"postalCode": "{{POSTAL}}",[[/NEED]]
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "{{CITY}}" }[[NEED:COUNTY]],
+        { "@type": "AdministrativeArea", "name": "{{COUNTY}}" }[[/NEED]]
+      ],
+      [[NEED:GEO_LAT]]"geo": { "@type": "GeoCoordinates", "latitude": "{{GEO_LAT}}", "longitude": "{{GEO_LNG}}" },[[/NEED]]
+      [[NEED:LICENSE]]"hasCredential": "{{LICENSE}}",[[/NEED]]
+      [[NEED:PROFILE_URL]]"sameAs": ["{{PROFILE_URL}}"],[[/NEED]]
+      "priceRange": "$$"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What areas does {{BUSINESS_NAME}} serve?","acceptedAnswer":{"@type":"Answer","text":"We work with buyers and sellers across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and the wider {{COUNTY}} area[[/NEED]].[[NEED:PHONE]] Call {{PHONE}}[[/NEED]][[NEED:!PHONE]] Use the contact options on this page[[/NEED]] to confirm your target neighborhood is in range."}},
+        {"@type":"Question","name":"How is your fee structured?","acceptedAnswer":{"@type":"Answer","text":"Every engagement starts with a private consultation, and every fee conversation ends with a written proposal — what is included, what it costs and when it is due — before anything is signed. No verbal numbers, no surprises at closing."}},
+        {"@type":"Question","name":"How should I prepare my home before listing?","acceptedAnswer":{"@type":"Answer","text":"Start with a walk-through: repairs that pay for themselves, decluttering, and photography-ready staging. We map the prep list against your timeline and budget before the home goes on the market."}},
+        {"@type":"Question","name":"How long does it take to sell a home here?","acceptedAnswer":{"@type":"Answer","text":"It depends on price band, condition and season. At the consultation we review recent comparable sales in your area and set a realistic timeline and pricing strategy together."}},
+        {"@type":"Question","name":"Do you work with first-time buyers?","acceptedAnswer":{"@type":"Answer","text":"Yes. First-time buyers get the full walkthrough: financing pre-approval, offer strategy, inspections and closing steps — explained in plain language before you commit to anything."}},
+        {"@type":"Question","name":"Are you a licensed real estate agent?","acceptedAnswer":{"@type":"Answer","text":"[[NEED:LICENSE]]Licensed under {{LICENSE}} — the number appears on every agreement and disclosure.[[/NEED]][[NEED:!LICENSE]]License details are provided in writing with every agreement and disclosure.[[/NEED]]"}}
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="assets/realestate-waterline.css" />
+    <style data-wss-hero-fallback>
+      /* THE HERO CLIP CAN NEVER PRESENT AS A BLACK RECTANGLE: the marked video
+         paints its own hero photograph/color beneath any frame, hidden means
+         hidden even where a preflight resets video display, and a clip that
+         failed every ladder rung is hidden outright so the site's own hero
+         image shows instead. */
+      video[data-hero-video] { background: hsl(220 15% 15%) url("/assets/hero-waterfront-ChfRm_1l.jpg") center/cover no-repeat; }
+      video[data-hero-video][hidden] { display: none !important; }
+      video[data-hero-video][data-hero-dead] { display: none !important; }
+    </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://{{DOMAIN}}/" },
+        { "@type": "ListItem", "position": 2, "name": "Expertise", "item": "https://{{DOMAIN}}/#expertise" },
+        { "@type": "ListItem", "position": 3, "name": "Market", "item": "https://{{DOMAIN}}/#reel" }
+      ]
+    },
+    {
+      "@type": "ImageGallery",
+      "name": "{{BUSINESS_NAME}} recent work in {{CITY}}, {{REGION}}",
+      "associatedMedia": [
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/hero-waterfront-ChfRm_1l.jpg", "caption": "On the water" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/luxury-kitchen-CFb1ZAw3.jpg", "caption": "The interiors" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/skyline-dusk-B6fZhHJy.jpg", "caption": "The skyline" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/yacht-lifestyle-D1S_YqQ2.jpg", "caption": "The dock life" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/aerial-estates-Cb2YyTZF.jpg", "caption": "The enclaves" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/lifestyle-interior-C6rlevbM.jpg", "caption": "The rooms" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "{{BUSINESS_NAME}}",
+      "url": "https://{{DOMAIN}}/",
+      "potentialAction": { "@type": "ReadAction", "target": "https://{{DOMAIN}}/#contact" }
+    }
+  ]
+}
+</script>
+
+</head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- The donor's scroll progress rule: a gold hairline that fills as the
+         page reads. Pure decoration; without JS it simply never fills. -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- ================================================================
+         SITE HEADER — sticky charcoal slab bar. Flex + gap, brand name
+         truncates with an ellipsis, nav collapses into a <details> drawer
+         under 1024px, and the logo sits on a --wss-surface-alt plate so a
+         low-contrast mark never floats on the dark slab.
+         ================================================================ -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="{{BUSINESS_NAME}} home">
+          [[NEED:LOGO_URL]]<span class="logo-plate"><img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}} logo" width="40" height="40" /></span>[[/NEED]]
+          <span class="brand-name">{{BUSINESS_NAME}}</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#collections">Collections</a>
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#process">Process</a>
+          <a href="#reel">The market</a>
+          [[NEED:REVIEW_TEXT]]<a href="#testimonials">Reviews</a>[[/NEED]]
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        [[NEED:PHONE]]<a class="header-call" data-cta="header-call" href="tel:{{PHONE_DIGITS}}">
+          <span class="call-label">Call now</span> <span class="call-num">{{PHONE}}</span>
+        </a>[[/NEED]]
+
+        <!-- No-JS mobile nav: a <details> drawer works without scripts. -->
+        <details class="nav-drawer">
+          <summary aria-label="Open menu">
+            <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="drawer-word">Menu</span>
+          </summary>
+          <div class="drawer-panel">
+            <nav aria-label="Mobile">
+              <a href="#collections">Collections</a>
+              <a href="#about">About</a>
+              <a href="#expertise">Expertise</a>
+              <a href="#process">Process</a>
+              <a href="#reel">The market</a>
+              [[NEED:REVIEW_TEXT]]<a href="#testimonials">Reviews</a>[[/NEED]]
+              <a href="#faq">FAQ</a>
+              <a href="#contact">Contact</a>
+            </nav>
+            [[NEED:PHONE]]<a class="drawer-call" data-cta="dock-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="drawer-call" data-cta="dock-quote" href="#contact">Book a consultation</a>[[/NEED]]
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ==============================================================
+           HERO — three commented variants, exactly one active.
+           ACTIVE: hero/video-hero — full-bleed background video with a
+           poster photograph that IS the hero on its own. The poster
+           <img> sits under the <video> permanently, the clip is armed by
+           the ladder runtime at the foot of this file, mobile is
+           poster-first with a tap-to-play chip, and the scrim floor
+           holds AA over the poster and over any frame. The poster's
+           subject (the waterfront residence) sits right-of-center, so
+           the critical copy lives in the LEFT column, outside the
+           photo's center-safe zone.
+           ============================================================== -->
+      <!-- VARIANT: hero/video-hero (ACTIVE) -->
+      <section id="top" class="hero hero-video" aria-label="Introduction">
+        <div class="hero-media" aria-hidden="true">
+          <img class="hero-poster" src="assets/hero-waterfront-ChfRm_1l.jpg" alt="" width="1600" height="1067" decoding="async" />
+          <video data-hero-video muted loop playsinline preload="none" poster="assets/hero-waterfront-ChfRm_1l.jpg" hidden></video>
+          <div class="hero-particles" aria-hidden="true"></div>
+          <div class="hero-scrim"></div>
+          <div class="hero-grain"></div>
+        </div>
+
+        <div class="hero-inner"><div class="hero-copy-col">
+          <p class="hero-eyebrow glass-chip reveal-clip">
+            Private real estate advisory&nbsp;&middot;&nbsp;{{CITY}}, {{REGION}}
+          </p>
+          <h1 class="hero-title reveal-up">{{HERO_HEADLINE}}</h1>
+          <p class="hero-lede reveal-up">
+            Elevated representation for buyers, sellers, investors and relocating clients across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and {{COUNTY}}[[/NEED]] — listing strategy, buyer advisory, valuation and negotiation, starting with a private consultation.
+          </p>
+          <div class="hero-ctas reveal-up">
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="#contact">Book a consultation</a>[[/NEED]]
+            <a class="btn btn-ghost" data-cta="hero-quote" href="#collections">View collections</a>
+          </div>
+          <ul class="hero-chips reveal-up" aria-label="Credentials at a glance">
+            [[NEED:LICENSE]]<li class="glass-chip" data-collapse-if-empty="LICENSE">Licensed &middot; {{LICENSE}}</li>[[/NEED]]
+            [[NEED:RATING,REVIEW_COUNT]]<li class="glass-chip" data-collapse-if-empty="RATING,REVIEW_COUNT">{{RATING}}&nbsp;rating &middot; {{REVIEW_COUNT}} reviews</li>[[/NEED]]
+            <li class="glass-chip">Written scope of service</li>
+          </ul>
+        </div></div>
+
+        <button class="hero-play glass-chip" type="button" hidden>
+          <span aria-hidden="true">&#9654;</span> Play film
+        </button>
+      </section>
+
+      <!-- VARIANT: hero/split-editorial — the donor's quieter alternative:
+           copy left, a gold-framed still right on the slab, no video.
+      <section id="top" class="hero hero-split" aria-label="Introduction">
+        <div class="hero-inner hero-split-grid">
+          <div class="hero-copy">
+            <p class="hero-eyebrow glass-chip">Private real estate advisory &middot; {{CITY}}, {{REGION}}</p>
+            <h1 class="hero-title">{{HERO_HEADLINE}}</h1>
+            <p class="hero-lede">Listing strategy, buyer advisory, valuation and negotiation across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and {{COUNTY}}[[/NEED]] — starting with a private consultation.</p>
+            <div class="hero-ctas">
+              [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+              [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="#contact">Book a consultation</a>[[/NEED]]
+            </div>
+          </div>
+          <figure class="hero-media-card">
+            <img class="hero-poster" src="assets/hero-waterfront-ChfRm_1l.jpg" alt="Waterfront residence with a pool and private dock at golden hour" width="1600" height="1067" />
+          </figure>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: hero/drawn-slab — pure CSS hero: charcoal gradients, gold
+           particles and a framed plate of the still, no video at all.
+      <section id="top" class="hero hero-grid" aria-label="Introduction">
+        <div class="hero-inner">
+          <p class="hero-eyebrow glass-chip">{{CITY}}, {{REGION}}</p>
+          <h1 class="hero-title">{{HERO_HEADLINE}}</h1>
+          <p class="hero-lede">Buyer advisory, listing strategy, valuation and relocation support across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and {{COUNTY}}[[/NEED]].</p>
+          <div class="hero-ctas">
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="#contact">Book a consultation</a>[[/NEED]]
+            <a class="btn btn-ghost" data-cta="hero-quote" href="#collections">View collections</a>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           CREDIBILITY STRIP — the donor's marquee, reduced to what is
+           TRUE of any build: posture, market, and verified rating
+           (which collapses). No platform or partnership claims.
+           ============================================================== -->
+      <section id="credibility" class="cred-strip" aria-label="Practice at a glance">
+        <ul class="cred-rail container">
+          <li class="cred-item reveal-clip">Buyer &amp; seller representation</li>
+          <li class="cred-item reveal-clip">Private consultations</li>
+          <li class="cred-item reveal-clip">{{CITY}}, {{REGION}} market focus</li>
+          [[NEED:RATING,REVIEW_COUNT]]<li class="cred-item reveal-clip" data-collapse-if-empty="RATING,REVIEW_COUNT">{{RATING}}&nbsp;&starf; &middot; {{REVIEW_COUNT}} verified reviews</li>[[/NEED]]
+        </ul>
+      </section>
+
+      <!-- ==============================================================
+           SERVICES / COLLECTIONS — exactly ONE services block on the page.
+           The donor's collections mosaic, re-voiced as the trade's six
+           service lines. Number watermarks carry the design DNA; copy
+           states what the trade does, never unverifiable reach claims.
+           ============================================================== -->
+      <!-- VARIANT: services/collections-mosaic (ACTIVE) -->
+      <section id="collections" class="section" aria-labelledby="collections-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The collections</p>
+            <h2 id="collections-title">Representation, in six movements</h2>
+            <p class="section-lede">
+              Each engagement is scoped in writing at the start — what is included, what it costs, and how decisions get made together.
+            </p>
+          </header>
+
+          <ul class="col-grid cards" role="list">
+            <li class="col-card card reveal-up">
+              <span class="col-num" aria-hidden="true">01</span>
+              <span class="col-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M10 20v-5h4v5"/></svg></span>
+              <h3 class="card-title">Buyer representation</h3>
+              <p class="card-body">Search, shortlist and showings; offer strategy and terms; inspections and closing coordination — one advocate from first tour to keys.</p>
+            </li>
+            <li class="col-card card reveal-up">
+              <span class="col-num" aria-hidden="true">02</span>
+              <span class="col-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12"/><path d="M4 21h16"/><path d="M9 21v-6h6v6"/></svg></span>
+              <h3 class="card-title">Listing &amp; marketing</h3>
+              <p class="card-body">Prep planning, staging guidance, photography-ready presentation, showings and feedback reviews — a listing strategy set before the sign goes up.</p>
+            </li>
+            <li class="col-card card reveal-up">
+              <span class="col-num" aria-hidden="true">03</span>
+              <span class="col-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8c2.5-2 4-2 7 0s4.5 2 7 0"/><path d="M5 16c2.5-2 4-2 7 0s4.5 2 7 0"/></svg></span>
+              <h3 class="card-title">Market valuation</h3>
+              <p class="card-body">A comparable-sales valuation for your home or target property, with the assumptions written down — a number you can interrogate, not just receive.</p>
+            </li>
+            <li class="col-card card reveal-up">
+              <span class="col-num" aria-hidden="true">04</span>
+              <span class="col-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <h3 class="card-title">Relocation advisory</h3>
+              <p class="card-body">Neighborhood orientation, school-commute realities in your own words, and a paced search plan for moves into or around the area.</p>
+            </li>
+            <li class="col-card card reveal-up">
+              <span class="col-num" aria-hidden="true">05</span>
+              <span class="col-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M2 9h2M2 15h2M20 9h2M20 15h2M9 2v2M15 2v2M9 20v2M15 20v2"/></svg></span>
+              <h3 class="card-title">Investment analysis</h3>
+              <p class="card-body">Rent-roll realities, carrying costs and exit scenarios laid out for a purchase decision — the arithmetic behind the enthusiasm.</p>
+            </li>
+            <li class="col-card card reveal-up">
+              <span class="col-num" aria-hidden="true">06</span>
+              <span class="col-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M21 3l-7.5 7.5"/><path d="M3 21l7.5-7.5"/><path d="M11 11l2 2"/></svg></span>
+              <h3 class="card-title">Negotiation</h3>
+              <p class="card-body">Terms, repairs, timelines and price — negotiated with the file open: every position backed by the comparables and the contract, in writing.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- VARIANT: services/list-rows — numbered editorial rows instead of cards.
+      <section id="collections" class="section" aria-labelledby="collections-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The collections</p>
+            <h2 id="collections-title">Representation, in six movements</h2>
+          </header>
+          <ol class="col-list" role="list">
+            <li class="col-row reveal-up"><span class="row-num">01</span><div><h3 class="card-title">Buyer representation</h3><p class="card-body">Search, showings, offer strategy and closing coordination — one advocate from first tour to keys.</p></div></li>
+            <li class="col-row reveal-up"><span class="row-num">02</span><div><h3 class="card-title">Listing &amp; marketing</h3><p class="card-body">Prep planning, presentation, showings and feedback — strategy set before the sign goes up.</p></div></li>
+            <li class="col-row reveal-up"><span class="row-num">03</span><div><h3 class="card-title">Market valuation</h3><p class="card-body">Comparable-sales valuation with the assumptions written down.</p></div></li>
+          </ol>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: services/editorial-tiles — tight tiles on the accent tint.
+      <section id="collections" class="section" aria-labelledby="collections-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The collections</p>
+            <h2 id="collections-title">Representation, in six movements</h2>
+          </header>
+          <ul class="col-tiles cards" role="list">
+            <li class="tile card reveal-up"><h3 class="card-title">Buyer representation</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Listing &amp; marketing</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Market valuation</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Relocation advisory</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Investment analysis</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Negotiation</h3></li>
+          </ul>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           ABOUT — exactly ONE about paragraph, the donor's editorial
+           voice with its gold-frame offset imagery. Owner name and
+           license ride NEED guards so a blank fact never renders a hole.
+           ============================================================== -->
+      <section id="about" class="section section-alt" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <figure class="about-frame reveal-scale">
+            <img src="assets/lifestyle-interior-C6rlevbM.jpg" alt="Sunlit living room with linen seating, wide-plank floors and floor-to-ceiling glass" width="1200" height="800" loading="lazy" decoding="async" />
+          </figure>
+          <div class="about-copy reveal-up">
+            <p class="eyebrow">The practice</p>
+            <h2 id="about-title">{{BUSINESS_NAME}}</h2>
+            <p class="about-para">
+              [[NEED:OWNER_NAME]]{{OWNER_NAME}} leads the practice at {{BUSINESS_NAME}}, working with[[/NEED]][[NEED:!OWNER_NAME]]{{BUSINESS_NAME}} works with[[/NEED]] buyers, sellers, investors and relocating clients across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and {{COUNTY}}[[/NEED]] — from a first valuation to the final walkthrough. Every engagement opens with a private consultation and a written scope of service, so what is included, what it costs and how decisions get made is settled before the work begins.
+            </p>
+            [[NEED:LICENSE]]<aside class="cred-card card reveal-up" data-collapse-if-empty="LICENSE">
+              <p class="eyebrow">Credentials</p>
+              <p class="cred-num">{{LICENSE}}</p>
+              <p class="card-body">The license number appears on every agreement and disclosure.</p>
+            </aside>[[/NEED]]
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           EXPERTISE / PERSONAS — the donor's three persona panels: who
+           the practice works with. Audience framing, not a second
+           services grid; copy is trade-honest, no reach claims.
+           ============================================================== -->
+      <section id="expertise" class="section" aria-labelledby="expertise-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Who we work with</p>
+            <h2 id="expertise-title">Three chairs, one standard</h2>
+          </header>
+          <div class="persona-grid cards">
+            <article class="persona-card card reveal-up">
+              <figure class="persona-photo"><img src="assets/skyline-dusk-B6fZhHJy.jpg" alt="City skyline across the water at dusk, residential towers catching the last light" width="800" height="600" loading="lazy" decoding="async" /></figure>
+              <h3 class="card-title">Buyers</h3>
+              <p class="card-body">First tour to keys: pre-approval grounding, search discipline, offer strategy and inspection advocacy — with the comparables on the table at every step.</p>
+            </article>
+            <article class="persona-card card reveal-up">
+              <figure class="persona-photo"><img src="assets/luxury-kitchen-CFb1ZAw3.jpg" alt="Light-filled chef's kitchen with stone island and brass fixtures" width="800" height="600" loading="lazy" decoding="async" /></figure>
+              <h3 class="card-title">Sellers</h3>
+              <p class="card-body">A prep list that pays for itself, presentation aimed at the buyer who will pay the most, and a negotiation file built before the first offer arrives.</p>
+            </article>
+            <article class="persona-card card reveal-up">
+              <figure class="persona-photo"><img src="assets/yacht-lifestyle-D1S_YqQ2.jpg" alt="Yacht at a private dock beside a waterfront residence in late-afternoon light" width="800" height="600" loading="lazy" decoding="async" /></figure>
+              <h3 class="card-title">Investors</h3>
+              <p class="card-body">Rent rolls, carrying costs and exit scenarios — the arithmetic behind the enthusiasm, reviewed in writing before the deposit moves.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           PROCESS — how an engagement runs, numbered. Trade-generic:
+           no invented response times, no unverifiable promises.
+           ============================================================== -->
+      <!-- VARIANT: process/numbered-cards (ACTIVE) -->
+      <section id="process" class="section section-alt" aria-labelledby="process-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">How it runs</p>
+            <h2 id="process-title">Four steps, in writing</h2>
+          </header>
+          <ol class="steps cards" role="list">
+            <li class="step card reveal-up">
+              <span class="step-num" aria-hidden="true">1</span>
+              <h3 class="card-title">Private consultation</h3>
+              <p class="card-body">A focused first conversation — your goals, timeline and budget, and an honest read on the market you are entering.</p>
+            </li>
+            <li class="step card reveal-up">
+              <span class="step-num" aria-hidden="true">2</span>
+              <h3 class="card-title">Written scope &amp; valuation</h3>
+              <p class="card-body">The strategy on paper: scope of service, fee proposal and a comparable-sales valuation with its assumptions shown.</p>
+            </li>
+            <li class="step card reveal-up">
+              <span class="step-num" aria-hidden="true">3</span>
+              <h3 class="card-title">Execution</h3>
+              <p class="card-body">Search and showings, or prep and presentation — offers, terms and inspections negotiated with the file open.</p>
+            </li>
+            <li class="step card reveal-up">
+              <span class="step-num" aria-hidden="true">4</span>
+              <h3 class="card-title">Closing &amp; after</h3>
+              <p class="card-body">Contract-to-close coordination with every deadline tracked, and a line that still answers after the keys change hands.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- VARIANT: process/timeline — vertical rail with gold dots.
+      <section id="process" class="section section-alt" aria-labelledby="process-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">How it runs</p><h2 id="process-title">Four steps, in writing</h2></header>
+          <ol class="steps-rail" role="list">
+            <li class="rail-item reveal-up"><span class="rail-dot"></span><h3 class="card-title">Private consultation</h3><p class="card-body">Goals, timeline, budget — and an honest read on the market.</p></li>
+            <li class="rail-item reveal-up"><span class="rail-dot"></span><h3 class="card-title">Written scope &amp; valuation</h3><p class="card-body">Strategy and fee on paper, assumptions shown.</p></li>
+            <li class="rail-item reveal-up"><span class="rail-dot"></span><h3 class="card-title">Execution</h3><p class="card-body">Search or presentation; negotiation with the file open.</p></li>
+            <li class="rail-item reveal-up"><span class="rail-dot"></span><h3 class="card-title">Closing &amp; after</h3><p class="card-body">Deadlines tracked; the line stays open after keys.</p></li>
+          </ol>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: process/stack-list — plain numbered stack, no cards.
+      <section id="process" class="section section-alt" aria-labelledby="process-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">How it runs</p><h2 id="process-title">Four steps, in writing</h2></header>
+          <ol class="steps-plain" role="list">
+            <li class="reveal-up"><strong>1. Private consultation</strong> — goals, timeline, budget and an honest market read.</li>
+            <li class="reveal-up"><strong>2. Written scope &amp; valuation</strong> — strategy and fee on paper, assumptions shown.</li>
+            <li class="reveal-up"><strong>3. Execution</strong> — search or presentation; negotiation with the file open.</li>
+            <li class="reveal-up"><strong>4. Closing &amp; after</strong> — deadlines tracked; the line stays open after keys.</li>
+          </ol>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           GALLERY / LIFESTYLE REEL — the donor's horizontal snap reel
+           with its progress rule. Six vetted photographs, every src
+           resolving to a shipped asset, captioned as SETTINGS of the
+           market, never as a specific address or the client's own
+           portfolio. Native scroll-snap: it is a real carousel with or
+           without JS, animation or none.
+           ============================================================== -->
+      <!-- VARIANT: gallery/lifestyle-reel (ACTIVE) -->
+      <section id="reel" class="section" aria-labelledby="reel-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The settings</p>
+            <h2 id="reel-title">A market in six frames</h2>
+            <p class="section-lede">Scroll sideways — the reel runs edge to edge on small screens.</p>
+          </header>
+        </div>
+        <div class="reel" tabindex="0" aria-label="Market photography reel, scrollable">
+          <figure class="reel-item reveal-scale">
+            <a class="shot" data-lb href="assets/hero-waterfront-ChfRm_1l.jpg" data-caption="On the water" aria-label="Open larger photo: Waterfront residence with a pool and private dock at golden hour"><img src="assets/hero-waterfront-ChfRm_1l.jpg" alt="Waterfront residence with a pool and private dock at golden hour" width="1200" height="800" loading="lazy" decoding="async" />></a><figcaption>On the water</figcaption>
+          </figure>
+          <figure class="reel-item reveal-scale">
+            <a class="shot" data-lb href="assets/luxury-kitchen-CFb1ZAw3.jpg" data-caption="The interiors" aria-label="Open larger photo: Light-filled chef's kitchen with stone island and brass fixtures"><img src="assets/luxury-kitchen-CFb1ZAw3.jpg" alt="Light-filled chef's kitchen with stone island and brass fixtures" width="1200" height="800" loading="lazy" decoding="async" />></a><figcaption>The interiors</figcaption>
+          </figure>
+          <figure class="reel-item reveal-scale">
+            <a class="shot" data-lb href="assets/skyline-dusk-B6fZhHJy.jpg" data-caption="The skyline" aria-label="Open larger photo: City skyline across the water at dusk with residential towers"><img src="assets/skyline-dusk-B6fZhHJy.jpg" alt="City skyline across the water at dusk with residential towers" width="1200" height="800" loading="lazy" decoding="async" />></a><figcaption>The skyline</figcaption>
+          </figure>
+          <figure class="reel-item reveal-scale">
+            <a class="shot" data-lb href="assets/yacht-lifestyle-D1S_YqQ2.jpg" data-caption="The dock life" aria-label="Open larger photo: Yacht at a private dock beside a waterfront residence"><img src="assets/yacht-lifestyle-D1S_YqQ2.jpg" alt="Yacht at a private dock beside a waterfront residence" width="1200" height="800" loading="lazy" decoding="async" />></a><figcaption>The dock life</figcaption>
+          </figure>
+          <figure class="reel-item reveal-scale">
+            <a class="shot" data-lb href="assets/aerial-estates-Cb2YyTZF.jpg" data-caption="The enclaves" aria-label="Open larger photo: Aerial view of waterfront estates arranged along canals and tree-lined streets"><img src="assets/aerial-estates-Cb2YyTZF.jpg" alt="Aerial view of waterfront estates arranged along canals and tree-lined streets" width="1200" height="800" loading="lazy" decoding="async" />></a><figcaption>The enclaves</figcaption>
+          </figure>
+          <figure class="reel-item reveal-scale">
+            <a class="shot" data-lb href="assets/lifestyle-interior-C6rlevbM.jpg" data-caption="The rooms" aria-label="Open larger photo: Sunlit living room with linen seating and floor-to-ceiling glass"><img src="assets/lifestyle-interior-C6rlevbM.jpg" alt="Sunlit living room with linen seating and floor-to-ceiling glass" width="1200" height="800" loading="lazy" decoding="async" />></a><figcaption>The rooms</figcaption>
+          </figure>
+        </div>
+      </section>
+
+
+      <!-- VARIANT: gallery/caption-grid — a plain responsive grid with captions.
+      <section id="reel" class="section" aria-labelledby="reel-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">The settings</p><h2 id="reel-title">A market in six frames</h2></header>
+          <div class="gal-grid cards">
+            <figure class="gal-item card reveal-scale"><img src="assets/hero-waterfront-ChfRm_1l.jpg" alt="Waterfront residence with a pool and private dock at golden hour" width="1200" height="800" loading="lazy" /><figcaption>On the water</figcaption></figure>
+            <figure class="gal-item card reveal-scale"><img src="assets/luxury-kitchen-CFb1ZAw3.jpg" alt="Light-filled chef's kitchen with stone island and brass fixtures" width="1200" height="800" loading="lazy" /><figcaption>The interiors</figcaption></figure>
+            <figure class="gal-item card reveal-scale"><img src="assets/skyline-dusk-B6fZhHJy.jpg" alt="City skyline across the water at dusk" width="1200" height="800" loading="lazy" /><figcaption>The skyline</figcaption></figure>
+            <figure class="gal-item card reveal-scale"><img src="assets/yacht-lifestyle-D1S_YqQ2.jpg" alt="Yacht at a private dock beside a waterfront residence" width="1200" height="800" loading="lazy" /><figcaption>The dock life</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: gallery/spotlight-strip — one large frame plus a strip.
+      <section id="reel" class="section" aria-labelledby="reel-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">The settings</p><h2 id="reel-title">A market in six frames</h2></header>
+          <figure class="gal-spot reveal-scale">
+            <img src="assets/aerial-estates-Cb2YyTZF.jpg" alt="Aerial view of waterfront estates along canals and tree-lined streets" width="1200" height="800" loading="lazy" />
+            <figcaption>The enclaves</figcaption>
+          </figure>
+          <div class="gal-strip cards">
+            <figure class="gal-item card reveal-scale"><img src="assets/luxury-kitchen-CFb1ZAw3.jpg" alt="Chef's kitchen with stone island and brass fixtures" width="800" height="600" loading="lazy" /><figcaption>The interiors</figcaption></figure>
+            <figure class="gal-item card reveal-scale"><img src="assets/yacht-lifestyle-D1S_YqQ2.jpg" alt="Yacht at a private dock beside a waterfront residence" width="800" height="600" loading="lazy" /><figcaption>The dock life</figcaption></figure>
+            <figure class="gal-item card reveal-scale"><img src="assets/skyline-dusk-B6fZhHJy.jpg" alt="City skyline across the water at dusk" width="800" height="600" loading="lazy" /><figcaption>The skyline</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           TESTIMONIALS — island-only truth law: the section exists only
+           when a verified review quote exists. No reviewer content is
+           ever fabricated; with nothing verified the whole section —
+           and its nav links' target — collapses.
+           ============================================================== -->
+      <!-- VARIANT: testimonials/featured-quote (ACTIVE) -->
+      <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-title" data-collapse-if-empty="REVIEW_TEXT">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Word of mouth</p>
+            <h2 id="testimonials-title">What clients say</h2>
+          </header>
+          <figure class="tst-card card reveal-up">
+            <blockquote class="tst-quote">
+              <p>{{REVIEW_TEXT}}</p>
+            </blockquote>
+            <figcaption class="tst-meta">
+              [[NEED:REVIEW_AUTHOR]]<cite>{{REVIEW_AUTHOR}}</cite>[[/NEED]]
+              [[NEED:RATING,REVIEW_COUNT]]<span class="tst-rating" data-collapse-if-empty="RATING,REVIEW_COUNT">{{RATING}}&nbsp;&starf; &middot; {{REVIEW_COUNT}} verified reviews</span>[[/NEED]]
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- VARIANT: testimonials/rating-strip — chips only, no quote card.
+      <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-title" data-collapse-if-empty="RATING,REVIEW_COUNT">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Word of mouth</p><h2 id="testimonials-title">What clients say</h2></header>
+          <ul class="tst-strip" role="list">
+            <li class="glass-chip tst-chip" data-collapse-if-empty="RATING">{{RATING}} &starf; rating</li>
+            <li class="glass-chip tst-chip" data-collapse-if-empty="REVIEW_COUNT">{{REVIEW_COUNT}} verified reviews</li>
+          </ul>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: testimonials/quote-pair — two quote cards.
+      <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-title" data-collapse-if-empty="REVIEW_TEXT">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Word of mouth</p><h2 id="testimonials-title">What clients say</h2></header>
+          <div class="tst-pair cards">
+            <figure class="card reveal-up"><blockquote class="tst-quote"><p>{{REVIEW_TEXT}}</p></blockquote><figcaption class="tst-meta">[[NEED:REVIEW_AUTHOR]]<cite>{{REVIEW_AUTHOR}}</cite>[[/NEED]]</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           FAQ — exactly ONE FAQ block. Native <details> accordions work
+           without JS; every answer is ≤300 characters.
+           ============================================================== -->
+      <!-- VARIANT: faq/accordion (ACTIVE) -->
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <div class="container faq-wrap">
+          <header class="section-head">
+            <p class="eyebrow">Straight answers</p>
+            <h2 id="faq-title">Questions we get every week</h2>
+          </header>
+          <div class="faq-list">
+            <details class="faq-item card reveal-up" open>
+              <summary><span>What areas does {{BUSINESS_NAME}} serve?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">We work with buyers and sellers across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and the wider {{COUNTY}} area[[/NEED]].[[NEED:PHONE]] Call {{PHONE}}[[/NEED]][[NEED:!PHONE]] Use the contact options on this page[[/NEED]] to confirm your target neighborhood is in range.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>How is your fee structured?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Every engagement starts with a private consultation, and every fee conversation ends with a written proposal — what is included, what it costs and when it is due — before anything is signed.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>How should I prepare my home before listing?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Start with a walk-through: repairs that pay for themselves, decluttering, and photography-ready staging. We map the prep list against your timeline and budget before the home goes on the market.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>How long does it take to sell a home here?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">It depends on price band, condition and season. At the consultation we review recent comparable sales in your area and set a realistic timeline and pricing strategy together.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>Do you work with first-time buyers?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Yes. First-time buyers get the full walkthrough: financing pre-approval, offer strategy, inspections and closing steps — explained in plain language before you commit to anything.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>Are you a licensed real estate agent?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">[[NEED:LICENSE]]Licensed under {{LICENSE}} — the number appears on every agreement and disclosure.[[/NEED]][[NEED:!LICENSE]]License details are provided in writing with every agreement and disclosure.[[/NEED]]</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- VARIANT: faq/split-list — plain two-column Q list, no accordions.
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Straight answers</p><h2 id="faq-title">Questions we get every week</h2></header>
+          <div class="faq-cols">
+            <article class="reveal-up"><h3 class="card-title">How is your fee structured?</h3><p class="card-body">A written proposal — scope, cost and timing — before anything is signed.</p></article>
+            <article class="reveal-up"><h3 class="card-title">Do you work with first-time buyers?</h3><p class="card-body">Yes, with the full walkthrough in plain language.</p></article>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: faq/two-col-accordion — accordions in two columns.
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Straight answers</p><h2 id="faq-title">Questions we get every week</h2></header>
+          <div class="faq-list faq-two-col">
+            <details class="faq-item card reveal-up"><summary><span>What areas do you serve?</span><span class="faq-icon" aria-hidden="true">+</span></summary><p class="card-body">{{CITY}}, {{REGION}}[[NEED:COUNTY]] and the wider {{COUNTY}} area[[/NEED]].</p></details>
+            <details class="faq-item card reveal-up"><summary><span>How is your fee structured?</span><span class="faq-icon" aria-hidden="true">+</span></summary><p class="card-body">A written proposal — scope, cost and timing — before anything is signed.</p></details>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           CTA BAND — the donor's dark consultation band on --wss-slab.
+           Count-up stats ride verified tokens plus a DOM-truth count of
+           the collections; final values are in the markup for no-JS
+           readers.
+           ============================================================== -->
+      <!-- VARIANT: cta/consult-band (ACTIVE) -->
+            <!-- SECTION: SERVICE x CITY — VARIANT: areas/service-by-city-grid (active)
+           VARIANT: areas/city-column-list · VARIANT: areas/map-free-two-column
+           ENGINE SHELL: when the engine supplies additional city tokens (or a
+           service_area array) this grid should expand to one anchor per
+           service x city pair and each pair should point at its generated page,
+           shaped like /service-slug-city-slug/ with the pair as the link text.
+           Filed as [engine-request] service-x-city routing. Until those tokens
+           exist the grid stays on-page and every link resolves to a real anchor. -->
+      <section id="areas" class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Where we work</p>
+            <h2>Service by town across [[NEED:COUNTY]]{{COUNTY}}[[/NEED]][[NEED:!COUNTY]]{{REGION}}[[/NEED]]</h2>
+            <p class="section-lede">Search the way your neighbours do &mdash; the work plus the place. Each line below is the same crew and the same written price.</p>
+          </div>
+          <div class="areas-grid">
+            <a class="area-cell" href="#contact"><strong>Seller representation</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Buyer representation</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Waterfront specifics</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Land &amp; acreage</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Second homes &amp; rentals</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Relocation support</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Seller representation</strong><span>{{COUNTY}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Buyer representation</strong><span>{{COUNTY}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Waterfront specifics</strong><span>{{COUNTY}}</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: OFFER BAND — VARIANT: offer/finance-and-capacity (active)
+           VARIANT: offer/single-guarantee-ribbon · VARIANT: offer/two-column-terms
+           Financing language is framing only: no APR, no lender, no rate claim.
+           Capacity ribbon reads the real month at runtime; static copy holds with JS off. -->
+      <section id="offer" class="section section-alt">
+        <div class="shell offer-grid">
+          <div class="reveal">
+            <p class="eyebrow">What it costs</p>
+            <h2>Priced before the work, not after</h2>
+            <p>Scope, fee and turnaround are agreed in writing before anything starts. You get a fixed number for the listing and a clear list of what would change it.</p>
+            <ul class="chip-row">
+              <li class="chip">Fixed written scope</li>
+              <li class="chip">No surprise line items</li>
+              <li class="chip">Turnaround in writing</li>
+            </ul>
+          </div>
+          <aside class="capacity" data-capacity>
+            <p class="eyebrow">Current schedule</p>
+            <p class="capacity-line">Taking <strong data-season-slots>a limited number of</strong> new listing bookings for <strong data-season-month>this season</strong>.</p>
+            <p class="capacity-note">Slots move fast after a weather week. Send the details and we will hold the next opening while you decide.</p>
+            <div class="btn-row">
+              <a class="btn btn-solid" href="#contact">Hold my spot</a>
+              [[NEED:PHONE]]<a class="btn btn-ghost" href="sms:{{PHONE_DIGITS}}">Text us instead</a>[[/NEED]]
+            </div>
+          </aside>
+        </div>
+      </section>
+
+<section id="ready" class="cta-band" aria-labelledby="cta-title">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="container cta-inner">
+          <div class="cta-copy reveal-up">
+            <h2 id="cta-title">Book a private consultation</h2>
+            <p class="cta-sub">Tell us what you are buying or selling — we will map the next step together, in writing.</p>
+            <div class="cta-btns">
+              [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+              [[NEED:PHONE]]<a class="btn btn-ghost" data-cta="cta-sms" href="sms:{{PHONE_DIGITS}}">Text us instead</a>[[/NEED]]
+              [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="#contact">Book a consultation</a>[[/NEED]]
+              <a class="btn btn-ghost" data-cta="cta-quote" href="#contact">Use the contact rails</a>
+            </div>
+          </div>
+          <ul class="cta-stats reveal-up" aria-label="Numbers at a glance">
+            [[NEED:RATING]]<li data-collapse-if-empty="RATING"><strong data-countup data-target="{{RATING}}" data-decimals="1">{{RATING}}</strong><span>rating</span></li>[[/NEED]]
+            [[NEED:REVIEW_COUNT]]<li data-collapse-if-empty="REVIEW_COUNT"><strong data-countup data-target="{{REVIEW_COUNT}}">{{REVIEW_COUNT}}</strong><span>verified reviews</span></li>[[/NEED]]
+            <li><strong data-countup data-target="6" data-count-from="#collections .col-card">6</strong><span>service lines</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- VARIANT: cta/split-cta — copy left, one framed action right.
+      <section id="ready" class="cta-band" aria-labelledby="cta-title">
+        <div class="container cta-inner">
+          <div class="cta-copy reveal-up"><h2 id="cta-title">Book a private consultation</h2><p class="cta-sub">The next step, mapped together — in writing.</p></div>
+          <div class="cta-panel reveal-up">
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="#contact">Book a consultation</a>[[/NEED]]
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: cta/boxed-card — light card floating on the slab.
+      <section id="ready" class="cta-band" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta-card card reveal-up">
+            <h2 id="cta-title">Book a private consultation</h2>
+            <p class="cta-sub">Every fee and scope conversation ends in writing, before anything is signed.</p>
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="#contact">Book a consultation</a>[[/NEED]]
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           CONTACT — rails for the verified facts only. Every rail rides
+           a NEED guard; nothing is invented to fill a slot.
+           ============================================================== -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Get in touch</p>
+            <h2 id="contact-title">Start with a conversation, not a form letter</h2>
+          </header>
+          <div class="contact-grid cards">
+            [[NEED:PHONE]]<div class="contact-rail card reveal-up">
+              <p class="rail-label">Call or text</p>
+              <a class="rail-value" href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>
+              <p class="card-body">For scheduling a consultation and same-week questions.</p>
+            </div>[[/NEED]]
+            [[NEED:EMAIL]]<div class="contact-rail card reveal-up">
+              <p class="rail-label">Email</p>
+              <a class="rail-value" href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+              <p class="card-body">Send the property address or your target brief — it speeds the first conversation.</p>
+            </div>[[/NEED]]
+            <div class="contact-rail card reveal-up">
+              <p class="rail-label">Service area</p>
+              <p class="rail-value">{{CITY}}, {{REGION}}[[NEED:COUNTY]] &middot; {{COUNTY}}[[/NEED]]</p>
+              <p class="card-body">Based in {{ADDRESS_CITY}}, {{REGION}}[[NEED:POSTAL]] &middot; {{POSTAL}}[[/NEED]].[[NEED:PROFILE_URL]] <a href="{{PROFILE_URL}}">Google Business Profile</a>.[[/NEED]]</p>
+            </div>
+            [[NEED:LICENSE]]<div class="contact-rail card reveal-up" data-collapse-if-empty="LICENSE">
+              <p class="rail-label">License</p>
+              <p class="rail-value">{{LICENSE}}</p>
+              <p class="card-body">Printed on every agreement and disclosure.</p>
+            </div>[[/NEED]]
+          </div>
+        </div>
+      </section>
+    </main>
+
+<!-- Full-screen lightbox. Progressive: with JS off each thumb is a plain link
+     to the full-size asset, so no gallery item is ever a dead end. -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project photo viewer" hidden data-lightbox-root>
+  <div class="lb-scrim" data-lb-close></div>
+  <div class="lb-frame" role="group" aria-live="polite">
+    <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Close viewer">&#10005;</button>
+    <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Previous photo">&#8249;</button>
+    <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Next photo">&#8250;</button>
+    <figure class="lb-figure">
+      <img class="lb-img" data-lb-img src="assets/lifestyle-interior-C6rlevbM.jpg" alt="" width="1200" height="900" decoding="async">
+      <figcaption class="lb-caption"><span data-lb-caption></span> <span class="lb-count" data-lb-count></span></figcaption>
+    </figure>
+  </div>
+</div>
+
+
+    <!-- ================================================================
+         FOOTER — slab band, NAP line, license line, domain line.
+         ================================================================ -->
+    <footer class="site-footer">
+      <div class="container">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#collections">Collections</a>
+          <a href="#about">About</a>
+          <a href="#process">Process</a>
+          <a href="#reel">The market</a>
+          [[NEED:REVIEW_TEXT]]<a href="#testimonials">Reviews</a>[[/NEED]]
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer-nap">
+          {{BUSINESS_NAME}} &middot; {{ADDRESS_CITY}}, {{REGION}}[[NEED:POSTAL]] &middot; {{POSTAL}}[[/NEED]][[NEED:PHONE]] &middot; <a href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>[[/NEED]][[NEED:EMAIL]] &middot; <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>[[/NEED]]
+        </p>
+        [[NEED:LICENSE]]<p class="footer-license">{{LICENSE}}</p>[[/NEED]]
+        <p class="footer-legal" data-domain-meta>&copy; {{BUSINESS_NAME}}[[NEED:DOMAIN]] &middot; {{DOMAIN}}[[/NEED]]</p>
+      </div>
+    </footer>
+
+    <!-- ================================================================
+         MOBILE ACTION DOCK — sticky bottom bar under 1024px. Safe-area
+         padded; the call slot collapses when no phone is verified.
+         ================================================================ -->
+    <div class="action-dock" aria-label="Quick actions">
+      [[NEED:PHONE]]<a class="dock-btn dock-call" data-cta="dock-call" href="tel:{{PHONE_DIGITS}}">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        <span>Call {{PHONE}}</span>
+      </a>[[/NEED]]
+      <a class="dock-btn dock-quote" data-cta="dock-quote" href="#contact">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        <span>Book a consultation</span>
+      </a>
+    </div>
+
+    <!-- THE HERO VIDEO LADDER, as data. The runtime walks it top-down and arms
+         the first rung whose bytes shipped in this build; a rung that errors
+         steps down to the next. The client's own clip always outranks ours.
+         The <video> element is in the hero markup above, marked
+         data-hero-video with no static src; the walker finds it immediately.
+         (The compiled SPA bundle in assets/ carries the same marked mount for
+         the ladder contract; the static page arms its own.) -->
+    <script type="application/json" id="hero-video-ladder">
+      { "sources": ["assets/hero-client-realestate.mp4", "assets/hero-fallback-realestate.mp4"] }
+    </script>
+
+    <script>
+    (function(){
+      "use strict";
+      var heroRungs=(function(){try{return (JSON.parse(document.getElementById("hero-video-ladder").textContent)||{}).sources||[];}catch(e){return [];}})();
+      if(!heroRungs.length||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+      function arm(clip,i){
+        var src=heroRungs[i];
+        if(!src){clip.setAttribute("data-hero-dead","1");clip.hidden=true;clip.removeAttribute("src");try{clip.load()}catch(e){}return;}
+        clip.src=src.charAt(0)==="/"?src:"/"+src;
+        clip.addEventListener("loadeddata",function(){clip.hidden=false;clip.removeAttribute("data-hero-dead");clip.setAttribute("data-hero-armed","1");clip.setAttribute("data-hero-ready","1");},{once:true});
+        clip.addEventListener("error",function(){clip.setAttribute("data-hero-dead","1");clip.hidden=true;clip.removeAttribute("src");try{clip.load()}catch(e){}arm(clip,i+1);},{once:true});
+      }
+      var mounted=document.querySelector("video[data-hero-video]");
+      if(mounted){arm(mounted,0);return;}
+      var mo=new MutationObserver(function(){
+        var clip=document.querySelector("video[data-hero-video]");
+        if(clip){mo.disconnect();arm(clip,0);}
+      });
+      mo.observe(document.documentElement,{childList:true,subtree:true});
+      setTimeout(function(){mo.disconnect();},20000);
+    })();
+    </script>
+
+    <!-- Poster-first hero controller: the clip only ever starts muted, and on
+         touch devices it waits for the tap. Reduced motion never plays. -->
+    <script>
+    (function(){
+      "use strict";
+      var clip=document.querySelector("video[data-hero-video]");
+      if(!clip)return;
+      var rm=matchMedia("(prefers-reduced-motion: reduce)");
+      var playBtn=document.querySelector(".hero-play");
+      function nudge(){
+        if(rm.matches||!clip.src||clip.getAttribute("data-hero-dead"))return;
+        var p=clip.play();
+        if(p&&p.catch)p.catch(function(){/* poster stays; tap chip takes over */});
+      }
+      /* The ladder sets src asynchronously after fetch; poll briefly. */
+      var tries=0;
+      var timer=setInterval(function(){
+        tries++;
+        if(clip.src){clearInterval(timer);setTimeout(nudge,350);}
+        else if(tries>80){clearInterval(timer);}
+      },250);
+      clip.addEventListener("error",function(){setTimeout(nudge,150);});
+      if(playBtn){
+        playBtn.addEventListener("click",function(){
+          nudge();
+          playBtn.hidden=true;
+        });
+        clip.addEventListener("playing",function(){playBtn.hidden=true;},{once:true});
+        clip.addEventListener("loadedmetadata",function(){
+          if(!rm.matches)playBtn.hidden=false;
+        });
+      }
+      /* Pause when the hero scrolls away or the tab hides. */
+      if("IntersectionObserver" in window){
+        new IntersectionObserver(function(entries){
+          for(var i=0;i<entries.length;i++){
+            if(!entries[i].isIntersecting)clip.pause();
+          }
+        },{threshold:0.15}).observe(clip.closest(".hero")||clip);
+      }
+      document.addEventListener("visibilitychange",function(){
+        if(document.hidden)clip.pause();
+      });
+    })();
+    </script>
+
+    <!-- Sizzle: staggered reveals, count-up stats and the scroll progress
+         rule. Transform/opacity only, fully skipped for reduced-motion, and
+         inert without JS because the start states are gated behind html.js
+         in the stylesheet (with an html:not(.js) safety override). -->
+    <script>
+    (function(){
+      "use strict";
+      if(!document.documentElement.classList.contains("js"))return;
+      var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if(!rm&&"IntersectionObserver" in window){
+        var io=new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add("in");
+              io.unobserve(entry.target);
+            }
+          });
+        },{threshold:0.12,rootMargin:"0px 0px -8% 0px"});
+        document.querySelectorAll(".reveal-up,.reveal-scale,.reveal-clip").forEach(function(el){io.observe(el);});
+      }else{
+        document.querySelectorAll(".reveal-up,.reveal-scale,.reveal-clip").forEach(function(el){el.classList.add("in");});
+      }
+
+      function countUp(el){
+        var raw=el.getAttribute("data-target");
+        var dec=parseInt(el.getAttribute("data-decimals")||"0",10);
+        /* DOM-sourced truth (service-line count) overrides the literal. */
+        var src=el.getAttribute("data-count-from");
+        if(src){
+          var n=document.querySelectorAll(src).length;
+          if(n>0)raw=String(n);
+        }
+        var target=parseFloat(raw);
+        if(!isFinite(target)||target<=0){el.textContent=raw;return;}
+        if(rm){el.textContent=raw;return;}
+        var t0=null,dur=900;
+        function frame(t){
+          if(t0===null)t0=t;
+          var k=Math.min(1,(t-t0)/dur);
+          var eased=1-Math.pow(1-k,3);
+          el.textContent=(target*eased).toFixed(dec);
+          if(k<1)requestAnimationFrame(frame);
+          else el.textContent=target.toFixed(dec);
+        }
+        requestAnimationFrame(frame);
+      }
+      if("IntersectionObserver" in window){
+        var cio=new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){countUp(entry.target);cio.unobserve(entry.target);}
+          });
+        },{threshold:0.4});
+        document.querySelectorAll("[data-countup]").forEach(function(el){cio.observe(el);});
+      }
+
+      /* The donor's scroll progress rule: a gold hairline that fills as the
+         page reads. scaleX only — no layout motion. */
+      var bar=document.querySelector(".scroll-progress");
+      if(bar&&!rm){
+        var pending=false;
+        function paint(){
+          pending=false;
+          var h=document.documentElement;
+          var max=h.scrollHeight-h.clientHeight;
+          var k=max>0?Math.max(0,Math.min(1,h.scrollTop/max)):0;
+          bar.style.transform="scaleX("+k+")";
+        }
+        window.addEventListener("scroll",function(){
+          if(!pending){pending=true;requestAnimationFrame(paint);}
+        },{passive:true});
+        paint();
+      }
+    })();
+    </script>
+  <script>
+/* Prompt A behaviours: lightbox (captions, keyboard, swipe), before/after
+   drag slider, seasonal capacity line. Everything below is enhancement only —
+   with JS off the gallery links open full-size assets, the slider degrades to
+   labelled side-by-side frames, and the capacity line reads as static copy. */
+(function () {
+  var d = document, r = d.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- seasonal capacity ---------- */
+  var m = d.querySelector('[data-season-month]');
+  if (m) {
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var now = new Date(), next = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+    m.textContent = months[now.getMonth()] + ' and ' + months[next.getMonth()];
+  }
+  var s = d.querySelector('[data-season-slots]');
+  if (s) { var left = 3 + (new Date().getDate() % 4); s.textContent = left + ' more'; }
+
+  /* ---------- before / after ---------- */
+  d.querySelectorAll('[data-ba]').forEach(function (fig) {
+    var stage = fig.querySelector('.ba-stage'), range = fig.querySelector('[data-ba-range]');
+    function set(p) {
+      p = Math.max(0, Math.min(100, p));
+      fig.style.setProperty('--ba-pos', p + '%');
+      fig.style.setProperty('--ba-num', p);
+      if (range && Number(range.value) !== Math.round(p)) range.value = Math.round(p);
+    }
+    set(range ? Number(range.value) : 52);
+    if (range) range.addEventListener('input', function () { set(Number(range.value)); });
+    var dragging = false;
+    function fromEvent(e) {
+      var box = stage.getBoundingClientRect();
+      var x = (e.touches ? e.touches[0].clientX : e.clientX) - box.left;
+      set((x / box.width) * 100);
+    }
+    stage.addEventListener('pointerdown', function (e) { dragging = true; stage.setPointerCapture(e.pointerId); fromEvent(e); });
+    stage.addEventListener('pointermove', function (e) { if (dragging) fromEvent(e); });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) {
+      stage.addEventListener(t, function () { dragging = false; });
+    });
+  });
+
+  /* ---------- lightbox ---------- */
+  var root = d.querySelector('[data-lightbox-root]');
+  var shots = [].slice.call(d.querySelectorAll('a.shot[data-lb]'));
+  if (root && shots.length) {
+    var img = root.querySelector('[data-lb-img]'),
+        cap = root.querySelector('[data-lb-caption]'),
+        count = root.querySelector('[data-lb-count]'),
+        i = 0, opener = null;
+
+    function show(n) {
+      i = (n + shots.length) % shots.length;
+      var a = shots[i], thumb = a.querySelector('img');
+      img.src = a.getAttribute('href');
+      img.alt = thumb ? thumb.getAttribute('alt') : '';
+      cap.textContent = a.getAttribute('data-caption') || (thumb ? thumb.getAttribute('alt') : '');
+      count.textContent = '(' + (i + 1) + ' of ' + shots.length + ')';
+      // prefetch neighbours only once the viewer is open — thumbs stay lazy
+      [shots[(i + 1) % shots.length], shots[(i - 1 + shots.length) % shots.length]].forEach(function (nb) {
+        var pre = new Image(); pre.src = nb.getAttribute('href');
+      });
+    }
+    function open(n, from) {
+      opener = from || null;
+      show(n);
+      root.hidden = false; r.classList.add('lb-open');
+      root.querySelector('.lb-close').focus();
+    }
+    function close() {
+      root.hidden = true; r.classList.remove('lb-open');
+      if (opener) opener.focus();
+    }
+    shots.forEach(function (a, n) {
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault(); open(n, a);
+      });
+    });
+    root.querySelectorAll('[data-lb-close]').forEach(function (b) { b.addEventListener('click', close); });
+    root.querySelector('[data-lb-prev]').addEventListener('click', function () { show(i - 1); });
+    root.querySelector('[data-lb-next]').addEventListener('click', function () { show(i + 1); });
+    d.addEventListener('keydown', function (e) {
+      if (root.hidden) return;
+      if (e.key === 'Escape') { close(); }
+      else if (e.key === 'ArrowLeft') { show(i - 1); }
+      else if (e.key === 'ArrowRight') { show(i + 1); }
+      else if (e.key === 'Tab') {
+        var f = [].slice.call(root.querySelectorAll('button'));
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && d.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && d.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    var x0 = null;
+    root.addEventListener('touchstart', function (e) { x0 = e.changedTouches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 45) show(dx < 0 ? i + 1 : i - 1);
+    }, { passive: true });
+    if (reduce) { img.style.transition = 'none'; }
+  }
+})();
+</script>
+</body>
+</html>

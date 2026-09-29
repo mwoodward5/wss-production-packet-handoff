@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Electrical donor design system.
+   Near-black base, silver/white text, electric green accent. */
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 96%;
+
+    /* Electric green #58c419 */
+    --primary: 98 77% 43%;
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 98 85% 58%;
+
+    /* Silver / metallic */
+    --secondary: 0 0% 78%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 68%;
+
+    --accent: 98 77% 43%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 98 77% 43%;
+
+    --radius: 0.625rem;
+
+    --gradient-hero: radial-gradient(ellipse at top, hsl(98 77% 25% / 0.25), transparent 60%),
+                     linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 4%) 100%);
+    --gradient-bolt: linear-gradient(135deg, hsl(98 85% 58%), hsl(98 77% 38%));
+    --shadow-glow: 0 0 40px hsl(98 77% 43% / 0.35);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.7);
+    --font-display: 'Oswald', 'Inter', sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 98 77% 43%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 98 77% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .text-gradient-silver {
+    background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 70%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-bolt {
+    background: var(--gradient-bolt);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-hero {
+    background: var(--gradient-hero);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .grid-lines {
+    background-image:
+      linear-gradient(hsl(98 77% 43% / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(98 77% 43% / 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}

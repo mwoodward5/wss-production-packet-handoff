@@ -1,0 +1,414 @@
+{
+  "version": 2,
+  "key": "05-dn-electric-ltd",
+  "name": "DN Electric LTD",
+  "category": "electrical",
+  "vertical": "electrical",
+  "requested_vertical": "electrical",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "252c0ca9-144a-4ce4-ab72-0f60c8f1d420",
+  "lovable_source_commit": "d19085c2178a7918a20a61a7fe9f6405aa6e4c7c",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "252c0ca9-144a-4ce4-ab72-0f60c8f1d420",
+    "ref": "d19085c2178a7918a20a61a7fe9f6405aa6e4c7c",
+    "repository": "https://github.com/mwoodward5/truthspark-local",
+    "git_tree": "a56bce6c705d4866d2b2d3dc9f0c3f6cce552a1b"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/services",
+    "/services/$slug",
+    "/about",
+    "/service-area",
+    "/service-areas/$city",
+    "/contact",
+    "/terms-of-service",
+    "/privacy-policy"
+  ],
+  "design_tokens": {
+    "colors": {
+      "ink": "oklch(0.14 0.01 80)",
+      "ink_2": "oklch(0.22 0.012 80)",
+      "bone": "oklch(0.97 0.008 85)",
+      "gold": "oklch(0.83 0.155 88)",
+      "gold_soft": "oklch(0.88 0.13 92)",
+      "gold_deep": "oklch(0.68 0.14 78)",
+      "copper": "oklch(0.62 0.12 50)",
+      "border_light": "oklch(0.9 0.01 80)",
+      "border_dark": "oklch(1 0 0 / 10%)"
+    },
+    "typography": {
+      "font_display": "'Anton', 'Bebas Neue', 'Impact', sans-serif",
+      "font_sans": "'Inter', 'Helvetica Neue', system-ui, sans-serif",
+      "font_mono": "'JetBrains Mono', 'IBM Plex Mono', monospace"
+    },
+    "radii": {
+      "base": "0.25rem",
+      "card": "1rem",
+      "pill": "9999px"
+    },
+    "textures": {
+      "noise": true,
+      "blueprint_grid": true,
+      "radial_spark": true
+    }
+  },
+  "hero_contract": {
+    "component": "src/components/home/Hero.tsx",
+    "min_height": "94vh",
+    "video_slot": {
+      "pointer": "src/assets/hero-cinema.mp4.asset.json",
+      "autoplay": true,
+      "muted": true,
+      "loop": true,
+      "css_drift": true
+    },
+    "overlays": [
+      "linear-gradient color wash (gold/ink blend)",
+      "radial vignette",
+      "SVG living load-center schematic with pulsing breakers",
+      "directional ink typographic contrast wash"
+    ],
+    "headline_treatment": "Electrified skyscraper typography with SVG current sparks",
+    "widget": "Interactive NEC 220 Live Load Calculator with ammeter sweep"
+  },
+  "media_slots": [
+    {
+      "id": "hero_cinema",
+      "route": "/",
+      "section": "Hero",
+      "role": "Atmospheric video loop",
+      "aspect_ratio": "16:9",
+      "asset_pointer": "src/assets/hero-cinema.mp4.asset.json"
+    },
+    {
+      "id": "service_panel",
+      "route": "/services",
+      "section": "Service Grid / Lightbox",
+      "role": "Panel upgrades showcase",
+      "aspect_ratio": "16:10",
+      "asset_path": "src/assets/service-panel.jpg"
+    },
+    {
+      "id": "service_ev",
+      "route": "/services",
+      "section": "Service Grid / Lightbox",
+      "role": "EV charger install showcase",
+      "aspect_ratio": "16:10",
+      "asset_path": "src/assets/service-ev.webp"
+    },
+    {
+      "id": "service_lighting",
+      "route": "/services",
+      "section": "Service Grid / Lightbox",
+      "role": "Lighting & LED retrofit showcase",
+      "aspect_ratio": "16:10",
+      "asset_path": "src/assets/service-lighting.webp"
+    },
+    {
+      "id": "service_battery",
+      "route": "/services",
+      "section": "Service Grid / Lightbox",
+      "role": "Battery backup system showcase",
+      "aspect_ratio": "16:10",
+      "asset_path": "src/assets/service-battery.webp"
+    },
+    {
+      "id": "service_smart",
+      "route": "/services",
+      "section": "Service Grid / Lightbox",
+      "role": "Smart-home automation showcase",
+      "aspect_ratio": "16:10",
+      "asset_path": "src/assets/smart-home-interface.jpg"
+    },
+    {
+      "id": "service_commercial",
+      "route": "/services",
+      "section": "Service Grid / Lightbox",
+      "role": "Commercial electrical showcase",
+      "aspect_ratio": "16:10",
+      "asset_path": "src/assets/service-commercial.jpg"
+    },
+    {
+      "id": "ibew_union_logo",
+      "route": "/about",
+      "section": "Credibility Aside",
+      "role": "IBEW Local 68 union seal",
+      "aspect_ratio": "1:1",
+      "asset_path": "src/assets/ibew-logo.jpg"
+    },
+    {
+      "id": "bbb_seal",
+      "route": "Global Footer",
+      "section": "SiteFooter Col 1",
+      "role": "BBB Accredited Business Seal",
+      "aspect_ratio": "200:65",
+      "remote_url": "https://seal-alaskaoregonwesternwashington.bbb.org/seals/blue-seal-200-65-bbb-1000188621.png"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "BUSINESS.name",
+      "file": "src/lib/business.ts",
+      "target": "Legal and display brand name"
+    },
+    {
+      "key": "BUSINESS.founder",
+      "file": "src/lib/business.ts",
+      "target": "Founder & Master Electrician name"
+    },
+    {
+      "key": "BUSINESS.phone",
+      "file": "src/lib/business.ts",
+      "target": "General business telephone"
+    },
+    {
+      "key": "BUSINESS.founderPhone",
+      "file": "src/lib/business.ts",
+      "target": "Direct founder telephone"
+    },
+    {
+      "key": "BUSINESS.email",
+      "file": "src/lib/business.ts",
+      "target": "Dispatch / scheduling email"
+    },
+    {
+      "key": "BUSINESS.city",
+      "file": "src/lib/business.ts",
+      "target": "Headquarters municipality"
+    },
+    {
+      "key": "BUSINESS.hours",
+      "file": "src/lib/business.ts",
+      "target": "Operating schedule array"
+    },
+    {
+      "key": "SERVICES",
+      "file": "src/lib/business.ts",
+      "target": "Disciplines, descriptions, bullets, FAQs"
+    },
+    {
+      "key": "CITIES",
+      "file": "src/lib/cities.ts",
+      "target": "Local landing pages, neighborhoods, landmarks"
+    },
+    {
+      "key": "CLIENT_PORTAL_URL",
+      "file": "src/lib/legal.ts",
+      "target": "Jobber / CRM Client Hub login link"
+    },
+    {
+      "key": "TERMS_OF_SERVICE",
+      "file": "src/lib/legal.ts",
+      "target": "Legal terms document content"
+    },
+    {
+      "key": "PRIVACY_POLICY",
+      "file": "src/lib/legal.ts",
+      "target": "Legal privacy policy document content"
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "TrustStrip",
+      "file": "src/components/home/TrustStrip.tsx",
+      "type": "4-pillar baseline"
+    },
+    {
+      "slot": "AboutCredibilityAside",
+      "file": "src/routes/about.tsx",
+      "type": "Founder + IBEW 68 + SIGenergy/EcoFlow"
+    },
+    {
+      "slot": "BBBSeal",
+      "file": "src/components/site/SiteFooter.tsx",
+      "type": "Dynamic BBB Accreditation Badge"
+    },
+    {
+      "slot": "LiveLoadCalculator",
+      "file": "src/components/home/Hero.tsx",
+      "type": "Engineering competence proof"
+    }
+  ],
+  "schema_slots": [
+    {
+      "route": "__root.tsx",
+      "schema_type": "LocalBusiness / Electrician"
+    },
+    {
+      "route": "index.tsx",
+      "schema_type": "FAQPage"
+    },
+    {
+      "route": "about.tsx",
+      "schema_type": "AboutPage + BreadcrumbList"
+    },
+    {
+      "route": "contact.tsx",
+      "schema_type": "ContactPage + BreadcrumbList"
+    },
+    {
+      "route": "services.tsx",
+      "schema_type": "BreadcrumbList"
+    },
+    {
+      "route": "services.$slug.tsx",
+      "schema_type": "Service + FAQPage + BreadcrumbList"
+    },
+    {
+      "route": "service-area.tsx",
+      "schema_type": "BreadcrumbList"
+    },
+    {
+      "route": "service-areas.$city.tsx",
+      "schema_type": "LocalBusiness (sub-location) + BreadcrumbList"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "location": "LocalAuthority.tsx",
+      "role": "12-cell municipal grid matrix"
+    },
+    {
+      "location": "service-areas.$city.tsx",
+      "role": "Hyper-local neighborhood & landmark analysis"
+    },
+    {
+      "location": "business.ts (faqs)",
+      "role": "Direct quotable answers for AI engines & voice search"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "location": "FaqPreview.tsx",
+      "format": "Conversational Q&A with immediate one-sentence synthesis"
+    },
+    {
+      "location": "services.$slug.tsx (faqs)",
+      "format": "Technical discipline Q&A mirrored to FAQPage schema"
+    }
+  ],
+  "map_location_slot": {
+    "routes": [
+      "/service-area",
+      "/contact"
+    ],
+    "coordinates": {
+      "lat": 40.1672,
+      "lng": -105.1019,
+      "zoom": 10
+    },
+    "share_url": "https://maps.app.goo.gl/aaCmxDT2Y9BNMTgb7",
+    "directions_url": "https://www.google.com/maps/dir/?api=1&destination=Longmont%2C+CO+80501"
+  },
+  "content_density": {
+    "hero": "High visual & interactive density; low fluff",
+    "bento_services": "Asymmetric 6-card visual grid with dark gradient overlays",
+    "process": "4-card structured blueprint",
+    "detail_pages": "Rich technical specifications and localized FAQs"
+  },
+  "mobile_rules": {
+    "breakpoint_sm": "640px — StickyMobileCta active (Call + Estimate)",
+    "breakpoint_md": "768px — Navigation hamburger toggle, grid adjustments",
+    "footer_padding": "pb-28 on mobile to avoid Sticky CTA collision",
+    "lightbox": "Touch-swipe enabled with high-contrast close/prev/next controls"
+  },
+  "non_negotiables": [
+    "Retain the black, electric gold, and warm bone couture colorway",
+    "Retain Anton/Bebas Neue uppercase heavy headline typography",
+    "Preserve the video-backed hero with the SVG load center and ammeter calculator",
+    "Do not fabricate union affiliations or BBB accreditations",
+    "Keep Jobber work request embed functional on /contact#book-your-project"
+  ],
+  "safe_replacements": [
+    "BUSINESS object in src/lib/business.ts",
+    "CITIES array in src/lib/cities.ts",
+    "Hero background video pointer (src/assets/hero-cinema.mp4.asset.json)",
+    "Discipline photography in src/assets/",
+    "Brand logo asset (src/assets/dn-electric-logo.png.asset.json) and favicon",
+    "Jobber form ID and client hub ID in src/components/site/JobberWorkRequest.tsx",
+    "Google Tag Manager container ID in src/routes/__root.tsx"
+  ],
+  "leak_terms": [
+    "DN Electric LTD"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Anton",
+      "Bebas Neue",
+      "Impact",
+      "sans-serif",
+      "Inter",
+      "Helvetica Neue"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.14 0.01 80)",
+    "oklch(0.22 0.012 80)",
+    "oklch(0.97 0.008 85)",
+    "oklch(0.83 0.155 88)",
+    "oklch(0.88 0.13 92)",
+    "oklch(0.68 0.14 78)",
+    "oklch(0.62 0.12 50)",
+    "oklch(0.9 0.01 80)"
+  ],
+  "fonts": [
+    "Anton",
+    "Bebas Neue",
+    "Impact",
+    "sans-serif",
+    "Inter",
+    "Helvetica Neue"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "content_render_targets": {
+    "services": [{ "path": "/", "selector": "section:has(h2) .grid" }]
+  },
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "2f3ae7c88a507a153432915d4c0805c97ad610dbbd29a51808d60fa690b2ab49",
+    "files": {
+      "assets/index-D2eMgpFn.js": "009c6bdd09bf0409fd9e0326ea18970a962dd806a53a9ea85ed220338602ebbc",
+      "assets/index-DcFItkHi.css": "92ac55b88fbcc9c61c311d9e4826f39872d518d5740506e6c02790accfa27d7b",
+      "assets/router-MguLcXq6.js": "a31b7bc012b5047c5222d6a47d231fee39f10f188fe6cc181c536bf9f8c547b0",
+      "index.html": "6921b29993cee2e12523b739d2b80f0bb753cf12047810ea150af3aaf16c1a5c"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

@@ -1,0 +1,339 @@
+{
+  "project_name": "CNT Automotive LLC Flagship",
+  "vertical": "Automotive Repair & Services",
+  "classification": "Single-page",
+  "routes": [
+    {
+      "path": "/",
+      "component": "src/pages/Index.tsx",
+      "purpose": "Primary conversion single-scroll landing page"
+    },
+    {
+      "path": "*",
+      "component": "src/pages/NotFound.tsx",
+      "purpose": "Catch-all 404 error page"
+    }
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "hsl(0 0% 6%)",
+      "foreground": "hsl(0 0% 96%)",
+      "primary": "hsl(0 84% 50%)",
+      "secondary": "hsl(0 0% 14%)",
+      "muted": "hsl(0 0% 12%)",
+      "muted_foreground": "hsl(0 0% 65%)",
+      "accent": "hsl(14 100% 55%)",
+      "card": "hsl(0 0% 9%)",
+      "border": "hsl(0 0% 16%)",
+      "steel": "hsl(220 6% 18%)",
+      "grid_line": "hsl(0 0% 18% / 0.6)"
+    },
+    "typography": {
+      "headings": "'Oswald', 'Bebas Neue', Impact, sans-serif",
+      "body": "'Inter', system-ui, sans-serif",
+      "technical": "'JetBrains Mono', monospace"
+    },
+    "border_radius": "0.25rem",
+    "gradients": {
+      "hero": "linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 10%) 60%, hsl(0 60% 12%) 100%)",
+      "red": "linear-gradient(135deg, hsl(0 84% 50%), hsl(14 100% 55%))",
+      "steel": "linear-gradient(180deg, hsl(0 0% 12%), hsl(0 0% 6%))"
+    }
+  },
+  "hero_contract": {
+    "viewport_height": "min-h-[85vh]",
+    "layout": "12-column split (7 cols text/CTA, 5 cols Repair Path Console widget)",
+    "headline_styling": "clamp(2.5rem, 9vw, 7.5rem) uppercase 3-tier chrome and stroke text",
+    "background_media": {
+      "type": "video_or_image",
+      "opacity": 0.7,
+      "overlays": [
+        "bg-gradient-to-r from-black via-black/80 to-black/40",
+        "bg-gradient-to-t from-black via-transparent to-black/60",
+        "carbon-weave mix-blend-overlay opacity-30",
+        "bg-grid-dense opacity-20"
+      ]
+    },
+    "ctas": [
+      {
+        "label": "Call CNT Automotive",
+        "action": "tel",
+        "style": "gradient-red"
+      },
+      {
+        "label": "Request Auto Repair",
+        "action": "anchor",
+        "target": "#contact",
+        "style": "border-primary/40 bg-black/60"
+      }
+    ],
+    "widget": "Repair Path Console with live status, scope matrix, and direct call footer"
+  },
+  "media_slots": [
+    {
+      "id": "MED-01",
+      "role": "logo",
+      "path": "src/assets/cnt/logo.webp",
+      "aspect": "1:1",
+      "dimensions": "40x40"
+    },
+    {
+      "id": "MED-02",
+      "role": "hero_bay",
+      "path": "src/assets/cnt/hero-bay.jpg",
+      "aspect": "16:9",
+      "dimensions": "1600x900"
+    },
+    {
+      "id": "MED-03",
+      "role": "gallery_hero",
+      "path": "src/assets/cnt/shop2.jpg",
+      "aspect": "1:1",
+      "dimensions": "800x800"
+    },
+    {
+      "id": "MED-04",
+      "role": "gallery_thumb_1",
+      "path": "src/assets/cnt/gal1.jpg",
+      "aspect": "1:1",
+      "dimensions": "400x400"
+    },
+    {
+      "id": "MED-05",
+      "role": "gallery_thumb_2",
+      "path": "src/assets/cnt/shop3.jpg",
+      "aspect": "1:1",
+      "dimensions": "400x400"
+    },
+    {
+      "id": "MED-06",
+      "role": "gallery_thumb_3",
+      "path": "src/assets/cnt/gal2.jpg",
+      "aspect": "1:1",
+      "dimensions": "400x400"
+    },
+    {
+      "id": "MED-07",
+      "role": "gallery_thumb_4",
+      "path": "src/assets/cnt/gal3.jpg",
+      "aspect": "1:1",
+      "dimensions": "400x400"
+    },
+    {
+      "id": "MED-08",
+      "role": "gallery_thumb_5",
+      "path": "src/assets/cnt/shop4.jpg",
+      "aspect": "1:1",
+      "dimensions": "400x400"
+    },
+    {
+      "id": "MED-09",
+      "role": "gallery_thumb_6",
+      "path": "src/assets/cnt/gal4.jpg",
+      "aspect": "1:1",
+      "dimensions": "400x400"
+    },
+    {
+      "id": "MED-10",
+      "role": "gallery_thumb_7",
+      "path": "src/assets/cnt/shop5.jpg",
+      "aspect": "1:1",
+      "dimensions": "400x400"
+    },
+    {
+      "id": "MED-11",
+      "role": "gallery_thumb_8",
+      "path": "src/assets/cnt/gal5.jpg",
+      "aspect": "1:1",
+      "dimensions": "400x400"
+    },
+    {
+      "id": "MED-12",
+      "role": "why_cnt_1",
+      "path": "src/assets/cnt/shop2.jpg",
+      "aspect": "3:4",
+      "dimensions": "600x800"
+    },
+    {
+      "id": "MED-13",
+      "role": "why_cnt_2",
+      "path": "src/assets/cnt/gal3.jpg",
+      "aspect": "3:4",
+      "dimensions": "600x800"
+    }
+  ],
+  "content_slots": [
+    {
+      "field": "business_name",
+      "current_value": "CNT Automotive LLC"
+    },
+    {
+      "field": "phone",
+      "current_value": "(813) 379-2093"
+    },
+    {
+      "field": "tel_link",
+      "current_value": "tel:+18133792093"
+    },
+    {
+      "field": "email",
+      "current_value": "sales@cntautomotive.net"
+    },
+    {
+      "field": "city_state",
+      "current_value": "Plant City, FL"
+    },
+    {
+      "field": "google_business_url",
+      "current_value": "https://maps.app.goo.gl/5QiJMW3jFLqppAJ17"
+    },
+    {
+      "field": "google_place_id",
+      "current_value": "ChIJ0XuxUnQ13YgRXxg4c4TFXAA"
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "status_badge",
+      "location": "Hero top",
+      "content": "Plant City, FL · Bay Online"
+    },
+    {
+      "type": "tow_intake_guarantee",
+      "location": "Hero, Widget, Why CNT, FAQ",
+      "content": "Accepts Tows 24/7"
+    },
+    {
+      "type": "service_approach",
+      "location": "Repair Path Console & Why CNT",
+      "content": "Diagnostic-First"
+    },
+    {
+      "type": "process_protocol",
+      "location": "Section 04 Process",
+      "steps": 5
+    }
+  ],
+  "schema_slots": [
+    {
+      "schema": "AutoRepair",
+      "target": "index.html",
+      "type": "application/ld+json"
+    },
+    {
+      "schema": "FAQPage",
+      "target": "index.html",
+      "type": "application/ld+json"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "type": "nap_block",
+      "section": "#map"
+    },
+    {
+      "type": "service_radius_pills",
+      "section": "#service-area",
+      "count": 7
+    },
+    {
+      "type": "aeo_faq_qna",
+      "section": "#faq",
+      "count": 5
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "query_type": "hours",
+      "target": "FAQ #2 & Find Us"
+    },
+    {
+      "query_type": "location",
+      "target": "FAQ #1 & Footer"
+    },
+    {
+      "query_type": "services",
+      "target": "FAQ #3, #4 & Capabilities"
+    },
+    {
+      "query_type": "contact",
+      "target": "FAQ #5 & Sticky Header"
+    }
+  ],
+  "map_location_slot": {
+    "section_id": "#map",
+    "layout": "2-column split (NAP left, embedded iframe right)",
+    "iframe_styling": "grayscale contrast-125 border border-border h-[460px]",
+    "external_cta": "View on Google (direct GBP link)"
+  },
+  "content_density": {
+    "header": "Minimal (Brand, Navigation, Fast CTA)",
+    "hero": "High (Headline, Lead copy, Dual CTA, Diagnostic Widget)",
+    "cta_strip": "Minimal Action (Phone & Email click-through)",
+    "capabilities": "High Density (11 technical service cards)",
+    "repair_path_console": "Deep Explanatory (Interactive 11-scope breakdown)",
+    "process": "Medium (5 sequential steps)",
+    "gallery": "Visual Dominance (9-photo bento grid)",
+    "why_cnt": "Trust & Photo Balance (4 cards + 2 portrait images)",
+    "find_us": "Local Presence (NAP + Hours + Map)",
+    "service_area": "Compact Geo (7 territory pill tags)",
+    "faq": "Structured Technical (5 accordion items)",
+    "final_cta": "High Energy Conversion (Centered title + dual buttons)",
+    "footer": "Standard 4-Column Navigation & Legal"
+  },
+  "mobile_rules": {
+    "390px": {
+      "header_cta": "Square 44x44px icon button",
+      "h1_sizing": "clamp(2.5rem, 9vw, 7.5rem)",
+      "widget_order": "Stacks below hero CTAs",
+      "disabled_animations": [
+        "scanner-sweep",
+        "cta-shine",
+        "pulse-glow"
+      ],
+      "grid_columns": {
+        "services": 1,
+        "gallery": 2,
+        "process": 1,
+        "why_cnt": 1
+      }
+    },
+    "768px": {
+      "grid_columns": {
+        "services": 2,
+        "gallery": 4,
+        "process": 5,
+        "why_cnt": 2
+      }
+    },
+    "1440px": {
+      "hero_layout": "12-column grid side-by-side",
+      "all_animations_active": true
+    }
+  },
+  "non_negotiables": [
+    "Strict dark mode with #0f0f0f background and scarlet red primary accent",
+    "Condensed uppercase mechanical headings (Oswald/Bebas Neue) with mono accents",
+    "Milled corner radius capped at 0.25rem (4px); no soft pill shapes",
+    "Preservation of automotive diagnostic HUD widgets (Repair Path Console)",
+    "Mobile animation throttling to guarantee 60fps performance on low-end devices"
+  ],
+  "safe_replacements": [
+    "Business name, tagline, address, phone number, and email",
+    "Google Business Profile URL, Place ID, and coordinates",
+    "Hero background image or 10s looping cinematic video",
+    "9 shop gallery photographs and 2 differentiator portraits",
+    "List of services, scope details, and FAQ questions/answers",
+    "Service area town names and verified operating hours"
+  ],
+  "lovable_classification": "Single-Page High-Conversion Flagship",
+  "classification_basis": "1 distinct documented routes; WSS scope label only",
+  "project_id": "4a322ce9-89bc-4e75-aa34-7753f16223b8",
+  "project_url": "https://lovable.dev/projects/4a322ce9-89bc-4e75-aa34-7753f16223b8",
+  "source_plan_file": "12-cnt-automotive-hub-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:35:06.118141Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

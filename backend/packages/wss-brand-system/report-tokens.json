@@ -1,0 +1,12 @@
+{
+  "background": "#0D0D11",
+  "panel": "#131318",
+  "ink": "#F2F2F5",
+  "muted": "#8C8B96",
+  "line": "rgba(255,255,255,.08)",
+  "accent": "#4A6CF7",
+  "accentAlt": "#8B5CF6",
+  "success": "#34D399",
+  "warning": "#E0A44A",
+  "danger": "#F26D6D"
+}

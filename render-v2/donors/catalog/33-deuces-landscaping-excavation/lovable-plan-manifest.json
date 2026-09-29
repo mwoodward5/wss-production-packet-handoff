@@ -1,0 +1,320 @@
+{
+  "project_name": "DEUCES Landscaping & Excavation",
+  "vertical": "landscaping_and_excavation",
+  "classification": "Premier",
+  "routes": [
+    {
+      "path": "/",
+      "type": "flagship_home",
+      "sections": [
+        "animated_hero",
+        "trust_badges",
+        "core_services_grid",
+        "recent_work_gallery",
+        "why_us_value_pillars",
+        "founder_card",
+        "service_area_map",
+        "reviews_carousel",
+        "contact_lead_form",
+        "call_cta_banner"
+      ]
+    },
+    {
+      "path": "/excavation",
+      "type": "service_silo",
+      "sections": [
+        "service_hero_collage",
+        "long_form_content",
+        "sticky_lead_sidebar",
+        "scope_of_work",
+        "process_steps",
+        "silo_gallery",
+        "related_services"
+      ]
+    },
+    {
+      "path": "/landscaping",
+      "type": "service_silo",
+      "sections": [
+        "service_hero_collage",
+        "long_form_content",
+        "sticky_lead_sidebar",
+        "scope_of_work",
+        "process_steps",
+        "silo_gallery",
+        "related_services"
+      ]
+    },
+    {
+      "path": "/storm-cleanup",
+      "type": "service_silo",
+      "sections": [
+        "service_hero_collage",
+        "long_form_content",
+        "sticky_lead_sidebar",
+        "scope_of_work",
+        "process_steps",
+        "silo_gallery",
+        "related_services"
+      ]
+    },
+    {
+      "path": "/remodeling",
+      "type": "service_silo",
+      "sections": [
+        "service_hero_collage",
+        "long_form_content",
+        "sticky_lead_sidebar",
+        "scope_of_work",
+        "process_steps",
+        "silo_gallery",
+        "related_services"
+      ]
+    }
+  ],
+  "design_tokens": {
+    "default_mode": "light",
+    "primary_color": "oklch(0.88 0.18 95)",
+    "gold_accent_light": "oklch(0.58 0.14 82)",
+    "gold_accent_dark": "oklch(0.88 0.18 95)",
+    "background_light": "oklch(0.985 0.004 95)",
+    "background_dark": "oklch(0.16 0 0)",
+    "card_light": "oklch(1 0 0)",
+    "card_dark": "oklch(0.20 0 0)",
+    "display_font": "Oswald, Inter, system-ui, sans-serif",
+    "body_font": "Inter, system-ui, sans-serif",
+    "border_radius": "0.875rem"
+  },
+  "hero_contract": {
+    "component": "src/components/site/AnimatedHero.tsx",
+    "dimensions": "100vw min-h-[640px]",
+    "media_type": "image_or_10s_cinematic_video",
+    "required_layers": [
+      "real_client_media",
+      "brand_color_wash_gradient",
+      "yellow_accent_radial_glow",
+      "bottom_vignette",
+      "drifting_dust_haze",
+      "light_sweep_overlay"
+    ],
+    "headline_structure": "three_tier_contrast_display",
+    "cta_structure": "primary_click_to_call_and_secondary_lead_dialog",
+    "stats_bar": "4_column_count_up"
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_bg",
+      "route": "/",
+      "role": "hero",
+      "aspect_ratio": "16:9",
+      "object_fit": "cover"
+    },
+    {
+      "slot_id": "brand_logo",
+      "route": "global",
+      "role": "logo",
+      "aspect_ratio": "freeform_png",
+      "object_fit": "contain"
+    },
+    {
+      "slot_id": "job_gallery_homepage",
+      "route": "/",
+      "role": "work_proof",
+      "aspect_ratio": "4:3",
+      "object_fit": "cover",
+      "min_count": 12
+    },
+    {
+      "slot_id": "excavation_gallery",
+      "route": "/excavation",
+      "role": "service_proof",
+      "aspect_ratio": "4:3",
+      "object_fit": "cover",
+      "count": 22
+    },
+    {
+      "slot_id": "landscaping_gallery",
+      "route": "/landscaping",
+      "role": "service_proof",
+      "aspect_ratio": "4:3",
+      "object_fit": "cover",
+      "count": 11
+    },
+    {
+      "slot_id": "remodeling_gallery",
+      "route": "/remodeling",
+      "role": "service_proof",
+      "aspect_ratio": "4:3",
+      "object_fit": "cover",
+      "count": 10
+    },
+    {
+      "slot_id": "storm_gallery",
+      "route": "/storm-cleanup",
+      "role": "service_proof",
+      "aspect_ratio": "4:3",
+      "object_fit": "cover",
+      "count": 1
+    }
+  ],
+  "content_slots": [
+    {
+      "target": "src/config/client.config.ts",
+      "fields": [
+        "businessName",
+        "phone",
+        "email",
+        "city",
+        "region",
+        "hours",
+        "serviceAreaCities",
+        "gbp"
+      ]
+    },
+    {
+      "target": "src/config/brand.config.ts",
+      "fields": [
+        "primary",
+        "secondary",
+        "logoDark",
+        "logoLight",
+        "favicon"
+      ]
+    },
+    {
+      "target": "src/config/services.config.ts",
+      "fields": [
+        "name",
+        "h1",
+        "shortDesc",
+        "longDescMd",
+        "metaTitle",
+        "metaDescription"
+      ]
+    },
+    {
+      "target": "src/config/trust.config.ts",
+      "fields": [
+        "badges",
+        "certifications",
+        "licensed",
+        "insured"
+      ]
+    }
+  ],
+  "trust_slots": [
+    {
+      "location": "hero_bullets",
+      "elements": [
+        "BBB Accreditation",
+        "Google 5-Star",
+        "Operating Hours"
+      ]
+    },
+    {
+      "location": "trust_bar",
+      "elements": [
+        "BBB Profile Anchor",
+        "Google Reviews Anchor"
+      ]
+    },
+    {
+      "location": "founder_section",
+      "elements": [
+        "Named Owner Card",
+        "Direct Line"
+      ]
+    },
+    {
+      "location": "footer",
+      "elements": [
+        "BBB Link",
+        "Google Maps Link",
+        "Verified Schedule"
+      ]
+    }
+  ],
+  "schema_slots": [
+    "LocalBusinessSchema",
+    "OrganizationSchema",
+    "WebSiteSchema",
+    "BreadcrumbSchema",
+    "SpeakableSchema"
+  ],
+  "geo_aeo_slots": [
+    {
+      "type": "county_chips",
+      "count": 18
+    },
+    {
+      "type": "city_chips",
+      "count": 11
+    },
+    {
+      "type": "service_radius",
+      "value": 60
+    },
+    {
+      "type": "declarative_answer_blocks",
+      "target": "service_editorial_content"
+    }
+  ],
+  "voice_search_slots": [
+    "speakable_headline_h1",
+    "speakable_intro_summary",
+    "conversational_scope_bullets"
+  ],
+  "map_location_slot": {
+    "component": "GoogleMapEmbed",
+    "treatment": "regional_service_area_embed_no_street_pin",
+    "center": "Cadillac, MI",
+    "zoom": 9
+  },
+  "content_density": {
+    "hero": "medium_copy_high_visual",
+    "services_grid": "concise_benefit_cards",
+    "galleries": "uniform_4_3_expandable_grid",
+    "service_pages": "long_form_editorial_with_sticky_quote_sidebar"
+  },
+  "mobile_rules": {
+    "sticky_call_bar": true,
+    "hide_hero_badge_card_under_1024px": true,
+    "stats_grid_columns": {
+      "mobile": 2,
+      "desktop": 4
+    },
+    "gallery_columns": {
+      "mobile": 2,
+      "tablet": 3,
+      "desktop": 4
+    },
+    "min_tap_target_px": 44
+  },
+  "non_negotiables": [
+    "preserve_logo_plaque_wrapper",
+    "preserve_hero_overlay_stack",
+    "retain_semantic_oklch_tokens",
+    "maintain_uniform_4_3_gallery_aspect",
+    "maintain_dual_action_cta_pattern",
+    "keep_11_service_catalog_intact"
+  ],
+  "safe_replacements": [
+    "CLIENT.config",
+    "BRAND.config",
+    "SERVICES.config",
+    "TRUST.config",
+    "hero_background_media",
+    "job_gallery_photo_arrays",
+    "founder_card_name_and_role"
+  ],
+  "lovable_classification": "premier_local_service_hybrid",
+  "classification_basis": "5 distinct documented routes; WSS scope label only",
+  "project_id": "bfa00d82-b2d5-4e12-8bd4-319a6251f8e1",
+  "project_url": "https://lovable.dev/projects/bfa00d82-b2d5-4e12-8bd4-319a6251f8e1",
+  "source_plan_file": "33-deuces-landscaping-excavation-premier-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

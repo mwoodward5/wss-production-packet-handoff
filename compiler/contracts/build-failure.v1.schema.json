@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://siteforge.wss-ai.com/schemas/build-failure.v1.json",
+  "title": "SiteForge Build Failure",
+  "description": "Emitted when state=failed. Never contains secrets, stack traces with credentials, or raw scraped HTML.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "build_id",
+    "idempotency_key",
+    "failed_at",
+    "failure_stage",
+    "error_code",
+    "operator_message",
+    "retry_policy"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string", "const": "siteforge-build-failure-v1" },
+    "build_id": { "type": "string" },
+    "idempotency_key": { "type": "string" },
+    "failed_at": { "type": "string", "format": "date-time" },
+    "failure_stage": {
+      "type": "string",
+      "enum": [
+        "intake-validation",
+        "scrape-website",
+        "scrape-gbp",
+        "resonance-profiling",
+        "asset-remaster-logo",
+        "asset-remaster-photos",
+        "compose-planning",
+        "render-html",
+        "capture-desktop",
+        "capture-mobile",
+        "qc-authority-108",
+        "qc-visual-fidelity",
+        "qc-contamination",
+        "publish-preview",
+        "storage-write",
+        "quota-exceeded",
+        "timeout"
+      ]
+    },
+    "error_code": {
+      "type": "string",
+      "description": "Stable machine-readable code. See docs/error-codes.md.",
+      "examples": [
+        "TRUTH_PACKET_INVALID",
+        "SCRAPE_TIMEOUT",
+        "SCRAPE_BLOCKED_BY_ROBOTS",
+        "GBP_NOT_FOUND",
+        "LOGO_UNRECOVERABLE",
+        "PHOTOS_ALL_BELOW_QUALITY",
+        "HERO_VIDEO_GENERATION_FAILED",
+        "SNOWFLAKE_MIN_HAMMING_UNMET_AFTER_RETRIES",
+        "AUTHORITY_108_BELOW_THRESHOLD",
+        "CONTAMINATION_DETECTED",
+        "CHROMIUM_UNAVAILABLE",
+        "FUNCTION_TIMEOUT_EXCEEDED",
+        "BLOB_WRITE_FAILED",
+        "IDEMPOTENCY_KEY_COLLISION_DIFFERENT_PAYLOAD"
+      ]
+    },
+    "operator_message": {
+      "type": "string",
+      "description": "Sanitized human-readable message safe to render in the operator console. No credentials, no PII beyond what the operator submitted."
+    },
+    "owner_message": {
+      "type": "string",
+      "description": "Optional prospect-facing message. Only present for non-technical failures where the owner needs to act (LOGO_UNRECOVERABLE, PHOTOS_ALL_BELOW_QUALITY, GBP_NOT_FOUND)."
+    },
+    "trace_id": { "type": "string" },
+    "detail": {
+      "type": "object",
+      "description": "Structured stage-specific detail. Never raw scraped content, never secrets.",
+      "properties": {
+        "attempted_retries": { "type": "integer", "minimum": 0 },
+        "downstream_error_id": { "type": "string" },
+        "authority_score_at_failure": { "type": "integer" },
+        "contamination_signals": { "type": "array", "items": { "type": "string" }, "description": "e.g. 'donor-domain-in-copy:hurleyasphalt.com', 'placeholder-lorem-detected'." },
+        "asset_severity_bucket_counts": {
+          "type": "object",
+          "properties": {
+            "logo_stage_failed": { "type": "string" },
+            "photos_below_055": { "type": "integer" },
+            "photos_055_to_075": { "type": "integer" },
+            "photos_above_075": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "retry_policy": {
+      "type": "object",
+      "required": ["retriable", "recommended_backoff_seconds"],
+      "properties": {
+        "retriable": { "type": "boolean", "description": "Whether the caller should retry with the same idempotency_key." },
+        "recommended_backoff_seconds": { "type": "integer", "minimum": 0 },
+        "max_retries_reached": { "type": "boolean", "default": false },
+        "action_required": {
+          "type": "string",
+          "enum": ["none", "operator-review", "owner-upload-logo", "owner-upload-photos", "owner-confirm-facts", "escalate"],
+          "default": "none"
+        }
+      }
+    }
+  }
+}

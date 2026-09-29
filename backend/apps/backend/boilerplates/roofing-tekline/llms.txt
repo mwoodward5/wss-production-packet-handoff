@@ -1,0 +1,15 @@
+# {{BUSINESS_NAME}}
+
+> Owner-led roofing contractor in {{CITY}}, serving {{COUNTY}} and {{CITY}}, {{STATE}}. Residential shingle, commercial TPO/EPDM, gutters, siding and trim — installed clean, on schedule, with a single point of contact from quote to walk-through.
+
+{{BUSINESS_NAME}} is a small, owner-operated roofing company. The owner is on every job site. Quotes are offered Monday through Saturday. Direct line: {{PHONE}}.
+
+## Pages
+
+- [Home](/): Overview of {{BUSINESS_NAME}} — services, service area, and how to request a quote.
+- [Roof Replacement](/roof-replacement): Full residential roof replacement — shingle systems, decking, underlayment, ventilation, flashing.
+- [Roof Repair](/roof-repair): Targeted roof repairs — leaks, storm damage, flashing, missing shingles, pipe boots.
+- [Commercial Roofing](/commercial-roofing): Commercial flat-roof systems — TPO, EPDM, repairs and replacement for low-slope buildings.
+- [Gutters, Siding & Trim](/gutters-siding-trim): Gutter, siding and exterior trim work paired with roofing scope.
+- [Service Area](/service-area): {{CITY}}, {{COUNTY}} and surrounding {{CITY}}, {{STATE}} communities served by {{BUSINESS_NAME}}.
+- [Contact](/contact): Contact form, phone, email and map for requesting a quote or scheduling a site visit.

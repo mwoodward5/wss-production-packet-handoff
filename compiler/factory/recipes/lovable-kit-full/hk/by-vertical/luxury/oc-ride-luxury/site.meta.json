@@ -1,0 +1,9 @@
+{
+  "slug": "oc-ride-luxury",
+  "name": "OC Ride Luxury (That's My Ride)",
+  "vertical": "luxury-transport",
+  "source_project_id": "5f381dcb-8440-4913-9389-25400f884f6d",
+  "live_url": "https://ride-luxe.lovable.app",
+  "pattern_tags": ["framer-motion", "canvas-particles", "frosted-glass-card", "gold-accent", "serif-italic-display"],
+  "widgets_used": ["GoldParticles"]
+}

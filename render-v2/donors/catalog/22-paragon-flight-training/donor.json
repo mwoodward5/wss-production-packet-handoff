@@ -1,0 +1,350 @@
+{
+  "version": 2,
+  "key": "22-paragon-flight-training",
+  "name": "Paragon Flight Training",
+  "category": "flight training",
+  "vertical": "flight training",
+  "requested_vertical": "black car service",
+  "routing_conflict": true,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "44679a20-9622-4d07-aa4a-31144ed2f738",
+  "lovable_source_commit": "ad07ff647c5d6b1e7e83a07473640ed85902e37a",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "44679a20-9622-4d07-aa4a-31144ed2f738",
+    "ref": "ad07ff647c5d6b1e7e83a07473640ed85902e37a",
+    "repository": "https://github.com/mwoodward5/fort-myers-flight-concepts",
+    "git_tree": "187a48f09ece260f4efa1f6c3270c3c4903a9189"
+  },
+  "classification": "MULTI_PAGE",
+  "routes": [
+    "/",
+    "/service-areas",
+    "/flight-school/:city",
+    "/programs/:program"
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "hsl(215 45% 7%)",
+      "foreground": "hsl(200 20% 96%)",
+      "surface": "hsl(215 40% 10%)",
+      "surface_elevated": "hsl(215 38% 13%)",
+      "primary": "hsl(38 92% 56%)",
+      "primary_glow": "hsl(42 100% 65%)",
+      "secondary_instrument": "hsl(195 85% 50%)",
+      "border": "hsl(215 30% 18%)",
+      "horizon": "hsl(28 95% 55%)"
+    },
+    "typography": {
+      "display": "Barlow Condensed, Oswald, sans-serif",
+      "body": "Public Sans, system-ui, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "radii": {
+      "default": "0.25rem",
+      "button": "0.25rem",
+      "pill_exceptions": [
+        "status-pings",
+        "sticky-cta"
+      ]
+    }
+  },
+  "hero_contract": {
+    "dimensions": "min-h-[100svh] w-full",
+    "media_layer": "absolute inset-0 -z-20 with scroll parallax & spring pointer movement",
+    "video_ready": true,
+    "video_drop_paths": [
+      "/public/hero/paragon-hero.mp4",
+      "/public/hero/paragon-hero.webm"
+    ],
+    "poster_fallback": "src/assets/hero-poster.jpg",
+    "overlay_stack": [
+      "linear-gradient(180deg, hsl(215 50% 8% / 0.2) 0%, hsl(215 50% 8% / 0.95) 100%)",
+      "radial-gradient(ellipse at bottom, hsl(var(--sky-deep)/0.95), transparent 70%)",
+      "animated horizon drift glow",
+      "animated windshield glare light sweep",
+      "animated SVG flight path"
+    ],
+    "hud_elements": [
+      "live altitude / heading / airspeed telemetry",
+      "scramble text accent animation",
+      "dual magnetic control buttons"
+    ]
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero-bg",
+      "route": "/",
+      "section": "Hero",
+      "semantic_role": "hero",
+      "recommended_client_photo": "Aircraft in flight over local coastline or flagship fleet ramp",
+      "aspect_ratio": "16:9",
+      "crop_behavior": "object-cover [object-position:60%_center] sm:[object-position:center]"
+    },
+    {
+      "slot_id": "pathway-pilot",
+      "route": "/",
+      "section": "Pathway",
+      "semantic_role": "team/equipment",
+      "recommended_client_photo": "Student pilot and CFI during preflight or cockpit instruction",
+      "aspect_ratio": "4:3",
+      "crop_behavior": "object-cover with HUD corner brackets"
+    },
+    {
+      "slot_id": "discovery-view",
+      "route": "/",
+      "section": "Discovery",
+      "semantic_role": "service/work",
+      "recommended_client_photo": "Cockpit POV looking out over local regional landmarks",
+      "aspect_ratio": "16:10",
+      "crop_behavior": "object-cover with live telemetry overlay"
+    },
+    {
+      "slot_id": "campus-aeronautical",
+      "route": "/",
+      "section": "CampusMap",
+      "semantic_role": "facility/location",
+      "recommended_client_photo": "Aerial or ramp perspective of base airport and hangar",
+      "aspect_ratio": "4:3",
+      "crop_behavior": "object-cover under aeronautical HUD overlay"
+    },
+    {
+      "slot_id": "flightscene-bg",
+      "route": "/",
+      "section": "FlightScene",
+      "semantic_role": "ambient",
+      "recommended_client_photo": "Single aircraft banking into evening clouds",
+      "aspect_ratio": "16:9",
+      "crop_behavior": "object-cover inside sticky 260vh scroll stage"
+    },
+    {
+      "slot_id": "contact-cockpit",
+      "route": "/",
+      "section": "Contact",
+      "semantic_role": "equipment",
+      "recommended_client_photo": "Glass cockpit avionics close-up",
+      "aspect_ratio": "16:9",
+      "crop_behavior": "object-cover in left admissions info column"
+    }
+  ],
+  "content_slots": [
+    {
+      "entity": "business_name",
+      "targets": [
+        "SITE.name in src/data/local.ts",
+        "src/pages/Index.tsx",
+        "src/components/Nav.tsx",
+        "src/components/Footer.tsx"
+      ]
+    },
+    {
+      "entity": "phone_numbers",
+      "targets": [
+        "SITE.phone",
+        "SITE.phoneDisplay",
+        "SITE.phoneTel",
+        "SITE.smsHref"
+      ]
+    },
+    {
+      "entity": "physical_address",
+      "targets": [
+        "src/components/CampusMap.tsx",
+        "src/components/Contact.tsx",
+        "Schema @graph PostalAddress"
+      ]
+    },
+    {
+      "entity": "service_cities",
+      "targets": [
+        "CITIES array in src/data/local.ts (slug, name, drive, minutes, intro, paragraphs, landmarks)"
+      ]
+    },
+    {
+      "entity": "training_programs",
+      "targets": [
+        "PROGRAMS array in src/data/local.ts",
+        "programs list in src/components/Programs.tsx"
+      ]
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "faa_checkride_badges",
+      "location": "src/components/MissionControl.tsx",
+      "style": "Monospace high-contrast flight-strip status badges"
+    },
+    {
+      "type": "google_aggregate_rating",
+      "location": "src/components/Hero.tsx & src/components/Contact.tsx",
+      "style": "Conditional rating pill, proof-gated on verified Place ID"
+    },
+    {
+      "type": "airport_infrastructure_data",
+      "location": "src/components/CampusMap.tsx",
+      "style": "4-item HUD telemetry grid (ICAO, Field Name, City, Region)"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness / EducationalOrganization",
+      "file": "src/pages/Index.tsx",
+      "id": "https://fort-myers-paragonflight.wss-ai.com/#org"
+    },
+    {
+      "type": "Course",
+      "file": "src/pages/ProgramLanding.tsx",
+      "description": "FAA syllabus and training specifications"
+    },
+    {
+      "type": "Service",
+      "file": "src/pages/CityLanding.tsx",
+      "description": "Regional flight training service definition"
+    },
+    {
+      "type": "FAQPage",
+      "file": "src/pages/Index.tsx & src/pages/CityLanding.tsx",
+      "description": "Voice search and AI direct answer entities"
+    },
+    {
+      "type": "BreadcrumbList",
+      "file": "src/components/local/LocalSEO.tsx",
+      "description": "Hierarchical navigation graph"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "query_type": "Regional proximity",
+      "location": "src/components/ServiceAreas.tsx",
+      "format": "Editorial city guide with drive times and routes"
+    },
+    {
+      "query_type": "Direct AI answer block",
+      "location": "src/pages/CityLanding.tsx",
+      "format": "data-speakable paragraph and dedicated voice question/answer box"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "source": "src/data/local.ts voiceQuestion and voiceAnswer",
+      "consumption": "Schema FAQPage mainEntity + visible callout in LocalPage.tsx"
+    }
+  ],
+  "map_location_slot": {
+    "component": "src/components/CampusMap.tsx",
+    "pre_wired_attributes": [
+      "data-place-id",
+      "data-gbp-url",
+      "data-review-url",
+      "data-latitude",
+      "data-longitude"
+    ],
+    "container_ratio": "aspect-[4/3] with aeronautical HUD frame"
+  },
+  "content_density": {
+    "hero": "Minimal, atmospheric, high-breath",
+    "programs": "High density, flight-strip ledger format",
+    "campus_map": "Technical, data-rich",
+    "service_areas": "Curated editorial city guide",
+    "admissions_form": "Streamlined 6-field capture with honeypot"
+  },
+  "mobile_rules": {
+    "sticky_call_bar": "Always visible at <768px with Call, Text, and Info triggers",
+    "touch_targets": "Minimum 48px height across all interactive elements",
+    "hero_crop": "object-cover anchored at 60% center for aircraft visibility",
+    "form_accessibility": "Font-size 16px to prevent iOS auto-zoom"
+  },
+  "non_negotiables": [
+    "Never replace the deep aviation night sky background (hsl(215 45% 7%)) with light mode or flat black",
+    "Never replace Barlow Condensed display headers with generic sans fonts (Inter, Poppins)",
+    "Never replace Runway Amber primary gradient (hsl(38 92% 56%)) with generic purple or blue",
+    "Never change 4px rounded-sm container borders into pill shapes or iOS large radii",
+    "Never fabricate FAA pass rates, pilot headcounts, or simulated customer reviews"
+  ],
+  "safe_replacements": [
+    "SITE.name (Business Name)",
+    "SITE.phone and SITE.phoneDisplay (Phone Number)",
+    "SITE.city, SITE.region, and airport base data",
+    "CITIES array entries (5 service municipalities)",
+    "PROGRAMS array entries (6 certification courses)",
+    "Hero video files (/public/hero/paragon-hero.mp4 and webm)",
+    "Campus aerial / facility photographs in media slots",
+    "Resend server-side API secrets for admissions inquiry routing"
+  ],
+  "leak_terms": [
+    "Paragon Flight Training"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Barlow Condensed",
+      "Oswald",
+      "sans-serif",
+      "Public Sans",
+      "system-ui",
+      "JetBrains Mono"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "hsl(215 45% 7%)",
+    "hsl(200 20% 96%)",
+    "hsl(215 40% 10%)",
+    "hsl(215 38% 13%)",
+    "hsl(38 92% 56%)",
+    "hsl(42 100% 65%)",
+    "hsl(195 85% 50%)",
+    "hsl(215 30% 18%)"
+  ],
+  "fonts": [
+    "Barlow Condensed",
+    "Oswald",
+    "sans-serif",
+    "Public Sans",
+    "system-ui",
+    "JetBrains Mono"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "fb798a5edbda9c77316c9daafd947915c8827e3f20219901a0fd490bbeca9581",
+    "files": {
+      "assets/App-DNJSaxbC.js": "99de41d7f605e0ae357355679b0cdb2d5ade4d99a158eac29f16faed27986cec",
+      "assets/index-B6ojolLH.css": "13d97e8b557527edbf45ce9f54417a98bb57b6ec6fc8ae02e853dd97fc970aa7",
+      "assets/index-DXb8rL6V.js": "4f0fa9cd3beef3bb1c0a69233e84274cbbe541004737f5638cd0fbfd70fe477b",
+      "index.html": "a052461d6b9373e1b785fca3eee50ec1f379a125b9a024326c275bfeb7013317"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

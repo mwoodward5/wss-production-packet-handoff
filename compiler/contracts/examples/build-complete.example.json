@@ -1,0 +1,113 @@
+{
+  "schema_version": "siteforge-build-complete-v1",
+  "build_id": "01JCX3W2G5B7RTQFV4A9J8XKPD",
+  "prospect_id": "prosp_01JCX3W2FZ8G9K3N4Q7R2M6T5W",
+  "idempotency_key": "req_01JCX3W2C0Y3H1E4B7L9N2P8V5",
+  "status": "ready",
+  "renderer": "siteforge-renderer-v8-snowflake@8.2.0",
+  "renderer_version": "8.2.0",
+  "qc_contract": "siteforge-qc-v2-authority-108-plus-contamination",
+  "visual_qc_passed": true,
+  "generation_fingerprint": "1c8bd6f0aa4a86a5f1e3d7b0b9c9d8e7f2a1b3c4d5e6f7081920a1b2c3d4e5f6",
+  "authority_profile_version": "authority-108-v1",
+  "truth_packet_version": "siteforge-truth-packet-v1",
+  "preview_url": "https://previews.siteforge.app/hurley-asphalt-abc123",
+  "preview_url_owner_only": true,
+  "report_url": "https://siteforge-app-seven.vercel.app/report/prosp_01JCX3W2FZ8G9K3N4Q7R2M6T5W/v1?t=REPORT_TOKEN_REDACTED",
+  "report_token": "REDACTED",
+  "qc_passed": true,
+  "qc_summary": {
+    "authority_score": 104,
+    "authority_total": 108,
+    "hero_layers": 8,
+    "batch_hamming_min": 7,
+    "reduced_motion_pass": true,
+    "contamination_check": "clean"
+  },
+  "compose_plan": {
+    "archetype": "cinematic-console-authority",
+    "widget": "service-atlas-live-with-seasonal-window",
+    "widget_business_spec": {
+      "business_problem": "Owner needs to prove the crew can actually reach a specific caller and shows the seasonal install urgency.",
+      "input_fields": ["neighborhood/zip", "project_size_bucket"],
+      "output_action": "shows drive-time-from-shop plus current-window slot count",
+      "conversion_trigger": "Lock a slot button appears when both fields resolve to a served area within the current prime window"
+    },
+    "typography_pair": "Fraunces + Inter Tight + JetBrains Mono utility",
+    "palette_family": "dark-cinematic-ink-with-oxblood-and-cream",
+    "palette_oklch": {
+      "ink": "oklch(0.19 0.02 60)",
+      "surface": "oklch(0.94 0.01 80)",
+      "accent": "oklch(0.55 0.19 30)",
+      "accent_alt": "oklch(0.78 0.11 85)"
+    },
+    "section_cadence": ["hero-cinematic-split","authority-strip","service-grid-3","split-editorial","atlas-with-seasonal-window","review-carousel-attributed","faq-speakable","cta-band-final","footer-multi-column-nap"],
+    "motion_grammar": "reveal-slow-fade + parallax-multiplane",
+    "motion_intensity": 2,
+    "media_treatment": "duotone-brand + grain-analog",
+    "card_geometry": "ledger-cream",
+    "trust_spine": "stat-band-4up + license-badge-ribbon + review-carousel-attributed",
+    "cta_grammar": "primary-solid-accent + phone-outline-sticky",
+    "resonance_snapshot": {
+      "formal_casual": 38,
+      "serious_funny": 22,
+      "respectful_irreverent": 12,
+      "matter_of_fact_enthusiastic": 34,
+      "confidence": 78,
+      "mirror_words": ["50+ years", "family-run", "no money up front", "Pikes Peak"],
+      "banned_words": ["synergy", "leverage", "unlock", "cutting-edge"],
+      "rapport_line": "Your reviews repeatedly emphasize the payment-on-completion promise and the multi-generational family. We built the trust spine around exactly those two things."
+    }
+  },
+  "logo_provenance": {
+    "source": "firecrawl-scrape",
+    "verified": true,
+    "stages_applied": ["background-removed", "upscaled", "vectorized", "shimmer-wrapped"],
+    "final_format": "svg",
+    "final_url": "https://previews.siteforge.app/hurley-asphalt-abc123/assets/logo.svg",
+    "delta_e_to_brand": 8.4
+  },
+  "media_provenance": {
+    "photos_verified_count": 9,
+    "photos_ai_atmosphere_count": 0,
+    "photos_dropped_low_quality": 3,
+    "hero_media_type": "cinematic-still",
+    "hero_media_source": "gbp-scrape",
+    "gallery_photo_urls": [
+      "https://previews.siteforge.app/hurley-asphalt-abc123/assets/gallery-01.webp",
+      "https://previews.siteforge.app/hurley-asphalt-abc123/assets/gallery-02.webp",
+      "https://previews.siteforge.app/hurley-asphalt-abc123/assets/gallery-03.webp",
+      "https://previews.siteforge.app/hurley-asphalt-abc123/assets/gallery-04.webp",
+      "https://previews.siteforge.app/hurley-asphalt-abc123/assets/gallery-05.webp",
+      "https://previews.siteforge.app/hurley-asphalt-abc123/assets/gallery-06.webp",
+      "https://previews.siteforge.app/hurley-asphalt-abc123/assets/gallery-07.webp",
+      "https://previews.siteforge.app/hurley-asphalt-abc123/assets/gallery-08.webp",
+      "https://previews.siteforge.app/hurley-asphalt-abc123/assets/gallery-09.webp"
+    ]
+  },
+  "optimization_manifest": {
+    "version": "authority-108-v1",
+    "checks": []
+  },
+  "outputs": {
+    "html_url": "https://previews.siteforge.app/hurley-asphalt-abc123/index.html",
+    "css_url": "https://previews.siteforge.app/hurley-asphalt-abc123/site.css",
+    "og_image_url": "https://previews.siteforge.app/hurley-asphalt-abc123/og-1200x630.png",
+    "favicon_urls": [
+      "https://previews.siteforge.app/hurley-asphalt-abc123/favicon.svg",
+      "https://previews.siteforge.app/hurley-asphalt-abc123/apple-touch-icon.png"
+    ],
+    "manifest_url": "https://previews.siteforge.app/hurley-asphalt-abc123/site.webmanifest",
+    "sitemap_url": "https://previews.siteforge.app/hurley-asphalt-abc123/sitemap.xml",
+    "robots_url": "https://previews.siteforge.app/hurley-asphalt-abc123/robots.txt",
+    "llms_txt_url": "https://previews.siteforge.app/hurley-asphalt-abc123/llms.txt",
+    "screenshot_desktop_url": "https://previews.siteforge.app/hurley-asphalt-abc123/proof/desktop.png",
+    "screenshot_mobile_url": "https://previews.siteforge.app/hurley-asphalt-abc123/proof/mobile.png"
+  },
+  "checkout": {
+    "purchase_url": "https://checkout.stripe.com/pay/cs_test_REDACTED",
+    "plan_id": "dfy-build-495",
+    "expires_at": "2026-07-22T00:00:00Z"
+  },
+  "completed_at": "2026-07-15T07:32:14Z"
+}

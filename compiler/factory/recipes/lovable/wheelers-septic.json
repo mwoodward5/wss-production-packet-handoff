@@ -1,0 +1,55 @@
+{
+ "id": "wheelers-septic",
+ "source": "50f73118-9f32-446a-8a3b-231a447e92c8",
+ "palette": {
+  "vars": {
+   "--background": "oklch(0.985 0.005 250)",
+   "--foreground": "oklch(0.18 0.04 255)",
+   "--card": "oklch(0.995 0.003 250)",
+   "--card-foreground": "oklch(0.18 0.04 255)",
+   "--popover": "oklch(0.995 0.003 250)",
+   "--popover-foreground": "oklch(0.18 0.04 255)",
+   "--ink": "oklch(0.20 0.08 258)",
+   "--forest": "oklch(0.30 0.12 260)",
+   "--primary": "oklch(0.30 0.12 260)",
+   "--primary-foreground": "oklch(0.99 0.003 250)",
+   "--concrete": "oklch(0.74 0.008 250)",
+   "--secondary": "oklch(0.93 0.012 250)",
+   "--secondary-foreground": "oklch(0.18 0.04 255)",
+   "--muted": "oklch(0.93 0.012 250)",
+   "--muted-foreground": "oklch(0.42 0.02 255)",
+   "--clay": "#E10A1A",
+   "--clay-foreground": "oklch(0.99 0 0)",
+   "--accent": "#E10A1A",
+   "--accent-foreground": "oklch(0.99 0 0)",
+   "--equipment": "oklch(0.84 0.16 92)",
+   "--destructive": "#E10A1A",
+   "--destructive-foreground": "oklch(0.985 0 0)",
+   "--border": "oklch(0.88 0.015 250)",
+   "--input": "oklch(0.88 0.015 250)",
+   "--ring": "#E10A1A",
+   "--gradient-clay": "linear-gradient(135deg, #FF2A37, #B30714)",
+   "--gradient-earth": "linear-gradient(180deg, oklch(0.24 0.10 260), oklch(0.14 0.08 260))",
+   "--gradient-forest": "linear-gradient(180deg, oklch(0.34 0.14 260), oklch(0.20 0.10 260))",
+   "--gradient-concrete": "linear-gradient(180deg, oklch(0.95 0.008 250), oklch(0.82 0.012 250))"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Saira Condensed",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.5rem",
+ "shadows": [
+  "0 18px 40px -22px oklch(0.18 0.06 255 / 0.40)",
+  "0 0 0 1px rgb(225 10 26 / 0.30), 0 14px 36px -16px rgb(225 10 26 / 0.55)",
+  "0 6px 22px -14px oklch(0.18 0.06 255 / 0.25)"
+ ],
+ "keyframes": [],
+ "signatures": [
+  "gradient-text",
+  "glow",
+  "gradient-heavy"
+ ]
+}

@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-07-09T20:14:05.327Z",
+  "ok": true,
+  "results": [
+    {
+      "target": "w-brothers",
+      "mode": "desktop",
+      "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/FdLS8GWvYfktNfNzvrGauLwp/",
+      "status": 200,
+      "title": "W BROTHERS LANDSCAPE, Inc. — landscaping in Orange, CA",
+      "textLength": 2755,
+      "overflow": false,
+      "errorOverlay": false,
+      "consoleErrors": [],
+      "brokenImages": [],
+      "banned": [],
+      "screenshot": "C:\\Users\\Main\\Documents\\New project 2\\woodward-ghost-agency\\apps\\backend\\docs\\proof\\pre-scale-2026-07-09\\w-brothers-desktop.png",
+      "screenshotBytes": 969385,
+      "ok": true
+    },
+    {
+      "target": "w-brothers",
+      "mode": "mobile",
+      "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/FdLS8GWvYfktNfNzvrGauLwp/",
+      "status": 200,
+      "title": "W BROTHERS LANDSCAPE, Inc. — landscaping in Orange, CA",
+      "textLength": 2755,
+      "overflow": false,
+      "errorOverlay": false,
+      "consoleErrors": [],
+      "brokenImages": [],
+      "banned": [],
+      "screenshot": "C:\\Users\\Main\\Documents\\New project 2\\woodward-ghost-agency\\apps\\backend\\docs\\proof\\pre-scale-2026-07-09\\w-brothers-mobile.png",
+      "screenshotBytes": 648345,
+      "ok": true
+    },
+    {
+      "target": "richard-diaz",
+      "mode": "desktop",
+      "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/zvDpFw0bSkQn6hWjNRq3TxC0/",
+      "status": 200,
+      "title": "Richard Diaz Landscape & Masonry — landscaping in Orange, CA",
+      "textLength": 3507,
+      "overflow": false,
+      "errorOverlay": false,
+      "consoleErrors": [],
+      "brokenImages": [],
+      "banned": [],
+      "screenshot": "C:\\Users\\Main\\Documents\\New project 2\\woodward-ghost-agency\\apps\\backend\\docs\\proof\\pre-scale-2026-07-09\\richard-diaz-desktop.png",
+      "screenshotBytes": 1996941,
+      "ok": true
+    },
+    {
+      "target": "richard-diaz",
+      "mode": "mobile",
+      "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/zvDpFw0bSkQn6hWjNRq3TxC0/",
+      "status": 200,
+      "title": "Richard Diaz Landscape & Masonry — landscaping in Orange, CA",
+      "textLength": 3507,
+      "overflow": false,
+      "errorOverlay": false,
+      "consoleErrors": [],
+      "brokenImages": [],
+      "banned": [],
+      "screenshot": "C:\\Users\\Main\\Documents\\New project 2\\woodward-ghost-agency\\apps\\backend\\docs\\proof\\pre-scale-2026-07-09\\richard-diaz-mobile.png",
+      "screenshotBytes": 2358509,
+      "ok": true
+    }
+  ]
+}

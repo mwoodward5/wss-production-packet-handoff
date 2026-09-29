@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Agent in {{CITY}}, {{STATE}} | {{BUSINESS_NAME}}</title>
+    <meta
+      name="description"
+      content="{{BUSINESS_NAME}} represents buyers, sellers, investors and relocating clients in the {{CITY}}, {{STATE}} real estate market[[NEED:COUNTY]] and across {{COUNTY}}[[/NEED]] — private consultations, listing strategy and buyer advisory."
+    />
+    <meta property="og:title" content="Real Estate Agent in {{CITY}}, {{STATE}} | {{BUSINESS_NAME}}" />
+    <meta
+      property="og:description"
+      content="Elevated real estate representation in {{CITY}}, {{STATE}} — buyer advisory, listing strategy, investment guidance and relocation support."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.tsx"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+  <!-- THE HERO VIDEO LADDER, as data. The runtime walks it top-down and arms
+       the first rung whose bytes shipped in this build; a rung that errors
+       steps down to the next. The client's own clip always outranks ours.
+       SPA note: the <video> element is mounted by the React hero layer
+       (marked data-hero-video in the bundle, no static src); the walker
+       waits for that element, then arms rung by rung. -->
+  <script type="application/json" id="hero-video-ladder">
+    { "sources": ["assets/hero-client-realestate.mp4", "assets/hero-fallback-realestate.mp4"] }
+  </script>
+
+  <script>
+  (function(){
+    "use strict";
+    var heroRungs=(function(){try{return (JSON.parse(document.getElementById("hero-video-ladder").textContent)||{}).sources||[];}catch(e){return [];}})();
+    if(!heroRungs.length||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+    function arm(clip,i){
+      var src=heroRungs[i];
+      if(!src)return;
+      clip.src=src.charAt(0)==="/"?src:"/"+src;
+      clip.addEventListener("loadedmetadata",function(){clip.hidden=false;clip.setAttribute("data-hero-armed","1");},{once:true});
+      clip.addEventListener("error",function(){clip.removeAttribute("src");clip.load();arm(clip,i+1);},{once:true});
+    }
+    var mounted=document.querySelector("video[data-hero-video]");
+    if(mounted){arm(mounted,0);return;}
+    var mo=new MutationObserver(function(){
+      var clip=document.querySelector("video[data-hero-video]");
+      if(clip){mo.disconnect();arm(clip,0);}
+    });
+    mo.observe(document.documentElement,{childList:true,subtree:true});
+    setTimeout(function(){mo.disconnect();},20000);
+  })();
+  </script>
+  </body>
+</html>

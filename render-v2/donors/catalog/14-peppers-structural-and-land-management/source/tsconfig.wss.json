@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["src/main.tsx","src/WssApp.tsx","src/lib/contracts.d.ts","vite.wss.config.ts"],"compilerOptions":{"allowJs":true,"checkJs":false},"exclude":["node_modules"]}

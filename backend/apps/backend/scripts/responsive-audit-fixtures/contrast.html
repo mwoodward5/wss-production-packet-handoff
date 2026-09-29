@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contrast failures — responsive-audit fixture</title>
+  <!--
+    FIXTURE: contrast.html
+    The CRITICAL ink case. Three declared pairs under the 4.5:1 floor — a
+    grey-on-white hex pair (2.85:1), an rgba() white over a dark hero that
+    composites to ~3.8:1, and a space-separated rgb() pair. Plus one healthy
+    pair to prove the detector passes what should pass. The self-test
+    asserts hex and rgba failures are both caught with computed ratios.
+  -->
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      font-size: 1rem;
+      color: #111827;             /* 17.0:1 — healthy baseline, must PASS */
+      background-color: #ffffff;
+    }
+
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+
+    h1 { font-size: 2rem; margin: 0 0 12px; }
+
+    /* 2.85:1 — grey body copy on white, the classic washed-out footer ink. */
+    .muted {
+      color: #999999;
+      background-color: #ffffff;
+    }
+
+    /* ~3.8:1 after alpha compositing — translucent white on the dark hero. */
+    .hero-faint {
+      color: rgba(255, 255, 255, 0.4);
+      background-color: #0f172a;
+    }
+
+    /* 2.85:1 again, via space-separated rgb() syntax. */
+    .fine-print {
+      color: rgb(153 153 153);
+      background-color: rgb(255 255 255);
+    }
+
+    /* 16.1:1 — dark ink on near-white, must PASS (no false positive). */
+    .healthy {
+      color: #0f172a;
+      background-color: #f9fafb;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Warranty details</h1>
+    <p class="hero-faint">Coverage terms apply to parts and labor for twenty-four (24) months from install date.</p>
+    <p class="healthy">Register your install within 30 days to activate the extended plan.</p>
+    <p class="muted">Past performance is not a guarantee of future results; see the master agreement.</p>
+    <p class="fine-print">Void where prohibited. Financing offered through third-party lenders.</p>
+  </div>
+  <img src="/img/warranty-card.png" alt="Warranty card" width="720" height="360">
+</body>
+</html>

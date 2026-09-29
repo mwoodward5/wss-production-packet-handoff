@@ -1,0 +1,10 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const result=JSON.parse(fs.readFileSync(path.join(__dirname,'../evidence/burns-build-result.json'),'utf8'));
+const contract=JSON.parse(fs.readFileSync(path.join(__dirname,'../evidence/burns-universal-contract.json'),'utf8'));
+const google=JSON.parse(fs.readFileSync(path.join(__dirname,'../evidence/burns-google-place-refreshed.json'),'utf8'));
+test('rich email-equivalent contract materializes 132 files',()=>assert.equal(contract.file_count,132));
+test('rich Burns output exposes twelve real routes',()=>assert.equal(result.manifest.routes.length,12));
+test('Burns uses first-party logo and no generated hero video',()=>{assert.equal(result.client_data.identity.logoOnDark,'/assets/client-logo.png');assert.equal(result.client_data.identity.logoOnLight,'/assets/client-logo.png');assert.equal(result.client_data.hero.video,'');const logo=result.media_evidence.find(x=>x.role==='logo');assert.equal(logo.sourceSha256,'e1af167ecf9d0531bc9bac2214f5423e4d9d01f600dd2fde735c30a54c57582a');});
+test('refreshed Google identity is current and geo verified in site plan',()=>{assert.equal(google.fields.gbpPlaceId,'ChIJ13ZpitHQQIYRD2AgUbNTpDU');assert.equal(result.site_plan.localPresence.mapAndDirections.googlePlaceId,'ChIJ13ZpitHQQIYRD2AgUbNTpDU');assert.equal(result.site_plan.localPresence.mapAndDirections.geo.verified,true);assert.equal(result.client_data.trust.aggregate.rating,4.1);assert.equal(result.client_data.trust.aggregate.count,35);});
+test('schema graph contains proven types and omits unbound FAQPage',()=>{const types=new Set(result.schema_graph.map(x=>x['@type']));for(const t of ['HomeAndConstructionBusiness','Organization','WebSite','Service','BreadcrumbList'])assert.ok(types.has(t),t);assert.equal(types.has('FAQPage'),false);assert.deepEqual(result.client_data.content.faqs,[]);});

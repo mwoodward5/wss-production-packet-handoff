@@ -1,0 +1,129 @@
+{
+  "name": "medspa-luma",
+  "vertical": "med spa",
+  "hero_wash": {
+    "selector": "section.hero",
+    "background": "#EAF0F1",
+    "text_color": "#1D2F35",
+    "pages_verified": [
+      "/"
+    ],
+    "verified": "Render-proven on this donor shape 2026-09-02: section.hero is the light drawn-texture hero (grain + scrim over the family surface), and heroWashCss applied to this spec clears AA - dark ink on the light surface measures far above 4.5:1 on the raw texture and on any video frame, independent of the client palette. background and text_color are the raw light hero sample; the engine wash rides on top, and the same selector drives the mobile fold."
+  },
+  "hero_wash_note": "background and text_color are the raw LIGHT hero sample from the source design system (pale blue-grey surface, deep slate ink); the shipped scrim comes from the theme pass.",
+  "label": "Luma - physician-led medical-spa one-pager (static A+ rebuild): light drawn-texture video-ladder hero, treatments bento, gallery, care-process rail, practice, patient feedback, FAQ, consultation CTA",
+  "wordmarkFill": "#1D2F35",
+  "source": "Static A+ rebuild (2026-09-02, Lovable a-plus lane) of the med-spa vertical: the earlier synthetic SPA port (placeholder identity Luma Aesthetics) was replaced by a fictional-identity one-page template - hand-authored index.html (light drawn-texture hero with grain, ticker, bento treatments, SVG gallery, numeral care-process rail, practice about, patient-feedback cards, glass FAQ, consultation CTA panel, footer + floater), hand-authored stylesheet on --wss-* properties, one hero-layer bundle. The design language is trade-generic; every business fact is a token.",
+  "sanitised": "2026-08-02",
+  "stack": "Static A+ build (2026-09-02): one hand-authored index.html (real header/main/footer markup, no framework, no CDN, no external requests) + one hand-authored stylesheet at assets/style.css (consuming --wss-* properties throughout; hex literals exist only as the token declarations themselves) + one script asset, assets/index-medspa-luma.js (the hero video layer: mounts the ladder-marked <video data-hero-video> hidden with no static src and runs the texture-first/tap-to-play control; the hero is complete without it and reduced motion never mounts the clip). Progressive enhancement only - the first inline script adds .js to <html> before first paint, and every sizzle layer (scroll reveals, count-up stats, hero clip arming, magnetic CTA nudge) is inert without JS or under prefers-reduced-motion. The retired ESM bundle (assets/index-D-LZpgJW.js.raw, raw-pinned) is retained UNLOADED as the compiled evidence artifact for the identity scan; the static page never references it.",
+  "donor_business_name": "Luma Aesthetics",
+  "donor_phone": "(555) 010-0100",
+  "donor_email": "hello@example.com",
+  "donor_city": "Springfield",
+  "donor_county": "",
+  "donor_domain": "",
+  "persons": [],
+  "fabricated_persons": [
+    "Dr. Adaeze Oyelaran"
+  ],
+  "socials": [],
+  "zips": [],
+  "geo": [],
+  "account_ids": [
+    "Luma Aesthetic Medicine",
+    "+14255550198",
+    "4255550198",
+    "425-555-0198",
+    "lumaaesthetic.com",
+    "reception@lumaaesthetic.com"
+  ],
+  "consumes_content": false,
+  "renders": [],
+  "renders_note": "Fixed template copy throughout; it does not consume the engine's content-inject islands (the engine appends its authority block - services, coverage, FAQ, reviews, hours - at the ENGINE INJECTION POINT before the footer, and this one-pager leaves that seam intact). Every business-specific string is a token, and every token that can be unverified collapses its own UI at hydration (see tokens_note).",
+  "photo_slots": [
+    "assets/hero-poster.svg",
+    "assets/grain.svg"
+  ],
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-medspa.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-medspa.mp4",
+    "poster": "assets/hero-poster.svg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (REAL bytes ship today: the library's vetted trade-neutral clip; rung 2 plays on every build as-is)",
+      "the light drawn-texture surface (the head's data-wss-hero-fallback block paints the family surface under the marked video and the hero-visual illustration stands beside it - the always-painted rung)",
+      "the drawn light hero composition (surface, grain and scrim layers under everything)"
+    ],
+    "note": "The marked <video data-hero-video muted loop playsinline preload=none hidden> is MOUNTED by the hero layer bundle (assets/index-medspa-luma.js, the ladder-donor mount contract: hidden, no static src; this family ships no raster poster, so the CSS surface from the head's data-wss-hero-fallback block is the always-painted rung), over the drawn texture that IS the complete zero-JS hero; the ladder runtime in index.html observes for the mount and arms rungs only when their bytes shipped, reduced motion never mounts or arms the video (guarded in the runtime AND in the mount layer), mobile is texture-first with tap-to-play, and the clip pauses when the hero scrolls away or the tab hides."
+  },
+  "spa_routes": [],
+  "spa_routes_note": "One document; sections are #id anchors (#top, #treatments, #work, #process, #clinic, #reviews, #faq, #contact). No client routing of any kind since the 2026-09-02 static rebuild.",
+  "prerendered_routes": [
+    "/"
+  ],
+  "prerendered_note": "Fully static since the 2026-09-02 rebuild — index.html ships the complete page as real header/main/footer markup in source order, so crawlers and no-JS visitors read every word. JS adds sizzle only (reveals, count-ups, hero clip arming), each gated behind the pre-paint .js class and prefers-reduced-motion.",
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [],
+    "catchAll": "* -> 404 page"
+  },
+  "classification": {
+    "verticalFamilies": [
+      "health-beauty"
+    ],
+    "conversionArchetypes": [
+      "request-estimate"
+    ],
+    "shape": "editorial-onepager",
+    "routeDepth": "flat",
+    "photoDemand": "medium"
+  },
+  "classification_note": "request-estimate: conversion routes through the consultation CTA panel and the tel:/mailto: rails. The header CTA, hero call button, CTA-panel call button, footer phone segment and the floater all collapse or re-anchor when the business has no verified phone, each falling back to a #contact anchor where a primary slot needs a survivor. There is no emergency-call archetype - aesthetic consultations are booked work.",
+  "lead_endpoint": null,
+  "lead_endpoint_note": "No donor-native form since the static rebuild. The design converts through tel:/mailto: links and #contact anchors, all token-driven and collapse-guarded. The engine's content-inject lead-capture island (POST /api/quote-request) provides the form path on every mirror, so no stub endpoint could silently swallow leads.",
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "STATE",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "GEO_LAT",
+    "GEO_LNG",
+    "ADDRESS_CITY",
+    "PROFILE_URL",
+    "LICENSE",
+    "LOGO_URL",
+    "HERO_HEADLINE",
+    "SITE_URL"
+  ],
+  "tokens_note": "Collapse is [[NEED:TOKEN]] / [[NEED:!TOKEN]] phrase markers around every weld of an OPTIONAL token: blank PHONE removes the header CTA (a consultation anchor takes the slot), the hero call button, the CTA-panel call button, the footer phone segment and the ld+json telephone line, and flips the floater plus the meta/OG sentences to online-request copy; blank EMAIL removes the mailto rails; blank LICENSE removes the license chip, the partners chip, the footer license line and the ld+json identifier; blank OWNER_NAME swaps the about sentence to the business-led reading and drops the footer ownership clause and the ld+json founder; blank COUNTY unwelds every county mention from copy, headings and the ld+json areaServed entry; blank POSTAL drops the schema postalCode and the footer ZIP; blank GEO drops the geo.position meta and the footer coordinates; blank PROFILE_URL drops the ld+json sameAs and the footer profile link. Dialable links are href=tel:{{PHONE_DIGITS}} everywhere, so a phone-less build carries no dangling tel: href.",
+  "truth_law_removals": [
+    "The synthetic placeholder identity (Luma Aesthetics, (555) 010-0100, hello@example.com, Springfield) is declared here as identity atoms and ships NOWHERE in the bytes - every identity string is a token; a resurrection is blocked by the identity scan.",
+    "Nothing is sold at the consultation - the design's own consent-first copy. Medical-license mentions render only when the prospect's LICENSE is verified; every 'license {{LICENSE}}' surface collapses when it is not.",
+    "Template stats on the stat strip are design furniture, not claims - the engine's verified-trust islands override them on real builds, and RATING/REVIEW_COUNT are never invented.",
+    "The template's patient-feedback cards are fictional demo voices (declared in fabricated_persons); the content-inject reviews island supersedes them, and no reviewer content is ever fabricated as a real person's words.",
+    "No maps embed, no hours table, no review-carousel widget shipped: coverage/authorities arrive via the engine's own verified islands."
+  ],
+  "identity_atoms_note": "The primary atoms are the synthetic donor identity the library has carried since registration (Luma Aesthetics NAP) - none of it appears in the installed bytes, but the scan needs real needles so it can never return clean for arbitrary bytes. The a-plus template's fictional demo identity (Luma Aesthetic Medicine of Bellevue, WA) is declared in account_ids via its name/phones/domain/email - its PLACE names are deliberately NOT atoms (the account_ids bucket is hard identity, never client-excused). donor_city Springfield is a PLACE atom: a legitimate Springfield prospect is excused by the client-place carve-out (scan.js BF-5).",
+  "notes": "A-PLUS REBUILD 2026-09-02 (lovable/medspa-luma-a-plus): the SPA page was replaced by the static build described in stack - light editorial design system on --wss-* properties, drawn-texture hero with grain and word-by-word display headline, ticker, bento treatments, SVG gallery, numeral care-process rail, practice about with partners strip, patient-feedback cards, glass accordion FAQ, consultation CTA panel, four-column footer and a single floater. CI-repair pass 2 (fix2/medspa-luma): restored the WSS manifest schema with the synthetic identity atoms (plus the template's fictional identity) so the identity gate can fire; vertical back to canonical 'med spa' with the medspa/aesthetics aliases; hero_wash re-pointed at the static section.hero; NEED-guarded every OPTIONAL token weld; added the data-wss-hero-fallback kill-switch + paint-under style block, the ladder island and the walker runtime in index.html, and the ladder-donor mount bundle assets/index-medspa-luma.js; renamed assets/logo-fallback.svg -> mark-fallback.svg (a logo-* filename is a donor brand asset the identity scan must block); restored the realestate-waterline family to its merged main state after the branch carried a stale copy.",
+  "registered_on": "2026-08-02",
+  "installed_at": "apps/backend/donors-clean/medspa-luma",
+  "alias_verticals": [
+    "medspa",
+    "medical spa",
+    "aesthetics",
+    "botox clinic",
+    "aesthetic medicine"
+  ],
+  "alias_note": "Applied by lib/donor-verticals.js from data/donor-verticals.json. The engine itself still resolves ONLY the exact \"vertical\" value above."
+}

@@ -1,0 +1,6 @@
+/* Override only the explicitly certified accent role; preserve donor defaults. */
+[data-wss-accent="certified"] .animate-glow { animation-name: wss-accent-glow; }
+@keyframes wss-accent-glow {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--gold) 50%, transparent); }
+  50% { box-shadow: 0 0 0 12px transparent; }
+}

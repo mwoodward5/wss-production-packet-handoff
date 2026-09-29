@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{BUSINESS_NAME}} — {{CITY}}, {{STATE}}</title>
+  <link rel="canonical" href="{{SITE_URL}}" />
+  <link rel="stylesheet" href="/assets/style-def456.css" />
+  <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+  <header>
+    <img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}}" class="brand-mark" />
+    <a class="phone" href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>
+  </header>
+  <main>
+    <h1>{{HERO_HEADLINE}}</h1>
+    <p class="locale">{{CITY}}, {{STATE}}</p>
+    <section class="services">
+      <h2>What we do</h2>
+      <p>The work {{BUSINESS_NAME}} carries out around {{CITY}}.</p>
+    </section>
+    <section class="reviews">
+      <h2>Reviews</h2>
+      <p data-collapse-if-empty="RATING,REVIEW_COUNT"><span class="stars">{{RATING}}</span> stars from <span class="count">{{REVIEW_COUNT}}</span> reviews</p>
+    </section>
+    <section class="gallery">
+      <h2>Our work</h2>
+      <p>Photographs of jobs finished in {{CITY}}.</p>
+    </section>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p data-collapse-if-empty="PHONE">Call <a href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>.</p>
+    </section>
+  </main>
+  <video src="/media/hero-loop.mp4" autoplay muted loop playsinline></video>
+  <script type="module" src="/assets/app-abc123.js"></script>
+</body>
+</html>

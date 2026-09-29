@@ -1,0 +1,74 @@
+[
+ {
+  "name": "plumbing-pressure-lens",
+  "vertical": "plumbing",
+  "hasManifest": true,
+  "status": 200,
+  "ok": true,
+  "error": null,
+  "detail": null,
+  "build_hash": "cfdd0b722ee53f41",
+  "file_count": 8,
+  "checks": {
+   "hydration_parse": "passed",
+   "brand": "unbranded",
+   "token_scan": "passed",
+   "content": "none",
+   "identity_scan": "passed",
+   "routes": "passed",
+   "asset_diff": "skipped_dry_run",
+   "deep_link": "skipped_dry_run",
+   "alias_target": "skipped_dry_run",
+   "render": "skipped_dry_run",
+   "route_render": "skipped_dry_run"
+  }
+ },
+ {
+  "name": "roofing-riseabove",
+  "vertical": "roofing",
+  "hasManifest": true,
+  "status": 200,
+  "ok": true,
+  "error": null,
+  "detail": null,
+  "build_hash": "d786d7a37ec35c09",
+  "file_count": 103,
+  "checks": {
+   "hydration_parse": "passed",
+   "brand": "unbranded",
+   "token_scan": "passed",
+   "content": "none",
+   "identity_scan": "passed",
+   "routes": "passed",
+   "asset_diff": "skipped_dry_run",
+   "deep_link": "skipped_dry_run",
+   "alias_target": "skipped_dry_run",
+   "render": "skipped_dry_run",
+   "route_render": "skipped_dry_run"
+  }
+ },
+ {
+  "name": "roofing-tekline",
+  "vertical": "roofing",
+  "hasManifest": false,
+  "status": 500,
+  "ok": false,
+  "error": "unguarded_optional_slot",
+  "detail": "[{\"file\":\"assets/index-DqHc579c.js\",\"token\":\"EMAIL\",\"excerpt\":\"dren:\\\"{{PHONE}}\\\"}),\\\" \\\",\\\" or email \\\",i.jsx(\\\"a\\\",{href:\\\"mailto:{{EMAIL}}\\\",\\\"data-event\\\":\\\"contact_email_homepage\\\",className:\\\"font-semi\"},{\"file\":\"assets/index-DqHc579c.js\",\"token\":\"EMAIL\"",
+  "build_hash": null,
+  "file_count": null,
+  "checks": null
+ },
+ {
+  "name": "tree-care-dark",
+  "vertical": "tree-service",
+  "hasManifest": true,
+  "status": 404,
+  "ok": false,
+  "error": "donor_retired",
+  "detail": "[{\"reason\":\"donor_retired\",\"value\":\"tree-care-dark\",\"since\":\"2026-07-31\",\"why\":\"Shipped a donor person-name leak, a fully missing asset set, and a wrong-trade schema. Out of service until all three are fixed and a render proves it.\"}]",
+  "build_hash": null,
+  "file_count": null,
+  "checks": null
+ }
+]

@@ -1,0 +1,396 @@
+{
+  "project_name": "flint-plumbing-mirror-core",
+  "vertical": "plumbing",
+  "classification": "Premier",
+  "routes": [
+    {
+      "path": "/",
+      "file": "src/routes/index.tsx",
+      "type": "single-page-master"
+    },
+    {
+      "path": "/$trade/$area",
+      "file": "src/routes/$trade.$area.tsx",
+      "type": "programmatic-seo-landing"
+    },
+    {
+      "path": "/llms.txt",
+      "file": "src/routes/llms[.]txt.ts",
+      "type": "ai-answer-engine-digest"
+    },
+    {
+      "path": "/sitemap.xml",
+      "file": "src/routes/sitemap[.]xml.ts",
+      "type": "xml-sitemap-index"
+    },
+    {
+      "path": "/api/chat",
+      "file": "src/routes/api/chat.ts",
+      "type": "ai-concierge-streaming-endpoint"
+    },
+    {
+      "path": "/api/public/refresh-proof",
+      "file": "src/routes/api/public/refresh-proof.ts",
+      "type": "background-proof-sync-cron"
+    }
+  ],
+  "design_tokens": {
+    "color_space": "oklch",
+    "tokens": {
+      "background": "oklch(0.253 0.045 195.5)",
+      "foreground": "oklch(0.949 0.017 84.6)",
+      "cream": "oklch(0.949 0.017 84.6)",
+      "petrolDeep": "oklch(0.205 0.042 196.4)",
+      "mint": "oklch(0.858 0.121 173.4)",
+      "coral": "oklch(0.702 0.163 32.5)",
+      "border": "oklch(0.949 0.017 84.6 / 14%)",
+      "card": "oklch(0.297 0.048 195.2)"
+    },
+    "typography": {
+      "display": "Archivo",
+      "accent_serif": "Instrument Serif",
+      "body": "Inter Tight",
+      "mono": "ui-monospace, monospace"
+    },
+    "radii": {
+      "base": "0.5rem",
+      "card": "1.5rem",
+      "pill": "9999px"
+    },
+    "shadows": {
+      "float": "0 24px 60px -22px color-mix(in oklab, var(--petrol-deep) 92%, transparent)",
+      "glow": "0 0 0 1px color-mix(in oklab, var(--mint) 32%, transparent), 0 18px 46px -20px color-mix(in oklab, var(--mint) 55%, transparent)"
+    }
+  },
+  "hero_contract": {
+    "location": "above-the-fold-full-width",
+    "supported_modes": [
+      "video",
+      "kenburns"
+    ],
+    "active_mode": "video",
+    "video_slot": "/public/hero/hero.mp4",
+    "poster_slot": "/public/hero/poster.jpg",
+    "stills_slots": [
+      "/public/hero/still-1.jpg",
+      "/public/hero/still-2.jpg",
+      "/public/hero/still-3.jpg"
+    ],
+    "video_spec": {
+      "codec": "h264 mp4",
+      "max_duration_seconds": 18,
+      "max_filesize_mb": 8,
+      "audio": "strictly_muted",
+      "aspect_ratio": "16:9",
+      "dimensions": "1920x1080"
+    },
+    "overlays": [
+      "color-mix(in oklab, var(--petrol-deep) 78%, transparent)",
+      "var(--gradient-hero)",
+      "gradient-to-b from-transparent to-background"
+    ]
+  },
+  "media_slots": [
+    {
+      "id": "brand_logo",
+      "target_file": "/public/brand/logo.png",
+      "role": "header_footer_brandmark",
+      "aspect_ratio": "square_or_rect_3_1",
+      "scale_multiplier_key": "clientConfig.brand.logoScale"
+    },
+    {
+      "id": "hero_video",
+      "target_file": "/public/hero/hero.mp4",
+      "role": "hero_cinematic_motion",
+      "aspect_ratio": "16:9",
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "hero_poster",
+      "target_file": "/public/hero/poster.jpg",
+      "role": "video_poster_frame",
+      "aspect_ratio": "16:9",
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "hero_still_1",
+      "target_file": "/public/hero/still-1.jpg",
+      "role": "kenburns_frame_1",
+      "aspect_ratio": "16:9",
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "hero_still_2",
+      "target_file": "/public/hero/still-2.jpg",
+      "role": "kenburns_frame_2",
+      "aspect_ratio": "16:9",
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "hero_still_3",
+      "target_file": "/public/hero/still-3.jpg",
+      "role": "kenburns_frame_3",
+      "aspect_ratio": "16:9",
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "gallery_slots",
+      "target_directory": "/public/gallery/",
+      "count": 6,
+      "role": "completed_job_portfolio",
+      "aspect_ratio": "4:3_or_16:9"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business.name",
+      "file": "src/trust.config.ts",
+      "target": "trustConfig.business.name"
+    },
+    {
+      "key": "business.description",
+      "file": "src/trust.config.ts",
+      "target": "trustConfig.business.description"
+    },
+    {
+      "key": "contact.phone",
+      "file": "src/trust.config.ts",
+      "target": "trustConfig.contact.phone"
+    },
+    {
+      "key": "contact.phoneDisplay",
+      "file": "src/trust.config.ts",
+      "target": "trustConfig.contact.phoneDisplay"
+    },
+    {
+      "key": "contact.bookingUrl",
+      "file": "src/trust.config.ts",
+      "target": "trustConfig.contact.bookingUrl"
+    },
+    {
+      "key": "location.primary",
+      "file": "src/trust.config.ts",
+      "target": "trustConfig.location.primary"
+    },
+    {
+      "key": "location.serviceAreas",
+      "file": "src/trust.config.ts",
+      "target": "trustConfig.location.serviceAreas"
+    },
+    {
+      "key": "services",
+      "file": "src/trust.config.ts",
+      "target": "trustConfig.services"
+    },
+    {
+      "key": "hours.weekly",
+      "file": "src/trust.config.ts",
+      "target": "trustConfig.hours.weekly"
+    },
+    {
+      "key": "hero.headline",
+      "file": "src/client.config.ts",
+      "target": "clientConfig.hero.headline"
+    },
+    {
+      "key": "hero.headlineAccent",
+      "file": "src/client.config.ts",
+      "target": "clientConfig.hero.headlineAccent"
+    },
+    {
+      "key": "reviewRequest.prompts",
+      "file": "src/client.config.ts",
+      "target": "clientConfig.reviewRequest.prompts"
+    }
+  ],
+  "trust_slots": [
+    {
+      "widget": "StarSummaryBar",
+      "placement": "hero_left_column",
+      "data_requirements": [
+        "ratingValue",
+        "reviewCount",
+        "avatarUrls"
+      ]
+    },
+    {
+      "widget": "RatingBadgeCluster",
+      "placement": "hero_floating_card",
+      "data_requirements": [
+        "google_rating",
+        "license_number"
+      ]
+    },
+    {
+      "widget": "TrustBadgeRail",
+      "placement": "hero_bottom_ribbon",
+      "data_requirements": [
+        "trade_associations",
+        "insurance_coverage"
+      ]
+    },
+    {
+      "widget": "ReviewWall",
+      "placement": "section_reviews",
+      "data_requirements": [
+        "reviews_with_faces_and_dates"
+      ]
+    },
+    {
+      "widget": "InsuranceProofPanel",
+      "placement": "section_credentials",
+      "data_requirements": [
+        "license_id",
+        "insurance_carrier"
+      ]
+    },
+    {
+      "widget": "ReviewRequestPanel",
+      "placement": "section_leave_a_review",
+      "data_requirements": [
+        "google_place_id"
+      ]
+    }
+  ],
+  "schema_slots": [
+    {
+      "schema_type": "LocalBusiness / Plumber",
+      "injector": "src/trust-widgets/seo/jsonld.ts",
+      "fields": [
+        "name",
+        "geo",
+        "telephone",
+        "address",
+        "aggregateRating",
+        "hasOfferCatalog"
+      ]
+    },
+    {
+      "schema_type": "Service",
+      "injector": "src/routes/$trade.$area.tsx",
+      "fields": [
+        "serviceType",
+        "areaServed",
+        "provider",
+        "aggregateRating"
+      ]
+    },
+    {
+      "schema_type": "SpeakableSpecification",
+      "injector": "src/trust-widgets/components/SpeakableSchema.tsx",
+      "fields": [
+        "cssSelector"
+      ]
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "type": "geo_coordinates",
+      "target": "trustConfig.location.primary.geo",
+      "usage": "LocalMap pin + Apple/Google/Waze directions links"
+    },
+    {
+      "type": "service_area_matrix",
+      "target": "trustConfig.location.serviceAreas",
+      "usage": "Programmatic generation of /{trade}/{area} routes + sitemap.xml entries"
+    },
+    {
+      "type": "voice_answers",
+      "target": "trustConfig.voice.answers",
+      "usage": "VoiceAnswerBlock accordion + LLM citation extraction"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "query_type": "near_me_availability",
+      "selector": "[data-speakable=\"summary\"]",
+      "target": "Hero business lede & open status"
+    },
+    {
+      "query_type": "service_cost_and_licensing",
+      "selector": "[data-speakable=\"voice-qa\"]",
+      "target": "VoiceAnswerBlock items"
+    }
+  ],
+  "map_location_slot": {
+    "component": "src/components/LocalMap.tsx",
+    "container": "section#areas",
+    "embed_mode": "google_maps_api_or_embed_fallback",
+    "required_fields": [
+      "street",
+      "city",
+      "region",
+      "postal",
+      "geo.lat",
+      "geo.lng"
+    ]
+  },
+  "content_density": {
+    "hero": "high",
+    "stats": "minimal",
+    "services": "moderate_bento",
+    "reviews": "rich_masonry",
+    "credentials": "compact_proof",
+    "faq": "concise_two_sentence"
+  },
+  "mobile_rules": {
+    "min_touch_target_px": 48,
+    "fixed_bottom_rails": [
+      "ProofStickyBar",
+      "BookNowSticky"
+    ],
+    "hero_stack_order": [
+      "BrandMark",
+      "OpenNow",
+      "Kicker",
+      "H1",
+      "Blurb",
+      "CTAs",
+      "ProofPanel",
+      "BadgeRail"
+    ],
+    "safe_area_padding": "env(safe-area-inset-bottom)"
+  },
+  "non_negotiables": [
+    "Do not invert dark petrol and cream color scheme",
+    "Do not remove Archivo and Instrument Serif typography pairing",
+    "Do not remove real reviewer faces from StarSummaryBar and ReviewWall",
+    "Do not alter the 14-section homepage compositional hierarchy",
+    "Do not replace pill-shaped CTAs with rectangular buttons",
+    "Do not reduce brand logo scale multiplier below 2"
+  ],
+  "safe_replacements": [
+    "clientConfig.brand.wordmark",
+    "clientConfig.brand.wordmarkSub",
+    "clientConfig.brand.palette",
+    "clientConfig.hero.headline",
+    "clientConfig.hero.headlineAccent",
+    "clientConfig.hero.videoSrc",
+    "clientConfig.hero.stills",
+    "clientConfig.maps.placeId",
+    "clientConfig.reviewRequest.prompts",
+    "trustConfig.business",
+    "trustConfig.contact",
+    "trustConfig.location",
+    "trustConfig.hours",
+    "trustConfig.services",
+    "trustConfig.proof.ratings",
+    "trustConfig.proof.reviews",
+    "trustConfig.credentials",
+    "trustConfig.guarantees",
+    "/public/brand/logo.png",
+    "/public/hero/hero.mp4",
+    "/public/hero/poster.jpg",
+    "/public/gallery/*.jpg"
+  ],
+  "lovable_classification": "high-converting-local-trade-contractor",
+  "classification_basis": "6 distinct documented routes; WSS scope label only",
+  "project_id": "b0837193-3a75-48d0-a390-b98475e5461a",
+  "project_url": "https://lovable.dev/projects/b0837193-3a75-48d0-a390-b98475e5461a",
+  "source_plan_file": "17-trusty-plumbing-showcase-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

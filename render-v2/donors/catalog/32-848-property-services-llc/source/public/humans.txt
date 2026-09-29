@@ -1,0 +1,16 @@
+/* TEAM */
+Owner: Thomas G Lindsey
+Title: Owner & President
+Site: https://848propertyservices.com
+Contact: thomas [at] 848propertyservices.com
+Location: Hastings, Michigan, USA
+
+/* BUSINESS */
+Name: 848 Property Services LLC
+Type: Home improvement & handyman services
+Founded: July 2025
+Service area: Hastings, MI · Barry County, Michigan
+Accreditation: BBB Accredited (A-Rated) since February 2026
+
+/* THANKS */
+Better Business Bureau · Our customers across Barry County

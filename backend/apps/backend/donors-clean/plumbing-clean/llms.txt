@@ -1,0 +1,10 @@
+# {{BUSINESS_NAME}}
+
+Plumbing service for homes and businesses in {{CITY}}, {{STATE}}.[[NEED:PHONE]]
+Call {{PHONE}}.[[/NEED]]
+
+- Services: {{SITE_URL}}services
+- Projects: {{SITE_URL}}projects
+- Service area: {{SITE_URL}}service-area
+- FAQ: {{SITE_URL}}faq
+- Contact: {{SITE_URL}}contact

@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-07-10T20:45:00-07:00",
+  "source": "lovable-v5-verified",
+  "source_status": "Five verified live builds are ready to explore from the 200-project Lovable archive. More examples stay hidden until their preview media and public URL are verified.",
+  "workspace_id": "iDok9ZWs0DhFjLcdWfAT",
+  "inventory_total": 200,
+  "total": 5,
+  "templates": [
+    {
+      "id": "lovable-landscape-connection",
+      "slug": "estate-editorial",
+      "name": "Estate Editorial",
+      "category": "landscaping",
+      "description": "A cinematic, image-led opening with restrained typography, estate-scale pacing, and an immersive motion hero.",
+      "hero_family": "cinematic-video-parallax",
+      "tags": ["landscaping", "cinematic", "video", "estate", "editorial"],
+      "screenshot_url": "/template-library/landscape-connection.webp",
+      "source_url": "https://wss-ca-landscape-landscape-connection-inc.vercel.app/",
+      "source": "lovable-v5-verified"
+    },
+    {
+      "id": "lovable-signature-landscape",
+      "slug": "architectural-field-notes",
+      "name": "Architectural Field Notes",
+      "category": "landscaping",
+      "description": "An architectural composition with strong image geometry, precise type, and a calm portfolio rhythm for premium outdoor work.",
+      "hero_family": "split-editorial-index",
+      "tags": ["landscaping", "architectural", "portfolio", "premium", "editorial"],
+      "screenshot_url": "/template-library/signature-landscape.webp",
+      "source_url": "https://wss-ca-landscape-signature-landscape.vercel.app/",
+      "source": "lovable-v5-verified"
+    },
+    {
+      "id": "lovable-richard-diaz-landscape",
+      "slug": "owner-led-cinematic",
+      "name": "Owner-Led Cinematic",
+      "category": "landscaping",
+      "description": "A warmer, human opening that keeps the owner and the craft at the center without giving up cinematic scale.",
+      "hero_family": "magazine-owner-letter",
+      "tags": ["landscaping", "owner led", "warm", "cinematic", "local"],
+      "screenshot_url": "/template-library/richard-diaz-landscape.webp",
+      "source_url": "https://wss-ca-landscape-richard-diaz-landscape.vercel.app/",
+      "source": "lovable-v5-verified"
+    },
+    {
+      "id": "lovable-ajp-landscape",
+      "slug": "bold-service-canvas",
+      "name": "Bold Service Canvas",
+      "category": "landscaping",
+      "description": "A high-contrast service story with an immediate visual focal point and clear paths into the work, service area, and quote flow.",
+      "hero_family": "atlas-grid-reveal",
+      "tags": ["landscaping", "bold", "service", "gallery", "conversion"],
+      "screenshot_url": "/template-library/ajp-landscape.webp",
+      "source_url": "https://wss-ca-landscape-ajp-landscape-inc.vercel.app/",
+      "source": "lovable-v5-verified"
+    },
+    {
+      "id": "lovable-barriga-landscaping",
+      "slug": "modern-local-showcase",
+      "name": "Modern Local Showcase",
+      "category": "landscaping",
+      "description": "A modern local-business composition that balances cinematic media, direct service clarity, and approachable calls to action.",
+      "hero_family": "material-lab-swatch",
+      "tags": ["landscaping", "modern", "local", "media", "approachable"],
+      "screenshot_url": "/template-library/barriga-landscaping.webp",
+      "source_url": "https://wss-ca-landscape-barriga-landscaping.vercel.app/",
+      "source": "lovable-v5-verified"
+    }
+  ]
+}

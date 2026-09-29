@@ -1,0 +1,262 @@
+{
+  "project_name": "Houck Property Services",
+  "vertical": "Property Maintenance, Handyman & Finish Contracting",
+  "classification": "Single-page",
+  "routes": [
+    {
+      "path": "/",
+      "component": "src/routes/index.tsx",
+      "sections": [
+        "nav",
+        "hero",
+        "marquee",
+        "services",
+        "why",
+        "work",
+        "process",
+        "area",
+        "faq",
+        "contact",
+        "footer"
+      ]
+    }
+  ],
+  "design_tokens": {
+    "colors": {
+      "ink": "oklch(0.965 0.018 88)",
+      "bone": "oklch(0.18 0.018 70)",
+      "graphite": "oklch(0.93 0.022 85)",
+      "brass": "oklch(0.62 0.14 60)",
+      "brass_deep": "oklch(0.48 0.13 50)",
+      "terracotta": "oklch(0.5 0.16 38)",
+      "border": "oklch(0.18 0.018 70 / 0.14)"
+    },
+    "typography": {
+      "display": "Fraunces, ui-serif, Georgia, serif",
+      "sans": "Inter, ui-sans-serif, system-ui, sans-serif",
+      "mono": "JetBrains Mono Variable, ui-monospace, monospace"
+    },
+    "effects": {
+      "grain": "SVG feTurbulence fractal noise overlay",
+      "blueprint_grid": "56px x 56px hairline gradient",
+      "shimmer": "shimmer-sweep 6s ease-in-out infinite",
+      "cursor": "Interactive dual-element ring and dot"
+    }
+  },
+  "hero_contract": {
+    "type": "split_editorial_with_tactile_plate",
+    "headline": "Property work, {handled} by Houck Property Services.",
+    "subheadline_word_count": 34,
+    "primary_cta": "Request Service",
+    "secondary_cta": "Direct line phone link",
+    "image_plate_aspect": "4/5",
+    "floating_elements": [
+      "brass_tape_strip",
+      "offset_secondary_polaroid",
+      "rotating_certified_seal"
+    ],
+    "stats_count": 4,
+    "ruler_active": true
+  },
+  "media_slots": [
+    {
+      "id": "MEDIA-HERO-BG",
+      "role": "atmospheric_background",
+      "aspect": "16:9",
+      "container": "hero_underlay"
+    },
+    {
+      "id": "MEDIA-HERO-PLATE-1",
+      "role": "primary_craft_photo",
+      "aspect": "4:5",
+      "container": "3d_perspective_card"
+    },
+    {
+      "id": "MEDIA-HERO-PLATE-2",
+      "role": "detail_close_up",
+      "aspect": "3:4",
+      "container": "floating_polaroid"
+    },
+    {
+      "id": "MEDIA-LOGO-NAV",
+      "role": "brand_mark",
+      "aspect": "1:1",
+      "container": "72px_square_card"
+    },
+    {
+      "id": "MEDIA-SERVICES",
+      "count": 6,
+      "role": "card_hover_reveal",
+      "aspect": "16:10",
+      "container": "service_tile"
+    },
+    {
+      "id": "MEDIA-WORK-MOSAIC",
+      "count": 12,
+      "role": "gallery_showcase",
+      "aspect": "asymmetric",
+      "container": "mosaic_grid"
+    }
+  ],
+  "content_slots": [
+    {
+      "id": "business_name",
+      "selector": "h1, nav, footer",
+      "donor_value": "Houck Property Services"
+    },
+    {
+      "id": "phone",
+      "selector": "nav a[href^='tel:'], #contact a[href^='tel:']",
+      "donor_value": "(623) 687-6528"
+    },
+    {
+      "id": "email",
+      "selector": "#contact a[href^='mailto:']",
+      "donor_value": "houckpropertyservices@gmail.com"
+    },
+    {
+      "id": "service_city",
+      "selector": "header, #area, footer",
+      "donor_value": "Litchfield Park, AZ"
+    },
+    {
+      "id": "service_radius",
+      "selector": "#area, #contact",
+      "donor_value": "50-mile radius"
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "nav_beacon",
+      "type": "status_indicator",
+      "label": "Active line"
+    },
+    {
+      "slot": "hero_seal",
+      "type": "certified_emblem",
+      "label": "Certified Service Est. 2018"
+    },
+    {
+      "slot": "stats_rail",
+      "type": "counter_row",
+      "metrics": [
+        "Yrs in trade",
+        "Three-step process",
+        "Cities served",
+        "BBB rating"
+      ]
+    },
+    {
+      "slot": "accreditation_pill",
+      "type": "verification_link",
+      "label": "BBB Accredited Business"
+    },
+    {
+      "slot": "google_reviews",
+      "type": "review_link",
+      "label": "Leave a Google review"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "scope": "head_script",
+      "required_fields": [
+        "name",
+        "telephone",
+        "email",
+        "address",
+        "areaServed",
+        "openingHoursSpecification"
+      ]
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "role": "direct_answer_paragraph",
+      "section": "hero",
+      "target_queries": [
+        "Who provides property maintenance in Litchfield Park?",
+        "What trades does Houck handle?"
+      ]
+    },
+    {
+      "role": "city_matrix",
+      "section": "area",
+      "cities": [
+        "Litchfield Park",
+        "Goodyear",
+        "Avondale",
+        "Buckeye",
+        "Surprise",
+        "Glendale"
+      ]
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "section": "faq",
+      "format": "natural_conversational_qa",
+      "items_count": 5
+    }
+  ],
+  "map_location_slot": {
+    "section": "area",
+    "height_px": 375,
+    "ui_elements": [
+      "full_width_iframe",
+      "concentric_pulse_pin",
+      "radius_chip"
+    ]
+  },
+  "content_density": {
+    "services_max": 6,
+    "process_steps_max": 3,
+    "faq_items_range": "5-6",
+    "gallery_items_range": "6-12",
+    "stats_rail_count": 4
+  },
+  "mobile_rules": {
+    "breakpoint_mobile_px": 390,
+    "breakpoint_tablet_px": 768,
+    "breakpoint_desktop_px": 1440,
+    "logo_size_preserved": true,
+    "disable_custom_cursor_on_touch": true,
+    "hide_hero_secondary_polaroid_under_768px": true
+  },
+  "non_negotiables": [
+    "Retain semantic OKLCH CSS variables (--ink, --bone, --brass, --graphite)",
+    "Maintain 72px square brand logo container",
+    "Preserve Fraunces display serif and JetBrains Mono pairing",
+    "Do not remove light/dark theme switch capability",
+    "Keep full-width map height fixed at exactly 375px",
+    "Zero customer-visible use of the word 'crew' (owner-direct positioning only)",
+    "Preserve 3D perspective hover physics on hero image plate"
+  ],
+  "safe_replacements": [
+    "business_name",
+    "logo_image_url",
+    "phone_number",
+    "email_address",
+    "primary_service_area_city",
+    "surrounding_municipalities_list",
+    "hero_backdrop_image",
+    "hero_showcase_image",
+    "service_titles_and_descriptions",
+    "process_step_titles_and_descriptions",
+    "portfolio_photographs_and_captions",
+    "faq_questions_and_answers",
+    "years_in_business_stat",
+    "third_party_accreditation_links"
+  ],
+  "lovable_classification": "bespoke_single_page_field_ledger",
+  "classification_basis": "1 distinct documented routes; WSS scope label only",
+  "project_id": "a8e18dea-e961-43f6-ace1-765c3093dd62",
+  "project_url": "https://lovable.dev/projects/a8e18dea-e961-43f6-ace1-765c3093dd62",
+  "source_plan_file": "40-houck-build-wp-main-lovable-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

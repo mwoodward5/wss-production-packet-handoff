@@ -1,0 +1,397 @@
+{
+  "version": 2,
+  "key": "40-houck-property-services",
+  "name": "Houck Property Services",
+  "category": "handyman",
+  "vertical": "handyman",
+  "requested_vertical": "general contractor",
+  "routing_conflict": true,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "a8e18dea-e961-43f6-ace1-765c3093dd62",
+  "lovable_source_commit": "84fb4bae12e1559ac51fd4a52233db5e9f5df87a",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "a8e18dea-e961-43f6-ace1-765c3093dd62",
+    "ref": "84fb4bae12e1559ac51fd4a52233db5e9f5df87a",
+    "repository": "https://github.com/mwoodward5/razzle-dazzle-forge",
+    "git_tree": "510c36752a3996237b78592dceb43aa3f95fe1c1"
+  },
+  "classification": "CINEMATIC",
+  "routes": [
+    "/"
+  ],
+  "design_tokens": {
+    "colors": {
+      "ink": "oklch(0.965 0.018 88)",
+      "bone": "oklch(0.18 0.018 70)",
+      "graphite": "oklch(0.93 0.022 85)",
+      "brass": "oklch(0.62 0.14 60)",
+      "brass_deep": "oklch(0.48 0.13 50)",
+      "terracotta": "oklch(0.5 0.16 38)",
+      "border": "oklch(0.18 0.018 70 / 0.14)"
+    },
+    "typography": {
+      "display": "Fraunces, ui-serif, Georgia, serif",
+      "sans": "Inter, ui-sans-serif, system-ui, sans-serif",
+      "mono": "JetBrains Mono Variable, ui-monospace, monospace"
+    },
+    "effects": {
+      "grain": "SVG feTurbulence fractal noise overlay",
+      "blueprint_grid": "56px x 56px hairline gradient",
+      "shimmer": "shimmer-sweep 6s ease-in-out infinite",
+      "cursor": "Interactive dual-element ring and dot"
+    }
+  },
+  "hero_contract": {
+    "type": "split_editorial_with_tactile_plate",
+    "headline": "Property work, {handled} by Houck Property Services.",
+    "subheadline_word_count": 34,
+    "primary_cta": "Request Service",
+    "secondary_cta": "Direct line phone link",
+    "image_plate_aspect": "4/5",
+    "floating_elements": [
+      "brass_tape_strip",
+      "offset_secondary_polaroid",
+      "rotating_certified_seal"
+    ],
+    "stats_count": 4,
+    "ruler_active": true
+  },
+  "media_slots": [
+    {
+      "id": "MEDIA-HERO-BG",
+      "role": "atmospheric_background",
+      "aspect": "16:9",
+      "container": "hero_underlay"
+    },
+    {
+      "id": "MEDIA-HERO-PLATE-1",
+      "role": "primary_craft_photo",
+      "aspect": "4:5",
+      "container": "3d_perspective_card"
+    },
+    {
+      "id": "MEDIA-HERO-PLATE-2",
+      "role": "detail_close_up",
+      "aspect": "3:4",
+      "container": "floating_polaroid"
+    },
+    {
+      "id": "MEDIA-LOGO-NAV",
+      "role": "brand_mark",
+      "aspect": "1:1",
+      "container": "72px_square_card"
+    },
+    {
+      "id": "MEDIA-SERVICES",
+      "count": 6,
+      "role": "card_hover_reveal",
+      "aspect": "16:10",
+      "container": "service_tile"
+    },
+    {
+      "id": "MEDIA-WORK-MOSAIC",
+      "count": 12,
+      "role": "gallery_showcase",
+      "aspect": "asymmetric",
+      "container": "mosaic_grid"
+    }
+  ],
+  "content_slots": [
+    {
+      "id": "business_name",
+      "selector": "h1, nav, footer",
+      "donor_value": "Houck Property Services"
+    },
+    {
+      "id": "phone",
+      "selector": "nav a[href^='tel:'], #contact a[href^='tel:']",
+      "donor_value": "(623) 687-6528"
+    },
+    {
+      "id": "email",
+      "selector": "#contact a[href^='mailto:']",
+      "donor_value": "houckpropertyservices@gmail.com"
+    },
+    {
+      "id": "service_city",
+      "selector": "header, #area, footer",
+      "donor_value": "Litchfield Park, AZ"
+    },
+    {
+      "id": "service_radius",
+      "selector": "#area, #contact",
+      "donor_value": "50-mile radius"
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "nav_beacon",
+      "type": "status_indicator",
+      "label": "Active line"
+    },
+    {
+      "slot": "hero_seal",
+      "type": "certified_emblem",
+      "label": "Certified Service Est. 2018"
+    },
+    {
+      "slot": "stats_rail",
+      "type": "counter_row",
+      "metrics": [
+        "Yrs in trade",
+        "Three-step process",
+        "Cities served",
+        "BBB rating"
+      ]
+    },
+    {
+      "slot": "accreditation_pill",
+      "type": "verification_link",
+      "label": "BBB Accredited Business"
+    },
+    {
+      "slot": "google_reviews",
+      "type": "review_link",
+      "label": "Leave a Google review"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "scope": "head_script",
+      "required_fields": [
+        "name",
+        "telephone",
+        "email",
+        "address",
+        "areaServed",
+        "openingHoursSpecification"
+      ]
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "role": "direct_answer_paragraph",
+      "section": "hero",
+      "target_queries": [
+        "Who provides property maintenance in Litchfield Park?",
+        "What trades does Houck handle?"
+      ]
+    },
+    {
+      "role": "city_matrix",
+      "section": "area",
+      "cities": [
+        "Litchfield Park",
+        "Goodyear",
+        "Avondale",
+        "Buckeye",
+        "Surprise",
+        "Glendale"
+      ]
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "section": "faq",
+      "format": "natural_conversational_qa",
+      "items_count": 5
+    }
+  ],
+  "map_location_slot": {
+    "section": "area",
+    "height_px": 375,
+    "ui_elements": [
+      "full_width_iframe",
+      "concentric_pulse_pin",
+      "radius_chip"
+    ]
+  },
+  "content_density": {
+    "services_max": 6,
+    "process_steps_max": 3,
+    "faq_items_range": "5-6",
+    "gallery_items_range": "6-12",
+    "stats_rail_count": 4
+  },
+  "mobile_rules": {
+    "breakpoint_mobile_px": 390,
+    "breakpoint_tablet_px": 768,
+    "breakpoint_desktop_px": 1440,
+    "logo_size_preserved": true,
+    "disable_custom_cursor_on_touch": true,
+    "hide_hero_secondary_polaroid_under_768px": true
+  },
+  "non_negotiables": [
+    "Retain semantic OKLCH CSS variables (--ink, --bone, --brass, --graphite)",
+    "Maintain 72px square brand logo container",
+    "Preserve Fraunces display serif and JetBrains Mono pairing",
+    "Do not remove light/dark theme switch capability",
+    "Keep full-width map height fixed at exactly 375px",
+    "Zero customer-visible use of the word 'crew' (owner-direct positioning only)",
+    "Preserve 3D perspective hover physics on hero image plate"
+  ],
+  "safe_replacements": [
+    "business_name",
+    "logo_image_url",
+    "phone_number",
+    "email_address",
+    "primary_service_area_city",
+    "surrounding_municipalities_list",
+    "hero_backdrop_image",
+    "hero_showcase_image",
+    "service_titles_and_descriptions",
+    "process_step_titles_and_descriptions",
+    "portfolio_photographs_and_captions",
+    "faq_questions_and_answers",
+    "years_in_business_stat",
+    "third_party_accreditation_links"
+  ],
+  "leak_terms": [
+    "Houck Property Services"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "ui-serif",
+      "Georgia",
+      "serif",
+      "Inter",
+      "ui-sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.965 0.018 88)",
+    "oklch(0.18 0.018 70)",
+    "oklch(0.93 0.022 85)",
+    "oklch(0.62 0.14 60)",
+    "oklch(0.48 0.13 50)",
+    "oklch(0.5 0.16 38)",
+    "oklch(0.18 0.018 70 / 0.14)",
+    "56px x 56px hairline gradient"
+  ],
+  "fonts": [
+    "Fraunces",
+    "ui-serif",
+    "Georgia",
+    "serif",
+    "Inter",
+    "ui-sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "c4071a6883d8143e9a10f90dc29e172767ca6ed065eff5d655fe8bfa8392e1d9",
+    "files": {
+      "assets/fraunces-latin-400-normal-6IfK1voy.woff2": "e558f39453a9c611908be04294b50dea5f21ae6c49b41c6e47f4115e91f90209",
+      "assets/fraunces-latin-400-normal-NUPT2cO8.woff": "695442434f77c44190b48a022f943e052bb60d49ed3c7940ea60a16ac3faf8b3",
+      "assets/fraunces-latin-500-normal-BTR4KCeb.woff": "3f090b71356567fa4f75f0beeff74d38196a8b0f99bf089cce4954910442bfbf",
+      "assets/fraunces-latin-500-normal-DnGCNyPD.woff2": "7975c1ef7caf89d0606dd985d35abe31a619c19262cf13f5a05938cc68fb27b2",
+      "assets/fraunces-latin-600-normal-BFCDtZfi.woff2": "3a1de7711d147bad4422825045f87597fd77cca72e7c96d3b0a81735d00dda82",
+      "assets/fraunces-latin-600-normal-DL5QCzvS.woff": "d78e988f844f474ce9b1cc10c72501add6c5056763bfe83ff2a8e2fcb6708ad0",
+      "assets/fraunces-latin-700-normal-CEOla-zY.woff2": "c38570d224b830056e69484bb9e768e1d3fa7ba4755c8891a3c6d366194d2ff3",
+      "assets/fraunces-latin-700-normal-DTjk5d1Q.woff": "1f9b0930f7a5e2b6aaba0df15f21bcdebebfcaff4b704daf3619589da69fd2a4",
+      "assets/fraunces-latin-ext-400-normal-D8gbi3Gu.woff2": "06e8dc8c2543a472414c40b585f0e87abf09e1e6ec7e17daec215e234822a76c",
+      "assets/fraunces-latin-ext-400-normal-UihxqfOe.woff": "6ea9935870863c9f04a8731afadcd1960ea3143a9ab5221f780ce7755822891a",
+      "assets/fraunces-latin-ext-500-normal-BMcFk1Xs.woff": "95db3f274e7f338f57bee9307fe021cd650973844ea17eb6c82f19598217a239",
+      "assets/fraunces-latin-ext-500-normal-Z5DV8IzT.woff2": "f9c30d1f05fcd9ae07306235bd415a57f63d615c25a3f810670e24a9dc5a48bd",
+      "assets/fraunces-latin-ext-600-normal-B0Dy4lqi.woff": "7fce30e29ffbe3d6703a4bc2ab7dd832f50f979fc8a7efdc738d5e8023f0489a",
+      "assets/fraunces-latin-ext-600-normal-BtzmzP0X.woff2": "69e09c7910e64d829e051f023af4c38a2e74b61d9e9439502f56edd7154b117c",
+      "assets/fraunces-latin-ext-700-normal-CanUGppC.woff2": "162b7b2654ef849ce146e1297bdd5694b971f730cd5f1749a954f24109ca11c4",
+      "assets/fraunces-latin-ext-700-normal-DuBstVeD.woff": "c65dc36a4d3b776bc43b13833bb9d9a388aba00ffe41f4c87b8130750f3acbdd",
+      "assets/fraunces-vietnamese-400-normal-B65MOf9T.woff": "be746fdc0922b2b6edac2262916163e487b72da918827d43ba5ebe72b77f56aa",
+      "assets/fraunces-vietnamese-400-normal-CvGt0Ybw.woff2": "333c800d6e9eb9d08285b99f56029eb2e779176331ada8fe4b5ded32d73785cc",
+      "assets/fraunces-vietnamese-500-normal-B-KbxExq.woff": "5ee4a9481f45f350fdca8ab14cb7408da827c5cdad7d70a6df4b005406044f5a",
+      "assets/fraunces-vietnamese-500-normal-GOH_-EGq.woff2": "dd4ba63e4b6c7ae6912351c6d1c81728fa588fc3a562e0abba4426d3f6d31e73",
+      "assets/fraunces-vietnamese-600-normal-BjlAJixd.woff2": "aa26bf964850ffd04079bdb40292c391c9c0498405fa9abaf865c46d66918112",
+      "assets/fraunces-vietnamese-600-normal-DlAl5EAR.woff": "73fb7bb330dd90e4f3ace99686ce820db5ddff1020c81dda09c97eb2351865df",
+      "assets/fraunces-vietnamese-700-normal-DH94m5DZ.woff2": "973cd0edbf7f8735f98a5b0426e4a7d08f87b3ba225c447fb8b723062f32012b",
+      "assets/fraunces-vietnamese-700-normal-DxawQjq2.woff": "9a8d6c3bab24e64a8a53bfeaaad8036d8995d4a0731c175c7c55ee3d12090002",
+      "assets/index-BUwxP42j.css": "3d62a35e5b249ea9a8e41d1f26fb4df8bd778a0732da532900b06d1cc4aaa4ac",
+      "assets/index-DzpuOank.js": "92024d229c692dfdd6169d337455958ac61692d1e452b75c723016dae7e7ca21",
+      "assets/inter-cyrillic-400-normal-HOLc17fK.woff": "6e441a6c94788318fa02b6d0a633aa29eebe27b69c6567eb1e59b4edc68ed70e",
+      "assets/inter-cyrillic-400-normal-obahsSVq.woff2": "f0bb586459ce8f09b238285040f17e3e9e9538b2c5a7aae0775194e33c36c3c3",
+      "assets/inter-cyrillic-500-normal-BasfLYem.woff2": "b77a86ec16aadc157f4a99e8898d71cd75ea264753d9bdf13f962f8c3988cbb0",
+      "assets/inter-cyrillic-500-normal-CxZf_p3X.woff": "5be18e0345781cb882a267798518553c0e915174fc70731ab5f085ca64ba1ebc",
+      "assets/inter-cyrillic-600-normal-4D_pXhcN.woff": "cc190ed1b64eb650a4ad7e97c7a668cb8b34acd9c4c7f7bf4372c0cbacd35795",
+      "assets/inter-cyrillic-600-normal-CWCymEST.woff2": "6c2a37f82a676bcd441b735e4e2cda4edb8873a059ab9c362a84f0711f257041",
+      "assets/inter-cyrillic-ext-400-normal-BQZuk6qB.woff2": "ef572f9187a8be018d9d9c2c6b77c1f6cb2af4199f02fc16c292ea10ab25a2cc",
+      "assets/inter-cyrillic-ext-400-normal-DQukG94-.woff": "5cb2f1cc0936f89a42ceae34f5a5720248dc5b8114c12b1c33a7d2ef01a9b6b9",
+      "assets/inter-cyrillic-ext-500-normal-B0yAr1jD.woff2": "1c2db92d3cd9b237ca7c9c07af556d542f28ded1db54cd4382cf776501c5291f",
+      "assets/inter-cyrillic-ext-500-normal-BmqWE9Dz.woff": "e250c05aebcf49971e0b25f476992dd463c28c0292ebb204d9db542fb5066ca7",
+      "assets/inter-cyrillic-ext-600-normal-Bcila6Z-.woff": "a5073285409443f4653c858de58c5dc0bfc2fd33e60d8747388345e7c5ab1ab3",
+      "assets/inter-cyrillic-ext-600-normal-Dfes3d0z.woff2": "509fca9c59564f9a846fa69bc647f9b050fc11abf1c9f6f3da71fb2d5ed425bd",
+      "assets/inter-greek-400-normal-B4URO6DV.woff2": "c15ddd00a9927b56f5c655a41f976f79bd848a20cce91fc14227751872a1cc27",
+      "assets/inter-greek-400-normal-q2sYcFCs.woff": "bdae9d28729e8c68587d5d54e216d771a40d7a6800e824586a6e2f570c2f10df",
+      "assets/inter-greek-500-normal-BIZE56-Y.woff2": "cc197d79d33a3615a047baae85f4d1957f6f98b8898313658e160b1d519b1b6f",
+      "assets/inter-greek-500-normal-Xzm54t5V.woff": "86d55a4b1b9cbced7e61e76d5d44cf49d0bd1c814d3df2de67b7136ab4fdcece",
+      "assets/inter-greek-600-normal-BZpKdvQh.woff": "090b24e22fc4ddf41450d13bdec81c8a74808b9fc7edaf8df06c909b177a8992",
+      "assets/inter-greek-600-normal-plRanbMR.woff2": "9c5a897f9d9fcfe60d90631d766ae62b4bf1edd76633fa7a4b2f8c87e036789b",
+      "assets/inter-greek-ext-400-normal-DGGRlc-M.woff2": "eadedd9e13c2582430a9fb1519eb86152fdabb483a6f66d90f8d8a52e977a1b7",
+      "assets/inter-greek-ext-400-normal-KugGGMne.woff": "4f2b6f92ddfece8812e79774d446218aa6e0773ff8c2d31130fe2bdc23bd22d0",
+      "assets/inter-greek-ext-500-normal-2j5mBUwD.woff": "c85d11bde719108cc9a4f6f5b008087f6c36493b47395580d4f5336182b0f0c7",
+      "assets/inter-greek-ext-500-normal-C4iEst2y.woff2": "75a9ec9383a3b7a7bf7cfb94f64edf38d9cfdc5f7ffa0cbed2733627a6e4426d",
+      "assets/inter-greek-ext-600-normal-B8X0CLgF.woff": "efc7aa9cce5c505dd8cc4c4daf00247fa805f37bcda96079239ba3358ab27dfb",
+      "assets/inter-greek-ext-600-normal-DRtmH8MT.woff2": "399f94d75aa73403e40e2353e8c0cc75c38f7362a6ca263b3b02d9723157ffe5",
+      "assets/inter-latin-400-normal-C38fXH4l.woff2": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc",
+      "assets/inter-latin-400-normal-CyCys3Eg.woff": "e20fa0b4fd2dd26e4d14b3ac3cc922509c3a63fa5e910e90c614544aa042dd45",
+      "assets/inter-latin-500-normal-BL9OpVg8.woff": "9b42c108da48b5ed55a3072e815ffee2d271562e6c0dd6998910e8f9c09e0a3d",
+      "assets/inter-latin-500-normal-Cerq10X2.woff2": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f",
+      "assets/inter-latin-600-normal-CiBQ2DWP.woff": "6a9cb3a509b4eeaf12b7dda6c4aacac3e85d07f4201bf4dd716e332e692b87bd",
+      "assets/inter-latin-600-normal-LgqL8muc.woff2": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a",
+      "assets/inter-latin-ext-400-normal-77YHD8bZ.woff": "22ae8360fbad24d2af7c6c9898a346c881774dc87f7cf94bd262c48ad58d7116",
+      "assets/inter-latin-ext-400-normal-C1nco2VV.woff2": "6744a7f509ebc6ab220a6cd4ea77e898adf014f03d88dcda5d45d8a9feefb4e9",
+      "assets/inter-latin-ext-500-normal-BxGbmqWO.woff": "30d2903ce97f8a89ea0e9c083b42cb8bf97e7bbb5607e7f00352815f19cb0d5b",
+      "assets/inter-latin-ext-500-normal-CV4jyFjo.woff2": "2c6fbc42d315528beb06c1096df45487bf4186c4b78b8111d12c9c951f8acca2",
+      "assets/inter-latin-ext-600-normal-CIVaiw4L.woff": "22ff20a6170674fb9637c2a072227be86303bb6ec52b829b9d7077405f7196a6",
+      "assets/inter-latin-ext-600-normal-D2bJ5OIk.woff2": "e4bdf67b0cd15ca9e184509275be95db942195d3cc2b17f6a0452f2adf75d0bf",
+      "assets/inter-vietnamese-400-normal-Bbgyi5SW.woff": "54aa42d325bcdfd623ecb9eac4a5e3c6420c63d7b86e9d8545fb479f653beb57",
+      "assets/inter-vietnamese-400-normal-DMkecbls.woff2": "547ad9fdaeb0ae43487f4b8a02e47c36553c0c0cb73c8aa98f93b7b615f6b55d",
+      "assets/inter-vietnamese-500-normal-DOriooB6.woff2": "44e36aa5a8f12130029a29bb0e6695d0262b67446ce321e878b1fb56162b5de6",
+      "assets/inter-vietnamese-500-normal-mJboJaSs.woff": "18a4a09f751671cd8929d7c66e8fe7d820b511c36e51cf6047ffceab88eec4a4",
+      "assets/inter-vietnamese-600-normal-BuLX-rYi.woff": "24a01e7bd947aeef91ae8f7b8edeb23fadaf5ceda34a610ce62d2bbdaea57e83",
+      "assets/inter-vietnamese-600-normal-Cc8MFFhd.woff2": "1aeb94ae9db052a4a2fe6f3046f928cff1fdbd7abdf870a9a01c13cae6faeba5",
+      "assets/jetbrains-mono-cyrillic-wght-normal-D73BlboJ.woff2": "d274604c40757f98f07df623a8b8fb5194508a6fa4f5413a7a107f09e3b7452a",
+      "assets/jetbrains-mono-greek-wght-normal-Bw9x6K1M.woff2": "ee863198077f3093ffa81c072581cc4bd608a04e60a8a9c0b846396ce4f14109",
+      "assets/jetbrains-mono-latin-ext-wght-normal-DBQx-q_a.woff2": "79bfdab9ba467e26eea4122e6f2567e188dd8a09a8c730d501fc487c4ab99c6e",
+      "assets/jetbrains-mono-latin-wght-normal-B9CIFXIH.woff2": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e",
+      "assets/jetbrains-mono-vietnamese-wght-normal-Bt-aOZkq.woff2": "2288795da89dd97e648954b96e22b4501bd85dfc453264460b252f888b582ca2",
+      "index.html": "74ed60c4f1a7254542f3dbee2e69c6a43db1642c512d82f4958b0ba0720a9e10"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

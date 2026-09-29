@@ -1,0 +1,111 @@
+{
+ "id": "razzle-dazzle-forge",
+ "source": "a8e18dea-e961-43f6-ace1-765c3093dd62",
+ "palette": {
+  "vars": {
+   "--ink": "oklch(0.965 0.018 88)",
+   "--bone": "oklch(0.18 0.018 70)",
+   "--graphite": "oklch(0.93 0.022 85)",
+   "--brass": "oklch(0.62 0.14 60)",
+   "--brass-deep": "oklch(0.48 0.13 50)",
+   "--terracotta": "oklch(0.5 0.16 38)",
+   "--desert": "oklch(0.74 0.07 70)",
+   "--grid-line": "oklch(0.18 0.018 70 / 0.08)",
+   "--paper-shadow": "0 30px 60px -30px oklch(0.18 0.018 70 / 0.35)",
+   "--background": "var(--ink)",
+   "--foreground": "var(--bone)",
+   "--card": "var(--graphite)",
+   "--card-foreground": "var(--bone)",
+   "--popover": "var(--graphite)",
+   "--popover-foreground": "var(--bone)",
+   "--primary": "var(--brass)",
+   "--primary-foreground": "oklch(0.99 0.01 88)",
+   "--secondary": "var(--graphite)",
+   "--secondary-foreground": "var(--bone)",
+   "--muted": "var(--graphite)",
+   "--muted-foreground": "oklch(0.42 0.016 70)",
+   "--accent": "var(--terracotta)",
+   "--accent-foreground": "oklch(0.99 0.01 88)",
+   "--destructive": "oklch(0.577 0.245 27.325)",
+   "--destructive-foreground": "oklch(0.984 0.003 247.858)",
+   "--border": "oklch(0.18 0.018 70 / 0.14)",
+   "--input": "oklch(0.18 0.018 70 / 0.18)",
+   "--ring": "var(--brass)",
+   "--chart-1": "oklch(0.646 0.222 41.116)",
+   "--chart-2": "oklch(0.6 0.118 184.704)",
+   "--chart-3": "oklch(0.398 0.07 227.392)",
+   "--chart-4": "oklch(0.828 0.189 84.429)",
+   "--chart-5": "oklch(0.769 0.188 70.08)",
+   "--sidebar": "var(--graphite)",
+   "--sidebar-foreground": "var(--bone)",
+   "--sidebar-primary": "var(--brass)",
+   "--sidebar-primary-foreground": "oklch(0.99 0.01 88)",
+   "--sidebar-accent": "var(--graphite)",
+   "--sidebar-accent-foreground": "var(--bone)",
+   "--sidebar-border": "var(--border)",
+   "--sidebar-ring": "var(--brass)"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--ink": "oklch(0.118 0.012 75)",
+   "--bone": "oklch(0.95 0.022 85)",
+   "--graphite": "oklch(0.19 0.012 75)",
+   "--brass": "oklch(0.82 0.13 78)",
+   "--brass-deep": "oklch(0.66 0.14 60)",
+   "--terracotta": "oklch(0.62 0.16 38)",
+   "--grid-line": "oklch(0.95 0.022 85 / 0.06)",
+   "--paper-shadow": "0 30px 60px -30px oklch(0 0 0 / 0.8)",
+   "--muted-foreground": "oklch(0.72 0.03 80)",
+   "--primary-foreground": "oklch(0.118 0.012 75)",
+   "--accent-foreground": "oklch(0.95 0.022 85)",
+   "--border": "oklch(0.95 0.022 85 / 0.12)",
+   "--input": "oklch(0.95 0.022 85 / 0.16)"
+  }
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.625rem",
+ "shadows": [
+  "0 0 0 14px oklch(0.62 0.14 60 / 0), 0 18px 40px -18px oklch(0.62 0.14 60 / 0.4)",
+  "0 2px 6px -2px oklch(0.18 0.018 70 / 0.4)"
+ ],
+ "keyframes": [
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "drift",
+   "css": "@keyframes drift { 0%, 100% { transform: scale(1.05) translate3d(0,0,0); } 50% { transform: scale(1.1) translate3d(-1%, -1.5%, 0); } }"
+  },
+  {
+   "name": "reveal-up",
+   "css": "@keyframes reveal-up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "mask-in",
+   "css": "@keyframes mask-in { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }"
+  },
+  {
+   "name": "word-in",
+   "css": "@keyframes word-in { 0% { clip-path: inset(0 100% 0 0); transform: translateY(8%); } 100% { clip-path: inset(0 0 0 0); transform: translateY(0); } }"
+  },
+  {
+   "name": "shimmer-sweep",
+   "css": "@keyframes shimmer-sweep { 0% { background-position: -200% 0; } 60% { background-position: 200% 0; } 100% { background-position: 200% 0; } }"
+  }
+ ],
+ "signatures": [
+  "gradient-text",
+  "parallax",
+  "marquee",
+  "noise",
+  "glow",
+  "shimmer",
+  "float",
+  "gradient-heavy"
+ ]
+}

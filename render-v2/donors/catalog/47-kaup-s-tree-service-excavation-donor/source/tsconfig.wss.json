@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["src/main.tsx","src/routes/index.tsx","src/wss/**/*.ts","vite.config.ts"]}

@@ -1,0 +1,252 @@
+{
+  "project_name": "Favorite Tree Service, LLC",
+  "vertical": "Tree Care & Land Clearing",
+  "classification": "Premier",
+  "routes": [
+    "/",
+    "/about",
+    "/contact",
+    "/emergency-tree-service",
+    "/tree-removal-stump-grinding",
+    "/services",
+    "/services/tree-pruning",
+    "/services/bucket-truck-service",
+    "/services/lot-clearing",
+    "/services/storm-damage-cleanup",
+    "/services/brush-hogging",
+    "/services/mulching",
+    "/services/landscape-maintenance",
+    "/services/snow-removal",
+    "/service-area",
+    "/tree-service-charlottesville-va",
+    "/tree-service-gordonsville-va",
+    "/tree-service-louisa-va",
+    "/tree-service-madison-va",
+    "/tree-service-orange-va",
+    "/tree-service-ruckersville-va",
+    "/tree-service-stanardsville-va",
+    "/tree-service-zion-crossroads-va"
+  ],
+  "design_tokens": {
+    "font_display": "Fraunces, serif",
+    "font_body": "Manrope, sans-serif",
+    "color_loam": "oklch(0.16 0.02 155)",
+    "color_canopy": "oklch(0.27 0.05 155)",
+    "color_ivory": "oklch(0.957 0.008 95)",
+    "color_amber": "oklch(0.71 0.135 70)",
+    "color_border": "oklch(0.86 0.008 95)",
+    "radius_card": "1.25rem",
+    "radius_button": "0.375rem"
+  },
+  "hero_contract": {
+    "component_file": "src/components/site/Hero.tsx",
+    "headline_structure": "Fraunces display with italic accent word highlight",
+    "video_slot": "public/media/fts-hero-loop.mp4.asset.json",
+    "poster_slot": "src/assets/fts-hero-cinematic.webp",
+    "widget_component": "src/components/site/QuoteConfigurator.tsx",
+    "countup_metrics": [
+      {
+        "label": "Years in business",
+        "value": 17,
+        "suffix": "+"
+      },
+      {
+        "label": "Removals completed",
+        "value": 2400,
+        "suffix": "+"
+      },
+      {
+        "label": "Emergency response",
+        "value": 24,
+        "suffix": "/7"
+      }
+    ]
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_video",
+      "path": "public/media/fts-hero-loop.mp4",
+      "role": "hero",
+      "aspect_ratio": "16:9",
+      "object_fit": "cover"
+    },
+    {
+      "slot_id": "hero_poster",
+      "path": "src/assets/fts-hero-cinematic.webp",
+      "role": "hero_fallback",
+      "aspect_ratio": "16:9",
+      "object_fit": "cover"
+    },
+    {
+      "slot_id": "brand_mark",
+      "path": "src/assets/fts-mark.webp",
+      "role": "logo",
+      "aspect_ratio": "1:1",
+      "object_fit": "contain"
+    },
+    {
+      "slot_id": "gallery_grid",
+      "component": "src/components/ProjectGallery.tsx",
+      "role": "work_samples",
+      "aspect_ratio": "4:3",
+      "object_fit": "cover"
+    },
+    {
+      "slot_id": "field_reels",
+      "component": "src/components/FieldVideoGallery.tsx",
+      "role": "field_video",
+      "aspect_ratio": "9:16",
+      "object_fit": "contain"
+    }
+  ],
+  "content_slots": [
+    {
+      "target": "src/lib/business.ts",
+      "key": "BUSINESS.name",
+      "type": "string"
+    },
+    {
+      "target": "src/lib/business.ts",
+      "key": "BUSINESS.phoneDisplay",
+      "type": "string"
+    },
+    {
+      "target": "src/lib/business.ts",
+      "key": "BUSINESS.phoneRaw",
+      "type": "string"
+    },
+    {
+      "target": "src/lib/business.ts",
+      "key": "BUSINESS.email",
+      "type": "string"
+    },
+    {
+      "target": "src/lib/business.ts",
+      "key": "BUSINESS.street",
+      "type": "string"
+    },
+    {
+      "target": "src/lib/business.ts",
+      "key": "BUSINESS.city",
+      "type": "string"
+    },
+    {
+      "target": "src/lib/business.ts",
+      "key": "BUSINESS.postal",
+      "type": "string"
+    },
+    {
+      "target": "src/lib/business.ts",
+      "key": "BUSINESS.founder",
+      "type": "string"
+    },
+    {
+      "target": "src/lib/business.ts",
+      "key": "BUSINESS.foundingDate",
+      "type": "string"
+    }
+  ],
+  "trust_slots": [
+    {
+      "location": "hero_eyebrow",
+      "type": "dispatch_badge"
+    },
+    {
+      "location": "hero_stats",
+      "type": "numerical_counters"
+    },
+    {
+      "location": "subhero_strip",
+      "type": "credential_badges"
+    },
+    {
+      "location": "about_page",
+      "type": "bbb_accreditation"
+    },
+    {
+      "location": "footer",
+      "type": "direct_review_link"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "file": "src/lib/business.ts"
+    },
+    {
+      "type": "FAQPage",
+      "file": "src/components/FAQ.tsx"
+    },
+    {
+      "type": "BreadcrumbList",
+      "file": "src/components/JsonLd.tsx"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "type": "city_authority_pages",
+      "count": 8,
+      "path_pattern": "/tree-service-[city]-va"
+    },
+    {
+      "type": "regional_hub",
+      "path": "/service-area"
+    },
+    {
+      "type": "direct_answer_blocks",
+      "component": "src/components/LongFormDepth.tsx"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "location": "homepage_faq",
+      "pattern": "natural_question_answer_pairs"
+    },
+    {
+      "location": "cost_factors_block",
+      "pattern": "direct_pricing_ranges"
+    }
+  ],
+  "map_location_slot": {
+    "place_id": "ChIJ-7KjGMFytIkRzdDEjb4vTMo",
+    "lat": 38.171,
+    "lng": -78.286,
+    "embed_route": "/contact"
+  },
+  "content_density": {
+    "hero": "clean_editorial",
+    "services": "scannable_grid",
+    "longform_depth": "dense_authoritative_seo",
+    "faq": "structured_concise"
+  },
+  "mobile_rules": {
+    "hero_cta_anchor": "sticky_call_bar_390px",
+    "video_gallery_fit": "object_contain_9_16",
+    "grid_collapse": "single_column_below_768px"
+  },
+  "non_negotiables": [
+    "Fraunces serif display combined with Manrope sans",
+    "Forest Loam + Canopy Green + Signal Amber color token hierarchy",
+    "Uniform 4:3 matte gallery card framing with copper hairline accents",
+    "Preservation of interactive QuoteConfigurator in hero column",
+    "5-layer hero visual compositing (video, veil, grain, schematic, content)"
+  ],
+  "safe_replacements": [
+    "Business name, address, phone, email, hours",
+    "Founder name and bio",
+    "Google review rating, count, and testimonial text",
+    "Hero looping background video and poster image",
+    "Gallery field photos and project reels",
+    "Targeted municipalities, zip codes, and landmark lists"
+  ],
+  "lovable_classification": "Arboriculture / Heavy Site Services",
+  "classification_basis": "23 distinct documented routes; WSS scope label only",
+  "project_id": "01a519b2-cfd8-400e-8311-f32434aca551",
+  "project_url": "https://lovable.dev/projects/01a519b2-cfd8-400e-8311-f32434aca551",
+  "source_plan_file": "13-favorite-tree-service-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

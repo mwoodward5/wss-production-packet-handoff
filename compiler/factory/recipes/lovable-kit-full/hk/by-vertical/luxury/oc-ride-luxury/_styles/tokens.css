@@ -1,0 +1,37 @@
+/* OC Ride Luxury theme tokens — extracted from src/index.css */
+/* HSL format. Use with Tailwind v3 config: colors: { primary: 'hsl(var(--primary))', ... } */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 8%;
+  --primary: 43 55% 48%;         /* signature gold */
+  --primary-foreground: 0 0% 0%;
+  --muted-foreground: 240 4% 65%;
+  --border: 0 0% 15%;
+  --ring: 43 55% 48%;
+  --radius: 0px;                 /* SHARP corners — key to the luxe feel */
+  --gold: 43 55% 48%;
+}
+
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; letter-spacing: -0.02em; }
+
+.hero-gradient-bg {
+  background:
+    radial-gradient(ellipse at 20% 50%, hsl(var(--primary) / 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, hsl(var(--primary) / 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, hsl(var(--primary) / 0.1) 0%, transparent 40%),
+    linear-gradient(180deg, hsl(var(--background)) 0%, hsl(0 0% 3%) 50%, hsl(var(--background)) 100%);
+  animation: hero-pulse 8s ease-in-out infinite alternate;
+}
+@keyframes hero-pulse { 0% { opacity: 0.6 } 100% { opacity: 1 } }
+
+.gold-shimmer-sweep {
+  background: linear-gradient(120deg, transparent 0%, hsl(var(--primary)/0.3) 40%, hsl(var(--primary)/0.6) 50%, hsl(var(--primary)/0.3) 60%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer-sweep 1.5s ease-in-out infinite;
+}
+@keyframes shimmer-sweep { 0% { background-position: 200% 0 } 100% { background-position: -200% 0 } }

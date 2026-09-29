@@ -1,0 +1,13 @@
+# {{BUSINESS_NAME}}
+
+> Roofing contractor in {{CITY}}, {{STATE}}. Residential shingle roofing and commercial flat-roof systems.[[NEED:PHONE]] Direct line: {{PHONE}}.[[/NEED]]
+
+## Pages
+
+- [Home](/): Overview of {{BUSINESS_NAME}} — services, service area, and how to request a quote.
+- [Roof Replacement](/roof-replacement): Full residential roof replacement — shingle systems, decking, underlayment, ventilation, flashing.
+- [Roof Repair](/roof-repair): Targeted roof repairs — leaks, storm damage, flashing, missing shingles, pipe boots.
+- [Gutters, Siding & Trim](/gutters-siding-trim): Seamless gutters, siding, fascia, soffit and exterior trim.
+- [Commercial Roofing](/commercial-roofing): Commercial flat-roof systems — repairs, re-cover and replacement for low-slope buildings.
+- [Service Area](/service-area): {{CITY}}, {{STATE}} and surrounding communities served by {{BUSINESS_NAME}}.
+- [Contact](/contact): Phone, email and map for requesting a quote or scheduling a site visit.

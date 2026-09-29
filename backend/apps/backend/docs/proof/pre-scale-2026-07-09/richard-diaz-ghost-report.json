@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "generated_at": "2026-07-09T20:10:25.304Z",
+  "source": "automated-build",
+  "renderer": "05-build-v7",
+  "qc_passed": true,
+  "project_id": "ghost_4UfgRqMPXTZL",
+  "generation_id": "site_b-MtdzIxpLlA",
+  "version": 3,
+  "grade": "B",
+  "business": {
+    "name": "Richard Diaz Landscape & Masonry",
+    "industry": "landscaping",
+    "city": "Orange",
+    "state": "CA",
+    "current_website": "https://richarddiazlandscaping.com/"
+  },
+  "opportunities": [
+    {
+      "type": "nap_mismatch",
+      "severity": "high",
+      "headline": "The website phone does not match the Google business profile",
+      "detail": "The site header shows (480) 692-9646 while the Google profile and primary contact use (714) 673-2643."
+    }
+  ],
+  "scorecard": {
+    "renderer": "v7",
+    "build_type": "landing",
+    "generated_at": "2026-07-09T20:10:24.565Z",
+    "pages": [
+      {
+        "path": "/",
+        "title": "Richard Diaz Landscape & Masonry — landscaping in Orange, CA"
+      }
+    ],
+    "schema_types": [
+      "LocalBusiness",
+      "Service",
+      "FAQPage",
+      "BreadcrumbList",
+      "WebSite",
+      "WebPage"
+    ],
+    "score": 86,
+    "checks": [
+      {
+        "id": "title-length",
+        "label": "Title ≤ 60 chars with trade + city",
+        "pass": true,
+        "detail": "60 chars"
+      },
+      {
+        "id": "meta-description",
+        "label": "Meta description ≤ 160 chars, owner voice",
+        "pass": true,
+        "detail": "138 chars"
+      },
+      {
+        "id": "single-h1",
+        "label": "Single H1 per page",
+        "pass": true,
+        "detail": "1 found"
+      },
+      {
+        "id": "schema-suite",
+        "label": "LocalBusiness · Service · FAQPage · Breadcrumb · WebSite schema",
+        "pass": true,
+        "detail": "LocalBusiness, Service, FAQPage, BreadcrumbList, WebSite, WebPage"
+      },
+      {
+        "id": "speakable",
+        "label": "Speakable schema for voice/AI search",
+        "pass": true,
+        "detail": "FAQ + intro marked"
+      },
+      {
+        "id": "geo-schema",
+        "label": "GeoCoordinates + map with directions",
+        "pass": false,
+        "detail": "no confirmed address yet — SVG area map shipped, satellite unlocks with GBP import"
+      },
+      {
+        "id": "hours-schema",
+        "label": "openingHoursSpecification from sourced hours",
+        "pass": false,
+        "detail": "hours not sourced — honest placeholder shipped, never invented"
+      },
+      {
+        "id": "alt-coverage",
+        "label": "Alt text on every image",
+        "pass": true,
+        "detail": "10/10 images"
+      },
+      {
+        "id": "reduced-motion",
+        "label": "prefers-reduced-motion honored",
+        "pass": true,
+        "detail": "all animation gated"
+      },
+      {
+        "id": "mobile-320",
+        "label": "320px zero horizontal scroll",
+        "pass": true,
+        "detail": "overflow clipped + fluid grids"
+      },
+      {
+        "id": "og-card",
+        "label": "Branded OG image + twitter card",
+        "pass": true,
+        "detail": "media/og.svg"
+      },
+      {
+        "id": "media-provenance",
+        "label": "AI imagery labeled, real photos ranked first",
+        "pass": true,
+        "detail": "real photo in hero"
+      },
+      {
+        "id": "tel-tap",
+        "label": "tap-to-call everywhere",
+        "pass": true,
+        "detail": "tel: links live"
+      },
+      {
+        "id": "sticky-cta",
+        "label": "Persistent quote CTA",
+        "pass": true,
+        "detail": "floating quote bar"
+      }
+    ],
+    "fixed_from_old_site": [],
+    "media": {
+      "hero_source": "photo",
+      "real_photos": 8,
+      "policy": "AI imagery is ambiance/texture only, labeled source:ai — never presented as the customer's real jobs."
+    }
+  },
+  "qc": {
+    "id": "site_MsJ3wT98iavH",
+    "created_at": "2026-07-09T20:10:24.629Z",
+    "updated_at": "2026-07-09T20:10:24.629Z",
+    "generation_id": "site_b-MtdzIxpLlA",
+    "project_id": "ghost_4UfgRqMPXTZL",
+    "grade": "B",
+    "score": 82,
+    "results": [
+      {
+        "name": "hero-layer-count",
+        "pass": true,
+        "detail": "count≈11 (need ≥ 6)"
+      },
+      {
+        "name": "copy-ban-list",
+        "pass": true,
+        "detail": "clean"
+      },
+      {
+        "name": "json-ld",
+        "pass": true,
+        "detail": "all present"
+      },
+      {
+        "name": "reduced-motion",
+        "pass": true,
+        "detail": "present"
+      },
+      {
+        "name": "enrichment-completeness",
+        "pass": true,
+        "detail": "packet.json present"
+      },
+      {
+        "name": "overflow-320",
+        "pass": false,
+        "deferred": true,
+        "detail": "deferred — headless Chromium unavailable in this environment"
+      },
+      {
+        "name": "screenshots",
+        "pass": false,
+        "deferred": true,
+        "detail": "deferred — headless Chromium unavailable in this environment"
+      },
+      {
+        "name": "public-surface-scrub",
+        "pass": true,
+        "detail": "1 HTML file(s): no internal terms, raw Places types, or malformed locations"
+      },
+      {
+        "name": "media-plane-not-empty",
+        "pass": true,
+        "detail": "hero media: photo"
+      },
+      {
+        "name": "hours-rendered-when-sourced",
+        "pass": true,
+        "detail": "hours not sourced — honest placeholder rendered"
+      },
+      {
+        "name": "ai-imagery-labeled",
+        "pass": true,
+        "detail": "no AI imagery used"
+      }
+    ],
+    "degraded": true
+  }
+}

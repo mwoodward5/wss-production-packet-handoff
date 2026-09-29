@@ -1,0 +1,5 @@
+[
+  { "q": "How much does X cost in CITY?", "a": "" },
+  { "q": "Who is the best X near me?", "a": "" },
+  { "q": "What hours is X open today?", "a": "" }
+]

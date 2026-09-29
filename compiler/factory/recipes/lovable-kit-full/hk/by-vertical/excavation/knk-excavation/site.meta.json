@@ -1,0 +1,9 @@
+{
+  "slug": "knk-excavation",
+  "name": "KNK Earth Shapers (Excavation)",
+  "vertical": "excavation",
+  "source_project_id": "a7035343-579e-4d1b-a7b7-05c89cd706c7",
+  "live_url": "https://knk-earth-shapers.lovable.app",
+  "pattern_tags": ["video-hero", "parallax", "schematic-svg", "blueprint-grid", "live-estimator", "marquee-footer", "asymmetric-typography"],
+  "widgets_used": ["SchematicOverlay", "YardageEstimator", "CountUp", "Marquee"]
+}

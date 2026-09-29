@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wss://ghost-agency/contracts/event.schema.json",
+  "title": "Ghost Agency Event (ledger row)",
+  "description": "Append-only. Every agent writes one event per significant action to ghost_agency_events. The admin ledger renders these. NEVER include secrets, full phone numbers on public views, or raw provider payload secrets.",
+  "type": "object",
+  "required": ["event_id", "type", "actor", "status", "ts"],
+  "properties": {
+    "event_id": { "type": "string" },
+    "prospect_id": { "type": "string" },
+    "order_id": { "type": "string" },
+    "type": { "type": "string", "enum": [
+      "prospect.intake", "prospect.enriched", "report.generated", "packet.compiled",
+      "site.build_started", "site.qc_passed", "site.qc_failed", "site.preview_deployed",
+      "outreach.email_sent", "outreach.optin_received", "outreach.call_completed", "outreach.sms_sent", "outreach.revoked",
+      "checkout.session_created", "stripe.webhook_verified", "order.entitled",
+      "delivery.dispatched", "delivery.completed", "receipt.sent",
+      "support.ticket_opened", "support.edit_shipped", "support.ticket_closed",
+      "billing.payment_failed", "billing.dunning_step", "billing.recovered", "billing.canceled", "billing.refunded",
+      "vapi.webhook_received", "twilio.status_received", "system.error", "system.retry", "system.dead_letter"
+    ]},
+    "actor": { "type": "string", "description": "agent id (e.g. agent_05_site_builder) or 'webhook' or 'operator'" },
+    "status": { "type": "string", "enum": ["ok", "blocked_no_consent", "held_pending_payment", "failed", "retrying", "dead_letter"] },
+    "payload": { "type": "object", "description": "Redacted detail. No secrets, no full card data, no raw API keys." },
+    "retry": { "type": "object", "properties": { "attempt": {"type":"integer"}, "max": {"type":"integer","default":3}, "next_at": {"type":"string","format":"date-time"} } },
+    "ts": { "type": "string", "format": "date-time" }
+  }
+}

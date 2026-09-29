@@ -1,0 +1,63 @@
+{
+ "id": "dirtwork-heart-hollow",
+ "source": "1d117f10-a39b-4f88-bd60-968b9d1a2338",
+ "palette": {
+  "vars": {
+   "--background": "oklch(0.975 0.012 85)",
+   "--foreground": "oklch(0.22 0.03 145)",
+   "--ink": "oklch(0.16 0.025 150)",
+   "--card": "oklch(0.99 0.008 85)",
+   "--card-foreground": "var(--foreground)",
+   "--popover": "oklch(0.99 0.008 85)",
+   "--popover-foreground": "var(--foreground)",
+   "--primary": "oklch(0.42 0.12 142)",
+   "--primary-foreground": "oklch(0.98 0.01 85)",
+   "--secondary": "oklch(0.93 0.02 85)",
+   "--secondary-foreground": "var(--foreground)",
+   "--muted": "oklch(0.94 0.015 85)",
+   "--muted-foreground": "oklch(0.45 0.02 130)",
+   "--accent": "oklch(0.66 0.14 55)",
+   "--accent-foreground": "oklch(0.99 0.01 85)",
+   "--clay": "oklch(0.7 0.15 60)",
+   "--sand": "oklch(0.9 0.025 80)",
+   "--destructive": "oklch(0.55 0.22 27)",
+   "--destructive-foreground": "oklch(0.98 0.01 85)",
+   "--border": "oklch(0.88 0.02 85)",
+   "--input": "oklch(0.88 0.02 85)",
+   "--ring": "oklch(0.48 0.13 138)"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Work Sans",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap"
+ },
+ "radius": "0.875rem",
+ "shadows": [
+  "0 -2px 0 oklch(0.7 0.15 60 / 0.4) inset"
+ ],
+ "keyframes": [
+  {
+   "name": "equip-glow",
+   "css": "@keyframes equip-glow { 0%, 100% { opacity: 0.55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }"
+  },
+  {
+   "name": "survey-sweep",
+   "css": "@keyframes survey-sweep { 0% { mask-position: -120% 0; -webkit-mask-position: -120% 0; } 100% { mask-position: 220% 0; -webkit-mask-position: 220% 0; } }"
+  },
+  {
+   "name": "contour-shimmer",
+   "css": "@keyframes contour-shimmer { 0% { stroke-dashoffset: 0; opacity: 0.45; } 50% { opacity: 0.9; } 100% { stroke-dashoffset: -120; opacity: 0.45; } }"
+  },
+  {
+   "name": "dust-drift",
+   "css": "@keyframes dust-drift { 0% { transform: translate3d(-10%, 0, 0); opacity: 0; } 10% { opacity: 0.7; } 90% { opacity: 0.7; } 100% { transform: translate3d(110%, -8%, 0); opacity: 0; } }"
+  }
+ ],
+ "signatures": [
+  "noise",
+  "glow",
+  "shimmer"
+ ]
+}

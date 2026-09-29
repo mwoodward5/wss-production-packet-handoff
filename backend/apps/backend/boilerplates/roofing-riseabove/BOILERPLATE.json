@@ -1,0 +1,19 @@
+{
+  "name": "roofing-riseabove",
+  "vertical": "roofing",
+  "label": "Rise Above — cinematic roofing",
+  "source": "lovable:rise-above-vision (remix of rise-above-roar), repo mwoodward5/rise-above-vision",
+  "sanitised": "2026-07-29",
+  "notes": [
+    "Clean-room donor: identity lives ONLY in src/lib/business.ts as double-brace token literals.",
+    "isSet() collapses any element whose token is unset — a blank section is the correct render.",
+    "Reviews reduced to ONE tokenised entry; no real reviewer name or text survives.",
+    "Gallery/project photos deleted outright — they were the donor's real completed jobs.",
+    "hero-sky.mp4 kept: generic golden-hour sky, verified by eye, no business identity.",
+    "Unverifiable claims removed (24/7, $0 inspection, 100% photo-documented, family-owned).",
+    "Licence stat is gated on {{LICENSE}} — an unverified contractor shows no licence claim.",
+    "wordmarkFill is near-white: this donor has a DARK header, where currentColor resolves dark and the mark vanishes.",
+    "Footer service links point at /services#<slug>, NOT /services/<slug>: the compiled $service route resolves its own <title> but renders the /services LIST body, so all eight sub-paths were byte-identical pages. The /services page carries id=<slug> on every service article, so the fragment is the destination that actually exists."
+  ],
+  "wordmarkFill": "#f5f5f4"
+}

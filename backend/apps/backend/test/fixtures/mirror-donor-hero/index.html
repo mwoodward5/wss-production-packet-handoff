@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{BUSINESS_NAME}} — {{CITY}}, {{STATE}}</title>
+  <link rel="canonical" href="{{SITE_URL}}" />
+  <link rel="stylesheet" href="/assets/style-hero99.css" />
+  <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+  <header>
+    <img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}}" class="brand-mark" />
+    <a class="phone" href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>
+  </header>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <h1 class="hero-headline"><span class="hero-word">{{BUSINESS_NAME}}</span> <span class="hero-word">Roofing</span> <span class="hero-word">in</span> <span class="hero-word">{{CITY}}</span></h1>
+        <p class="hero-sub">Storm repair and full replacements around {{CITY}}, {{STATE}}.</p>
+        <a class="cta-button" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-photo" src="/media/hero-poster.svg" alt="{{BUSINESS_NAME}} crew on a roof in {{CITY}}" width="960" height="640" />
+      </div>
+      <div class="hero-scrim"></div>
+    </section>
+    <section class="services">
+      <h2>What we do</h2>
+      <p class="reveal">The work {{BUSINESS_NAME}} carries out around {{CITY}}.</p>
+    </section>
+    <section class="reviews">
+      <h2>Reviews</h2>
+      <p class="reveal" data-collapse-if-empty="RATING,REVIEW_COUNT"><span class="stars">{{RATING}}</span> stars from <span class="count">{{REVIEW_COUNT}}</span> reviews</p>
+    </section>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Call <a href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>.</p>
+    </section>
+  </main>
+  <script type="module" src="/assets/app-hero99.js"></script>
+</body>
+</html>

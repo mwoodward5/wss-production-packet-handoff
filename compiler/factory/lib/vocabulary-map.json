@@ -1,0 +1,140 @@
+{
+  "schema": "siteforge-vocabulary-map-v1",
+  "generated_at": "2026-07-15",
+  "description": "Maps intake vocabulary triggers to concrete render directives. Directives stack additively across all matched entries. Resonance profile always wins on conflicts.",
+  "entries": {
+    "razzle-dazzle": {
+      "aliases": ["razzle dazzle", "wow factor", "showstopping", "over the top", "extra", "flashy", "sparkly"],
+      "directives": {
+        "motion.intensity": 2,
+        "hero.effects": ["particle-canvas", "shimmer-headline", "cursor-radial-light"],
+        "card.geometry": "glassmorphic-frosted",
+        "widget.style": "gamified-tile-configurator",
+        "palette.accent_saturation_delta": 0.15,
+        "typography.display_style": "italic-serif-mixed"
+      }
+    },
+    "jaw-dropping": {
+      "aliases": ["jaw dropping", "head exploding", "mind melting", "insane", "beyond wow"],
+      "directives": {
+        "hero.layers_min": 10,
+        "hero.video_required": true,
+        "motion.intensity": 3,
+        "trust.spine_add": ["marquee-institutional-logos", "video-testimonial-wall"],
+        "widget.complexity": "multi-step + live-preview"
+      }
+    },
+    "glassmorphism": {
+      "aliases": ["glass morphism", "liquid glass", "liquid-glass", "frosted glass", "frosted"],
+      "directives": {
+        "card.geometry": "glassmorphic-frosted",
+        "backdrop.filter": "blur(24px) saturate(1.6)",
+        "surface.opacity": 0.72,
+        "border.hairline": "rgba(255,255,255,0.14) 1px"
+      }
+    },
+    "parallax": {
+      "aliases": ["parallax", "multi-plane", "depth scroll"],
+      "directives": {
+        "motion.scroll_behavior": "multi-plane-parallax",
+        "hero.schematic_overlay_scroll": -0.6,
+        "media.behavior": "parallax-scale-1.08"
+      }
+    },
+    "cinematic": {
+      "aliases": ["cinematic", "film-grade", "movie", "moody"],
+      "directives": {
+        "hero.archetype_bias": ["cinematic-console", "luxury-cinematic", "dark-editorial"],
+        "media.grade": "duotone-brand",
+        "typography.display_family_bias": ["Fraunces", "Cormorant Garamond", "Playfair Display"],
+        "motion.intensity": 1
+      }
+    },
+    "no-nonsense": {
+      "aliases": ["no nonsense", "straightforward", "honest", "plainspoken", "matter of fact"],
+      "directives": {
+        "hero.archetype_bias": ["editorial-portfolio", "magazine-owner", "ledger-cream"],
+        "typography.display_family_bias": ["Space Grotesk", "Inter Tight", "Bricolage Grotesque"],
+        "motion.intensity": -2,
+        "card.geometry": "ledger-cream",
+        "palette.accent_saturation_delta": -0.10,
+        "copy.tone": "short-blunt"
+      }
+    },
+    "premium": {
+      "aliases": ["premium", "luxury", "estate", "white glove", "elevated", "high end"],
+      "directives": {
+        "hero.archetype_bias": ["luxury-cinematic", "editorial-portfolio"],
+        "palette.family_bias": ["dark-cinematic-gold", "monochrome-hi-contrast"],
+        "typography.display_family_bias": ["Playfair Display", "Cormorant Garamond", "Fraunces"],
+        "motion.intensity": 1,
+        "trust.spine_add": ["video-testimonial-wall", "license-badge-ribbon"],
+        "media.grade": "golden-hour"
+      }
+    },
+    "urgent": {
+      "aliases": ["urgent", "emergency", "24-7", "24/7", "fast", "asap", "right now"],
+      "directives": {
+        "hero.archetype_bias": ["atlas-authority"],
+        "widget.style": "urgency-slider-plan-today",
+        "cta.grammar": "single-hero-cta-plus-phone-sticky-plus-text-photo",
+        "trust.spine_add": ["response-time-live-widget"],
+        "motion.intensity": -1
+      }
+    },
+    "family-owned": {
+      "aliases": ["family owned", "neighborhood", "local", "community", "generations", "since"],
+      "directives": {
+        "hero.archetype_bias": ["magazine-owner", "editorial-portfolio"],
+        "palette.family_bias": ["cream-paper-oxblood", "forest-cream"],
+        "typography.display_family_bias": ["Fraunces", "Newsreader"],
+        "trust.spine_add": ["signed-owner-letter", "family-owned-since-badge", "neighborhood-pin-chips"],
+        "copy.tone": "warm-community"
+      }
+    },
+    "quiet": {
+      "aliases": ["quiet", "calm", "minimalist", "understated", "restrained"],
+      "directives": {
+        "hero.archetype_bias": ["cream-paper", "quiet-stack"],
+        "palette.family_bias": ["arctic-electric", "monochrome-hi-contrast"],
+        "typography.display_family_bias": ["Cormorant Garamond", "Instrument Serif"],
+        "motion.intensity": -3,
+        "card.geometry": "editorial-paper"
+      }
+    },
+    "gritty": {
+      "aliases": ["gritty", "rugged", "blue collar", "hands on", "worksite"],
+      "directives": {
+        "hero.archetype_bias": ["cinematic-console", "blueprint-schematic"],
+        "palette.family_bias": ["oxblood-cream", "blueprint-navy"],
+        "typography.display_family_bias": ["Space Grotesk", "Inter Tight"],
+        "typography.mono_utility": "JetBrains Mono",
+        "media.grade": "grain-analog",
+        "trust.spine_add": ["live-worksite-feed", "before-after-slider"]
+      }
+    },
+    "editorial": {
+      "aliases": ["editorial", "magazine", "literary", "story"],
+      "directives": {
+        "hero.archetype_bias": ["editorial-portfolio", "magazine-owner"],
+        "typography.display_family_bias": ["Fraunces", "Playfair Display", "Editorial New"],
+        "cadence": "slow-editorial",
+        "card.geometry": "editorial-paper"
+      }
+    },
+    "dark": {
+      "aliases": ["dark", "black", "noir", "night"],
+      "directives": {
+        "palette.mode": "dark",
+        "palette.family_bias": ["dark-cinematic-gold", "monochrome-hi-contrast", "oxblood-cream"]
+      }
+    },
+    "bento": {
+      "aliases": ["bento", "grid", "modular"],
+      "directives": {
+        "layout.gravity": "bento-grid",
+        "hero.archetype_bias": ["bento-configurator"]
+      }
+    }
+  }
+}

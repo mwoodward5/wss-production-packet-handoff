@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["src/browser.tsx","src/mount.tsx","src/lib/bridge.ts","vite.config.ts"],"exclude":["node_modules","src/routes/api"]}

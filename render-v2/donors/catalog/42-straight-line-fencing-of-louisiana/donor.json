@@ -1,0 +1,400 @@
+{
+  "version": 2,
+  "key": "42-straight-line-fencing-of-louisiana",
+  "name": "Straight Line Fencing of Louisiana",
+  "category": "fencing",
+  "vertical": "fencing",
+  "requested_vertical": "fencing",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "4f780298-cc58-477f-a3d3-142255e01c9c",
+  "lovable_source_commit": "a6883ea8be7ba20025e39c2a0db16d8fd3c1b4b6",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "4f780298-cc58-477f-a3d3-142255e01c9c",
+    "ref": "a6883ea8be7ba20025e39c2a0db16d8fd3c1b4b6",
+    "repository": "https://github.com/mwoodward5/radiant-vision-legacy",
+    "git_tree": "a7a6335198153f15d4165948d41c9860d44e1abc"
+  },
+  "classification": "CINEMATIC",
+  "routes": [
+    "/"
+  ],
+  "design_tokens": {
+    "fonts": {
+      "display_serif": "Fraunces, ui-serif, Georgia, serif",
+      "body_sans": "Inter Tight Variable, Inter Tight, ui-sans-serif, system-ui, sans-serif"
+    },
+    "colors_light": {
+      "background": "oklch(0.985 0.006 80)",
+      "surface": "oklch(0.96 0.008 80)",
+      "foreground": "oklch(0.18 0.010 60)",
+      "primary_brass": "oklch(0.52 0.115 55)",
+      "brass_deep": "oklch(0.42 0.115 50)",
+      "hairline": "oklch(0.18 0.010 60 / 0.22)"
+    },
+    "colors_dark": {
+      "background": "oklch(0.10 0.008 60)",
+      "surface": "oklch(0.14 0.008 60)",
+      "foreground": "oklch(0.94 0.012 80)",
+      "primary_brass": "oklch(0.78 0.10 75)",
+      "hairline": "oklch(0.94 0.012 80 / 0.22)"
+    },
+    "hero_isolated": {
+      "background": "oklch(0.10 0.010 60)",
+      "foreground": "oklch(0.96 0.012 80)",
+      "brass": "oklch(0.78 0.10 75)"
+    },
+    "radii": {
+      "base": "0.25rem",
+      "cards": "0px",
+      "badges": "999px"
+    }
+  },
+  "hero_contract": {
+    "dimensions": "100svh full width",
+    "media_type": "video_or_image",
+    "media_filters": "brightness(0.78) contrast(1.08) saturate(1.05)",
+    "zoom_animation": "slow-zoom 22s ease-out forwards",
+    "parallax_behavior": "mouse spring (stiffness: 40, damping: 18) + scroll transform",
+    "scrim_stack": [
+      "linear-gradient(180deg, oklch(0.08 0.01 60 / 0.55) 0%, oklch(0.08 0.01 60 / 0.20) 35%, oklch(0.08 0.01 60 / 0.45) 70%, oklch(0.06 0.01 60 / 0.92) 100%)",
+      "radial-gradient(80% 60% at 18% 60%, oklch(0.06 0.01 60 / 0.55) 0%, transparent 60%)",
+      "radial-gradient(120% 80% at 50% 30%, transparent 0%, oklch(0.08 0.01 60 / 0.25) 60%, oklch(0.06 0.01 60 / 0.88) 100%)"
+    ],
+    "headline_formula": "Fences built straight, [italic white emphasis], and made for [Location] yards.",
+    "cta_primary": {
+      "label": "Request Estimate",
+      "action": "tel:+1[PHONE]"
+    },
+    "cta_secondary": {
+      "label": "Send Project Details",
+      "action": "#quote"
+    }
+  },
+  "media_slots": [
+    {
+      "id": "HERO_MEDIA",
+      "section": "hero",
+      "aspect": "16:9",
+      "role": "hero",
+      "behavior": "slow_zoom_parallax"
+    },
+    {
+      "id": "LOGO_MARK",
+      "section": "global",
+      "aspect": "1:1",
+      "role": "identity",
+      "behavior": "brass_medallion"
+    },
+    {
+      "id": "SERVICE_01",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_02",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_03",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_04",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_05",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_06",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "CRAFT_SPECIMEN",
+      "section": "craft",
+      "aspect": "4:5",
+      "role": "craftsmanship",
+      "behavior": "corner_framed"
+    },
+    {
+      "id": "GALLERY_01_TO_10",
+      "section": "gallery",
+      "aspect": "mixed_4:3_and_3:4",
+      "role": "portfolio",
+      "behavior": "lightbox_modal"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business_name",
+      "selector": ".brand-name"
+    },
+    {
+      "key": "phone_raw",
+      "selector": "a[href^='tel:']"
+    },
+    {
+      "key": "email_raw",
+      "selector": "a[href^='mailto:']"
+    },
+    {
+      "key": "city_state_zip",
+      "selector": ".geo-nap"
+    },
+    {
+      "key": "opening_hours",
+      "selector": ".hours-block"
+    },
+    {
+      "key": "services_items",
+      "selector": "services[]",
+      "count": 6
+    },
+    {
+      "key": "gallery_items",
+      "selector": "gallery[]",
+      "count": 10
+    },
+    {
+      "key": "process_steps",
+      "selector": "process[]",
+      "count": 4
+    },
+    {
+      "key": "faq_items",
+      "selector": "faqs[]",
+      "count": 5
+    },
+    {
+      "key": "service_cities",
+      "selector": "places[]",
+      "count": 11
+    }
+  ],
+  "trust_slots": [
+    {
+      "location": "hero_chips",
+      "type": "floating_pills",
+      "count": 4
+    },
+    {
+      "location": "intro_stats",
+      "type": "stat_grid",
+      "count": 4
+    },
+    {
+      "location": "quote_guarantee",
+      "type": "sub_form_microcopy",
+      "count": 1
+    }
+  ],
+  "schema_slots": [
+    "FenceContractor",
+    "PostalAddress",
+    "GeoCoordinates",
+    "OpeningHoursSpecification",
+    "OfferCatalog",
+    "FAQPage"
+  ],
+  "geo_aeo_slots": [
+    {
+      "slot": "hero_bottom_bar",
+      "target_intent": "location_hours"
+    },
+    {
+      "slot": "approach_manifesto",
+      "target_intent": "methodology_quality"
+    },
+    {
+      "slot": "service_area_ticker",
+      "target_intent": "service_territory"
+    },
+    {
+      "slot": "faq_accordion",
+      "target_intent": "repair_and_estimate_policies"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "slot": "hero_eyebrow",
+      "pattern": "[State/City] Fence Contractor"
+    },
+    {
+      "slot": "faq_02",
+      "pattern": "Can I get an estimate first?"
+    },
+    {
+      "slot": "faq_04",
+      "pattern": "Do you repair leaning posts or damaged sections?"
+    }
+  ],
+  "map_location_slot": {
+    "section": "service_area",
+    "treatment": "kinetic_marquee_and_outbound_links",
+    "external_providers": [
+      "google_maps",
+      "apple_maps",
+      "facebook"
+    ]
+  },
+  "content_density": {
+    "hero": "minimal_high_gravity",
+    "services": "structured_grid_strict_6",
+    "craft": "editorial_spacious",
+    "gallery": "visual_dense_10",
+    "process": "sequential_4",
+    "quote": "functional_high_density",
+    "faq": "accordion_5"
+  },
+  "mobile_rules": {
+    "cursor": "disabled_coarse",
+    "hero_h1_clamp": "clamp(2.6rem, 7.8vw, 7.8rem)",
+    "service_grid": "single_column_below_768px",
+    "stats_grid": "2x2_below_768px",
+    "form_touch_target": "minimum_48px"
+  },
+  "non_negotiables": [
+    "Retain Fraunces serif on all headings and numbers",
+    "Preserve hero multi-stop scrim overlay matrix",
+    "Maintain minimal bottom-border underline form inputs",
+    "Retain oklch metallic bronze and warm parchment palette",
+    "Keep circular brass-rimmed logo medallion treatment",
+    "Preserve Lenis smooth scrolling and custom cursor interactions"
+  ],
+  "safe_replacements": [
+    "business_name",
+    "logo_mark_image",
+    "hero_background_media",
+    "phone_and_email",
+    "operating_hours",
+    "service_titles_and_descriptions",
+    "service_photographs",
+    "portfolio_gallery_photographs",
+    "process_copy",
+    "faq_questions_and_answers",
+    "service_area_city_list"
+  ],
+  "leak_terms": [
+    "Straight Line Fencing of Louisiana"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "ui-serif",
+      "Georgia",
+      "serif",
+      "Inter Tight Variable",
+      "Inter Tight"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.985 0.006 80)",
+    "oklch(0.96 0.008 80)",
+    "oklch(0.18 0.010 60)",
+    "oklch(0.52 0.115 55)",
+    "oklch(0.42 0.115 50)",
+    "oklch(0.18 0.010 60 / 0.22)",
+    "oklch(0.10 0.008 60)",
+    "oklch(0.14 0.008 60)"
+  ],
+  "fonts": [
+    "Fraunces",
+    "ui-serif",
+    "Georgia",
+    "serif",
+    "Inter Tight Variable",
+    "Inter Tight"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "content_render_targets": {
+    "services": [{ "path": "/", "selector": "section#services" }]
+  },
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "62f0f27d1c1b4dba1bae00ec1efc6bcf1710cb58fc781fd8daea8aaa19c882b9",
+    "files": {
+      "assets/fraunces-latin-400-normal-6IfK1voy.woff2": "e558f39453a9c611908be04294b50dea5f21ae6c49b41c6e47f4115e91f90209",
+      "assets/fraunces-latin-400-normal-NUPT2cO8.woff": "695442434f77c44190b48a022f943e052bb60d49ed3c7940ea60a16ac3faf8b3",
+      "assets/fraunces-latin-500-normal-BTR4KCeb.woff": "3f090b71356567fa4f75f0beeff74d38196a8b0f99bf089cce4954910442bfbf",
+      "assets/fraunces-latin-500-normal-DnGCNyPD.woff2": "7975c1ef7caf89d0606dd985d35abe31a619c19262cf13f5a05938cc68fb27b2",
+      "assets/fraunces-latin-600-normal-BFCDtZfi.woff2": "3a1de7711d147bad4422825045f87597fd77cca72e7c96d3b0a81735d00dda82",
+      "assets/fraunces-latin-600-normal-DL5QCzvS.woff": "d78e988f844f474ce9b1cc10c72501add6c5056763bfe83ff2a8e2fcb6708ad0",
+      "assets/fraunces-latin-ext-400-normal-D8gbi3Gu.woff2": "06e8dc8c2543a472414c40b585f0e87abf09e1e6ec7e17daec215e234822a76c",
+      "assets/fraunces-latin-ext-400-normal-UihxqfOe.woff": "6ea9935870863c9f04a8731afadcd1960ea3143a9ab5221f780ce7755822891a",
+      "assets/fraunces-latin-ext-500-normal-BMcFk1Xs.woff": "95db3f274e7f338f57bee9307fe021cd650973844ea17eb6c82f19598217a239",
+      "assets/fraunces-latin-ext-500-normal-Z5DV8IzT.woff2": "f9c30d1f05fcd9ae07306235bd415a57f63d615c25a3f810670e24a9dc5a48bd",
+      "assets/fraunces-latin-ext-600-normal-B0Dy4lqi.woff": "7fce30e29ffbe3d6703a4bc2ab7dd832f50f979fc8a7efdc738d5e8023f0489a",
+      "assets/fraunces-latin-ext-600-normal-BtzmzP0X.woff2": "69e09c7910e64d829e051f023af4c38a2e74b61d9e9439502f56edd7154b117c",
+      "assets/fraunces-vietnamese-400-normal-B65MOf9T.woff": "be746fdc0922b2b6edac2262916163e487b72da918827d43ba5ebe72b77f56aa",
+      "assets/fraunces-vietnamese-400-normal-CvGt0Ybw.woff2": "333c800d6e9eb9d08285b99f56029eb2e779176331ada8fe4b5ded32d73785cc",
+      "assets/fraunces-vietnamese-500-normal-B-KbxExq.woff": "5ee4a9481f45f350fdca8ab14cb7408da827c5cdad7d70a6df4b005406044f5a",
+      "assets/fraunces-vietnamese-500-normal-GOH_-EGq.woff2": "dd4ba63e4b6c7ae6912351c6d1c81728fa588fc3a562e0abba4426d3f6d31e73",
+      "assets/fraunces-vietnamese-600-normal-BjlAJixd.woff2": "aa26bf964850ffd04079bdb40292c391c9c0498405fa9abaf865c46d66918112",
+      "assets/fraunces-vietnamese-600-normal-DlAl5EAR.woff": "73fb7bb330dd90e4f3ace99686ce820db5ddff1020c81dda09c97eb2351865df",
+      "assets/index-BvVu57Gi.js": "a507df32730fd04fa209584a69fb4feea7db1a6bf0a781fe484436be2e8cb596",
+      "assets/index-ByVwTF1o.css": "7df91df21f833134cbb862bd27ff553a3551f68276274796c70330909eaaa7ad",
+      "assets/inter-tight-cyrillic-ext-wght-normal-okcGN4Nq.woff2": "9bba92a871106008d89cc9734c218a3660b92ff647bdfb6879bf0440fba002c0",
+      "assets/inter-tight-cyrillic-wght-normal-BS41q_Tv.woff2": "3937173d62f238179ca073aee632d53ebc088967ac841bf213211be05720881a",
+      "assets/inter-tight-greek-ext-wght-normal-DQgQPNk4.woff2": "83735bbea54cc7c4e7ee2af3ede4c2bc5e421ba5bdef4cd3ea2ec8d25b5afaa8",
+      "assets/inter-tight-greek-wght-normal-sS1B39LI.woff2": "815c54f4279b399a2afb93e99844e0ba6d9df2fc809eab372aa05e8b8d0847da",
+      "assets/inter-tight-latin-ext-wght-normal-B4u9PlvR.woff2": "fd9beddaaec644945809da574cf1caf342073c7e4b46a2ea5bd136c8cf1a9eca",
+      "assets/inter-tight-latin-wght-normal-DX-nOvPD.woff2": "77fefe8ca19b9f69b5284832c519e0493127c1f091f0a8936884be7721c4e618",
+      "assets/inter-tight-vietnamese-wght-normal-TKKdAiBA.woff2": "88599e6f2f36551c98dd836df944179f0d4e31eefa620bb753c96069b53ac55a",
+      "index.html": "93878e32525ce99d21a645627e4bf3c9c5c2231363758904c4be3b9f1b1130dd"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

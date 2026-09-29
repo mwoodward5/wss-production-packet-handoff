@@ -1,0 +1,32 @@
+{
+  "business": "Peppers Structural and Land Management LLC",
+  "owner": "Jim Peppers",
+  "city": "Genoa",
+  "state": "OH",
+  "zip": "43430",
+  "lat": 41.5169,
+  "lng": -83.3597,
+  "founded": "2015-06-20",
+  "fingerprint": {
+    "seed": "pepper-genoa-43430-2015-2026",
+    "moodAxis": "Northwest Ohio craftsman, owner-operator, agrarian editorial",
+    "palette": ["cream", "ink", "umber", "amber-glow", "forest"],
+    "typography": "Fraunces display + Inter body + JetBrains Mono accents",
+    "heroSilhouette": "asymmetric editorial 7/5 split with hand-measurement cinematic image, project-readiness intelligence panel",
+    "motionLanguage": "subtle tactile reveals, no parallax noise, magnetic CTAs",
+    "trustDeviceStyle": "specimen card with verified HomeAdvisor review, monoshape numerals, hairline geo strip",
+    "shapeLanguage": "hairline rules, square corners (radius 4px), tactile grids",
+    "uniqueElements": [
+      "Project Readiness intelligence widget keyed to homeowner stage",
+      "Specimen-card review overlay with platform attribution",
+      "Geo coordinate hairline strip (N/W) under hero",
+      "Numeral specimen markers tying sections to a journal aesthetic",
+      "Verified service-area grid with town-by-town attribution"
+    ]
+  },
+  "verifiedSources": [
+    "https://www.bbb.org/us/oh/genoa/profile/remodeling/pepper-structural-and-land-management-0422-211010196",
+    "https://www.homeadvisor.com/rated.peppersstructuralrehab.91013165.html"
+  ],
+  "generatedAt": "2026-05-01"
+}

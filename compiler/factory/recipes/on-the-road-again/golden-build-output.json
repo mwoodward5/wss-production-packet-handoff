@@ -1,0 +1,626 @@
+{
+  "schema_version": "siteforge-build-complete-v1",
+  "build_id": "build_1784105617731",
+  "prospect_id": "prosp_otra_2026_07_15",
+  "idempotency_key": "47810ada-3eaf-43ab-9b0f-72b30bf90fe4",
+  "status": "ready",
+  "renderer": "siteforge-renderer-v8-snowflake@8.2.0",
+  "renderer_version": "8.2.0",
+  "qc_contract": "siteforge-qc-v2-authority-108-plus-contamination",
+  "visual_qc_passed": false,
+  "generation_fingerprint": "aeb9c93e1a2ddf6b9125b659a0efe8840b67f338f465858e31db39bbe9faded5",
+  "authority_profile_version": "authority-108-v1",
+  "truth_packet_version": "siteforge-truth-packet-v1",
+  "preview_url": "https://siteforge.example.com/preview/build_1784105617731",
+  "preview_url_owner_only": true,
+  "report_url": "https://siteforge.example.com/report/build_1784105617731",
+  "report_token": "00000000-0000-4000-8000-000000000000",
+  "qc_passed": false,
+  "qc_summary": {
+    "overall": "fail",
+    "evidence_gaps": [
+      "phone_e164",
+      "street_address",
+      "city",
+      "state",
+      "postal_code",
+      "hours",
+      "reviews",
+      "license_credentials",
+      "photos",
+      "logos[0].url",
+      "google_place_id"
+    ],
+    "photos_verified_count": 0,
+    "logo_verified": false,
+    "notes": "blocked: owner-input required for phone/address/hours/reviews/logos/photos before public render"
+  },
+  "compose_plan": {
+    "archetype": "cream-paper",
+    "widget": "service-atlas-live",
+    "typography_pair": "Editorial New + Suisse",
+    "palette_family": "dune-terracotta",
+    "section_cadence_signature": "proof-first",
+    "motion_grammar": "tilt-3d",
+    "media_treatment": "video-loop-cinematic",
+    "card_geometry": "hexagonal",
+    "trust_spine": "license-badge-ribbon",
+    "cta_grammar": "three-tier-ladder"
+  },
+  "logo_provenance": {
+    "verified": false,
+    "source": "procedural-monogram",
+    "stages": [],
+    "final_url": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Crect%20width%3D'64'%20height%3D'64'%20rx%3D'14'%20fill%3D'%230f0e0b'%2F%3E%3Ctext%20x%3D'32'%20y%3D'42'%20font-family%3D'Fraunces%2C%20Georgia%2C%20serif'%20font-size%3D'30'%20font-weight%3D'700'%20fill%3D'%23c99a44'%20text-anchor%3D'middle'%3EOT%3C%2Ftext%3E%3C%2Fsvg%3E",
+    "final_format": "procedural-svg",
+    "delta_e_to_brand": null
+  },
+  "media_provenance": {
+    "photos_verified_count": 0,
+    "photos_ai_atmosphere_count": 0,
+    "photos_dropped_low_quality": 0,
+    "photos_overflow_beyond_cap": 0,
+    "gallery_cap": 12,
+    "hero_media_type": "procedural-scene",
+    "hero_media_source": "none",
+    "gallery_photo_urls": [],
+    "per_photo": []
+  },
+  "optimization_manifest": {
+    "contract": "siteforge-qc-v2-authority-108-plus-contamination",
+    "checks": [
+      {
+        "id": "authority-001",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-002",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-003",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-004",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-005",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-006",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-007",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-008",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-009",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-010",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-011",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-012",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-013",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-014",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-015",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-016",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-017",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-018",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-019",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-020",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-021",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-022",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-023",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-024",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-025",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-026",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-027",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-028",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-029",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-030",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-031",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-032",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-033",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-034",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-035",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-036",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-037",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-038",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-039",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-040",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-041",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-042",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-043",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-044",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-045",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-046",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-047",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-048",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-049",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-050",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-051",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-052",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-053",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-054",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-055",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-056",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-057",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-058",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-059",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-060",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-061",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-062",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-063",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-064",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-065",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-066",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-067",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-068",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-069",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-070",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-071",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-072",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-073",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-074",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-075",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-076",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-077",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-078",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-079",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-080",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-081",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-082",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-083",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-084",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-085",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-086",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-087",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-088",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-089",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-090",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-091",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-092",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-093",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-094",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-095",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-096",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-097",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-098",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-099",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-100",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-101",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-102",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-103",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-104",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-105",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-106",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-107",
+        "status": "owner-input",
+        "evidence": null
+      },
+      {
+        "id": "authority-108",
+        "status": "owner-input",
+        "evidence": null
+      }
+    ],
+    "summary_pass": 0,
+    "summary_owner_input": 108,
+    "summary_fail": 0
+  },
+  "outputs": {
+    "preview_url": "https://siteforge.example.com/preview/build_1784105617731",
+    "zip_url": null
+  },
+  "checkout": {
+    "plan_tier": "free-preview",
+    "checkout_url": null
+  },
+  "completed_at": "2026-07-15T08:53:37.732Z"
+}

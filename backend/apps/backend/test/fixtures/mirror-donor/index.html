@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{BUSINESS_NAME}} — {{CITY}}, {{STATE}}</title>
+  <link rel="canonical" href="{{SITE_URL}}" />
+  <link rel="stylesheet" href="/assets/style-def456.css" />
+  <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+  <header>
+    <img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}}" class="brand-mark" />
+    <a class="phone" href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>
+  </header>
+  <main>
+    <h1>{{HERO_HEADLINE}}</h1>
+    <p class="locale">{{CITY}}, {{STATE}}</p>
+    <p data-collapse-if-empty="HERO_ACCENT" class="differentiator">{{HERO_ACCENT}}</p>
+    <section data-collapse-if-empty="OWNER_NAME" class="meet-the-owner">
+      <h2>Meet the owner</h2>
+      <p>Owner: <span>{{OWNER_NAME}}</span></p>
+    </section>
+    <div data-collapse-if-empty="RATING,REVIEW_COUNT" class="review-proof">
+      <span class="stars">{{RATING}}</span> stars from <span class="count">{{REVIEW_COUNT}}</span> reviews
+    </div>
+    <div data-collapse-if-empty="REVIEW_TEXT,REVIEW_AUTHOR" class="review-slot">
+      <blockquote>{{REVIEW_TEXT}}</blockquote>
+      <cite>{{REVIEW_AUTHOR}}</cite>
+    </div>
+    <p data-collapse-if-empty="LICENSE" class="license">Licensed: {{LICENSE}}</p>
+    <p data-collapse-if-empty="ADDRESS" class="address">{{ADDRESS}}</p>
+  </main>
+  <video src="/media/hero-loop.mp4" autoplay muted loop playsinline></video>
+  <script type="module" src="/assets/app-abc123.js"></script>
+</body>
+</html>

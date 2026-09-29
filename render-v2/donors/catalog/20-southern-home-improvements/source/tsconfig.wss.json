@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","compilerOptions":{"allowJs":true,"checkJs":false},"include":["src/main.tsx","src/lib/wss.tsx","src/lib/client-contract.js","src/components/site/**/*.tsx","src/routes/index.tsx","src/routes/privacy.tsx","vite.wss.config.ts"]}

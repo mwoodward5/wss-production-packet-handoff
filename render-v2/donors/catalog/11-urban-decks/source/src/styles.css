@@ -1,0 +1,283 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/*
+ * URBAN DECKS — Premium craft-trade design system
+ * Palette: deep charcoal night, cedar/honey amber, sandstone cream, pine moss accent.
+ * Typography: editorial serif display + tight industrial sans for UI.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
+  --color-cedar: var(--cedar);
+  --color-cedar-deep: var(--cedar-deep);
+  --color-moss: var(--moss);
+  --color-stone: var(--stone);
+
+  --font-display: "Italiana", "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-accent: "Bricolage Grotesque", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --shadow-elev-1: 0 1px 2px oklch(0 0 0 / 0.06), 0 8px 24px oklch(0 0 0 / 0.08);
+  --shadow-elev-2: 0 2px 6px oklch(0 0 0 / 0.08), 0 24px 60px -12px oklch(0 0 0 / 0.25);
+  --shadow-cedar: 0 20px 60px -20px color-mix(in oklab, var(--cedar) 55%, transparent);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Brand palette */
+  --ink: oklch(0.18 0.015 60);            /* deep warm near-black */
+  --cream: oklch(0.965 0.018 80);         /* sandstone cream */
+  --cedar: oklch(0.66 0.14 55);           /* warm cedar/amber */
+  --cedar-deep: oklch(0.42 0.12 50);      /* rich deep cedar */
+  --moss: oklch(0.42 0.06 145);           /* pine moss accent */
+  --stone: oklch(0.55 0.01 60);           /* stone grey */
+
+  /* Semantic — light mode is cream-on-ink contrast app, but pages are mostly cream */
+  --background: oklch(0.965 0.018 80);
+  --foreground: oklch(0.18 0.015 60);
+  --card: oklch(0.99 0.008 80);
+  --card-foreground: oklch(0.18 0.015 60);
+  --popover: oklch(0.99 0.008 80);
+  --popover-foreground: oklch(0.18 0.015 60);
+  --primary: oklch(0.18 0.015 60);
+  --primary-foreground: oklch(0.965 0.018 80);
+  --secondary: oklch(0.92 0.02 75);
+  --secondary-foreground: oklch(0.18 0.015 60);
+  --muted: oklch(0.93 0.015 75);
+  --muted-foreground: oklch(0.42 0.02 60);
+  --accent: oklch(0.66 0.14 55);
+  --accent-foreground: oklch(0.99 0.008 80);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.99 0.008 80);
+  --border: oklch(0.86 0.018 70);
+  --input: oklch(0.88 0.018 70);
+  --ring: oklch(0.66 0.14 55);
+
+  /* Gradients & treatments */
+  --grad-cedar: linear-gradient(135deg, oklch(0.7 0.16 50), oklch(0.55 0.13 40));
+  --grad-night: linear-gradient(180deg, oklch(0.22 0.018 60) 0%, oklch(0.14 0.012 50) 100%);
+  --grad-glow: radial-gradient(60% 60% at 30% 20%, oklch(0.7 0.16 50 / 0.35), transparent 70%);
+}
+
+.dark {
+  --background: oklch(0.14 0.012 50);
+  --foreground: oklch(0.965 0.018 80);
+  --card: oklch(0.2 0.015 55);
+  --card-foreground: oklch(0.965 0.018 80);
+  --popover: oklch(0.2 0.015 55);
+  --popover-foreground: oklch(0.965 0.018 80);
+  --primary: oklch(0.965 0.018 80);
+  --primary-foreground: oklch(0.18 0.015 60);
+  --secondary: oklch(0.26 0.015 55);
+  --secondary-foreground: oklch(0.965 0.018 80);
+  --muted: oklch(0.24 0.012 55);
+  --muted-foreground: oklch(0.72 0.02 70);
+  --accent: oklch(0.7 0.15 55);
+  --accent-foreground: oklch(0.14 0.012 50);
+  --border: oklch(1 0 0 / 0.08);
+  --input: oklch(1 0 0 / 0.12);
+  --ring: oklch(0.7 0.15 55);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0; font-weight: 400; }
+  ::selection { background: var(--cedar); color: var(--cream); }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); font-weight: 400; }
+  .font-accent { font-family: var(--font-accent); letter-spacing: -0.01em; }
+  .font-sans-tight { font-family: var(--font-sans); letter-spacing: -0.01em; }
+
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .bg-grad-cedar { background-image: var(--grad-cedar); }
+  .bg-grad-night { background-image: var(--grad-night); }
+  .bg-grad-glow { background-image: var(--grad-glow); }
+
+  .ring-cedar { box-shadow: 0 0 0 1px color-mix(in oklab, var(--cedar) 60%, transparent); }
+  .shadow-cedar { box-shadow: var(--shadow-cedar); }
+
+  /* Cinematic image treatment */
+  .img-cinematic {
+    filter: contrast(1.05) saturate(1.05);
+  }
+
+  /* Editorial tag */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* Magnetic button hover */
+  .btn-magnetic {
+    transition: transform 280ms cubic-bezier(.2,.8,.2,1), box-shadow 280ms;
+  }
+  .btn-magnetic:hover { transform: translateY(-2px); box-shadow: var(--shadow-cedar); }
+
+  /* Subtle paper grain — used sparingly */
+  .grain::before {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none; opacity: 0.06;
+    background-image: radial-gradient(oklch(0 0 0) 1px, transparent 1px);
+    background-size: 3px 3px;
+    mix-blend-mode: multiply;
+  }
+
+  /* Reveal animation */
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .rise-in { animation: rise-in 800ms cubic-bezier(.2,.8,.2,1) both; }
+  .rise-in-2 { animation: rise-in 800ms cubic-bezier(.2,.8,.2,1) 120ms both; }
+  .rise-in-3 { animation: rise-in 800ms cubic-bezier(.2,.8,.2,1) 240ms both; }
+  .rise-in-4 { animation: rise-in 800ms cubic-bezier(.2,.8,.2,1) 360ms both; }
+
+  @keyframes slow-pan {
+    0% { transform: scale(1.06) translate3d(0,0,0); }
+    50% { transform: scale(1.1) translate3d(-1.5%, -1%, 0); }
+    100% { transform: scale(1.06) translate3d(0,0,0); }
+  }
+  .slow-pan { animation: slow-pan 22s ease-in-out infinite; }
+
+  @keyframes shimmer-line {
+    0% { transform: translateX(-120%); }
+    100% { transform: translateX(220%); }
+  }
+  .shimmer-line { animation: shimmer-line 3.4s ease-in-out infinite; }
+
+  /* Vertical rule */
+  .v-rule { background: linear-gradient(180deg, transparent, var(--cedar), transparent); }
+
+  /* Infinite materials ticker */
+  @keyframes ticker-scroll {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+  }
+  .ticker { animation: ticker-scroll 38s linear infinite; will-change: transform; }
+  .ticker:hover { animation-play-state: paused; }
+
+  /* Section spacing */
+  .section { padding-block: clamp(4rem, 9vw, 8rem); }
+
+  /* === LIVING HERO ANIMATIONS === */
+
+  /* SVG self-drafting line — animates strokeDashoffset */
+  @keyframes draft-stroke {
+    0%   { stroke-dashoffset: 1200; opacity: 0; }
+    8%   { opacity: 1; }
+    60%  { stroke-dashoffset: 0; opacity: 1; }
+    88%  { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: -1200; opacity: 0; }
+  }
+  .draft-stroke { stroke-dasharray: 1200; animation: draft-stroke 14s ease-in-out infinite; }
+  .draft-stroke-2 { stroke-dasharray: 1200; animation: draft-stroke 14s ease-in-out 1.6s infinite; }
+  .draft-stroke-3 { stroke-dasharray: 1200; animation: draft-stroke 14s ease-in-out 3.2s infinite; }
+  .draft-stroke-4 { stroke-dasharray: 1200; animation: draft-stroke 14s ease-in-out 4.8s infinite; }
+
+  /* Floating ember/dust particles drifting upward */
+  @keyframes drift-up {
+    0%   { transform: translate3d(0, 0, 0); opacity: 0; }
+    10%  { opacity: 0.9; }
+    100% { transform: translate3d(var(--dx, 20px), -120vh, 0); opacity: 0; }
+  }
+  .drift { animation: drift-up var(--dur, 18s) linear infinite; }
+
+  /* 3D iso plate hover float */
+  @keyframes iso-float {
+    0%, 100% { transform: rotateX(8deg) rotateY(-12deg) translateY(0); }
+    50%      { transform: rotateX(10deg) rotateY(-10deg) translateY(-10px); }
+  }
+  .iso-float { animation: iso-float 9s ease-in-out infinite; transform-style: preserve-3d; }
+
+  /* Slow spin on the compass dial */
+  @keyframes slow-spin { to { transform: rotate(360deg); } }
+  .slow-spin { animation: slow-spin 60s linear infinite; transform-origin: center; }
+
+  /* Topo lines slow horizontal pan */
+  @keyframes topo-pan {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+  }
+  .topo-pan { animation: topo-pan 60s linear infinite; }
+
+  /* Pulse ring */
+  @keyframes pulse-ring {
+    0%   { transform: scale(0.6); opacity: 0.9; }
+    100% { transform: scale(2.4); opacity: 0; }
+  }
+  .pulse-ring { animation: pulse-ring 2.6s cubic-bezier(0.2,0.8,0.2,1) infinite; }
+
+  /* Live blinking digital readout */
+  @keyframes blink-soft { 0%,100% { opacity: 1; } 50% { opacity: 0.45; } }
+  .blink-soft { animation: blink-soft 1.6s ease-in-out infinite; }
+
+  /* Marquee tape (vertical) */
+  @keyframes vert-tape {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-50%); }
+  }
+  .vert-tape { animation: vert-tape 32s linear infinite; }
+
+  /* Custom non-rectangular clip — angled sweep */
+  .clip-blade {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 64px), calc(100% - 64px) 100%, 0 100%);
+  }
+  .clip-cut {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 64px 100%, 0 calc(100% - 64px));
+  }
+  .clip-arrow {
+    clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%);
+  }
+}

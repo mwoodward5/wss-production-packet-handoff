@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://siteforge.wss-ai.com/schemas/build-request.v1.json",
+  "title": "SiteForge Build Request",
+  "description": "Contract for submitting a build to the SiteForge generator. Consumed by /api/build and the internal engine adapter. Backwards-compatible additions only; breaking changes bump the major version.",
+  "type": "object",
+  "required": ["schema_version", "idempotency_key", "truth_packet", "plan_tier"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "siteforge-build-request-v1"
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 16,
+      "maxLength": 128,
+      "description": "Caller-supplied UUID or ULID. Same key within 24 hours returns the same build_id instead of re-running the pipeline. Required for retry semantics."
+    },
+    "requested_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC. Server rejects requests older than 5 minutes to prevent replay."
+    },
+    "caller": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["siteforge-app", "ghost-agency", "answercrew", "operator-console", "api-partner"]
+        },
+        "operator_id": { "type": "string" },
+        "trace_id": { "type": "string", "description": "Distributed tracing correlation ID." }
+      }
+    },
+    "plan_tier": {
+      "type": "string",
+      "enum": ["free-preview", "dfy-build", "dfy-build-pro", "agency"],
+      "description": "Selects the render lane (remix mode vs full snowflake compose) and asset-remaster budget."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["single-page-cinematic", "premier-multi-page"],
+      "default": "single-page-cinematic",
+      "description": "Corresponds to Remic Prompt A (single-page) or Prompt B (5-8 page authority hub)."
+    },
+    "truth_packet": {
+      "type": "object",
+      "required": ["business_name", "city", "state", "vertical"],
+      "additionalProperties": false,
+      "properties": {
+        "business_name": { "type": "string", "minLength": 2 },
+        "legal_name": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "postal_code": { "type": "string" },
+        "street_address": { "type": "string" },
+        "phone_e164": { "type": "string", "pattern": "^\\+[1-9][0-9]{7,14}$" },
+        "email": { "type": "string", "format": "email" },
+        "website_url": { "type": "string", "format": "uri" },
+        "google_place_id": { "type": "string" },
+        "gbp_url": { "type": "string", "format": "uri" },
+        "facebook_url": { "type": "string", "format": "uri" },
+        "instagram_url": { "type": "string", "format": "uri" },
+        "vertical": {
+          "type": "string",
+          "description": "Canonical vertical from factory/lib/vertical-taxonomy.json (100+ verticals). Example: 'landscape.hardscape.paver'."
+        },
+        "one_line_description": { "type": "string", "maxLength": 280 },
+        "services": {
+          "type": "array",
+          "items": { "type": "string" },
+          "maxItems": 24,
+          "description": "Owner-provided or scrape-verified services. Never fabricated by the renderer."
+        },
+        "license_credentials": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["kind", "number", "verified"],
+            "properties": {
+              "kind": { "type": "string", "enum": ["state-contractor", "bbb", "insurance", "bonded", "trade", "other"] },
+              "number": { "type": "string" },
+              "issued_by": { "type": "string" },
+              "verified": { "type": "boolean" }
+            }
+          }
+        },
+        "established_year": { "type": "integer", "minimum": 1800, "maximum": 2100 },
+        "hours": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "day": { "type": "string", "enum": ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"] },
+              "opens": { "type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$" },
+              "closes": { "type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$" },
+              "closed": { "type": "boolean" },
+              "by_appointment": { "type": "boolean" }
+            }
+          }
+        },
+        "service_area_cities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "maxItems": 32
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "logo_url": { "type": "string", "format": "uri" },
+        "photo_urls": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" },
+          "maxItems": 24,
+          "description": "Renderer will remaster and select the top 12 by composite score. Never all 24 survive."
+        },
+        "hero_video_url": { "type": "string", "format": "uri" },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["source", "author", "rating", "text", "verified"],
+            "properties": {
+              "source": { "type": "string", "enum": ["google","yelp","bbb","facebook","owner-provided"] },
+              "author": { "type": "string" },
+              "author_initials_only": { "type": "boolean", "default": true, "description": "Renderer displays initials-only unless owner has confirmed full-name display." },
+              "rating": { "type": "number", "minimum": 1, "maximum": 5 },
+              "text": { "type": "string" },
+              "review_time_iso": { "type": "string", "format": "date-time" },
+              "verified": { "type": "boolean" }
+            }
+          },
+          "maxItems": 50
+        },
+        "gbp_photos_place_id": { "type": "string" }
+      }
+    },
+    "resonance_hint": {
+      "type": "object",
+      "description": "Optional. Overrides or biases the auto-computed resonance profile. Never used to invent tone traits.",
+      "properties": {
+        "vocabulary_triggers": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Free-text style triggers ('razzle dazzle', 'no-nonsense', 'jaw-dropping', 'liquid glass', 'parallax cinematic')."
+        },
+        "banned_words": { "type": "array", "items": { "type": "string" } },
+        "mirror_words": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "design_constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "force_archetype": { "type": "string" },
+        "force_widget": { "type": "string" },
+        "force_palette_family": { "type": "string" },
+        "banned_archetypes": { "type": "array", "items": { "type": "string" } },
+        "widget_hint": { "type": "string" }
+      }
+    },
+    "callback": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "webhook_url": { "type": "string", "format": "uri" },
+        "webhook_secret_env": { "type": "string", "description": "Name of the env var holding the shared HMAC secret. Value never in payload." }
+      }
+    }
+  }
+}

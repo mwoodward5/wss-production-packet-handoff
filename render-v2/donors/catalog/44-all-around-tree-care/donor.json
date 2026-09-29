@@ -1,0 +1,330 @@
+{
+  "version": 2,
+  "key": "44-all-around-tree-care",
+  "name": "All-Around Tree Care",
+  "category": "tree service",
+  "vertical": "tree service",
+  "requested_vertical": "tree service",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "b76a5484-71f9-4759-8ad7-670034444bc8",
+  "lovable_source_commit": "b8087e5426a2dcb7618037176905866efdfd8009",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "b76a5484-71f9-4759-8ad7-670034444bc8",
+    "ref": "b8087e5426a2dcb7618037176905866efdfd8009",
+    "repository": "https://github.com/mwoodward5/all-around-tree-care",
+    "git_tree": "83147f5802f943fb1c0d2924d928f5e3c6492f8b"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/services",
+    "/tree-removal",
+    "/lawn-landscaping",
+    "/contact"
+  ],
+  "design_tokens": {
+    "font_display": "\"Playfair Display\", Georgia, serif",
+    "font_sans": "Inter, system-ui, sans-serif",
+    "font_mono": "ui-monospace, SFMono-Regular, monospace",
+    "color_primary": "#FF9400",
+    "color_secondary": "#027731",
+    "color_accent": "#D7B46A",
+    "color_background_light": "oklch(0.985 0.012 85)",
+    "color_foreground_light": "oklch(0.22 0.02 140)",
+    "border_radius": "0.875rem"
+  },
+  "hero_contract": {
+    "component": "src/components/site/SignatureHero.tsx",
+    "layout": "asymmetric_split_console",
+    "media_type": "image_or_10s_looping_video",
+    "media_aspect": "16/10",
+    "vector_overlays": [
+      "SawdustParticles",
+      "BranchGeometry",
+      "StumpRings"
+    ],
+    "integrated_widget": "JobCommandWidget"
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_main",
+      "route": "/",
+      "section": "SignatureHero",
+      "role": "hero",
+      "aspect_ratio": "16/10",
+      "fallback_asset": "src/assets/client-bundled/tree-service.webp"
+    },
+    {
+      "slot_id": "service_removal",
+      "route": "/tree-removal",
+      "section": "HeaderShowcase",
+      "role": "service",
+      "aspect_ratio": "4/3",
+      "fallback_asset": "src/assets/client-bundled/services-image-tree-removal-img.jpg"
+    },
+    {
+      "slot_id": "service_tree_care",
+      "route": "/services",
+      "section": "ServiceGrid",
+      "role": "service",
+      "aspect_ratio": "4/3",
+      "fallback_asset": "src/assets/client-bundled/services-image-ttree-care-img.jpg"
+    },
+    {
+      "slot_id": "service_landscaping",
+      "route": "/lawn-landscaping",
+      "section": "HeaderShowcase",
+      "role": "service",
+      "aspect_ratio": "4/3",
+      "fallback_asset": "src/assets/client-bundled/landscaping.webp"
+    },
+    {
+      "slot_id": "gallery_masonry_16",
+      "route": "/services",
+      "section": "ServicesGallery",
+      "role": "gallery",
+      "count": 16,
+      "source_dir": "src/assets/client-bundled/gallery/"
+    }
+  ],
+  "content_slots": [
+    {
+      "target": "CLIENT.businessName",
+      "file": "src/config/client.config.ts"
+    },
+    {
+      "target": "CLIENT.ownerName",
+      "file": "src/config/client.config.ts"
+    },
+    {
+      "target": "CLIENT.phone",
+      "file": "src/config/client.config.ts"
+    },
+    {
+      "target": "CLIENT.email",
+      "file": "src/config/client.config.ts"
+    },
+    {
+      "target": "CLIENT.city",
+      "file": "src/config/client.config.ts"
+    },
+    {
+      "target": "CLIENT.region",
+      "file": "src/config/client.config.ts"
+    },
+    {
+      "target": "CLIENT.serviceAreaLabel",
+      "file": "src/config/client.config.ts"
+    },
+    {
+      "target": "CLIENT.serviceRadiusMiles",
+      "file": "src/config/client.config.ts"
+    },
+    {
+      "target": "SERVICES",
+      "file": "src/config/services.config.ts"
+    },
+    {
+      "target": "TRUST.stats",
+      "file": "src/config/trust.config.ts"
+    },
+    {
+      "target": "CLIENT.hours",
+      "file": "src/config/client.config.ts"
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "stat_counters",
+      "location": "homepage_below_hero",
+      "items": 4
+    },
+    {
+      "type": "owner_operated_badge",
+      "location": "hero_and_service_descriptions"
+    },
+    {
+      "type": "proof_gallery",
+      "location": "homepage_dark_band",
+      "items": 6
+    },
+    {
+      "type": "satellite_coverage_zone",
+      "location": "homepage_and_services",
+      "radius": "25mi"
+    },
+    {
+      "type": "google_reviews_card",
+      "location": "contact_page_visit_us"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "routes": [
+        "/",
+        "/contact"
+      ]
+    },
+    {
+      "type": "Service",
+      "routes": [
+        "/tree-removal",
+        "/lawn-landscaping"
+      ]
+    },
+    {
+      "type": "BreadcrumbList",
+      "routes": [
+        "all"
+      ]
+    },
+    {
+      "type": "SpeakableSpecification",
+      "routes": [
+        "/",
+        "/contact"
+      ]
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "target": "hero_gps_coordinates",
+      "element": "SignatureHero_eyebrow"
+    },
+    {
+      "target": "coverage_municipalities",
+      "element": "SatelliteServiceMap_list"
+    },
+    {
+      "target": "service_process_steps",
+      "element": "TreeRemoval_numbered_list"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "question_target": "emergency_availability",
+      "route": "/tree-removal"
+    },
+    {
+      "question_target": "free_estimate_policy",
+      "route": "/services"
+    },
+    {
+      "question_target": "cleanup_guarantee",
+      "route": "/services"
+    }
+  ],
+  "map_location_slot": {
+    "embed_type": "google_maps_satellite",
+    "params": "t=k&z=10",
+    "outbound_links": {
+      "google_maps": "https://maps.app.goo.gl/YRbLscgCZ5VHTRUZ9",
+      "apple_maps": "maps://?q=..."
+    }
+  },
+  "content_density": {
+    "homepage": "high_visual_medium_text",
+    "services_directory": "high_visual_gallery",
+    "tree_removal": "high_informational_process_oriented",
+    "contact": "high_conversion_dual_channel"
+  },
+  "mobile_rules": {
+    "viewport_breakpoint_hero": "stack_on_lg",
+    "minimum_touch_target": "48px",
+    "sticky_call_cta": true,
+    "proof_gallery_columns": 2
+  },
+  "non_negotiables": [
+    "Light theme must be default on first load (oklch 0.985 cream background)",
+    "Headlines must remain Playfair Display serif",
+    "Primary button and accent color must remain #FF9400 amber",
+    "Hero must retain sawdust particle animation and branch line SVGs",
+    "Lead submission must open mailto draft and never surface technical errors",
+    "Maps must use satellite imagery (t=k) and direct Google Maps shortlinks"
+  ],
+  "safe_replacements": [
+    "CLIENT identity fields (name, phone, email, city, region, coordinates)",
+    "Hero background photograph or 10-second cinematic video",
+    "Service photographic assets in src/assets/client-bundled/",
+    "Coverage municipality names in SatelliteServiceMap",
+    "FAQ questions and answers in tree-removal route",
+    "Years of experience in trust statistics"
+  ],
+  "leak_terms": [
+    "All-Around Tree Care"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Playfair Display",
+      "Georgia",
+      "serif",
+      "Inter",
+      "system-ui",
+      "sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "#FF9400",
+    "#027731",
+    "#D7B46A",
+    "oklch(0.985 0.012 85)",
+    "oklch(0.22 0.02 140)"
+  ],
+  "fonts": [
+    "Playfair Display",
+    "Georgia",
+    "serif",
+    "Inter",
+    "system-ui",
+    "sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "57aad3f529b6f7b99b344ce9793343c2a618af5cf88f73657f153d83f90a9190",
+    "files": {
+      "assets/index-Bx1xCzX1.js": "26be8fb23260b3f6c0f180f2e3aef35885558e7f625edadd38fd9b9406bd34ad",
+      "assets/index-DQ4Da_Fm.css": "ad624ff8d21358480dc3835667cc04a764fcebefed533500c10166172e4606b0",
+      "assets/spa-Ds8QS0nj.css": "d58304ba1b5679085f04b1e3577d9c384cd6c4e662aef692c465999c5b6809ff",
+      "assets/spa-Dymw_ZRr.js": "0a123b3eb048c232db806a9b7c128914a8f6850e7a5a31e1f80bc4704050cf06",
+      "index.html": "0bd50cbe9ac51ac961f2bf9ed4a0bfb308a3a64900441254ab7444a6a347c547"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

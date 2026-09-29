@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get your free site preview &amp; visibility check — WSS Labs</title>
+    <meta
+      name="description"
+      content="Tell us your trade and your town. WSS Labs will research your local market, build a free preview of your new website, and send it over with a plain-English visibility check."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #05070b;
+        --ink: #f2f5f9;
+        --muted: #a7b1c2;
+        --dim: #6b7688;
+        --line: rgba(255, 255, 255, 0.1);
+        --cyan: #39e2ff;
+        --volt: #dfff5a;
+        --mint: #5fe6ae;
+        --danger: #ff6574;
+        --surface: rgba(13, 19, 30, 0.72);
+        --display: "Fraunces", Georgia, "Times New Roman", serif;
+        --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { background: var(--bg); -webkit-font-smoothing: antialiased; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.6;
+        background:
+          radial-gradient(circle at 84% -8%, rgba(57, 226, 255, 0.15), transparent 32rem),
+          radial-gradient(circle at 6% 40%, rgba(95, 230, 174, 0.07), transparent 28rem),
+          radial-gradient(circle at 62% 96%, rgba(223, 255, 90, 0.05), transparent 26rem),
+          var(--bg);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+        background-size: 68px 68px;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent 80%);
+      }
+
+      ::selection { background: var(--volt); color: #10130a; }
+
+      a { color: inherit; text-decoration: none; }
+      svg { display: block; max-width: 100%; }
+
+      .shell { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        background: rgba(5, 7, 11, 0.78);
+        backdrop-filter: blur(18px);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 76px;
+      }
+
+      .logo-link { display: inline-flex; align-items: center; }
+      .logo-link svg { height: 40px; width: auto; }
+
+      .nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 0 16px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: rgba(242, 245, 249, 0.78);
+        font-size: 13.5px;
+        font-weight: 600;
+        transition: color 160ms ease, background 160ms ease;
+      }
+
+      .nav a:hover { color: var(--ink); background: rgba(255, 255, 255, 0.06); }
+
+      h1, h2 { margin: 0; font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; }
+      h1 { font-size: clamp(36px, 4.6vw, 58px); line-height: 1.04; }
+
+      .accent-i { font-style: italic; color: var(--cyan); }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 20px;
+        color: var(--cyan);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: currentColor;
+        box-shadow: 0 0 18px currentColor;
+      }
+
+      .stage {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(380px, 1.05fr);
+        gap: clamp(36px, 5vw, 72px);
+        align-items: start;
+        padding: clamp(52px, 7vw, 88px) 0 clamp(64px, 8vw, 104px);
+      }
+
+      .intro p.lede { max-width: 520px; color: var(--muted); font-size: clamp(16px, 1.7vw, 19px); line-height: 1.65; }
+
+      .mini-steps { display: grid; gap: 12px; margin: 32px 0 0; padding: 0; list-style: none; }
+
+      .mini-steps li {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        gap: 16px;
+        align-items: center;
+        padding: 16px 18px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.028);
+      }
+
+      .mini-steps b { display: block; font-size: 15px; }
+      .mini-steps span { color: var(--muted); font-size: 13.5px; line-height: 1.45; }
+
+      .mini-num {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        border: 1px solid rgba(57, 226, 255, 0.3);
+        background: rgba(57, 226, 255, 0.08);
+        color: var(--cyan);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .intro-note { margin-top: 26px; color: var(--dim); font-size: 13.5px; max-width: 480px; }
+      .intro-note a { color: rgba(242, 245, 249, 0.75); font-weight: 600; }
+      .intro-note a:hover { color: var(--ink); }
+
+      /* form card */
+      .form-card {
+        position: relative;
+        padding: clamp(26px, 3.4vw, 38px);
+        border: 1px solid rgba(57, 226, 255, 0.22);
+        border-radius: 28px;
+        background:
+          linear-gradient(150deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.015) 42%),
+          var(--surface);
+        box-shadow: 0 34px 90px rgba(0, 0, 0, 0.45), 0 0 60px rgba(57, 226, 255, 0.07);
+      }
+
+      .form-card::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        z-index: -1;
+        border-radius: 29px;
+        background: linear-gradient(160deg, rgba(57, 226, 255, 0.3), transparent 40%, rgba(223, 255, 90, 0.18));
+        filter: blur(14px);
+        opacity: 0.5;
+      }
+
+      .form-head { margin-bottom: 24px; }
+      .form-head h2 { font-size: clamp(24px, 2.6vw, 32px); margin-bottom: 8px; }
+      .form-head p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+      .free-chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 26px;
+        margin-bottom: 14px;
+        padding: 0 12px;
+        border-radius: 999px;
+        background: rgba(223, 255, 90, 0.14);
+        border: 1px solid rgba(223, 255, 90, 0.35);
+        color: var(--volt);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      form { display: grid; gap: 14px; }
+
+      .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .field-wide { grid-column: 1 / -1; }
+
+      label.field {
+        display: grid;
+        gap: 7px;
+        color: rgba(242, 245, 249, 0.68);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      label.field em { font-style: normal; color: var(--dim); font-weight: 600; text-transform: none; letter-spacing: 0; }
+
+      input, select {
+        width: 100%;
+        min-height: 52px;
+        padding: 0 16px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 15px;
+        background: rgba(0, 0, 0, 0.32);
+        color: var(--ink);
+        font: inherit;
+        font-size: 15px;
+        font-weight: 500;
+        outline: none;
+        transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      }
+
+      select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--dim) 50%), linear-gradient(135deg, var(--dim) 50%, transparent 50%); background-position: calc(100% - 21px) 24px, calc(100% - 16px) 24px; background-size: 5px 5px; background-repeat: no-repeat; }
+
+      input::placeholder { color: var(--dim); font-weight: 400; }
+
+      input:focus, select:focus {
+        border-color: rgba(57, 226, 255, 0.7);
+        background: rgba(0, 0, 0, 0.45);
+        box-shadow: 0 0 0 4px rgba(57, 226, 255, 0.13);
+      }
+
+      .consent {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.035);
+        cursor: pointer;
+      }
+
+      .consent input {
+        width: 19px;
+        min-height: 19px;
+        height: 19px;
+        margin-top: 3px;
+        flex: none;
+        accent-color: var(--cyan);
+        cursor: pointer;
+      }
+
+      .consent span { color: rgba(242, 245, 249, 0.82); font-size: 13.5px; line-height: 1.5; }
+      .consent b { color: var(--ink); }
+
+      .submit-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 56px;
+        padding: 0 26px;
+        border: 0;
+        border-radius: 999px;
+        background: linear-gradient(100deg, var(--cyan), #63c8ff);
+        color: #061318;
+        font-family: var(--sans);
+        font-size: 15.5px;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 16px 44px rgba(57, 226, 255, 0.22);
+        transition: transform 160ms ease, background 160ms ease, opacity 160ms ease;
+      }
+
+      .submit-btn svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .submit-btn:hover { transform: translateY(-2px); background: linear-gradient(100deg, #6ceaff, #8ad4ff); }
+      .submit-btn[aria-busy="true"] { opacity: 0.65; cursor: progress; transform: none; }
+
+      .form-foot { margin: 4px 0 0; color: var(--dim); font-size: 12.5px; line-height: 1.55; }
+
+      .status {
+        display: none;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid rgba(57, 226, 255, 0.3);
+        background: rgba(57, 226, 255, 0.07);
+        color: rgba(242, 245, 249, 0.88);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .status.show { display: block; }
+      .status.ok { border-color: rgba(95, 230, 174, 0.4); background: rgba(95, 230, 174, 0.09); }
+      .status.err { border-color: rgba(255, 101, 116, 0.4); background: rgba(255, 101, 116, 0.08); }
+      .status a { color: var(--cyan); font-weight: 700; }
+      .status a:hover { text-decoration: underline; }
+
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 36px 0 52px;
+        color: var(--dim);
+        font-size: 13.5px;
+      }
+
+      .footer a { color: rgba(242, 245, 249, 0.7); font-weight: 600; }
+      .footer a:hover { color: var(--ink); }
+
+      @media (prefers-reduced-motion: no-preference) {
+        [data-reveal] {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+          transition-delay: var(--d, 0ms);
+        }
+
+        [data-reveal].is-in { opacity: 1; transform: none; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { transition-duration: 0.01ms !important; animation: none !important; }
+      }
+
+      @media (max-width: 960px) {
+        .stage { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 620px) {
+        .shell { width: calc(100% - 32px); }
+        .field-grid { grid-template-columns: 1fr; }
+        .logo-link svg { height: 34px; }
+        .submit-btn { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="logo-link" href="/" aria-label="WSS Labs home">
+          <svg width="220" height="48" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WSS Labs">
+            <defs>
+              <linearGradient id="wl-sig" x1="0" y1="48" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2FB380"/><stop offset="1" stop-color="#5FE6AE"/>
+              </linearGradient>
+            </defs>
+            <circle cx="24" cy="24" r="20" stroke="#2A3346" stroke-width="2"/>
+            <path d="M24 4 A20 20 0 0 1 41.3 34" stroke="#5FE6AE" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+            <g stroke="#3C4256" stroke-width="1.5">
+              <line x1="24" y1="6" x2="24" y2="9"/><line x1="42" y1="24" x2="39" y2="24"/>
+              <line x1="24" y1="42" x2="24" y2="39"/><line x1="6" y1="24" x2="9" y2="24"/>
+            </g>
+            <g fill="url(#wl-sig)">
+              <rect x="15" y="26" width="3.4" height="7" rx="1.2"/>
+              <rect x="20.3" y="21" width="3.4" height="12" rx="1.2"/>
+              <rect x="25.6" y="16" width="3.4" height="17" rx="1.2"/>
+              <rect x="30.9" y="23" width="3.4" height="10" rx="1.2"/>
+            </g>
+            <text x="56" y="21" font-family="'Space Grotesk',system-ui,sans-serif" font-size="17" font-weight="700" fill="#EAF0F6" letter-spacing="-0.01em">WSS</text>
+            <text x="56" y="38" font-family="'Space Grotesk',system-ui,sans-serif" font-size="12.5" font-weight="500" fill="#6BE0A8" letter-spacing="0.16em">LABS</text>
+          </svg>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">&#8592; Back to home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell stage">
+      <section class="intro" data-reveal>
+        <p class="eyebrow">Free preview &amp; visibility check</p>
+        <h1>See your new website <span class="accent-i">before you spend a dollar.</span></h1>
+        <p class="lede">
+          Tell us a little about your business. We'll research how customers in
+          your town find you — or miss you — then build a working preview of your
+          new site and send both over. Free, and yours to keep either way.
+        </p>
+        <ul class="mini-steps">
+          <li>
+            <span class="mini-num">01</span>
+            <div><b>We research your market</b><span>Your trade, your town, your competition — by hand.</span></div>
+          </li>
+          <li>
+            <span class="mini-num">02</span>
+            <div><b>We build your preview</b><span>A real look at your new site, plus a plain-English visibility check.</span></div>
+          </li>
+          <li>
+            <span class="mini-num">03</span>
+            <div><b>You decide</b><span>Love it? We launch and maintain it. Not for you? No hard feelings.</span></div>
+          </li>
+        </ul>
+        <p class="intro-note">
+          Prefer email? Reach us any time at
+          <a href="mailto:support@woodwardsoftware.com">support@woodwardsoftware.com</a>.
+        </p>
+      </section>
+
+      <section class="form-card" data-reveal style="--d: 120ms" aria-label="Free preview request form">
+        <div class="form-head">
+          <span class="free-chip">Free — no obligation</span>
+          <h2>Get your free preview</h2>
+          <p>Takes about a minute. We only ask for what we need to start the research.</p>
+        </div>
+
+        <form id="intakeForm" novalidate>
+          <div class="field-grid">
+            <label class="field field-wide">Business name
+              <input name="businessName" required autocomplete="organization" placeholder="e.g. Summit Roofing" />
+            </label>
+            <label class="field">City
+              <input name="city" required autocomplete="address-level2" placeholder="e.g. Dallas" />
+            </label>
+            <label class="field">State
+              <input name="state" required autocomplete="address-level1" placeholder="e.g. TX" />
+            </label>
+            <label class="field field-wide">Trade / industry
+              <select name="industry" required>
+                <option value="" selected disabled>Choose your trade</option>
+                <option>Roofing</option>
+                <option>Tree Service</option>
+                <option>Electrical</option>
+                <option>Pool Service</option>
+                <option>Plumbing</option>
+                <option>HVAC</option>
+                <option>Landscaping</option>
+                <option>Other local service</option>
+              </select>
+            </label>
+            <label class="field">Your name
+              <input name="contactName" required autocomplete="name" placeholder="First and last name" />
+            </label>
+            <label class="field">Email
+              <input name="ownerEmail" type="email" required autocomplete="email" placeholder="you@example.com" />
+            </label>
+            <label class="field field-wide">Phone <em>(optional)</em>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-0123" />
+            </label>
+          </div>
+
+          <label class="consent">
+            <input id="consentBox" name="consent" type="checkbox" required />
+            <span><b>You may contact me about my preview.</b> We'll only reach out about your preview and visibility check — nothing else. Required so we can actually send it to you.</span>
+          </label>
+
+          <button id="submitBtn" class="submit-btn" type="submit">
+            Request my free preview
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
+          </button>
+
+          <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+
+          <p class="form-foot">
+            No payment details are collected on this page. Your info is used to
+            build your preview and visibility check — nothing more.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="shell footer">
+      <span>WSS Labs — done-for-you local websites &#183; a Woodward Software Systems company.</span>
+      <a href="mailto:support@woodwardsoftware.com">support@woodwardsoftware.com</a>
+    </footer>
+
+    <script>
+      (function () {
+        /* Reveal-on-scroll (respects prefers-reduced-motion) */
+        var els = document.querySelectorAll("[data-reveal]");
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce || !("IntersectionObserver" in window)) {
+          els.forEach(function (el) { el.classList.add("is-in"); });
+        } else {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-in");
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+          );
+          els.forEach(function (el) { io.observe(el); });
+        }
+      })();
+
+      (function () {
+        var API_URL = "https://ghost-agency-backend.vercel.app";
+        var SUPPORT_EMAIL = "support@woodwardsoftware.com";
+
+        var form = document.getElementById("intakeForm");
+        var submit = document.getElementById("submitBtn");
+        var status = document.getElementById("formStatus");
+        if (!form) return;
+
+        /* Prefill from query params (links may pass businessName, city, state, industry) */
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("product") === "mission-control") {
+          window.location.replace("/pricing#mission-control");
+          return;
+        }
+        params.forEach(function (value, key) {
+          var field = form.elements.namedItem(key);
+          if (field && !field.value) field.value = value;
+        });
+
+        function showStatus(kind, html) {
+          status.className = "status show" + (kind ? " " + kind : "");
+          status.innerHTML = html;
+        }
+
+        function mailtoFallback(data) {
+          var subject = "Free preview request — " + (data.businessName || "my business");
+          var body =
+            "Business: " + (data.businessName || "") + "\n" +
+            "City/State: " + (data.city || "") + ", " + (data.state || "") + "\n" +
+            "Trade: " + (data.industry || "") + "\n" +
+            "Name: " + (data.contactName || "") + "\n" +
+            "Email: " + (data.ownerEmail || "") + "\n" +
+            "Phone: " + (data.phone || "") + "\n\n" +
+            "Please build my free site preview and visibility check.";
+          return (
+            "mailto:" + SUPPORT_EMAIL +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body)
+          );
+        }
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (!form.reportValidity()) return;
+
+          var data = {};
+          new FormData(form).forEach(function (value, key) { data[key] = value; });
+          var agreed = data.consent === "on";
+          var hasPhone = Boolean((data.phone || "").trim());
+
+          var payload = {
+            product: "website_preview",
+            jobId: sessionStorage.getItem("woodwardPreviewRequestId") || ("preview_" + crypto.randomUUID()),
+            businessName: data.businessName || "",
+            industry: data.industry || "",
+            city: data.city || "",
+            state: data.state || "",
+            ownerEmail: data.ownerEmail || "",
+            phone: data.phone || "",
+            currentWebsite: "",
+            services: data.industry || "",
+            notes:
+              "Contact name: " + (data.contactName || "") +
+              ". Requested the free site preview and visibility check from the public intake page.",
+            consentToCall: agreed && hasPhone,
+            consentToText: agreed && hasPhone,
+            consentSource: agreed
+              ? "Public preview request form — 'You may contact me about my preview' checkbox"
+              : "",
+            package: "Free Site Preview + Visibility Check",
+            source: "woodward-public-preview-intake"
+          };
+          sessionStorage.setItem("woodwardPreviewRequestId", payload.jobId);
+
+          submit.setAttribute("aria-busy", "true");
+          submit.disabled = true;
+          showStatus("", "Sending your request&hellip;");
+
+          fetch(API_URL + "/api/ghost-agency/orchestrate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          })
+            .then(function (response) {
+              return response
+                .json()
+                .catch(function () { return {}; })
+                .then(function (json) {
+                  if (!response.ok || json.ok === false) {
+                    throw new Error(json.message || json.error || "Request failed");
+                  }
+                  return json;
+                });
+            })
+            .then(function (result) {
+              Array.prototype.forEach.call(form.children, function (child) {
+                if (child.id !== "formStatus") child.hidden = true;
+              });
+              showStatus(
+                "ok",
+                "<b>Request received — we're on it.</b><br>We'll send the preview to <b>" +
+                  String(data.ownerEmail || "").replace(/[&<>\"]/g, "") +
+                  "</b>. Reference: <b>" + String((result.job && result.job.id) || payload.jobId).replace(/[&<>\"]/g, "") +
+                  "</b>.<br>Next, we research your local market and email your working preview and visibility check."
+              );
+            })
+            .catch(function () {
+              showStatus(
+                "err",
+                "<b>Hmm, that didn't go through.</b> No problem — you can send the same details in one click: " +
+                  '<a href="' + mailtoFallback(data) + '">email us your preview request</a>.'
+              );
+            })
+            .then(function () {
+              submit.removeAttribute("aria-busy");
+              submit.disabled = false;
+            });
+        });
+      })();
+    </script>
+  </body>
+</html>

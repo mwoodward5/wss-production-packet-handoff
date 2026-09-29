@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{BUSINESS_NAME}} | Lawn Care &amp; Landscaping in {{CITY}}, {{STATE}}</title>
+    <meta name="description" content="{{HERO_HEADLINE}}[[NEED:PHONE]] Call {{PHONE}}.[[/NEED]][[NEED:!PHONE]] Request an estimate online.[[/NEED]]" />
+    <meta name="author" content="{{BUSINESS_NAME}}" />
+    <link rel="canonical" href="{{SITE_URL}}/" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{SITE_URL}}/" />
+    <meta property="og:image" content="/favicon.png">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    
+    <meta name="twitter:image" content="/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LandscapingBusiness",
+      "name": "{{BUSINESS_NAME}}",
+      "image": "/favicon.png",
+      [[NEED:PHONE]]"telephone": "{{PHONE}}",[[/NEED]]
+      "email": "{{EMAIL}}",
+      "url": "{{SITE_URL}}/",
+      "address": {"@type": "PostalAddress", "addressLocality": "{{ADDRESS_CITY}}", "addressRegion": "{{STATE}}", "addressCountry": "US"},
+      "areaServed": [{"@type": "City", "name": "{{CITY}}"}],
+      "openingHoursSpecification": [{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"17:00"}],
+      "sameAs": ["{{PROFILE_URL}}","{{PROFILE_URL}}"],
+      "hasMap": "{{PROFILE_URL}}"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name": "{{BUSINESS_NAME}}","acceptedAnswer":{"@type":"Answer","text":"We provide lawn care service in {{CITY}}, {{STATE}} and the surrounding area,"}},
+        {"@type":"Question","name": "{{BUSINESS_NAME}}","acceptedAnswer":{"@type":"Answer","text":"Lawn mowing, lawn trimming, edging, yard cleanup, fertilization, landscape design, landscape maintenance, retaining walls and hardscaping services."}},
+        {"@type":"Question","name": "{{BUSINESS_NAME}}","acceptedAnswer":{"@type":"Answer","text":"[[NEED:PHONE]]Call {{PHONE}} or email {{EMAIL}} with your address and the services you're interested in.[[/NEED]][[NEED:!PHONE]]Send your address and the services you're interested in through the estimate form.[[/NEED]]"}},
+        {"@type":"Question","name": "{{BUSINESS_NAME}}","acceptedAnswer":{"@type":"Answer","text":"Yes. We schedule weekly and bi-weekly lawn maintenance routes throughout the {{CITY}} area during the growing season."}},
+        {"@type":"Question","name": "{{BUSINESS_NAME}}","acceptedAnswer":{"@type":"Answer","text":"Yes. We design and install retaining walls, walkways, and other hardscape features as part of larger landscape projects."}}
+      ]
+    }
+    </script>
+    <meta property="og:title" content="{{BUSINESS_NAME}} | Lawn Care &amp; Landscaping in {{CITY}}, {{STATE}}">
+  <meta name="twitter:title" content="{{BUSINESS_NAME}} | Lawn Care Service in {{CITY}}, {{STATE}}">
+  <meta property="og:description" content="Professional lawn care and landscaping in {{CITY}}, {{STATE}}.">
+  <meta name="twitter:description" content="{{BUSINESS_NAME}} provides professional lawn care service in {{CITY}}, {{STATE}} — mowing, trimming, landscape design, hardscaping and seasonal maintenance.[[NEED:PHONE]] Call {{PHONE}}.[[/NEED]][[NEED:!PHONE]] Request an estimate online.[[/NEED]]">
+</head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  
+  <!-- THE HERO VIDEO LADDER, as data. The runtime arms the first rung whose
+       bytes shipped; the client's clip always outranks the WSS-owned one. -->
+  <script type="application/json" id="hero-video-ladder">
+    { "sources": ["assets/hero-client-landscaping.mp4", "assets/hero-fallback-landscaping.mp4"] }
+  </script>
+  <script>
+  (function(){
+    "use strict";
+    var heroRungs=(function(){try{return (JSON.parse(document.getElementById("hero-video-ladder").textContent)||{}).sources||[];}catch(e){return [];}})();
+    if(!heroRungs.length||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+    function arm(clip,i){
+      var src=heroRungs[i];
+      if(!src)return;
+      clip.src=src.charAt(0)==="/"?src:"/"+src;
+      clip.addEventListener("loadedmetadata",function(){clip.hidden=false;clip.setAttribute("data-hero-armed","1");},{once:true});
+      clip.addEventListener("error",function(){clip.removeAttribute("src");clip.load();arm(clip,i+1);},{once:true});
+    }
+    var mo=new MutationObserver(function(){
+      var clip=document.querySelector("video[data-hero-video]");
+      if(clip){mo.disconnect();arm(clip,0);}
+    });
+    mo.observe(document.documentElement,{childList:true,subtree:true});
+    setTimeout(function(){mo.disconnect();},20000);
+  })();
+  </script>
+</body>
+</html>

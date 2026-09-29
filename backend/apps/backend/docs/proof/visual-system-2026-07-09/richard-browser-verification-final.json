@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-07-09T23:18:36.039Z",
+  "ok": true,
+  "results": [
+    {
+      "target": "richard-diaz",
+      "mode": "desktop",
+      "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/",
+      "status": 200,
+      "title": "Richard Diaz Landscape & Masonry — landscaping in Orange, CA",
+      "textLength": 3633,
+      "overflow": false,
+      "errorOverlay": false,
+      "consoleErrors": [],
+      "httpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/media/hero-video.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/media/hero-video.mp4",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "brokenImages": [],
+      "mapPresent": true,
+      "mapIframe": "https://www.google.com/maps/embed/v1/place?key=REDACTED&q=633+North+Heatherstone+Drive%2C+Orange%2C+CA+92869&zoom=16&maptype=satellite",
+      "serviceMediaCount": 8,
+      "banned": [],
+      "screenshot": "C:\\Users\\Main\\Documents\\New project 2\\woodward-ghost-agency\\apps\\backend\\docs\\proof\\visual-system-2026-07-09\\richard-diaz-desktop.png",
+      "screenshotBytes": 4235049,
+      "blockingRequestFailures": [],
+      "ok": true
+    },
+    {
+      "target": "richard-diaz",
+      "mode": "mobile",
+      "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/",
+      "status": 200,
+      "title": "Richard Diaz Landscape & Masonry — landscaping in Orange, CA",
+      "textLength": 3493,
+      "overflow": false,
+      "errorOverlay": false,
+      "consoleErrors": [],
+      "httpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/media/hero-video.mp4",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/media/hero-video.mp4",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "brokenImages": [],
+      "mapPresent": true,
+      "mapIframe": "https://www.google.com/maps/embed/v1/place?key=REDACTED&q=633+North+Heatherstone+Drive%2C+Orange%2C+CA+92869&zoom=16&maptype=satellite",
+      "serviceMediaCount": 8,
+      "banned": [],
+      "screenshot": "C:\\Users\\Main\\Documents\\New project 2\\woodward-ghost-agency\\apps\\backend\\docs\\proof\\visual-system-2026-07-09\\richard-diaz-mobile.png",
+      "screenshotBytes": 3389606,
+      "blockingRequestFailures": [],
+      "ok": true
+    }
+  ]
+}

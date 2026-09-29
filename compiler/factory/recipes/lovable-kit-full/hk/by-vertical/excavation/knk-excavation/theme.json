@@ -1,0 +1,27 @@
+{
+  "colorSpace": "oklch",
+  "colors": {
+    "background": "oklch(0.99 0 0)",
+    "foreground": "oklch(0.15 0.02 60)",
+    "primary": "oklch(0.16 0.01 60)",
+    "accent": "oklch(0.78 0.18 75)"
+  },
+  "cssVars": {
+    "--knk-ink": "near-black background",
+    "--knk-bone": "off-white text",
+    "--knk-amber": "safety yellow/orange accent (oklch 0.82 0.19 80)",
+    "--knk-line": "hairline border color"
+  },
+  "radius": "0.625rem",
+  "fonts": {
+    "body": "system-ui",
+    "display": "system-ui font-black uppercase",
+    "mono": "ui-monospace (font-mono)"
+  },
+  "signature": "Video parallax + blueprint schematic + amber industrial accents + oversized asymmetric type.",
+  "motion": {
+    "parallax": "scrollY * 0.3 video, scrollY * -0.6 overlay",
+    "headline-reveal": "1.1s cubic-bezier(0.2,0.7,0.2,1) stagger 60ms",
+    "marquee": "45s linear infinite"
+  }
+}

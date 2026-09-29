@@ -1,0 +1,101 @@
+{
+ "id": "green-thumb-grow-pro",
+ "source": "c768a5ca-db53-4182-b192-ef8bb129d9f1",
+ "palette": {
+  "vars": {
+   "--background": "60 20% 98%",
+   "--foreground": "140 25% 12%",
+   "--card": "0 0% 100%",
+   "--card-foreground": "140 25% 12%",
+   "--popover": "0 0% 100%",
+   "--popover-foreground": "140 25% 12%",
+   "--primary": "140 50% 22%",
+   "--primary-foreground": "60 20% 98%",
+   "--primary-glow": "140 45% 35%",
+   "--secondary": "35 35% 92%",
+   "--secondary-foreground": "140 30% 18%",
+   "--muted": "60 15% 94%",
+   "--muted-foreground": "140 10% 38%",
+   "--accent": "38 92% 50%",
+   "--accent-foreground": "140 50% 12%",
+   "--destructive": "0 70% 45%",
+   "--destructive-foreground": "60 20% 98%",
+   "--border": "140 15% 88%",
+   "--input": "140 15% 88%",
+   "--ring": "140 50% 30%",
+   "--earth": "28 35% 35%",
+   "--earth-foreground": "60 20% 98%",
+   "--steel": "215 15% 35%",
+   "--leaf": "95 45% 40%",
+   "--gradient-hero": "linear-gradient(135deg, hsl(140 55% 15% / 0.92), hsl(140 40% 25% / 0.78) 50%, hsl(28 35% 25% / 0.85))",
+   "--gradient-primary": "linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)))",
+   "--gradient-accent": "linear-gradient(135deg, hsl(38 92% 55%), hsl(28 90% 48%))",
+   "--gradient-earth": "linear-gradient(180deg, hsl(60 20% 98%), hsl(35 25% 94%))",
+   "--sidebar-background": "0 0% 98%",
+   "--sidebar-foreground": "240 5.3% 26.1%",
+   "--sidebar-primary": "240 5.9% 10%",
+   "--sidebar-primary-foreground": "0 0% 98%",
+   "--sidebar-accent": "240 4.8% 95.9%",
+   "--sidebar-accent-foreground": "240 5.9% 10%",
+   "--sidebar-border": "220 13% 91%",
+   "--sidebar-ring": "217.2 91.2% 59.8%"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "140 25% 8%",
+   "--foreground": "60 20% 96%",
+   "--card": "140 22% 11%",
+   "--card-foreground": "60 20% 96%",
+   "--popover": "140 22% 11%",
+   "--popover-foreground": "60 20% 96%",
+   "--primary": "140 45% 55%",
+   "--primary-foreground": "140 50% 8%",
+   "--secondary": "140 15% 18%",
+   "--secondary-foreground": "60 20% 96%",
+   "--muted": "140 15% 16%",
+   "--muted-foreground": "60 10% 70%",
+   "--accent": "38 92% 55%",
+   "--accent-foreground": "140 50% 12%",
+   "--destructive": "0 70% 50%",
+   "--destructive-foreground": "60 20% 96%",
+   "--border": "140 15% 22%",
+   "--input": "140 15% 22%",
+   "--ring": "140 45% 55%"
+  }
+ },
+ "fonts": {
+  "display": "Inter",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+ },
+ "radius": "0.625rem",
+ "shadows": [
+  "0 2px 12px -4px hsl(140 30% 15% / 0.12)",
+  "0 12px 40px -12px hsl(140 50% 12% / 0.25)",
+  "0 8px 24px -8px hsl(38 92% 45% / 0.45)",
+  "0 26px 80px -34px hsl(140 50% 4% / 0.85), inset 0 1px 0 hsl(0 0% 100% / 0.28)"
+ ],
+ "keyframes": [
+  {
+   "name": "fadeIn",
+   "css": "@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }"
+  },
+  {
+   "name": "slideUp",
+   "css": "@keyframes slideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "contractorZoom",
+   "css": "@keyframes contractorZoom { from { transform: scale(1.02) translate3d(0, 0, 0); } to { transform: scale(1.08) translate3d(1.5%, -1%, 0); } }"
+  },
+  {
+   "name": "shineSweep",
+   "css": "@keyframes shineSweep { 0%, 62% { left: -35%; opacity: 0; } 70% { opacity: 0.95; } 100% { left: 120%; opacity: 0; } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "glow",
+  "gradient-heavy"
+ ]
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://siteforge.wss-ai.com/schemas/build-status.v1.json",
+  "title": "SiteForge Build Status",
+  "description": "Streamed progress event emitted over SSE from /api/build/:build_id/events. Also polled via GET /api/build/:build_id.",
+  "type": "object",
+  "required": ["schema_version", "build_id", "state", "progress", "emitted_at"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string", "const": "siteforge-build-status-v1" },
+    "build_id": { "type": "string" },
+    "idempotency_key": { "type": "string" },
+    "state": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "intake-normalizing",
+        "scrape-website",
+        "scrape-gbp",
+        "scrape-reviews",
+        "resonance-profiling",
+        "vocabulary-matching",
+        "compose-planning",
+        "asset-remaster-logo",
+        "asset-remaster-photos",
+        "render-html",
+        "render-schema",
+        "capture-desktop",
+        "capture-mobile",
+        "qc-authority-108",
+        "qc-visual-fidelity",
+        "qc-contamination",
+        "publish-preview",
+        "ready",
+        "failed",
+        "cancelled"
+      ]
+    },
+    "progress": {
+      "type": "object",
+      "required": ["percent", "step", "step_of"],
+      "properties": {
+        "percent": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "step": { "type": "integer", "minimum": 0 },
+        "step_of": { "type": "integer", "minimum": 1 },
+        "step_label": { "type": "string" },
+        "sub_percent": { "type": "integer", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "emitted_at": { "type": "string", "format": "date-time" },
+    "trace_id": { "type": "string" },
+    "detail": {
+      "type": "object",
+      "description": "Optional stage-specific payload for UI. Never contains secrets, never contains raw scraped HTML.",
+      "properties": {
+        "stage_message": { "type": "string" },
+        "asset_progress": {
+          "type": "object",
+          "properties": {
+            "logo": { "type": "string", "enum": ["queued","background-drop","upscale","vectorize","recolor","shimmer-wrap","done","fallback-monogram","failed"] },
+            "photos_total": { "type": "integer" },
+            "photos_done": { "type": "integer" },
+            "photos_rejected_low_quality": { "type": "integer" }
+          }
+        },
+        "compose_plan_preview": {
+          "type": "object",
+          "properties": {
+            "archetype": { "type": "string" },
+            "widget": { "type": "string" },
+            "typography_pair": { "type": "string" },
+            "palette_family": { "type": "string" },
+            "motion_intensity": { "type": "integer" }
+          }
+        },
+        "qc_running_score": {
+          "type": "object",
+          "properties": {
+            "authority_points_passed": { "type": "integer" },
+            "authority_points_total": { "type": "integer", "const": 108 }
+          }
+        }
+      }
+    }
+  }
+}

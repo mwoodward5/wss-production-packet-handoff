@@ -1,0 +1,7 @@
+{
+  "name": "@woodward/wss-brand-system",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sanitized WSS Labs brand package extracted from the dashboard redesign kit.",
+  "main": "index.js"
+}

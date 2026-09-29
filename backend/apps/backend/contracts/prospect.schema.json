@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wss://ghost-agency/contracts/prospect.schema.json",
+  "title": "Canonical Prospect",
+  "description": "Single source of truth for a prospect as it moves LeadMiner -> enrichment -> report -> packet. Every adapter must emit/accept this shape.",
+  "type": "object",
+  "required": ["prospect_id", "business_name", "city", "state", "source", "created_at"],
+  "properties": {
+    "prospect_id": { "type": "string", "description": "ULID. Assigned at intake, immutable through the whole chain." },
+    "business_name": { "type": "string" },
+    "legal_name": { "type": "string" },
+    "industry": { "type": "string" },
+    "city": { "type": "string" },
+    "state": { "type": "string" },
+    "service_area": { "type": "array", "items": { "type": "string" } },
+    "phone": { "type": "string" },
+    "email": { "type": "string" },
+    "website_url": { "type": "string" },
+    "google_business_profile_url": { "type": "string" },
+    "facebook_url": { "type": "string" },
+    "instagram_url": { "type": "string" },
+    "source": { "type": "string", "enum": ["leadminer", "manual", "referral", "inbound_form", "internal_test"] },
+    "leadminer_score": { "type": "number", "description": "PRIVATE. Never rendered on any public surface." },
+    "consent": { "$ref": "wss://ghost-agency/contracts/consent.schema.json" },
+    "enrichment": {
+      "type": "object",
+      "properties": {
+        "profile": { "type": "object", "description": "brand/profile.json — name, logo url, palette, services, hours, geo" },
+        "resonance": { "type": "object", "description": "brand/resonance.json — tone, audience, differentiators" },
+        "proof": { "type": "object", "description": "brand/proof.json — VERIFIED reviews/citations only, each with source_url. Empty is valid; fabricated is never valid." },
+        "enriched_at": { "type": "string", "format": "date-time" },
+        "providers_used": { "type": "array", "items": { "type": "string", "enum": ["firecrawl", "bright_data", "manual"] } }
+      }
+    },
+    "status": { "type": "string", "enum": ["new", "enriched", "reported", "packeted", "previewed", "engaged", "customer", "closed_lost", "do_not_contact"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}

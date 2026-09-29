@@ -1,0 +1,402 @@
+{
+  "version": 2,
+  "key": "20-southern-home-improvements",
+  "name": "Southern Home Improvements",
+  "category": "roofing",
+  "vertical": "roofing",
+  "requested_vertical": "general contractor",
+  "routing_conflict": true,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "c3667c26-b681-47bc-9983-bad9c1f42efd",
+  "lovable_source_commit": "cb3447c278eb30b3d0bddf6b7168f8cb57db7db1",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "c3667c26-b681-47bc-9983-bad9c1f42efd",
+    "ref": "cb3447c278eb30b3d0bddf6b7168f8cb57db7db1",
+    "repository": "https://github.com/mwoodward5/southern-charm-blueprint",
+    "git_tree": "ab8adb5cf20ff2a36c3c62f1ca8a8447ac759d1a"
+  },
+  "classification": "MULTI_PAGE",
+  "routes": [
+    "/",
+    "/privacy",
+    "/sitemap.xml"
+  ],
+  "design_tokens": {
+    "colors": {
+      "cream": "oklch(0.97 0.012 85)",
+      "cream_soft": "oklch(0.94 0.014 82)",
+      "paper": "oklch(0.99 0.006 85)",
+      "ink": "oklch(0.27 0.04 240)",
+      "ink_deep": "oklch(0.20 0.035 240)",
+      "ink_soft": "oklch(0.42 0.04 240)",
+      "clay": "oklch(0.62 0.16 42)",
+      "clay_soft": "oklch(0.78 0.09 50)",
+      "line": "oklch(0.88 0.012 70)"
+    },
+    "typography": {
+      "display": "Fraunces, ui-serif, Georgia, serif",
+      "sans": "Inter, ui-sans-serif, system-ui, sans-serif",
+      "mono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+    },
+    "radii": {
+      "base": "0.5rem",
+      "button": "9999px",
+      "card": "1rem",
+      "logo_header": "0.75rem",
+      "logo_footer": "1rem"
+    },
+    "shadows": {
+      "warm": "0 30px 60px -30px color-mix(in oklab, var(--ink) 40%, transparent), 0 10px 20px -10px color-mix(in oklab, var(--ink) 18%, transparent)",
+      "card": "0 12px 28px -16px color-mix(in oklab, var(--ink) 30%, transparent)"
+    }
+  },
+  "hero_contract": {
+    "location": "src/components/site/Hero.tsx",
+    "min_height_desktop": "780px",
+    "min_height_mobile": "640px",
+    "media_asset_path": "src/assets/shi-hero-cinematic.jpg.asset.json",
+    "media_dimensions": {
+      "width": 1920,
+      "height": 1280
+    },
+    "video_replacement_supported": true,
+    "scrim_stack": [
+      "linear-gradient(to top, rgba(22,48,64,0.85), rgba(22,48,64,0.45), rgba(22,48,64,0.55))",
+      "radial-gradient(ellipse at 30% 70%, oklch(0.72 0.16 42 / 0.25), transparent 60%)",
+      "radial-grain-overlay-3px"
+    ],
+    "decorative_elements": [
+      "4x_corner_registration_marks"
+    ],
+    "subcomponents": [
+      "film_slate_bottom_ticker",
+      "urgent_storm_intake_link"
+    ]
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_background",
+      "file": "src/components/site/Hero.tsx",
+      "aspect_ratio": "16:9 or 3:2",
+      "recommended_role": "Cinematic active roof or crew action plate",
+      "required": true
+    },
+    {
+      "slot_id": "brand_logo_header",
+      "file": "src/components/site/Header.tsx",
+      "dimensions": "72x72px",
+      "aspect_ratio": "1:1",
+      "recommended_role": "High-res transparent PNG mark",
+      "required": true
+    },
+    {
+      "slot_id": "brand_logo_footer",
+      "file": "src/components/site/Footer.tsx",
+      "dimensions": "96x96px",
+      "aspect_ratio": "1:1",
+      "recommended_role": "High-res transparent PNG mark",
+      "required": true
+    },
+    {
+      "slot_id": "gallery_flagship",
+      "file": "src/components/site/Gallery.tsx",
+      "aspect_ratio": "16:10",
+      "recommended_role": "Flagship completed residential project",
+      "required": true
+    },
+    {
+      "slot_id": "gallery_secondary_1",
+      "file": "src/components/site/Gallery.tsx",
+      "aspect_ratio": "4:3",
+      "recommended_role": "Siding / envelope detail",
+      "required": true
+    },
+    {
+      "slot_id": "gallery_secondary_2",
+      "file": "src/components/site/Gallery.tsx",
+      "aspect_ratio": "4:3",
+      "recommended_role": "Exterior facade improvement",
+      "required": true
+    },
+    {
+      "slot_id": "gallery_secondary_3",
+      "file": "src/components/site/Gallery.tsx",
+      "aspect_ratio": "4:3",
+      "recommended_role": "Craftsmanship in progress / crew",
+      "required": true
+    },
+    {
+      "slot_id": "gallery_secondary_4",
+      "file": "src/components/site/Gallery.tsx",
+      "aspect_ratio": "3:2",
+      "recommended_role": "Gutter / fascia / architectural detail",
+      "required": true
+    },
+    {
+      "slot_id": "service_area_satellite",
+      "file": "src/components/site/ServiceArea.tsx",
+      "aspect_ratio": "4:3",
+      "recommended_role": "Regional satellite territory plate",
+      "required": true
+    }
+  ],
+  "content_slots": [
+    {
+      "field": "business_name",
+      "locations": [
+        "Header.tsx",
+        "Hero.tsx",
+        "Footer.tsx",
+        "index.tsx",
+        "privacy.tsx"
+      ]
+    },
+    {
+      "field": "telephone",
+      "format": "(XXX) XXX-XXXX",
+      "locations": [
+        "Header.tsx",
+        "Hero.tsx",
+        "ServiceArea.tsx",
+        "Footer.tsx",
+        "MobileCta.tsx",
+        "index.tsx"
+      ]
+    },
+    {
+      "field": "email",
+      "locations": [
+        "Planner.tsx",
+        "ServiceArea.tsx",
+        "Faq.tsx",
+        "Footer.tsx",
+        "index.tsx"
+      ]
+    },
+    {
+      "field": "service_area_label",
+      "locations": [
+        "Header.tsx",
+        "Hero.tsx",
+        "ServiceArea.tsx",
+        "Footer.tsx",
+        "index.tsx"
+      ]
+    },
+    {
+      "field": "operating_hours",
+      "locations": [
+        "Hero.tsx",
+        "ServiceArea.tsx",
+        "Footer.tsx",
+        "index.tsx"
+      ]
+    },
+    {
+      "field": "services_list",
+      "count": 6,
+      "locations": [
+        "Services.tsx",
+        "Planner.tsx",
+        "index.tsx"
+      ]
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot_id": "hero_status_ticker",
+      "component": "Hero.tsx",
+      "type": "operational_status"
+    },
+    {
+      "slot_id": "gallery_project_aside",
+      "component": "Gallery.tsx",
+      "type": "spec_sheet"
+    },
+    {
+      "slot_id": "planner_trust_rail",
+      "component": "Planner.tsx",
+      "type": "contractor_commitments"
+    },
+    {
+      "slot_id": "footer_promise_matrix",
+      "component": "Footer.tsx",
+      "type": "warranty_and_licensing"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "RoofingContractor",
+      "handler": "src/routes/index.tsx"
+    },
+    {
+      "type": "FAQPage",
+      "handler": "src/routes/index.tsx"
+    },
+    {
+      "type": "GeoCoordinates",
+      "handler": "src/routes/index.tsx"
+    },
+    {
+      "type": "OpeningHoursSpecification",
+      "handler": "src/routes/index.tsx"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "slot": "service_area_lead",
+      "component": "ServiceArea.tsx",
+      "query_type": "Who provides exterior services near [location]?"
+    },
+    {
+      "slot": "faq_storm_restoration",
+      "component": "Faq.tsx",
+      "query_type": "Do you handle emergency storm damage?"
+    },
+    {
+      "slot": "faq_free_inspection",
+      "component": "Faq.tsx",
+      "query_type": "How does a project start?"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "query": "Call Southern Home Improvements",
+      "target": "tel:+17627703269"
+    },
+    {
+      "query": "Get directions to Southern Home Improvements",
+      "target": "Google / Apple Maps deep links"
+    }
+  ],
+  "map_location_slot": {
+    "component": "src/components/site/ServiceArea.tsx",
+    "coordinates": {
+      "latitude": 33.5807,
+      "longitude": -85.0766
+    },
+    "google_maps_url_pattern": "https://www.google.com/maps/dir/?api=1&destination={lat},{lng}",
+    "apple_maps_url_pattern": "https://maps.apple.com/?daddr={lat},{lng}&dirflg=d"
+  },
+  "content_density": {
+    "overall": "Editorial high-craft density with generous whitespace and 1px architectural borders",
+    "minimal_sections": [
+      "Header",
+      "Hero",
+      "Footer Directions Bar"
+    ],
+    "dense_sections": [
+      "Services 6-cell grid",
+      "Gallery specs aside",
+      "Planner interactive widget"
+    ]
+  },
+  "mobile_rules": {
+    "header_logo_size": "72px",
+    "sticky_cta_scroll_threshold_px": 600,
+    "min_touch_target_px": 48,
+    "breakpoint_rules": {
+      "mobile": "Single column stacking, hero title at 44px, sticky pill CTA",
+      "tablet": "Two column services and gallery, hero title at 64px",
+      "desktop": "Three column services grid, 12-column editorial gallery, 5/7 split service area"
+    }
+  },
+  "non_negotiables": [
+    "Warm Cream (#F4EFE6) and Deep Ink (#163040) palette tokens must be preserved",
+    "Fraunces serif display typography for headings with -0.02em tracking",
+    "Logo size must remain >=72px in header and >=96px in footer",
+    "Hero film-slate marquee and registration marks must remain active",
+    "Services must maintain 6 lanes in a 1px hairline border grid",
+    "Both Google and Apple Maps direction triggers must be preserved with real coordinates"
+  ],
+  "safe_replacements": [
+    "business_name",
+    "phone_number",
+    "email_address",
+    "operating_hours",
+    "service_area_name",
+    "geographic_coordinates",
+    "hero_background_media",
+    "brand_logo_image",
+    "gallery_photos_and_metadata",
+    "satellite_map_image",
+    "service_lane_titles_and_descriptions",
+    "faq_questions_and_answers"
+  ],
+  "leak_terms": [
+    "Southern Home Improvements"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "ui-serif",
+      "Georgia",
+      "serif",
+      "Inter",
+      "ui-sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.97 0.012 85)",
+    "oklch(0.94 0.014 82)",
+    "oklch(0.99 0.006 85)",
+    "oklch(0.27 0.04 240)",
+    "oklch(0.20 0.035 240)",
+    "oklch(0.42 0.04 240)",
+    "oklch(0.62 0.16 42)",
+    "oklch(0.78 0.09 50)"
+  ],
+  "fonts": [
+    "Fraunces",
+    "ui-serif",
+    "Georgia",
+    "serif",
+    "Inter",
+    "ui-sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "0da9051c574d7aba78cc0d64a68fdd9d8a66e362d71eb4841b4edddb53c3288d",
+    "files": {
+      "assets/index-BXe4EABM.js": "4bdfeb12b928261ceef1c7a34fd2a3de86301d6b54c84756131ee3b7bd1d8c39",
+      "assets/index-CBop9eVO.css": "18f1edaabf5178c6041d6d2424cb2abb9a09256c3f023ffbba7a5a2244b357f1",
+      "index.html": "4425485c744672c2ffe27f403f1b68e634dd7d56dab659c3496dde7e5cfcdbf9"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

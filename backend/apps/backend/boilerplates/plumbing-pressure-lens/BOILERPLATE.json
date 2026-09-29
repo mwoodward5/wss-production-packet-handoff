@@ -1,0 +1,27 @@
+{
+  "templateName": "plumbing-pressure-lens",
+  "vertical": "plumbing",
+  "sanitizedAt": "2026-07-25T00:23:48.094Z",
+  "requiredTokens": [
+    "{{BUSINESS_NAME}}",
+    "{{OWNER_NAME}}",
+    "{{PHONE}}",
+    "{{EMAIL}}",
+    "{{DOMAIN}}",
+    "{{CITY}}",
+    "{{REGION}}",
+    "{{COUNTY}}",
+    "{{POSTAL}}",
+    "{{GEO}}",
+    "{{LICENSE}}",
+    "{{PROFILE_URL}}",
+    "{{LOGO_URL}}"
+  ],
+  "requiredAssets": [
+    "assets/copper-pressure-valve.webp",
+    "assets/porcelain-water-caustics.webp",
+    "assets/fonts/instrument-sans-latin.woff2",
+    "assets/fonts/instrument-serif-italic-latin.woff2"
+  ],
+  "notes": "Hydrate from this boilerplate only. Never re-forge from the donor build."
+}

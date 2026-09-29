@@ -1,0 +1,10 @@
+{
+  "logos": { "light": "logo-light.webp", "dark": "logo-dark.webp", "favicon": "favicon.png" },
+  "hero":  { "video": "hero.mp4", "poster": "hero-poster.webp" },
+  "gallery": ["gallery-1.webp", "gallery-2.webp", "gallery-3.webp", "gallery-4.webp", "gallery-5.webp", "gallery-6.webp"],
+  "services": {
+    "SLUG": { "card": "svc-SLUG.webp", "hd": "svc-SLUG-hd.webp" }
+  },
+  "badges": ["badge-1.webp", "badge-2.webp"],
+  "exifGps": { "apply": true, "lat": 0, "lng": 0 }
+}

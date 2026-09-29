@@ -1,0 +1,50 @@
+{
+ "id": "southern-charm-blueprint",
+ "source": "c3667c26-b681-47bc-9983-bad9c1f42efd",
+ "palette": {
+  "vars": {
+   "--cream": "oklch(0.97 0.012 85)",
+   "--cream-soft": "oklch(0.94 0.014 82)",
+   "--paper": "oklch(0.99 0.006 85)",
+   "--ink": "oklch(0.27 0.04 240)",
+   "--ink-deep": "oklch(0.20 0.035 240)",
+   "--ink-soft": "oklch(0.42 0.04 240)",
+   "--clay": "oklch(0.62 0.16 42)",
+   "--clay-soft": "oklch(0.78 0.09 50)",
+   "--line": "oklch(0.88 0.012 70)",
+   "--background": "var(--cream)",
+   "--foreground": "var(--ink)",
+   "--card": "var(--paper)",
+   "--card-foreground": "var(--ink)",
+   "--popover": "var(--paper)",
+   "--popover-foreground": "var(--ink)",
+   "--primary": "var(--ink)",
+   "--primary-foreground": "var(--cream)",
+   "--secondary": "oklch(0.93 0.013 75)",
+   "--secondary-foreground": "var(--ink)",
+   "--muted": "oklch(0.94 0.012 78)",
+   "--muted-foreground": "var(--ink-soft)",
+   "--accent": "var(--clay)",
+   "--accent-foreground": "var(--cream)",
+   "--destructive": "oklch(0.55 0.22 27)",
+   "--destructive-foreground": "oklch(0.99 0 0)",
+   "--border": "var(--line)",
+   "--input": "var(--line)",
+   "--ring": "var(--clay)"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "var(--ink)",
+   "--foreground": "var(--cream)"
+  }
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.5rem",
+ "shadows": [],
+ "keyframes": [],
+ "signatures": []
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/main.tsx",
+    "src/routes/index.tsx",
+    "src/wss-bridge.ts",
+    "src/hero-media.tsx",
+    "src/client-contract.d.ts",
+    "vite.wss.config.ts"
+  ],
+  "compilerOptions": { "allowJs": true, "checkJs": false }
+}

@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Explicitly allow AI / generative-search crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://mattressfurnitureoutletri.com/sitemap.xml
+
+# Block private build artifacts only
+Disallow: /admin/
+Disallow: /api/private/

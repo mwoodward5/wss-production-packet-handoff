@@ -1,0 +1,59 @@
+{
+ "id": "tryleadharvest",
+ "source": "2b2f61ef-16c0-4aea-af0a-92497f8dc9b5",
+ "palette": {
+  "vars": {
+   "--background": "oklch(0.16 0.012 260)",
+   "--foreground": "oklch(0.98 0.005 240)",
+   "--card": "oklch(0.19 0.015 260)",
+   "--card-foreground": "oklch(0.98 0.005 240)",
+   "--popover": "oklch(0.19 0.015 260)",
+   "--popover-foreground": "oklch(0.98 0.005 240)",
+   "--primary": "oklch(0.82 0.20 145)",
+   "--primary-foreground": "oklch(0.15 0.02 145)",
+   "--secondary": "oklch(0.24 0.02 260)",
+   "--secondary-foreground": "oklch(0.98 0.005 240)",
+   "--muted": "oklch(0.22 0.015 260)",
+   "--muted-foreground": "oklch(0.68 0.02 260)",
+   "--accent": "oklch(0.28 0.03 150)",
+   "--accent-foreground": "oklch(0.98 0.005 240)",
+   "--destructive": "oklch(0.65 0.22 25)",
+   "--destructive-foreground": "oklch(0.98 0.005 240)",
+   "--border": "oklch(1 0 0 / 8%)",
+   "--input": "oklch(1 0 0 / 10%)",
+   "--ring": "oklch(0.82 0.20 145)",
+   "--harvest": "oklch(0.82 0.20 145)",
+   "--harvest-glow": "oklch(0.88 0.22 135)",
+   "--hot": "oklch(0.68 0.24 25)",
+   "--warm": "oklch(0.80 0.17 75)",
+   "--cool": "oklch(0.65 0.02 260)"
+  },
+  "mode": "dark"
+ },
+ "fonts": {
+  "display": "Inter",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+ },
+ "radius": "0.75rem",
+ "shadows": [
+  "0 10px 40px -10px oklch(0.82 0.20 145 / 50%), inset 0 1px 0 oklch(1 0 0 / 20%)",
+  "0 16px 50px -10px oklch(0.82 0.20 145 / 65%), inset 0 1px 0 oklch(1 0 0 / 25%)"
+ ],
+ "keyframes": [
+  {
+   "name": "fade-up",
+   "css": "@keyframes fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "pulse-dot",
+   "css": "@keyframes pulse-dot { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "gradient-text",
+  "glow",
+  "gradient-heavy"
+ ]
+}

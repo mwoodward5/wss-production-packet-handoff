@@ -1,0 +1,306 @@
+{
+  "ok": true,
+  "version": "intake-genie-v2",
+  "job_id": "",
+  "status": "complete",
+  "scope": {
+    "supported": true,
+    "category": "roofing",
+    "message": ""
+  },
+  "facts": {
+    "name": "Jacksonville Roofing USA",
+    "city": "Jacksonville",
+    "state": "FL",
+    "category": "roofing",
+    "phone": "16872518405",
+    "email": "",
+    "website": "https://jacksonvilleroofingusa.com/",
+    "address": "",
+    "latlng": null,
+    "hours": null,
+    "booking_url": null,
+    "services": [
+      "Roofing \\\\",
+      "Roof \\\\",
+      "Cities Serviced",
+      "Extensive Services",
+      "Customer Service",
+      "Jacksonville Roofing USA"
+    ],
+    "socials": [
+      "https://www.facebook.com/Jacksonville-Roofing-USA-LLC-168725184055402/"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "name",
+      "value": "Jacksonville Roofing USA",
+      "source_type": "hint",
+      "source_url": "https://jacksonvilleroofingusa.com/",
+      "confidence": 0.8,
+      "observed_at": "2026-07-31T21:46:58.799Z"
+    },
+    {
+      "field": "city",
+      "value": "Jacksonville",
+      "source_type": "hint",
+      "source_url": "https://jacksonvilleroofingusa.com/",
+      "confidence": 0.85,
+      "observed_at": "2026-07-31T21:46:58.799Z"
+    },
+    {
+      "field": "state",
+      "value": "FL",
+      "source_type": "hint",
+      "source_url": "https://jacksonvilleroofingusa.com/",
+      "confidence": 0.85,
+      "observed_at": "2026-07-31T21:46:58.799Z"
+    },
+    {
+      "field": "category",
+      "value": "roofing",
+      "source_type": "classification",
+      "source_url": "https://jacksonvilleroofingusa.com/",
+      "confidence": 0.7,
+      "observed_at": "2026-07-31T21:46:58.799Z"
+    },
+    {
+      "field": "phone",
+      "value": "16872518405",
+      "source_type": "operator_verified",
+      "source_url": "https://jacksonvilleroofingusa.com/",
+      "confidence": 0.9,
+      "observed_at": "2026-07-31T21:46:58.799Z"
+    },
+    {
+      "field": "services",
+      "value": [
+        "Roofing \\\\",
+        "Roof \\\\",
+        "Cities Serviced",
+        "Extensive Services",
+        "Customer Service",
+        "Jacksonville Roofing USA"
+      ],
+      "source_type": "operator_verified",
+      "source_url": "https://jacksonvilleroofingusa.com/",
+      "confidence": 0.9,
+      "observed_at": "2026-07-31T21:46:58.799Z"
+    },
+    {
+      "field": "website",
+      "value": "https://jacksonvilleroofingusa.com/",
+      "source_type": "website",
+      "source_url": "https://jacksonvilleroofingusa.com/",
+      "confidence": 0.95,
+      "observed_at": "2026-07-31T21:46:58.799Z"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "logo",
+      "url": "https://jacksonvilleroofingusa.com/wp-content/uploads/2026/05/feat.jpg",
+      "label": "Logo candidate 1",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true,
+      "meta": {
+        "logo_evidence": "logo-markup"
+      }
+    },
+    {
+      "kind": "logo",
+      "url": "https://jacksonvilleroofingusa.com/wp-content/uploads/2026/05/Jacksonville-Roofing-USA-new.png",
+      "label": "Logo candidate 2",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": false,
+      "meta": {
+        "logo_evidence": "logo-markup"
+      }
+    },
+    {
+      "kind": "logo",
+      "url": "https://jacksonvilleroofingusa.com/wp-content/uploads/2026/05/feat.jpg,/wp-content/uploads/2026/05/feat.jpg",
+      "label": "Logo candidate 3",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": false,
+      "meta": {
+        "logo_evidence": "logo-markup"
+      }
+    },
+    {
+      "kind": "photo",
+      "url": "https://jacksonvilleroofingusa.com/",
+      "label": "Source photo 1",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true,
+      "meta": {
+        "treatment": "family-duotone"
+      }
+    },
+    {
+      "kind": "photo",
+      "url": "https://jacksonvilleroofingusa.com/wp-content/uploads/2026/04/Best-of-2026-Award-res.png",
+      "label": "Source photo 2",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true,
+      "width": 300,
+      "height": 376,
+      "hero_eligible": false,
+      "proof_eligible": false,
+      "meta": {
+        "treatment": "family-duotone",
+        "quality_status": "ambiance_fallback",
+        "fallback_to_ambiance": true,
+        "width": 300,
+        "height": 376,
+        "source_width": 300,
+        "source_height": 376,
+        "dimensions": {
+          "width": 300,
+          "height": 376
+        }
+      }
+    },
+    {
+      "kind": "photo",
+      "url": "https://jacksonvilleroofingusa.com/about-jacksonville-roofing-usa/",
+      "label": "Source photo 3",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true,
+      "meta": {
+        "treatment": "family-duotone"
+      }
+    },
+    {
+      "kind": "photo",
+      "url": "https://jacksonvilleroofingusa.com/contact-jacksonville-roofing-usa/",
+      "label": "Source photo 4",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true,
+      "meta": {
+        "treatment": "family-duotone"
+      }
+    },
+    {
+      "kind": "photo",
+      "url": "https://jacksonvilleroofingusa.com/roofing-services-jacksonville-fl/roofing-repair/",
+      "label": "Source photo 5",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true,
+      "meta": {
+        "treatment": "family-duotone"
+      }
+    },
+    {
+      "kind": "photo",
+      "url": "https://i.ytimg.com/vi_webp/8LqLQmmcXF4/maxresdefault.webp",
+      "label": "Source photo 6",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true,
+      "width": 1280,
+      "height": 720,
+      "meta": {
+        "treatment": "family-duotone",
+        "quality_status": "usable",
+        "fallback_to_ambiance": false,
+        "width": 1280,
+        "height": 720,
+        "source_width": 1280,
+        "source_height": 720,
+        "dimensions": {
+          "width": 1280,
+          "height": 720
+        }
+      }
+    },
+    {
+      "kind": "photo",
+      "url": "https://jacksonvilleroofingusa.com/roofing-services-jacksonville-fl/roofing-installation/",
+      "label": "Source photo 7",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true,
+      "meta": {
+        "treatment": "family-duotone"
+      }
+    },
+    {
+      "kind": "photo",
+      "url": "https://i.ytimg.com/vi_webp/1skaylIw5Nc/maxresdefault.webp",
+      "label": "Source photo 8",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true,
+      "width": 1280,
+      "height": 720,
+      "meta": {
+        "treatment": "family-duotone",
+        "quality_status": "usable",
+        "fallback_to_ambiance": false,
+        "width": 1280,
+        "height": 720,
+        "source_width": 1280,
+        "source_height": 720,
+        "dimensions": {
+          "width": 1280,
+          "height": 720
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "url": "https://jacksonvilleroofingusa.com/wp-content/uploads/2026/03/iStock-2162613011.mp4",
+      "label": "Source video 1",
+      "source": "business-site",
+      "origin": "business-evidence",
+      "approved": true
+    }
+  ],
+  "trust": {
+    "rating": null,
+    "review_count": null,
+    "reviews": []
+  },
+  "optimization": {
+    "seo_gaps": [
+      "local schema",
+      "service proof",
+      "answer-engine FAQ"
+    ],
+    "target_queries": [
+      "roofing Jacksonville, FL",
+      "roofing near me",
+      "best roofing Jacksonville"
+    ],
+    "schema_types": [
+      "LocalBusiness",
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "local_presence": {}
+  },
+  "cache": {
+    "hits": 0,
+    "misses": 1,
+    "key": "0d75b49a6cf7ba424731bfd2"
+  },
+  "preview": {
+    "job_id": "",
+    "status": "",
+    "url": "",
+    "error": "",
+    "qc": {}
+  },
+  "warnings": []
+}

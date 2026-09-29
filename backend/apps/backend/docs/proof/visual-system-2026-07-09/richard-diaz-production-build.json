@@ -1,0 +1,240 @@
+{
+  "ok": true,
+  "prospect_id": "richard-diaz-landscape",
+  "business_name": "Richard Diaz Landscape & Masonry",
+  "status": "previewed",
+  "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/e686HhDBao2PtWXofJW4HVZA/ghost-report.json",
+  "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/e686HhDBao2PtWXofJW4HVZA/",
+  "checkout_url": "https://ghost-agency-backend.vercel.app/api/checkout-link?token=eyJ2IjoxLCJleHAiOjE3ODc1MjM5NzU2MjEsImpvYl9pZCI6InNpdGVmb3JnZV9yaWNoYXJkLWRpYXotbGFuZHNjYXBlXzE3ODM2MzU5NzU2MTgiLCJwcm9zcGVjdF9pZCI6InJpY2hhcmQtZGlhei1sYW5kc2NhcGUiLCJidXNpbmVzc19uYW1lIjoiUmljaGFyZCBEaWF6IExhbmRzY2FwZSAmIE1hc29ucnkiLCJpbmR1c3RyeSI6ImxhbmRzY2FwaW5nIiwiY2l0eSI6Ik9yYW5nZSIsInN0YXRlIjoiQ0EifQ&sig=-g192wGsRyBYbhEqpMJCrnkA9yGFExjL19w5SohxL7Y",
+  "renderer": "05-build-v7",
+  "required_renderer": "05-build-v7",
+  "qc_passed": true,
+  "grade": "B",
+  "persistence": "live_upsert",
+  "truth_packet": {
+    "meta": {
+      "version": "goldilocks.v1",
+      "source": "https://richarddiazlandscaping.com/",
+      "bounded": true
+    },
+    "identity": {
+      "name": {
+        "value": "Richard Diaz Landscape & Masonry",
+        "confidence": 0.99
+      },
+      "phone": {
+        "value": "(714) 673-2643",
+        "confidence": 0.99
+      },
+      "address": {
+        "value": "633 North Heatherstone Drive, Orange, CA 92869",
+        "confidence": 0.98
+      },
+      "city": {
+        "value": "Orange",
+        "confidence": 0.99
+      },
+      "state": {
+        "value": "CA",
+        "confidence": 0.99
+      },
+      "category": {
+        "value": "landscaping",
+        "confidence": 0.99
+      }
+    },
+    "napConsistency": {
+      "consistent": false,
+      "checks": [
+        {
+          "field": "phone",
+          "match": false,
+          "site": "(480) 692-9646",
+          "other": "(714) 673-2643"
+        }
+      ],
+      "mismatches": [
+        {
+          "field": "phone",
+          "site": "(480) 692-9646",
+          "other": "(714) 673-2643"
+        }
+      ]
+    },
+    "logo": "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/IMG_3283-Richard-Diaz.png",
+    "photos": [
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/masonry-67f02b2002118-e1771881308671.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/custom-landscape-design-67f02b67e57ac.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s1.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s2-67f0258ed6d4d.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s3-67f0256fedb4a.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s4-67f0258c58c74.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s5-67f0258902f73.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s6.webp"
+    ],
+    "services": [
+      "Landscape design",
+      "Masonry",
+      "Hardscaping",
+      "Concrete",
+      "Retaining and block walls",
+      "Pavers",
+      "Outdoor kitchens and BBQs",
+      "Pergolas"
+    ],
+    "reviewThemes": {
+      "count": 33,
+      "themes": [],
+      "quotes": []
+    },
+    "opportunities": [
+      {
+        "type": "nap_mismatch",
+        "severity": "high",
+        "headline": "The website phone does not match the Google business profile",
+        "detail": "The site header shows (480) 692-9646 while the Google profile and primary contact use (714) 673-2643."
+      }
+    ],
+    "counts": {
+      "photos": 8,
+      "services": 8,
+      "reviews": 33
+    }
+  },
+  "dispatch": {
+    "mode": "http_dispatch",
+    "configured": true,
+    "ok": true,
+    "status": 200,
+    "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/e686HhDBao2PtWXofJW4HVZA/ghost-report.json",
+    "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/e686HhDBao2PtWXofJW4HVZA/",
+    "ready": true,
+    "renderer": "05-build-v7",
+    "required_renderer": "05-build-v7",
+    "qc_passed": true,
+    "grade": "B",
+    "score": 89,
+    "blocked": []
+  },
+  "prospect": {
+    "id": "richard-diaz-landscape",
+    "prospect_id": "richard-diaz-landscape",
+    "businessName": "Richard Diaz Landscape & Masonry",
+    "business_name": "Richard Diaz Landscape & Masonry",
+    "industry": "landscaping",
+    "city": "Orange",
+    "state": "CA",
+    "ownerEmail": "",
+    "email": "",
+    "phone": "(714) 673-2643",
+    "address": "633 North Heatherstone Drive, Orange, CA 92869",
+    "place_id": "",
+    "latlng": null,
+    "currentWebsite": "https://richarddiazlandscaping.com/",
+    "current_website": "https://richarddiazlandscaping.com/",
+    "services": [
+      "Landscape design",
+      "Masonry",
+      "Hardscaping",
+      "Concrete",
+      "Retaining and block walls",
+      "Pavers",
+      "Outdoor kitchens and BBQs",
+      "Pergolas"
+    ],
+    "source": "full-run",
+    "truth_packet": {
+      "meta": {
+        "version": "goldilocks.v1",
+        "source": "https://richarddiazlandscaping.com/",
+        "bounded": true
+      },
+      "identity": {
+        "name": {
+          "value": "Richard Diaz Landscape & Masonry",
+          "confidence": 0.99
+        },
+        "phone": {
+          "value": "(714) 673-2643",
+          "confidence": 0.99
+        },
+        "address": {
+          "value": "633 North Heatherstone Drive, Orange, CA 92869",
+          "confidence": 0.98
+        },
+        "city": {
+          "value": "Orange",
+          "confidence": 0.99
+        },
+        "state": {
+          "value": "CA",
+          "confidence": 0.99
+        },
+        "category": {
+          "value": "landscaping",
+          "confidence": 0.99
+        }
+      },
+      "napConsistency": {
+        "consistent": false,
+        "checks": [
+          {
+            "field": "phone",
+            "match": false,
+            "site": "(480) 692-9646",
+            "other": "(714) 673-2643"
+          }
+        ],
+        "mismatches": [
+          {
+            "field": "phone",
+            "site": "(480) 692-9646",
+            "other": "(714) 673-2643"
+          }
+        ]
+      },
+      "logo": "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/IMG_3283-Richard-Diaz.png",
+      "photos": [
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/masonry-67f02b2002118-e1771881308671.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/custom-landscape-design-67f02b67e57ac.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s1.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s2-67f0258ed6d4d.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s3-67f0256fedb4a.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s4-67f0258c58c74.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s5-67f0258902f73.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s6.webp"
+      ],
+      "services": [
+        "Landscape design",
+        "Masonry",
+        "Hardscaping",
+        "Concrete",
+        "Retaining and block walls",
+        "Pavers",
+        "Outdoor kitchens and BBQs",
+        "Pergolas"
+      ],
+      "reviewThemes": {
+        "count": 33,
+        "themes": [],
+        "quotes": []
+      },
+      "opportunities": [
+        {
+          "type": "nap_mismatch",
+          "severity": "high",
+          "headline": "The website phone does not match the Google business profile",
+          "detail": "The site header shows (480) 692-9646 while the Google profile and primary contact use (714) 673-2643."
+        }
+      ],
+      "counts": {
+        "photos": 8,
+        "services": 8,
+        "reviews": 33
+      }
+    },
+    "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/e686HhDBao2PtWXofJW4HVZA/ghost-report.json",
+    "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/e686HhDBao2PtWXofJW4HVZA/",
+    "checkout_url": "https://ghost-agency-backend.vercel.app/api/checkout-link?token=eyJ2IjoxLCJleHAiOjE3ODc1MjM5NzU2MjEsImpvYl9pZCI6InNpdGVmb3JnZV9yaWNoYXJkLWRpYXotbGFuZHNjYXBlXzE3ODM2MzU5NzU2MTgiLCJwcm9zcGVjdF9pZCI6InJpY2hhcmQtZGlhei1sYW5kc2NhcGUiLCJidXNpbmVzc19uYW1lIjoiUmljaGFyZCBEaWF6IExhbmRzY2FwZSAmIE1hc29ucnkiLCJpbmR1c3RyeSI6ImxhbmRzY2FwaW5nIiwiY2l0eSI6Ik9yYW5nZSIsInN0YXRlIjoiQ0EifQ&sig=-g192wGsRyBYbhEqpMJCrnkA9yGFExjL19w5SohxL7Y"
+  }
+}

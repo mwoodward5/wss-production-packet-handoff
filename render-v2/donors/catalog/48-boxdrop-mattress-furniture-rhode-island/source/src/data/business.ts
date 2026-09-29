@@ -1,0 +1,2 @@
+import {client} from '@/wss/bridge';
+export const business={name:client.identity.businessName,shortName:client.identity.businessName,url:client.identity.website,telephone:client.identity.phoneTel.slice(4),displayPhone:client.identity.phoneDisplay,smsHref:client.identity.phoneTel.replace('tel:','sms:'),mapDirectionsUrl:client.trust.mapUrl,address:{streetAddress:'',addressLocality:client.identity.city,addressRegion:client.identity.state,postalCode:''},financing:{headline:'',provider:''},disclaimers:{inventory:''}};

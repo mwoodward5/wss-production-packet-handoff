@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4A6CF7"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#08080B"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="64" y="62" width="64" height="64" rx="15" fill="#131318" stroke="#fff" stroke-opacity=".1"/>
+  <path d="M78 86l11 22 12-20 11 20 13-27" fill="none" stroke="url(#signal)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="125" cy="81" r="5" fill="#34D399"/>
+  <text x="146" y="94" fill="#F2F2F5" font-family="Arial, sans-serif" font-size="28" font-weight="700">WSS</text>
+  <text x="215" y="94" fill="#9B9AA4" font-family="monospace" font-size="14" letter-spacing="5">LABS</text>
+  <text x="64" y="218" fill="#F2F2F5" font-family="Arial, sans-serif" font-size="68" font-weight="800">Your website,</text>
+  <text x="64" y="292" fill="#A9A2FF" font-family="Arial, sans-serif" font-size="68" font-weight="800">built before you buy it.</text>
+  <text x="64" y="352" fill="#9B9AA4" font-family="Arial, sans-serif" font-size="24">A working preview and local plan first.</text>
+  <text x="64" y="388" fill="#9B9AA4" font-family="Arial, sans-serif" font-size="24">Managed activation starts at $199/month.</text>
+  <g transform="translate(686 126)">
+    <rect width="446" height="340" rx="12" fill="#16161D" stroke="#fff" stroke-opacity=".15"/>
+    <rect width="446" height="40" rx="12" fill="#111117"/>
+    <circle cx="22" cy="20" r="4" fill="#4B4A54"/><circle cx="36" cy="20" r="4" fill="#4B4A54"/><circle cx="50" cy="20" r="4" fill="#4B4A54"/>
+    <text x="72" y="25" fill="#777681" font-family="monospace" font-size="11">website preview</text>
+    <rect x="20" y="59" width="406" height="261" rx="7" fill="#EBEEE7"/>
+    <rect x="39" y="78" width="29" height="29" rx="5" fill="#315B3C"/>
+    <rect x="340" y="89" width="28" height="4" rx="2" fill="#11150F" fill-opacity=".18"/><rect x="381" y="89" width="28" height="4" rx="2" fill="#11150F" fill-opacity=".18"/>
+    <text x="39" y="151" fill="#11150F" font-family="Arial, sans-serif" font-size="30" font-weight="800">A clearer reason</text>
+    <text x="39" y="184" fill="#11150F" font-family="Arial, sans-serif" font-size="30" font-weight="800">to call.</text>
+    <rect x="275" y="124" width="132" height="123" rx="6" fill="#40644C"/>
+    <rect x="39" y="216" width="168" height="8" rx="3" fill="#667066" fill-opacity=".45"/>
+    <rect x="39" y="235" width="132" height="8" rx="3" fill="#667066" fill-opacity=".3"/>
+    <rect x="39" y="268" width="89" height="30" rx="5" fill="#315B3C"/>
+    <text x="59" y="288" fill="#F2F2F5" font-family="Arial, sans-serif" font-size="11" font-weight="700">GET A QUOTE</text>
+  </g>
+  <rect x="64" y="490" width="396" height="64" rx="8" fill="#131318" stroke="#34D399" stroke-opacity=".35"/>
+  <circle cx="91" cy="522" r="6" fill="#34D399"/>
+  <text x="112" y="518" fill="#F2F2F5" font-family="Arial, sans-serif" font-size="17" font-weight="700">Preview first. Nothing auto-published.</text>
+  <text x="112" y="540" fill="#6F6E79" font-family="monospace" font-size="11">wss-ai.com</text>
+</svg>

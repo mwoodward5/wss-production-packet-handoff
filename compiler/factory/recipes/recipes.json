@@ -1,0 +1,210 @@
+{
+  "version": "hero-kit-v1",
+  "source": "factory/recipes/lovable-kit/hero-kit-v1 (extracted from Mark's Lovable projects — zero credits spent)",
+  "note": "Hex values approximate the kit's oklch()/hsl() originals, clamped where needed to the renderer's accent-contrast bands. atmosphere[] lists the vanilla atmosphere-pack ids available to the Premier V8 renderer.",
+  "recipes": [
+    {
+      "id": "01_excavation_knk",
+      "verticals": [
+        "excavation",
+        "earthworks",
+        "demolition",
+        "septic",
+        "heavy-trades",
+        "industrial"
+      ],
+      "palette": {
+        "ink": "#211A10",
+        "bone": "#F0EBDF",
+        "accent": "#C98A2E",
+        "accent2": "#8A5A2B"
+      },
+      "fonts": null,
+      "atmosphere": [
+        "blueprint"
+      ],
+      "keyframes": {
+        "knk-marquee": "@keyframes knk-marquee{from{transform:translateX(0)}to{transform:translateX(-25%)}}",
+        "knk-drift": "@keyframes knk-drift{from{transform:translateX(0) translateY(0)}to{transform:translateX(-30px) translateY(-6px)}}"
+      },
+      "notes": "Full-bleed video + parallax + blueprint schematic SVG grid overlay (counter-parallax) + film grain + kinetic marquee + live yardage estimator. Blueprint overlay ported as the 'blueprint' pack; marquee/grain/estimator already exist in v7."
+    },
+    {
+      "id": "02_paving_hurley",
+      "verticals": [
+        "paving",
+        "sealcoating",
+        "concrete",
+        "asphalt",
+        "heritage-trades",
+        "roofing"
+      ],
+      "palette": {
+        "ink": "#14171D",
+        "bone": "#F7F4ED",
+        "accent": "#C2432B",
+        "accent2": "#5C6670"
+      },
+      "fonts": {
+        "display": "Fraunces",
+        "mono": "JetBrains Mono"
+      },
+      "atmosphere": [
+        "spotlight"
+      ],
+      "keyframes": {
+        "ken-burns": "@keyframes ken-burns{from{transform:scale(1) translate3d(0,0,0)}to{transform:scale(1.08) translate3d(-2%,1%,0)}}",
+        "topo-line": "@keyframes topo-line{from{stroke-dashoffset:400;opacity:0}to{stroke-dashoffset:0;opacity:1}}",
+        "lane-sweep": "@keyframes lane-sweep{from{transform:translateX(0)}to{transform:translateX(-50%)}}",
+        "atlas-route": "@keyframes atlas-route{from{stroke-dashoffset:100;opacity:0}to{stroke-dashoffset:0;opacity:1}}",
+        "reveal": "@keyframes reveal{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}"
+      },
+      "notes": "Mouse-reactive ember spotlight ported as the 'spotlight' pack (radial gradient tracks cursor, 600px circle). Ken Burns, grain, CountUp strip and service-atlas map already have v7 equivalents (kenburns keyframe, .grain, stat-row, service-map-pins family). Topo contour SVG + seasonal paving-window widget skipped: heavy, vertical-specific copy."
+    },
+    {
+      "id": "03_photography_xavier",
+      "verticals": [
+        "photography",
+        "videography",
+        "wedding",
+        "editorial",
+        "creative-services",
+        "luxury-events"
+      ],
+      "palette": {
+        "ink": "#171412",
+        "bone": "#F8F6F2",
+        "accent": "#D7A041",
+        "accent2": "#C7A46F"
+      },
+      "fonts": {
+        "display": "Cormorant Garamond | Playfair Display | Fraunces"
+      },
+      "atmosphere": [
+        "photo-stack"
+      ],
+      "keyframes": {
+        "fade-in": "@keyframes fade-in{from{opacity:0}to{opacity:1}}",
+        "fade-up": "@keyframes fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}",
+        "ken-burns": "@keyframes ken-burns{from{transform:scale(1)}to{transform:scale(1.06)}}"
+      },
+      "notes": "Rotating photo z-stack cycler ported as the 'photo-stack' pack — 3 stacked offset plates, timed crossfade (kit used 5 frames @ 5.2s; v7 uses 3 photos @ 4s per the port spec). Gold diagonal rules + signature card skipped (brand-specific ornament)."
+    },
+    {
+      "id": "04_roadside_video",
+      "verticals": [
+        "roadside",
+        "rv",
+        "tow",
+        "mobile-repair",
+        "emergency",
+        "24-7-service"
+      ],
+      "palette": {
+        "ink": "#0F1114",
+        "accent": "#F4C430",
+        "accent2": "#8FA3B0"
+      },
+      "fonts": null,
+      "atmosphere": [],
+      "keyframes": {
+        "soft-rise": "@keyframes soft-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}",
+        "sun-pulse": "@keyframes sun-pulse{0%,100%{opacity:1}50%{opacity:.5}}"
+      },
+      "notes": "Full-viewport video loop + trust strip — v7's flagship cinematic-video hero already covers this. Welcome-audio player (voice + 20% music bed, 900ms fades) RETIRED for the static renderer: needs per-client licensed audio assets and click-initiated playback UI; no honest deterministic fallback."
+    },
+    {
+      "id": "05_automotive_luxury",
+      "verticals": [
+        "automotive-luxury",
+        "transport",
+        "chauffeur",
+        "private-jet",
+        "yacht",
+        "high-ticket-services"
+      ],
+      "palette": {
+        "ink": "#0F0C0A",
+        "bone": "#F3EEE4",
+        "accent": "#C9A84C",
+        "accent2": "#8A6A2F",
+        "particle": "#C9A84C"
+      },
+      "fonts": {
+        "display": "Playfair Display | Cormorant | Fraunces"
+      },
+      "atmosphere": [
+        "gold-particles"
+      ],
+      "keyframes": {
+        "shimmer": "@keyframes shimmer{from{transform:translateX(-100%)}to{transform:translateX(100%)}}"
+      },
+      "notes": "GoldParticles canvas ported verbatim to vanilla as the 'gold-particles' pack: ~40 drifting particles, radial-glow + core dot, sine pulse, wrap at edges, RAF, accent-tinted via data-accent, removed under reduced-motion. Framer Motion staggered reveal covered by v7 .kinetic; radiating rings + frosted card skipped (ornament)."
+    },
+    {
+      "id": "06_beverage_immersive",
+      "verticals": [
+        "beverage",
+        "cpg-lifestyle",
+        "wellness-product",
+        "cosmetics",
+        "surf-brand",
+        "hospitality-experiential"
+      ],
+      "palette": {},
+      "fonts": null,
+      "atmosphere": [],
+      "keyframes": {},
+      "notes": "RETIRED for v7: the kit ships only the orchestrator — the 8 child components (~2000 lines: water surface, gyroscope, ripples, floating can) were never extracted and are brand-coupled to Coco Love. Not a service-business pattern; nothing deterministic to port."
+    },
+    {
+      "id": "07_fencing_estimator",
+      "verticals": [
+        "fencing"
+      ],
+      "palette": {
+        "ink": "#1A1F17",
+        "bone": "#CBB189",
+        "accent": "#946936",
+        "accent2": "#48604A",
+        "sage": "#B9C468"
+      },
+      "fonts": null,
+      "atmosphere": [
+        "atmosphere"
+      ],
+      "keyframes": {
+        "hero-kenburns": "@keyframes hero-kenburns{from{transform:scale(1) translate3d(0,0,0)}to{transform:scale(1.08) translate3d(-2%,1%,0)}}"
+      },
+      "notes": "AtmosphereLayers ported as the 'atmosphere' pack: 2 counter-drifting SVG-turbulence fog layers + anamorphic light-sweep (~13s cycle) + letterbox bars. Split-tone grade/vignette approximated by v7's existing .tint/.veil; 18 dust sprites folded into fog to stay in the pack's line budget. EstimatorWidget already lives in v7 as data-estimator (kept)."
+    },
+    {
+      "id": "08_wellness_minimal",
+      "verticals": [
+        "wellness",
+        "medical",
+        "spa",
+        "legal",
+        "finance",
+        "professional-services",
+        "cleaning",
+        "minimalist-premium"
+      ],
+      "palette": {
+        "card": "#FAF9F4",
+        "accent": "#2E8F63",
+        "accent2": "#6FA88B"
+      },
+      "fonts": {
+        "display": "Fraunces"
+      },
+      "atmosphere": [
+        "none"
+      ],
+      "keyframes": {
+        "rise": "@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}"
+      },
+      "notes": "The calm baseline — photo + gradient veil + eyebrow chip + soft rise, deliberately NO atmosphere pack. Maps to atmosphere id 'none' for wellness-adjacent trades (cleaning) where dense motion would feel wrong."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "generated_at": "2026-07-12",
+  "total_client_projects_available": 175,
+  "sites_processed_this_release": 2,
+  "sites": [
+    {
+      "slug": "knk-excavation",
+      "name": "KNK Earth Shapers",
+      "vertical": "excavation",
+      "source_project_id": "a7035343-579e-4d1b-a7b7-05c89cd706c7",
+      "live_url": "https://knk-earth-shapers.lovable.app",
+      "widgets": ["SchematicOverlay", "YardageEstimator", "CountUp", "Marquee"],
+      "assets_bytes": 31718000,
+      "pattern": "video-parallax + blueprint + live-estimator + marquee"
+    },
+    {
+      "slug": "oc-ride-luxury",
+      "name": "OC Ride Luxury",
+      "vertical": "luxury-transport",
+      "source_project_id": "5f381dcb-8440-4913-9389-25400f884f6d",
+      "live_url": "https://ride-luxe.lovable.app",
+      "widgets": ["GoldParticles"],
+      "assets_bytes": 210106,
+      "pattern": "ken-burns + particle-canvas + frosted-glass-card + gold-accent"
+    }
+  ],
+  "widgets_library": {
+    "estimators": ["YardageEstimator__knk"],
+    "marquees": ["Marquee__knk"],
+    "counters": ["CountUp__knk"],
+    "overlays": ["SchematicOverlay__knk"],
+    "particle-canvases": ["GoldParticles__ocride"]
+  },
+  "continuation": "Reply 'continue kit' or 'next batch' to add ~15 more sites per turn. Full list of 175 client projects staged in TODO.md."
+}

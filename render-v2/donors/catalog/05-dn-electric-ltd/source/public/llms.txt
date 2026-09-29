@@ -1,0 +1,34 @@
+# DN Electric LTD
+
+> Licensed and insured master electricians serving Longmont, Boulder, and the Colorado Front Range. Founded by Master Electrician Matthew Gracia.
+
+- Business: DN Electric LTD
+- Founder: Matthew Gracia, Master Electrician
+- Location: Longmont, CO 80501
+- Phone: (720) 417-0758
+- Email: scheduling@electricdn.com
+- Hours: Mon–Fri 8:00 AM – 6:00 PM; Sat–Sun by appointment
+- Primary service area (cities listed on electricdn.com): Longmont, Boulder, Loveland, Arvada, Frederick, Denver
+- Extended Front Range coverage available — confirm by phone
+- Licensed and insured for residential and commercial electrical work in Colorado
+
+## Services
+- /services/panel-upgrades — Residential panel upgrades and service changes
+- /services/ev-charger-installations — Level 2 home and business EV chargers (Tesla, Ford, Rivian compatible)
+- /services/lighting-design-and-installation — Light fixture installation and LED retrofits
+- /services/smart-home-and-ev-ready — Smart home wiring and integration, EV-ready rough-in
+- /services/battery-backup-and-generators — Whole-home battery backup and generator installation
+- /services/commercial-electrical — Tenant improvements, lighting retrofits, commercial panel work
+
+## Pages
+- / — Home
+- /services — All services
+- /about — Founder and company
+- /service-area — Cities served, with dedicated city landing pages
+- /service-areas/longmont-co — Longmont, CO
+- /service-areas/boulder-co — Boulder, CO
+- /service-areas/loveland-co — Loveland, CO
+- /service-areas/arvada-co — Arvada, CO
+- /service-areas/frederick-co — Frederick, CO
+- /service-areas/denver-co — Denver, CO
+- /contact — Free estimate form, with service-area routing

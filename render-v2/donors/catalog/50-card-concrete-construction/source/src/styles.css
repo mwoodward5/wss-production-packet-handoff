@@ -1,0 +1,360 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Card Concrete brand */
+  --brand: oklch(0.78 0.24 142);          /* #12C11A */
+  --brand-ink: oklch(0.18 0.02 240);
+  --ink: oklch(0.13 0.02 240);            /* #04080E */
+  --ink-2: oklch(0.2 0.015 240);
+  --paper: oklch(0.985 0 0);
+  --grit: oklch(0.86 0.005 240);
+  --grit-2: oklch(0.55 0.01 240);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.13 0.02 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.13 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.13 0.02 240);
+  --primary: oklch(0.78 0.24 142);
+  --primary-foreground: oklch(0.13 0.02 240);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.13 0.02 240);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-paper: var(--paper);
+  --color-grit: var(--grit);
+  --color-grit-2: var(--grit-2);
+  --font-display: "Archivo", "Inter", system-ui, sans-serif;
+}
+
+.font-display { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+/* Grade-line laser sweep */
+@keyframes grade-sweep {
+  0% { transform: translateX(-30%); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateX(130%); opacity: 0; }
+}
+.grade-sweep { animation: grade-sweep 6s ease-in-out infinite; }
+
+/* Concrete aggregate texture overlay */
+.concrete-grain {
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.04) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.03) 0 1px, transparent 2px),
+    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.05) 0 1px, transparent 2px),
+    radial-gradient(circle at 85% 15%, rgba(255,255,255,0.03) 0 1px, transparent 2px);
+  background-size: 180px 180px, 220px 220px, 260px 260px, 200px 200px;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grade-sweep { animation: none; opacity: 0.6; }
+}
+
+/* === Bespoke hero motion === */
+
+/* Laser scan line that travels top→bottom across the stage */
+@keyframes laser-scan {
+  0% { transform: translateY(-20%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(120%); opacity: 0; }
+}
+.laser-scan { animation: laser-scan 7s linear infinite; }
+
+/* Subtle wet-concrete sheen */
+@keyframes sheen {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.sheen { animation: sheen 9s ease-in-out infinite; }
+
+/* Dust / aggregate particle drift */
+@keyframes dust-drift {
+  0% { transform: translate3d(0,0,0); opacity: 0.0; }
+  20% { opacity: 0.7; }
+  100% { transform: translate3d(40px,-60px,0); opacity: 0; }
+}
+.dust-drift { animation: dust-drift 10s linear infinite; }
+
+/* Perspective slab-grid floor */
+.slab-floor {
+  background-image:
+    linear-gradient(to right, rgba(18,193,26,0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18,193,26,0.18) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+}
+
+/* Type stencil — etched on dark */
+.type-etched {
+  background: linear-gradient(180deg, #f4f6f8 0%, #cfd6dc 60%, #8a929a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+}
+
+/* Heavy spec-mark labels */
+.spec-mark {
+  font-family: var(--font-display);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .laser-scan, .sheen, .dust-drift { animation: none; }
+}
+
+/* === Horizontal grade laser (blueprint sweep) === */
+@keyframes grade-laser-h {
+  0% { transform: translateX(-10%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(110%); opacity: 0; }
+}
+.grade-laser-h { animation: grade-laser-h 5.5s ease-in-out infinite; }
+
+/* LED blink for live console */
+@keyframes led-blink {
+  0%, 60% { opacity: 1; box-shadow: 0 0 10px var(--brand); }
+  70%, 100% { opacity: 0.35; box-shadow: 0 0 2px var(--brand); }
+}
+.led-blink { animation: led-blink 1.8s ease-in-out infinite; }
+
+/* Blueprint paper texture */
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(18,193,26,0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18,193,26,0.10) 1px, transparent 1px),
+    linear-gradient(to right, rgba(18,193,26,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18,193,26,0.04) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+}
+
+/* Measurement ruler ticks (top + left edges of blueprint canvas) */
+.ruler-top {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255,255,255,0.45) 0 1px,
+    transparent 1px 24px
+  );
+}
+.ruler-left {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.45) 0 1px,
+    transparent 1px 24px
+  );
+}
+
+/* Diagonal hazard tape strip */
+.hazard-tape {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #12C11A 0 14px,
+    #04080E 14px 28px
+  );
+}
+
+/* Annotation line pulse */
+@keyframes anno-draw {
+  0% { stroke-dashoffset: 240; opacity: 0; }
+  20% { opacity: 1; }
+  60%, 100% { stroke-dashoffset: 0; opacity: 1; }
+}
+.anno-draw { stroke-dasharray: 240; animation: anno-draw 3.5s ease-out forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .grade-laser-h, .led-blink, .anno-draw { animation: none; }
+}
+
+/* Wet-concrete sheen for headline */
+@keyframes wet-sheen {
+  0% { background-position: -150% 0; }
+  100% { background-position: 250% 0; }
+}
+.wet-sheen {
+  background-image: linear-gradient(100deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255,255,255,0.18) 50%,
+    transparent 60%,
+    transparent 100%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: wet-sheen 7s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+/* Aggregate dust rising */
+@keyframes dust-rise {
+  0%   { transform: translate3d(0,0,0); opacity: 0; }
+  15%  { opacity: 0.6; }
+  100% { transform: translate3d(20px,-180px,0); opacity: 0; }
+}
+.dust-rise { animation: dust-rise 9s linear infinite; }
+
+/* Slab joint reveal — sequential expansion-joint draw */
+@keyframes joint-reveal {
+  0%   { transform: scaleX(0); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0.55; }
+}
+.joint-reveal { transform-origin: left center; animation: joint-reveal 1.6s ease-out forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wet-sheen, .dust-rise, .joint-reveal { animation: none; }
+}
+
+/* Offline fallback: retain donor font names; no provider request. */
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

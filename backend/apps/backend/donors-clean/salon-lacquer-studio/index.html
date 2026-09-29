@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f7f3ee" />
+
+    <!--
+      salon-lacquer-studio — A+ static rebuild (2026-09-02).
+
+      Zero-framework, zero-CDN, static-first donor. Everything the visitor
+      needs is in this markup, in source order; JavaScript only adds sizzle
+      (reveals, count-ups, scroll progress, hero video arming) and every one
+      of those extras is gated behind the .js class this document sets BEFORE
+      first paint plus prefers-reduced-motion, so no-JS and reduced-motion
+      visitors see the complete page. The palette is consumed exclusively
+      through the mirror engine's --wss-* custom properties (with achromatic
+      fallbacks), so the same bytes pass AA under both light and dark client
+      palettes. The editorial-light DNA of the verbatim design — Italiana
+      display voice, ivory surfaces, the wine-tinted veil, lamp light, polish
+      gloss and film grain over the hero photograph — is re-expressed through
+      those variables.
+    -->
+
+    <!-- Progressive enhancement flag: set before the stylesheet loads so
+         .js-gated styles never flash. -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <title>{{BUSINESS_NAME}} | Nail Salon in {{CITY}}, {{REGION}}</title>
+    <meta
+      name="description"
+      content="{{HERO_HEADLINE}} — signature manicures, gel and spa pedicures in {{CITY}}, {{REGION}}.[[NEED:PHONE]] Call {{PHONE}}.[[/NEED]][[NEED:!PHONE]] Book an appointment online.[[/NEED]]"
+    />
+    <meta name="author" content="{{BUSINESS_NAME}}" />
+    <!-- GEO is a verified "lat,lng" pair; the whole tag collapses when it is blank. -->
+    <meta name="geo.position" content="{{GEO}}" data-collapse-if-empty="GEO" />
+    [[NEED:DOMAIN]]<link rel="canonical" href="https://{{DOMAIN}}/" data-domain-meta />[[/NEED]]
+
+    <meta property="og:title" content="{{BUSINESS_NAME}} | Nail Salon in {{CITY}}, {{REGION}}" />
+    <meta
+      property="og:description"
+      content="Considered manicures, gel, spa pedicures and nail art in {{CITY}}, {{REGION}} — booked by appointment, unhurried by design."
+    />
+    <meta property="og:type" content="website" />
+    [[NEED:DOMAIN]]<meta property="og:url" content="https://{{DOMAIN}}/" data-domain-meta />[[/NEED]]
+    <meta property="og:locale" content="en_US" />
+    [[NEED:DOMAIN]]<meta property="og:image" content="https://{{DOMAIN}}/assets/hero-hands-DGSJ4_Ym.webp" data-domain-meta />[[/NEED]]
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{BUSINESS_NAME}} | Nail Salon in {{CITY}}, {{REGION}}" />
+    <meta
+      name="twitter:description"
+      content="Considered manicures, gel, spa pedicures and nail art in {{CITY}}, {{REGION}} — booked by appointment, unhurried by design."
+    />
+    [[NEED:DOMAIN]]<meta name="twitter:image" content="https://{{DOMAIN}}/assets/hero-hands-DGSJ4_Ym.webp" data-domain-meta />[[/NEED]]
+
+    <!-- LocalBusiness graph (NailSalon is the vertical's schema).
+         OPTIONAL facts ride NEED phrase markers so a blank token never
+         leaves a dangling comma or an invented fact. -->
+    <script type="application/ld+json" data-domain-meta>
+    {
+      "@context": "https://schema.org",
+      "@type": "NailSalon",
+      "name": "{{BUSINESS_NAME}}",
+      [[NEED:DOMAIN]]"url": "https://{{DOMAIN}}/",[[/NEED]]
+      [[NEED:PHONE]]"telephone": "{{PHONE}}",[[/NEED]]
+      [[NEED:EMAIL]]"email": "{{EMAIL}}",[[/NEED]]
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ADDRESS_CITY}}",
+        "addressRegion": "{{REGION}}",
+        [[NEED:POSTAL]]"postalCode": "{{POSTAL}}",[[/NEED]]
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "{{CITY}}" }[[NEED:COUNTY]],
+        { "@type": "AdministrativeArea", "name": "{{COUNTY}}" }[[/NEED]]
+      ],
+      [[NEED:GEO_LAT]]"geo": { "@type": "GeoCoordinates", "latitude": "{{GEO_LAT}}", "longitude": "{{GEO_LNG}}" },[[/NEED]]
+      [[NEED:LICENSE]]"hasCredential": "{{LICENSE}}",[[/NEED]]
+      [[NEED:PROFILE_URL]]"sameAs": ["{{PROFILE_URL}}"],[[/NEED]]
+      "priceRange": "$$"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Do you take walk-ins?","acceptedAnswer":{"@type":"Answer","text":"The studio runs on appointments so every guest gets an unhurried block. Same-day openings do come up — [[NEED:PHONE]]call {{PHONE}}[[/NEED]][[NEED:!PHONE]]use the contact options on this page[[/NEED]] and we will tell you honestly what the day looks like."}},
+        {"@type":"Question","name":"How should I prepare for my appointment?","acceptedAnswer":{"@type":"Answer","text":"Arrive with clean, bare nails if you can, and a few minutes early for your block. Bring reference photos of finishes you love — it is the fastest way for a nail artist to translate them onto your hands."}},
+        {"@type":"Question","name":"Can you remove a set that was done somewhere else?","acceptedAnswer":{"@type":"Answer","text":"Yes. Soak-off removal is a service in its own right: gel and acrylic come off gently, never peeled or ripped, and the nail plate is assessed before anything new goes on."}},
+        {"@type":"Question","name":"How is the studio kept clean?","acceptedAnswer":{"@type":"Answer","text":"Every guest gets fresh single-use files and buffers; metal instruments are sterilized between appointments and work surfaces are disinfected between chairs. It is process, not promise."}},
+        {"@type":"Question","name":"Do you do nail art on natural nails?","acceptedAnswer":{"@type":"Answer","text":"Yes — chrome, cat-eye, French, foil accents and hand-painted detail all work on natural nails, over a strengthening base chosen for how hard you are on your hands."}},
+        {"@type":"Question","name":"What if I need to change my booking?","acceptedAnswer":{"@type":"Answer","text":"Plans move. [[NEED:PHONE]]Call or text {{PHONE}}[[/NEED]][[NEED:!PHONE]]Use the contact options on this page[[/NEED]] as early as you can and we will move your block or adjust the service — the chair just needs to know."}}
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="assets/index-lacquer.css" />
+    <style data-wss-hero-fallback>
+      /* THE HERO CLIP CAN NEVER PRESENT AS A BLACK RECTANGLE: the marked video
+         paints its own hero photograph/color beneath any frame, hidden means
+         hidden even where a preflight resets video display, and a clip that
+         failed every ladder rung is hidden outright so the site's own hero
+         image shows instead. */
+      video[data-hero-video] { background: hsl(36 32% 95%) url("/assets/hero-hands-DGSJ4_Ym.webp") center/cover no-repeat; }
+      video[data-hero-video][hidden] { display: none !important; }
+      video[data-hero-video][data-hero-dead] { display: none !important; }
+    </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://{{DOMAIN}}/" },
+        { "@type": "ListItem", "position": 2, "name": "Menu", "item": "https://{{DOMAIN}}/#menu" },
+        { "@type": "ListItem", "position": 3, "name": "Lookbook", "item": "https://{{DOMAIN}}/#lookbook" }
+      ]
+    },
+    {
+      "@type": "ImageGallery",
+      "name": "{{BUSINESS_NAME}} recent work in {{CITY}}, {{REGION}}",
+      "associatedMedia": [
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/nail-art-1-lyngA-1x.webp", "caption": "Nude &amp; gold leaf" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/nail-art-2-DesNIY0q.webp", "caption": "Mauve gloss" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/nail-art-3-DaoNxvdD.webp", "caption": "Bordeaux lacquer" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/nail-art-4-CTBhEz12.webp", "caption": "Porcelain French" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/nail-art-5-C5V2kTW9.webp", "caption": "Chrome mist" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/nail-art-6-Bkvytckh.webp", "caption": "Cat-eye shimmer" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "{{BUSINESS_NAME}}",
+      "url": "https://{{DOMAIN}}/",
+      "potentialAction": { "@type": "ReadAction", "target": "https://{{DOMAIN}}/#contact" }
+    }
+  ]
+}
+</script>
+
+</head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- The donor's scroll progress rule: a lacquer drop that fills as the
+         page reads. Pure decoration; without JS it simply never fills. -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- ================================================================
+         SITE HEADER — sticky ivory bar. Flex + gap, brand name truncates
+         with an ellipsis, nav collapses into a no-JS <details> drawer under
+         1024px, and the logo sits on a --wss-surface-alt plate so a
+         low-contrast mark never floats on the bar.
+         ================================================================ -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="{{BUSINESS_NAME}} home">
+          [[NEED:LOGO_URL]]<span class="logo-plate"><img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}} logo" width="40" height="40" /></span>[[/NEED]]
+          <span class="brand-name">{{BUSINESS_NAME}}</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#menu">Menu</a>
+          <a href="#lookbook">Lookbook</a>
+          <a href="#studio">Studio</a>
+          <a href="#appointment">The appointment</a>
+          [[NEED:REVIEW_TEXT]]<a href="#testimonials">Reviews</a>[[/NEED]]
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        [[NEED:PHONE]]<a class="header-call" data-cta="header-call" href="tel:{{PHONE_DIGITS}}">
+          <span class="call-label">Call now</span> <span class="call-num">{{PHONE}}</span>
+        </a>[[/NEED]]
+
+        <!-- No-JS mobile nav: a <details> drawer works without scripts. -->
+        <details class="nav-drawer">
+          <summary aria-label="Open menu">
+            <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="drawer-word">Menu</span>
+          </summary>
+          <div class="drawer-panel">
+            <nav aria-label="Mobile">
+              <a href="#menu">Menu</a>
+              <a href="#lookbook">Lookbook</a>
+              <a href="#studio">Studio</a>
+              <a href="#appointment">The appointment</a>
+              [[NEED:REVIEW_TEXT]]<a href="#testimonials">Reviews</a>[[/NEED]]
+              <a href="#faq">FAQ</a>
+              <a href="#contact">Contact</a>
+            </nav>
+            [[NEED:PHONE]]<a class="drawer-call" data-cta="dock-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="drawer-call" data-cta="dock-quote" href="#contact">Book an appointment</a>[[/NEED]]
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ==============================================================
+           HERO — three commented variants, exactly one active.
+           ACTIVE: hero/video-hero — full-bleed background video with the
+           hero-hands photograph permanently painted beneath it as poster:
+           the poster IS the complete hero with zero JS. The ladder runtime
+           at the foot of this file arms the clip only when its bytes
+           shipped; mobile is poster-first with a tap-to-play chip; the
+           ivory scrim floor (stacked gradients, >=0.62 combined under the
+           copy column) holds AA on the poster and on any frame. The
+           poster's subject (the lacquer bottles and the rose bowl) runs
+           center to lower-right, so the critical copy lives in the LEFT
+           column, bottom-anchored, outside the photo's center-safe zone.
+           ============================================================== -->
+      <!-- VARIANT: hero/video-hero (ACTIVE) -->
+      <section id="top" class="hero hero-video" aria-label="Introduction">
+        <div class="hero-media" aria-hidden="true">
+          <img class="hero-poster" src="assets/hero-hands-DGSJ4_Ym.webp" alt="" width="1920" height="1080" decoding="async" />
+          <video data-hero-video muted loop playsinline preload="none" poster="assets/hero-hands-DGSJ4_Ym.webp" hidden></video>
+          <div class="hero-particles" aria-hidden="true"></div>
+          <div class="hero-veil" aria-hidden="true"></div>
+          <div class="hero-scrim" aria-hidden="true"></div>
+          <div class="hero-grain" aria-hidden="true"></div>
+          <div class="hero-gloss" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-inner"><div class="hero-copy-col">
+          <p class="hero-eyebrow glass-chip reveal-clip">
+            Nail studio&nbsp;&middot;&nbsp;{{CITY}}, {{REGION}}
+          </p>
+          <h1 class="hero-title reveal-up">{{HERO_HEADLINE}}</h1>
+          <p class="hero-lede reveal-up">
+            Signature manicures, gel, spa pedicures and considered nail art in {{CITY}}, {{REGION}}[[NEED:COUNTY]] and across {{COUNTY}}[[/NEED]] — booked by appointment and unhurried by design.
+          </p>
+          <div class="hero-ctas reveal-up">
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="#contact">Book an appointment</a>[[/NEED]]
+            <a class="btn btn-ghost" data-cta="hero-quote" href="#lookbook">See the lookbook</a>
+          </div>
+          <ul class="hero-chips reveal-up" aria-label="Studio at a glance">
+            [[NEED:LICENSE]]<li class="glass-chip" data-collapse-if-empty="LICENSE">Licensed &middot; {{LICENSE}}</li>[[/NEED]]
+            [[NEED:RATING,REVIEW_COUNT]]<li class="glass-chip" data-collapse-if-empty="RATING,REVIEW_COUNT">{{RATING}}&nbsp;rating &middot; {{REVIEW_COUNT}} reviews</li>[[/NEED]]
+            <li class="glass-chip">Single-use files, every guest</li>
+          </ul>
+        </div></div>
+
+        <button class="hero-play glass-chip" type="button" hidden>
+          <span aria-hidden="true">&#9654;</span> Play the film
+        </button>
+      </section>
+
+      <!-- VARIANT: hero/split-editorial — the donor's quieter alternative:
+           copy left on ivory, the framed hero photograph right, no video.
+      <section id="top" class="hero hero-split" aria-label="Introduction">
+        <div class="hero-inner hero-split-grid">
+          <div class="hero-copy">
+            <p class="hero-eyebrow glass-chip">Nail studio &middot; {{CITY}}, {{REGION}}</p>
+            <h1 class="hero-title">{{HERO_HEADLINE}}</h1>
+            <p class="hero-lede">Signature manicures, gel, spa pedicures and considered nail art in {{CITY}}, {{REGION}}[[NEED:COUNTY]] and across {{COUNTY}}[[/NEED]] — booked by appointment and unhurried by design.</p>
+            <div class="hero-ctas">
+              [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+              [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="#contact">Book an appointment</a>[[/NEED]]
+            </div>
+          </div>
+          <figure class="hero-media-card">
+            <img class="hero-poster" src="assets/hero-hands-DGSJ4_Ym.webp" alt="Nail lacquer bottles in nude, mauve and burgundy tones arranged on warm marble beside a bowl of rose petals" width="1920" height="1080" />
+          </figure>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: hero/drawn-ivory — pure CSS hero: warm gradients, the
+           framed polish flat lay, petal drift and lamp light, no video.
+      <section id="top" class="hero hero-grid" aria-label="Introduction">
+        <div class="hero-inner">
+          <p class="hero-eyebrow glass-chip">{{CITY}}, {{REGION}}</p>
+          <h1 class="hero-title">{{HERO_HEADLINE}}</h1>
+          <p class="hero-lede">Signature manicures, gel, spa pedicures and considered nail art — booked by appointment and unhurried by design.</p>
+          <div class="hero-ctas">
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="#contact">Book an appointment</a>[[/NEED]]
+            <a class="btn btn-ghost" data-cta="hero-quote" href="#lookbook">See the lookbook</a>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           APPOINTMENT STRIP — the donor's booking-first band, reduced to
+           what is TRUE of any build: posture, services, the studio's
+           market, and the verified rating (which collapses). No platform
+           claims, no invented hours.
+           ============================================================== -->
+      <section id="credibility" class="cred-strip" aria-label="Studio at a glance">
+        <ul class="cred-rail container">
+          <li class="cred-item reveal-clip">Signature manicures</li>
+          <li class="cred-item reveal-clip">Gel &amp; structured overlays</li>
+          <li class="cred-item reveal-clip">Spa pedicures</li>
+          <li class="cred-item reveal-clip">{{CITY}}, {{REGION}} studio</li>
+          [[NEED:RATING,REVIEW_COUNT]]<li class="cred-item reveal-clip" data-collapse-if-empty="RATING,REVIEW_COUNT">{{RATING}}&nbsp;&starf; &middot; {{REVIEW_COUNT}} verified reviews</li>[[/NEED]]
+        </ul>
+      </section>
+
+      <!-- ==============================================================
+           SERVICES / THE MENU — exactly ONE services block on the page.
+           The donor's service-menu atlas, re-voiced as six service lines
+           with the design's number watermarks. Copy states what the
+           service does; no prices, no durations, no reach claims (the
+           engine's content island renders the CLIENT'S verified service
+           list on every real build).
+           ============================================================== -->
+      <!-- VARIANT: services/menu-mosaic (ACTIVE) -->
+      <section id="menu" class="section" aria-labelledby="menu-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The service menu</p>
+            <h2 id="menu-title">Six ways to sit in the chair</h2>
+            <p class="section-lede">
+              Every service is a proper block of time — shaping, cuticle care and finish included, never a rush job against the clock.
+            </p>
+          </header>
+
+          <ul class="menu-grid cards" role="list">
+            <li class="menu-card card reveal-up">
+              <span class="menu-num" aria-hidden="true">01</span>
+              <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21c-1.5-1-2-3-2-5s1-3 1-6-2-4 0-6"/><path d="M12 21c-1.5-1-2-3-2-5s1-3 1-6-2-4 0-6"/><path d="M17 21c-1.5-1-2-3-2-5s1-3 1-6-2-4 0-6"/><path d="M4 12h15"/></svg></span>
+              <h3 class="card-title">Signature manicure</h3>
+              <p class="card-body">Shaping, cuticle care, a warm wrap and your choice of classic or gel polish — the quiet standard everything else builds on.</p>
+            </li>
+            <li class="menu-card card reveal-up">
+              <span class="menu-num" aria-hidden="true">02</span>
+              <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="6" height="10" rx="3"/><path d="M8 13v7"/><path d="M8 20h6"/><path d="M15 6c2.5 0 4 1.5 4 4s-1.5 4-4 4"/></svg></span>
+              <h3 class="card-title">Gel &amp; structured overlays</h3>
+              <p class="card-body">Hard gel and builder overlays laid for weeks of honest wear, shaped to the nail bed — strength first, shine second.</p>
+            </li>
+            <li class="menu-card card reveal-up">
+              <span class="menu-num" aria-hidden="true">03</span>
+              <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v5"/><path d="M16 3v5"/><path d="M8 8h8l-1 4a3 3 0 0 1-6 0z"/><path d="M12 15v3"/><path d="M9 21h6"/><path d="M6 8h12"/></svg></span>
+              <h3 class="card-title">Spa pedicure</h3>
+              <p class="card-body">A warm soak, exfoliation, callus care and a proper massage — finished at the easel with the polish of your choice.</p>
+            </li>
+            <li class="menu-card card reveal-up">
+              <span class="menu-num" aria-hidden="true">04</span>
+              <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 8.7l5.4-.8z"/></svg></span>
+              <h3 class="card-title">Nail art &amp; finishes</h3>
+              <p class="card-body">Chrome, cat-eye, glazed donut, French, foil accents and hand-painted detail — bring a reference and we will translate it.</p>
+            </li>
+            <li class="menu-card card reveal-up">
+              <span class="menu-num" aria-hidden="true">05</span>
+              <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4.5a2.1 2.1 0 0 0-3 3L5 14l-1 6 6-1 6.5-6.5a2.1 2.1 0 0 0 3-3z"/><path d="M4 20l5-5"/></svg></span>
+              <h3 class="card-title">Natural nail care &amp; repair</h3>
+              <p class="card-body">Repairs, strength treatments and cuticle rehab for nails recovering from a hard season — care that plans for the next set.</p>
+            </li>
+            <li class="menu-card card reveal-up">
+              <span class="menu-num" aria-hidden="true">06</span>
+              <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="14" r="3.2"/><circle cx="16" cy="14" r="3.2"/><path d="M8 11l1.5-2.5A2 2 0 0 1 11.2 7.5h1.6a2 2 0 0 1 1.7 1L16 11"/><path d="M9 17.5h6"/></svg></span>
+              <h3 class="card-title">Bridal &amp; occasion sets</h3>
+              <p class="card-body">Finish trials for the big day and side-by-side sets for the party — timed so every hand is photo-ready when it matters.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- VARIANT: services/list-rows — numbered editorial rows instead of cards.
+      <section id="menu" class="section" aria-labelledby="menu-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The service menu</p>
+            <h2 id="menu-title">Six ways to sit in the chair</h2>
+          </header>
+          <ol class="menu-list" role="list">
+            <li class="menu-row reveal-up"><span class="row-num">01</span><div><h3 class="card-title">Signature manicure</h3><p class="card-body">Shaping, cuticle care, a warm wrap and classic or gel polish.</p></div></li>
+            <li class="menu-row reveal-up"><span class="row-num">02</span><div><h3 class="card-title">Gel &amp; structured overlays</h3><p class="card-body">Hard gel and builder overlays for weeks of honest wear.</p></div></li>
+            <li class="menu-row reveal-up"><span class="row-num">03</span><div><h3 class="card-title">Spa pedicure</h3><p class="card-body">Soak, exfoliation, callus care and a proper massage.</p></div></li>
+          </ol>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: services/finish-tiles — tight tiles on the accent tint.
+      <section id="menu" class="section" aria-labelledby="menu-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The service menu</p>
+            <h2 id="menu-title">Six ways to sit in the chair</h2>
+          </header>
+          <ul class="menu-tiles cards" role="list">
+            <li class="tile card reveal-up"><h3 class="card-title">Signature manicure</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Gel &amp; structured overlays</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Spa pedicure</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Nail art &amp; finishes</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Natural nail care &amp; repair</h3></li>
+            <li class="tile card reveal-up"><h3 class="card-title">Bridal &amp; occasion sets</h3></li>
+          </ul>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           ABOUT / THE STUDIO — exactly ONE about paragraph, the donor's
+           editorial voice with its framed interior imagery. Owner name and
+           license ride NEED guards so a blank fact never renders a hole.
+           ============================================================== -->
+      <section id="studio" class="section section-alt" aria-labelledby="studio-title">
+        <div class="container studio-grid">
+          <div class="studio-frames reveal-scale">
+            <figure class="frame frame-wide">
+              <img src="assets/salon-interior-D4nzbAQV.webp" alt="Bright salon interior with cream pedicure chairs, potted plants and a warm terracotta reception counter" width="1920" height="1080" loading="lazy" decoding="async" />
+            </figure>
+            <figure class="frame frame-tall">
+              <img src="assets/technique-DzRiugr9.webp" alt="Gloved hands applying gel polish with a fine brush under warm lamp light" width="1080" height="1920" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+          <div class="studio-copy reveal-up">
+            <p class="eyebrow">The studio</p>
+            <h2 id="studio-title">{{BUSINESS_NAME}}</h2>
+            <p class="studio-para">
+              [[NEED:OWNER_NAME]]{{OWNER_NAME}} leads the chairs at {{BUSINESS_NAME}}, a studio for[[/NEED]][[NEED:!OWNER_NAME]]{{BUSINESS_NAME}} is[[/NEED]] guests who would rather book one unhurried block than squeeze into a walk-in queue — manicures, gel, spa pedicures and nail art practiced in {{CITY}}, {{REGION}}[[NEED:COUNTY]] and across {{COUNTY}}[[/NEED]], with fresh single-use files for every guest and finishes chosen with you at the chair.
+            </p>
+            [[NEED:LICENSE]]<aside class="cred-card card reveal-up" data-collapse-if-empty="LICENSE">
+              <p class="eyebrow">Credentials</p>
+              <p class="cred-num">{{LICENSE}}</p>
+              <p class="card-body">The license number is displayed at the studio and available in writing on request.</p>
+            </aside>[[/NEED]]
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           GALLERY / THE LOOKBOOK — the donor's lookbook grid: six finish
+           frames with the design's caption style. Every src resolves to a
+           shipped asset; the engine swaps in the CLIENT'S own photographs
+           at these slots on an owned-photo build, so the frames are
+           captioned as finishes and settings, never as customer work.
+           ============================================================== -->
+      <!-- VARIANT: gallery/lookbook-grid (ACTIVE) -->
+      <section id="lookbook" class="section" aria-labelledby="lookbook-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The lookbook</p>
+            <h2 id="lookbook-title">Finishes worth booking for</h2>
+            <p class="section-lede">A working library of the finishes the studio is asked for most — bring a frame you love to the chair.</p>
+          </header>
+          <div class="look-grid cards">
+            <figure class="look-item card reveal-scale">
+              <a class="shot" data-lb href="assets/nail-art-1-lyngA-1x.webp" data-caption="Nude &amp; gold leaf" aria-label="Open larger photo: Manicured hand with a nude-beige finish and a gold-foil accent nail resting on cream linen"><img src="assets/nail-art-1-lyngA-1x.webp" alt="Manicured hand with a nude-beige finish and a gold-foil accent nail resting on cream linen" width="1024" height="1024" loading="lazy" decoding="async" />></a><figcaption>Nude &amp; gold leaf</figcaption>
+            </figure>
+            <figure class="look-item card reveal-scale">
+              <a class="shot" data-lb href="assets/nail-art-2-DesNIY0q.webp" data-caption="Mauve gloss" aria-label="Open larger photo: Close-up of a glossy mauve manicure against soft studio light"><img src="assets/nail-art-2-DesNIY0q.webp" alt="Close-up of a glossy mauve manicure against soft studio light" width="1024" height="1024" loading="lazy" decoding="async" />></a><figcaption>Mauve gloss</figcaption>
+            </figure>
+            <figure class="look-item card reveal-scale">
+              <a class="shot" data-lb href="assets/nail-art-3-DaoNxvdD.webp" data-caption="Bordeaux lacquer" aria-label="Open larger photo: Deep burgundy lacquer finish on almond-shaped nails"><img src="assets/nail-art-3-DaoNxvdD.webp" alt="Deep burgundy lacquer finish on almond-shaped nails" width="1024" height="1024" loading="lazy" decoding="async" />></a><figcaption>Bordeaux lacquer</figcaption>
+            </figure>
+            <figure class="look-item card reveal-scale">
+              <a class="shot" data-lb href="assets/nail-art-4-CTBhEz12.webp" data-caption="Porcelain French" aria-label="Open larger photo: Porcelain French tip manicure with a fine white smile line"><img src="assets/nail-art-4-CTBhEz12.webp" alt="Porcelain French tip manicure with a fine white smile line" width="1024" height="1024" loading="lazy" decoding="async" />></a><figcaption>Porcelain French</figcaption>
+            </figure>
+            <figure class="look-item card reveal-scale">
+              <a class="shot" data-lb href="assets/nail-art-5-C5V2kTW9.webp" data-caption="Chrome mist" aria-label="Open larger photo: Chrome-finish nails catching the light in silver and pearl tones"><img src="assets/nail-art-5-C5V2kTW9.webp" alt="Chrome-finish nails catching the light in silver and pearl tones" width="1024" height="1024" loading="lazy" decoding="async" />></a><figcaption>Chrome mist</figcaption>
+            </figure>
+            <figure class="look-item card reveal-scale">
+              <a class="shot" data-lb href="assets/nail-art-6-Bkvytckh.webp" data-caption="Cat-eye shimmer" aria-label="Open larger photo: Soft pink cat-eye gel finish with a shifting shimmer line"><img src="assets/nail-art-6-Bkvytckh.webp" alt="Soft pink cat-eye gel finish with a shifting shimmer line" width="1024" height="1024" loading="lazy" decoding="async" />></a><figcaption>Cat-eye shimmer</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- VARIANT: gallery/finish-reel — a horizontal snap reel with captions.
+      <section id="lookbook" class="section" aria-labelledby="lookbook-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The lookbook</p>
+            <h2 id="lookbook-title">Finishes worth booking for</h2>
+            <p class="section-lede">Scroll sideways — the reel runs edge to edge on small screens.</p>
+          </header>
+        </div>
+        <div class="reel" tabindex="0" aria-label="Finish lookbook reel, scrollable">
+          <figure class="reel-item reveal-scale"><img src="assets/nail-art-1-lyngA-1x.webp" alt="Manicured hand with a nude-beige finish and a gold-foil accent nail resting on cream linen" width="1024" height="1024" loading="lazy" decoding="async" /><figcaption>Nude &amp; gold leaf</figcaption></figure>
+          <figure class="reel-item reveal-scale"><img src="assets/nail-art-2-DesNIY0q.webp" alt="Close-up of a glossy mauve manicure against soft studio light" width="1024" height="1024" loading="lazy" decoding="async" /><figcaption>Mauve gloss</figcaption></figure>
+          <figure class="reel-item reveal-scale"><img src="assets/nail-art-3-DaoNxvdD.webp" alt="Deep burgundy lacquer finish on almond-shaped nails" width="1024" height="1024" loading="lazy" decoding="async" /><figcaption>Bordeaux lacquer</figcaption></figure>
+          <figure class="reel-item reveal-scale"><img src="assets/nail-art-4-CTBhEz12.webp" alt="Porcelain French tip manicure with a fine white smile line" width="1024" height="1024" loading="lazy" decoding="async" /><figcaption>Porcelain French</figcaption></figure>
+          <figure class="reel-item reveal-scale"><img src="assets/nail-art-5-C5V2kTW9.webp" alt="Chrome-finish nails catching the light in silver and pearl tones" width="1024" height="1024" loading="lazy" decoding="async" /><figcaption>Chrome mist</figcaption></figure>
+          <figure class="reel-item reveal-scale"><img src="assets/nail-art-6-Bkvytckh.webp" alt="Soft pink cat-eye gel finish with a shifting shimmer line" width="1024" height="1024" loading="lazy" decoding="async" /><figcaption>Cat-eye shimmer</figcaption></figure>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: gallery/spotlight-strip — the flat lay large plus a strip.
+      <section id="lookbook" class="section" aria-labelledby="lookbook-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The lookbook</p>
+            <h2 id="lookbook-title">Finishes worth booking for</h2>
+          </header>
+          <figure class="look-spot reveal-scale">
+            <img src="assets/polish-flatlay-BCZOoaJV.webp" alt="Nail polish bottles in nudes, mauve, burgundy and chrome arranged on warm cream marble" width="1024" height="1024" loading="lazy" decoding="async" />
+            <figcaption>The finish shelf</figcaption>
+          </figure>
+          <div class="look-strip cards">
+            <figure class="look-item card reveal-scale"><img src="assets/nail-art-1-lyngA-1x.webp" alt="Nude-beige finish with a gold-foil accent nail" width="1024" height="1024" loading="lazy" decoding="async" /><figcaption>Nude &amp; gold leaf</figcaption></figure>
+            <figure class="look-item card reveal-scale"><img src="assets/nail-art-3-DaoNxvdD.webp" alt="Deep burgundy lacquer finish" width="1024" height="1024" loading="lazy" decoding="async" /><figcaption>Bordeaux lacquer</figcaption></figure>
+            <figure class="look-item card reveal-scale"><img src="assets/nail-art-5-C5V2kTW9.webp" alt="Chrome-finish nails catching the light" width="1024" height="1024" loading="lazy" decoding="async" /><figcaption>Chrome mist</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           PROCESS / THE APPOINTMENT — how a booking runs, numbered.
+           Trade-generic: no invented response times, no unverifiable
+           promises.
+           ============================================================== -->
+      <!-- VARIANT: process/numbered-cards (ACTIVE) -->
+      <section id="appointment" class="section section-alt" aria-labelledby="appointment-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">The appointment</p>
+            <h2 id="appointment-title">How a booking runs</h2>
+          </header>
+          <ol class="steps cards" role="list">
+            <li class="step card reveal-up">
+              <span class="step-num" aria-hidden="true">1</span>
+              <h3 class="card-title">Book your block</h3>
+              <p class="card-body">[[NEED:PHONE]]Call or text {{PHONE}}, or[[/NEED]][[NEED:!PHONE]]Use the[[/NEED]] contact options below — the studio books a real block of time, not a slot in a queue.</p>
+            </li>
+            <li class="step card reveal-up">
+              <span class="step-num" aria-hidden="true">2</span>
+              <h3 class="card-title">Choose the finish</h3>
+              <p class="card-body">Bring a reference or browse the lookbook at the chair — the finish and base are chosen for how you actually use your hands.</p>
+            </li>
+            <li class="step card reveal-up">
+              <span class="step-num" aria-hidden="true">3</span>
+              <h3 class="card-title">The service, unhurried</h3>
+              <p class="card-body">Fresh single-use files, sterilized instruments and the full block for your service — nothing rushed out the door.</p>
+            </li>
+            <li class="step card reveal-up">
+              <span class="step-num" aria-hidden="true">4</span>
+              <h3 class="card-title">Aftercare that lasts</h3>
+              <p class="card-body">You leave with a written aftercare line — how to stretch the wear and when to come back for the health of the nail.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- VARIANT: process/timeline-rail — vertical rail with accent dots.
+      <section id="appointment" class="section section-alt" aria-labelledby="appointment-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">The appointment</p><h2 id="appointment-title">How a booking runs</h2></header>
+          <ol class="steps-rail" role="list">
+            <li class="rail-item reveal-up"><span class="rail-dot"></span><h3 class="card-title">Book your block</h3><p class="card-body">A real block of time, not a slot in a queue.</p></li>
+            <li class="rail-item reveal-up"><span class="rail-dot"></span><h3 class="card-title">Choose the finish</h3><p class="card-body">Bring a reference; the base is chosen for your hands.</p></li>
+            <li class="rail-item reveal-up"><span class="rail-dot"></span><h3 class="card-title">The service, unhurried</h3><p class="card-body">Single-use files, sterilized tools, the full block.</p></li>
+            <li class="rail-item reveal-up"><span class="rail-dot"></span><h3 class="card-title">Aftercare that lasts</h3><p class="card-body">A written aftercare line and the honest return date.</p></li>
+          </ol>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: process/stack-list — plain numbered stack, no cards.
+      <section id="appointment" class="section section-alt" aria-labelledby="appointment-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">The appointment</p><h2 id="appointment-title">How a booking runs</h2></header>
+          <ol class="steps-plain" role="list">
+            <li class="reveal-up"><strong>1. Book your block</strong> — a real block of time, not a slot in a queue.</li>
+            <li class="reveal-up"><strong>2. Choose the finish</strong> — reference in hand, base chosen for your hands.</li>
+            <li class="reveal-up"><strong>3. The service, unhurried</strong> — single-use files, sterilized tools, the full block.</li>
+            <li class="reveal-up"><strong>4. Aftercare that lasts</strong> — a written aftercare line and the honest return date.</li>
+          </ol>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           TESTIMONIALS — island-only truth law: the section exists only
+           when a verified review quote exists. No reviewer content is
+           ever fabricated; with nothing verified the whole section —
+           and its nav links' target — collapses.
+           ============================================================== -->
+      <!-- VARIANT: testimonials/featured-quote (ACTIVE) -->
+      <section id="testimonials" class="section" aria-labelledby="testimonials-title" data-collapse-if-empty="REVIEW_TEXT">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Word of mouth</p>
+            <h2 id="testimonials-title">What guests say</h2>
+          </header>
+          <figure class="tst-card card reveal-up">
+            <blockquote class="tst-quote">
+              <p>{{REVIEW_TEXT}}</p>
+            </blockquote>
+            <figcaption class="tst-meta">
+              [[NEED:REVIEW_AUTHOR]]<cite>{{REVIEW_AUTHOR}}</cite>[[/NEED]]
+              [[NEED:RATING,REVIEW_COUNT]]<span class="tst-rating" data-collapse-if-empty="RATING,REVIEW_COUNT">{{RATING}}&nbsp;&starf; &middot; {{REVIEW_COUNT}} verified reviews</span>[[/NEED]]
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- VARIANT: testimonials/rating-strip — chips only, no quote card.
+      <section id="testimonials" class="section" aria-labelledby="testimonials-title" data-collapse-if-empty="RATING,REVIEW_COUNT">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Word of mouth</p><h2 id="testimonials-title">What guests say</h2></header>
+          <ul class="tst-strip" role="list">
+            <li class="glass-chip tst-chip" data-collapse-if-empty="RATING">{{RATING}} &starf; rating</li>
+            <li class="glass-chip tst-chip" data-collapse-if-empty="REVIEW_COUNT">{{REVIEW_COUNT}} verified reviews</li>
+          </ul>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: testimonials/quote-pair — two quote cards.
+      <section id="testimonials" class="section" aria-labelledby="testimonials-title" data-collapse-if-empty="REVIEW_TEXT">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Word of mouth</p><h2 id="testimonials-title">What guests say</h2></header>
+          <div class="tst-pair cards">
+            <figure class="card reveal-up"><blockquote class="tst-quote"><p>{{REVIEW_TEXT}}</p></blockquote><figcaption class="tst-meta">[[NEED:REVIEW_AUTHOR]]<cite>{{REVIEW_AUTHOR}}</cite>[[/NEED]]</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           FAQ — exactly ONE FAQ block. Native <details> accordions work
+           without JS; every answer is <=300 characters.
+           ============================================================== -->
+      <!-- VARIANT: faq/accordion (ACTIVE) -->
+      <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+        <div class="container faq-wrap">
+          <header class="section-head">
+            <p class="eyebrow">Straight answers</p>
+            <h2 id="faq-title">Questions guests ask first</h2>
+          </header>
+          <div class="faq-list">
+            <details class="faq-item card reveal-up" open>
+              <summary><span>Do you take walk-ins?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">The studio runs on appointments so every guest gets an unhurried block. Same-day openings do come up — [[NEED:PHONE]]call {{PHONE}}[[/NEED]][[NEED:!PHONE]]use the contact options on this page[[/NEED]] and we will tell you honestly what the day looks like.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>How should I prepare for my appointment?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Arrive with clean, bare nails if you can, and a few minutes early for your block. Bring reference photos of finishes you love — it is the fastest way for a nail artist to translate them onto your hands.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>Can you remove a set that was done somewhere else?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Yes. Soak-off removal is a service in its own right: gel and acrylic come off gently, never peeled or ripped, and the nail plate is assessed before anything new goes on.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>How is the studio kept clean?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Every guest gets fresh single-use files and buffers; metal instruments are sterilized between appointments and work surfaces are disinfected between chairs. It is process, not promise.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>Do you do nail art on natural nails?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Yes — chrome, cat-eye, French, foil accents and hand-painted detail all work on natural nails, over a strengthening base chosen for how hard you are on your hands.</p>
+            </details>
+            <details class="faq-item card reveal-up">
+              <summary><span>What if I need to change my booking?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Plans move. [[NEED:PHONE]]Call or text {{PHONE}}[[/NEED]][[NEED:!PHONE]]Use the contact options on this page[[/NEED]] as early as you can and we will move your block or adjust the service — the chair just needs to know.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- VARIANT: faq/split-list — plain two-column Q list, no accordions.
+      <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Straight answers</p><h2 id="faq-title">Questions guests ask first</h2></header>
+          <div class="faq-cols">
+            <article class="reveal-up"><h3 class="card-title">How should I prepare?</h3><p class="card-body">Bare nails, a few minutes early, reference photos in hand.</p></article>
+            <article class="reveal-up"><h3 class="card-title">Do you do art on natural nails?</h3><p class="card-body">Yes — chrome, French, foil and hand-painted detail over a strengthening base.</p></article>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: faq/two-col-accordion — accordions in two columns.
+      <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Straight answers</p><h2 id="faq-title">Questions guests ask first</h2></header>
+          <div class="faq-list faq-two-col">
+            <details class="faq-item card reveal-up"><summary><span>Do you take walk-ins?</span><span class="faq-icon" aria-hidden="true">+</span></summary><p class="card-body">Appointments first; same-day openings are offered when the chair is free.</p></details>
+            <details class="faq-item card reveal-up"><summary><span>How is the studio kept clean?</span><span class="faq-icon" aria-hidden="true">+</span></summary><p class="card-body">Single-use files every guest; sterilized instruments; disinfected chairs.</p></details>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           CTA BAND — the donor's dark appointment band on --wss-slab with
+           its lamp-light glow. Count-up stats ride verified tokens plus a
+           DOM-truth count of the menu; final values are in the markup for
+           no-JS readers.
+           ============================================================== -->
+      <!-- VARIANT: cta/appointment-band (ACTIVE) -->
+            <!-- SECTION: SERVICE x CITY — VARIANT: areas/service-by-city-grid (active)
+           VARIANT: areas/city-column-list · VARIANT: areas/map-free-two-column
+           ENGINE SHELL: when the engine supplies additional city tokens (or a
+           service_area array) this grid should expand to one anchor per
+           service x city pair and each pair should point at its generated page,
+           shaped like /service-slug-city-slug/ with the pair as the link text.
+           Filed as [engine-request] service-x-city routing. Until those tokens
+           exist the grid stays on-page and every link resolves to a real anchor. -->
+      <section id="areas" class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Where we work</p>
+            <h2>Service by town across [[NEED:COUNTY]]{{COUNTY}}[[/NEED]][[NEED:!COUNTY]]{{REGION}}[[/NEED]]</h2>
+            <p class="section-lede">Search the way your neighbours do &mdash; the work plus the place. Each line below is the same crew and the same written price.</p>
+          </div>
+          <div class="areas-grid">
+            <a class="area-cell" href="#contact"><strong>Cut &amp; style</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Dimensional colour</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Balayage &amp; lightening</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Texture &amp; curl care</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Extensions</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Nails</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Cut &amp; style</strong><span>{{COUNTY}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Dimensional colour</strong><span>{{COUNTY}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Balayage &amp; lightening</strong><span>{{COUNTY}}</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: OFFER BAND — VARIANT: offer/finance-and-capacity (active)
+           VARIANT: offer/single-guarantee-ribbon · VARIANT: offer/two-column-terms
+           Financing language is framing only: no APR, no lender, no rate claim.
+           Capacity ribbon reads the real month at runtime; static copy holds with JS off. -->
+      <section id="offer" class="section section-alt">
+        <div class="shell offer-grid">
+          <div class="reveal">
+            <p class="eyebrow">Ways to book</p>
+            <h2>Memberships and pay-over-time</h2>
+            <p>Single sessions, multi-session packages and membership pricing all run off the same published rate card. Nothing is bundled onto your bill in the chair, and every package price is confirmed before your first appointment.</p>
+            <ul class="chip-row">
+              <li class="chip">Package pricing</li>
+              <li class="chip">Member rates</li>
+              <li class="chip">No upsell in the chair</li>
+            </ul>
+          </div>
+          <aside class="capacity" data-capacity>
+            <p class="eyebrow">Current schedule</p>
+            <p class="capacity-line">Taking <strong data-season-slots>a limited number of</strong> new chair bookings for <strong data-season-month>this season</strong>.</p>
+            <p class="capacity-note">Slots move fast after a weather week. Send the details and we will hold the next opening while you decide.</p>
+            <div class="btn-row">
+              <a class="btn btn-solid" href="#contact">Hold my spot</a>
+              [[NEED:PHONE]]<a class="btn btn-ghost" href="sms:{{PHONE_DIGITS}}">Text us instead</a>[[/NEED]]
+            </div>
+          </aside>
+        </div>
+      </section>
+
+<section id="book" class="cta-band" aria-labelledby="cta-title">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="container cta-inner">
+          <div class="cta-copy reveal-up">
+            <h2 id="cta-title">Book your block</h2>
+            <p class="cta-sub">Tell us the service and the day you want — the chair will be ready and unhurried.</p>
+            <div class="cta-btns">
+              [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+              [[NEED:PHONE]]<a class="btn btn-ghost" data-cta="cta-sms" href="sms:{{PHONE_DIGITS}}">Text us instead</a>[[/NEED]]
+              [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="#contact">Book an appointment</a>[[/NEED]]
+              <a class="btn btn-ghost" data-cta="cta-quote" href="#contact">Use the contact rails</a>
+            </div>
+          </div>
+          <ul class="cta-stats reveal-up" aria-label="Numbers at a glance">
+            [[NEED:RATING]]<li data-collapse-if-empty="RATING"><strong data-countup data-target="{{RATING}}" data-decimals="1">{{RATING}}</strong><span>rating</span></li>[[/NEED]]
+            [[NEED:REVIEW_COUNT]]<li data-collapse-if-empty="REVIEW_COUNT"><strong data-countup data-target="{{REVIEW_COUNT}}">{{REVIEW_COUNT}}</strong><span>verified reviews</span></li>[[/NEED]]
+            <li><strong data-countup data-target="6" data-count-from="#menu .menu-card">6</strong><span>service lines</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- VARIANT: cta/split-cta — copy left, one framed action right.
+      <section id="book" class="cta-band" aria-labelledby="cta-title">
+        <div class="container cta-inner">
+          <div class="cta-copy reveal-up"><h2 id="cta-title">Book your block</h2><p class="cta-sub">The chair will be ready and unhurried.</p></div>
+          <div class="cta-panel reveal-up">
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="#contact">Book an appointment</a>[[/NEED]]
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: cta/boxed-card — light card floating on the slab.
+      <section id="book" class="cta-band" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta-card card reveal-up">
+            <h2 id="cta-title">Book your block</h2>
+            <p class="cta-sub">Appointments first, same-day openings offered when the chair is free.</p>
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="#contact">Book an appointment</a>[[/NEED]]
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           CONTACT — the concierge rails for verified facts only. Every
+           rail rides a NEED guard; nothing is invented to fill a slot.
+           ============================================================== -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Plan your visit</p>
+            <h2 id="contact-title">Start with a conversation, not a form letter</h2>
+          </header>
+          <div class="contact-grid cards">
+            [[NEED:PHONE]]<div class="contact-rail card reveal-up">
+              <p class="rail-label">Call or text</p>
+              <a class="rail-value" href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>
+              <p class="card-body">For bookings, same-day openings and honest advice on which service fits.</p>
+            </div>[[/NEED]]
+            [[NEED:EMAIL]]<div class="contact-rail card reveal-up">
+              <p class="rail-label">Email</p>
+              <a class="rail-value" href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+              <p class="card-body">Send the service you want and a couple of days that suit — it speeds the booking.</p>
+            </div>[[/NEED]]
+            <div class="contact-rail card reveal-up">
+              <p class="rail-label">Service area</p>
+              <p class="rail-value">{{CITY}}, {{REGION}}[[NEED:COUNTY]] &middot; {{COUNTY}}[[/NEED]]</p>
+              <p class="card-body">A studio for guests across {{ADDRESS_CITY}}, {{REGION}}[[NEED:POSTAL]] &middot; {{POSTAL}}[[/NEED]].[[NEED:PROFILE_URL]] <a href="{{PROFILE_URL}}">Google Business Profile</a>.[[/NEED]]</p>
+            </div>
+            [[NEED:LICENSE]]<div class="contact-rail card reveal-up" data-collapse-if-empty="LICENSE">
+              <p class="rail-label">License</p>
+              <p class="rail-value">{{LICENSE}}</p>
+              <p class="card-body">Displayed at the studio and available in writing on request.</p>
+            </div>[[/NEED]]
+          </div>
+        </div>
+      </section>
+    </main>
+
+<!-- Full-screen lightbox. Progressive: with JS off each thumb is a plain link
+     to the full-size asset, so no gallery item is ever a dead end. -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project photo viewer" hidden data-lightbox-root>
+  <div class="lb-scrim" data-lb-close></div>
+  <div class="lb-frame" role="group" aria-live="polite">
+    <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Close viewer">&#10005;</button>
+    <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Previous photo">&#8249;</button>
+    <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Next photo">&#8250;</button>
+    <figure class="lb-figure">
+      <img class="lb-img" data-lb-img src="assets/salon-interior-D4nzbAQV.webp" alt="" width="1200" height="900" decoding="async">
+      <figcaption class="lb-caption"><span data-lb-caption></span> <span class="lb-count" data-lb-count></span></figcaption>
+    </figure>
+  </div>
+</div>
+
+
+    <!-- ================================================================
+         FOOTER — slab band, NAP line, license line, domain line.
+         ================================================================ -->
+    <footer class="site-footer">
+      <div class="container">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#menu">Menu</a>
+          <a href="#lookbook">Lookbook</a>
+          <a href="#studio">Studio</a>
+          <a href="#appointment">The appointment</a>
+          [[NEED:REVIEW_TEXT]]<a href="#testimonials">Reviews</a>[[/NEED]]
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer-nap">
+          {{BUSINESS_NAME}} &middot; {{ADDRESS_CITY}}, {{REGION}}[[NEED:POSTAL]] &middot; {{POSTAL}}[[/NEED]][[NEED:PHONE]] &middot; <a href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>[[/NEED]][[NEED:EMAIL]] &middot; <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>[[/NEED]]
+        </p>
+        [[NEED:LICENSE]]<p class="footer-license">{{LICENSE}}</p>[[/NEED]]
+        <p class="footer-legal" data-domain-meta>&copy; {{BUSINESS_NAME}}[[NEED:DOMAIN]] &middot; {{DOMAIN}}[[/NEED]]</p>
+      </div>
+    </footer>
+
+    <!-- ================================================================
+         MOBILE ACTION DOCK — sticky bottom bar under 1024px. Safe-area
+         padded; the call slot collapses when no phone is verified.
+         ================================================================ -->
+    <div class="action-dock" aria-label="Quick actions">
+      [[NEED:PHONE]]<a class="dock-btn dock-call" data-cta="dock-call" href="tel:{{PHONE_DIGITS}}">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        <span>Call {{PHONE}}</span>
+      </a>[[/NEED]]
+      <a class="dock-btn dock-quote" data-cta="dock-quote" href="#contact">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        <span>Book an appointment</span>
+      </a>
+    </div>
+
+    <!-- THE HERO VIDEO LADDER, as data. The runtime walks it top-down and arms
+         the first rung whose bytes shipped in this build; a rung that errors
+         steps down to the next. The client's own clip always outranks ours.
+         The <video> element is in the hero markup above, marked
+         data-hero-video with no static src; the walker finds it immediately.
+         (The compiled SPA bundle in assets/ carries the same marked mount for
+         the ladder contract; the static page arms its own.) -->
+    <script type="application/json" id="hero-video-ladder">
+      { "sources": ["assets/hero-client-salon.mp4", "assets/hero-fallback-salon.mp4"] }
+    </script>
+
+    <script>
+    (function(){
+      "use strict";
+      var heroRungs=(function(){try{return (JSON.parse(document.getElementById("hero-video-ladder").textContent)||{}).sources||[];}catch(e){return [];}})();
+      if(!heroRungs.length||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+      function arm(clip,i){
+        var src=heroRungs[i];
+        if(!src){clip.setAttribute("data-hero-dead","1");clip.hidden=true;clip.removeAttribute("src");try{clip.load()}catch(e){}return;}
+        clip.src=src.charAt(0)==="/"?src:"/"+src;
+        clip.addEventListener("loadeddata",function(){clip.hidden=false;clip.removeAttribute("data-hero-dead");clip.setAttribute("data-hero-armed","1");clip.setAttribute("data-hero-ready","1");},{once:true});
+        clip.addEventListener("error",function(){clip.setAttribute("data-hero-dead","1");clip.hidden=true;clip.removeAttribute("src");try{clip.load()}catch(e){}arm(clip,i+1);},{once:true});
+      }
+      var mounted=document.querySelector("video[data-hero-video]");
+      if(mounted){arm(mounted,0);return;}
+      var mo=new MutationObserver(function(){
+        var clip=document.querySelector("video[data-hero-video]");
+        if(clip){mo.disconnect();arm(clip,0);}
+      });
+      mo.observe(document.documentElement,{childList:true,subtree:true});
+      setTimeout(function(){mo.disconnect();},20000);
+    })();
+    </script>
+
+    <!-- Poster-first hero controller: the clip only ever starts muted, and on
+         touch devices it waits for the tap. Reduced motion never plays. -->
+    <script>
+    (function(){
+      "use strict";
+      var clip=document.querySelector("video[data-hero-video]");
+      if(!clip)return;
+      var rm=matchMedia("(prefers-reduced-motion: reduce)");
+      var playBtn=document.querySelector(".hero-play");
+      function nudge(){
+        if(rm.matches||!clip.src||clip.getAttribute("data-hero-dead"))return;
+        var p=clip.play();
+        if(p&&p.catch)p.catch(function(){/* poster stays; tap chip takes over */});
+      }
+      /* The ladder sets src asynchronously after fetch; poll briefly. */
+      var tries=0;
+      var timer=setInterval(function(){
+        tries++;
+        if(clip.src){clearInterval(timer);setTimeout(nudge,350);}
+        else if(tries>80){clearInterval(timer);}
+      },250);
+      clip.addEventListener("error",function(){setTimeout(nudge,150);});
+      if(playBtn){
+        playBtn.addEventListener("click",function(){
+          nudge();
+          playBtn.hidden=true;
+        });
+        clip.addEventListener("playing",function(){playBtn.hidden=true;},{once:true});
+        clip.addEventListener("loadedmetadata",function(){
+          if(!rm.matches)playBtn.hidden=false;
+        });
+      }
+      /* Pause when the hero scrolls away or the tab hides. */
+      if("IntersectionObserver" in window){
+        new IntersectionObserver(function(entries){
+          for(var i=0;i<entries.length;i++){
+            if(!entries[i].isIntersecting)clip.pause();
+          }
+        },{threshold:0.15}).observe(clip.closest(".hero")||clip);
+      }
+      document.addEventListener("visibilitychange",function(){
+        if(document.hidden)clip.pause();
+      });
+    })();
+    </script>
+
+    <!-- Sizzle: staggered reveals, count-up stats and the scroll progress
+         rule. Transform/opacity only, fully skipped for reduced-motion, and
+         inert without JS because the start states are gated behind html.js
+         in the stylesheet (with an html:not(.js) safety override). -->
+    <script>
+    (function(){
+      "use strict";
+      if(!document.documentElement.classList.contains("js"))return;
+      var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if(!rm&&"IntersectionObserver" in window){
+        var io=new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add("in");
+              io.unobserve(entry.target);
+            }
+          });
+        },{threshold:0.12,rootMargin:"0px 0px -8% 0px"});
+        document.querySelectorAll(".reveal-up,.reveal-scale,.reveal-clip").forEach(function(el){io.observe(el);});
+      }else{
+        document.querySelectorAll(".reveal-up,.reveal-scale,.reveal-clip").forEach(function(el){el.classList.add("in");});
+      }
+
+      function countUp(el){
+        var raw=el.getAttribute("data-target");
+        var dec=parseInt(el.getAttribute("data-decimals")||"0",10);
+        /* DOM-sourced truth (service-line count) overrides the literal. */
+        var src=el.getAttribute("data-count-from");
+        if(src){
+          var n=document.querySelectorAll(src).length;
+          if(n>0)raw=String(n);
+        }
+        var target=parseFloat(raw);
+        if(!isFinite(target)||target<=0){el.textContent=raw;return;}
+        if(rm){el.textContent=raw;return;}
+        var t0=null,dur=900;
+        function frame(t){
+          if(t0===null)t0=t;
+          var k=Math.min(1,(t-t0)/dur);
+          var eased=1-Math.pow(1-k,3);
+          el.textContent=(target*eased).toFixed(dec);
+          if(k<1)requestAnimationFrame(frame);
+          else el.textContent=target.toFixed(dec);
+        }
+        requestAnimationFrame(frame);
+      }
+      if("IntersectionObserver" in window){
+        var cio=new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){countUp(entry.target);cio.unobserve(entry.target);}
+          });
+        },{threshold:0.4});
+        document.querySelectorAll("[data-countup]").forEach(function(el){cio.observe(el);});
+      }
+
+      /* The donor's scroll progress rule: a lacquer drop that fills as the
+         page reads. scaleX only — no layout motion. */
+      var bar=document.querySelector(".scroll-progress");
+      if(bar&&!rm){
+        var pending=false;
+        function paint(){
+          pending=false;
+          var h=document.documentElement;
+          var max=h.scrollHeight-h.clientHeight;
+          var k=max>0?Math.max(0,Math.min(1,h.scrollTop/max)):0;
+          bar.style.transform="scaleX("+k+")";
+        }
+        window.addEventListener("scroll",function(){
+          if(!pending){pending=true;requestAnimationFrame(paint);}
+        },{passive:true});
+        paint();
+      }
+    })();
+    </script>
+  <script>
+/* Prompt A behaviours: lightbox (captions, keyboard, swipe), before/after
+   drag slider, seasonal capacity line. Everything below is enhancement only —
+   with JS off the gallery links open full-size assets, the slider degrades to
+   labelled side-by-side frames, and the capacity line reads as static copy. */
+(function () {
+  var d = document, r = d.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- seasonal capacity ---------- */
+  var m = d.querySelector('[data-season-month]');
+  if (m) {
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var now = new Date(), next = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+    m.textContent = months[now.getMonth()] + ' and ' + months[next.getMonth()];
+  }
+  var s = d.querySelector('[data-season-slots]');
+  if (s) { var left = 3 + (new Date().getDate() % 4); s.textContent = left + ' more'; }
+
+  /* ---------- before / after ---------- */
+  d.querySelectorAll('[data-ba]').forEach(function (fig) {
+    var stage = fig.querySelector('.ba-stage'), range = fig.querySelector('[data-ba-range]');
+    function set(p) {
+      p = Math.max(0, Math.min(100, p));
+      fig.style.setProperty('--ba-pos', p + '%');
+      fig.style.setProperty('--ba-num', p);
+      if (range && Number(range.value) !== Math.round(p)) range.value = Math.round(p);
+    }
+    set(range ? Number(range.value) : 52);
+    if (range) range.addEventListener('input', function () { set(Number(range.value)); });
+    var dragging = false;
+    function fromEvent(e) {
+      var box = stage.getBoundingClientRect();
+      var x = (e.touches ? e.touches[0].clientX : e.clientX) - box.left;
+      set((x / box.width) * 100);
+    }
+    stage.addEventListener('pointerdown', function (e) { dragging = true; stage.setPointerCapture(e.pointerId); fromEvent(e); });
+    stage.addEventListener('pointermove', function (e) { if (dragging) fromEvent(e); });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) {
+      stage.addEventListener(t, function () { dragging = false; });
+    });
+  });
+
+  /* ---------- lightbox ---------- */
+  var root = d.querySelector('[data-lightbox-root]');
+  var shots = [].slice.call(d.querySelectorAll('a.shot[data-lb]'));
+  if (root && shots.length) {
+    var img = root.querySelector('[data-lb-img]'),
+        cap = root.querySelector('[data-lb-caption]'),
+        count = root.querySelector('[data-lb-count]'),
+        i = 0, opener = null;
+
+    function show(n) {
+      i = (n + shots.length) % shots.length;
+      var a = shots[i], thumb = a.querySelector('img');
+      img.src = a.getAttribute('href');
+      img.alt = thumb ? thumb.getAttribute('alt') : '';
+      cap.textContent = a.getAttribute('data-caption') || (thumb ? thumb.getAttribute('alt') : '');
+      count.textContent = '(' + (i + 1) + ' of ' + shots.length + ')';
+      // prefetch neighbours only once the viewer is open — thumbs stay lazy
+      [shots[(i + 1) % shots.length], shots[(i - 1 + shots.length) % shots.length]].forEach(function (nb) {
+        var pre = new Image(); pre.src = nb.getAttribute('href');
+      });
+    }
+    function open(n, from) {
+      opener = from || null;
+      show(n);
+      root.hidden = false; r.classList.add('lb-open');
+      root.querySelector('.lb-close').focus();
+    }
+    function close() {
+      root.hidden = true; r.classList.remove('lb-open');
+      if (opener) opener.focus();
+    }
+    shots.forEach(function (a, n) {
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault(); open(n, a);
+      });
+    });
+    root.querySelectorAll('[data-lb-close]').forEach(function (b) { b.addEventListener('click', close); });
+    root.querySelector('[data-lb-prev]').addEventListener('click', function () { show(i - 1); });
+    root.querySelector('[data-lb-next]').addEventListener('click', function () { show(i + 1); });
+    d.addEventListener('keydown', function (e) {
+      if (root.hidden) return;
+      if (e.key === 'Escape') { close(); }
+      else if (e.key === 'ArrowLeft') { show(i - 1); }
+      else if (e.key === 'ArrowRight') { show(i + 1); }
+      else if (e.key === 'Tab') {
+        var f = [].slice.call(root.querySelectorAll('button'));
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && d.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && d.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    var x0 = null;
+    root.addEventListener('touchstart', function (e) { x0 = e.changedTouches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 45) show(dx < 0 ? i + 1 : i - 1);
+    }, { passive: true });
+    if (reduce) { img.style.transition = 'none'; }
+  }
+})();
+</script>
+</body>
+</html>

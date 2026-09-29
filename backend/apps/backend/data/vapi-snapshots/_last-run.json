@@ -1,0 +1,24 @@
+{
+  "acceptDrift": false,
+  "assistants": [
+    {
+      "assistantId": "5b5e73a3-2bd7-4777-8233-077bf7ffddc6",
+      "assistantName": "Riley — Local Growth Concierge",
+      "baselinePreserved": false,
+      "changes": [
+        "prompt: 4223 -> 6858 chars (+2635, +62.4%)"
+      ],
+      "destructive": [],
+      "driftFile": null,
+      "snapshotFile": "5b5e73a3-2bd7-4777-8233-077bf7ffddc6.json",
+      "status": "additive",
+      "systemPromptChars": 6858,
+      "toolCount": 5
+    }
+  ],
+  "capturedAt": "2026-08-12T02:04:54.934Z",
+  "destructiveAssistants": 0,
+  "outDir": "C:\\Users\\Main\\Documents\\Dark Signal\\mirror-engine-lane\\apps\\backend\\data\\vapi-snapshots",
+  "result": "OK",
+  "shrinkThreshold": 0.3
+}

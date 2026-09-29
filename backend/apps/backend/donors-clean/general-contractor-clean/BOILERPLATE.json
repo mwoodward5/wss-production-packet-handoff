@@ -1,0 +1,131 @@
+{
+  "name": "general-contractor-clean",
+  "vertical": "General contractor / restoration",
+  "label": "Clean",
+  "lineage": "clean",
+  "donor_business_name": "Halden & Roe Contracting",
+  "donor_phone": "(208) 555-0173",
+  "donor_email": "office@haldenroe.com",
+  "donor_city": "Boise",
+  "donor_county": "Ada County",
+  "donor_domain": "haldenroe.com",
+  "persons": [
+    "Marcus Halden"
+  ],
+  "fabricated_persons": [],
+  "socials": [],
+  "zips": [
+    "83702"
+  ],
+  "geo": [],
+  "account_ids": [
+    "+12085550173",
+    "2085550173",
+    "208-555-0173",
+    "208.555.0173",
+    "haldenroe",
+    "ID-RCE-58117",
+    "dispatch@haldenroe.com",
+    "halden@haldenroe.com",
+    "https://maps.example.com/place/halden-roe-contracting"
+  ],
+  "identity_atoms_note": "The atoms declared here are this donor's fictional source identity (name, NAP, domain, license number, profile link) exactly as the a-plus build composed it. None of it appears in the installed bytes — the page is fully tokenized, every surface runs through {{BUSINESS_NAME}}/{{PHONE}}/{{LICENSE}} and friends — but the scan needs real needles so it can never return clean for arbitrary bytes, and so a future rebuild that reintroduces any of it is blocked rather than shipped. donor_city Boise and donor_county Ada County are PLACE atoms: a legitimate Boise, ID prospect is excused by the client-place carve-out (scan.js BF-5) because the words on the page are then the client's own verified truth.",
+  "requiredTokens": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "LICENSE",
+    "PROFILE_URL",
+    "LOGO_URL"
+  ],
+  "fictionalIdentity": {
+    "businessName": "Halden & Roe Contracting",
+    "owner": "Marcus Halden",
+    "phones": [
+      "+12085550173",
+      "208-555-0173",
+      "(208) 555-0173",
+      "208.555.0173"
+    ],
+    "emails": [
+      "office@haldenroe.com",
+      "dispatch@haldenroe.com",
+      "halden@haldenroe.com"
+    ],
+    "domain": "haldenroe.com",
+    "city": "Boise",
+    "region": "ID",
+    "county": "Ada County",
+    "postal": "83702",
+    "geo": "43.6150;-116.2023",
+    "license": "ID-RCE-58117",
+    "profileUrl": "https://maps.example.com/place/halden-roe-contracting",
+    "logoUrl": "assets/mark-fallback.svg"
+  },
+  "paletteDefaults": {
+    "accent": "#b4571f",
+    "accentInk": "#8d4316",
+    "accentText": "#ffffff",
+    "surface": "#ffffff",
+    "surfaceAlt": "#f5f2ee",
+    "slab": "#1d1611",
+    "slabInk": "#f8f4f0",
+    "text": "#1a1512",
+    "border": "#e0d8cf"
+  },
+  "variants": {
+    "hero": [
+      "hero/video",
+      "hero/split-right",
+      "hero/editorial-slab"
+    ],
+    "services": [
+      "services/bento",
+      "services/three-column-cards",
+      "services/list-rail"
+    ],
+    "gallery": [
+      "gallery/masonry-grid",
+      "gallery/before-after-pairs",
+      "gallery/wide-filmstrip"
+    ],
+    "testimonials": [
+      "testimonials/cards",
+      "testimonials/single-pullquote",
+      "testimonials/logo-and-quote-split"
+    ],
+    "process": [
+      "process/numeral-rail",
+      "process/vertical-timeline",
+      "process/two-up-steps"
+    ],
+    "faq": [
+      "faq/accordion",
+      "faq/two-column",
+      "faq/inline-list"
+    ],
+    "cta": [
+      "cta/panel",
+      "cta/full-bleed-slab",
+      "cta/split-form-and-call"
+    ],
+    "ticker": [
+      "ticker/marquee",
+      "ticker/static-chip-row",
+      "ticker/none"
+    ]
+  },
+  "heroVideo": {
+    "slot": "main > section.hero video[data-desktop-autoplay]",
+    "poster": "assets/hero-poster.svg",
+    "note": "Video variant is default when the engine has a clip; poster hero serves otherwise."
+  },
+  "engineInjectionPoint": "ENGINE INJECTION POINT comment immediately before <footer>"
+}

@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* CNT Automotive — rugged garage, charcoal steel + red accent */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 0 84% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 14 100% 55%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 0 84% 50%;
+
+    --steel: 220 6% 18%;
+    --steel-light: 220 5% 28%;
+    --signal: 14 100% 55%;
+
+    --radius: 0.25rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 10%) 60%, hsl(0 60% 12%) 100%);
+    --gradient-red: linear-gradient(135deg, hsl(0 84% 50%), hsl(14 100% 55%));
+    --gradient-steel: linear-gradient(180deg, hsl(0 0% 12%), hsl(0 0% 6%));
+    --shadow-deep: 0 30px 80px -20px hsl(0 0% 0% / 0.8);
+    --shadow-red: 0 20px 60px -15px hsl(0 84% 50% / 0.5);
+
+    --grid-line: hsl(0 0% 18% / 0.6);
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 84% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 0 84% 50%;
+  }
+
+  .dark { /* same; site is dark by default */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 96%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Oswald', 'Bebas Neue', Impact, sans-serif;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .bg-grid-dense {
+    background-image:
+      linear-gradient(to right, hsl(0 0% 20% / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(0 0% 20% / 0.4) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .text-stroke {
+    -webkit-text-stroke: 1px hsl(var(--primary));
+    color: transparent;
+  }
+  .diagonal-stripes {
+    background-image: repeating-linear-gradient(
+      45deg,
+      hsl(0 84% 50% / 0.15),
+      hsl(0 84% 50% / 0.15) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  }
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-red { background: var(--gradient-red); }
+  .gradient-steel { background: var(--gradient-steel); }
+  .shadow-deep { box-shadow: var(--shadow-deep); }
+  .shadow-red { box-shadow: var(--shadow-red); }
+
+  .carbon-weave {
+    background-color: hsl(0 0% 5%);
+    background-image:
+      repeating-linear-gradient(45deg, hsl(0 0% 12%) 0 2px, transparent 2px 6px),
+      repeating-linear-gradient(-45deg, hsl(0 0% 10%) 0 2px, transparent 2px 6px);
+  }
+  .chrome-text {
+    background: linear-gradient(180deg, #ffffff 0%, #e6e6e6 35%, #8a8a8a 55%, #f5f5f5 75%, #d4d4d4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 1px 0 hsl(0 0% 100% / 0.15);
+  }
+  .torque-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .torque-underline::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -0.15em;
+    height: 6px;
+    background: linear-gradient(90deg, transparent, hsl(0 84% 50%) 15%, hsl(14 100% 55%) 50%, hsl(0 84% 50%) 85%, transparent);
+    box-shadow: 0 0 24px hsl(0 84% 50% / 0.7);
+    clip-path: polygon(0 50%, 4% 0, 96% 0, 100% 50%, 96% 100%, 4% 100%);
+  }
+  @keyframes scanner-sweep {
+    0% { transform: translateY(-100%); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
+  .scanner-sweep {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 0%, hsl(0 84% 50% / 0.0) 45%, hsl(0 84% 55% / 0.55) 50%, hsl(0 84% 50% / 0.0) 55%, transparent 100%);
+    mix-blend-mode: screen;
+    animation: scanner-sweep 5.5s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes shine-slide {
+    0% { transform: translateX(-150%) skewX(-20deg); }
+    100% { transform: translateX(250%) skewX(-20deg); }
+  }
+  .cta-shine { position: relative; overflow: hidden; isolation: isolate; }
+  .cta-shine::before {
+    content: "";
+    position: absolute; top: 0; bottom: 0; width: 40%;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.45), transparent);
+    animation: shine-slide 2.8s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes pulse-glow {
+    0%,100% { box-shadow: 0 0 0 0 hsl(0 84% 50% / 0.6), 0 0 40px hsl(0 84% 50% / 0.3); }
+    50% { box-shadow: 0 0 0 8px hsl(0 84% 50% / 0), 0 0 60px hsl(0 84% 50% / 0.5); }
+  }
+  .pulse-glow { animation: pulse-glow 2.4s ease-in-out infinite; }
+
+  .hex-clip { clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%); }
+  .blade-clip { clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%); }
+}
+
+@media (max-width: 767px) {
+  .scanner-sweep,
+  .cta-shine::before { animation: none !important; display: none; }
+  .pulse-glow { animation: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .scanner-sweep, .cta-shine::before { display: none; }
+}
+
+

@@ -1,0 +1,338 @@
+{
+  "version": 2,
+  "key": "07-lucky-s-plumbing-services-donor",
+  "name": "Lucky's Plumbing Services Donor",
+  "category": "plumbing",
+  "vertical": "plumbing",
+  "requested_vertical": "plumbing",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "6d450437-c06f-4f80-8e04-f5ccb0ab2c4f",
+  "lovable_source_commit": "b2e11db31eeaea32c20fd31823dd3c5003ca83ee",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "6d450437-c06f-4f80-8e04-f5ccb0ab2c4f",
+    "ref": "b2e11db31eeaea32c20fd31823dd3c5003ca83ee",
+    "repository": "https://github.com/mwoodward5/lucky-plumbing-hero",
+    "git_tree": "db3146ff18eab071fdabf08b71d31d62feb07b90"
+  },
+  "classification": "CINEMATIC",
+  "routes": [
+    "/"
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "hsl(222 40% 7%)",
+      "foreground": "hsl(40 30% 95%)",
+      "primary": "hsl(36 28% 49%)",
+      "primary_foreground": "hsl(35 40% 8%)",
+      "secondary": "hsl(232 60% 47%)",
+      "secondary_foreground": "hsl(0 0% 100%)",
+      "card_glass": "linear-gradient(160deg, hsl(222 30% 12% / 0.94), hsl(222 35% 8% / 0.96))",
+      "gradient_copper": "linear-gradient(135deg, #8b6637, #caa772, #edd8b6)",
+      "border": "hsl(222 25% 18%)"
+    },
+    "typography": {
+      "display_font": "Fraunces, Georgia, serif",
+      "body_font": "Inter, system-ui, sans-serif",
+      "headline_tracking": "-0.02em",
+      "accent_tracking": "0.25em"
+    },
+    "geometry": {
+      "card_radius": "0.875rem",
+      "hero_clip_desktop": "polygon(0 0, 100% 0, 100% calc(100% - 72px), 64% 100%, 36% calc(100% - 32px), 0 calc(100% - 56px))",
+      "hero_clip_mobile": "polygon(0 0, 100% 0, 100% calc(100% - 36px), 70% 100%, 30% calc(100% - 20px), 0 calc(100% - 32px))"
+    }
+  },
+  "hero_contract": {
+    "grid": "lg:grid-cols-12",
+    "text_column_span": 7,
+    "dispatch_column_span": 5,
+    "has_asymmetric_clip": true,
+    "shaders": [
+      "water-mesh",
+      "aurora-layer",
+      "pressure-ring",
+      "pipe-flow",
+      "kinetic-marquee"
+    ],
+    "interactive_dispatch_console": true,
+    "cta_buttons": [
+      {
+        "type": "primary_gold_call",
+        "protocol": "tel"
+      },
+      {
+        "type": "secondary_glass_text",
+        "protocol": "sms"
+      }
+    ]
+  },
+  "media_slots": [
+    {
+      "slot_id": "brand_logo_header",
+      "section": "header",
+      "role": "logo",
+      "ideal_ratio": "free_aspect",
+      "css_treatment": "h-14 sm:h-16 md:h-20 w-auto object-contain drop-shadow"
+    },
+    {
+      "slot_id": "hero_background_underlay",
+      "section": "hero",
+      "role": "cinematic_video_or_photo",
+      "ideal_ratio": "16:9",
+      "css_treatment": "absolute inset-0 opacity-[0.13] mix-blend-luminosity object-cover"
+    },
+    {
+      "slot_id": "hero_dispatch_thumbnail",
+      "section": "hero_console",
+      "role": "work_detail",
+      "ideal_ratio": "16:9",
+      "css_treatment": "w-full h-52 md:h-60 object-cover"
+    },
+    {
+      "slot_id": "closing_cta_logo",
+      "section": "closing_cta",
+      "role": "logo_standalone",
+      "ideal_ratio": "free_aspect",
+      "css_treatment": "w-[190px] sm:w-[220px] h-auto object-contain drop-shadow"
+    },
+    {
+      "slot_id": "gallery_slots_01_to_12",
+      "section": "gallery",
+      "role": "project_proof_grid",
+      "ideal_ratio": "1:1",
+      "css_treatment": "aspect-square rounded-2xl object-cover hover:scale-105"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "facts.business_name",
+      "type": "string",
+      "selector": "[BUSINESS]"
+    },
+    {
+      "key": "facts.phone",
+      "type": "tel_string",
+      "selector": "[PHONE]"
+    },
+    {
+      "key": "facts.phone_digits",
+      "type": "digits",
+      "selector": "[PHONE_DIGITS]"
+    },
+    {
+      "key": "facts.email",
+      "type": "email_string",
+      "selector": "[EMAIL]"
+    },
+    {
+      "key": "facts.city",
+      "type": "string",
+      "selector": "[CITY]"
+    },
+    {
+      "key": "facts.state",
+      "type": "string",
+      "selector": "[STATE]"
+    },
+    {
+      "key": "rawContent.about",
+      "type": "text_block",
+      "selector": "[ABOUT]"
+    },
+    {
+      "key": "rawContent.services",
+      "type": "array_of_objects",
+      "selector": "services"
+    },
+    {
+      "key": "rawContent.hours",
+      "type": "array_of_objects",
+      "selector": "hours"
+    },
+    {
+      "key": "rawContent.faqs",
+      "type": "array_of_objects",
+      "selector": "faqs"
+    }
+  ],
+  "trust_slots": [
+    {
+      "id": "utility_rating",
+      "location": "top_bar_right"
+    },
+    {
+      "id": "status_badge",
+      "location": "hero_pill"
+    },
+    {
+      "id": "proof_chips",
+      "location": "hero_under_headline"
+    },
+    {
+      "id": "post_hero_strip",
+      "location": "post_hero_3_col"
+    },
+    {
+      "id": "contact_coverage_box",
+      "location": "contact_under_hours"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "PlumbingContractor",
+      "location": "index.html"
+    },
+    {
+      "type": "FAQPage",
+      "location": "src/pages/Index.tsx"
+    },
+    {
+      "type": "BreadcrumbList",
+      "location": "index.html"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "query": "service_area",
+      "placement": "contact_coverage_box"
+    },
+    {
+      "query": "brand_summary",
+      "placement": "hero_description_paragraph"
+    },
+    {
+      "query": "operating_hours",
+      "placement": "contact_hours_table"
+    },
+    {
+      "query": "service_scope",
+      "placement": "services_cards_and_footer"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "intent": "emergency_plumber_near_me",
+      "target_element": "hero_headline_and_primary_tel"
+    },
+    {
+      "intent": "hours_inquiry",
+      "target_element": "utility_bar_hours"
+    }
+  ],
+  "map_location_slot": {
+    "section": "contact",
+    "column": "right_hours_column",
+    "integration_type": "glass_metadata_card_with_google_place_link"
+  },
+  "content_density": {
+    "services_ideal_count": 6,
+    "services_max_count": 12,
+    "gallery_count": 12,
+    "faq_ideal_count": 5,
+    "process_steps": 4
+  },
+  "mobile_rules": {
+    "sticky_call_button": true,
+    "collapse_nav_to_sheet": true,
+    "hide_utility_bar": true,
+    "hero_grid_stack": true,
+    "gallery_columns": 2
+  },
+  "non_negotiables": [
+    "Retain Fraunces serif for headings and Inter sans for UI/body",
+    "Maintain gold (#8b6637/#edd8b6) and midnight obsidian palette with blue accents",
+    "Keep hero-clip asymmetric polygon geometry",
+    "Keep interactive issue router panel in hero",
+    "Never enclose logo inside a plain rectangular box",
+    "Ensure persistent bottom mobile Call CTA remains active on small screens"
+  ],
+  "safe_replacements": [
+    "business_name",
+    "logo_url",
+    "phone_and_sms_links",
+    "email_address",
+    "city_and_state",
+    "operating_hours",
+    "services_array",
+    "gallery_photos",
+    "faq_items",
+    "about_bio_copy"
+  ],
+  "leak_terms": [
+    "Lucky's Plumbing Services Donor"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "Georgia",
+      "serif",
+      "Inter",
+      "system-ui",
+      "sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "hsl(222 40% 7%)",
+    "hsl(40 30% 95%)",
+    "hsl(36 28% 49%)",
+    "hsl(35 40% 8%)",
+    "hsl(232 60% 47%)",
+    "hsl(0 0% 100%)",
+    "linear-gradient(160deg, hsl(222 30% 12% / 0.94), hsl(222 35% 8% / 0.96))",
+    "linear-gradient(135deg, #8b6637, #caa772, #edd8b6)"
+  ],
+  "fonts": [
+    "Fraunces",
+    "Georgia",
+    "serif",
+    "Inter",
+    "system-ui",
+    "sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "b399dd04a19bf37bb9eca0ca245f20d510e45904c43ca03e91b618a634272289",
+    "files": {
+      "assets/index-DzfATu6l.js": "fe781f8ad9e6c10a7aa2595792ca30343c01205fbdff03b9cc3ab6c3e9ac0214",
+      "assets/index-sEEKT58D.css": "d1ec06cbf94778ba4024ea0178c558ec500997cd432d9dd7540d2ed18f813982",
+      "index.html": "69e61fae285b1291d82863561d41fe3bc2d3827987abcf0e11779bd0c96f8945"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

@@ -1,0 +1,105 @@
+{
+ "id": "all-around-tree-care",
+ "source": "b76a5484-71f9-4759-8ad7-670034444bc8",
+ "palette": {
+  "vars": {
+   "--background": "oklch(0.985 0.012 85)",
+   "--foreground": "oklch(0.22 0.02 140)",
+   "--surface": "oklch(0.965 0.018 85)",
+   "--surface-elevated": "oklch(0.995 0.008 85)",
+   "--card": "oklch(0.985 0.012 85)",
+   "--card-foreground": "oklch(0.22 0.02 140)",
+   "--popover": "oklch(0.99 0.01 85)",
+   "--popover-foreground": "oklch(0.22 0.02 140)",
+   "--primary": "oklch(0.745 0.180 60)",
+   "--primary-foreground": "oklch(0.99 0.005 85)",
+   "--gold": "oklch(0.74 0.11 80)",
+   "--gold-soft": "oklch(0.86 0.07 85)",
+   "--secondary": "oklch(0.48 0.14 148)",
+   "--secondary-foreground": "oklch(0.98 0.012 85)",
+   "--muted": "oklch(0.93 0.015 85)",
+   "--muted-foreground": "oklch(0.42 0.025 135)",
+   "--accent": "oklch(0.74 0.11 80)",
+   "--accent-foreground": "oklch(0.22 0.02 140)",
+   "--destructive": "oklch(0.55 0.20 28)",
+   "--destructive-foreground": "oklch(0.98 0.012 85)",
+   "--border": "oklch(0.40 0.03 130 / 18%)",
+   "--input": "oklch(0.40 0.03 130 / 22%)",
+   "--ring": "oklch(0.74 0.11 80 / 60%)",
+   "--paper": "oklch(0.96 0.018 85)",
+   "--gradient-gold": "linear-gradient(135deg, oklch(0.86 0.10 85) 0%, oklch(0.72 0.12 70) 100%)",
+   "--gradient-burgundy": "linear-gradient(135deg, oklch(0.46 0.12 22) 0%, oklch(0.34 0.09 22) 100%)",
+   "--gradient-card": "linear-gradient(\n    160deg,\n    oklch(0.99 0.01 85) 0%,\n    oklch(0.95 0.018 85) 100%\n  )"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "oklch(0.18 0.015 140)",
+   "--foreground": "oklch(0.97 0.012 85)",
+   "--surface": "oklch(0.24 0.025 135)",
+   "--surface-elevated": "oklch(0.28 0.03 135)",
+   "--card": "oklch(0.24 0.025 135)",
+   "--card-foreground": "oklch(0.97 0.012 85)",
+   "--popover": "oklch(0.24 0.025 135)",
+   "--popover-foreground": "oklch(0.97 0.012 85)",
+   "--primary-foreground": "oklch(0.97 0.012 85)",
+   "--gold": "oklch(0.80 0.10 82)",
+   "--gold-soft": "oklch(0.88 0.07 85)",
+   "--secondary-foreground": "oklch(0.97 0.012 85)",
+   "--muted": "oklch(0.30 0.025 135)",
+   "--muted-foreground": "oklch(0.78 0.018 90)",
+   "--accent": "oklch(0.80 0.10 82)",
+   "--accent-foreground": "oklch(0.18 0.015 140)",
+   "--destructive-foreground": "oklch(0.97 0.012 85)",
+   "--border": "oklch(0.40 0.03 130 / 50%)",
+   "--input": "oklch(0.40 0.03 130 / 50%)",
+   "--ring": "oklch(0.80 0.10 82 / 60%)",
+   "--gradient-card": "linear-gradient(\n    160deg,\n    oklch(0.28 0.03 135) 0%,\n    oklch(0.22 0.025 135) 100%\n  )"
+  }
+ },
+ "fonts": {
+  "display": "Inter",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+ },
+ "radius": "0.875rem",
+ "shadows": [
+  "0 10px 40px -10px oklch(0.74 0.11 80 / 0.45)",
+  "0 25px 60px -20px oklch(0.30 0.04 140 / 0.25)",
+  "0 8px 30px -10px oklch(0.30 0.04 140 / 0.18)",
+  "0 18px 50px -10px oklch(0.82 0.13 88 / 0.6)"
+ ],
+ "keyframes": [
+  {
+   "name": "float-soft",
+   "css": "@keyframes float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }"
+  },
+  {
+   "name": "roof-trace",
+   "css": "@keyframes roof-trace { 0% { stroke-dasharray: 0 4000; opacity: 0; } 10% { opacity: 1; } 60% { stroke-dasharray: 4000 4000; opacity: 1; } 90% { stroke-dasharray: 4000 4000; opacity: 1; } 100% { stroke-dasharray: 4000 4000; opacity: 0.7; } }"
+  },
+  {
+   "name": "spark-rise",
+   "css": "@keyframes spark-rise { 0% { transform: translateY(0) scale(0.6); opacity: 0; } 10% { opacity: 0.9; } 90% { opacity: 0.9; } 100% { transform: translateY(-120px) scale(1.1); opacity: 0; } }"
+  },
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "shimmer",
+   "css": "@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }"
+  },
+  {
+   "name": "reveal-up",
+   "css": "@keyframes reveal-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }"
+  }
+ ],
+ "signatures": [
+  "gradient-text",
+  "marquee",
+  "glow",
+  "shimmer",
+  "float",
+  "gradient-heavy"
+ ]
+}

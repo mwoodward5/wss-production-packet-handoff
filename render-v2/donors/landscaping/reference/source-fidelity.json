@@ -1,0 +1,466 @@
+[
+  {
+    "width": 1440,
+    "diff": {},
+    "lovable": {
+      "title": "Greenfront Lawn & Landscape | Lawn Care Service in Birmingham, AL",
+      "hero": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "h1": [
+        32,
+        264.5,
+        789.328,
+        360
+      ],
+      "h1Text": "Lawn care,\narchitected\nfor Birmingham.",
+      "h1Css": {
+        "fontSize": "120px",
+        "lineHeight": "120px",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "backdropFilter": "none",
+        "border": "0px solid rgb(217, 222, 211)",
+        "shadow": "none"
+      },
+      "glass": [
+        853.328,
+        267,
+        554.672,
+        530
+      ],
+      "glassCss": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "background": "rgba(0, 0, 0, 0) linear-gradient(145deg, rgba(243, 241, 232, 0.13), rgba(243, 241, 232, 0.043)) repeat scroll 0% 0% / auto padding-box border-box",
+        "backdropFilter": "blur(22px) saturate(1.45)",
+        "border": "1px solid rgba(243, 241, 232, 0.18)",
+        "shadow": "rgba(243, 241, 232, 0.18) 0px 1px 0px 0px inset, rgba(9, 21, 13, 0.35) 0px 24px 70px 0px"
+      },
+      "animations": [
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "marquee",
+        "media-breathe",
+        "ping",
+        "ping",
+        "ping",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "spin"
+      ],
+      "sections": [
+        {
+          "id": "top",
+          "h": "Lawn care,\narchitected\nfor Birmingham."
+        },
+        {
+          "id": "",
+          "h": ""
+        },
+        {
+          "id": "services",
+          "h": "Lawn and landscape services, done with care."
+        },
+        {
+          "id": "gallery",
+          "h": "Real lawns, real landscapes."
+        },
+        {
+          "id": "",
+          "h": "A lawn that looks loved \u2014 week after week."
+        },
+        {
+          "id": "planner",
+          "h": "Seasonal Care Rhythm"
+        },
+        {
+          "id": "reviews",
+          "h": "Birmingham neighbors, in their words."
+        },
+        {
+          "id": "find-us",
+          "h": "Rooted in Birmingham."
+        },
+        {
+          "id": "",
+          "h": ""
+        },
+        {
+          "id": "faq",
+          "h": "Good to know."
+        },
+        {
+          "id": "",
+          "h": "Ready for a yard you actually look forward to seeing?"
+        }
+      ],
+      "video": [
+        {
+          "ready": 4,
+          "w": 1920,
+          "h": 1080,
+          "src": "https://greenfront-site-builder.lovable.app/__l5e/assets-v1/8d593daf-1e06-4be9-9758-acf6f2351ab9/greenfront-hero-motion.mp4",
+          "poster": "https://greenfront-site-builder.lovable.app/assets/hero-lawn-BktA-aJ_.jpg"
+        }
+      ],
+      "scroll": 1440,
+      "status": 200,
+      "errors": []
+    },
+    "local": {
+      "title": "Greenfront Lawn & Landscape | Lawn Care Service in Birmingham, AL",
+      "hero": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "h1": [
+        32,
+        264.5,
+        789.328,
+        360
+      ],
+      "h1Text": "Lawn care,\narchitected\nfor Birmingham.",
+      "h1Css": {
+        "fontSize": "120px",
+        "lineHeight": "120px",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "backdropFilter": "none",
+        "border": "0px solid rgb(217, 222, 211)",
+        "shadow": "none"
+      },
+      "glass": [
+        853.328,
+        267,
+        554.672,
+        530
+      ],
+      "glassCss": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "background": "rgba(0, 0, 0, 0) linear-gradient(145deg, rgba(243, 241, 232, 0.13), rgba(243, 241, 232, 0.043)) repeat scroll 0% 0% / auto padding-box border-box",
+        "backdropFilter": "blur(22px) saturate(1.45)",
+        "border": "1px solid rgba(243, 241, 232, 0.18)",
+        "shadow": "rgba(243, 241, 232, 0.18) 0px 1px 0px 0px inset, rgba(9, 21, 13, 0.35) 0px 24px 70px 0px"
+      },
+      "animations": [
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "marquee",
+        "media-breathe",
+        "ping",
+        "ping",
+        "ping",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "spin"
+      ],
+      "sections": [
+        {
+          "id": "top",
+          "h": "Lawn care,\narchitected\nfor Birmingham."
+        },
+        {
+          "id": "",
+          "h": ""
+        },
+        {
+          "id": "services",
+          "h": "Lawn and landscape services, done with care."
+        },
+        {
+          "id": "gallery",
+          "h": "Real lawns, real landscapes."
+        },
+        {
+          "id": "",
+          "h": "A lawn that looks loved \u2014 week after week."
+        },
+        {
+          "id": "planner",
+          "h": "Seasonal Care Rhythm"
+        },
+        {
+          "id": "reviews",
+          "h": "Birmingham neighbors, in their words."
+        },
+        {
+          "id": "find-us",
+          "h": "Rooted in Birmingham."
+        },
+        {
+          "id": "",
+          "h": ""
+        },
+        {
+          "id": "faq",
+          "h": "Good to know."
+        },
+        {
+          "id": "",
+          "h": "Ready for a yard you actually look forward to seeing?"
+        }
+      ],
+      "video": [
+        {
+          "ready": 4,
+          "w": 1920,
+          "h": 1080,
+          "src": "http://127.0.0.1:51444/hero-motion.mp4",
+          "poster": "http://127.0.0.1:51444/assets/hero-lawn-BktA-aJ_.jpg"
+        }
+      ],
+      "scroll": 1440,
+      "status": 200,
+      "errors": []
+    }
+  },
+  {
+    "width": 390,
+    "diff": {},
+    "lovable": {
+      "title": "Greenfront Lawn & Landscape | Lawn Care Service in Birmingham, AL",
+      "hero": [
+        0,
+        0,
+        390,
+        1279.563
+      ],
+      "h1": [
+        16,
+        180,
+        358,
+        147.563
+      ],
+      "h1Text": "Lawn care,\narchitected\nfor Birmingham.",
+      "h1Css": {
+        "fontSize": "60px",
+        "lineHeight": "49.2px",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "backdropFilter": "none",
+        "border": "0px solid rgb(217, 222, 211)",
+        "shadow": "none"
+      },
+      "glass": [
+        16,
+        670.563,
+        358,
+        545
+      ],
+      "glassCss": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "background": "rgba(0, 0, 0, 0) linear-gradient(145deg, rgba(243, 241, 232, 0.13), rgba(243, 241, 232, 0.043)) repeat scroll 0% 0% / auto padding-box border-box",
+        "backdropFilter": "blur(22px) saturate(1.45)",
+        "border": "1px solid rgba(243, 241, 232, 0.18)",
+        "shadow": "rgba(243, 241, 232, 0.18) 0px 1px 0px 0px inset, rgba(9, 21, 13, 0.35) 0px 24px 70px 0px"
+      },
+      "animations": [
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "marquee",
+        "media-breathe",
+        "ping",
+        "ping",
+        "ping",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "spin"
+      ],
+      "sections": [
+        {
+          "id": "top",
+          "h": "Lawn care,\narchitected\nfor Birmingham."
+        },
+        {
+          "id": "",
+          "h": ""
+        },
+        {
+          "id": "services",
+          "h": "Lawn and landscape services, done with care."
+        },
+        {
+          "id": "gallery",
+          "h": "Real lawns, real landscapes."
+        },
+        {
+          "id": "",
+          "h": "A lawn that looks loved \u2014 week after week."
+        },
+        {
+          "id": "planner",
+          "h": "Seasonal Care Rhythm"
+        },
+        {
+          "id": "reviews",
+          "h": "Birmingham neighbors, in their words."
+        },
+        {
+          "id": "find-us",
+          "h": "Rooted in Birmingham."
+        },
+        {
+          "id": "",
+          "h": ""
+        },
+        {
+          "id": "faq",
+          "h": "Good to know."
+        },
+        {
+          "id": "",
+          "h": "Ready for a yard you actually look forward to seeing?"
+        }
+      ],
+      "video": [
+        {
+          "ready": 4,
+          "w": 1920,
+          "h": 1080,
+          "src": "https://greenfront-site-builder.lovable.app/__l5e/assets-v1/8d593daf-1e06-4be9-9758-acf6f2351ab9/greenfront-hero-motion.mp4",
+          "poster": "https://greenfront-site-builder.lovable.app/assets/hero-lawn-BktA-aJ_.jpg"
+        }
+      ],
+      "scroll": 390,
+      "status": 200,
+      "errors": []
+    },
+    "local": {
+      "title": "Greenfront Lawn & Landscape | Lawn Care Service in Birmingham, AL",
+      "hero": [
+        0,
+        0,
+        390,
+        1279.563
+      ],
+      "h1": [
+        16,
+        180,
+        358,
+        147.563
+      ],
+      "h1Text": "Lawn care,\narchitected\nfor Birmingham.",
+      "h1Css": {
+        "fontSize": "60px",
+        "lineHeight": "49.2px",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "backdropFilter": "none",
+        "border": "0px solid rgb(217, 222, 211)",
+        "shadow": "none"
+      },
+      "glass": [
+        16,
+        670.563,
+        358,
+        545
+      ],
+      "glassCss": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "background": "rgba(0, 0, 0, 0) linear-gradient(145deg, rgba(243, 241, 232, 0.13), rgba(243, 241, 232, 0.043)) repeat scroll 0% 0% / auto padding-box border-box",
+        "backdropFilter": "blur(22px) saturate(1.45)",
+        "border": "1px solid rgba(243, 241, 232, 0.18)",
+        "shadow": "rgba(243, 241, 232, 0.18) 0px 1px 0px 0px inset, rgba(9, 21, 13, 0.35) 0px 24px 70px 0px"
+      },
+      "animations": [
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "glass-sweep",
+        "marquee",
+        "media-breathe",
+        "ping",
+        "ping",
+        "ping",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "reveal-up",
+        "spin"
+      ],
+      "sections": [
+        {
+          "id": "top",
+          "h": "Lawn care,\narchitected\nfor Birmingham."
+        },
+        {
+          "id": "",
+          "h": ""
+        },
+        {
+          "id": "services",
+          "h": "Lawn and landscape services, done with care."
+        },
+        {
+          "id": "gallery",
+          "h": "Real lawns, real landscapes."
+        },
+        {
+          "id": "",
+          "h": "A lawn that looks loved \u2014 week after week."
+        },
+        {
+          "id": "planner",
+          "h": "Seasonal Care Rhythm"
+        },
+        {
+          "id": "reviews",
+          "h": "Birmingham neighbors, in their words."
+        },
+        {
+          "id": "find-us",
+          "h": "Rooted in Birmingham."
+        },
+        {
+          "id": "",
+          "h": ""
+        },
+        {
+          "id": "faq",
+          "h": "Good to know."
+        },
+        {
+          "id": "",
+          "h": "Ready for a yard you actually look forward to seeing?"
+        }
+      ],
+      "video": [
+        {
+          "ready": 4,
+          "w": 1920,
+          "h": 1080,
+          "src": "http://127.0.0.1:51444/hero-motion.mp4",
+          "poster": "http://127.0.0.1:51444/assets/hero-lawn-BktA-aJ_.jpg"
+        }
+      ],
+      "scroll": 390,
+      "status": 200,
+      "errors": []
+    }
+  }
+]

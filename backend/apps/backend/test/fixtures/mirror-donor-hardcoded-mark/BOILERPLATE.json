@@ -1,0 +1,14 @@
+{
+  "name": "mirror-donor-hardcoded-mark",
+  "vertical": "roofing-hardcoded-mark-fixture",
+  "label": "Regression fixture - donor draws its OWN mark inline, exposes no {{LOGO_URL}} slot",
+  "wordmarkFill": "#f5f5f4",
+  "source": "synthetic:test-fixture",
+  "sanitised": "2026-07-31",
+  "donor_business_name": "Hardcoded Mark Roofing Co",
+  "donor_phone": "(999) 555-0001",
+  "donor_email": "hardcoded@example-donor.invalid",
+  "donor_city": "Markville",
+  "donor_domain": "example-hardcoded.invalid",
+  "notes": "Reproduces the live defect: /assets/client-logo.png was written and served (HTTP 200) while the rendered header logo was byte-identical across two different companies. Never fix this fixture - it must keep failing."
+}

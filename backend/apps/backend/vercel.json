@@ -1,0 +1,158 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "codex/**": false,
+      "design/**": false,
+      "zcode/**": false,
+      "chatgpt/**": false
+    }
+  },
+  "ignoreCommand": "git rev-parse --verify HEAD^ >/dev/null 2>&1 && git diff --quiet HEAD^ HEAD -- . ../../.vercelignore ../../packages/wss-brand-system",
+  "env": {
+    "GHOST_AGENCY_MIRROR_TIMEOUT_MS": "600000",
+    "GHOST_AGENCY_LIGHT_VERIFICATION": "1",
+    "INTAKE_GENIE_COMPILE_CONCURRENCY": "25",
+    "GHOST_AGENCY_IMMUTABLE_PACKET": "0",
+    "GHOST_AGENCY_LINE_TELEMETRY": "reduced"
+  },
+  "cleanUrls": true,
+  "functions": {
+    "api/admin/build-preview.js": {
+      "maxDuration": 800
+    },
+    "api/admin/owner-smoke.js": {
+      "maxDuration": 800
+    },
+    "api/admin/full-run.js": {
+      "maxDuration": 800
+    },
+    "api/admin/line.js": {
+      "maxDuration": 800
+    },
+    "api/cron/nightly-pipeline.js": {
+      "maxDuration": 800
+    },
+    "api/queues/line-batch.js": {
+      "maxDuration": 800,
+      "experimentalTriggers": [
+        {
+          "type": "queue/v2beta",
+          "topic": "ghost-line-batches-v1",
+          "maxConcurrency": 10,
+          "retryAfterSeconds": 60,
+          "initialDelaySeconds": 0
+        }
+      ]
+    },
+    "api/cron/run-line-batches.js": {
+      "maxDuration": 800
+    },
+    "api/**/*.js": {
+      "maxDuration": 300
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/console",
+      "destination": "/api/admin/console"
+    },
+    {
+      "source": "/factory-os",
+      "destination": "/api/factory-os"
+    },
+    {
+      "source": "/gallery",
+      "destination": "/api/admin/gallery"
+    },
+    {
+      "source": "/campaigns",
+      "destination": "/api/admin/campaigns"
+    },
+    {
+      "source": "/replies",
+      "destination": "/api/admin/replies"
+    },
+    {
+      "source": "/ledger",
+      "destination": "/api/admin/ledger"
+    },
+    {
+      "source": "/line",
+      "destination": "/api/admin/line-console"
+    },
+    {
+      "source": "/campaign-status",
+      "destination": "/api/admin/campaign-status"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/hero-lease-watchdog",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/cron/daily-mining",
+      "schedule": "0 */4 * * *"
+    },
+    {
+      "path": "/api/cron/nightly-pipeline",
+      "schedule": "30 */2 * * *"
+    },
+    {
+      "path": "/api/cron/drip-scheduler",
+      "schedule": "0 16,20 * * 1-5"
+    },
+    {
+      "path": "/api/cron/retention-monthly",
+      "schedule": "0 15 1 * *"
+    },
+    {
+      "path": "/api/cron/customer-call-artifact-retention",
+      "schedule": "15 3 * * *"
+    },
+    {
+      "path": "/api/cron/siteforge-reconcile",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/cron/run-edit-jobs",
+      "schedule": "*/2 * * * *"
+    },
+    {
+      "path": "/api/cron/run-line-batches",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/cron/run-rebuild-mirror-jobs",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/cron/morning-report",
+      "schedule": "0 13 * * *"
+    },
+    {
+      "path": "/api/cron/refresh-reviews",
+      "schedule": "45 5 * * *"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/((?!connect/chat-(?:start|post|poll)(?:/)?$).*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET,POST,DELETE,OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type,Authorization,X-Admin-Token,X-Connect-Token,X-Hardening-Proof,X-Requested-With,X-Vapi-Signature,X-Twilio-Signature,Stripe-Signature,X-Cron-Secret,X-Connect-Visitor-Token,X-LeadMiner-Signature,X-LeadMiner-Timestamp,X-LeadMiner-Event,X-LeadMiner-Project,X-LeadMiner-Delivery,X-LeadMiner-Idempotency-Key,X-LeadMiner-Schema-Version"
+        }
+      ]
+    }
+  ]
+}

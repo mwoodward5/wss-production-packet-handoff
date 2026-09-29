@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://siteforge.wss-ai.com/schemas/build-complete.v1.json",
+  "title": "SiteForge Build Complete",
+  "description": "Emitted once when a build reaches state=ready. Also returned by GET /api/build/:build_id when state=ready. This is the versioned Ghost Agency contract per SYSTEM_INSTRUCTIONS.md §3.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "build_id",
+    "prospect_id",
+    "idempotency_key",
+    "renderer",
+    "renderer_version",
+    "authority_profile_version",
+    "truth_packet_version",
+    "qc_contract",
+    "generation_fingerprint",
+    "status",
+    "preview_url",
+    "report_url",
+    "qc_passed",
+    "visual_qc_passed",
+    "logo_provenance",
+    "media_provenance",
+    "optimization_manifest",
+    "completed_at"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string", "const": "siteforge-build-complete-v1" },
+    "build_id": { "type": "string", "description": "Server-issued ULID for this build." },
+    "prospect_id": { "type": "string", "description": "Stable prospect identity across siteforge-app and Ghost Agency. Never rotates for the same intake session." },
+    "idempotency_key": { "type": "string" },
+    "status": { "type": "string", "enum": ["ready", "failed", "cancelled"], "description": "Terminal state of the build." },
+    "renderer": { "type": "string", "const": "siteforge-renderer-v8-snowflake@8.2.0", "description": "Fully-qualified renderer name plus semver." },
+    "renderer_version": { "type": "string", "description": "Semver of the render engine. Example: 8.2.0." },
+    "qc_contract": { "type": "string", "const": "siteforge-qc-v2-authority-108-plus-contamination", "description": "Named QC contract this build passed under." },
+    "visual_qc_passed": { "type": "boolean", "description": "Result of qc-audit/qc-visual-fidelity.mjs, independent of the 108-point manifest." },
+    "generation_fingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$", "description": "sha256 hex of canonical(compose_plan + truth_packet_version + renderer). Two identical fingerprints must yield byte-identical output." },
+    "authority_profile_version": { "type": "string", "const": "authority-108-v1" },
+    "truth_packet_version": { "type": "string", "description": "Semver of the truth-packet schema used." },
+    "preview_url": { "type": "string", "format": "uri" },
+    "preview_url_owner_only": { "type": "boolean", "default": true },
+    "report_url": { "type": "string", "format": "uri" },
+    "report_token": { "type": "string", "description": "Bearer token embedded in report URL. Rotates on plan change." },
+    "qc_passed": { "type": "boolean" },
+    "qc_summary": {
+      "type": "object",
+      "required": ["authority_score", "authority_total", "hero_layers", "batch_hamming_min"],
+      "properties": {
+        "authority_score": { "type": "integer", "minimum": 0, "maximum": 108 },
+        "authority_total": { "type": "integer", "const": 108 },
+        "hero_layers": { "type": "integer", "minimum": 6 },
+        "batch_hamming_min": { "type": "integer", "minimum": 5, "description": "Minimum hamming distance to the last 8 builds of the same vertical. Below 5 = fail." },
+        "reduced_motion_pass": { "type": "boolean" },
+        "contamination_check": { "type": "string", "enum": ["clean", "warnings", "blocked"] }
+      }
+    },
+    "compose_plan": {
+      "type": "object",
+      "description": "The exact snowflake composition chosen. Persisted for anti-repetition + reproducibility.",
+      "properties": {
+        "archetype": { "type": "string" },
+        "widget": { "type": "string" },
+        "widget_business_spec": {
+          "type": "object",
+          "properties": {
+            "business_problem": { "type": "string" },
+            "input_fields": { "type": "array", "items": { "type": "string" } },
+            "output_action": { "type": "string" },
+            "conversion_trigger": { "type": "string" }
+          }
+        },
+        "typography_pair": { "type": "string" },
+        "palette_family": { "type": "string" },
+        "palette_oklch": {
+          "type": "object",
+          "properties": {
+            "ink": { "type": "string" },
+            "surface": { "type": "string" },
+            "accent": { "type": "string" },
+            "accent_alt": { "type": "string" }
+          }
+        },
+        "section_cadence": { "type": "array", "items": { "type": "string" } },
+        "motion_grammar": { "type": "string" },
+        "motion_intensity": { "type": "integer", "minimum": -3, "maximum": 5 },
+        "media_treatment": { "type": "string" },
+        "card_geometry": { "type": "string" },
+        "trust_spine": { "type": "string" },
+        "cta_grammar": { "type": "string" },
+        "resonance_snapshot": {
+          "type": "object",
+          "properties": {
+            "formal_casual": { "type": "integer" },
+            "serious_funny": { "type": "integer" },
+            "respectful_irreverent": { "type": "integer" },
+            "matter_of_fact_enthusiastic": { "type": "integer" },
+            "confidence": { "type": "integer" },
+            "mirror_words": { "type": "array", "items": { "type": "string" } },
+            "banned_words": { "type": "array", "items": { "type": "string" } },
+            "rapport_line": { "type": "string" }
+          }
+        }
+      }
+    },
+    "logo_provenance": {
+      "type": "object",
+      "required": ["source", "verified", "stages_applied"],
+      "properties": {
+        "source": { "type": "string", "enum": ["owner-uploaded","firecrawl-scrape","gbp-scrape","procedural-monogram","fallback-textmark"] },
+        "verified": { "type": "boolean" },
+        "stages_applied": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["background-removed","upscaled","vectorized","palette-recolored","shimmer-wrapped"] }
+        },
+        "final_format": { "type": "string", "enum": ["svg","png","procedural-svg","textmark-html"] },
+        "final_url": { "type": "string" },
+        "delta_e_to_brand": { "type": "number", "description": "Perceptual color distance from the extracted brand palette. Below 15 is acceptable." }
+      }
+    },
+    "media_provenance": {
+      "type": "object",
+      "required": ["photos_verified_count", "photos_ai_atmosphere_count", "photos_dropped_low_quality"],
+      "properties": {
+        "photos_verified_count": { "type": "integer" },
+        "photos_ai_atmosphere_count": { "type": "integer", "description": "Labeled AI-generated atmosphere. Never a fake job photo." },
+        "photos_dropped_low_quality": { "type": "integer" },
+        "hero_media_type": { "type": "string", "enum": ["video","cinemagraph","cinematic-still","procedural-scene"] },
+        "hero_media_source": { "type": "string" },
+        "gallery_photo_urls": { "type": "array", "items": { "type": "string" }, "maxItems": 12 }
+      }
+    },
+    "optimization_manifest": {
+      "type": "object",
+      "required": ["version", "checks"],
+      "properties": {
+        "version": { "type": "string", "const": "authority-108-v1" },
+        "checks": {
+          "type": "array",
+          "minItems": 108,
+          "maxItems": 108,
+          "items": {
+            "type": "object",
+            "required": ["id", "category", "label", "state"],
+            "properties": {
+              "id": { "type": "integer", "minimum": 1, "maximum": 108 },
+              "key": { "type": "string" },
+              "category": { "type": "string" },
+              "label": { "type": "string" },
+              "state": { "type": "string", "enum": ["passed","failed","not-applicable","needs-owner-input","runtime-verification"] },
+              "evidence": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "properties": {
+        "html_url": { "type": "string" },
+        "css_url": { "type": "string" },
+        "og_image_url": { "type": "string" },
+        "favicon_urls": { "type": "array", "items": { "type": "string" } },
+        "manifest_url": { "type": "string" },
+        "sitemap_url": { "type": "string" },
+        "robots_url": { "type": "string" },
+        "llms_txt_url": { "type": "string" },
+        "screenshot_desktop_url": { "type": "string" },
+        "screenshot_mobile_url": { "type": "string" }
+      }
+    },
+    "checkout": {
+      "type": "object",
+      "description": "Activation hook — how the preview becomes a paid live site.",
+      "properties": {
+        "purchase_url": { "type": "string", "format": "uri", "description": "Stripe Checkout session URL. Preserved contract with Stripe integration; not modified here." },
+        "plan_id": { "type": "string" },
+        "expires_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "completed_at": { "type": "string", "format": "date-time" }
+  }
+}

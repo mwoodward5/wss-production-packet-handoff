@@ -1,0 +1,355 @@
+{
+  "version": 2,
+  "key": "49-straight-line-fencing-of-louisiana",
+  "name": "Straight Line Fencing Of Louisiana",
+  "category": "fencing",
+  "vertical": "fencing",
+  "requested_vertical": "fencing",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "303ffc41-860c-4845-a711-bbfd6998587d",
+  "lovable_source_commit": "87eda565ff34143fe2afd8a4355b1503fc6b894e",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "303ffc41-860c-4845-a711-bbfd6998587d",
+    "ref": "87eda565ff34143fe2afd8a4355b1503fc6b894e",
+    "repository": "https://github.com/mwoodward5/charmed-looks",
+    "git_tree": "cefbca01bc14af3f1a82eb2ff9d88e91dd83c5cf"
+  },
+  "classification": "CINEMATIC",
+  "routes": [
+    "/",
+    "*"
+  ],
+  "design_tokens": {
+    "colors": {
+      "brand_primary": "#2A3E23",
+      "brand_secondary": "#49331B",
+      "brand_accent": "#946936",
+      "brand_support": "#6B752E",
+      "hero_bg": "#0e110b",
+      "dark_gradient_start": "#1a0f08",
+      "dark_gradient_end": "#221608",
+      "polaroid_bg": "#f5efe2"
+    },
+    "typography": {
+      "sans_stack": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "display_accent": "Bagel Fat One, cursive",
+      "metadata_font": "monospace"
+    },
+    "radii": {
+      "cards": "1.5rem",
+      "interactive": "0.75rem",
+      "badges": "9999px"
+    }
+  },
+  "hero_contract": {
+    "viewport_height": "100svh",
+    "media_type": "cinematic_video_or_kenburns_plate",
+    "filter_grade": "brightness(0.78) saturate(1.1) contrast(1.05)",
+    "atmosphere_stack": [
+      "teal_orange_split_tone",
+      "radial_vignette",
+      "dual_layer_procedural_fog",
+      "anamorphic_light_sweep",
+      "floating_wood_dust_particles"
+    ],
+    "headline_structure": "3_line_staggered_mask_with_bottom_bronze_gradient",
+    "interactive_widget": "EstimatorWidget"
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_plate",
+      "section": "HeroFlagship",
+      "role": "hero",
+      "aspect_ratio": "16:9",
+      "recommended_content": "10s looping cinematic installation video or high-res golden hour fence plate"
+    },
+    {
+      "slot_id": "services_cards_1_to_6",
+      "section": "Services",
+      "role": "service",
+      "aspect_ratio": "4:3",
+      "recommended_content": "Authentic work examples matching specific fence types"
+    },
+    {
+      "slot_id": "portfolio_featured",
+      "section": "Portfolio",
+      "role": "project",
+      "aspect_ratio": "16:9",
+      "recommended_content": "Flagship completed residential fence install"
+    },
+    {
+      "slot_id": "portfolio_supporting_1_to_3",
+      "section": "Portfolio",
+      "role": "work",
+      "aspect_ratio": "4:3",
+      "recommended_content": "Craft detail shots (posts, gates, property run)"
+    },
+    {
+      "slot_id": "gallery_polaroids_1_to_15",
+      "section": "Team",
+      "role": "gallery",
+      "aspect_ratio": "4:5",
+      "recommended_content": "15 distinct client project photos showing diversity of jobs"
+    },
+    {
+      "slot_id": "brand_logo",
+      "section": "Navbar & Footer",
+      "role": "logo",
+      "aspect_ratio": "1:1",
+      "recommended_content": "Square matte business logo mark"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business_name",
+      "file": "src/lib/slfAssets.ts",
+      "prop": "SLF.name"
+    },
+    {
+      "key": "short_name",
+      "file": "src/lib/slfAssets.ts",
+      "prop": "SLF.short"
+    },
+    {
+      "key": "phone",
+      "file": "src/lib/slfAssets.ts",
+      "prop": "SLF.phone"
+    },
+    {
+      "key": "phone_href",
+      "file": "src/lib/slfAssets.ts",
+      "prop": "SLF.phoneHref"
+    },
+    {
+      "key": "email",
+      "file": "src/lib/slfAssets.ts",
+      "prop": "SLF.email"
+    },
+    {
+      "key": "city_region",
+      "file": "src/lib/slfAssets.ts",
+      "prop": "SLF.city"
+    },
+    {
+      "key": "hours",
+      "file": "src/lib/slfAssets.ts",
+      "prop": "SLF.hours"
+    },
+    {
+      "key": "google_maps_url",
+      "file": "src/lib/slfAssets.ts",
+      "prop": "SLF.googleMaps"
+    },
+    {
+      "key": "facebook_url",
+      "file": "src/lib/slfAssets.ts",
+      "prop": "SLF.facebook"
+    },
+    {
+      "key": "services_list",
+      "file": "src/components/Services.tsx",
+      "prop": "services"
+    },
+    {
+      "key": "process_steps",
+      "file": "src/components/About.tsx",
+      "prop": "steps"
+    },
+    {
+      "key": "why_us_items",
+      "file": "src/components/Awards.tsx",
+      "prop": "items"
+    }
+  ],
+  "trust_slots": [
+    {
+      "id": "hero_est_badge",
+      "component": "HeroFlagship.tsx",
+      "target": "Eyebrow Pill"
+    },
+    {
+      "id": "hero_trust_strip",
+      "component": "HeroFlagship.tsx",
+      "target": "Trust list under lead text"
+    },
+    {
+      "id": "process_badge_bar",
+      "component": "About.tsx",
+      "target": "Pill bar under film strip"
+    },
+    {
+      "id": "why_us_grid",
+      "component": "Awards.tsx",
+      "target": "6 value proposition cards"
+    },
+    {
+      "id": "form_status_badge",
+      "component": "Contact.tsx",
+      "target": "Taking projects header chip"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "FenceContractor",
+      "location": "index.html",
+      "properties": [
+        "name",
+        "telephone",
+        "email",
+        "url",
+        "address",
+        "areaServed",
+        "openingHoursSpecification",
+        "sameAs"
+      ]
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "location": "Hero lead text",
+      "intent": "Local proximity fence builder"
+    },
+    {
+      "location": "Portfolio card meta tag",
+      "intent": "Local jurisdiction proof"
+    },
+    {
+      "location": "Contact service area box",
+      "intent": "Physical home base and travel area"
+    },
+    {
+      "location": "Footer bottom bar",
+      "intent": "NAP repetition"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "trigger": "Call a fence contractor",
+      "element": "Header and contact dialer buttons"
+    },
+    {
+      "trigger": "Can I repair only part of my fence",
+      "element": "Services repair card"
+    },
+    {
+      "trigger": "How much does a fence cost",
+      "element": "Estimator widget"
+    }
+  ],
+  "map_location_slot": {
+    "location": "Contact section right column",
+    "display": "City name with Google Maps deep link card",
+    "embed_compatible": true
+  },
+  "content_density": {
+    "hero": "Cinematic minimal (high visual, low word count)",
+    "estimator": "Interactive high density",
+    "services": "Exact 6 items on dual clotheslines",
+    "portfolio": "1 flagship + 3 supporting",
+    "process": "Exact 5 sequential milestones in film strip",
+    "gallery": "15 polaroids on cork wall",
+    "contact": "Full 6-field qualification form + 4 utility cards"
+  },
+  "mobile_rules": {
+    "breakpoint_390": "Hamburger drawer, single column cards, responsive estimator, full-width inputs",
+    "breakpoint_768": "3-column gallery, 2-column why us",
+    "breakpoint_1440": "Full 12-column hero split, 5-column gallery wall"
+  },
+  "non_negotiables": [
+    "AtmosphereLayers particle & fog engine must stay above hero media",
+    "Double clothesline rope with clothespins in Services must be retained",
+    "35mm film strip horizontal animation in Process must be retained",
+    "Pinned polaroids with drop shadows in Gallery must be retained",
+    "Instant Estimator widget with prefill dispatcher must remain in Hero",
+    "Warm earthy green and bronze color tokens must remain intact"
+  ],
+  "safe_replacements": [
+    "SLF business identity strings",
+    "Hero background video or image",
+    "Logo mark image asset",
+    "All 15 gallery JPEG assets",
+    "Service titles, summaries and imagery",
+    "Estimator price-per-foot multipliers",
+    "Edge function email destination and credentials"
+  ],
+  "leak_terms": [
+    "Straight Line Fencing Of Louisiana"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "ui-sans-serif",
+      "system-ui",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "Segoe UI",
+      "Roboto"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "#2A3E23",
+    "#49331B",
+    "#946936",
+    "#6B752E",
+    "#0e110b",
+    "#1a0f08",
+    "#221608",
+    "#f5efe2"
+  ],
+  "fonts": [
+    "ui-sans-serif",
+    "system-ui",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "content_render_targets": {
+    "services": [{ "path": "/", "selector": "section#services" }]
+  },
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "342d9d1aa9100d83f04926293432a45c321accd5dab82232fce8c5620846e4c5",
+    "files": {
+      "assets/index-DdPtBW0w.css": "2904aa5c77390517e21e693d7e352f21f8617075bf0e6fa72ff05665a37cec80",
+      "assets/index-Du0qucnC.js": "d71414c6cc674dbe7a039d0e81c4b365e7a6a3ec6a739d1899c6262eee2ab609",
+      "index.html": "4e03c0be2b53fce380de20386b9e04a5517b95ccbffceeda4c353a7d9a745937"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

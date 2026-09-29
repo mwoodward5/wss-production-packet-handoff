@@ -1,0 +1,82 @@
+{
+ "id": "ad-alchemy-studio-43",
+ "source": "6ab95b87-be71-45a7-a3f8-751abf728cac",
+ "palette": {
+  "vars": {
+   "--background": "222 47% 11%",
+   "--foreground": "210 40% 98%",
+   "--card": "217 33% 13%",
+   "--card-foreground": "210 40% 98%",
+   "--popover": "217 33% 13%",
+   "--popover-foreground": "210 40% 98%",
+   "--primary": "217 91% 60%",
+   "--primary-foreground": "0 0% 100%",
+   "--secondary": "217 33% 17%",
+   "--secondary-foreground": "210 40% 98%",
+   "--muted": "217 33% 17%",
+   "--muted-foreground": "215 20% 65%",
+   "--accent": "263 70% 50%",
+   "--accent-foreground": "0 0% 100%",
+   "--destructive": "0 84% 60%",
+   "--destructive-foreground": "0 0% 100%",
+   "--border": "217 33% 20%",
+   "--input": "217 33% 17%",
+   "--ring": "217 91% 60%",
+   "--brand-blue": "217 91% 60%",
+   "--brand-purple": "263 70% 50%",
+   "--brand-pink": "330 81% 60%",
+   "--brand-success": "160 84% 39%",
+   "--brand-warning": "38 92% 50%",
+   "--brand-error": "0 84% 60%",
+   "--mountain-500": "217 91% 60%",
+   "--summit-500": "38 92% 50%",
+   "--ai-500": "263 70% 50%",
+   "--gradient-primary": "linear-gradient(\n      135deg,\n      #3b82f6 0%,\n      #8b5cf6 50%,\n      #ec4899 100%\n    )"
+  },
+  "mode": "dark",
+  "darkVars": {
+   "--background": "222 47% 11%",
+   "--foreground": "210 40% 98%",
+   "--card": "217 33% 13%",
+   "--card-foreground": "210 40% 98%",
+   "--popover": "217 33% 13%",
+   "--popover-foreground": "210 40% 98%",
+   "--primary": "217 91% 60%",
+   "--primary-foreground": "0 0% 100%",
+   "--secondary": "217 33% 17%",
+   "--secondary-foreground": "210 40% 98%",
+   "--muted": "217 33% 17%",
+   "--muted-foreground": "215 20% 65%",
+   "--accent": "263 70% 50%",
+   "--accent-foreground": "0 0% 100%",
+   "--destructive": "0 84% 60%",
+   "--destructive-foreground": "0 0% 100%",
+   "--border": "217 33% 20%",
+   "--input": "217 33% 17%",
+   "--ring": "217 91% 60%"
+  }
+ },
+ "fonts": {
+  "display": "Inter",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+ },
+ "radius": "0.5rem",
+ "shadows": [],
+ "keyframes": [
+  {
+   "name": "fadeIn",
+   "css": "@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "slideUp",
+   "css": "@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }"
+  }
+ ],
+ "signatures": [
+  "glow",
+  "shimmer",
+  "gradient-heavy",
+  "mesh-gradient"
+ ]
+}

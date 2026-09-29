@@ -1,0 +1,469 @@
+﻿{
+  "captured_from": "live /app/lib/copilot.js + /app/data/donor-verticals.json",
+  "approved_count": 52,
+  "installed_route_count": 31,
+  "rows": [
+    {
+      "category": "tattoo",
+      "aliases": [
+        "tattoo artist",
+        "tattoo artists",
+        "tattoo shop"
+      ],
+      "donor": "tattoo-aurelia",
+      "installed": true
+    },
+    {
+      "category": "med spa",
+      "aliases": [
+        "medical spa",
+        "medspa"
+      ],
+      "donor": "medspa-luma",
+      "installed": true
+    },
+    {
+      "category": "dental",
+      "aliases": [
+        "dentist",
+        "dentists"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "photographer",
+      "aliases": [
+        "photography"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "piercing",
+      "aliases": [
+        "piercer",
+        "piercing studio"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "attorney",
+      "aliases": [
+        "law firm",
+        "lawyer",
+        "solo attorney",
+        "legal services"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "massage",
+      "aliases": [
+        "massage therapist"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "hair salon",
+      "aliases": [
+        "hair salons"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "barber",
+      "aliases": [
+        "barbershop",
+        "barber shop"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "nail studio",
+      "aliases": [
+        "nail salon",
+        "nail salons"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "wedding vendor",
+      "aliases": [
+        "wedding vendors"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "event vendor",
+      "aliases": [
+        "event vendors"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "real estate agent",
+      "aliases": [
+        "realtor",
+        "realtors",
+        "real estate agency",
+        "real estate broker",
+        "realty"
+      ],
+      "donor": "realestate-waterline",
+      "installed": true
+    },
+    {
+      "category": "auto detailing",
+      "aliases": [
+        "car detailing",
+        "detailer"
+      ],
+      "donor": "cardetailing-ab-professional",
+      "installed": true
+    },
+    {
+      "category": "ceramic coating",
+      "aliases": [
+        "ceramic coatings"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "roofing",
+      "aliases": [
+        "roofer",
+        "roofers"
+      ],
+      "donor": "roofing-falcon-clean",
+      "installed": true
+    },
+    {
+      "category": "water damage restoration",
+      "aliases": [
+        "water damage",
+        "restoration"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "hvac",
+      "aliases": [
+        "heating and air",
+        "air conditioning"
+      ],
+      "donor": "hvac-premier",
+      "installed": true
+    },
+    {
+      "category": "plumbing",
+      "aliases": [
+        "plumber",
+        "plumbers"
+      ],
+      "donor": "plumbing-clean",
+      "installed": true
+    },
+    {
+      "category": "home remodeling",
+      "aliases": [
+        "remodeler",
+        "remodeling contractor"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "concrete",
+      "aliases": [
+        "concrete contractor"
+      ],
+      "donor": "concrete-elconstruction",
+      "installed": true
+    },
+    {
+      "category": "electrical",
+      "aliases": [
+        "electrician",
+        "electricians",
+        "electrical contractor"
+      ],
+      "donor": "electrical-livewire",
+      "installed": true
+    },
+    {
+      "category": "masonry",
+      "aliases": [
+        "mason"
+      ],
+      "donor": "concrete-elconstruction",
+      "installed": true
+    },
+    {
+      "category": "general contractor",
+      "aliases": [
+        "general contracting",
+        "carpenter",
+        "carpenters",
+        "carpentry",
+        "construction",
+        "construction company",
+        "framing",
+        "cabinetry",
+        "trim carpentry"
+      ],
+      "donor": "general-contractor-clean",
+      "installed": true
+    },
+    {
+      "category": "landscaping",
+      "aliases": [
+        "landscaper",
+        "hardscaping",
+        "gardening",
+        "garden services",
+        "lawn garden"
+      ],
+      "donor": "landscaping-evergreen",
+      "installed": true
+    },
+    {
+      "category": "tree service",
+      "aliases": [
+        "tree services",
+        "tree removal",
+        "stump grinding",
+        "arborist",
+        "arborists"
+      ],
+      "donor": "treeservice-sanchez-clean",
+      "installed": true
+    },
+    {
+      "category": "fencing",
+      "aliases": [
+        "fence contractor"
+      ],
+      "donor": "fencing-sterling",
+      "installed": true
+    },
+    {
+      "category": "garage door",
+      "aliases": [
+        "garage doors"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "pest control",
+      "aliases": [
+        "exterminator"
+      ],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "septic",
+      "aliases": [
+        "septic tank",
+        "sewer",
+        "drain field",
+        "septic pumping"
+      ],
+      "donor": "septic-wheeler-onepage",
+      "installed": true
+    },
+    {
+      "category": "pools",
+      "aliases": [
+        "pool",
+        "pool repair",
+        "pool service",
+        "swimming pool"
+      ],
+      "donor": "pools-dlux",
+      "installed": true
+    },
+    {
+      "category": "painting",
+      "aliases": [
+        "painter",
+        "interior painting",
+        "exterior painting",
+        "house painting"
+      ],
+      "donor": "painting-gold-specimen",
+      "installed": true
+    },
+    {
+      "category": "auto repair",
+      "aliases": [
+        "auto shop",
+        "mechanic",
+        "car repair"
+      ],
+      "donor": "autorepair-multi-service",
+      "installed": true
+    },
+    {
+      "category": "insulation",
+      "aliases": [
+        "spray foam",
+        "attic insulation"
+      ],
+      "donor": "insulation-goodnews",
+      "installed": true
+    },
+    {
+      "category": "excavation",
+      "aliases": [
+        "excavating",
+        "land clearing",
+        "grading",
+        "site work"
+      ],
+      "donor": "excavation-knk",
+      "installed": false
+    },
+    {
+      "category": "handyman",
+      "aliases": [
+        "handyman services",
+        "property maintenance"
+      ],
+      "donor": "handyman-848-property-services",
+      "installed": true
+    },
+    {
+      "category": "mattress store",
+      "aliases": [
+        "mattress"
+      ],
+      "donor": "furniture-boxdrop-greenville",
+      "installed": true
+    },
+    {
+      "category": "roadside assistance",
+      "aliases": [
+        "towing",
+        "tow truck"
+      ],
+      "donor": "roadside-banana",
+      "installed": true
+    },
+    {
+      "category": "cleaning",
+      "aliases": [
+        "house cleaning",
+        "maid service",
+        "housekeeping"
+      ],
+      "donor": "cleaning-tobys-onepage",
+      "installed": true
+    },
+    {
+      "category": "home improvement",
+      "aliases": [
+        "remodeling",
+        "home renovation"
+      ],
+      "donor": "homeimprovement-southern",
+      "installed": true
+    },
+    {
+      "category": "epoxy flooring",
+      "aliases": [],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "appliance repair",
+      "aliases": [],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "rv repair",
+      "aliases": [
+        "mobile rv repair"
+      ],
+      "donor": "rvrepair-ontheroadagain",
+      "installed": true
+    },
+    {
+      "category": "synthetic turf",
+      "aliases": [],
+      "donor": "landscaping-evergreen",
+      "installed": true
+    },
+    {
+      "category": "parking lot striping",
+      "aliases": [
+        "parking striping"
+      ],
+      "donor": "striping-precision-onepage",
+      "installed": true
+    },
+    {
+      "category": "building materials",
+      "aliases": [],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "black car service",
+      "aliases": [
+        "black car"
+      ],
+      "donor": "blackcar-ocride",
+      "installed": true
+    },
+    {
+      "category": "hypnotherapy",
+      "aliases": [],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "craniosacral",
+      "aliases": [
+        "craniosacral therapy"
+      ],
+      "donor": "craniosacral-trillium",
+      "installed": true
+    },
+    {
+      "category": "private chef",
+      "aliases": [
+        "personal chef"
+      ],
+      "donor": "personachef-montage-onepage",
+      "installed": true
+    },
+    {
+      "category": "dog supplements",
+      "aliases": [],
+      "donor": null,
+      "installed": false
+    },
+    {
+      "category": "beverage",
+      "aliases": [
+        "beverage e-commerce"
+      ],
+      "donor": "beverage-cocolove",
+      "installed": true
+    }
+  ]
+}

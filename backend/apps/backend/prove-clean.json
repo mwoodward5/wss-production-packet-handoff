@@ -1,0 +1,110 @@
+[
+ {
+  "name": "concrete-elconstruction",
+  "vertical": "concrete",
+  "hasManifest": true,
+  "status": 500,
+  "ok": false,
+  "error": "unguarded_optional_slot",
+  "detail": "[{\"file\":\"about/index.html\",\"token\":\"GEO_LAT\",\"excerpt\":\"t=\\\"{{CITY}}, {{STATE}}\\\"/><meta name=\\\"geo.position\\\" content=\\\"{{GEO_LAT}};{{GEO_LNG}}\\\"/><meta property=\\\"og:type\\\" content=\\\"website\\\"/><\"},{\"file\":\"about/index.html\",\"token\":\"GEO_LNG\",\"excerpt\":\"{{S",
+  "build_hash": null,
+  "file_count": null,
+  "checks": null
+ },
+ {
+  "name": "fencing-sterling",
+  "vertical": "fencing",
+  "hasManifest": true,
+  "status": 200,
+  "ok": true,
+  "error": null,
+  "detail": null,
+  "build_hash": "13db8a876a778dcb",
+  "file_count": 50,
+  "checks": {
+   "hydration_parse": "passed",
+   "brand": "unbranded",
+   "token_scan": "passed",
+   "content": "none",
+   "identity_scan": "passed",
+   "routes": "passed",
+   "asset_diff": "skipped_dry_run",
+   "deep_link": "skipped_dry_run",
+   "alias_target": "skipped_dry_run",
+   "render": "skipped_dry_run",
+   "route_render": "skipped_dry_run"
+  }
+ },
+ {
+  "name": "plumbing-clean",
+  "vertical": "plumbing",
+  "hasManifest": true,
+  "status": 200,
+  "ok": true,
+  "error": null,
+  "detail": null,
+  "build_hash": "aa7b75ac2769f7b5",
+  "file_count": 12,
+  "checks": {
+   "hydration_parse": "passed",
+   "brand": "unbranded",
+   "token_scan": "passed",
+   "content": "none",
+   "identity_scan": "passed",
+   "routes": "passed",
+   "asset_diff": "skipped_dry_run",
+   "deep_link": "skipped_dry_run",
+   "alias_target": "skipped_dry_run",
+   "render": "skipped_dry_run",
+   "route_render": "skipped_dry_run"
+  }
+ },
+ {
+  "name": "plumbing-premier",
+  "vertical": "plumbing",
+  "hasManifest": true,
+  "status": 200,
+  "ok": true,
+  "error": null,
+  "detail": null,
+  "build_hash": "608ab74c23ad8028",
+  "file_count": 22,
+  "checks": {
+   "hydration_parse": "passed",
+   "brand": "unbranded",
+   "token_scan": "passed",
+   "content": "none",
+   "identity_scan": "passed",
+   "routes": "passed",
+   "asset_diff": "skipped_dry_run",
+   "deep_link": "skipped_dry_run",
+   "alias_target": "skipped_dry_run",
+   "render": "skipped_dry_run",
+   "route_render": "skipped_dry_run"
+  }
+ },
+ {
+  "name": "roofing-falcon-clean",
+  "vertical": "roofing",
+  "hasManifest": true,
+  "status": 200,
+  "ok": true,
+  "error": null,
+  "detail": null,
+  "build_hash": "22a6b4fb659b70d2",
+  "file_count": 20,
+  "checks": {
+   "hydration_parse": "passed",
+   "brand": "unbranded",
+   "token_scan": "passed",
+   "content": "none",
+   "identity_scan": "passed",
+   "routes": "passed",
+   "asset_diff": "skipped_dry_run",
+   "deep_link": "skipped_dry_run",
+   "alias_target": "skipped_dry_run",
+   "render": "skipped_dry_run",
+   "route_render": "skipped_dry_run"
+  }
+ }
+]

@@ -1,0 +1,42 @@
+{
+  "entity": "BoxDrop Mattress & Furniture Rhode Island",
+  "canonicalUrl": "https://boxdroprhodeisland.com",
+  "summary": "BoxDrop Mattress & Furniture Rhode Island is a Warren, RI mattress and furniture clearance showroom serving East Bay RI, greater Providence, and nearby South Coast MA.",
+  "phone": "(401) 365-7993",
+  "address": "601 Metacom Ave, Warren, RI 02885",
+  "coordinates": {
+    "latitude": 41.7201467,
+    "longitude": -71.270509,
+    "verification": "verify in GBP"
+  },
+  "directAnswers": [
+    {
+      "question": "Where is BoxDrop Rhode Island?",
+      "answer": "BoxDrop Rhode Island is located at 601 Metacom Ave, Warren, RI 02885. Call or text (401) 365-7993 before visiting to check today's inventory."
+    },
+    {
+      "question": "Does BoxDrop Rhode Island sell mattresses?",
+      "answer": "Yes. The site should present mattress sizes and types such as queen, king, hybrid, memory foam, pillow top, adjustable bases, and budget-friendly mattresses."
+    },
+    {
+      "question": "Does BoxDrop Rhode Island sell furniture?",
+      "answer": "Yes. The site should present furniture categories such as sectionals, sofas, loveseats, recliners, and living-room furniture."
+    },
+    {
+      "question": "Does BoxDrop Rhode Island offer financing?",
+      "answer": "The current site says financing/payment options are available, but approval and exact terms must be confirmed with the current provider."
+    },
+    {
+      "question": "Is delivery available?",
+      "answer": "The current site says delivery services are available. Shoppers should call or text to confirm availability, timing, setup, and fees."
+    }
+  ],
+  "doNotClaim": [
+    "fake prices",
+    "fake reviews",
+    "fake ratings",
+    "guaranteed financing",
+    "guaranteed delivery timing",
+    "live inventory unless verified"
+  ]
+}

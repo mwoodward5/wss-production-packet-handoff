@@ -1,0 +1,7 @@
+{
+  "uiTransitionMs": 180,
+  "panelRevealMs": 420,
+  "livePulseMs": 2200,
+  "heroLoopMaxSeconds": 12,
+  "reducedMotion": "collapse to instant state changes"
+}

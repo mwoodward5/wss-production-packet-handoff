@@ -1,0 +1,512 @@
+{
+  "project_name": "848 Property Services LLC",
+  "vertical": "Residential Handyman, Home Improvement & Specialty Contracting",
+  "classification": "Premier",
+  "routes": [
+    "/",
+    "/services",
+    "/services/$slug",
+    "/service-areas",
+    "/service-areas/$slug",
+    "/about",
+    "/gallery",
+    "/faq",
+    "/bbb-categories",
+    "/contact",
+    "/privacy"
+  ],
+  "design_tokens": {
+    "colors": {
+      "ink": "oklch(0.13 0.01 230)",
+      "bone": "oklch(0.97 0.005 90)",
+      "volt": "oklch(0.92 0.22 130)",
+      "volt_deep": "oklch(0.82 0.21 130)",
+      "clay": "oklch(0.55 0.08 60)",
+      "border": "oklch(0.88 0.005 90)"
+    },
+    "typography": {
+      "display": "Fraunces, Playfair Display, serif",
+      "sans": "Inter, ui-sans-serif, system-ui, sans-serif",
+      "mono": "ui-monospace, monospace"
+    },
+    "geometry": {
+      "radius_base": "0.25rem",
+      "border_width": "1px",
+      "max_width": "1400px"
+    }
+  },
+  "hero_contract": {
+    "container_height": "min-h-[720px] lg:min-h-[820px]",
+    "background_media": {
+      "type": "video",
+      "format": "mp4",
+      "duration_seconds": 10,
+      "loop": true,
+      "muted": true,
+      "opacity": 0.55,
+      "overlays": [
+        "gradient-horizontal",
+        "gradient-vertical",
+        "svg-turbulence-grain"
+      ]
+    },
+    "overlay_elements": [
+      "svg_blueprint_grid",
+      "radar_sweep_animation",
+      "volt_ambient_glow_orb",
+      "live_timezone_status_bar"
+    ],
+    "interactive_widget": {
+      "name": "Project Router",
+      "tiles": 6,
+      "state_binding": "hover_and_focus",
+      "behavior": "updates_service_blurb_and_target_link"
+    }
+  },
+  "media_slots": [
+    {
+      "id": "MEDIA-01",
+      "route": "/",
+      "role": "hero_background_video",
+      "aspect": "16:9",
+      "object_fit": "cover"
+    },
+    {
+      "id": "MEDIA-02",
+      "route": "/",
+      "role": "hero_featured_project",
+      "aspect": "3:4",
+      "object_fit": "cover"
+    },
+    {
+      "id": "MEDIA-03",
+      "route": "/",
+      "role": "service_card_painting",
+      "aspect": "4:5",
+      "object_fit": "cover"
+    },
+    {
+      "id": "MEDIA-04",
+      "route": "/",
+      "role": "service_card_drywall",
+      "aspect": "4:5",
+      "object_fit": "cover"
+    },
+    {
+      "id": "MEDIA-05",
+      "route": "/",
+      "role": "service_card_doors_windows",
+      "aspect": "4:5",
+      "object_fit": "cover"
+    },
+    {
+      "id": "MEDIA-06",
+      "route": "/",
+      "role": "service_card_flooring",
+      "aspect": "4:5",
+      "object_fit": "cover"
+    },
+    {
+      "id": "MEDIA-07",
+      "route": "/about",
+      "role": "workshop_craftsman",
+      "aspect": "5:4",
+      "object_fit": "cover"
+    },
+    {
+      "id": "MEDIA-08",
+      "route": "/gallery",
+      "role": "masonry_project_wall",
+      "aspect": "dynamic",
+      "count": 38
+    }
+  ],
+  "content_slots": [
+    {
+      "slot": "BUSINESS_NAME",
+      "source": "BUSINESS.name"
+    },
+    {
+      "slot": "PHONE_DISPLAY",
+      "source": "BUSINESS.phone"
+    },
+    {
+      "slot": "PHONE_E164",
+      "source": "BUSINESS.phoneE164"
+    },
+    {
+      "slot": "EMAIL",
+      "source": "BUSINESS.email"
+    },
+    {
+      "slot": "CITY",
+      "source": "BUSINESS.city"
+    },
+    {
+      "slot": "STATE",
+      "source": "BUSINESS.state"
+    },
+    {
+      "slot": "POSTAL_CODE",
+      "source": "BUSINESS.postalCode"
+    },
+    {
+      "slot": "OPERATING_HOURS",
+      "source": "BUSINESS.hours"
+    },
+    {
+      "slot": "OWNER_NAME",
+      "source": "BUSINESS.ownerFull"
+    },
+    {
+      "slot": "OWNER_TITLE",
+      "source": "BUSINESS.ownerTitle"
+    },
+    {
+      "slot": "FOUNDING_DATE",
+      "source": "BUSINESS.founded"
+    },
+    {
+      "slot": "CORE_SERVICES",
+      "source": "BUSINESS.services"
+    },
+    {
+      "slot": "SECONDARY_SERVICES",
+      "source": "BUSINESS.additionalServices"
+    },
+    {
+      "slot": "TESTIMONIALS",
+      "source": "BUSINESS.testimonials"
+    },
+    {
+      "slot": "SERVICE_AREAS",
+      "source": "LOCATIONS"
+    }
+  ],
+  "trust_slots": [
+    {
+      "element": "live_status_bar",
+      "route": "/",
+      "verified_by": "timezone_calculation"
+    },
+    {
+      "element": "stats_strip",
+      "route": "/",
+      "items": [
+        "9 services",
+        "A· BBB rating",
+        "100% Local"
+      ]
+    },
+    {
+      "element": "credentials_bar",
+      "route": "/",
+      "items": [
+        "BBB Accredited",
+        "A-Rated",
+        "Local Base",
+        "Family-Owned"
+      ]
+    },
+    {
+      "element": "testimonial_block",
+      "route": "/",
+      "verified_by": "BBB Customer Review"
+    },
+    {
+      "element": "hcard_footer",
+      "route": "/",
+      "verified_by": "business contact facts"
+    },
+    {
+      "element": "footer_badges",
+      "route": "global",
+      "items": [
+        "BBB profile link",
+        "Facebook link"
+      ],
+      "verified_by": "third-party profile URLs"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "HomeAndConstructionBusiness",
+      "route": "global",
+      "visible": "schema and footer NAP",
+      "required_proof": [
+        "legal business name",
+        "phone",
+        "email",
+        "city/state/ZIP",
+        "hours",
+        "coordinates"
+      ]
+    },
+    {
+      "type": "Service",
+      "route": "/services/$slug",
+      "visible": "visible service page plus schema",
+      "required_proof": [
+        "advertised service",
+        "client-approved service description"
+      ]
+    },
+    {
+      "type": "FAQPage",
+      "route": [
+        "/",
+        "/faq"
+      ],
+      "visible": "visible accordion plus schema",
+      "required_proof": [
+        "documented policies",
+        "verified services",
+        "verified contact details"
+      ]
+    },
+    {
+      "type": "Review",
+      "route": "/",
+      "visible": "visible quote plus schema",
+      "required_proof": [
+        "verifiable review text",
+        "source URL or client-certified source"
+      ]
+    },
+    {
+      "type": "BreadcrumbList",
+      "route": [
+        "/services/$slug",
+        "/service-areas/$slug"
+      ],
+      "visible": "visible navigation plus schema",
+      "required_proof": [
+        "valid route hierarchy"
+      ]
+    },
+    {
+      "type": "EducationalOccupationalCredential",
+      "route": "global",
+      "visible": "visible credential strip plus schema",
+      "required_proof": [
+        "active accreditation or credential documentation"
+      ]
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "location": "footer hCard and LocalBusiness schema",
+      "content": [
+        "NAP",
+        "hours",
+        "city",
+        "state",
+        "ZIP",
+        "service territory",
+        "coordinates"
+      ],
+      "proof_required": "certified client business and Google Business information"
+    },
+    {
+      "location": "/service-areas",
+      "content": [
+        "real communities served",
+        "county labels",
+        "distance or coverage context"
+      ],
+      "proof_required": "client-confirmed service areas"
+    },
+    {
+      "location": "/service-areas/$slug",
+      "content": [
+        "location-specific service relevance",
+        "city-specific answers"
+      ],
+      "proof_required": "truthful local service coverage and non-duplicative copy"
+    },
+    {
+      "location": "/faq and homepage FAQ",
+      "content": [
+        "concise answers for service area, hours, contact, estimates, credentials, services"
+      ],
+      "proof_required": "verified business policies and certified client facts"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "route": "/faq",
+      "pattern": "Question headline followed by a direct first-sentence answer",
+      "subjects": [
+        "services",
+        "service areas",
+        "hours",
+        "contact",
+        "quotes",
+        "trust signals"
+      ]
+    },
+    {
+      "route": "/",
+      "section": "Local FAQ",
+      "pattern": "Short local intent questions with factual answer-first responses",
+      "subjects": [
+        "near me",
+        "cities served",
+        "business identity",
+        "primary services"
+      ]
+    },
+    {
+      "route": "/contact",
+      "pattern": "Clear imperative contact instructions",
+      "subjects": [
+        "call",
+        "text",
+        "email",
+        "send project photos"
+      ]
+    }
+  ],
+  "map_location_slot": {
+    "best_route": "/contact",
+    "secondary_route": "/service-areas",
+    "visual_treatment": "Add a restrained map or coverage visualization only when the client has a verified Google Place ID or published service-area data; preserve the existing square-edged ink/bone/volt treatment.",
+    "content": [
+      "client-certified address or service-area statement",
+      "Google Business profile information",
+      "directions CTA only when a public location is appropriate"
+    ],
+    "proof_required": "verified Google Business profile, precise business location policy, and client approval"
+  },
+  "content_density": {
+    "overall": "Editorial, premium, and visually led; generous whitespace with dense factual detail reserved for service, location, FAQ, and gallery contexts.",
+    "minimal_sections": [
+      "hero headline",
+      "header navigation",
+      "trust strip labels",
+      "service-card captions"
+    ],
+    "rich_sections": [
+      "service detail pages",
+      "service-area pages",
+      "FAQ page",
+      "gallery captions",
+      "BBB categories"
+    ],
+    "max_review_density": "One featured verified review on the homepage; add a compact, source-linked review sequence only when multiple verified reviews exist.",
+    "max_service_density": "Four visually primary services on the homepage; secondary certified services remain as a concise list rather than becoming equal visual cards.",
+    "image_dominant_sections": [
+      "hero",
+      "homepage service cards",
+      "services index",
+      "about feature image",
+      "gallery"
+    ],
+    "trust_dominant_sections": [
+      "homepage credentials strip",
+      "homepage review/BBB block",
+      "footer"
+    ]
+  },
+  "mobile_rules": {
+    "390px": [
+      "Preserve sticky two-action Call Now / Get a Quote bar.",
+      "Keep logo fully readable within a square 64px display box.",
+      "Stack hero editorial content, image card, and command router without removing any conversion action.",
+      "Maintain at least 44px interactive targets.",
+      "Preserve 3-by-2 project-router tile geometry.",
+      "Use single-column contact cards and FAQ accordions."
+    ],
+    "768px": [
+      "Maintain two-column service grids and two-column trust layouts.",
+      "Keep hero image and interactive router in normal document flow beneath hero copy.",
+      "Retain visible phone and primary quote CTA in header."
+    ],
+    "1440px": [
+      "Use the 12-column hero split: 7 columns of editorial copy and 5 columns of feature media.",
+      "Retain floating project router overlap and large display typography.",
+      "Use four-column homepage service cards and a desktop navigation bar."
+    ]
+  },
+  "non_negotiables": [
+    "Maintain the black ink, warm bone, electric volt-green palette and avoid unrelated accent colors.",
+    "Preserve Fraunces-style editorial serif display typography alongside Inter-style body typography and technical monospace labels.",
+    "Retain sharp, low-radius architectural card geometry and fine structural borders.",
+    "Keep alternating bone and ink section rhythm with electric-lime interaction accents.",
+    "Retain the layered flagship hero: video, blueprint grid, operating-status bar, editorial copy, property image card, and interactive project router.",
+    "Keep direct call, text, and email conversion paths prominent; do not default to a generic lead form.",
+    "Maintain a maximum of four visually primary homepage service cards.",
+    "Use only proof-supported trust signals, ratings, credentials, review language, and statistics.",
+    "Keep real project photography dominant in gallery and service contexts.",
+    "Do not crowd the interface with generic badges, floating widgets, or unsupported local SEO claims."
+  ],
+  "safe_replacements": [
+    {
+      "type": "text",
+      "items": [
+        "business name",
+        "tagline",
+        "owner name and title",
+        "phone",
+        "email",
+        "hours",
+        "service area names",
+        "city/state/ZIP",
+        "service descriptions",
+        "company story",
+        "CTAs",
+        "FAQs"
+      ]
+    },
+    {
+      "type": "media",
+      "items": [
+        "primary logo",
+        "favicon",
+        "hero video",
+        "hero image",
+        "service images",
+        "about image",
+        "gallery image inventory"
+      ]
+    },
+    {
+      "type": "trust",
+      "items": [
+        "verified reviews",
+        "ratings",
+        "certifications",
+        "licenses",
+        "awards",
+        "association memberships",
+        "warranties",
+        "financing messages",
+        "years in business"
+      ],
+      "constraint": "Render only where certified client evidence exists."
+    },
+    {
+      "type": "structured_data",
+      "items": [
+        "LocalBusiness details",
+        "Service definitions",
+        "FAQ answers",
+        "Review objects",
+        "location coverage",
+        "map links",
+        "business social profiles"
+      ],
+      "constraint": "Every value must be based on client-certified or publicly verifiable factual information."
+    }
+  ],
+  "lovable_classification": "High-Trust Multi-Page Local Contractor",
+  "classification_basis": "11 distinct documented routes; WSS scope label only",
+  "project_id": "a218c6fb-f767-4728-9cee-9871ef148fc1",
+  "project_url": "https://lovable.dev/projects/a218c6fb-f767-4728-9cee-9871ef148fc1",
+  "source_plan_file": "32-848-property-services-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

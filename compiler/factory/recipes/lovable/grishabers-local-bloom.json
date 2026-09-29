@@ -1,0 +1,69 @@
+{
+ "id": "grishabers-local-bloom",
+ "source": "d30e9eaf-4613-4792-b950-93c37c6c07e8",
+ "palette": {
+  "vars": {
+   "--background": "42 30% 97%",
+   "--foreground": "130 25% 10%",
+   "--card": "42 30% 99%",
+   "--card-foreground": "130 25% 10%",
+   "--popover": "42 30% 99%",
+   "--popover-foreground": "130 25% 10%",
+   "--primary": "145 45% 18%",
+   "--primary-foreground": "42 35% 96%",
+   "--secondary": "35 25% 90%",
+   "--secondary-foreground": "145 45% 18%",
+   "--muted": "40 18% 92%",
+   "--muted-foreground": "130 12% 35%",
+   "--accent": "30 75% 48%",
+   "--accent-foreground": "42 35% 98%",
+   "--moss": "95 38% 32%",
+   "--bark": "25 30% 22%",
+   "--ember": "18 78% 50%",
+   "--mist": "145 18% 88%",
+   "--destructive": "0 70% 45%",
+   "--destructive-foreground": "42 35% 98%",
+   "--border": "40 20% 85%",
+   "--input": "40 20% 85%",
+   "--ring": "145 45% 18%",
+   "--gradient-canopy": "linear-gradient(135deg, hsl(145 50% 14%), hsl(95 38% 28%))",
+   "--gradient-ember": "linear-gradient(135deg, hsl(30 80% 52%), hsl(18 78% 48%))",
+   "--gradient-overlay": "linear-gradient(180deg, hsl(145 50% 8% / 0.35) 0%, hsl(145 50% 6% / 0.85) 100%)"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.75rem",
+ "shadows": [
+  "0 30px 60px -20px hsl(145 50% 10% / 0.35)",
+  "0 12px 30px -12px hsl(145 50% 10% / 0.18)",
+  "0 16px 40px -10px hsl(30 80% 40% / 0.4)"
+ ],
+ "keyframes": [
+  {
+   "name": "rise",
+   "css": "@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "fade",
+   "css": "@keyframes fade { from { opacity: 0; } to { opacity: 1; } }"
+  },
+  {
+   "name": "sway",
+   "css": "@keyframes sway { 0%, 100% { transform: rotate(-1.5deg); } 50% { transform: rotate(1.5deg); } }"
+  },
+  {
+   "name": "light-sweep",
+   "css": "@keyframes light-sweep { 0% { transform: translate3d(-30%, -10%, 0) rotate(8deg); opacity: 0; } 35% { opacity: 0.55; } 70% { opacity: 0.25; } 100% { transform: translate3d(60%, 10%, 0) rotate(8deg); opacity: 0; } }"
+  },
+  {
+   "name": "drift",
+   "css": "@keyframes drift { 0% { transform: translate3d(0, 0, 0); opacity: 0; } 20% { opacity: var(--drift-o, 0.7); } 80% { opacity: var(--drift-o, 0.7); } 100% { transform: translate3d(var(--drift-x, 40px), -120px, 0); opacity: 0; } }"
+  }
+ ],
+ "signatures": []
+}

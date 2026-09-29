@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Framed addition under construction at first light">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0.35" y2="1">
+    <stop offset="0" stop-color="#150f0a"/><stop offset="0.55" stop-color="#2a1d13"/><stop offset="1" stop-color="#3d2c1d"/>
+  </linearGradient>
+  <linearGradient id="glow" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#f0b071" stop-opacity="0.85"/><stop offset="1" stop-color="#f0b071" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3d2c1d"/><stop offset="1" stop-color="#100b07"/>
+  </linearGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="26"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#sky)"/>
+<circle cx="1180" cy="250" r="230" fill="url(#glow)" filter="url(#soft)" opacity="0.75"/>
+<rect y="520" width="1600" height="480" fill="url(#ground)"/>
+<g stroke="#0e1621" stroke-opacity="0.4" stroke-width="14" fill="none">
+<path d="M180 760 V420 H620 V760"/><path d="M180 420 L400 300 L620 420"/><path d="M760 760 V470 H1180 V760"/><path d="M760 470 L970 360 L1180 470"/></g>
+<rect width="1600" height="1000" fill="#100b07" opacity="0.18"/>
+</svg>

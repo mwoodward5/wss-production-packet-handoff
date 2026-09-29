@@ -1,0 +1,145 @@
+{
+  "name": "concrete-elconstruction",
+  "vertical": "concrete",
+  "label": "EL Construction design, static A+ rebuild — concrete & flatwork one-pager with painted hero ladder, bento services, gallery, process rail, reviews, FAQ, quote CTA",
+  "source": "Client-SPA recompile (2026-08-19) of the owner-approved EL Construction design from the source-tokenized port tree at C:/ports/el_construction_1, replaced 2026-09-02 by the Lovable a-plus lane with a fictional-identity static template: one hand-authored index.html (painted slab hero with grain, ticker, bento services, SVG work gallery, numeral process rail, about, review cards, glass FAQ, quote CTA panel, footer + floater), one hand-authored stylesheet on --wss-* properties, and one hero-layer bundle. The design language is trade-generic; the real source business's facts exist only as tokens and identity atoms.",
+  "sanitised": "2026-07-30",
+  "stack": "Static A+ build (2026-09-02): one hand-authored index.html (real header/main/footer markup, no framework, no CDN, no external requests) + one hand-authored stylesheet at assets/style.css (consuming --wss-* properties throughout; hex literals exist only as the token declarations themselves) + ONE browser script, assets/index-concrete-elconstruction.js (the hero video layer: mounts the ladder-marked <video data-hero-video> hidden with the poster photograph and runs the poster-first/tap-to-play control; the hero is complete without it and reduced motion never mounts the clip). No ESM syntax anywhere, so Vercel's transpiler has nothing to touch and no .js.raw pinning is needed. Progressive enhancement only — the first inline script adds .js to <html> before first paint, and every sizzle layer (scroll reveals, count-up stats, hero clip arming, magnetic CTA nudge) is inert without JS or under prefers-reduced-motion. The retired client-SPA bundle (assets/index-BFny53Fb.js) was removed when this rebuild replaced it; the compiled SPA stylesheet (assets/index-PR5w8tQz.css, carrying the html/body/#root overflow-clip rules) and the verbatim port's media/photo library are retained.",
+  "donor_business_name": "EL Construction",
+  "donor_phone": "(480) 256-2343",
+  "donor_email": "elconstructionaz@gmail.com",
+  "donor_city": "Tempe",
+  "donor_county": "Maricopa County",
+  "donor_domain": "elconstructionaz.com",
+  "persons": [],
+  "fabricated_persons": [
+    "Elena Ruiz",
+    "Jordan B.",
+    "Marisol N.",
+    "Ray D."
+  ],
+  "socials": [
+    "https://www.google.com/maps/place/EL+Construction+LLC",
+    "g.page/el-construction-tempe",
+    "ChIJI6guXEgIK4cRABILl-7tNiI",
+    "elconstructionaz"
+  ],
+  "zips": [
+    "85281",
+    "85282",
+    "85283"
+  ],
+  "geo": [
+    "33.5327396",
+    "-111.9173586"
+  ],
+  "account_ids": [
+    "4802562343",
+    "+14802562343",
+    "Redbank Flatwork Co.",
+    "+12395550192",
+    "2395550192",
+    "redbankflatwork.com",
+    "quotes@redbankflatwork.com",
+    "FL-CGC-1524887",
+    "https://maps.example.com/place/redbank-flatwork-co"
+  ],
+  "consumes_content": false,
+  "renders": [],
+  "renders_note": "Fixed template copy throughout; it does not consume the engine's content-inject islands (the engine appends its authority block — services, coverage, FAQ, reviews, hours — at the ENGINE INJECTION POINT before the footer, and this one-pager leaves that seam intact). Every business-specific string is a token, and every token that can be unverified collapses its own UI at hydration (see tokens_note). The service set is the vertical's standard six — driveways and aprons, garage and shop slabs, footings and stem walls, sidewalks and ADA, decorative finishes, slab repair and cutting — stated as what the trade does, not as claims about a specific contractor.",
+  "photo_slots": [
+    "assets/hero-concrete-4-_vKHA0.webp",
+    "assets/project-01-DQoyWgSZ.jpg",
+    "assets/project-02-DryefWmE.jpg",
+    "assets/project-03-CvQUsHX1.jpg",
+    "assets/project-04-COIZBclF.jpg",
+    "assets/project-05-Bx8bNHnQ.jpg",
+    "assets/project-06-DEMnSYxR.jpg",
+    "assets/grain.svg"
+  ],
+  "photo_slots_note": "Slot 0 is the hero poster photograph carried over from the verbatim port (the hero_video poster — a filled hero photo and the poster are one image), plus six per-slot semantic drawn SVG work illustrations (broom driveway, screeded slab, formed footing, stamped patio, ADA walk, commercial pad) and the grain overlay. Each gallery figure's alt text names the KIND of work it depicts — it never claims these images are the prospect's own projects. The verbatim port's project-*.jpg/webp library remains in assets/ for engine photo placement.",
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-concrete.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-concrete.mp4",
+    "poster": "assets/hero-concrete-4-_vKHA0.webp",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (ships in this donor; media/hero-loop.mp4 is the archived master — deploy it by copying over the fallback path, a file swap not a code change)",
+      "the still poster photograph (the video poster attribute and the paint-under CSS surface are the same file; the runtime leaves the poster painted when no rung arms)",
+      "the drawn hero composition (slab, grain and scrim layers under everything)"
+    ],
+    "note": "The shipped fallback bytes are the verbatim port's clip. The marked <video data-hero-video muted loop playsinline preload=none hidden> is MOUNTED by the hero layer bundle (assets/index-concrete-elconstruction.js, the ladder-donor mount contract: hidden, poster photograph as poster, no static src), over the painted hero surface and the poster img that IS the complete zero-JS hero; the ladder runtime in index.html observes for the mount and arms rungs only when their bytes shipped, reduced motion never mounts or arms the video (guarded in the runtime AND in the mount layer), mobile is poster-first with tap-to-play, and the clip pauses when the hero scrolls away or the tab hides."
+  },
+  "spa_routes": [],
+  "spa_routes_note": "One document; sections are #id anchors (#top, #services, #work, #process, #about, #reviews, #faq, #contact). No client routing of any kind since the 2026-09-02 static rebuild — the verbatim port's twelve-route tree left with the SPA. sitemap.xml/llms.txt still describe the shipped static routes.",
+  "prerendered_routes": [
+    "/"
+  ],
+  "prerendered_note": "Fully static since the 2026-09-02 rebuild — index.html ships the complete page as real header/main/footer markup in source order, so crawlers and no-JS visitors read every word. JS adds sizzle only (reveals, count-ups, hero clip arming), each gated behind the pre-paint .js class and prefers-reduced-motion.",
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [],
+    "catchAll": "* -> 404 page"
+  },
+  "classification": {
+    "verticalFamilies": [
+      "heavy-trade",
+      "property-transformation"
+    ],
+    "conversionArchetypes": [
+      "request-estimate"
+    ],
+    "shape": "cinematic-onepager",
+    "routeDepth": "flat",
+    "photoDemand": "high"
+  },
+  "classification_note": "request-estimate: conversion routes through the quote CTA panel and the tel:/mailto: rails. The header CTA, hero call button, CTA-panel call button, footer phone segment and the floater all collapse entirely when the business has no verified phone, each falling back to a #contact quote anchor where a primary slot needs a survivor. There is no emergency-call archetype — flatwork is scheduled work.",
+  "lead_endpoint": null,
+  "lead_endpoint_note": "No donor-native form since the static rebuild (the verbatim port's QuoteEstimator left with the SPA). The design converts through tel:/mailto: links and #contact quote anchors, all token-driven and collapse-guarded. The engine's content-inject lead-capture island (POST /api/quote-request) provides the form path on every mirror, so no stub endpoint could silently swallow leads.",
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "STATE",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "GEO_LAT",
+    "GEO_LNG",
+    "ADDRESS_CITY",
+    "PROFILE_URL",
+    "LICENSE",
+    "LOGO_URL",
+    "HERO_HEADLINE",
+    "SITE_URL"
+  ],
+  "tokens_note": "Collapse is [[NEED:TOKEN]] / [[NEED:!TOKEN]] phrase markers around every weld of an OPTIONAL token: blank PHONE removes the header CTA (a quote anchor takes the slot), the hero call button, the CTA-panel call button, the footer phone segment and the ld+json telephone line, and flips the floater plus the meta/OG sentences to written-quote copy; blank EMAIL removes the mailto rails; blank LICENSE removes the license chip, the partners chip, the footer license line and the ld+json identifier; blank OWNER_NAME swaps the about sentence to the business-led reading and drops the footer ownership clause and the ld+json founder; blank COUNTY unwelds every county mention from copy, headings and the ld+json areaServed entry; blank POSTAL drops the schema postalCode and the footer ZIP; blank GEO drops the geo.position meta and the footer coordinates; blank GEO_LAT/GEO_LNG drops the ld+json GeoCoordinates block; blank PROFILE_URL drops the ld+json sameAs and the footer profile link. Dialable links are href=tel:{{PHONE_DIGITS}} everywhere, so a phone-less build carries no dangling tel: href.",
+  "truth_law_removals": [
+    "The verbatim source business's full NAP (EL Construction, Tempe AZ, (480) 256-2343, elconstructionaz@gmail.com, Maricopa County, the Phoenix-metro service-market list, the GBP links and place ids) is declared here as identity atoms and ships NOWHERE in the bytes — every identity string is a token; a resurrection is blocked by the identity scan, and the Phoenix-metro service-market atoms are filtered from the socials bucket per scan.js so a legitimate Arizona prospect is not falsely rejected.",
+    "The verbatim hero claim strip ('100% Licensed & Insured', 'Same-Week Site Visits', '13+ Cities Served') left with the SPA; licensing renders only when the prospect's LICENSE is verified, and every 'Licensed {{LICENSE}}' surface collapses when it is not.",
+    "Template stats on the stat strip (72hr quote turnaround, 4000 psi standard mix, 4.9 average rating) are design furniture, not claims — the engine's verified-trust islands override them on real builds, and RATING/REVIEW_COUNT are never invented.",
+    "The template's three review cards are fictional demo voices (declared in fabricated_persons); they are placeholder furniture the content-inject reviews island supersedes, and no reviewer content is ever fabricated as a real person's words.",
+    "No maps embed, no hours table, no review-carousel widget shipped: coverage/authorities arrive via the engine's own verified islands."
+  ],
+  "identity_atoms_note": "The primary atoms are the source business's REAL identity (name, NAP, domain, GBP links, place id, zips, surveyed geo) as it stood in the verbatim port — none of it appears in the installed bytes, but the scan needs real needles so it can never return clean for arbitrary bytes, and so a future rebuild that reintroduces any of it is blocked rather than shipped. The a-plus template's fictional demo identity (Redbank Flatwork Co., Fort Myers / Lee County FL) is declared in account_ids for the same reason. donor_city Tempe and donor_county Maricopa County are PLACE atoms: a legitimate Tempe concrete prospect is excused by the client-place carve-out (scan.js BF-5) because the words on the page are then the client's own verified truth.",
+  "notes": "A-PLUS REBUILD 2026-09-02 (lovable/concrete-elconstruction-a-plus): the verbatim SPA page was replaced by the static build described in stack — charcoal-navy design system on --wss-* properties, painted slab hero with grain and word-by-word display headline, ticker, bento services, SVG gallery, numeral process rail, about with partners strip, review cards, glass accordion FAQ, quote CTA panel, four-column footer and a single floater. CI-repair pass 2 (fix2/concrete-elconstruction): restored the WSS manifest schema with the real source identity atoms (plus the template's fictional identity) so the identity gate can fire; vertical back to canonical 'concrete' with the masonry/hardscape aliases; NEED-guarded every OPTIONAL token weld (phone, email, license, owner, county, postal, geo, geo-lat/lng, profile) and added the guarded GeoCoordinates block; added the data-wss-hero-fallback kill-switch + paint-under style block, the ladder island and the walker runtime in index.html, and the ladder-donor mount bundle assets/index-concrete-elconstruction.js as the ONE index-*.js the shell references (the retired SPA bundle was removed, keeping donor-concrete-browser-assets' single-bundle law); renamed assets/logo-fallback.svg -> mark-fallback.svg (a logo-* filename is a donor brand asset the identity scan must block); restored the realestate-waterline family to its merged main state after the branch carried a stale copy.",
+  "registered_on": "2026-08-19",
+  "installed_at": "apps/backend/donors-clean/concrete-elconstruction",
+  "alias_verticals": [
+    "masonry",
+    "mason",
+    "hardscaping",
+    "hardscape",
+    "concrete contractor",
+    "flatwork"
+  ],
+  "alias_note": "Applied by lib/donor-verticals.js from data/donor-verticals.json. The engine itself still resolves ONLY the exact \"vertical\" value above."
+}

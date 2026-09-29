@@ -1,0 +1,8 @@
+/* TEAM */
+Site owner: BoxDrop Mattress & Furniture Rhode Island
+Location: 601 Metacom Ave, Warren, RI 02885
+Contact: (401) 365-7993
+
+/* SITE */
+Standards: HTML5, CSS, TypeScript, TanStack Start, Tailwind CSS
+Components: Lovable + React 19

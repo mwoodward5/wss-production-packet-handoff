@@ -1,0 +1,65 @@
+{
+ "id": "vivid-vertex-builder",
+ "source": "a218c6fb-f767-4728-9cee-9871ef148fc1",
+ "palette": {
+  "vars": {
+   "--ink": "oklch(0.13 0.01 230)",
+   "--bone": "oklch(0.97 0.005 90)",
+   "--volt": "oklch(0.92 0.22 130)",
+   "--volt-deep": "oklch(0.82 0.21 130)",
+   "--clay": "oklch(0.55 0.08 60)",
+   "--background": "var(--bone)",
+   "--foreground": "var(--ink)",
+   "--surface": "oklch(0.10 0.01 230)",
+   "--surface-foreground": "var(--bone)",
+   "--card": "oklch(1 0 0)",
+   "--card-foreground": "var(--ink)",
+   "--popover": "oklch(1 0 0)",
+   "--popover-foreground": "var(--ink)",
+   "--primary": "var(--ink)",
+   "--primary-foreground": "var(--bone)",
+   "--secondary": "oklch(0.94 0.01 90)",
+   "--secondary-foreground": "var(--ink)",
+   "--muted": "oklch(0.94 0.01 90)",
+   "--muted-foreground": "oklch(0.45 0.02 230)",
+   "--accent": "var(--volt)",
+   "--accent-foreground": "var(--ink)",
+   "--destructive": "oklch(0.55 0.22 27)",
+   "--destructive-foreground": "var(--bone)",
+   "--border": "oklch(0.88 0.005 90)",
+   "--input": "oklch(0.88 0.005 90)",
+   "--ring": "var(--volt)"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.25rem",
+ "shadows": [
+  "0 30px 60px -25px rgba(0,0,0,0.45)"
+ ],
+ "keyframes": [
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "reveal",
+   "css": "@keyframes reveal { to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "draw",
+   "css": "@keyframes draw { to { stroke-dashoffset: 0; } }"
+  },
+  {
+   "name": "sweep",
+   "css": "@keyframes sweep { 0% { transform: translateY(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(100vh); opacity: 0; } }"
+  }
+ ],
+ "signatures": [
+  "marquee"
+ ]
+}

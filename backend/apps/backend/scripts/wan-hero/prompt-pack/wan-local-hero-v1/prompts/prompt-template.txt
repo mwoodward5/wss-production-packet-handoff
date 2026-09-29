@@ -1,0 +1,13 @@
+Use the supplied photograph as the exact visual and identity reference for this real {VERTICAL} business.
+
+Create a {DURATION}-second photorealistic cinematic website hero shot. Preserve the real location, architecture, people, equipment, materials, colors, branding, signage, tattoos/artwork, treatment room, project work, landscaping, vehicles, and all recognizable details visible in the source. Do not redesign or replace the business.
+
+CAMERA: {CAMERA}
+ENVIRONMENTAL MOTION: {MOTION}
+LOOK: premium live-action local-business commercial, realistic physics, natural light, physically believable reflections, subtle motion blur, realistic depth and parallax, stabilized cinema camera, high detail, restrained professional color grade.
+
+COMPOSITION: keep the main subject readable and visually strong for a website hero. Favor smooth motion and a clean center/side region where website headline text can overlay without covering the key subject.
+
+CRITICAL REALISM RULES: preserve geometry and identity. Motion must be subtle and physically plausible. The first frame should closely match the supplied source image so the transition from poster image to video feels seamless.
+
+DO NOT: morph or melt objects; warp buildings, faces, hands, tools, vehicles, furniture, equipment, tattoos, or straight lines; alter logos; invent or rewrite text/signage; duplicate people or objects; add fake workers/customers; add services or structures not shown; create impossible camera paths; use hyperlapse; use excessive wind; create surreal effects; create obvious AI animation.

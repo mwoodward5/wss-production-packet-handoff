@@ -1,0 +1,72 @@
+{
+ "id": "supply-spark-suite",
+ "source": "eba74e38-6996-43ad-8ea2-3a0554c5f2da",
+ "palette": {
+  "vars": {
+   "--ink": "oklch(0.18 0.012 60)",
+   "--cream": "oklch(0.965 0.018 80)",
+   "--amber": "oklch(0.78 0.13 70)",
+   "--amber-soft": "oklch(0.88 0.07 78)",
+   "--background": "var(--cream)",
+   "--foreground": "var(--ink)",
+   "--card": "oklch(0.99 0.01 80)",
+   "--card-foreground": "var(--ink)",
+   "--popover": "var(--cream)",
+   "--popover-foreground": "var(--ink)",
+   "--primary": "var(--ink)",
+   "--primary-foreground": "var(--cream)",
+   "--secondary": "oklch(0.93 0.018 80)",
+   "--secondary-foreground": "var(--ink)",
+   "--muted": "oklch(0.93 0.018 80)",
+   "--muted-foreground": "oklch(0.42 0.014 60)",
+   "--accent": "var(--amber)",
+   "--accent-foreground": "var(--ink)",
+   "--destructive": "oklch(0.55 0.2 25)",
+   "--destructive-foreground": "var(--cream)",
+   "--border": "oklch(0.84 0.018 75)",
+   "--input": "oklch(0.84 0.018 75)",
+   "--ring": "var(--amber)"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "var(--ink)",
+   "--foreground": "var(--cream)",
+   "--card": "oklch(0.22 0.014 60)",
+   "--card-foreground": "var(--cream)",
+   "--popover": "oklch(0.22 0.014 60)",
+   "--popover-foreground": "var(--cream)",
+   "--primary": "var(--cream)",
+   "--primary-foreground": "var(--ink)",
+   "--secondary": "oklch(0.26 0.014 60)",
+   "--secondary-foreground": "var(--cream)",
+   "--muted": "oklch(0.26 0.014 60)",
+   "--muted-foreground": "oklch(0.72 0.014 70)",
+   "--accent": "var(--amber)",
+   "--accent-foreground": "var(--ink)",
+   "--border": "oklch(1 0 0 / 12%)",
+   "--input": "oklch(1 0 0 / 18%)",
+   "--ring": "var(--amber)"
+  }
+ },
+ "fonts": {
+  "display": "Archivo",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+ },
+ "radius": "0.375rem",
+ "shadows": [],
+ "keyframes": [
+  {
+   "name": "hero-drift",
+   "css": "@keyframes hero-drift { 0% { transform: scale(1.05) translate3d(0, 0, 0); } 50% { transform: scale(1.10) translate3d(-1.2%, -0.8%, 0); } 100% { transform: scale(1.05) translate3d(0, 0, 0); } }"
+  },
+  {
+   "name": "ss-pulse",
+   "css": "@keyframes ss-pulse { 0% { transform: scale(0.85); opacity: 0.7; } 100% { transform: scale(1.6); opacity: 0; } }"
+  }
+ ],
+ "signatures": [
+  "ken-burns",
+  "gradient-heavy"
+ ]
+}

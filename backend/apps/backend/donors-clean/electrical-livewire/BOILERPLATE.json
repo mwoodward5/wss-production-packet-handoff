@@ -1,0 +1,144 @@
+{
+  "name": "electrical-livewire",
+  "vertical": "electrical",
+  "hero_wash": {
+    "selector": "section#top",
+    "background": "#000000",
+    "text_color": "#F5F5F5",
+    "pages_verified": ["/"],
+    "verified": "Render-proven 2026-08-19 on a local Chromium serve (scratch-electrical/prove-electrical-donor.cjs): heroWashCss applied to this spec clears AA at 4.61:1 worst-case. 2026-09-02 static rebuild: the hero is now a full-bleed video/poster hero on the same section#top selector; the copy column sits left (the poster's centered panel subject keeps its center-safe zone clear), on the donor's own scrim floor — stacked black gradients holding >=0.62 combined alpha under the copy, which keeps #fff-family hero ink above 4.5:1 on the raw poster and on any video frame, independent of the client palette. background and text_color are the raw dark hero sample; the engine wash rides on top of the donor scrim, and the same selector drives the mobile fold."
+  },
+  "hero_wash_note": "background and text_color are the raw dark hero sample from the source design system (hsl 0 0% 0% slab, 0 0% 96% ink); the shipped scrim comes from the theme pass.",
+  "label": "Livewire — dark cinematic electrician one-pager: grid-lines hero, services grid, process, focus tiles, gallery, FAQ, contact",
+  "wordmarkFill": "#F5F5F5",
+  "source": "Owner's Lovable workspace, project voltage-valor-spark (display name 'Electrician Template', id 6ecb12b2-864c-4511-bf19-cf8bed48576e) — a PageHub One Page Custom build for a real Florida electrical contractor. Source was read file-by-file over the Lovable MCP (no remix, no credits) and rebuilt as a client SPA with the scratch-concrete/plumbing-verbatim recipe; every business fact was excised or tokenized at source before the first compile.",
+  "sanitised": "2026-08-19",
+  "stack": "Static A+ rebuild (2026-09-02): one hand-authored index.html (real header/main/footer markup, no framework, no CDN, no external requests) + one hand-authored stylesheet at assets/electrical-livewire.css + one script asset, assets/index-electrical-livewire.js (the hero video layer: mounts the ladder-marked <video data-hero-video> hidden with the poster and runs the poster-first/tap-to-play control; the hero is complete without it and reduced motion never mounts the clip). Progressive enhancement only — the first inline script adds .js to <html> before first paint, and every sizzle layer (scroll reveals, count-up stats, glass chips' backdrop, CTA light-sweep, hero video) is inert without JS or under prefers-reduced-motion. The former Vite 5 + React 18 bundle (assets/index-C-NxoyKA.js / index-BFOG4pkM.css) was removed when this rebuild replaced it.",
+  "donor_business_name": "Voltage & Valor Electric",
+  "donor_phone": "(321) 236-3298",
+  "donor_email": "service.voltagevalor@gmail.com",
+  "donor_city": "Melbourne",
+  "donor_county": "Brevard County",
+  "donor_domain": "voltagevalor.com",
+  "persons": [],
+  "fabricated_persons": [],
+  "socials": [],
+  "zips": [],
+  "geo": [],
+  "account_ids": [
+    "+13212363298",
+    "3212363298",
+    "321-236-3298",
+    "voltagevalor",
+    "ChIJj4hbboJWmAERYwVTlz_8Shw",
+    "https://maps.app.goo.gl/GBPSAFRWmuH4LPhV9",
+    "EC13016160"
+  ],
+  "consumes_content": false,
+  "renders": [],
+  "renders_note": "Fixed template copy throughout; it does not consume the engine's content-inject islands (the engine appends its authority block — services, coverage, FAQ, reviews, hours — before the footer, and this one-pager leaves that seam intact). Every business-specific string is a token, and every token that can be unverified collapses its own UI at runtime (see tokens_note). The service set is the vertical's standard nine — residential/commercial electrician, panel upgrades, EV charger installation, generator installation, fixture installation, troubleshooting, wiring, general electrical — stated as what the trade does, not as claims about a specific contractor.",
+  "photo_slots": [
+    "assets/hero-electrical-Bs6mWwJJ.jpg",
+    "assets/work-1-CXjA8BKM.jpg",
+    "assets/work-2-BzcDhsNE.jpg",
+    "assets/work-3-9S1ZSu2C.jpg",
+    "assets/work-4-Zxb9b3p3.jpg",
+    "assets/work-5-Bja_EgKj.jpg",
+    "assets/work-6-DSv3xhRn.jpg",
+    "assets/work-7-C3q-fGk4.jpg",
+    "assets/work-8-BlbBpfHl.jpg"
+  ],
+  "photo_slots_note": "Nine slots: the hero poster (slot 0 — also the hero_video poster, so a filled hero photo and the poster are one image) plus eight gallery/section images. All nine are unbranded field photographs (panels, wiring, lighting) carried over from the source project after a frame-by-frame vet: the two brand-logo images, two private-home interiors and two shots dominated by a manufacturer's badge were excluded, and EXIF (including any GPS) was stripped from every survivor. Slots are .jpg because engine.js places a client photo only when it can match or transcode to the slot extension. The on-page gallery is captioned as the KIND of work an electrician does — it never claims these photographs are the prospect's own projects.",
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-electrical.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-electrical.mp4",
+    "poster": "assets/hero-electrical-Bs6mWwJJ.jpg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (ships in this donor; see note on provenance)",
+      "the still poster photograph (the hero img branch and the video poster attribute are the same file; the runtime leaves the poster painted when no rung arms)",
+      "the drawn hero composition (grid-lines and gradient layers under everything)"
+    ],
+    "note": "PLACEHOLDER CLIP, owner directive 2026-08-19: the shipped fallback bytes are a copy of the vetted trade-neutral equipment close-up already in the library (hvac-brandforge assets/hero-video.mp4, the pressure-gauge clip — no people, no third-party marks). It stands in until the owner's Google AI Studio (Veo) lane generates a proper electrician clip; swapping the bytes at wss_fallback_clip_path IS the deployment, no code change. Since the 2026-09-02 static rebuild the marked <video data-hero-video muted loop playsinline preload=none hidden> is MOUNTED by the hero layer bundle (assets/index-electrical-livewire.js, the ladder-donor mount contract: hidden, poster photograph as poster, no static src), directly above the static poster <img> that IS the complete zero-JS hero; the ladder runtime in index.html observes for the mount and arms rungs only when their bytes shipped, reduced motion never mounts or arms the video (guarded in the runtime AND in the mount layer), mobile is poster-first with a tap-to-play chip, and the clip pauses when the hero scrolls away or the tab hides."
+  },
+  "spa_routes": [],
+  "spa_routes_note": "One document; sections are #id anchors (#top, #services, #process, #focus, #about, #gallery, #testimonials, #faq, #ready, #contact), every one carrying scroll-margin-block-start. No client routing of any kind since the 2026-09-02 static rebuild — there is no SPA to declare routes for.",
+  "prerendered_routes": [
+    "/"
+  ],
+  "prerendered_note": "Fully static since the 2026-09-02 rebuild — index.html ships the complete page as real header/main/footer markup in source order, so crawlers and no-JS visitors read every word. JS adds sizzle only (reveals, count-ups, hero clip arming), each gated behind the pre-paint .js class and prefers-reduced-motion.",
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [],
+    "catchAll": "* -> 404 page"
+  },
+  "classification": {
+    "verticalFamilies": [
+      "home-services",
+      "trades"
+    ],
+    "conversionArchetypes": [
+      "request-estimate",
+      "emergency-call"
+    ],
+    "shape": "cinematic-onepager",
+    "routeDepth": "flat",
+    "photoDemand": "medium"
+  },
+  "classification_note": "emergency-call: header, hero, CTA band and contact rail all carry call/text CTAs stamped data-cta (hero-call, hero-quote, dock-call, dock-quote) — every one collapses entirely when the business has no verified phone, and the primary slot falls back to a Request Service anchor. request-estimate: with no donor-native form, conversion routes through tel:/sms:/mailto: plus the engine's injected lead-capture island.",
+  "lead_endpoint": null,
+  "lead_endpoint_note": "No donor-native form. The source design converts through tel:/sms:/mailto: links only, all token-driven and collapse-guarded. The engine's content-inject lead-capture island (POST /api/quote-request) provides the form path on every mirror, so no stub endpoint could silently swallow leads (the hvac-brandforge port found exactly that class).",
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "STATE",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "GEO_LAT",
+    "GEO_LNG",
+    "ADDRESS_CITY",
+    "PROFILE_URL",
+    "LICENSE",
+    "LOGO_URL",
+    "RATING",
+    "REVIEW_COUNT",
+    "REVIEW_TEXT",
+    "REVIEW_AUTHOR",
+    "HERO_HEADLINE",
+    "HERO_LINE_A",
+    "HERO_LINE_B",
+    "SITE_URL"
+  ],
+  "tokens_note": "Collapse is implemented two ways. (1) Markup-side [[NEED:TOKEN]] / [[NEED:!TOKEN]] phrase markers around every weld of an OPTIONAL token: blank PHONE removes the header call chip, the drawer call row, the hero call CTA (a Request Service anchor takes the primary slot), the CTA-band call button, the contact call rail and the footer phone segment, and reroutes the lost-power and service-area FAQs to the page's contact options; blank EMAIL removes the contact and footer mail rails; blank LOGO_URL renders the BUSINESS_NAME wordmark instead of a broken image; blank PROFILE_URL renders the service-area copy without the profile link; blank LICENSE removes the hero license chip, the about credentials card, the contact credentials rail and the footer license line (the licensing FAQ falls back to 'details printed on every written estimate'); blank OWNER_NAME swaps the about sentence to the business-led reading; blank DOMAIN drops canonical/og:url/og:image and the footer domain segment; the testimonial section rides data-collapse-if-empty=REVIEW_TEXT, and RATING/REVIEW_COUNT chips exist only when the pair is verified. The h1 is HERO_HEADLINE — the engine-composed client headline, never a baked donor sentence. (2) robots.txt SITE_URL rides a NEED phrase marker. Dialable links are href=tel:{{PHONE_DIGITS}} everywhere (the hydrator normalizes them), so a phone-less build carries no dangling tel: href.",
+  "truth_law_removals": [
+    "Full NAP of the source business: 'Voltage & Valor Electric' (~14 renders), phone (321) 236-3298 / +13212363298 in eleven tel:/sms: CTAs, email service.voltagevalor@gmail.com, 'Melbourne, FL' and 'Brevard County' throughout copy, title, meta, OG and the Electrician JSON-LD. All became collapsing tokens; the donor JSON-LD block was removed outright (the engine's content-inject writes the full verified graph).",
+    "Florida license: 'Florida Licensed Electrical Contractor · License # EC13016160' rendered in three places. A license is a verified-or-absent fact — the blocks now render the LICENSE token and collapse when it is blank. The number is declared in account_ids so any resurrection is caught by the identity scan.",
+    "24/7 claims: 'Available 24/7', 'Open 24/7', 'AVAILABLE 24/7' header strip, an 'Are you really available 24/7?' FAQ and an 'Hours 24/7' section eyebrow — availability claims about a specific contractor that no engine fact verifies. Removed or rewritten as trade-generic copy; verified hours arrive via the engine's authority block.",
+    "Ownership and conduct claims: 'owned and operated right here in Brevard County', 'you're talking to the people doing the work — not a call center', 'We show up when we say we will'. Rewritten to place-tokenized, non-factual copy.",
+    "Google Business Profile: hasMap/sameAs/identifier (place id ChIJj4hbboJWmAERYwVTlz_8Shw, maps.app.goo.gl link) and the contact-section GBP anchor. The service-area rail now links PROFILE_URL only when the prospect's own profile is verified.",
+    "Brand assets: voltage-valor-logo.jpg, voltage-valor-shield.jpg, header-logo-wide.png, footer-logo-large.png (hero, about, local band, CTA band, header). Header and CTA band now render the LOGO_URL token or the BUSINESS_NAME wordmark; the hero media card is the video/poster ladder; section images are unbranded field photos.",
+    "Gallery claims and imagery: 'Project Gallery — a look at recent electrical work across Melbourne, FL' presented 20 photographs as the source business's portfolio, two of which were its logo art and two of which were identifiable private-home interiors. The kept eight are unbranded close-ups of trade work, EXIF-stripped, captioned as the kind of work the trade does — no portfolio claim.",
+    "Lovable asset-CDN references: every kept image was downloaded from the source project's published asset store and compiled into the bundle as local content-hashed files; the shipped tree makes no request to any lovable.app or CDN host (Google Fonts excepted, as on every donor)."
+  ],
+  "identity_atoms_note": "The atoms declared here are the source business's real identity (name, NAP, domain, place id, GBP link, license number) as it stood in the Lovable source. None of it appears in the installed bytes — the port excised it before the first compile — but the scan needs real needles so it can never return clean for arbitrary bytes, and so a future rebuild that reintroduces any of it is blocked rather than shipped. donor_city Melbourne and donor_county Brevard County are PLACE atoms: a legitimate Melbourne, FL electrical prospect is excused by the client-place carve-out (scan.js BF-5) because the words on the page are then the client's own verified truth.",
+  "notes": "Ported 2026-08-19 in the electrical-donor lane (worktree, uncommitted). Visual DNA preserved end to end: near-black + electric-green design system, Oswald/Inter type, grid-lines hero with glow orbs, silver/bolt gradient headline, services grid, numbered process cards, focus tiles, gallery, FAQ accordion, black CTA band, contact rails. Built with the junctioned vite_react_shadcn_ts toolchain from C:/ports/yellow_rose_plumbing (same stack generation as the source); one bundle, acorn-parses as script, zero ESM syntax, zero bare tokens (every literal rides the facts.ts Record). A+ REBUILD 2026-09-02 (zcode/electrical-livewire-a-plus): the SPA was replaced by the static build described in stack — same DNA (slab hero with grid-lines + accent glow orbs, services grid, numbered process, focus tiles, gallery, FAQ, slab CTA band, contact rails) re-expressed in palette-var CSS. The stylesheet consumes 17 distinct --wss-* properties with achromatic fallbacks only (no hardcoded brand hex anywhere); hero accent gradients are color-mix stops off var(--wss-accent) with a flat-accent fallback and no -webkit-text-fill-color anywhere; three commented VARIANT blocks per section type (hero, services, gallery, testimonials, FAQ, process, CTA) with exactly one active each; hero h1 is clamp(2.25rem,6vw,5.5rem)/20ch/balanced; every interactive element is >=48px, all text >=16px, primary CTAs go full-width under 480px, a safe-area-padded action dock pins the mobile fold, and zero horizontal scroll exists at 390px. Web fonts were dropped with the CDN ban (system stack, heavy weights + tight tracking carry the display voice); every image src resolves to a shipped asset with slot-semantic alt text.",
+  "registered_on": "2026-08-19",
+  "installed_at": "apps/backend/donors-clean/electrical-livewire",
+  "alias_verticals": [
+    "electrician",
+    "electricians",
+    "electrical contractor",
+    "electric"
+  ],
+  "alias_note": "Applied by lib/donor-verticals.js from data/donor-verticals.json. The engine resolves ONLY the exact vertical value above, which must match the render-gate.js VERTICALS key 'electrical' (schema Electrician) exactly."
+}

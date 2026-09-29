@@ -1,0 +1,101 @@
+{
+ "id": "kaups-tree-service-tn",
+ "source": "1da03c93-74bd-49ff-9fc9-7e771abb7c26",
+ "palette": {
+  "vars": {
+   "--forest": "oklch(0.32 0.06 150)",
+   "--forest-deep": "oklch(0.16 0.04 158)",
+   "--forest-ink": "oklch(0.11 0.03 160)",
+   "--dirt": "oklch(0.30 0.045 60)",
+   "--amber-cta": "oklch(0.80 0.16 75)",
+   "--amber-cta-hover": "oklch(0.74 0.17 70)",
+   "--bone": "oklch(0.97 0.012 85)",
+   "--bone-dim": "oklch(0.88 0.018 85)",
+   "--background": "oklch(0.985 0.008 85)",
+   "--foreground": "oklch(0.18 0.03 155)",
+   "--card": "oklch(1 0 0)",
+   "--card-foreground": "oklch(0.18 0.03 155)",
+   "--popover": "oklch(1 0 0)",
+   "--popover-foreground": "oklch(0.18 0.03 155)",
+   "--primary": "var(--forest-deep)",
+   "--primary-foreground": "var(--bone)",
+   "--secondary": "oklch(0.93 0.02 90)",
+   "--secondary-foreground": "var(--forest-deep)",
+   "--muted": "oklch(0.94 0.012 90)",
+   "--muted-foreground": "oklch(0.45 0.025 130)",
+   "--accent": "var(--amber-cta)",
+   "--accent-foreground": "oklch(0.18 0.03 155)",
+   "--destructive": "oklch(0.58 0.22 27)",
+   "--destructive-foreground": "oklch(0.99 0.005 90)",
+   "--border": "oklch(0.88 0.015 90)",
+   "--input": "oklch(0.92 0.012 90)",
+   "--ring": "var(--amber-cta)"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "var(--forest-deep)",
+   "--foreground": "var(--bone)",
+   "--card": "oklch(0.22 0.04 155)",
+   "--card-foreground": "var(--bone)",
+   "--popover": "oklch(0.22 0.04 155)",
+   "--popover-foreground": "var(--bone)",
+   "--primary": "var(--amber-cta)",
+   "--primary-foreground": "oklch(0.18 0.03 155)",
+   "--secondary": "oklch(0.28 0.04 155)",
+   "--secondary-foreground": "var(--bone)",
+   "--muted": "oklch(0.26 0.03 155)",
+   "--muted-foreground": "oklch(0.78 0.02 85)",
+   "--accent": "var(--amber-cta)",
+   "--accent-foreground": "oklch(0.18 0.03 155)",
+   "--destructive": "oklch(0.65 0.21 25)",
+   "--destructive-foreground": "var(--bone)",
+   "--border": "oklch(1 0 0 / 10%)",
+   "--input": "oklch(1 0 0 / 14%)",
+   "--ring": "var(--amber-cta)"
+  }
+ },
+ "fonts": {
+  "display": "Bricolage Grotesque",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.75rem",
+ "shadows": [
+  "0 30px 80px -30px oklch(0 0 0 / 0.6),\n      inset 0 1px 0 oklch(1 0 0 / 0.08)",
+  "0 0 0 1px oklch(0.80 0.16 75 / 0.5), 0 18px 60px -20px oklch(0.80 0.16 75 / 0.35)"
+ ],
+ "keyframes": [
+  {
+   "name": "drift-slow",
+   "css": "@keyframes drift-slow { 0% { transform: translate3d(0,0,0); } 50% { transform: translate3d(-12px,-8px,0); } 100% { transform: translate3d(0,0,0); } }"
+  },
+  {
+   "name": "drift-fast",
+   "css": "@keyframes drift-fast { 0% { transform: translate3d(0,0,0); } 50% { transform: translate3d(18px,6px,0); } 100% { transform: translate3d(0,0,0); } }"
+  },
+  {
+   "name": "shimmer",
+   "css": "@keyframes shimmer { 0% { transform: translateX(-150%); } 100% { transform: translateX(150%); } }"
+  },
+  {
+   "name": "float-y",
+   "css": "@keyframes float-y { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }"
+  },
+  {
+   "name": "contour-pan",
+   "css": "@keyframes contour-pan { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-60px,-30px,0); } }"
+  },
+  {
+   "name": "led-pulse",
+   "css": "@keyframes led-pulse { 0%,100% { opacity: .35; transform: scale(.9); } 50% { opacity: 1; transform: scale(1.05); } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "noise",
+  "glow",
+  "shimmer",
+  "float",
+  "gradient-heavy"
+ ]
+}

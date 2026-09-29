@@ -1,0 +1,23 @@
+:root { --accent: 152 100% 40%; --accent-glow: 152 100% 36%; --bg: 24 10% 8%; }
+body { background: hsl(var(--bg)); color: #f5f5f4; font-family: system-ui, sans-serif; margin: 0; }
+.brand-mark { height: 44px; }
+
+/* The donor's own hero law: a two-column split, words laid out inline.
+   This is exactly the geometry the component-variant flex-bomb overrode —
+   .hero-word must stay an inline-block line of text, .hero-visual must stay
+   a media column, and neither may ever become a min-height flex slab. */
+.hero { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 2rem; align-items: center; padding: clamp(2rem, 6vh, 4rem) 1.25rem; position: relative; min-height: 0; }
+.hero-inner { max-width: 34rem; }
+.hero-headline { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.08; margin: 0 0 1rem; }
+.js .hero-word { display: inline-block; }
+.hero-sub { font-size: 1.1rem; opacity: .85; margin: 0 0 1.5rem; }
+.hero-visual { position: relative; }
+.hero-photo { width: 100%; height: auto; display: block; border-radius: .5rem; }
+.hero-scrim { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, transparent, rgba(0,0,0,.25)); }
+
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+}

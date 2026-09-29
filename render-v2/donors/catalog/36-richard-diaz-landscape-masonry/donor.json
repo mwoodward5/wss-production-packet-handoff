@@ -1,0 +1,438 @@
+{
+  "version": 2,
+  "key": "36-richard-diaz-landscape-masonry",
+  "name": "Richard Diaz Landscape & Masonry",
+  "category": "landscaping",
+  "vertical": "landscaping",
+  "requested_vertical": "landscaping",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "04930364-0a69-4d3c-a517-b6071ccb8442",
+  "lovable_source_commit": "2280b09f15c52fbf0008d2d0b9e81f23e9c7a827",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "04930364-0a69-4d3c-a517-b6071ccb8442",
+    "ref": "2280b09f15c52fbf0008d2d0b9e81f23e9c7a827",
+    "repository": "https://github.com/mwoodward5/richard-diaz-landscaping-site",
+    "git_tree": "376a75604ff8994727b01dd1b082440537086cec"
+  },
+  "classification": "CINEMATIC",
+  "routes": [
+    "/"
+  ],
+  "design_tokens": {
+    "fonts": {
+      "display": "Fraunces",
+      "body": "Inter"
+    },
+    "colors": {
+      "background_cream": "oklch(0.965 0.02 85)",
+      "foreground_bark": "oklch(0.22 0.02 60)",
+      "terracotta_accent": "oklch(0.58 0.13 42)",
+      "stone": "oklch(0.72 0.03 70)",
+      "moss": "oklch(0.42 0.06 140)",
+      "border": "oklch(0.86 0.02 75)"
+    },
+    "layout": {
+      "content_max_width": "max-w-7xl",
+      "mobile_gutter": "px-5",
+      "desktop_gutter": "md:px-8",
+      "section_spacing": "py-24 md:py-32",
+      "base_radius": "0.5rem"
+    },
+    "components": {
+      "primary_cta": "rounded full terracotta button with white semibold text",
+      "cards": "warm bordered surfaces with rounded-xl or rounded-2xl corners",
+      "shadow_language": "restrained shadow-sm and shadow-xl",
+      "motion": "subtle hover lift and image scale only"
+    }
+  },
+  "hero_contract": {
+    "route": "/",
+    "position": "First content section after sticky navigation",
+    "container": "Full-width relative overflow-hidden section with absolute full-bleed media layer",
+    "desktop_height_behavior": "Content-driven, approximately 560-650px excluding navigation",
+    "mobile_height_behavior": "Content-driven, approximately 430-520px excluding navigation",
+    "media": {
+      "type": "Replace existing background image with approximately 10-second muted looping cinematic client-video",
+      "poster": "Use strongest certified client hero photo",
+      "aspect_source": "16:9 preferred",
+      "fit": "object-cover",
+      "object_position": "center by default; shift key subject right where needed to protect left-side copy",
+      "required_attributes": [
+        "autoplay",
+        "muted",
+        "loop",
+        "playsInline"
+      ],
+      "reduced_motion": "Display the still poster rather than animated playback"
+    },
+    "overlay": "Full-coverage dark vertical overlay from black/60 through black/45 to black/70",
+    "content": {
+      "alignment": "Left",
+      "width": "max-w-3xl with max-w-xl supporting copy",
+      "order": [
+        "Locality pill",
+        "Large display headline",
+        "Supporting statement",
+        "Estimate CTA and phone CTA",
+        "Rating and trust row"
+      ]
+    },
+    "preservation_rules": [
+      "Do not move hero copy to center",
+      "Do not remove or lighten dark overlay",
+      "Do not add video controls or embedded text",
+      "Do not change CTA order",
+      "Do not add extra hero content blocks"
+    ]
+  },
+  "media_slots": [
+    {
+      "section": "Hero",
+      "role": "Primary cinematic proof",
+      "recommended_asset": "Strongest real completed project, team, owner, vehicle, or signature installation",
+      "ratio": "16:9 source",
+      "crop": "Full-bleed object-cover",
+      "importance": "critical"
+    },
+    {
+      "section": "Craft",
+      "role": "Owner/team/craft story image",
+      "recommended_asset": "Owner or crew at work, or premium finished feature",
+      "ratio": "4:5",
+      "crop": "object-cover",
+      "importance": "high"
+    },
+    {
+      "section": "Services",
+      "role": "Service-specific project proof",
+      "recommended_asset": "One real project image per verified service",
+      "ratio": "4:3",
+      "crop": "object-cover",
+      "importance": "high"
+    },
+    {
+      "section": "Projects",
+      "role": "Feature gallery project",
+      "recommended_asset": "Best broad showcase project",
+      "ratio": "1:1",
+      "crop": "object-cover in 2x2 featured tile",
+      "importance": "critical"
+    },
+    {
+      "section": "Projects",
+      "role": "Supporting project gallery",
+      "recommended_asset": "Diverse verified completed projects and details",
+      "ratio": "1:1",
+      "crop": "object-cover",
+      "importance": "high"
+    }
+  ],
+  "content_slots": [
+    {
+      "type": "Business identity",
+      "locations": [
+        "Navigation",
+        "Footer",
+        "Metadata"
+      ]
+    },
+    {
+      "type": "Business story and differentiators",
+      "locations": [
+        "Hero",
+        "Craft section",
+        "Footer"
+      ]
+    },
+    {
+      "type": "Services and descriptions",
+      "locations": [
+        "Services card grid"
+      ],
+      "capacity": "Up to 12 verified services"
+    },
+    {
+      "type": "Project imagery",
+      "locations": [
+        "Hero",
+        "Craft image",
+        "Services cards",
+        "Projects mosaic"
+      ]
+    },
+    {
+      "type": "Reviews",
+      "locations": [
+        "Hero rating strip",
+        "Reviews section"
+      ],
+      "capacity": "Up to four featured reviews"
+    },
+    {
+      "type": "Contact, hours, service areas",
+      "locations": [
+        "Contact panel",
+        "Footer",
+        "Hero locality pill"
+      ]
+    }
+  ],
+  "trust_slots": [
+    {
+      "location": "Hero trust row",
+      "allowed_proof": [
+        "Google rating",
+        "Google review count",
+        "Years in business",
+        "In-house work",
+        "Family ownership"
+      ]
+    },
+    {
+      "location": "Craft checklist and stat card",
+      "allowed_proof": [
+        "Owner-operated",
+        "Licensed/insured if verified",
+        "Years of experience",
+        "Verified craftsmanship claims"
+      ]
+    },
+    {
+      "location": "Reviews rating card and review grid",
+      "allowed_proof": [
+        "Verified rating",
+        "Verified review count",
+        "Approved review excerpts"
+      ]
+    },
+    {
+      "location": "Contact support copy",
+      "allowed_proof": [
+        "Warranty",
+        "Financing",
+        "License",
+        "Insurance",
+        "Response expectations"
+      ]
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "route": "/",
+      "proof": "Verified business identity, NAP, hours, geo, logo, URL"
+    },
+    {
+      "type": "Service or OfferCatalog",
+      "route": "/",
+      "proof": "Verified offered services"
+    },
+    {
+      "type": "AggregateRating",
+      "route": "/",
+      "proof": "Current verified rating and review count"
+    },
+    {
+      "type": "Review",
+      "route": "/",
+      "proof": "Visible approved review text and attribution"
+    },
+    {
+      "type": "FAQPage",
+      "route": "/",
+      "proof": "Visible factual FAQs only"
+    },
+    {
+      "type": "WebSite",
+      "route": "/",
+      "proof": "Verified site and business identity"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "location": "Hero locality pill",
+      "purpose": "Primary verified local-service region"
+    },
+    {
+      "location": "Hero subheadline",
+      "purpose": "Plain-language service and region answer"
+    },
+    {
+      "location": "Projects intro",
+      "purpose": "Factual regional project context"
+    },
+    {
+      "location": "Contact details",
+      "purpose": "NAP, hours, service areas, directions"
+    },
+    {
+      "location": "Contact-adjacent compact FAQ",
+      "purpose": "Concise factual answers for search and voice queries",
+      "condition": "Only if certified FAQ content is available"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "location": "Hero",
+      "answer_types": [
+        "Who serves this location",
+        "What services are offered"
+      ]
+    },
+    {
+      "location": "Services intro",
+      "answer_types": [
+        "What work the company handles"
+      ]
+    },
+    {
+      "location": "Contact section",
+      "answer_types": [
+        "How to contact",
+        "What areas are served",
+        "What hours the business is open"
+      ]
+    }
+  ],
+  "map_location_slot": {
+    "best_location": "Within the contact section after verified address and hours, or as a restrained map strip directly below the contact container",
+    "treatment": "Warm thin border and rounded-2xl/rounded-3xl frame",
+    "directions_cta": "Small utility text link beneath verified address",
+    "service_area_rule": "Do not show a misleading map pin for a service-area-only business"
+  },
+  "content_density": {
+    "overall": "Warm editorial layout with generous whitespace and restrained copy",
+    "minimal_sections": [
+      "Navigation",
+      "Hero locality/trust strip",
+      "Projects introduction",
+      "Footer"
+    ],
+    "rich_sections": [
+      "Craft story",
+      "Services grid",
+      "Review grid",
+      "Contact"
+    ],
+    "max_service_cards": 12,
+    "max_featured_reviews": 4,
+    "imagery_priority": [
+      "Hero",
+      "Services",
+      "Projects"
+    ]
+  },
+  "mobile_rules": {
+    "390px": [
+      "Sticky compact navigation with menu button",
+      "Hero CTAs and trust row wrap",
+      "Craft stacks text then image",
+      "Services and reviews use one column",
+      "Projects stay two-column mosaic",
+      "Contact and footer stack vertically"
+    ],
+    "768px": [
+      "Craft and contact may use two columns",
+      "Services use two columns",
+      "Reviews use two columns"
+    ],
+    "1440px": [
+      "Constrain content to max-w-7xl",
+      "Use three service columns and four gallery columns",
+      "Retain generous vertical spacing",
+      "Keep hero content in left constrained column"
+    ]
+  },
+  "non_negotiables": [
+    "Single-page section order",
+    "Dark full-bleed left-aligned hero",
+    "Cream, bark, terracotta, stone palette relationship",
+    "Fraunces headings and Inter body text",
+    "Rounded-pill calls to action",
+    "Real imagery as central proof",
+    "Three/two/one service-card responsiveness",
+    "Square mosaic gallery with featured tile",
+    "Dark contrast review section",
+    "Two-column rounded contact conversion panel",
+    "No generic redesign modules or unverified proof"
+  ],
+  "safe_replacements": [
+    "Business identity and logo",
+    "Phone, email, address, hours, directions",
+    "Hero media and all project photos",
+    "Headlines and factual business story",
+    "Services, descriptions, service imagery",
+    "Reviews, ratings, counts, and verified statistics",
+    "Credentials, awards, warranties, financing, offers",
+    "Service areas and local proof",
+    "Metadata and truthful structured data"
+  ],
+  "leak_terms": [
+    "Richard Diaz Landscape & Masonry"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "Inter"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.965 0.02 85)",
+    "oklch(0.22 0.02 60)",
+    "oklch(0.58 0.13 42)",
+    "oklch(0.72 0.03 70)",
+    "oklch(0.42 0.06 140)",
+    "oklch(0.86 0.02 75)",
+    "rounded full terracotta button with white semibold text"
+  ],
+  "fonts": [
+    "Fraunces",
+    "Inter"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "2528d834a09645a12a0217ed73876da2861768235c5c553cfebfbd7231a4912f",
+    "files": {
+      "assets/index-DkCWvfFl.js": "7b28a70e1aa92752ac9dc6122cd3ea57b3d6bc12ea7283bc01b23b20cd914198",
+      "assets/index-Sd1QjlnY.css": "5afc42c87530613a2177cd6c0435d5a3d8f8fcb075d73cfcbd7d94c35d6b54d5",
+      "index.html": "9157c7bcc1b61e829841f3e9c80f799173dc2dd3cdf96fdea3e6fdea48ef74bd"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

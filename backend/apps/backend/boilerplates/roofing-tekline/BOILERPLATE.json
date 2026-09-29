@@ -1,0 +1,46 @@
+{
+  "name": "roofing-tekline",
+  "vertical": "__retired__roofing",
+  "vertical_before_retirement": "roofing",
+  "label": "Tekline port — CONTAMINATED, out of service",
+  "sanitised": null,
+
+  "why_this_file_exists": "Until 2026-07-31 this directory had NO BOILERPLATE.json at all. That was not a cosmetic gap. lib/mirror-engine/donor.js readManifest() returns {} for a missing manifest, so resolveDonor({donor:'roofing-tekline'}) answered ok:true, and lib/mirror-engine/scan.js identityScan() built its atom list from manifest fields that did not exist — an EMPTY atom list, which returns clean:true for ANY bytes. Proven at the console: identityScan(index.html, {}) -> {clean:true,hits:[]} while that same index.html hard-codes a third party's postal address. A donor with no manifest is a donor with no identity gate, and it was indistinguishable in the build manifest from a real pass.",
+
+  "donor_business_name": "Tekline Roofing",
+  "donor_city": "Tukwila",
+  "donor_state": "WA",
+  "donor_street": "635 Industry Dr",
+  "geo": [
+    "47.452588999999996",
+    "-122.248138"
+  ],
+  "account_ids": [
+    "G-NM0SE1M1T4"
+  ],
+  "persons": [],
+  "socials": [],
+  "zips": [],
+
+  "retired": {
+    "since": "2026-07-31",
+    "repairable": true,
+    "reason": "Ships a third party's real postal address, real geo coordinates, a hardcoded state and another business's Google Analytics measurement ID, all as hardcoded literals rather than tokens — in a dist whose identity gate could not fire because the manifest was missing.",
+    "enforced_by": "lib/mirror-engine/donor.js donorRetirement() — resolveDonor now refuses this donor by NAME and by vertical with error donor_retired. Before this file existed there was no door to close.",
+    "keep_the_directory": "Deliberate. lib/forge.js (the legacy SiteForge lane) still hydrates this dist and test/donor-no-hardcoded-state.test.js pins its bytes. Deleting it breaks that lane; retiring it removes it from the Mirror Engine only.",
+    "defects": [
+      "THIRD-PARTY POSTAL ADDRESS (P0). index.html JSON-LD carries streetAddress 635 Industry Dr as a hardcoded literal, sitting directly beside a correctly tokenised addressLocality and postalCode. Every mirror built from this donor publishes a PostalAddress placing the customer at another company's building.",
+      "THIRD-PARTY GEO (P0). The same JSON-LD block hardcodes latitude 47.452588999999996 and longitude -122.248138 — a fixed point in Washington — for every customer regardless of where they trade.",
+      "THIRD-PARTY ANALYTICS ID (P0). G-NM0SE1M1T4 is hardcoded in index.html. donors-clean/roofing-falcon-clean/BOILERPLATE.json declares that exact string in its own account_ids as identity to be scrubbed. Falcon was cleaned; this dist was not, so every Tekline mirror reported traffic into a third party's Google Analytics property.",
+      "HARDCODED STATE (P1). addressRegion is the literal WA. test/donor-no-hardcoded-state.test.js passes on this file only because its regex looks for comma-space-STATE and this residue is quoted-STATE — a vacuous pass, not a clean donor.",
+      "UNGUARDED OPTIONAL SLOT (P1). assets/index-DqHc579c.js welds the literal copy \" or email \" to an optional EMAIL slot, so a prospect with no verified email hydrates to broken prose. Proven: a real dryRun mirror() of this donor returns 500 unguarded_optional_slot."
+    ],
+    "unretire_requires": [
+      "streetAddress, latitude and longitude tokenised or removed — verified by grep over every shipped file, not just index.html.",
+      "G-NM0SE1M1T4 absent from every byte of the dist.",
+      "addressRegion driven by the state token, with a regex that actually matches quoted-state residue.",
+      "The unguarded EMAIL slot guarded, proven by a dryRun mirror() that returns 200 with no email fact supplied.",
+      "A rendered DOM on a live URL: 0 console errors, 0 pageerrors, 0 failed requests. A green gate is not evidence."
+    ]
+  }
+}

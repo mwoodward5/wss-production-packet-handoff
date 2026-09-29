@@ -1,0 +1,79 @@
+{
+ "id": "radiant-legacy-craft",
+ "source": "76dc46c2-a669-400c-bb7a-17fbe462282b",
+ "palette": {
+  "vars": {
+   "--loam": "#0e0c0a",
+   "--loam-2": "#15110d",
+   "--stone-deep": "#1c1a18",
+   "--cream": "#f2ede3",
+   "--cream-2": "#e7e0d2",
+   "--signal": "#e5392b",
+   "--signal-glow": "#ff5b48",
+   "--clay": "#b26a3f",
+   "--bark": "#3a2e24",
+   "--hairline": "rgba(242, 237, 227, 0.12)",
+   "--background": "var(--loam)",
+   "--foreground": "var(--cream)",
+   "--card": "var(--stone-deep)",
+   "--card-foreground": "var(--cream)",
+   "--popover": "var(--stone-deep)",
+   "--popover-foreground": "var(--cream)",
+   "--primary": "var(--signal)",
+   "--primary-foreground": "var(--cream)",
+   "--secondary": "var(--stone-deep)",
+   "--secondary-foreground": "var(--cream)",
+   "--muted": "#211d18",
+   "--muted-foreground": "#a89e8c",
+   "--accent": "var(--clay)",
+   "--accent-foreground": "var(--cream)",
+   "--destructive": "#b3261e",
+   "--destructive-foreground": "var(--cream)",
+   "--border": "var(--hairline)",
+   "--input": "rgba(242, 237, 227, 0.15)",
+   "--ring": "var(--signal)"
+  },
+  "mode": "dark"
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter Tight",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.5rem",
+ "shadows": [
+  "0 30px 80px -30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(242,237,227,0.06)",
+  "0 0 0 0 rgba(229,57,43,0.55)",
+  "0 0 0 0 rgba(229,57,43,0.5)",
+  "0 0 0 18px rgba(229,57,43,0)"
+ ],
+ "keyframes": [
+  {
+   "name": "draw-line",
+   "css": "@keyframes draw-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }"
+  },
+  {
+   "name": "ken-burns",
+   "css": "@keyframes ken-burns { 0% { transform: scale(1.04) translate3d(0,0,0); } 100% { transform: scale(1.14) translate3d(-1.5%, -1%, 0); } }"
+  },
+  {
+   "name": "rise",
+   "css": "@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "pulse-ring",
+   "css": "@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(229,57,43,0.5); } 70% { box-shadow: 0 0 0 18px rgba(229,57,43,0); } 100% { box-shadow: 0 0 0 0 rgba(229,57,43,0); } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "marquee",
+  "noise",
+  "ken-burns",
+  "glow"
+ ]
+}

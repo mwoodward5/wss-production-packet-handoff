@@ -1,0 +1,505 @@
+[
+ {
+  "id": "ad-alchemy-studio-43",
+  "mode": "dark",
+  "fontsDisplay": "Inter",
+  "signatures": [
+   "glow",
+   "shimmer",
+   "gradient-heavy",
+   "mesh-gradient"
+  ]
+ },
+ {
+  "id": "all-around-tree-care",
+  "mode": "light",
+  "fontsDisplay": "Inter",
+  "signatures": [
+   "gradient-text",
+   "marquee",
+   "glow",
+   "shimmer",
+   "float",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "asphalt-truth-architect",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "marquee",
+   "noise",
+   "ken-burns",
+   "glow",
+   "shimmer",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "atlanta-cinematic-glow",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "glass",
+   "gradient-text",
+   "marquee",
+   "noise",
+   "ken-burns",
+   "glow",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "banana-roadside-hero",
+  "mode": "light",
+  "fontsDisplay": "Bebas Neue",
+  "signatures": [
+   "glass",
+   "gradient-text",
+   "parallax",
+   "marquee",
+   "noise",
+   "ken-burns",
+   "glow",
+   "shimmer",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "blade-discipline-forge",
+  "mode": "dark",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "glass",
+   "gradient-text",
+   "noise",
+   "glow",
+   "shimmer"
+  ]
+ },
+ {
+  "id": "braxtonwinterstrucking",
+  "mode": "light",
+  "fontsDisplay": "Barlow Condensed",
+  "signatures": [
+   "ken-burns",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "build-local-spark",
+  "mode": "light",
+  "fontsDisplay": "Bebas Neue",
+  "signatures": [
+   "float",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "builder-showcase-site",
+  "mode": "light",
+  "fontsDisplay": "Archivo Black",
+  "signatures": [
+   "gradient-text",
+   "glow"
+  ]
+ },
+ {
+  "id": "caldwell-atelier-project",
+  "mode": "light",
+  "fontsDisplay": "Anton",
+  "signatures": [
+   "glass",
+   "gradient-text",
+   "aurora",
+   "marquee",
+   "noise",
+   "ken-burns",
+   "glow",
+   "shimmer",
+   "float",
+   "gradient-heavy",
+   "mesh-gradient"
+  ]
+ },
+ {
+  "id": "circlec-scroll-showcase",
+  "mode": "light",
+  "fontsDisplay": "Oswald",
+  "signatures": [
+   "ken-burns",
+   "glow",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "craft-build-genius",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "marquee",
+   "noise",
+   "gradient-heavy",
+   "mesh-gradient"
+  ]
+ },
+ {
+  "id": "custom-craft-scroll",
+  "mode": "light",
+  "fontsDisplay": "Fjalla One",
+  "signatures": [
+   "marquee",
+   "noise",
+   "ken-burns",
+   "glow",
+   "shimmer"
+  ]
+ },
+ {
+  "id": "dazzle-site-shaper",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "noise"
+  ]
+ },
+ {
+  "id": "dirtwork-heart-hollow",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "noise",
+   "glow",
+   "shimmer"
+  ]
+ },
+ {
+  "id": "essence-reshaper-lab",
+  "mode": "dark",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "glass",
+   "marquee",
+   "noise",
+   "ken-burns",
+   "glow"
+  ]
+ },
+ {
+  "id": "glow-lead-mine",
+  "mode": "light",
+  "fontsDisplay": "Inter Tight",
+  "signatures": [
+   "glow",
+   "shimmer"
+  ]
+ },
+ {
+  "id": "green-thumb-grow-pro",
+  "mode": "light",
+  "fontsDisplay": "Inter",
+  "signatures": [
+   "glass",
+   "glow",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "grishabers-local-bloom",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": []
+ },
+ {
+  "id": "grounded-north-west",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "gradient-text",
+   "glow",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "hero-plan-spark",
+  "mode": "dark",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "glass",
+   "gradient-text",
+   "aurora",
+   "noise",
+   "glow",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "houck-estate-flow",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "marquee",
+   "noise"
+  ]
+ },
+ {
+  "id": "kaups-tree-service-tn",
+  "mode": "light",
+  "fontsDisplay": "Bricolage Grotesque",
+  "signatures": [
+   "glass",
+   "noise",
+   "glow",
+   "shimmer",
+   "float",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "knk-earth-shapers",
+  "mode": "light",
+  "fontsDisplay": null,
+  "signatures": [
+   "marquee",
+   "ken-burns"
+  ]
+ },
+ {
+  "id": "lush-yard-makeover",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "noise"
+  ]
+ },
+ {
+  "id": "nextstep-scroll-story",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "gradient-text",
+   "noise",
+   "glow",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "nextstep-smooth-scroll",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "gradient-text",
+   "glow"
+  ]
+ },
+ {
+  "id": "paydirt",
+  "mode": "light",
+  "fontsDisplay": null,
+  "signatures": []
+ },
+ {
+  "id": "radiant-legacy-craft",
+  "mode": "dark",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "glass",
+   "marquee",
+   "noise",
+   "ken-burns",
+   "glow"
+  ]
+ },
+ {
+  "id": "radiant-vision-legacy",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "gradient-text",
+   "marquee",
+   "noise",
+   "shimmer",
+   "float"
+  ]
+ },
+ {
+  "id": "razzle-dazzle-forge",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "gradient-text",
+   "parallax",
+   "marquee",
+   "noise",
+   "glow",
+   "shimmer",
+   "float",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "razzle-dazzle-reimagined",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "glass",
+   "marquee",
+   "noise",
+   "ken-burns"
+  ]
+ },
+ {
+  "id": "site-whisperer-855",
+  "mode": "light",
+  "fontsDisplay": "Source Serif 4",
+  "signatures": [
+   "gradient-text",
+   "marquee",
+   "noise",
+   "ken-burns",
+   "glow",
+   "shimmer",
+   "float",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "sitecraft-ai-38",
+  "mode": "light",
+  "fontsDisplay": "Manrope",
+  "signatures": [
+   "gradient-text",
+   "parallax",
+   "noise",
+   "ken-burns",
+   "glow",
+   "shimmer",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "slab-planner-pro",
+  "mode": "light",
+  "fontsDisplay": "Archivo",
+  "signatures": [
+   "glass",
+   "gradient-text",
+   "noise",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "southern-charm-blueprint",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": []
+ },
+ {
+  "id": "step-scroll-site",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "gradient-text",
+   "glow"
+  ]
+ },
+ {
+  "id": "supply-spark-suite",
+  "mode": "light",
+  "fontsDisplay": "Archivo",
+  "signatures": [
+   "ken-burns",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "swift-joy-system",
+  "mode": "dark",
+  "fontsDisplay": "Geist Mono",
+  "signatures": [
+   "glass",
+   "glow",
+   "shimmer",
+   "float",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "truthspark-local",
+  "mode": "light",
+  "fontsDisplay": "Anton",
+  "signatures": [
+   "noise",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "tryleadharvest",
+  "mode": "dark",
+  "fontsDisplay": "Inter",
+  "signatures": [
+   "glass",
+   "gradient-text",
+   "glow",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "tucson-roof-zen",
+  "mode": "light",
+  "fontsDisplay": "Barlow Condensed",
+  "signatures": [
+   "noise"
+  ]
+ },
+ {
+  "id": "velvet-razzle-sparkle",
+  "mode": "dark",
+  "fontsDisplay": "Archivo Black",
+  "signatures": [
+   "marquee",
+   "noise"
+  ]
+ },
+ {
+  "id": "vivid-vertex-builder",
+  "mode": "light",
+  "fontsDisplay": "Fraunces",
+  "signatures": [
+   "marquee"
+  ]
+ },
+ {
+  "id": "volt-and-valor-hub",
+  "mode": "dark",
+  "fontsDisplay": "Oswald",
+  "signatures": [
+   "gradient-text",
+   "float",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "wheelers-septic",
+  "mode": "light",
+  "fontsDisplay": "Saira Condensed",
+  "signatures": [
+   "gradient-text",
+   "glow",
+   "gradient-heavy"
+  ]
+ },
+ {
+  "id": "xaviers-cinematic-canvas",
+  "mode": "light",
+  "fontsDisplay": "Cormorant Garamond",
+  "signatures": [
+   "marquee",
+   "noise",
+   "ken-burns",
+   "shimmer",
+   "gradient-heavy"
+  ]
+ }
+]

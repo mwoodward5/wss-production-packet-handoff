@@ -1,0 +1,3 @@
+import {Helmet} from 'react-helmet-async';
+import {useSite} from '@/wss/bridge';
+export default function SchemaProvider(){const {client:c}=useSite();const business={"@context":"https://schema.org","@type":"ProfessionalService",name:c.identity.businessName,url:c.identity.website,telephone:c.identity.phoneDisplay,...(c.identity.email?{email:c.identity.email}:{}),logo:new URL(c.identity.logoOnLight,c.identity.website).href,image:new URL(c.hero.poster,c.identity.website).href,address:{"@type":"PostalAddress",addressLocality:c.identity.city,addressRegion:c.identity.state},areaServed:c.trust.areas,sameAs:c.trust.socials};return <Helmet><script type="application/ld+json">{JSON.stringify(business).replace(/</g,'\\u003c')}</script></Helmet>}

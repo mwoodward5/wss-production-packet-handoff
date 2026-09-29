@@ -1,0 +1,93 @@
+{
+ "id": "truthspark-local",
+ "source": "252c0ca9-144a-4ce4-ab72-0f60c8f1d420",
+ "palette": {
+  "vars": {
+   "--ink": "oklch(0.14 0.01 80)",
+   "--ink-2": "oklch(0.22 0.012 80)",
+   "--bone": "oklch(0.97 0.008 85)",
+   "--gold": "oklch(0.83 0.155 88)",
+   "--gold-soft": "oklch(0.88 0.13 92)",
+   "--gold-deep": "oklch(0.68 0.14 78)",
+   "--copper": "oklch(0.62 0.12 50)",
+   "--background": "var(--bone)",
+   "--foreground": "var(--ink)",
+   "--card": "oklch(1 0 0)",
+   "--card-foreground": "var(--ink)",
+   "--popover": "oklch(1 0 0)",
+   "--popover-foreground": "var(--ink)",
+   "--primary": "var(--ink)",
+   "--primary-foreground": "var(--bone)",
+   "--secondary": "oklch(0.95 0.005 85)",
+   "--secondary-foreground": "var(--ink)",
+   "--muted": "oklch(0.94 0.005 85)",
+   "--muted-foreground": "oklch(0.45 0.008 80)",
+   "--accent": "var(--gold)",
+   "--accent-foreground": "var(--ink)",
+   "--destructive": "oklch(0.55 0.22 27)",
+   "--destructive-foreground": "oklch(0.99 0 0)",
+   "--border": "oklch(0.9 0.01 80)",
+   "--input": "oklch(0.9 0.01 80)",
+   "--ring": "var(--gold)",
+   "--gradient-gold": "linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 60%, var(--gold-deep) 100%)",
+   "--gradient-ink": "linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%)",
+   "--gradient-spark": "radial-gradient(circle at 30% 20%, color-mix(in oklab, var(--gold) 60%, transparent), transparent 60%)",
+   "--tracking-display": "-0.02em",
+   "--tracking-eyebrow": "0.2em"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "var(--ink)",
+   "--foreground": "var(--bone)",
+   "--card": "var(--ink-2)",
+   "--card-foreground": "var(--bone)",
+   "--primary": "var(--gold)",
+   "--primary-foreground": "var(--ink)",
+   "--muted": "oklch(0.25 0.012 80)",
+   "--muted-foreground": "oklch(0.7 0.01 80)",
+   "--border": "oklch(1 0 0 / 10%)",
+   "--input": "oklch(1 0 0 / 14%)"
+  }
+ },
+ "fonts": {
+  "display": "Anton",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Anton:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.25rem",
+ "shadows": [
+  "0 30px 60px -20px color-mix(in oklab, var(--ink) 35%, transparent)",
+  "0 18px 40px -12px color-mix(in oklab, var(--gold) 55%, transparent)",
+  "inset 0 -1px 0 0 color-mix(in oklab, var(--ink) 12%, transparent)"
+ ],
+ "keyframes": [
+  {
+   "name": "spark",
+   "css": "@keyframes spark { 0%, 100% { opacity: 0.2; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-2px); } }"
+  },
+  {
+   "name": "ticker",
+   "css": "@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "wire-flow",
+   "css": "@keyframes wire-flow { from { stroke-dashoffset: 200; } to { stroke-dashoffset: 0; } }"
+  },
+  {
+   "name": "rise",
+   "css": "@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "bolt-strike",
+   "css": "@keyframes bolt-strike { 0%, 50% { stroke-dashoffset: 240; opacity: 0; } 52% { stroke-dashoffset: 240; opacity: 1; } 58% { stroke-dashoffset: 0; opacity: 1; } 62% { stroke-dashoffset: 0; opacity: 0.9; } 66% { stroke-dashoffset: 0; opacity: 0; } 100% { stroke-dashoffset: 0; opacity: 0; } }"
+  },
+  {
+   "name": "node-pulse",
+   "css": "@keyframes node-pulse { 0%, 54% { opacity: 0; transform: scale(0.6); transform-box: fill-box; transform-origin: center; } 58% { opacity: 1; transform: scale(1.6); transform-box: fill-box; transform-origin: center; } 66% { opacity: 0.7; transform: scale(1); transform-box: fill-box; transform-origin: center; } 72%, 100% { opacity: 0; transform: scale(0.6); transform-box: fill-box; transform-origin: center; } }"
+  }
+ ],
+ "signatures": [
+  "noise",
+  "gradient-heavy"
+ ]
+}

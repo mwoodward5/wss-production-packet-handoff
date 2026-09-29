@@ -1,0 +1,231 @@
+{
+  "project_name": "Grounded North West",
+  "vertical": "Residential Electrical Contracting",
+  "classification": "Premier",
+  "routes": [
+    "/",
+    "/residential-electrician-bothell-wa",
+    "/new-construction-wiring-bothell-wa",
+    "/panel-upgrades-electrical-troubleshooting",
+    "/ev-charger-installation-bothell-wa",
+    "/whole-home-generator-installation-bothell-wa",
+    "/custom-lighting-design-installation",
+    "/full-home-rewires-knob-tube-aluminum",
+    "/custom-electrical-solutions",
+    "/services",
+    "/projects",
+    "/service-area",
+    "/contact",
+    "/faq",
+    "/troubleshooting-repairs"
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "hsl(210 30% 99%)",
+      "foreground": "hsl(220 40% 12%)",
+      "card": "hsl(0 0% 100%)",
+      "primary": "hsl(218 70% 28%)",
+      "primary_glow": "hsl(214 88% 48%)",
+      "secondary": "hsl(0 72% 48%)",
+      "muted": "hsl(215 25% 95%)",
+      "muted_foreground": "hsl(220 15% 38%)",
+      "border": "hsl(218 25% 88%)",
+      "radius": "0.75rem"
+    },
+    "typography": {
+      "display": "Fraunces, Playfair Display, Georgia, serif",
+      "sans": "Inter Tight, Inter, system-ui, sans-serif",
+      "mono": "JetBrains Mono, IBM Plex Mono, monospace"
+    },
+    "gradients": {
+      "gradient_hero": "radial-gradient(ellipse at 18% 0%, hsl(214 88% 92% / 0.9), transparent 55%), radial-gradient(ellipse at 82% 100%, hsl(0 72% 92% / 0.7), transparent 60%), linear-gradient(180deg, hsl(210 40% 99%), hsl(214 35% 97%))",
+      "gradient_trust": "linear-gradient(135deg, hsl(218 70% 28%), hsl(0 72% 48%))",
+      "gradient_card": "linear-gradient(160deg, hsl(0 0% 100%), hsl(214 30% 97%))"
+    },
+    "shadows": {
+      "glow": "0 18px 50px -18px hsl(218 70% 28% / 0.35)",
+      "elevated": "0 24px 60px -28px hsl(218 50% 25% / 0.25)"
+    }
+  },
+  "hero_contract": {
+    "layout": "12-column split (7-col content / 5-col media)",
+    "media_container": "rounded-[28px] overflow-hidden ring-1 ring-border shadow-elevated clip-hero-asym bg-card",
+    "clip_path": "polygon(0 0, 100% 0, 100% 88%, 92% 100%, 0 100%)",
+    "accents": [
+      "4 red corner brackets (border-t-2 border-l-2 border-secondary w-7 h-7)",
+      "Pulse dot on-call badge (top-5 right-5)",
+      "Monospace dealer verification strip (bottom-5 left-5 right-5)"
+    ],
+    "headline_structure": {
+      "line_1": "For a service",
+      "line_2": "above the rest, (italic, copper-text gradient with underline)",
+      "line_3": "trust [Business Name]."
+    },
+    "ctas": [
+      {
+        "role": "primary",
+        "type": "phone",
+        "style": "bg-secondary text-secondary-foreground shadow-glow rounded-full"
+      },
+      {
+        "role": "secondary",
+        "type": "quote",
+        "style": "border border-primary/30 bg-card text-primary rounded-full"
+      },
+      {
+        "role": "tertiary",
+        "type": "review",
+        "style": "bg-gradient-trust text-primary-foreground rounded-full"
+      }
+    ],
+    "ticker": "Monospace continuous marquee of certified cities"
+  },
+  "media_slots": [
+    {
+      "slot_id": "M1",
+      "route": "/",
+      "role": "hero",
+      "aspect": "3:4",
+      "dimensions": "1200x1600"
+    },
+    {
+      "slot_id": "M2_M7",
+      "route": "/",
+      "role": "service_cards",
+      "count": 6,
+      "aspect": "16:9"
+    },
+    {
+      "slot_id": "M10_M23",
+      "route": "/projects",
+      "role": "gallery",
+      "count": 14,
+      "aspect": "4:3"
+    },
+    {
+      "slot_id": "M25",
+      "route": "/ev-charger-installation-bothell-wa",
+      "role": "brand_logos",
+      "count": 6,
+      "aspect": "2:1"
+    },
+    {
+      "slot_id": "M28_M31",
+      "route": "/whole-home-generator-installation-bothell-wa",
+      "role": "bento_gallery",
+      "count": 4,
+      "aspect": "16:10 / 4:3"
+    },
+    {
+      "slot_id": "M33",
+      "route": "/panel-upgrades-electrical-troubleshooting",
+      "role": "technical_proof_grid",
+      "count": 9,
+      "aspect": "4:3"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business_name",
+      "target": "Global text & Schema"
+    },
+    {
+      "key": "phone",
+      "target": "Header, Hero, Sticky Mobile, Footers, Schema"
+    },
+    {
+      "key": "email",
+      "target": "Hero, Contact Close, Footer, Schema"
+    },
+    {
+      "key": "counties",
+      "target": "Homepage Navy Strip, Footer, Service Area Page"
+    },
+    {
+      "key": "cities",
+      "target": "Hero Ticker, Service Area Directory"
+    },
+    {
+      "key": "license_info",
+      "target": "FAQ, Panel Safety Block, Footer"
+    },
+    {
+      "key": "faqs",
+      "target": "FAQ Page (15 items) & FAQPage Schema"
+    }
+  ],
+  "trust_slots": [
+    {
+      "name": "GoogleReviewButton",
+      "target": "Hero, ContactClose, SiteFooter, ContactPage"
+    },
+    {
+      "name": "BbbSeal",
+      "target": "ContactClose, SiteFooter, ContactPage"
+    },
+    {
+      "name": "ManufacturerBadge",
+      "target": "Hero, Generator Banner, SiteFooter, ContactPage"
+    }
+  ],
+  "schema_slots": [
+    "ElectricalContractor",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_aeo_slots": [
+    "Homepage Lead Statement",
+    "Service Area Map + County Matrix",
+    "FAQ Conversational Questions & Direct Answers",
+    "Service Page Lead Injections"
+  ],
+  "voice_search_slots": [
+    "Faq.tsx natural language accordion questions",
+    "PageHero intro summaries"
+  ],
+  "map_location_slot": {
+    "route": "/service-area",
+    "element": "iframe",
+    "aspect": "Full width x 480px height",
+    "container_style": "rounded-2xl overflow-hidden ring-1 ring-border shadow-elevated"
+  },
+  "content_density": {
+    "hero": "clean / spacious",
+    "service_pages": "rich technical / explanatory",
+    "faq": "high density Q&A",
+    "projects": "visual dominant",
+    "contact_close": "focused dual action"
+  },
+  "mobile_rules": {
+    "viewport_390": "Single column stacks, hamburger menu, sticky bottom call button active, hero frame retained with asymmetric clip",
+    "viewport_768": "2-column card grids, header phone CTA active",
+    "viewport_1440": "Full 12-column asymmetric hero, 3-column galleries, horizontal ticker active"
+  },
+  "non_negotiables": [
+    "Semantic HSL Red/White/Navy tokens only",
+    "Fraunces serif display + Inter Tight sans + JetBrains Mono",
+    "Hero asymmetric clip-path and 4 corner bracket accents",
+    "Three-line hero headline rhythm with italic gradient line 2",
+    "Persistent mobile bottom call CTA",
+    "Clean published output without public editor badge"
+  ],
+  "safe_replacements": [
+    "Brand name and logo assets",
+    "Phone and email contact points",
+    "Primary geographic location, counties, and city marquee list",
+    "Service titles, descriptions, and gallery photos",
+    "Google Review & BBB external URLs",
+    "Embed map query parameters"
+  ],
+  "lovable_classification": "Multi-Page Local Service Authority",
+  "classification_basis": "15 distinct documented routes; WSS scope label only",
+  "project_id": "bf8b3e52-37b4-46c8-beb4-a877958b4f1e",
+  "project_url": "https://lovable.dev/projects/bf8b3e52-37b4-46c8-beb4-a877958b4f1e",
+  "source_plan_file": "38-grounded-north-west-rebrand-lovable-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

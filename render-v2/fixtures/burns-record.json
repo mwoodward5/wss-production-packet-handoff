@@ -1,0 +1,3661 @@
+{
+  "record": {
+    "photo_bank": {
+      "fresh": true,
+      "photos": [
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-10",
+          "rank": -160,
+          "bytes": 3094101,
+          "grade": "hero",
+          "width": 3840,
+          "height": 2560,
+          "sha256": "9395a3067d54785dcce45b218d8a67813e84bdb0851734332b0a072c8a397279",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "wide_3840x2560",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-3",
+          "rank": -160,
+          "bytes": 3299144,
+          "grade": "hero",
+          "width": 3840,
+          "height": 2560,
+          "sha256": "4ab8c6607f506f72448986da364ac7bfb509dadf9089dfc80f26de8a372b7847",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "wide_3840x2560",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-12",
+          "rank": -160,
+          "bytes": 1657970,
+          "grade": "hero",
+          "width": 3840,
+          "height": 2560,
+          "sha256": "013e3ed59abc9c83a7b968fae5515a3e3eb3734cca980fe6aa45a3811aac6148",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "wide_3840x2560",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-6",
+          "rank": -160,
+          "bytes": 2598442,
+          "grade": "hero",
+          "width": 3840,
+          "height": 2560,
+          "sha256": "3c8fd0f2fd3badafc2af77e6c919de69548535f66c227ebaead251594721c189",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "wide_3840x2560",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-11",
+          "rank": -160,
+          "bytes": 2455437,
+          "grade": "hero",
+          "width": 3840,
+          "height": 2560,
+          "sha256": "d78a1901adbc9516606b7e50a3b9443d39e3615fae3e79e007f437e484b18a04",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "wide_3840x2560",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-8",
+          "rank": -160,
+          "bytes": 3205722,
+          "grade": "hero",
+          "width": 3840,
+          "height": 2560,
+          "sha256": "f9f033b952ba25d5c8f9c91810908e0d51d294950766850654df66e2eab62241",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "wide_3840x2560",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/hero",
+          "rank": -100,
+          "bytes": 2949866,
+          "grade": "hero",
+          "width": 3840,
+          "height": 2393,
+          "sha256": "9f32fb88d4fb5a422ecaee68a8aa81c02e315b99171d2a1b42e7753ac840a286",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "wide_3840x2393",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-9",
+          "rank": 840,
+          "bytes": 2817511,
+          "grade": "gallery",
+          "width": 2560,
+          "height": 3840,
+          "sha256": "2ad59ca70cadc75552748e6ded15027fbebc77f309cc5a6ba09e65369173cd38",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "2560x3840",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-5",
+          "rank": 840,
+          "bytes": 2683684,
+          "grade": "gallery",
+          "width": 2560,
+          "height": 3840,
+          "sha256": "3706d762a99f5d3102008e822d2e7de43400637ea4fe76ba72a0d75f5f1e0d72",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "2560x3840",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-7",
+          "rank": 840,
+          "bytes": 2398769,
+          "grade": "gallery",
+          "width": 2560,
+          "height": 3840,
+          "sha256": "1316432e6563df7fde19d3141a6ffeb0c0894dfa9e97b28c4996bef631f22c18",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "2560x3840",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-1",
+          "rank": 840,
+          "bytes": 3345400,
+          "grade": "gallery",
+          "width": 2560,
+          "height": 3840,
+          "sha256": "b3803d99780723663eba8a84e39f2e0460e48c29d5e99379a59042f10661160d",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "2560x3840",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/team/david-burns-owner",
+          "rank": 840,
+          "bytes": 569672,
+          "grade": "gallery",
+          "width": 2288,
+          "height": 3432,
+          "sha256": "4163603a8662e16b67d07b7b27bee83f6787d0f36118b682b44f7c32e5c7e048",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "2288x3432",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/team/allie-burns-sales",
+          "rank": 840,
+          "bytes": 736708,
+          "grade": "gallery",
+          "width": 2091,
+          "height": 3137,
+          "sha256": "51298b669c6a251756b1c9c698ebc00d643fb955e74b169010c32634f32c94fe",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "2091x3137",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/team/scott-howard-maintenance",
+          "rank": 840,
+          "bytes": 652486,
+          "grade": "gallery",
+          "width": 2186,
+          "height": 3279,
+          "sha256": "12e06c8af73c9bb467cd76c9a2749534546c7112cddb9c54cb009cad9a2ff2db",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "2186x3279",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/team/jeff-stroble-irrigation",
+          "rank": 840,
+          "bytes": 858506,
+          "grade": "gallery",
+          "width": 2485,
+          "height": 3728,
+          "sha256": "664fb0676955d03f9ba58658d58aa054d67bb76756022605840e7d357f3d4e8c",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "2485x3728",
+          "asset_type": "real_scene"
+        },
+        {
+          "ext": "jpg",
+          "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/about",
+          "rank": 900,
+          "bytes": 1507239,
+          "grade": "gallery",
+          "width": 2560,
+          "height": 3840,
+          "sha256": "2cb019c00ecb0615c6633afd88781373d16c11b0079cbd8ca35007679700cff8",
+          "source": "own_site",
+          "found_on": "https://burnslandscapinghouston.com/",
+          "grade_why": "2560x3840",
+          "asset_type": "real_scene"
+        }
+      ],
+      "version": 1,
+      "website": "https://burnslandscapinghouston.com/",
+      "fingerprint": "cef35a868f23a92da534898e291720bf2f2910421a314d1b89f06762905014f9",
+      "harvested_at": "2026-09-27T03:33:52.751Z"
+    },
+    "site_palette": {
+      "ok": false,
+      "ink": "",
+      "link": "",
+      "mode": "light",
+      "accent": "",
+      "reason": "no_readable_colors",
+      "signals": {
+        "ink_from": "",
+        "theme_color": "",
+        "accent_count": 0,
+        "rules_parsed": 159,
+        "style_blocks": 0,
+        "surface_from": "",
+        "canvas_luminance": null,
+        "style_attributes": 159,
+        "stylesheet_texts": 0,
+        "background_declarations": 0
+      },
+      "surface": "",
+      "hasDarkSlabs": false,
+      "extractedFrom": "https://burnslandscapinghouston.com/",
+      "darkSectionCount": 0,
+      "extractionMethod": "site_html_css",
+      "lightSectionCount": 0
+    },
+    "brand_identity": null,
+    "genie_compiled_at": "2026-09-27T12:24:17.412Z",
+    "owner_source_revision": {
+      "state": "certified",
+      "intent": "content_revision",
+      "schema": "wss.owner-source-revision.v1",
+      "request_id": "burns-service-copy-repair-20260927t115926z",
+      "started_at": "2026-09-27T12:24:14.296Z",
+      "claim_token": "00000000-0000-4000-8000-000000000000",
+      "revision_id": "osr_29416a90e616e9f80e5435fa13f3eeb7",
+      "completed_at": "2026-09-27T12:24:27.878Z",
+      "needs_rebuild": false,
+      "packet_sha256": "872b8985a3128344e0aea7487ffb3e6b942ddbaf92b440ca9b5dda55bc617c56",
+      "request_sha256": "29416a90e616e9f80e5435fa13f3eeb76d52541d40be38137db654b5947e491c",
+      "source_website": "https://burnslandscapinghouston.com/",
+      "built_packet_sha256": "872b8985a3128344e0aea7487ffb3e6b942ddbaf92b440ca9b5dda55bc617c56",
+      "built_proof_identity": {
+        "site_id": "87af56f4-127c-43e2-82e0-c407632883cc",
+        "build_hash": "d3c643de712947ce4e85d24c748543cffeee85675762209dd22758f23813050d",
+        "release_id": "9e4bc2dd-4500-8d3b-afde-f3a39c982029"
+      }
+    },
+    "genie_canonical_packet": {
+      "ok": true,
+      "cache": {
+        "key": "605353cb6937351bfee43310",
+        "hits": 0,
+        "misses": 0
+      },
+      "facts": {
+        "city": "Houston",
+        "copy": "Burns Landscaping ΓÇö Houston's Premier Lawn & Landscape Experts\n\nYour home,\n\nTransforming Houston homes with expert landscaping and lawn care since 1998.\n\nNAVIGATION\n\nCONTACT US\n\nBurns Landscaping delivers premium lawn care and landscape design to Houston homeowners. From lush lawns to complete outdoor transformations we make it happen.\n\nFamily owned since 1998, Burns Landscaping combines decades of experience with a new generation committed to carrying that same standard of service forward. WeΓÇÖve built our reputation by doing quality work, treating people right, and building lasting relationships with our customers throughout Houston.\n\nFor us, great landscaping really is personal. We take the time to understand your property, your vision, and what you want from your outdoor space. From the first consultation to the finished project and beyond, our goal is to provide thoughtful recommendations, dependable service, and work we're proud to put our name on.\n\nCustom landscapes designed around your home, style, and property from plant selection and layered beds to complete landscape renovations.\n\nDependable, professional maintenance year-round: mowing, edging, trimming, bed care, and seasonal cleanups tailored to your property.\n\nNew sprinkler system design and installation, plus repairs and adjustments to keep your landscape receiving the right amount of water.\n\nTransforming Houston homes with expert landscaping and lawn care since 1998.\n\nNAVIGATION\n\nCONTACT US\n\nBurns Landscaping has been serving Houston homeowners for nearly three decades. We built this company on quality work, trusted relationships, and the belief that great landscaping is personal.\n\nWe don't cut corners. Every project is executed with care, precision, and materials we stand behind ΓÇö because our name is on every job we do.\n\nLandscape Design & Installation\n\nWe create custom landscapes designed around your home, style, and property. From plant selection and layered beds to complete landscape renovations, our team combines thoughtful design with plants proven to thrive in Houston.\n\nLawn & Landscape Maintenance\n\nKeep your property looking its best year-round with dependable, professional maintenance. Our team provides routine lawn and landscape care tailored to the needs of your property, from mowing and edging to trimming, bed maintenance, and seasonal cleanups.\n\nIrrigation Systems\n\nA healthy Houston landscape starts with proper irrigation. We design and install new sprinkler systems, troubleshoot existing systems, and make repairs and adjustments to help your landscape receive the right amount of water where it needs it.\n\nDrainage Solutions\n\nHouston's heavy rainfall can quickly expose drainage problems. We evaluate problem areas and design practical drainage solutions that help move excess water away from your home, lawn, and landscape.\n\nOutdoor Lighting\n\nExtend the beauty of your landscape beyond daylight with professionally designed outdoor lighting. From subtle pathway lighting to architectural uplighting, we create systems that enhance your home, landscape, and outdoor spaces while adding visibility and security.\n\nOutdoor Living & Hardscapes\n\nCreate an outdoor space made for living. We design and build hardscape features that complement your home and landscape, from patios and walkways to outdoor kitchens, fire features, and complete outdoor living spaces.",
+        "name": "Burns Landscaping",
+        "email": "",
+        "hours": null,
+        "phone": "12818553758",
+        "state": "TX",
+        "latlng": {
+          "lat": 0,
+          "lng": 0
+        },
+        "address": "",
+        "founded": 1998,
+        "socials": [],
+        "website": "https://burnslandscapinghouston.com/",
+        "branding": {
+          "fonts": [],
+          "colors": []
+        },
+        "category": "landscaping",
+        "services": [
+          "Landscape Design & Installation",
+          "Lawn & Landscape Maintenance",
+          "Irrigation Systems",
+          "Drainage Solutions",
+          "Outdoor Lighting",
+          "Outdoor Living & Hardscapes"
+        ],
+        "discovery": {
+          "facts": {
+            "city": "Houston",
+            "name": "Burns Landscaping",
+            "email": "",
+            "phone": "12818553758",
+            "state": "TX",
+            "website": "https://burnslandscapinghouston.com/",
+            "category": "landscaping",
+            "services": [
+              "Landscape Design & Installation",
+              "Lawn & Landscape Maintenance",
+              "Irrigation Systems",
+              "Drainage Solutions",
+              "Outdoor Lighting",
+              "Outdoor Living & Hardscapes"
+            ]
+          },
+          "files": [],
+          "found": {
+            "copy": "Burns Landscaping ΓÇö Houston's Premier Lawn & Landscape Experts\n\nYour home,\n\nTransforming Houston homes with expert landscaping and lawn care since 1998.\n\nNAVIGATION\n\nCONTACT US\n\nBurns Landscaping delivers premium lawn care and landscape design to Houston homeowners. From lush lawns to complete outdoor transformations we make it happen.\n\nFamily owned since 1998, Burns Landscaping combines decades of experience with a new generation committed to carrying that same standard of service forward. WeΓÇÖve built our reputation by doing quality work, treating people right, and building lasting relationships with our customers throughout Houston.\n\nFor us, great landscaping really is personal. We take the time to understand your property, your vision, and what you want from your outdoor space. From the first consultation to the finished project and beyond, our goal is to provide thoughtful recommendations, dependable service, and work we're proud to put our name on.\n\nCustom landscapes designed around your home, style, and property from plant selection and layered beds to complete landscape renovations.\n\nDependable, professional maintenance year-round: mowing, edging, trimming, bed care, and seasonal cleanups tailored to your property.\n\nNew sprinkler system design and installation, plus repairs and adjustments to keep your landscape receiving the right amount of water.\n\nTransforming Houston homes with expert landscaping and lawn care since 1998.\n\nNAVIGATION\n\nCONTACT US\n\nBurns Landscaping has been serving Houston homeowners for nearly three decades. We built this company on quality work, trusted relationships, and the belief that great landscaping is personal.\n\nWe don't cut corners. Every project is executed with care, precision, and materials we stand behind ΓÇö because our name is on every job we do.\n\nLandscape Design & Installation\n\nWe create custom landscapes designed around your home, style, and property. From plant selection and layered beds to complete landscape renovations, our team combines thoughtful design with plants proven to thrive in Houston.\n\nLawn & Landscape Maintenance\n\nKeep your property looking its best year-round with dependable, professional maintenance. Our team provides routine lawn and landscape care tailored to the needs of your property, from mowing and edging to trimming, bed maintenance, and seasonal cleanups.\n\nIrrigation Systems\n\nA healthy Houston landscape starts with proper irrigation. We design and install new sprinkler systems, troubleshoot existing systems, and make repairs and adjustments to help your landscape receive the right amount of water where it needs it.\n\nDrainage Solutions\n\nHouston's heavy rainfall can quickly expose drainage problems. We evaluate problem areas and design practical drainage solutions that help move excess water away from your home, lawn, and landscape.\n\nOutdoor Lighting\n\nExtend the beauty of your landscape beyond daylight with professionally designed outdoor lighting. From subtle pathway lighting to architectural uplighting, we create systems that enhance your home, landscape, and outdoor spaces while adding visibility and security.\n\nOutdoor Living & Hardscapes\n\nCreate an outdoor space made for living. We design and build hardscape features that complement your home and landscape, from patios and walkways to outdoor kitchens, fire features, and complete outdoor living spaces.",
+            "faqs": [],
+            "logo": null,
+            "areas": [],
+            "fonts": [],
+            "colors": [],
+            "photos": [],
+            "videos": [],
+            "contact": {
+              "email": "",
+              "phone": "12818553758",
+              "address": ""
+            },
+            "socials": [],
+            "services": [
+              "Landscape Design & Installation",
+              "Lawn & Landscape Maintenance",
+              "Irrigation Systems",
+              "Drainage Solutions",
+              "Outdoor Lighting",
+              "Outdoor Living & Hardscapes"
+            ],
+            "trust_marks": []
+          },
+          "assets": [],
+          "sources": [
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/reviews",
+            "https://burnslandscapinghouston.com/contact",
+            "https://burnslandscapinghouston.com/about",
+            "https://burnslandscapinghouston.com/services"
+          ],
+          "summary": {
+            "mode": "local-source-packet-envelope",
+            "logo_found": false,
+            "pages_read": 5,
+            "photos_found": 0,
+            "videos_found": 0,
+            "services_found": 6,
+            "remote_requests": 0,
+            "business_profile_version": "source-business-profile-v1",
+            "private_archive_page_count": 4
+          },
+          "searched": [],
+          "provenance": {
+            "about": {
+              "method": "first_party_paragraphs_no_invented_trust_claims",
+              "sourceUrl": "https://burnslandscapinghouston.com/about",
+              "sourceSha256": "e903aabe776e0e6f32d4491a3e644fc548cd0ce57f8fee24c55731e8ebff8502"
+            },
+            "phone": {
+              "method": "first_party_tel_link",
+              "sourceUrl": "https://burnslandscapinghouston.com/",
+              "sourceSha256": "709f892fe813ee8f5cf2319e5748d3c5fd9883f2682b54861baeb3c47a038f49",
+              "independentVerification": false
+            },
+            "service:Outdoor Lighting": {
+              "method": "first_party_service_index_heading_and_description",
+              "sourceUrl": "https://burnslandscapinghouston.com/services",
+              "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+            },
+            "service:Drainage Solutions": {
+              "method": "first_party_service_index_heading_and_description",
+              "sourceUrl": "https://burnslandscapinghouston.com/services",
+              "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+            },
+            "service:Irrigation Systems": {
+              "method": "first_party_service_index_heading_and_description",
+              "sourceUrl": "https://burnslandscapinghouston.com/services",
+              "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+            },
+            "service:Outdoor Living & Hardscapes": {
+              "method": "first_party_service_index_heading_and_description",
+              "sourceUrl": "https://burnslandscapinghouston.com/services",
+              "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+            },
+            "service:Lawn & Landscape Maintenance": {
+              "method": "first_party_service_index_heading_and_description",
+              "sourceUrl": "https://burnslandscapinghouston.com/services",
+              "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+            },
+            "service:Landscape Design & Installation": {
+              "method": "first_party_service_index_heading_and_description",
+              "sourceUrl": "https://burnslandscapinghouston.com/services",
+              "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+            },
+            "page:https://burnslandscapinghouston.com/about": {
+              "method": "first_party_page_text_mined",
+              "sourceUrl": "https://burnslandscapinghouston.com/about",
+              "sourceSha256": "e903aabe776e0e6f32d4491a3e644fc548cd0ce57f8fee24c55731e8ebff8502"
+            },
+            "page:https://burnslandscapinghouston.com/contact": {
+              "method": "first_party_page_text_mined",
+              "sourceUrl": "https://burnslandscapinghouston.com/contact",
+              "sourceSha256": "d08f48ab403b945d87def5f24b0e62a3ee0459dfbcd71b3ab8f9687a2e10b303"
+            },
+            "page:https://burnslandscapinghouston.com/reviews": {
+              "method": "first_party_page_text_mined",
+              "sourceUrl": "https://burnslandscapinghouston.com/reviews",
+              "sourceSha256": "246986ef14a7ab6eed77b3cb9fb4f9e64c3e6a8ccc927d86efe5302f6cbdb343"
+            },
+            "page:https://burnslandscapinghouston.com/services": {
+              "method": "first_party_page_text_mined",
+              "sourceUrl": "https://burnslandscapinghouston.com/services",
+              "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+            },
+            "business_profile:https://burnslandscapinghouston.com/": {
+              "method": "first_party_business_profile_dom",
+              "sourceUrl": "https://burnslandscapinghouston.com/",
+              "sourceSha256": "709f892fe813ee8f5cf2319e5748d3c5fd9883f2682b54861baeb3c47a038f49"
+            },
+            "business_profile:https://burnslandscapinghouston.com/contact": {
+              "method": "first_party_business_profile_dom",
+              "sourceUrl": "https://burnslandscapinghouston.com/contact",
+              "sourceSha256": "d08f48ab403b945d87def5f24b0e62a3ee0459dfbcd71b3ab8f9687a2e10b303"
+            }
+          },
+          "image_inventory": [],
+          "navigation_pages": [],
+          "customerPublishApproved": false,
+          "sourceClaimsIndependentlyVerified": false
+        },
+        "booking_url": null,
+        "testimonials": [],
+        "services_source": "source_bound"
+      },
+      "scope": {
+        "message": "",
+        "category": "landscaping",
+        "supported": true
+      },
+      "trust": {
+        "rating": null,
+        "reviews": [],
+        "review_count": null
+      },
+      "assets": [],
+      "job_id": "job-c3183746a525c013",
+      "status": "complete",
+      "content": {
+        "content_contract": {
+          "kind": "certified_practice_packet",
+          "facts": {
+            "category": "landscaping"
+          },
+          "assets": {},
+          "schema": "CertifiedPracticePacket/v1",
+          "version": 1,
+          "visitor_copy": {
+            "kind": "visitor_copy",
+            "files": {
+              "content/home.md": "# Burns Landscaping\n\nBurns Landscaping offers Landscape Design & Installation, Lawn & Landscape Maintenance, Irrigation Systems, Drainage Solutions, Outdoor Lighting, Outdoor Living & Hardscapes in Houston, TX.\n",
+              "content/services/outdoor-lighting.md": "# Outdoor Lighting\n\nExtend the beauty of your landscape beyond daylight with professionally designed outdoor lighting. From subtle pathway lighting to architectural uplighting, we create systems that enhance your home, landscape, and outdoor spaces while adding visibility and security.\n",
+              "content/services/drainage-solutions.md": "# Drainage Solutions\n\nHouston's heavy rainfall can quickly expose drainage problems. We evaluate problem areas and design practical drainage solutions that help move excess water away from your home, lawn, and landscape.\n",
+              "content/services/irrigation-systems.md": "# Irrigation Systems\n\nA healthy Houston landscape starts with proper irrigation. We design and install new sprinkler systems, troubleshoot existing systems, and make repairs and adjustments to help your landscape receive the right amount of water where it needs it.\n",
+              "content/services/outdoor-living-hardscapes.md": "# Outdoor Living & Hardscapes\n\nCreate an outdoor space made for living. We design and build hardscape features that complement your home and landscape, from patios and walkways to outdoor kitchens, fire features, and complete outdoor living spaces.\n",
+              "content/services/lawn-landscape-maintenance.md": "# Lawn & Landscape Maintenance\n\nKeep your property looking its best year-round with dependable, professional maintenance. Our team provides routine lawn and landscape care tailored to the needs of your property, from mowing and edging to trimming, bed maintenance, and seasonal cleanups.\n",
+              "content/services/landscape-design-installation.md": "# Landscape Design & Installation\n\nWe create custom landscapes designed around your home, style, and property. From plant selection and layered beds to complete landscape renovations, our team combines thoughtful design with plants proven to thrive in Houston.\n"
+            },
+            "safety": {
+              "pass": true,
+              "violations": []
+            },
+            "file_hashes": {
+              "content/home.md": "c49ff677e3802be83c4d05f0a24b2b8e6b14d3d749e40bed188abcc989d0d431",
+              "content/services/outdoor-lighting.md": "21e5119be8d358a2b7076e8667c53be064ff028c94173825bb432dfab15d4672",
+              "content/services/drainage-solutions.md": "ac82c02b7227da10bfd40d30a65cccf8afa28edef2ccc3cf368efcab9034d696",
+              "content/services/irrigation-systems.md": "2bc6fdcf352edde24d1ef96a1f111cb227df03dd81fa43d136b49dac4e4a79ab",
+              "content/services/outdoor-living-hardscapes.md": "0cc9e3ade63e10295b289fe3a8818e8c17ae8589dbba976e8cd8f87075315d99",
+              "content/services/lawn-landscape-maintenance.md": "3c13ca459a1800a3d6e8a89d2f242800d5e369d7f8c313a3857dedca69b240ff",
+              "content/services/landscape-design-installation.md": "4f6f44b511917692d2886a8678ed1119b27ce6375302b2cd4c154614a36c745f"
+            }
+          },
+          "builder_instructions": {
+            "public": false
+          }
+        }
+      },
+      "preview": {
+        "qc": {},
+        "url": "",
+        "error": "",
+        "job_id": "",
+        "status": ""
+      },
+      "sources": {
+        "observations": [
+          {
+            "source": "https://burnslandscapinghouston.com/",
+            "extracted": {
+              "exactServices": [
+                "Landscape Design & Installation",
+                "Lawn & Landscape Maintenance",
+                "Irrigation Systems",
+                "Drainage Solutions",
+                "Outdoor Lighting",
+                "Outdoor Living & Hardscapes"
+              ]
+            }
+          },
+          {
+            "source": "https://burnslandscapinghouston.com/reviews",
+            "extracted": {
+              "exactServices": [
+                "Landscape Design & Installation",
+                "Lawn & Landscape Maintenance",
+                "Irrigation Systems",
+                "Drainage Solutions",
+                "Outdoor Lighting",
+                "Outdoor Living & Hardscapes"
+              ]
+            }
+          },
+          {
+            "source": "https://burnslandscapinghouston.com/contact",
+            "extracted": {
+              "exactServices": [
+                "Landscape Design & Installation",
+                "Lawn & Landscape Maintenance",
+                "Irrigation Systems",
+                "Drainage Solutions",
+                "Outdoor Lighting",
+                "Outdoor Living & Hardscapes"
+              ]
+            }
+          },
+          {
+            "source": "https://burnslandscapinghouston.com/about",
+            "extracted": {
+              "exactServices": [
+                "Landscape Design & Installation",
+                "Lawn & Landscape Maintenance",
+                "Irrigation Systems",
+                "Drainage Solutions",
+                "Outdoor Lighting",
+                "Outdoor Living & Hardscapes"
+              ]
+            }
+          },
+          {
+            "source": "https://burnslandscapinghouston.com/services",
+            "extracted": {
+              "exactServices": [
+                "Landscape Design & Installation",
+                "Lawn & Landscape Maintenance",
+                "Irrigation Systems",
+                "Drainage Solutions",
+                "Outdoor Lighting",
+                "Outdoor Living & Hardscapes"
+              ]
+            }
+          }
+        ]
+      },
+      "version": "intake-genie-v2",
+      "branding": {
+        "fonts": [],
+        "colors": []
+      },
+      "evidence": [
+        {
+          "field": "name",
+          "value": "Burns Landscaping",
+          "confidence": 0.8,
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.396Z",
+          "source_type": "hint"
+        },
+        {
+          "field": "city",
+          "value": "Houston",
+          "confidence": 0.85,
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.396Z",
+          "source_type": "hint"
+        },
+        {
+          "field": "state",
+          "value": "TX",
+          "confidence": 0.85,
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.396Z",
+          "source_type": "hint"
+        },
+        {
+          "field": "category",
+          "value": "landscaping",
+          "confidence": 0.7,
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.396Z",
+          "source_type": "classification"
+        },
+        {
+          "field": "phone",
+          "value": "12818553758",
+          "confidence": 0.95,
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.396Z",
+          "source_type": "official_source"
+        },
+        {
+          "field": "website",
+          "value": "https://burnslandscapinghouston.com/",
+          "confidence": 0.95,
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.396Z",
+          "source_type": "website"
+        },
+        {
+          "field": "services",
+          "value": "Landscape Design & Installation",
+          "status": "verified",
+          "verified": true,
+          "provenance": "observed",
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.399Z",
+          "source_type": "source",
+          "source_observations": [
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/reviews",
+            "https://burnslandscapinghouston.com/contact"
+          ],
+          "verification_status": "source observation"
+        },
+        {
+          "field": "services",
+          "value": "Lawn & Landscape Maintenance",
+          "status": "verified",
+          "verified": true,
+          "provenance": "observed",
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.399Z",
+          "source_type": "source",
+          "source_observations": [
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/reviews",
+            "https://burnslandscapinghouston.com/contact"
+          ],
+          "verification_status": "source observation"
+        },
+        {
+          "field": "services",
+          "value": "Irrigation Systems",
+          "status": "verified",
+          "verified": true,
+          "provenance": "observed",
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.399Z",
+          "source_type": "source",
+          "source_observations": [
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/reviews",
+            "https://burnslandscapinghouston.com/contact"
+          ],
+          "verification_status": "source observation"
+        },
+        {
+          "field": "services",
+          "value": "Drainage Solutions",
+          "status": "verified",
+          "verified": true,
+          "provenance": "observed",
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.399Z",
+          "source_type": "source",
+          "source_observations": [
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/reviews",
+            "https://burnslandscapinghouston.com/contact"
+          ],
+          "verification_status": "source observation"
+        },
+        {
+          "field": "services",
+          "value": "Outdoor Lighting",
+          "status": "verified",
+          "verified": true,
+          "provenance": "observed",
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.399Z",
+          "source_type": "source",
+          "source_observations": [
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/reviews",
+            "https://burnslandscapinghouston.com/contact"
+          ],
+          "verification_status": "source observation"
+        },
+        {
+          "field": "services",
+          "value": "Outdoor Living & Hardscapes",
+          "status": "verified",
+          "verified": true,
+          "provenance": "observed",
+          "source_url": "https://burnslandscapinghouston.com/",
+          "observed_at": "2026-09-27T12:24:17.399Z",
+          "source_type": "source",
+          "source_observations": [
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/",
+            "https://burnslandscapinghouston.com/reviews",
+            "https://burnslandscapinghouston.com/contact"
+          ],
+          "verification_status": "source observation"
+        }
+      ],
+      "warnings": [
+        "first_party_no_paid_v1",
+        "remote_fallback_refused",
+        "cache_bypassed"
+      ],
+      "discovery": {
+        "facts": {
+          "city": "Houston",
+          "name": "Burns Landscaping",
+          "email": "",
+          "phone": "12818553758",
+          "state": "TX",
+          "website": "https://burnslandscapinghouston.com/",
+          "category": "landscaping",
+          "services": [
+            "Landscape Design & Installation",
+            "Lawn & Landscape Maintenance",
+            "Irrigation Systems",
+            "Drainage Solutions",
+            "Outdoor Lighting",
+            "Outdoor Living & Hardscapes"
+          ]
+        },
+        "files": [],
+        "found": {
+          "copy": "Burns Landscaping ΓÇö Houston's Premier Lawn & Landscape Experts\n\nYour home,\n\nTransforming Houston homes with expert landscaping and lawn care since 1998.\n\nNAVIGATION\n\nCONTACT US\n\nBurns Landscaping delivers premium lawn care and landscape design to Houston homeowners. From lush lawns to complete outdoor transformations we make it happen.\n\nFamily owned since 1998, Burns Landscaping combines decades of experience with a new generation committed to carrying that same standard of service forward. WeΓÇÖve built our reputation by doing quality work, treating people right, and building lasting relationships with our customers throughout Houston.\n\nFor us, great landscaping really is personal. We take the time to understand your property, your vision, and what you want from your outdoor space. From the first consultation to the finished project and beyond, our goal is to provide thoughtful recommendations, dependable service, and work we're proud to put our name on.\n\nCustom landscapes designed around your home, style, and property from plant selection and layered beds to complete landscape renovations.\n\nDependable, professional maintenance year-round: mowing, edging, trimming, bed care, and seasonal cleanups tailored to your property.\n\nNew sprinkler system design and installation, plus repairs and adjustments to keep your landscape receiving the right amount of water.\n\nTransforming Houston homes with expert landscaping and lawn care since 1998.\n\nNAVIGATION\n\nCONTACT US\n\nBurns Landscaping has been serving Houston homeowners for nearly three decades. We built this company on quality work, trusted relationships, and the belief that great landscaping is personal.\n\nWe don't cut corners. Every project is executed with care, precision, and materials we stand behind ΓÇö because our name is on every job we do.\n\nLandscape Design & Installation\n\nWe create custom landscapes designed around your home, style, and property. From plant selection and layered beds to complete landscape renovations, our team combines thoughtful design with plants proven to thrive in Houston.\n\nLawn & Landscape Maintenance\n\nKeep your property looking its best year-round with dependable, professional maintenance. Our team provides routine lawn and landscape care tailored to the needs of your property, from mowing and edging to trimming, bed maintenance, and seasonal cleanups.\n\nIrrigation Systems\n\nA healthy Houston landscape starts with proper irrigation. We design and install new sprinkler systems, troubleshoot existing systems, and make repairs and adjustments to help your landscape receive the right amount of water where it needs it.\n\nDrainage Solutions\n\nHouston's heavy rainfall can quickly expose drainage problems. We evaluate problem areas and design practical drainage solutions that help move excess water away from your home, lawn, and landscape.\n\nOutdoor Lighting\n\nExtend the beauty of your landscape beyond daylight with professionally designed outdoor lighting. From subtle pathway lighting to architectural uplighting, we create systems that enhance your home, landscape, and outdoor spaces while adding visibility and security.\n\nOutdoor Living & Hardscapes\n\nCreate an outdoor space made for living. We design and build hardscape features that complement your home and landscape, from patios and walkways to outdoor kitchens, fire features, and complete outdoor living spaces.",
+          "faqs": [],
+          "logo": null,
+          "areas": [],
+          "fonts": [],
+          "colors": [],
+          "photos": [],
+          "videos": [],
+          "contact": {
+            "email": "",
+            "phone": "12818553758",
+            "address": ""
+          },
+          "socials": [],
+          "services": [
+            "Landscape Design & Installation",
+            "Lawn & Landscape Maintenance",
+            "Irrigation Systems",
+            "Drainage Solutions",
+            "Outdoor Lighting",
+            "Outdoor Living & Hardscapes"
+          ],
+          "trust_marks": []
+        },
+        "assets": [],
+        "sources": [
+          "https://burnslandscapinghouston.com/",
+          "https://burnslandscapinghouston.com/reviews",
+          "https://burnslandscapinghouston.com/contact",
+          "https://burnslandscapinghouston.com/about",
+          "https://burnslandscapinghouston.com/services"
+        ],
+        "summary": {
+          "mode": "local-source-packet-envelope",
+          "logo_found": false,
+          "pages_read": 5,
+          "photos_found": 0,
+          "videos_found": 0,
+          "services_found": 6,
+          "remote_requests": 0,
+          "business_profile_version": "source-business-profile-v1",
+          "private_archive_page_count": 4
+        },
+        "searched": [],
+        "provenance": {
+          "about": {
+            "method": "first_party_paragraphs_no_invented_trust_claims",
+            "sourceUrl": "https://burnslandscapinghouston.com/about",
+            "sourceSha256": "e903aabe776e0e6f32d4491a3e644fc548cd0ce57f8fee24c55731e8ebff8502"
+          },
+          "phone": {
+            "method": "first_party_tel_link",
+            "sourceUrl": "https://burnslandscapinghouston.com/",
+            "sourceSha256": "709f892fe813ee8f5cf2319e5748d3c5fd9883f2682b54861baeb3c47a038f49",
+            "independentVerification": false
+          },
+          "service:Outdoor Lighting": {
+            "method": "first_party_service_index_heading_and_description",
+            "sourceUrl": "https://burnslandscapinghouston.com/services",
+            "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+          },
+          "service:Drainage Solutions": {
+            "method": "first_party_service_index_heading_and_description",
+            "sourceUrl": "https://burnslandscapinghouston.com/services",
+            "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+          },
+          "service:Irrigation Systems": {
+            "method": "first_party_service_index_heading_and_description",
+            "sourceUrl": "https://burnslandscapinghouston.com/services",
+            "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+          },
+          "service:Outdoor Living & Hardscapes": {
+            "method": "first_party_service_index_heading_and_description",
+            "sourceUrl": "https://burnslandscapinghouston.com/services",
+            "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+          },
+          "service:Lawn & Landscape Maintenance": {
+            "method": "first_party_service_index_heading_and_description",
+            "sourceUrl": "https://burnslandscapinghouston.com/services",
+            "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+          },
+          "service:Landscape Design & Installation": {
+            "method": "first_party_service_index_heading_and_description",
+            "sourceUrl": "https://burnslandscapinghouston.com/services",
+            "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+          },
+          "page:https://burnslandscapinghouston.com/about": {
+            "method": "first_party_page_text_mined",
+            "sourceUrl": "https://burnslandscapinghouston.com/about",
+            "sourceSha256": "e903aabe776e0e6f32d4491a3e644fc548cd0ce57f8fee24c55731e8ebff8502"
+          },
+          "page:https://burnslandscapinghouston.com/contact": {
+            "method": "first_party_page_text_mined",
+            "sourceUrl": "https://burnslandscapinghouston.com/contact",
+            "sourceSha256": "d08f48ab403b945d87def5f24b0e62a3ee0459dfbcd71b3ab8f9687a2e10b303"
+          },
+          "page:https://burnslandscapinghouston.com/reviews": {
+            "method": "first_party_page_text_mined",
+            "sourceUrl": "https://burnslandscapinghouston.com/reviews",
+            "sourceSha256": "246986ef14a7ab6eed77b3cb9fb4f9e64c3e6a8ccc927d86efe5302f6cbdb343"
+          },
+          "page:https://burnslandscapinghouston.com/services": {
+            "method": "first_party_page_text_mined",
+            "sourceUrl": "https://burnslandscapinghouston.com/services",
+            "sourceSha256": "c0501bac0d925282242842f7a986f578db2499bf86368bfc1f65336c11ce22a4"
+          },
+          "business_profile:https://burnslandscapinghouston.com/": {
+            "method": "first_party_business_profile_dom",
+            "sourceUrl": "https://burnslandscapinghouston.com/",
+            "sourceSha256": "709f892fe813ee8f5cf2319e5748d3c5fd9883f2682b54861baeb3c47a038f49"
+          },
+          "business_profile:https://burnslandscapinghouston.com/contact": {
+            "method": "first_party_business_profile_dom",
+            "sourceUrl": "https://burnslandscapinghouston.com/contact",
+            "sourceSha256": "d08f48ab403b945d87def5f24b0e62a3ee0459dfbcd71b3ab8f9687a2e10b303"
+          }
+        },
+        "image_inventory": [],
+        "navigation_pages": [],
+        "customerPublishApproved": false,
+        "sourceClaimsIndependentlyVerified": false
+      },
+      "request_id": "ghost:lm-5fc8274e4324bff121368303b318bd9a7f22f466:source:7097b3e55c6cc04b:line-genie-certified-v7",
+      "optimization": {
+        "seo_gaps": [
+          "local schema",
+          "service proof",
+          "answer-engine FAQ"
+        ],
+        "schema_types": [
+          "LocalBusiness",
+          "Service",
+          "FAQPage",
+          "BreadcrumbList"
+        ],
+        "local_presence": {},
+        "target_queries": [
+          "landscaping Houston, TX",
+          "landscaping near me",
+          "best landscaping Houston"
+        ]
+      },
+      "remix_packet": {
+        "brand": {
+          "logo": null,
+          "fonts": [],
+          "media": [],
+          "colors": [],
+          "precedence": "verified owner-supplied, then verified first-party, then unverified candidate"
+        },
+        "sources": [
+          {
+            "id": "src_7cb729e5f978",
+            "url": "https://burnslandscapinghouston.com/",
+            "type": "website",
+            "verified": false,
+            "ownership": "first_party"
+          },
+          {
+            "id": "src_c84fff006772",
+            "url": "https://burnslandscapinghouston.com/",
+            "type": "evidence",
+            "verified": false,
+            "ownership": "unverified"
+          }
+        ],
+        "version": "remix-packet-v1",
+        "prospect": {
+          "name": {
+            "value": "Burns Landscaping",
+            "provenance": {
+              "method": "hint",
+              "source_id": null,
+              "source_url": null
+            }
+          },
+          "email": {
+            "value": null,
+            "provenance": []
+          },
+          "phone": {
+            "value": "12818553758",
+            "provenance": {
+              "method": "official_source",
+              "source_id": "src_7cb729e5f978",
+              "source_url": "https://burnslandscapinghouston.com/"
+            }
+          },
+          "address": {
+            "value": null,
+            "provenance": []
+          },
+          "website": {
+            "value": "https://burnslandscapinghouston.com/",
+            "provenance": {
+              "method": "website",
+              "source_id": "src_7cb729e5f978",
+              "source_url": "https://burnslandscapinghouston.com/"
+            }
+          },
+          "category": {
+            "value": "landscaping",
+            "provenance": {
+              "method": "classification",
+              "source_id": null,
+              "source_url": null
+            }
+          },
+          "location": {
+            "value": {
+              "city": "Houston",
+              "state": "TX"
+            },
+            "provenance": {
+              "method": "hint",
+              "source_id": null,
+              "source_url": null
+            }
+          },
+          "services": {
+            "value": [
+              "Landscape Design & Installation",
+              "Lawn & Landscape Maintenance",
+              "Irrigation Systems",
+              "Drainage Solutions",
+              "Outdoor Lighting",
+              "Outdoor Living & Hardscapes"
+            ],
+            "provenance": {
+              "method": "operator_verified",
+              "source_id": null,
+              "source_url": null
+            }
+          }
+        },
+        "warnings": [
+          {
+            "code": "missing_email",
+            "field": "prospect.email",
+            "message": "email is unknown and was not invented."
+          },
+          {
+            "code": "missing_address",
+            "field": "prospect.address",
+            "message": "address is unknown and was not invented."
+          },
+          {
+            "code": "missing_brand_asset",
+            "field": "brand.logo",
+            "message": "No verified logo is available."
+          },
+          {
+            "code": "missing_brand_asset",
+            "field": "brand.colors",
+            "message": "No source-backed colors are available."
+          },
+          {
+            "code": "missing_brand_asset",
+            "field": "brand.fonts",
+            "message": "No source-backed fonts are available."
+          },
+          {
+            "code": "missing_brand_asset",
+            "field": "brand.media",
+            "message": "No source-backed media are available."
+          },
+          {
+            "code": "missing_requirement",
+            "field": "requirements.site_type",
+            "message": "Site type is not set."
+          },
+          {
+            "code": "missing_requirement",
+            "field": "requirements.template",
+            "message": "Template is not set."
+          },
+          {
+            "code": "missing_requirement",
+            "field": "requirements.execution_mode",
+            "message": "Execution mode is not set."
+          },
+          {
+            "code": "missing_requirement",
+            "field": "requirements.page_plan",
+            "message": "Page plan is not set."
+          },
+          {
+            "code": "rendered_verification_required",
+            "field": "rendered_verification",
+            "message": "A real rendered DOM check is required before release."
+          },
+          {
+            "code": "owner_approval_required",
+            "field": "build_handoff.owner_approval_required",
+            "message": "Owner approval is required; compilation cannot authorize sending."
+          },
+          {
+            "code": "upstream_warning",
+            "field": null,
+            "message": "first_party_no_paid_v1"
+          },
+          {
+            "code": "upstream_warning",
+            "field": null,
+            "message": "remote_fallback_refused"
+          },
+          {
+            "code": "upstream_warning",
+            "field": null,
+            "message": "cache_bypassed"
+          }
+        ],
+        "readiness": {
+          "score": 50,
+          "warnings": [
+            {
+              "code": "missing_email",
+              "field": "prospect.email",
+              "message": "email is unknown and was not invented."
+            },
+            {
+              "code": "missing_address",
+              "field": "prospect.address",
+              "message": "address is unknown and was not invented."
+            },
+            {
+              "code": "missing_brand_asset",
+              "field": "brand.logo",
+              "message": "No verified logo is available."
+            },
+            {
+              "code": "missing_brand_asset",
+              "field": "brand.colors",
+              "message": "No source-backed colors are available."
+            },
+            {
+              "code": "missing_brand_asset",
+              "field": "brand.fonts",
+              "message": "No source-backed fonts are available."
+            },
+            {
+              "code": "missing_brand_asset",
+              "field": "brand.media",
+              "message": "No source-backed media are available."
+            },
+            {
+              "code": "missing_requirement",
+              "field": "requirements.site_type",
+              "message": "Site type is not set."
+            },
+            {
+              "code": "missing_requirement",
+              "field": "requirements.template",
+              "message": "Template is not set."
+            },
+            {
+              "code": "missing_requirement",
+              "field": "requirements.execution_mode",
+              "message": "Execution mode is not set."
+            },
+            {
+              "code": "missing_requirement",
+              "field": "requirements.page_plan",
+              "message": "Page plan is not set."
+            },
+            {
+              "code": "rendered_verification_required",
+              "field": "rendered_verification",
+              "message": "A real rendered DOM check is required before release."
+            },
+            {
+              "code": "owner_approval_required",
+              "field": "build_handoff.owner_approval_required",
+              "message": "Owner approval is required; compilation cannot authorize sending."
+            },
+            {
+              "code": "upstream_warning",
+              "field": null,
+              "message": "first_party_no_paid_v1"
+            },
+            {
+              "code": "upstream_warning",
+              "field": null,
+              "message": "remote_fallback_refused"
+            },
+            {
+              "code": "upstream_warning",
+              "field": null,
+              "message": "cache_bypassed"
+            }
+          ],
+          "subscores": {
+            "sources": 100,
+            "brand_assets": 0,
+            "requirements": 0,
+            "business_details": 100,
+            "rendered_verification": 0
+          },
+          "compile_ready": false,
+          "release_ready": false
+        },
+        "requirements": {
+          "settings": {},
+          "template": null,
+          "page_plan": [],
+          "site_type": null,
+          "must_avoid": [],
+          "must_include": [],
+          "execution_mode": null
+        },
+        "canonical_hash": "0082b0a5d7bb23378e8d1a9c24362b7ffc7e346561a7d697b25e0155b465789e",
+        "media_inventory": [],
+        "source_registry": [
+          {
+            "id": "src_7cb729e5f978",
+            "url": "https://burnslandscapinghouston.com/",
+            "type": "website",
+            "verified": false,
+            "ownership": "first_party"
+          },
+          {
+            "id": "src_c84fff006772",
+            "url": "https://burnslandscapinghouston.com/",
+            "type": "evidence",
+            "verified": false,
+            "ownership": "unverified"
+          }
+        ],
+        "navigation_pages": [],
+        "production_locks": {
+          "send_allowed": false,
+          "owner_approved": false,
+          "owner_approval_required": true
+        },
+        "rendered_verification": {
+          "url": null,
+          "method": null,
+          "required": true,
+          "verified": false,
+          "checked_at": null,
+          "artifact_id": null
+        }
+      },
+      "execution_policy": {
+        "mode": "first_party_no_paid_v1",
+        "source_mode": "first_party_no_paid",
+        "preview_build_allowed": false,
+        "automatic_paid_fallback": false,
+        "local_source_packet_only": true,
+        "source_packet_receipt_hash": "0c0fae2aa97604cd54010c185b06316c033477843939ee024d625775e0ec0449",
+        "remote_image_probes_allowed": false,
+        "paid_provider_requests_allowed": false,
+        "remote_source_requests_allowed": false
+      },
+      "transport_receipt": {
+        "version": "wss.source-envelope-http.v1",
+        "encoded_bytes": 580549,
+        "request_sha256": "cb609e634fe55e4ea061e3475ffd452daf6a635771e6353fb1ebd99d8f699c7c"
+      }
+    },
+    "mirror_release_evidence": {
+      "ok": true,
+      "slug": "wss-test-burns-landscaping-houston",
+      "donor": "landscaping-evergreen",
+      "checks": {
+        "kit": {
+          "status": "passed",
+          "applied": [
+            "entity-card:v1",
+            "quotable-facts-strip:v1"
+          ],
+          "warnings": [],
+          "trust_modules": [
+            {
+              "id": "entity-card",
+              "reason": "data-backed:4 identity lines"
+            },
+            {
+              "id": "quotable-facts-strip",
+              "reason": "data-backed:2 quotable sentences"
+            }
+          ]
+        },
+        "brand": {
+          "logo": "wordmark-fallback",
+          "mark": {
+            "rung": "wordmark",
+            "value": {
+              "text": "Burns Landscaping",
+              "type": "wordmark",
+              "color": "#EF4444"
+            },
+            "reason": "no usable image fell to wordmark"
+          },
+          "fonts": "donor-default",
+          "accent": "measured",
+          "photos": {
+            "placed": 16,
+            "usable": 16,
+            "supplied": 16,
+            "unplaced": 0,
+            "dead_slots": [],
+            "transcoded": 0,
+            "ext_fallback": 0,
+            "slots_in_donor": 32,
+            "photos_unplaced": [],
+            "hero_wash_placed": 0
+          },
+          "status": "passed",
+          "hero_wash": {
+            "ink": {
+              "sub": "#e8edf2",
+              "headline": "#ffffff"
+            },
+            "alpha": 0.8693,
+            "reason": null,
+            "applied": true,
+            "selector": "section#top",
+            "tint_mix": 0,
+            "photo_sha": "9f32fb88d4fb5a422ecaee68a8aa81c02e315b99171d2a1b42e7753ac840a286",
+            "photo_url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/hero",
+            "color_grade": {
+              "alpha": 0.3,
+              "accent_rgb": {
+                "b": 68,
+                "g": 68,
+                "r": 239
+              }
+            },
+            "scrim_basis": "themed_slab",
+            "photo_source": "client_hero_extracted",
+            "pages_verified": [],
+            "ink_floor_contrast": 4.62,
+            "worst_case_contrast": 4.61
+          },
+          "logo_path": "/assets/brand-logo.svg",
+          "accent_hex": "#EF4444",
+          "hero_media": {
+            "hero": {
+              "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/hero",
+              "width": 3840,
+              "height": 2393,
+              "sha256": "9f32fb88d4fb5a422ecaee68a8aa81c02e315b99171d2a1b42e7753ac840a286",
+              "source": "first_viewport_img"
+            },
+            "website": "https://burnslandscapinghouston.com/",
+            "selection": {
+              "rung": 1,
+              "choice": "client_hero",
+              "reason": null
+            },
+            "candidates": 2,
+            "extraction": "verified",
+            "cross_prospect_guard": "client_domain_bound_plus_sha_registry"
+          },
+          "hero_video": {
+            "path": "assets/hero-client-landscaping.mp4",
+            "paths": {
+              "clips": 1,
+              "applied": true,
+              "posters": 3,
+              "rewrites": 5,
+              "assertion": {
+                "ok": true,
+                "refs": 1,
+                "healed": 0,
+                "dangling": [],
+                "islands_fixed": 0
+              },
+              "walker_fixes": 5
+            },
+            "placed": 1,
+            "sha256": "9044d4a8e612c4694ac48fa28b2dafb17775bcda3d2768fbfb825c3813ae1822",
+            "usable": true,
+            "supplied": true,
+            "extracted": false,
+            "provenance": "client_derived_reel"
+          },
+          "media_mode": "housed",
+          "logo_in_dom": true,
+          "site_palette": {
+            "colors": [
+              {
+                "hex": "#3B82F6",
+                "weight": 0.022
+              },
+              {
+                "hex": "#EF4444",
+                "weight": 0.011
+              },
+              {
+                "hex": "#374151",
+                "weight": 0.011
+              },
+              {
+                "hex": "#FFFFFF",
+                "weight": 0.0879
+              }
+            ],
+            "reused": true,
+            "applied": true,
+            "dominant": "#3B82F6",
+            "secondary": "#EF4444",
+            "background": "#FFFFFF",
+            "source_url": "https://burnslandscapinghouston.com/",
+            "extracted_at": "2026-09-27T03:36:41.036Z"
+          },
+          "accent_origin": "site_chrome(no_logo_colour_measured)",
+          "mark_fallback": "wordmark",
+          "accent_decision": {
+            "why": "no colour could be measured from the logo; the site's own action colour is the only witness",
+            "logo": null,
+            "site": "#EF4444",
+            "winner": "site_chrome",
+            "hue_gap": null
+          },
+          "default_suspect": {
+            "matches": [
+              {
+                "hex": "#EF4444",
+                "name": "red-500",
+                "palette": "tailwind",
+                "distance": 0
+              }
+            ],
+            "verdict": "framework_default"
+          },
+          "logo_sha_source": null,
+          "logo_slot_repair": {
+            "applied": false
+          },
+          "secondary_accent": null,
+          "logo_asset_shipped": true,
+          "logo_sha_in_output": "39b37e3c2d5f0b26423923ec371b5696dbe8ebae37587e5cf68a4585c1e0d749",
+          "logo_refs_in_output": 21,
+          "logo_slots_in_donor": 3
+        },
+        "theme": {
+          "mode": "light",
+          "slab": "#F8F1F1",
+          "text": "#321B1B",
+          "accent": "#EF4444",
+          "status": "passed",
+          "applied": true,
+          "surface": "#FFFFFF",
+          "contrast": {
+            "accent_on_slab": 4.68,
+            "text_on_surface": 16.05,
+            "muted_on_surface": 16.05,
+            "slab_ink_on_slab": 14.07,
+            "slab_muted_on_slab": 5.43,
+            "accent_soft_on_slab": 5.85,
+            "accent_ink_on_accent": 5.23,
+            "accent_soft_on_surface": 6.52,
+            "accent_text_on_surface": 4.52,
+            "accent_text_on_surface_alt": 4.52
+          },
+          "mode_why": "site_palette_canvas_light(lum=1.00)",
+          "hero_floor": {
+            "reason": "donor_declares_no_hero_floor",
+            "applied": false
+          },
+          "logo_plate": false,
+          "stylesheet": "assets/index-landscaping-native.css",
+          "site_palette": {
+            "ink": null,
+            "won": true,
+            "mode": "light",
+            "roles": {
+              "ink": null,
+              "mode": "light",
+              "accent": "#EF4444",
+              "surface": "#FFFFFF",
+              "exact_ink": false,
+              "source_bound": true,
+              "exact_surface": true,
+              "has_dark_slabs": false,
+              "accent_from_logo": false,
+              "accent_from_site": true,
+              "dark_section_count": 0,
+              "surfaces_from_site": false
+            },
+            "accent": "#EF4444",
+            "reason": "site_palette_applied",
+            "applied": true,
+            "surface": "#FFFFFF",
+            "has_dark_slabs": false,
+            "extraction_method": "enforced_site_palette",
+            "dark_section_count": 0
+          },
+          "toggle_pages": 2,
+          "mode_measured": false,
+          "brand_identity": {
+            "reason": "brand_identity_absent",
+            "applied": false
+          },
+          "palette_source": "site",
+          "fallback_palette": null,
+          "dark_slabs_repointed": 0,
+          "motion_layers_recoloured": 0,
+          "generated_wordmark_contrast": {
+            "pages": 10,
+            "reason": "generated_wordmark_only",
+            "applied": true
+          }
+        },
+        "render": {
+          "video": {
+            "paused": false,
+            "present": true,
+            "waited_ms": 0,
+            "readyState": 4
+          },
+          "status": "passed",
+          "problems": [],
+          "web_vitals": {
+            "cls": 0.001,
+            "budget": {
+              "cls": 0.05,
+              "inp": 200,
+              "lcp": 2000,
+              "ttfb": 600
+            },
+            "inp_ms": 59,
+            "lcp_ms": 1908,
+            "status": "measured",
+            "ttfb_ms": 39,
+            "inp_kind": "synthetic",
+            "protocol": "h2",
+            "compressed": false
+          },
+          "page_errors": [],
+          "theme_modes": {
+            "modes": [],
+            "status": "passed",
+            "toggle": false
+          },
+          "logo_identity": {
+            "status": "passed",
+            "header_matches": 1,
+            "footer_candidates": 1
+          },
+          "console_errors": [],
+          "failed_requests": [],
+          "aborted_requests": [
+            {
+              "url": "https://wss-test-burns-landscaping-houston.local.wss-ai.test:5444/assets/hero-client-landscaping.mp4",
+              "error": "net::ERR_ABORTED"
+            }
+          ],
+          "readable_layouts": [
+            {
+              "logos": [
+                {
+                  "readable": true,
+                  "contrastingFraction": 1
+                }
+              ],
+              "width": 1440,
+              "status": "passed",
+              "clipped": []
+            },
+            {
+              "logos": [
+                {
+                  "readable": true,
+                  "contrastingFraction": 1
+                }
+              ],
+              "width": 390,
+              "status": "passed",
+              "clipped": []
+            }
+          ],
+          "hydration_recovery": {
+            "bodyChars": 4097,
+            "h1Visible": true,
+            "recoveredDom": true,
+            "rootChildren": 1,
+            "interactiveCount": 59
+          },
+          "recovered_page_errors": [],
+          "third_party_tag_failures": []
+        },
+        "routes": {
+          "source": "rendered_links",
+          "status": "passed",
+          "spa_routes": [],
+          "hash_targets": 0,
+          "linked_paths": [
+            "/",
+            "/about",
+            "/drainage-solutions",
+            "/irrigation-systems",
+            "/landscape-design-and-installation",
+            "/lawn-and-landscape-maintenance",
+            "/outdoor-lighting",
+            "/outdoor-living-and-hardscapes"
+          ],
+          "spa_prefixes": [],
+          "not_found_page": true,
+          "catch_all_rewrite": false,
+          "dead_links_removed": 0,
+          "dead_hashes_stripped": 0,
+          "clone_route_resolution": {
+            "supplied": false,
+            "omitted_paths": [],
+            "admitted_paths": []
+          }
+        },
+        "content": {
+          "faqs": 0,
+          "areas": 0,
+          "hours": 0,
+          "pride": {
+            "plans": 0,
+            "cities": 0,
+            "standing": 0,
+            "supplied": false,
+            "promotions": 0,
+            "badge_strip": false,
+            "credentials": 0,
+            "differentiators": 0,
+            "badges_rendered_as_image": 0
+          },
+          "status": "injected",
+          "reviews": 0,
+          "call_bar": {
+            "call": false,
+            "text": false,
+            "bytes": 0,
+            "pages": 0,
+            "reason": "sticky_cta_flag_off",
+            "flag_on": false,
+            "present": false,
+            "primary_cta": false
+          },
+          "hero_ssr": {
+            "family": "full-bleed",
+            "reason": "",
+            "present": true
+          },
+          "seasonal": {
+            "cards": [],
+            "month": null,
+            "reason": "flag_off",
+            "enabled": false,
+            "rendered": false,
+            "vertical": null
+          },
+          "sections": 2,
+          "services": 6,
+          "taxonomy": null,
+          "financing": false,
+          "placement": "spa_relocated_before_footer",
+          "chat_widget": {
+            "bytes": 264580,
+            "pages": 10,
+            "reason": "",
+            "present": true
+          },
+          "data_island": true,
+          "chat_handoff": {
+            "tel": "",
+            "bytes": 0,
+            "pages": 0,
+            "reason": "chat_handoff_flag_off",
+            "present": false
+          },
+          "hero_preload": "assets/hero-wash.jpg",
+          "lead_capture": {
+            "bytes": 5191,
+            "pages": 2,
+            "reason": "",
+            "present": true,
+            "endpoint": "https://ghost.wss-ai.com/api/quote-request",
+            "fallback": "phone"
+          },
+          "schema_nodes": 11,
+          "signup_panel": {
+            "bytes": 14898,
+            "pages": 2,
+            "riley": true,
+            "reason": "",
+            "present": true,
+            "checkout": true,
+            "client_id": "WSS-040EBF"
+          },
+          "sitemap_urls": 9,
+          "trust_badges": 1,
+          "donor_renders": [
+            "services",
+            "faq",
+            "reviews",
+            "about"
+          ],
+          "identity_band": {
+            "reason": "no_identity_photo",
+            "present": false,
+            "subject": null
+          },
+          "injected_into": [
+            "index.html"
+          ],
+          "legal_hygiene": {
+            "pages": 10,
+            "noindex_pages": 10,
+            "attribution_pages": 10
+          },
+          "perf_pipeline": {
+            "status": "applied",
+            "imgs_lazy": 8,
+            "hero_asset": "assets/hero-wash.jpg",
+            "imgs_eager": 0,
+            "hero_preloaded": true,
+            "imgs_dimensioned": 0,
+            "pages_transformed": 10,
+            "preconnects_added": 4,
+            "imgs_lazy_from_eager": 0
+          },
+          "service_cards": {
+            "cards": 6,
+            "bespoke_points": 0,
+            "empty_bullet_cards": [],
+            "duplicate_bullet_blocks": []
+          },
+          "service_links": {
+            "islands": 2,
+            "matched": 12,
+            "ambiguous": 0,
+            "unmatched": 0,
+            "native_links": 6,
+            "native_models": 1
+          },
+          "service_select": {
+            "pages": 1,
+            "options": 6
+          },
+          "authority_pages": [
+            "/about",
+            "/landscape-design-and-installation",
+            "/lawn-and-landscape-maintenance",
+            "/irrigation-systems",
+            "/drainage-solutions",
+            "/outdoor-lighting",
+            "/outdoor-living-and-hardscapes"
+          ],
+          "authority_words": 30913,
+          "decor_artifacts": {
+            "pages": [],
+            "suppressed": 0
+          },
+          "prerendered_app": true,
+          "project_gallery": {
+            "bytes": 0,
+            "pages": 0,
+            "pairs": 0,
+            "reason": "no_project_photos",
+            "present": false
+          },
+          "map_src_deferred": false,
+          "local_search_plan": {
+            "status": "candidate_only",
+            "version": "local-search-plan.v1",
+            "claim_level": "planned",
+            "target_terms": 6,
+            "service_pages": 6,
+            "trust_signals": 8,
+            "service_area_pages": 0
+          },
+          "donor_consumes_content": true,
+          "generated_authority_pages": {
+            "hubs": [],
+            "chars": 0,
+            "pages": [],
+            "words": 0,
+            "enabled": true,
+            "skipped": [],
+            "page_kinds": {
+              "faq": 0,
+              "blog": 0,
+              "rebates": 0,
+              "financing": 0
+            },
+            "audit_pages": [],
+            "input_pages": 0,
+            "rendered_chars": 0,
+            "rendered_files": 0,
+            "rendered_words": 0
+          }
+        },
+        "favicon": {
+          "bytes": {
+            "favicon.ico": 534,
+            "favicon.png": 823,
+            "favicon.svg": 316,
+            "icon-192.png": 823,
+            "icon-512.png": 3798,
+            "apple-touch-icon.png": 580
+          },
+          "clean": true,
+          "sizes": [
+            16,
+            32,
+            48,
+            180,
+            192,
+            512
+          ],
+          "sha256": "8ee213c8c7eb3fe9a080cc4ef567c230e3c3403599963769ebf5e687f86a1fbd",
+          "source": "monogram",
+          "status": "passed",
+          "emitted": [
+            "favicon.ico",
+            "apple-touch-icon.png",
+            "icon-192.png",
+            "icon-512.png",
+            "favicon.png",
+            "favicon.svg"
+          ],
+          "initials": "BL",
+          "raster_source": "monogram",
+          "pages_rewritten": 10,
+          "stray_icon_links": [],
+          "manifest_rewritten": false,
+          "donor_icons_removed": [],
+          "residual_donor_icons": []
+        },
+        "editable": {
+          "total": 62,
+          "bucket": "wss-site-sources",
+          "errors": [],
+          "pruned": {
+            "ok": true,
+            "removed": [],
+            "archivedObjects": 62
+          },
+          "status": "archived",
+          "archived": 62,
+          "voice_edit_note": "Riley can edit this site only while an archive exists; the deploy target must also resolve in lib/site-edit-targets.js"
+        },
+        "sameness": {
+          "lines": {
+            "a": "Burns Landscaping.",
+            "b": "Landscaping in Houston, TX.",
+            "c": ""
+          },
+          "status": "passed",
+          "headline": "Burns Landscaping. Landscaping in Houston, TX.",
+          "problems": [],
+          "rendered_h1": "Burns Landscaping. Landscaping in Houston, TX.",
+          "served_title": "Burns Landscaping ΓÇö Houston, TX",
+          "fleet_compared": 312,
+          "headline_basis": [
+            "trade+city: Landscaping / Houston, TX",
+            "business_name (verified)"
+          ],
+          "headline_source": "trade_and_city",
+          "served_og_title": "",
+          "rendered_h1_verdict": "client_derived",
+          "donor_headline_slots": [
+            {
+              "file": "assets/index-landscaping-native.js",
+              "count": 1,
+              "token": "HERO_LINE_A"
+            }
+          ]
+        },
+        "variants": {
+          "css": {
+            "cta": "slab-block",
+            "hero": "video-cinematic",
+            "colors": true,
+            "applied": true,
+            "stylesheet": "assets/index-landscaping-native.css",
+            "type_scale": "wide-short",
+            "section_variants": {
+              "about": "stats-band",
+              "footer": "minimal-bar",
+              "contact": "banner-cta",
+              "gallery": "strip",
+              "services": "chip-cluster",
+              "testimonials": "inline-strip"
+            }
+          },
+          "cta": "slab-block",
+          "dom": {
+            "pages": 2,
+            "attributes": 2,
+            "section_order": {
+              "reason": "donor_order_not_carried",
+              "applied": false
+            }
+          },
+          "hero": "video-cinematic",
+          "budget": {
+            "target": 2,
+            "rotated": 0,
+            "compared": 0,
+            "enforced": true
+          },
+          "pinned": {
+            "hero": "video-cinematic",
+            "type_scale": null,
+            "section_order": false
+          },
+          "status": "passed",
+          "type_scale": "wide-short",
+          "section_order": null,
+          "section_variants": {
+            "about": "stats-band",
+            "footer": "minimal-bar",
+            "contact": "banner-cta",
+            "gallery": "strip",
+            "services": "chip-cluster",
+            "testimonials": "inline-strip"
+          }
+        },
+        "copy_slot": {
+          "region_guard": {
+            "pages": 0,
+            "reason": "no_climate_claims_or_region_licensed",
+            "region": {
+              "city": "Houston",
+              "state": "TX"
+            },
+            "applied": false,
+            "climate": "hot_humid"
+          }
+        },
+        "deep_link": {
+          "status": "passed"
+        },
+        "area_fence": {
+          "clean": true,
+          "status": "passed",
+          "removed": [],
+          "allowlist": [
+            "houston",
+            "tx",
+            "texas"
+          ],
+          "ld_blocks": 9,
+          "removed_count": 0,
+          "allowlist_size": 3,
+          "pages_rewritten": 0,
+          "visible_residue": [],
+          "unparseable_blocks": []
+        },
+        "asset_diff": {
+          "status": "passed",
+          "checked": 62
+        },
+        "token_scan": {
+          "status": "passed"
+        },
+        "donor_cruft": {
+          "status": "passed",
+          "blanked": 0,
+          "watermark_hidden": false,
+          "toggle_repositioned": true,
+          "placeholders_blanked": 0
+        },
+        "hero_poster": {
+          "choice": "client_current_hero",
+          "reason": null,
+          "status": "applied",
+          "rewrites": 1,
+          "selection": {
+            "choice": "client_current_hero",
+            "ranked": [
+              {
+                "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/hero",
+                "score": 40,
+                "sha256": "9f32fb88d4fb5a422ecaee68a8aa81c02e315b99171d2a1b42e7753ac840a286",
+                "region_tag": "unknown",
+                "media_class": "generic_stock"
+              }
+            ],
+            "reason": null,
+            "region": {
+              "city": "Houston",
+              "code": "TX",
+              "stateName": "texas"
+            },
+            "rejected": [
+              {
+                "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-10",
+                "reason": "ineligible_for_hero:generic_stock"
+              },
+              {
+                "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-3",
+                "reason": "ineligible_for_hero:generic_stock"
+              },
+              {
+                "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-12",
+                "reason": "ineligible_for_hero:generic_stock"
+              },
+              {
+                "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-6",
+                "reason": "ineligible_for_hero:generic_stock"
+              },
+              {
+                "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-11",
+                "reason": "ineligible_for_hero:generic_stock"
+              },
+              {
+                "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-8",
+                "reason": "ineligible_for_hero:generic_stock"
+              },
+              {
+                "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-9",
+                "reason": "ineligible_for_hero:generic_stock"
+              },
+              {
+                "url": "https://burnslandscapinghouston.com/airo-assets/images/pages/home/project-5",
+                "reason": "ineligible_for_hero:generic_stock"
+              }
+            ]
+          },
+          "poster_ext": "jpg",
+          "poster_rel": "assets/hero-poster.jpg",
+          "poster_sha": "9f32fb88d4fb5a422ecaee68a8aa81c02e315b99171d2a1b42e7753ac840a286",
+          "provenance": {
+            "schema": "wss.hero-poster.v1",
+            "copy_slot": "hero_poster"
+          },
+          "poster_kind": "photograph",
+          "refs_healed": 0,
+          "fallback_rel": null,
+          "poster_ships": true,
+          "refs_checked": 1,
+          "onerror_pages": 0,
+          "fallback_source": null,
+          "counts_as_photograph": true
+        },
+        "mobile_fold": {
+          "reason": null,
+          "status": "applied",
+          "kept_line": "trade_city_line_b",
+          "call_cta_kept": false
+        },
+        "photo_ships": {
+          "reason": "family_not_in_scope",
+          "status": "skipped",
+          "provenance": {
+            "schema": "wss.photo-ships.v1"
+          },
+          "fallback_rel": null
+        },
+        "alias_target": {
+          "status": "passed",
+          "deployment_id": "3889f0f7-2561-80e3-97cf-a468a5142107"
+        },
+        "route_render": {
+          "pages": [
+            {
+              "h1": "Burns Landscaping. Landscaping in Houston, TX.",
+              "path": "/",
+              "chars": 4097,
+              "title": "Burns Landscaping ΓÇö Houston, TX",
+              "status": 200,
+              "h1_count": 1,
+              "text_hash": "fbcb9da3fe7d5c00",
+              "entity_residue": [],
+              "content_channels": {
+                "faqs": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": true,
+                  "targets_expected": 1,
+                  "baseline_targets_found": 0
+                },
+                "about": {
+                  "rendered": 1,
+                  "supplied": 1,
+                  "targets_found": 1,
+                  "target_changed": true,
+                  "target_checked": true,
+                  "baseline_checked": true,
+                  "targets_expected": 1,
+                  "baseline_targets_found": 0
+                },
+                "areas": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "hours": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "reviews": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": true,
+                  "targets_expected": 1,
+                  "baseline_targets_found": 0
+                },
+                "services": {
+                  "rendered": 6,
+                  "supplied": 6,
+                  "targets_found": 1,
+                  "target_changed": true,
+                  "target_checked": true,
+                  "baseline_checked": true,
+                  "targets_expected": 1,
+                  "baseline_targets_found": 1
+                }
+              },
+              "injected_sections": 2,
+              "hash_targets_found": [],
+              "hash_targets_expected": 0,
+              "injected_sections_in_markup": 2
+            },
+            {
+              "h1": "About Burns Landscaping",
+              "path": "/about",
+              "chars": 528,
+              "title": "About Burns Landscaping ΓÇö landscaping in Houston",
+              "status": 200,
+              "h1_count": 1,
+              "text_hash": "fc59ee9cdaf9437a",
+              "entity_residue": [],
+              "content_channels": {
+                "faqs": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "about": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "areas": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "hours": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "reviews": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "services": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                }
+              },
+              "injected_sections": 1,
+              "hash_targets_found": [],
+              "hash_targets_expected": 0,
+              "injected_sections_in_markup": 1
+            },
+            {
+              "h1": "Drainage Solutions in Houston, TX",
+              "path": "/drainage-solutions",
+              "chars": 631,
+              "title": "Drainage Solutions in Houston ΓÇö Burns Landscaping",
+              "status": 200,
+              "h1_count": 1,
+              "text_hash": "3dfa3fcce6ce35c5",
+              "entity_residue": [],
+              "content_channels": {
+                "faqs": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "about": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "areas": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "hours": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "reviews": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "services": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                }
+              },
+              "injected_sections": 1,
+              "hash_targets_found": [],
+              "hash_targets_expected": 0,
+              "injected_sections_in_markup": 1
+            },
+            {
+              "h1": "Irrigation Systems in Houston, TX",
+              "path": "/irrigation-systems",
+              "chars": 676,
+              "title": "Irrigation Systems in Houston ΓÇö Burns Landscaping",
+              "status": 200,
+              "h1_count": 1,
+              "text_hash": "fdc82a96d723ad5d",
+              "entity_residue": [],
+              "content_channels": {
+                "faqs": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "about": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "areas": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "hours": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "reviews": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "services": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                }
+              },
+              "injected_sections": 1,
+              "hash_targets_found": [],
+              "hash_targets_expected": 0,
+              "injected_sections_in_markup": 1
+            },
+            {
+              "h1": "Landscape Design & Installation in Houston, TX",
+              "path": "/landscape-design-and-installation",
+              "chars": 671,
+              "title": "Landscape Design & Installation in Houston ΓÇö Burns Landscapi",
+              "status": 200,
+              "h1_count": 1,
+              "text_hash": "65e56e0e52414db4",
+              "entity_residue": [],
+              "content_channels": {
+                "faqs": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "about": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "areas": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "hours": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "reviews": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "services": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                }
+              },
+              "injected_sections": 1,
+              "hash_targets_found": [],
+              "hash_targets_expected": 0,
+              "injected_sections_in_markup": 1
+            },
+            {
+              "h1": "Lawn & Landscape Maintenance in Houston, TX",
+              "path": "/lawn-and-landscape-maintenance",
+              "chars": 698,
+              "title": "Lawn & Landscape Maintenance in Houston ΓÇö Burns Landscaping",
+              "status": 200,
+              "h1_count": 1,
+              "text_hash": "a7a9bd240e013f8d",
+              "entity_residue": [],
+              "content_channels": {
+                "faqs": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "about": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "areas": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "hours": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "reviews": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "services": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                }
+              },
+              "injected_sections": 1,
+              "hash_targets_found": [],
+              "hash_targets_expected": 0,
+              "injected_sections_in_markup": 1
+            },
+            {
+              "h1": "Outdoor Lighting in Houston, TX",
+              "path": "/outdoor-lighting",
+              "chars": 695,
+              "title": "Outdoor Lighting in Houston ΓÇö Burns Landscaping",
+              "status": 200,
+              "h1_count": 1,
+              "text_hash": "45643c6aaeb8c9d6",
+              "entity_residue": [],
+              "content_channels": {
+                "faqs": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "about": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "areas": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "hours": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "reviews": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "services": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                }
+              },
+              "injected_sections": 1,
+              "hash_targets_found": [],
+              "hash_targets_expected": 0,
+              "injected_sections_in_markup": 1
+            },
+            {
+              "h1": "Outdoor Living & Hardscapes in Houston, TX",
+              "path": "/outdoor-living-and-hardscapes",
+              "chars": 668,
+              "title": "Outdoor Living & Hardscapes in Houston ΓÇö Burns Landscaping",
+              "status": 200,
+              "h1_count": 1,
+              "text_hash": "f7263e860ed045af",
+              "entity_residue": [],
+              "content_channels": {
+                "faqs": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "about": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "areas": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "hours": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "reviews": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                },
+                "services": {
+                  "rendered": 0,
+                  "supplied": 0,
+                  "targets_found": 0,
+                  "target_changed": false,
+                  "target_checked": false,
+                  "baseline_checked": false,
+                  "targets_expected": 0,
+                  "baseline_targets_found": 0
+                }
+              },
+              "injected_sections": 1,
+              "hash_targets_found": [],
+              "hash_targets_expected": 0,
+              "injected_sections_in_markup": 1
+            }
+          ],
+          "prose": [],
+          "status": "passed",
+          "problems": [],
+          "collisions": [],
+          "paths_rendered": 8,
+          "missing_hash_targets": []
+        },
+        "content_floor": {
+          "counts": {
+            "faqs": 0,
+            "about": 1,
+            "areas": 0,
+            "hours": 0,
+            "reviews": 0,
+            "services": 6
+          },
+          "nearby": 0,
+          "reason": "",
+          "status": "passed",
+          "verdict": "met",
+          "channels": [
+            "services",
+            "about"
+          ],
+          "sections": 2,
+          "diagnostic": "services:6,reviews:0,hours:0,faqs:0,areas:0,about:1 | native:services+about",
+          "render_mode": "donor_native",
+          "native_channels": [
+            "services",
+            "about"
+          ]
+        },
+        "identity_scan": {
+          "status": "passed"
+        },
+        "logo_identity": {
+          "status": "passed",
+          "logo_path": "/assets/brand-logo.svg",
+          "logo_sha256": "39b37e3c2d5f0b26423923ec371b5696dbe8ebae37587e5cf68a4585c1e0d749",
+          "identity_kind": "wss_deterministic_wordmark",
+          "favicon_source": "monogram"
+        },
+        "service_floor": {
+          "floor": 1,
+          "names": [
+            "Landscape Design & Installation",
+            "Lawn & Landscape Maintenance",
+            "Irrigation Systems",
+            "Drainage Solutions",
+            "Outdoor Lighting",
+            "Outdoor Living & Hardscapes"
+          ],
+          "reason": "",
+          "status": "passed",
+          "refused": [],
+          "verdict": "met",
+          "supplied": 6,
+          "publishable": 6
+        },
+        "customer_edits": {
+          "status": "none",
+          "undone": 0,
+          "applied": 0,
+          "entries": 0,
+          "unreplayable": []
+        },
+        "critical_visual": {
+          "hero": "passed",
+          "logo": "passed",
+          "render": "passed",
+          "status": "passed",
+          "theme_modes": "passed"
+        },
+        "donor_isolation": {
+          "source": "service_and_donor_family",
+          "status": "passed",
+          "emitted": "contact_and_profile_links"
+        },
+        "hero_provenance": {
+          "path": "assets/hero-client-landscaping.mp4",
+          "sha256": "9044d4a8e612c4694ac48fa28b2dafb17775bcda3d2768fbfb825c3813ae1822",
+          "status": "passed",
+          "sources": [
+            "assets/hero-client-landscaping.mp4"
+          ],
+          "provenance": "client_derived_reel",
+          "ladder_count": 0,
+          "source_count": 1,
+          "failsafe_pages": 0,
+          "poster_recovery_pages": 0
+        },
+        "hydration_parse": {
+          "status": "passed",
+          "file_count": 38,
+          "parse_gate": "passed",
+          "collapsed_blocks": 0,
+          "collapsed_phrase_files": 1,
+          "omitted_non_public_files": []
+        },
+        "optimization_108": {
+          "met": 64,
+          "gaps": {
+            "unmet": [
+              12,
+              21,
+              22,
+              23,
+              25,
+              27,
+              31,
+              33,
+              34,
+              35,
+              38,
+              45,
+              55,
+              57,
+              58,
+              65,
+              70,
+              72,
+              83,
+              87,
+              90,
+              91,
+              92,
+              93,
+              94,
+              96,
+              97,
+              103,
+              104,
+              108
+            ],
+            "needs_intake": [],
+            "needs_content": [],
+            "needs_research": []
+          },
+          "tally": {
+            "met": 64,
+            "n/a": 6,
+            "unmet": 30,
+            "unverified": 8
+          },
+          "total": 108,
+          "points": [
+            {
+              "n": 1,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "<title> <= 60 chars with keyword + geo",
+              "state": "met"
+            },
+            {
+              "n": 2,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Meta description <= 160",
+              "state": "met"
+            },
+            {
+              "n": 3,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Canonical",
+              "state": "met"
+            },
+            {
+              "n": 4,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Robots meta",
+              "state": "met"
+            },
+            {
+              "n": 5,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "sitemap.xml",
+              "state": "met"
+            },
+            {
+              "n": 6,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "robots.txt",
+              "state": "met"
+            },
+            {
+              "n": 7,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "llms.txt (AI crawlers)",
+              "state": "met"
+            },
+            {
+              "n": 8,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Single H1 per page",
+              "state": "met"
+            },
+            {
+              "n": 9,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Semantic HTML5",
+              "state": "met"
+            },
+            {
+              "n": 10,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Descriptive alts",
+              "state": "met"
+            },
+            {
+              "n": 11,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Internal linking graph >= 3 links/page",
+              "state": "met"
+            },
+            {
+              "n": 12,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Outbound authoritative links",
+              "state": "unmet"
+            },
+            {
+              "n": 13,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Anchor-text variety",
+              "state": "met"
+            },
+            {
+              "n": 14,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "URL slugs short + keyword",
+              "state": "met"
+            },
+            {
+              "n": 15,
+              "kind": "runtime",
+              "group": "SEO Foundations",
+              "point": "301 from common typos",
+              "state": "unverified"
+            },
+            {
+              "n": 16,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "404 page custom",
+              "state": "met"
+            },
+            {
+              "n": 17,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Pagination rel-prev/next where applicable",
+              "state": "n/a"
+            },
+            {
+              "n": 18,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "Hreflang if multi-language",
+              "state": "n/a"
+            },
+            {
+              "n": 19,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "og:image 1200x630 branded",
+              "state": "met"
+            },
+            {
+              "n": 20,
+              "kind": "auto",
+              "group": "SEO Foundations",
+              "point": "twitter:card summary_large_image",
+              "state": "met"
+            },
+            {
+              "n": 21,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Real founder bio",
+              "state": "unmet"
+            },
+            {
+              "n": 22,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Real team page",
+              "state": "unmet"
+            },
+            {
+              "n": 23,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Real credentials/licenses",
+              "state": "unmet"
+            },
+            {
+              "n": 24,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Years-in-business stat",
+              "state": "met"
+            },
+            {
+              "n": 25,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Real address",
+              "state": "unmet"
+            },
+            {
+              "n": 26,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Real phone with tel:",
+              "state": "met"
+            },
+            {
+              "n": 27,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Real reviews quoted",
+              "state": "unmet"
+            },
+            {
+              "n": 28,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Real photos",
+              "state": "met"
+            },
+            {
+              "n": 29,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Author byline on content",
+              "state": "met"
+            },
+            {
+              "n": 30,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Last-updated dates",
+              "state": "met"
+            },
+            {
+              "n": 31,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Citations to authoritative sources",
+              "state": "unmet"
+            },
+            {
+              "n": 32,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "NAP consistency across site + schema + footer",
+              "state": "met"
+            },
+            {
+              "n": 33,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Mission statement in owner voice",
+              "state": "unmet"
+            },
+            {
+              "n": 34,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Awards/certifications (only real)",
+              "state": "unmet"
+            },
+            {
+              "n": 35,
+              "kind": "auto",
+              "group": "E-E-A-T",
+              "point": "Press mentions (only real)",
+              "state": "unmet"
+            },
+            {
+              "n": 36,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "LocalBusiness (or vertical subtype)",
+              "state": "met"
+            },
+            {
+              "n": 37,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "Organization",
+              "state": "met"
+            },
+            {
+              "n": 38,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "Person (founder)",
+              "state": "unmet"
+            },
+            {
+              "n": 39,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "Service (per service page)",
+              "state": "met"
+            },
+            {
+              "n": 40,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "FAQPage with speakable",
+              "state": "met"
+            },
+            {
+              "n": 41,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "BreadcrumbList",
+              "state": "met"
+            },
+            {
+              "n": 42,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "WebSite with SearchAction",
+              "state": "met"
+            },
+            {
+              "n": 43,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "Article schema on content pages",
+              "state": "met"
+            },
+            {
+              "n": 44,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "Review aggregate (only with real reviews)",
+              "state": "n/a"
+            },
+            {
+              "n": 45,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "OpeningHoursSpecification",
+              "state": "unmet"
+            },
+            {
+              "n": 46,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "GeoCoordinates",
+              "state": "n/a"
+            },
+            {
+              "n": 47,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "ContactPoint",
+              "state": "met"
+            },
+            {
+              "n": 48,
+              "kind": "auto",
+              "group": "Schema",
+              "point": "PostalAddress",
+              "state": "met"
+            },
+            {
+              "n": 49,
+              "kind": "runtime",
+              "group": "Technical",
+              "point": "HTTPS",
+              "state": "met"
+            },
+            {
+              "n": 50,
+              "kind": "runtime",
+              "group": "Technical",
+              "point": "HTTP/2 or 3",
+              "state": "met"
+            },
+            {
+              "n": 51,
+              "kind": "runtime",
+              "group": "Technical",
+              "point": "Brotli/gzip",
+              "state": "met"
+            },
+            {
+              "n": 52,
+              "kind": "auto",
+              "group": "Technical",
+              "point": "Mobile-first responsive",
+              "state": "met"
+            },
+            {
+              "n": 53,
+              "kind": "auto",
+              "group": "Technical",
+              "point": "Touch targets >= 44px",
+              "state": "n/a"
+            },
+            {
+              "n": 54,
+              "kind": "auto",
+              "group": "Technical",
+              "point": "No mixed content",
+              "state": "met"
+            },
+            {
+              "n": 55,
+              "kind": "auto",
+              "group": "Technical",
+              "point": "No render-blocking JS above fold",
+              "state": "unmet"
+            },
+            {
+              "n": 56,
+              "kind": "auto",
+              "group": "Technical",
+              "point": "Critical CSS inlined",
+              "state": "met"
+            },
+            {
+              "n": 57,
+              "kind": "auto",
+              "group": "Technical",
+              "point": "Async/defer on non-critical scripts",
+              "state": "unmet"
+            },
+            {
+              "n": 58,
+              "kind": "auto",
+              "group": "Technical",
+              "point": "Service-worker / offline fallback (premier)",
+              "state": "unmet"
+            },
+            {
+              "n": 59,
+              "kind": "auto",
+              "group": "Technical",
+              "point": "No orphan pages",
+              "state": "met"
+            },
+            {
+              "n": 60,
+              "kind": "auto",
+              "group": "Technical",
+              "point": "XML sitemap submitted",
+              "state": "met"
+            },
+            {
+              "n": 61,
+              "kind": "runtime",
+              "group": "Performance",
+              "point": "LCP < 2.0s",
+              "state": "unverified"
+            },
+            {
+              "n": 62,
+              "kind": "runtime",
+              "group": "Performance",
+              "point": "INP < 200ms (synthetic)",
+              "state": "unverified"
+            },
+            {
+              "n": 63,
+              "kind": "runtime",
+              "group": "Performance",
+              "point": "CLS < 0.05",
+              "state": "unverified"
+            },
+            {
+              "n": 64,
+              "kind": "runtime",
+              "group": "Performance",
+              "point": "TTFB < 600ms",
+              "state": "unverified"
+            },
+            {
+              "n": 65,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "Hero image WebP/AVIF",
+              "state": "unmet"
+            },
+            {
+              "n": 66,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "Lazy load below fold",
+              "state": "met"
+            },
+            {
+              "n": 67,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "Preload hero only",
+              "state": "met"
+            },
+            {
+              "n": 68,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "Preconnect to fonts/CDN",
+              "state": "met"
+            },
+            {
+              "n": 69,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "font-display: swap",
+              "state": "n/a"
+            },
+            {
+              "n": 70,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "Image dimensions set",
+              "state": "unmet"
+            },
+            {
+              "n": 71,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "No layout shift from late fonts",
+              "state": "met"
+            },
+            {
+              "n": 72,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "Compressed video (<= 1.5MB target)",
+              "state": "unmet"
+            },
+            {
+              "n": 73,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "Reduced-motion respected",
+              "state": "met"
+            },
+            {
+              "n": 74,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "JS budget <= 200KB gzipped",
+              "state": "met"
+            },
+            {
+              "n": 75,
+              "kind": "auto",
+              "group": "Performance",
+              "point": "CSS budget <= 80KB gzipped",
+              "state": "met"
+            },
+            {
+              "n": 76,
+              "kind": "runtime",
+              "group": "Accessibility",
+              "point": "AA contrast everywhere",
+              "state": "unverified"
+            },
+            {
+              "n": 77,
+              "kind": "auto",
+              "group": "Accessibility",
+              "point": "Focus rings visible",
+              "state": "met"
+            },
+            {
+              "n": 78,
+              "kind": "runtime",
+              "group": "Accessibility",
+              "point": "Keyboard nav complete",
+              "state": "unverified"
+            },
+            {
+              "n": 79,
+              "kind": "auto",
+              "group": "Accessibility",
+              "point": "aria-label on icon buttons",
+              "state": "met"
+            },
+            {
+              "n": 80,
+              "kind": "auto",
+              "group": "Accessibility",
+              "point": "Skip-to-content link",
+              "state": "met"
+            },
+            {
+              "n": 81,
+              "kind": "auto",
+              "group": "Accessibility",
+              "point": "Form labels + error messages",
+              "state": "met"
+            },
+            {
+              "n": 82,
+              "kind": "runtime",
+              "group": "Accessibility",
+              "point": "Color not sole signal",
+              "state": "unverified"
+            },
+            {
+              "n": 83,
+              "kind": "auto",
+              "group": "Accessibility",
+              "point": "Captions/transcripts on video",
+              "state": "unmet"
+            },
+            {
+              "n": 84,
+              "kind": "auto",
+              "group": "Accessibility",
+              "point": "lang attr on <html>",
+              "state": "met"
+            },
+            {
+              "n": 85,
+              "kind": "auto",
+              "group": "Accessibility",
+              "point": "No autoplay audio",
+              "state": "met"
+            },
+            {
+              "n": 86,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "City + state in title/H1/footer/schema",
+              "state": "met"
+            },
+            {
+              "n": 87,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "Service-area page per primary city",
+              "state": "unmet"
+            },
+            {
+              "n": 88,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "Embedded Google Map",
+              "state": "met"
+            },
+            {
+              "n": 89,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "Driving directions block",
+              "state": "met"
+            },
+            {
+              "n": 90,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "Neighborhood mentions in body",
+              "state": "unmet"
+            },
+            {
+              "n": 91,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "Local landmarks referenced",
+              "state": "unmet"
+            },
+            {
+              "n": 92,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "NAP-consistent citation pack generated",
+              "state": "unmet"
+            },
+            {
+              "n": 93,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "GBP description (250/500/750) generated",
+              "state": "unmet"
+            },
+            {
+              "n": 94,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "Suggested GBP categories listed",
+              "state": "unmet"
+            },
+            {
+              "n": 95,
+              "kind": "auto",
+              "group": "Local/GEO",
+              "point": "Local schema areaServed",
+              "state": "met"
+            },
+            {
+              "n": 96,
+              "kind": "auto",
+              "group": "Voice/AI",
+              "point": "Q-format <h2> headings",
+              "state": "unmet"
+            },
+            {
+              "n": 97,
+              "kind": "auto",
+              "group": "Voice/AI",
+              "point": "Conversational answer paragraphs",
+              "state": "unmet"
+            },
+            {
+              "n": 98,
+              "kind": "auto",
+              "group": "Voice/AI",
+              "point": "Speakable schema on FAQ + featured answers",
+              "state": "met"
+            },
+            {
+              "n": 99,
+              "kind": "auto",
+              "group": "Voice/AI",
+              "point": "llms.txt with site summary",
+              "state": "met"
+            },
+            {
+              "n": 100,
+              "kind": "auto",
+              "group": "Voice/AI",
+              "point": "Concise direct answers first paragraph",
+              "state": "met"
+            },
+            {
+              "n": 101,
+              "kind": "auto",
+              "group": "Voice/AI",
+              "point": "Long-tail question pages (FAQ anchors)",
+              "state": "met"
+            },
+            {
+              "n": 102,
+              "kind": "auto",
+              "group": "Voice/AI",
+              "point": "name and description clear in all schema",
+              "state": "met"
+            },
+            {
+              "n": 103,
+              "kind": "auto",
+              "group": "Voice/AI",
+              "point": "Author and source citations parseable",
+              "state": "unmet"
+            },
+            {
+              "n": 104,
+              "kind": "auto",
+              "group": "Voice/AI",
+              "point": "Structured tables for comparable data",
+              "state": "unmet"
+            },
+            {
+              "n": 105,
+              "kind": "auto",
+              "group": "Conversion",
+              "point": "Tiered CTA ladder",
+              "state": "met"
+            },
+            {
+              "n": 106,
+              "kind": "auto",
+              "group": "Conversion",
+              "point": "Sticky contact bubble w/ owner photo",
+              "state": "met"
+            },
+            {
+              "n": 107,
+              "kind": "auto",
+              "group": "Conversion",
+              "point": "Exit-intent modal (email gate)",
+              "state": "met"
+            },
+            {
+              "n": 108,
+              "kind": "auto",
+              "group": "Conversion",
+              "point": "UTM-tagged lead capture + notification",
+              "state": "unmet"
+            }
+          ],
+          "schema": "wss-optimization-108-v1",
+          "status": "scored",
+          "byGroup": {
+            "Schema": {
+              "met": 9,
+              "total": 13
+            },
+            "E-E-A-T": {
+              "met": 6,
+              "total": 15
+            },
+            "Voice/AI": {
+              "met": 5,
+              "total": 9
+            },
+            "Local/GEO": {
+              "met": 4,
+              "total": 10
+            },
+            "Technical": {
+              "met": 8,
+              "total": 12
+            },
+            "Conversion": {
+              "met": 3,
+              "total": 4
+            },
+            "Performance": {
+              "met": 7,
+              "total": 15
+            },
+            "Accessibility": {
+              "met": 6,
+              "total": 10
+            },
+            "SEO Foundations": {
+              "met": 16,
+              "total": 20
+            }
+          },
+          "headline": "64/102 proven (6 n/a)",
+          "applicable": 102
+        },
+        "full_verification": {
+          "mode": "full",
+          "reason": "",
+          "status": "passed"
+        },
+        "pre_hydration_layout": {
+          "pages": 1,
+          "applied": true,
+          "skippedStaticH1": 0
+        }
+      },
+      "dry_run": false,
+      "weather": {
+        "reason": "donor_has_no_native_weather_tile",
+        "applied": false,
+        "provider": "open-meteo"
+      },
+      "logo_sha": null,
+      "renderer": "mirror-engine@v1",
+      "deploy_id": "3889f0f7-2561-80e3-97cf-a468a5142107",
+      "build_hash": "7a054d47636fb9af8632953fe427b1ba84aaee69d8aa8b40b6e1e9c6ba69c747",
+      "deploy_url": "https://wss-test-burns-landscaping-houston.wss-ai.com",
+      "file_count": 62,
+      "revealable": true,
+      "preview_url": "https://wss-test-burns-landscaping-houston.wss-ai.com/",
+      "qc_contract": "mirror-engine-qc-v1",
+      "evidence_sha": "7014d0d476c67350b3ddeb4a805de04d21b0024501df9b31793681359733fecc",
+      "polish_flags": [
+        {
+          "name": "brand_mark_fallback",
+          "cause": "wordmark",
+          "status": "fallback"
+        }
+      ],
+      "upload_stats": {
+        "reused": 0,
+        "deduped": 0,
+        "uploaded": 62
+      },
+      "verification": "full",
+      "proofIdentity": {
+        "site_id": "87af56f4-127c-43e2-82e0-c407632883cc",
+        "build_hash": "7a054d47636fb9af8632953fe427b1ba84aaee69d8aa8b40b6e1e9c6ba69c747",
+        "release_id": "3889f0f7-2561-80e3-97cf-a468a5142107"
+      },
+      "shared_publish": true,
+      "evidence_schema": "mirror-engine-release-evidence-v1",
+      "deployment_reused": false,
+      "donor_content_hash": "4494ac96b35388dc3b5508ccf6d7a3eb2cf72f0536562b8d1fc1e0f0b0f53301",
+      "sharedReleaseEvidence": {
+        "state": "active",
+        "site_id": "87af56f4-127c-43e2-82e0-c407632883cc",
+        "build_hash": "7a054d47636fb9af8632953fe427b1ba84aaee69d8aa8b40b6e1e9c6ba69c747",
+        "file_count": 62,
+        "generation": 9,
+        "release_id": "3889f0f7-2561-80e3-97cf-a468a5142107",
+        "manifest_path": "sites/87af56f4-127c-43e2-82e0-c407632883cc/releases/3889f0f7-2561-80e3-97cf-a468a5142107/manifest.json",
+        "canonical_host": "wss-test-burns-landscaping-houston.wss-ai.com",
+        "deployment_env": "local",
+        "evidence_schema": "shared-site-release-evidence-v1",
+        "hero_provenance": "client_derived_reel",
+        "hero_video_path": "assets/hero-client-landscaping.mp4",
+        "manifest_sha256": "792dc83ff289bc5f946b6b8b63d510134883d3ca91beeadb89638d8c12af0171",
+        "route_generation": 9,
+        "hero_video_sha256": "9044d4a8e612c4694ac48fa28b2dafb17775bcda3d2768fbfb825c3813ae1822"
+      }
+    }
+  },
+  "industry": "landscaping",
+  "updated_at": "2026-09-27T22:23:01.975+00:00",
+  "preview_url": "https://wss-test-burns-landscaping-houston.wss-ai.com/",
+  "prospect_id": "lm-5fc8274e4324bff121368303b318bd9a7f22f466",
+  "business_name": "Burns Landscaping",
+  "current_website": "https://burnslandscapinghouston.com/"
+}

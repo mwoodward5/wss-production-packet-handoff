@@ -1,0 +1,337 @@
+{
+  "version": 2,
+  "key": "47-kaup-s-tree-service-excavation-donor",
+  "name": "Kaup's Tree Service & Excavation Donor",
+  "category": "tree service",
+  "vertical": "tree service",
+  "requested_vertical": "tree service",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "1da03c93-74bd-49ff-9fc9-7e771abb7c26",
+  "lovable_source_commit": "a01d58d13b5dcdc120b0c1a8ce82d2b381e0fe10",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "1da03c93-74bd-49ff-9fc9-7e771abb7c26",
+    "ref": "a01d58d13b5dcdc120b0c1a8ce82d2b381e0fe10",
+    "repository": "https://github.com/mwoodward5/kaups-tree-service-tn",
+    "git_tree": "51f8bc4996a3c01d1def314efb1cec5bc77b71ea"
+  },
+  "classification": "MULTI_PAGE",
+  "routes": [
+    "/",
+    "/sitemap.xml",
+    "/robots.txt",
+    "/llms.txt"
+  ],
+  "design_tokens": {
+    "font_display": "Bricolage Grotesque",
+    "font_sans": "Inter",
+    "color_forest": "oklch(0.32 0.06 150)",
+    "color_forest_deep": "oklch(0.16 0.04 158)",
+    "color_forest_ink": "oklch(0.11 0.03 160)",
+    "color_dirt": "oklch(0.30 0.045 60)",
+    "color_amber_cta": "oklch(0.80 0.16 75)",
+    "color_amber_cta_hover": "oklch(0.74 0.17 70)",
+    "color_bone": "oklch(0.97 0.012 85)",
+    "color_bone_dim": "oklch(0.88 0.018 85)",
+    "radius_base": "0.75rem",
+    "shadow_amber_glow": "0 0 0 1px oklch(0.80 0.16 75 / 0.5), 0 18px 60px -20px oklch(0.80 0.16 75 / 0.35)",
+    "shadow_glass_deep": "0 30px 80px -30px oklch(0 0 0 / 0.6), inset 0 1px 0 oklch(1 0 0 / 0.08)"
+  },
+  "hero_contract": {
+    "layout": "asymmetric_split_with_bleed",
+    "media_width_desktop": "58vw",
+    "media_rotation": "2.5deg",
+    "media_mask": "torn-earth",
+    "atmospheric_layers": [
+      "hero-ink-gradient",
+      "topographic-contour-svg",
+      "laser-grade-sweep",
+      "equipment-led-pulsers",
+      "dust-field-particles"
+    ],
+    "headline_treatment": "bricolage-grotesque-with-svg-underline",
+    "widget_integrated": "JobCommand"
+  },
+  "media_slots": [
+    {
+      "slot_id": "MEDIA-HERO-MAIN",
+      "role": "hero",
+      "aspect_ratio": "16:9",
+      "mask": "torn-earth",
+      "rotation": "2.5deg"
+    },
+    {
+      "slot_id": "MEDIA-HERO-INSET",
+      "role": "project_detail",
+      "aspect_ratio": "4:3",
+      "rotation": "-2deg"
+    },
+    {
+      "slot_id": "MEDIA-SVC-01",
+      "role": "service_hero",
+      "aspect_ratio": "5:6"
+    },
+    {
+      "slot_id": "MEDIA-SVC-02",
+      "role": "service_hero",
+      "aspect_ratio": "5:6"
+    },
+    {
+      "slot_id": "MEDIA-SVC-03",
+      "role": "service_hero",
+      "aspect_ratio": "5:6"
+    },
+    {
+      "slot_id": "MEDIA-SVC-04_TO_08",
+      "role": "service_chip",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "slot_id": "MEDIA-GAL-01_TO_10",
+      "role": "gallery_bento",
+      "aspect_ratios": [
+        "1:1",
+        "5:4",
+        "16:9",
+        "5:6"
+      ]
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business_name",
+      "location": "Nav, Hero, Footer, Schema, Meta"
+    },
+    {
+      "key": "phone_display",
+      "location": "Nav, Hero, JobCommand, Contact, Footer, Dock"
+    },
+    {
+      "key": "phone_tel",
+      "location": "All tel: anchor tags and Schema"
+    },
+    {
+      "key": "phone_sms",
+      "location": "All sms: anchor tags with prefilled body"
+    },
+    {
+      "key": "email",
+      "location": "Contact section, Footer, Resend backend, Schema"
+    },
+    {
+      "key": "address",
+      "location": "Service area, Contact, Footer, Map InfoWindow, Schema"
+    },
+    {
+      "key": "hours",
+      "location": "Hero, Trust strip, Contact, Footer, Schema"
+    },
+    {
+      "key": "services_list",
+      "location": "ServicesSection, JobCommand, Footer, Schema"
+    },
+    {
+      "key": "service_area_towns",
+      "location": "ServiceAreaSection, SatelliteMap, Schema"
+    },
+    {
+      "key": "service_area_zips",
+      "location": "JobCommand IN_AREA_ZIPS validation"
+    }
+  ],
+  "trust_slots": [
+    {
+      "label": "Licensed & Insured",
+      "element": "TrustStrip, JobCommand, Footer"
+    },
+    {
+      "label": "BBB Accredited",
+      "element": "TrustStrip, Testimonials, Footer"
+    },
+    {
+      "label": "Google Reviews",
+      "element": "TrustStrip, Testimonials, Map"
+    },
+    {
+      "label": "Operating Hours",
+      "element": "TrustStrip, JobCommand, Footer"
+    },
+    {
+      "label": "Local Headquarters",
+      "element": "TrustStrip, ServiceArea, Schema"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "TreeService",
+      "scope": "Global Root"
+    },
+    {
+      "type": "PostalAddress",
+      "scope": "Global Root"
+    },
+    {
+      "type": "OpeningHoursSpecification",
+      "scope": "Global Root"
+    },
+    {
+      "type": "Service",
+      "scope": "Index Route (9 items)"
+    },
+    {
+      "type": "FAQPage",
+      "scope": "Index Route"
+    },
+    {
+      "type": "BreadcrumbList",
+      "scope": "Index Route"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "key": "coordinates",
+      "value": "35.1709, -88.5959",
+      "target": "SatelliteMap, Schema"
+    },
+    {
+      "key": "llms_txt",
+      "value": "Factual high-density markdown summary",
+      "target": "public/llms.txt"
+    },
+    {
+      "key": "meta_geo",
+      "value": "Title, Description, OG metadata with city qualifiers",
+      "target": "Route head"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "trigger": "SMS Intent Handoff",
+      "format": "sms:body with service, timing, zip"
+    },
+    {
+      "trigger": "Direct FAQ Formulation",
+      "format": "1st person natural queries under 40 words"
+    }
+  ],
+  "map_location_slot": {
+    "engine": "Google Maps JS Satellite API with Vector Terrain Fallback",
+    "center": "HQ Coordinates",
+    "marker": "Custom Amber Radial Gradient SVG with Pinpoint Eye",
+    "outbound_actions": [
+      "Google Maps Directions",
+      "Apple Maps Directions"
+    ]
+  },
+  "content_density": {
+    "hero": "moderate_with_dense_widget",
+    "trust_strip": "compact_horizontal_tokens",
+    "services": "shingled_bento_hierarchy",
+    "gallery": "asymmetric_10_slot_bento",
+    "testimonials": "curated_2_card_authentic",
+    "faq": "5_item_structured_accordion",
+    "contact": "split_card_and_dense_form"
+  },
+  "mobile_rules": {
+    "hero_behavior": "stacked_banner_with_feathered_torn_bottom",
+    "navigation": "compact_chip_and_hamburger_drawer",
+    "dock_present": true,
+    "dock_actions": [
+      "Call",
+      "Text",
+      "Quote"
+    ],
+    "minimum_tap_target": "48px"
+  },
+  "non_negotiables": [
+    "Logomark must remain inside the .logomark-chip plinth",
+    "Hero right plate must maintain 2.5deg tilt and .torn-earth mask",
+    "Color palette must adhere to oklch forest, dirt, bone, and amber-cta",
+    "JobCommand widget must remain present in hero for conversion parity",
+    "Service cards must utilize the 3-hero / 5-chip shingled bento structure",
+    "Map interface must provide explicit Google Maps and Apple Maps action buttons"
+  ],
+  "safe_replacements": [
+    "brand_name",
+    "logo_asset_file",
+    "phone_numbers",
+    "email_address",
+    "postal_address",
+    "operating_hours",
+    "service_titles_and_summaries",
+    "service_area_towns_and_zips",
+    "all_photographic_assets",
+    "customer_review_quotes",
+    "faq_questions_and_answers",
+    "resend_notification_destination"
+  ],
+  "leak_terms": [
+    "Kaup's Tree Service & Excavation Donor"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Bricolage Grotesque",
+      "Inter"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.32 0.06 150)",
+    "oklch(0.16 0.04 158)",
+    "oklch(0.11 0.03 160)",
+    "oklch(0.30 0.045 60)",
+    "oklch(0.80 0.16 75)",
+    "oklch(0.74 0.17 70)",
+    "oklch(0.97 0.012 85)",
+    "oklch(0.88 0.018 85)"
+  ],
+  "fonts": [
+    "Bricolage Grotesque",
+    "Inter"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "753df9c06b4e31205d7499ac7db0f6b53b380802e1b29dd2f6f7c79c0faeeb0f",
+    "files": {
+      "assets/index-CX_fgV3D.js": "3a174a4272761c23e81ce22928ef4864df331fa14e32134154ff6eae257b77ef",
+      "assets/index-DPTjTYKa.css": "d19d8e8d0da1048eb24e316f46e1b496177c967adb430fa933f787e6862d0793",
+      "index.html": "3977214bcff19e352b7989cfe64cbd4abe81e27e1a941a25ffa8d8c5bd1526fb",
+      "robots.txt": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

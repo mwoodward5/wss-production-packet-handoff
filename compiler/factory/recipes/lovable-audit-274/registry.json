@@ -1,0 +1,4021 @@
+{
+  "schema_version": "siteforge-lovable-audit-registry-v1",
+  "produced_at": "2026-07-15T00:00:00Z",
+  "source": "siteforge-reverse-audit-2026-07-15 (274-project audit)",
+  "license": "study-only",
+  "anchor_project_id": "f9cbfac3-15fd-493a-b553-c4e620f3a9f0",
+  "totals": {
+    "projects_total": 182,
+    "local_eligible": 111,
+    "apps_tools_templates": 71,
+    "duplicates_flagged": 1
+  },
+  "projects": [
+    {
+      "global_index": 116,
+      "name": "texans-hvac-premier",
+      "project_id": "ab8ae4ac-3a28-40fc-85e6-67ca92547484",
+      "status": "published",
+      "live_url": "https://texans-hvac-premier.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 117,
+      "name": "yukon-haul-pro",
+      "project_id": "3b748a38-30ed-4dff-9212-6a89afeb267c",
+      "status": "published",
+      "live_url": "https://yukon-haul-pro.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 118,
+      "name": "rose-plumb-site",
+      "project_id": "85ff8416-6760-40ae-9ac4-2d054eb303e5",
+      "status": "published",
+      "live_url": "https://rose-plumb-site.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 119,
+      "name": "digi-dream",
+      "project_id": "ec977d63-95c1-4527-ba2b-367637d9d247",
+      "status": "published",
+      "live_url": "https://digi-dream.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 120,
+      "name": "lakebluff-movers-pro",
+      "project_id": "20f67958-fdfc-4d31-bba1-fd5bc67f3217",
+      "status": "published",
+      "live_url": "https://lakebluff-movers-pro.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 121,
+      "name": "Case Guardian",
+      "project_id": "4524dbd4-09b2-4a96-b47c-09a129175efc",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.5,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 122,
+      "name": "lakebluff-movers-hq",
+      "project_id": "cd877675-83b9-48a8-89f7-4992f9808a65",
+      "status": "published",
+      "live_url": "https://lakebluff-movers-hq.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [
+        "near-duplicate-of:20f67958-fdfc-4d31-bba1-fd5bc67f3217"
+      ],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 123,
+      "name": "jvdw-painting-bandera",
+      "project_id": "958ca194-8a63-4057-aee8-52d5c9315430",
+      "status": "published",
+      "live_url": "https://jvdw-painting-bandera.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 124,
+      "name": "Coastal Luxury Atlas",
+      "project_id": "81130f9f-e87c-49cd-8ad7-73ad95b1d561",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 125,
+      "name": "nashville-home-shine",
+      "project_id": "f50c575b-d655-402c-b205-18e20ee97a97",
+      "status": "published",
+      "live_url": "https://nashville-home-shine.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 126,
+      "name": "carolinacraftsmen",
+      "project_id": "3883c877-df1d-42e3-8b82-0fff0b3979b4",
+      "status": "published",
+      "live_url": "https://carolinacraftsmen.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 127,
+      "name": "geo-craft-sites",
+      "project_id": "1c346810-1f27-4996-afcf-d061cb5edf6b",
+      "status": "published",
+      "live_url": "https://geo-craft-sites.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 128,
+      "name": "sanchez-tree-service",
+      "project_id": "a721eb23-b861-48cf-9b79-e6e88d5be2ca",
+      "status": "published",
+      "live_url": "https://sanchez-tree-service.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 129,
+      "name": "forge-grow-ai",
+      "project_id": "8f649840-f3a2-40f2-a2ea-161ac9c0fbec",
+      "status": "published",
+      "live_url": "https://forge-grow-ai.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 130,
+      "name": "fence-magic-wow",
+      "project_id": "0acdc5c4-0d0c-49c6-895e-da0b0b45c46b",
+      "status": "published",
+      "live_url": "https://fence-magic-wow.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 131,
+      "name": "midas-mission-viejo",
+      "project_id": "ac3f82eb-c744-4926-ac3a-bc00e1c3e55c",
+      "status": "published",
+      "live_url": "https://midas-mission-viejo.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 132,
+      "name": "mandm-us-com",
+      "project_id": "1a353530-2ffc-4b9d-a2ee-0c1b4ac20330",
+      "status": "published",
+      "live_url": "https://mandm-us-com.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 133,
+      "name": "urban-craft-blueprint",
+      "project_id": "6cdec779-4cd3-4570-8945-ab4ce8314278",
+      "status": "published",
+      "live_url": "https://urban-craft-blueprint.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 134,
+      "name": "Greenville Dream Weaver",
+      "project_id": "cbd091af-6368-4b47-a89f-04c378920d03",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 135,
+      "name": "wrench-wizardry-web",
+      "project_id": "fe3ba43a-2051-4f2b-9e96-ff01522436ea",
+      "status": "published",
+      "live_url": "https://wrench-wizardry-web.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 136,
+      "name": "shingleroofsaver",
+      "project_id": "dc450e52-5efc-4e7c-b56b-38a710c564d2",
+      "status": "published",
+      "live_url": "https://shingleroofsaver.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 137,
+      "name": "true-local-craft",
+      "project_id": "6d863de0-0bf4-4ab4-b772-7b6d0048fc9e",
+      "status": "published",
+      "live_url": "https://true-local-craft.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 138,
+      "name": "artesanal-grill-site",
+      "project_id": "513ec1d1-fe31-4f20-aead-d0169dda8db9",
+      "status": "published",
+      "live_url": "https://artesanal-grill-site.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 139,
+      "name": "Tucson Roof Masterpiece",
+      "project_id": "8df150fa-1187-4066-8fec-50d28f5c9bf6",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 140,
+      "name": "artistic-lens-craft",
+      "project_id": "e483d6a7-8476-4fc5-9799-d933e0042d9f",
+      "status": "published",
+      "live_url": "https://artistic-lens-craft.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 141,
+      "name": "plan-whisperer-mm",
+      "project_id": "774c358e-e831-4fff-9dd0-53e57df31c4c",
+      "status": "published",
+      "live_url": "https://plan-whisperer-mm.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 142,
+      "name": "Tucson Roof Ready",
+      "project_id": "2108f8fa-b9c1-4d78-a735-2b1ea7a64f08",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 143,
+      "name": "sky-arc-sales-flow",
+      "project_id": "c5d7fc60-83e2-4b99-97f3-07b79a976dc0",
+      "status": "published",
+      "live_url": "https://sky-arc-sales-flow.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 144,
+      "name": "urban-sprout-studio",
+      "project_id": "7ac7a292-ff01-462e-8d0f-6d1c7c108b23",
+      "status": "published",
+      "live_url": "https://urban-sprout-studio.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 145,
+      "name": "framing-blueprint-builder",
+      "project_id": "4f14e07f-6bb5-4c1e-8bda-b2a9a6e11e0f",
+      "status": "published",
+      "live_url": "https://framing-blueprint-builder.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 146,
+      "name": "ride-luxe",
+      "project_id": "5f381dcb-8440-4913-9389-25400f884f6d",
+      "status": "published",
+      "live_url": "https://ride-luxe.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 147,
+      "name": "truth-craft-forge",
+      "project_id": "a637a273-1c2f-4bc9-acb6-ee71a9892f6b",
+      "status": "published",
+      "live_url": "https://truth-craft-forge.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 148,
+      "name": "clean-home-buffalo",
+      "project_id": "7409a942-f8a0-46d4-8d34-a9d6ca38cd72",
+      "status": "published",
+      "live_url": "https://clean-home-buffalo.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 149,
+      "name": "bear-lake-comfort-hub",
+      "project_id": "79ea821b-14ea-40b7-8884-93680e7121b3",
+      "status": "published",
+      "live_url": "https://bear-lake-comfort-hub.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 150,
+      "name": "sos-scroll-showcase",
+      "project_id": "b753bfe1-63d2-4899-8929-f3463810e1f3",
+      "status": "published",
+      "live_url": "https://sos-scroll-showcase.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 151,
+      "name": "cuddly-code-refresh",
+      "project_id": "bb1940f9-b9a0-4880-bdc8-c68f02b6d62a",
+      "status": "published",
+      "live_url": "https://cuddly-code-refresh.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 152,
+      "name": "PageFlow Studio",
+      "project_id": "975df2d0-82c5-41eb-9125-1c52d3728c9f",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 153,
+      "name": "Brand Builder AI",
+      "project_id": "36b66969-0cba-4429-9374-c0e6040e7808",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.5,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 154,
+      "name": "ACW Blueprint",
+      "project_id": "20e825b6-8ea0-4cb6-94c0-34c29009e18b",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.5,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 155,
+      "name": "Dream Forge Site Builder",
+      "project_id": "57c84d13-50e0-41b4-9ed4-ab26a7cd5f0b",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.5,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 156,
+      "name": "botanicals-whispers-ai",
+      "project_id": "fb577cc2-d738-41db-9d71-36f8dba3b880",
+      "status": "published",
+      "live_url": "https://botanicals-whispers-ai.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 157,
+      "name": "McGuinness Contracting One Page",
+      "project_id": "43aeafd0-2411-4faf-ba3d-009b766be136",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 158,
+      "name": "volt-craft-core",
+      "project_id": "9c0408b4-b13c-4188-84cd-d5e2b0a038f2",
+      "status": "published",
+      "live_url": "https://volt-craft-core.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 159,
+      "name": "mantra-zen-forge",
+      "project_id": "c843d307-97ab-489c-b37b-b2294d2b3f34",
+      "status": "published",
+      "live_url": "https://mantra-zen-forge.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 160,
+      "name": "craft-bloom-pro",
+      "project_id": "b30170e1-2f99-4259-be85-ce7619f17b5a",
+      "status": "published",
+      "live_url": "https://craft-bloom-pro.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 161,
+      "name": "Scottsdale Style Studio",
+      "project_id": "9757e8a9-bada-409f-bdab-8bd76e731b8c",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 162,
+      "name": "savannah-plan-build",
+      "project_id": "e9f17693-29ed-4a62-b9e8-3ed6bff982ff",
+      "status": "published",
+      "live_url": "https://savannah-plan-build.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 163,
+      "name": "mellow-renew",
+      "project_id": "73903ab9-f13e-46f4-9691-4a9b3845adf3",
+      "status": "published",
+      "live_url": "https://mellow-renew.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 164,
+      "name": "kodiak-integrated-shine",
+      "project_id": "97b9b735-a901-44eb-add3-c542d64d72ac",
+      "status": "published",
+      "live_url": "https://kodiak-integrated-shine.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 165,
+      "name": "f4d78afb-f889-4495-a5d8-d178fe60cd09",
+      "project_id": "f4d78afb-f889-4495-a5d8-d178fe60cd09",
+      "status": "published",
+      "live_url": "https://f4d78afb-f889-4495-a5d8-d178fe60cd09.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 166,
+      "name": "NH Mobile Welding One Page",
+      "project_id": "7e0d42b4-bc78-42c8-8bfc-a20be9b0d2f9",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 167,
+      "name": "clinic-plan-builder",
+      "project_id": "f3accd27-5075-4be8-92cf-bdf6f7b1e368",
+      "status": "published",
+      "live_url": "https://clinic-plan-builder.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 168,
+      "name": "crisp-appliance-shine",
+      "project_id": "f21467b7-4402-4964-b419-6a04eb78ffac",
+      "status": "published",
+      "live_url": "https://crisp-appliance-shine.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 169,
+      "name": "nextstep-showcase-site",
+      "project_id": "f7c376c3-671c-472b-ba8b-ba5fe510d3b5",
+      "status": "published",
+      "live_url": "https://nextstep-showcase-site.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 170,
+      "name": "msl-groundwork-studio",
+      "project_id": "023a1430-7427-40b9-a46b-8151632d0366",
+      "status": "published",
+      "live_url": "https://msl-groundwork-studio.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 171,
+      "name": "futurehome-visions",
+      "project_id": "9e3d2187-7bff-4bfa-a530-88ee49865680",
+      "status": "published",
+      "live_url": "https://futurehome-visions.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 172,
+      "name": "trillium",
+      "project_id": "ac972956-1c53-455d-bbf4-c8185dba51c3",
+      "status": "published",
+      "live_url": "https://trillium.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 173,
+      "name": "roof-revive-flow",
+      "project_id": "d225310c-303a-48cf-b2dd-b2245d5e5b6f",
+      "status": "published",
+      "live_url": "https://roof-revive-flow.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 174,
+      "name": "radiant-relaunch-kit",
+      "project_id": "a2a0eff2-e3f3-4b48-9dc7-c6797935d3b2",
+      "status": "published",
+      "live_url": "https://radiant-relaunch-kit.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 175,
+      "name": "parallax-alchemy-97",
+      "project_id": "8bdcaf1f-5071-41eb-9edb-cd482b228fa7",
+      "status": "published",
+      "live_url": "https://parallax-alchemy-97.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 176,
+      "name": "locale-canvas-prime",
+      "project_id": "72aefea4-a3db-49a0-b03e-a8712109baab",
+      "status": "published",
+      "live_url": "https://locale-canvas-prime.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 177,
+      "name": "texans-hvac-build",
+      "project_id": "8ace2883-7510-489c-aef1-db3b6b1241bd",
+      "status": "published",
+      "live_url": "https://texans-hvac-build.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 178,
+      "name": "power-readiness-hub",
+      "project_id": "8c830162-acfd-4d45-9f09-d5c0630775d0",
+      "status": "published",
+      "live_url": "https://power-readiness-hub.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 179,
+      "name": "greenfront-site-builder",
+      "project_id": "bac7c069-3279-4616-a0ee-e4e447042003",
+      "status": "published",
+      "live_url": "https://greenfront-site-builder.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 180,
+      "name": "rugged-drive-hub",
+      "project_id": "4a322ce9-89bc-4e75-aa34-7753f16223b8",
+      "status": "published",
+      "live_url": "https://rugged-drive-hub.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 181,
+      "name": "aqua-shine-build",
+      "project_id": "8f8ff4ca-35db-472d-b74d-80085520febf",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 182,
+      "name": "volt-forge-sites",
+      "project_id": "be0b2884-7dc6-4e16-bb8e-5a0c1cd91117",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 183,
+      "name": "lawn-spark-suite",
+      "project_id": "e587c1c4-04c0-46ce-ae0e-6f9d90223fb5",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 184,
+      "name": "showroom-site-craft",
+      "project_id": "b07bab3f-f925-4e66-992d-e65fc76ec6c3",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 185,
+      "name": "shine-slab-selector",
+      "project_id": "d6d4d75c-4b5f-4c7e-96ff-f0f3cfaf8d2e",
+      "status": "published",
+      "live_url": "https://shine-slab-selector.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 186,
+      "name": "bridgeville-pool-shine",
+      "project_id": "bd496ebf-3f0b-4cf8-8499-d2243e0a6a0f",
+      "status": "published",
+      "live_url": "https://bridgeville-pool-shine.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 187,
+      "name": "Plant City Auto Hub",
+      "project_id": "a2b1dcf4-8313-437c-9ee9-bdb4ceb7e04e",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 188,
+      "name": "cyclone-build-boom",
+      "project_id": "8f2a3fee-c88d-48b4-8236-c84631ab0c40",
+      "status": "published",
+      "live_url": "https://cyclone-build-boom.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 189,
+      "name": "redclay-foundation-builder",
+      "project_id": "1135406f-45dc-4edd-b40b-ceda59c80100",
+      "status": "published",
+      "live_url": "https://redclay-foundation-builder.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 190,
+      "name": "bright-appliance-spark",
+      "project_id": "edafbc79-788c-4d22-b38f-7b2091c86122",
+      "status": "published",
+      "live_url": "https://bright-appliance-spark.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 191,
+      "name": "local-leaf-loft",
+      "project_id": "18f44642-bdab-4889-8350-72303ec2c4cd",
+      "status": "published",
+      "live_url": "https://local-leaf-loft.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 192,
+      "name": "goodnews-build",
+      "project_id": "8bb9b19b-1002-4c30-9774-cc90f5cabcda",
+      "status": "published",
+      "live_url": "https://goodnews-build.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 193,
+      "name": "sos-scroll-magic",
+      "project_id": "6e0ea527-cfa5-4d96-a76c-3e023b102375",
+      "status": "published",
+      "live_url": "https://sos-scroll-magic.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 194,
+      "name": "azure-valley-pros",
+      "project_id": "56f5c9ba-b2e2-46c0-937e-12270e31593c",
+      "status": "published",
+      "live_url": "https://azure-valley-pros.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 195,
+      "name": "zenith-starters",
+      "project_id": "2c044be2-725e-4236-9ee4-7bbdaedfef22",
+      "status": "published",
+      "live_url": "https://zenith-starters.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 196,
+      "name": "falcon-foundry-site",
+      "project_id": "931062da-0a1d-4763-a4b9-48dcfa3ca74f",
+      "status": "published",
+      "live_url": "https://falcon-foundry-site.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 197,
+      "name": "radiant-local-build",
+      "project_id": "88c20555-318f-4c47-aec3-b7b6023b73e6",
+      "status": "published",
+      "live_url": "https://radiant-local-build.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 198,
+      "name": "Cozy Climate Control",
+      "project_id": "c670f1f9-bdd6-4178-9882-feec45e9a83a",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 199,
+      "name": "Good News Home Pros",
+      "project_id": "9500f773-0bda-4c4b-92ad-4a1927da7af3",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 200,
+      "name": "Thermal Vision Build",
+      "project_id": "91f3fab2-4784-4cfd-9a33-d6952d3d14a0",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 201,
+      "name": "Good News Build (53)",
+      "project_id": "1c1d9bba-5c80-4e02-949d-842862608866",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 202,
+      "name": "Warm House Digital",
+      "project_id": "8019f9f0-1a4b-473f-9dc8-0daf6b7a4714",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 203,
+      "name": "Good News Build",
+      "project_id": "76b9dd04-fdcb-4c13-96b4-315150a00d74",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.7,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 204,
+      "name": "mnm-elevate-milwaukee",
+      "project_id": "c5a02ad6-4bd1-493d-9074-801d0d1ad7c7",
+      "status": "published",
+      "live_url": "https://mnm-elevate-milwaukee.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 205,
+      "name": "cozy-home-insulate",
+      "project_id": "563c5863-d341-4d06-a48f-e32683c24e8c",
+      "status": "published",
+      "live_url": "https://cozy-home-insulate.lovable.app",
+      "preview_url": null,
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 206,
+      "name": "Insulation Blueprint",
+      "project_id": "441d0074-411b-4642-9956-31d98eddbf52",
+      "status": "private",
+      "live_url": null,
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.5,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 207,
+      "name": "rocket-craft-os",
+      "project_id": "a2bb644c-32db-4f7b-9054-5d491ea8e404",
+      "status": "published",
+      "live_url": "https://rocket-craft-os.lovable.app",
+      "preview_url": null,
+      "classification": "N/A",
+      "source_batch": "audit-batch-b.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 208,
+      "name": "rocket-mission-build",
+      "project_id": "3c225ae1-1f5c-4371-8b87-ca04e860a4f4",
+      "status": "completed; published",
+      "live_url": "https://rocket-mission-build.lovable.app / https://id-preview--3c225ae1-1f5c-4371-8b87-ca04e860a4f4.lovable.app",
+      "preview_url": "Missing favicon-16, webmanifest/PWA icons, OG, sitemap, robots, llms.txt, authority-108. LocalBusiness/atlas/sticky Call observed; FAQ+speakable+Breadcrumb, both map links, Text-photo/Start-design, fact discipline UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 209,
+      "name": "stege-streamline-site",
+      "project_id": "5a7e79bf-25c5-4435-a9e2-0bed762a1dd7",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--5a7e79bf-25c5-4435-a9e2-0bed762a1dd7.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 210,
+      "name": "flatlander-foundation",
+      "project_id": "ad2171ff-b290-4bdd-a71d-ab778e1f6c9e",
+      "status": "completed; published",
+      "live_url": "https://flatlander-foundation.lovable.app / https://id-preview--ad2171ff-b290-4bdd-a71d-ab778e1f6c9e.lovable.app",
+      "preview_url": "Missing favicon.ico/sized favicons, apple-touch, webmanifest/PWA icons, llms.txt, authority-108. LocalBusiness, FAQ, Google map, atlas/sticky Call and owner-input labeling observed; speakable, Breadcrumb, Apple map, Text-photo/Start-design UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 211,
+      "name": "Hays Site Solutions",
+      "project_id": "3e91006d-6693-4100-a048-ec6f7ce74809",
+      "status": "completed; not published",
+      "live_url": "https:",
+      "preview_url": "id-preview--3e91006d-6693-4100-a048-ec6f7ce74809.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 212,
+      "name": "web-forge-fast",
+      "project_id": "fc4ccb1e-6cfb-4d45-a470-e00a15fa1e8e",
+      "status": "completed; published",
+      "live_url": "https://web-forge-fast.lovable.app",
+      "preview_url": "https://id-preview--fc4ccb1e-6cfb-4d45-a470-e00a15fa1e8e.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 213,
+      "name": "bee-hive-site",
+      "project_id": "4e723320-82db-4020-9ae2-e5cab30bc3c4",
+      "status": "completed; published",
+      "live_url": "https://bee-hive-site.lovable.app / https://id-preview--4e723320-82db-4020-9ae2-e5cab30bc3c4.lovable.app",
+      "preview_url": "Only favicon.ico+robots found; missing apple-touch, sized/PWA icons, manifest, OG, sitemap, llms.txt, authority-108. LocalBusiness+FAQ+Google map observed; speakable/Breadcrumb/Apple map/atlas and three-action sticky CTA not confirmed.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 214,
+      "name": "bb-nails-portland-polish",
+      "project_id": "2c3dc5d9-097c-4b58-9ef4-474a79b9f9b8",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--2c3dc5d9-097c-4b58-9ef4-474a79b9f9b8.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 215,
+      "name": "concept-to-catalog-flow",
+      "project_id": "67735324-424c-4378-ba75-e3ab3b07b460",
+      "status": "completed; published",
+      "live_url": "https://concept-to-catalog-flow.lovable.app / https://id-preview--67735324-424c-4378-ba75-e3ab3b07b460.lovable.app",
+      "preview_url": "Missing apple-touch, webmanifest/PWA icons, OG, llms.txt, authority-108. LocalBusiness+FAQPage+Breadcrumb, atlas/sticky Call observed; speakable, Google+Apple links, Text-photo/Start-design UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 216,
+      "name": "boise-pet-plan-build",
+      "project_id": "09ae50c3-5c2a-4717-90c4-99a293f4eccc",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--09ae50c3-5c2a-4717-90c4-99a293f4eccc.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 217,
+      "name": "Fort Myers Flight Concepts",
+      "project_id": "44679a20-9622-4d07-aa4a-31144ed2f738",
+      "status": "completed; not published",
+      "live_url": "\u2014 / https://id-preview--44679a20-9622-4d07-aa4a-31144ed2f738.lovable.app",
+      "preview_url": "Missing apple-touch, webmanifest/PWA icons, OG, authority-108. llms/robots/sitemap, map/service-area and sticky call files exist; Text-photo observed; schema, Apple link, Start-design and fact discipline UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 218,
+      "name": "Builders Tech Vision",
+      "project_id": "811f9e75-4b77-4c7c-838c-472d62c643b9",
+      "status": "completed; not published",
+      "live_url": "https:",
+      "preview_url": "id-preview--811f9e75-4b77-4c7c-838c-472d62c643b9.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 219,
+      "name": "Tulsa Service Spark",
+      "project_id": "9bafed7e-4038-491d-b25a-1e78fdfc9d20",
+      "status": "completed; not published",
+      "live_url": "\u2014 / https://id-preview--9bafed7e-4038-491d-b25a-1e78fdfc9d20.lovable.app",
+      "preview_url": "Missing apple-touch, webmanifest/PWA icons, OG, llms.txt, authority-108. Sitemap/robots plus dispatch-map/service-area/mobile-call files exist; schema/speakable/Breadcrumb, Apple link, CTA labels and fact discipline UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 220,
+      "name": "Charleston Paint Concepts",
+      "project_id": "8620ee52-7345-438a-b794-2e399212539c",
+      "status": "completed; not published",
+      "live_url": "https:",
+      "preview_url": "id-preview--8620ee52-7345-438a-b794-2e399212539c.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 221,
+      "name": "Ready Prompt",
+      "project_id": "115ce2a2-1536-458b-81bc-a77175905c48",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--115ce2a2-1536-458b-81bc-a77175905c48.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 222,
+      "name": "roadie-rocket-launch",
+      "project_id": "327fc352-3ef9-4ddc-a345-2cb0e3ba57c4",
+      "status": "completed; published",
+      "live_url": "https://roadie-rocket-launch.lovable.app",
+      "preview_url": "https://id-preview--327fc352-3ef9-4ddc-a345-2cb0e3ba57c4.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 223,
+      "name": "Mantra Botanicals Launch",
+      "project_id": "9f723e21-a419-4d44-bd8b-3e4c6fdc4e96",
+      "status": "completed; not published",
+      "live_url": "\u2014 / https://id-preview--9f723e21-a419-4d44-bd8b-3e4c6fdc4e96.lovable.app",
+      "preview_url": "Missing favicon.ico, apple-touch, webmanifest/PWA icons, OG, llms.txt, authority-108. Sitemap/robots plus schema and sticky-bar files exist; exact deep signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 224,
+      "name": "Green Thumb Productions",
+      "project_id": "430f3f33-6a0f-4d08-979c-a18be70c2f24",
+      "status": "completed; not published",
+      "live_url": "https:",
+      "preview_url": "id-preview--430f3f33-6a0f-4d08-979c-a18be70c2f24.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 225,
+      "name": "Green Thumb Site",
+      "project_id": "0cfd4070-abdf-4fd5-9dc0-558c2a4d390d",
+      "status": "completed; not published",
+      "live_url": "\u2014 / https://id-preview--0cfd4070-abdf-4fd5-9dc0-558c2a4d390d.lovable.app",
+      "preview_url": "Only favicon.ico+robots found; missing apple-touch, sized/PWA icons, manifest, OG, sitemap, llms.txt, authority-108. All deep signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 226,
+      "name": "Mantra Wellness Site (49)",
+      "project_id": "645eaa8b-70d3-4795-ac37-12cb4f9c5127",
+      "status": "completed; not published",
+      "live_url": "https:",
+      "preview_url": "id-preview--645eaa8b-70d3-4795-ac37-12cb4f9c5127.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 227,
+      "name": "Green Thumb Launch",
+      "project_id": "b5dc32eb-0bfb-47b6-bf80-caaeb65ae749",
+      "status": "completed; not published",
+      "live_url": "\u2014 / https://id-preview--b5dc32eb-0bfb-47b6-bf80-caaeb65ae749.lovable.app",
+      "preview_url": "Favicon.ico+robots found; missing apple-touch, sized/PWA icons, manifest, OG, sitemap, llms.txt, authority-108. Service-area file exists; remaining signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 228,
+      "name": "ocean-glide-digital",
+      "project_id": "381f6fc1-2160-41a4-b965-b64b265c4e0f",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--381f6fc1-2160-41a4-b965-b64b265c4e0f.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 229,
+      "name": "ride-ready-assist",
+      "project_id": "3fcad956-36c3-4c8c-89b4-3959606341f6",
+      "status": "completed; published",
+      "live_url": "https://ride-ready-assist.lovable.app / https://id-preview--3fcad956-36c3-4c8c-89b4-3959606341f6.lovable.app",
+      "preview_url": "Missing favicon.ico, apple-touch, llms.txt, authority-108; manifest/OG/robots/sitemap found, explicit PWA icon sizes UNKNOWN. All deep signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 230,
+      "name": "airing-today",
+      "project_id": "c151d2e1-4c6b-4fb9-b761-6bf06e6313dc",
+      "status": "completed; published",
+      "live_url": "https://airing-today.lovable.app",
+      "preview_url": "https://id-preview--c151d2e1-4c6b-4fb9-b761-6bf06e6313dc.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 231,
+      "name": "detailing-family-site",
+      "project_id": "bbcd4bea-21f9-42d4-bbca-5f015783e838",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--bbcd4bea-21f9-42d4-bbca-5f015783e838.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 232,
+      "name": "ai-powered-biz-pilot",
+      "project_id": "2c217cc4-0915-45ed-8097-6d74118cbd6d",
+      "status": "completed; published",
+      "live_url": "https://ai-powered-biz-pilot.lovable.app",
+      "preview_url": "https://id-preview--2c217cc4-0915-45ed-8097-6d74118cbd6d.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 233,
+      "name": "hush-ai-orchestrator-ui",
+      "project_id": "58e7487d-fc65-4f32-87f7-bc29beb6a1f7",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--58e7487d-fc65-4f32-87f7-bc29beb6a1f7.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 234,
+      "name": "ai-council-craft",
+      "project_id": "dcd98d0b-2c70-42cf-b07d-5fb932e6300a",
+      "status": "completed; published",
+      "live_url": "https://ai-council-craft.lovable.app",
+      "preview_url": "https://id-preview--dcd98d0b-2c70-42cf-b07d-5fb932e6300a.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 235,
+      "name": "RocketLaunch Build",
+      "project_id": "1c0ad238-844b-48eb-a0f8-120ac62c38d9",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--1c0ad238-844b-48eb-a0f8-120ac62c38d9.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 236,
+      "name": "WSS Growth Engine",
+      "project_id": "1455518c-a4f8-401d-bef0-cb5876fbefd9",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--1455518c-a4f8-401d-bef0-cb5876fbefd9.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 237,
+      "name": "ride-with-oc-luxury",
+      "project_id": "15745d3d-309e-4726-982c-5796b0ef6074",
+      "status": "completed; published",
+      "live_url": "https://ride-with-oc-luxury.lovable.app / https://id-preview--15745d3d-309e-4726-982c-5796b0ef6074.lovable.app",
+      "preview_url": "Only favicon.ico+robots found; missing apple-touch, sized/PWA icons, manifest, OG, sitemap, llms.txt, authority-108. All deep signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 238,
+      "name": "ocn-green-dream",
+      "project_id": "76f59d59-74d9-4a68-b018-b2f903890747",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--76f59d59-74d9-4a68-b018-b2f903890747.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 239,
+      "name": "rocket-stocks-scanner",
+      "project_id": "80ba0f86-ad5a-4ab5-a380-2ca7746f6862",
+      "status": "completed; published",
+      "live_url": "https://rocket-stocks-scanner.lovable.app",
+      "preview_url": "https://id-preview--80ba0f86-ad5a-4ab5-a380-2ca7746f6862.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 240,
+      "name": "Evergreen Brilliance",
+      "project_id": "b9ffc0f5-0a14-429b-946d-021822ee71a5",
+      "status": "completed; not published",
+      "live_url": "\u2014 / https://id-preview--b9ffc0f5-0a14-429b-946d-021822ee71a5.lovable.app",
+      "preview_url": "Only favicon.ico+robots found; missing apple-touch, sized/PWA icons, manifest, OG, sitemap, llms.txt, authority-108. CTA file exists; remaining signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 241,
+      "name": "kiddo-safe-spark",
+      "project_id": "2fcdd344-bff2-4c0b-b0c3-86ff86ce6ffc",
+      "status": "completed; published",
+      "live_url": "https://kiddo-safe-spark.lovable.app",
+      "preview_url": "https://id-preview--2fcdd344-bff2-4c0b-b0c3-86ff86ce6ffc.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 242,
+      "name": "my-beer-pass-26",
+      "project_id": "2156f7df-e97a-44b7-9784-5fc334eb2d4c",
+      "status": "completed; published",
+      "live_url": "https://my-beer-pass-26.lovable.app",
+      "preview_url": "https://id-preview--2156f7df-e97a-44b7-9784-5fc334eb2d4c.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 243,
+      "name": "beer-whisperer-pwa",
+      "project_id": "e8131a35-313e-43dc-aec2-4d8dc8553a22",
+      "status": "completed; published",
+      "live_url": "https://beer-whisperer-pwa.lovable.app",
+      "preview_url": "https://id-preview--e8131a35-313e-43dc-aec2-4d8dc8553a22.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 244,
+      "name": "Body Compass",
+      "project_id": "448d66b7-e90a-4dfd-ae0d-3c9c148afcd1",
+      "status": "completed; not published",
+      "live_url": "https:",
+      "preview_url": "id-preview--448d66b7-e90a-4dfd-ae0d-3c9c148afcd1.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 245,
+      "name": "boxdrop-bliss-arkansas",
+      "project_id": "a6a66d21-f741-49b7-b51e-a92707788b93",
+      "status": "completed; published",
+      "live_url": "https://boxdrop-bliss-arkansas.lovable.app / https://id-preview--a6a66d21-f741-49b7-b51e-a92707788b93.lovable.app",
+      "preview_url": "Missing apple-touch, webmanifest/PWA icons, OG, llms.txt, authority-108. Robots/sitemaps, business/breadcrumb schema and delivery-map files exist; FAQ+speakable, Apple link, required CTA/fact discipline UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 246,
+      "name": "buffk9-ai-nexus",
+      "project_id": "7e75c13e-7de2-4a8b-a079-64cb2d9dc929",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--7e75c13e-7de2-4a8b-a079-64cb2d9dc929.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 247,
+      "name": "cocolove",
+      "project_id": "53432cc4-3f7a-4eca-8d03-e22affff1a7a",
+      "status": "completed; published",
+      "live_url": "https://cocolove.lovable.app / https://id-preview--53432cc4-3f7a-4eca-8d03-e22affff1a7a.lovable.app",
+      "preview_url": "Missing apple-touch, explicit PWA icon sizes, OG, llms.txt, authority-108. favicon.ico/manifest/robots/sitemap found; mobile nav exists; remaining local signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 248,
+      "name": "locatorzone-global-assets",
+      "project_id": "9b1f8709-88a3-43a2-952c-7f5a046f53b1",
+      "status": "completed; published",
+      "live_url": "https://locatorzone-global-assets.lovable.app",
+      "preview_url": "https://id-preview--9b1f8709-88a3-43a2-952c-7f5a046f53b1.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 249,
+      "name": "hyper-nova-leap",
+      "project_id": "9b4813f4-c968-49a3-81c0-ab2ee25e4fbc",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--9b4813f4-c968-49a3-81c0-ab2ee25e4fbc.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 250,
+      "name": "guardian-linksafe",
+      "project_id": "fceca112-6158-44c5-a547-de4f0ed5318d",
+      "status": "completed; published",
+      "live_url": "https://guardian-linksafe.lovable.app",
+      "preview_url": "https://id-preview--fceca112-6158-44c5-a547-de4f0ed5318d.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 251,
+      "name": "affordable-authority-build",
+      "project_id": "abfc50ca-c950-4975-a9b8-0583b0c83c9c",
+      "status": "completed; published",
+      "live_url": "https://affordable-authority-build.lovable.app / https://id-preview--abfc50ca-c950-4975-a9b8-0583b0c83c9c.lovable.app",
+      "preview_url": "Missing apple-touch, webmanifest/PWA icons, OG, llms.txt, authority-108. Favicon/robots/multiple sitemaps, service map and schema file exist; remaining exact signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 252,
+      "name": "dept-of-ai-solutions",
+      "project_id": "264b305e-0350-4095-bb49-ce32b29b7c1a",
+      "status": "completed; published",
+      "live_url": "https://dept-of-ai-solutions.lovable.app",
+      "preview_url": "https://id-preview--264b305e-0350-4095-bb49-ce32b29b7c1a.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 253,
+      "name": "greenad-manager",
+      "project_id": "40a29046-40dd-49ca-97a6-05601e9e2f7c",
+      "status": "completed; published",
+      "live_url": "https://greenad-manager.lovable.app",
+      "preview_url": "https://id-preview--40a29046-40dd-49ca-97a6-05601e9e2f7c.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 254,
+      "name": "greenad-manager-54",
+      "project_id": "c7f70f47-7886-4d1a-a74b-6ff329912bab",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--c7f70f47-7886-4d1a-a74b-6ff329912bab.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 255,
+      "name": "craft-ads-bot",
+      "project_id": "f9694ca4-250a-4167-996c-7388b5d1df58",
+      "status": "completed; published",
+      "live_url": "https://craft-ads-bot.lovable.app",
+      "preview_url": "https://id-preview--f9694ca4-250a-4167-996c-7388b5d1df58.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 256,
+      "name": "montage-at-home",
+      "project_id": "19c3d75d-9713-4c2a-81ef-aa0629faccfc",
+      "status": "completed; not published",
+      "live_url": "https:",
+      "preview_url": "id-preview--19c3d75d-9713-4c2a-81ef-aa0629faccfc.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 257,
+      "name": "surveyor-spark",
+      "project_id": "d367a678-fc3b-455d-9be3-cf3502309e1c",
+      "status": "completed; published",
+      "live_url": "https://surveyor-spark.lovable.app / https://id-preview--d367a678-fc3b-455d-9be3-cf3502309e1c.lovable.app",
+      "preview_url": "Only favicon.ico+robots found; missing apple-touch, sized/PWA icons, manifest, OG, sitemap, llms.txt, authority-108. Service-area/mobile-nav files exist; remaining signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 258,
+      "name": "ad-alchemy-studio-01011",
+      "project_id": "82dc01b8-9b37-4bd1-a923-c2181b46c95a",
+      "status": "completed; published",
+      "live_url": "https://ad-alchemy-studio-01011.lovable.app",
+      "preview_url": "https://id-preview--82dc01b8-9b37-4bd1-a923-c2181b46c95a.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 259,
+      "name": "oracle-assistant-api",
+      "project_id": "87676fe1-0463-44fc-a7bf-c4ea6b202a1e",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--87676fe1-0463-44fc-a7bf-c4ea6b202a1e.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 260,
+      "name": "social-agent-pro",
+      "project_id": "36f6e66e-15ff-4eed-9005-0920e32422df",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--36f6e66e-15ff-4eed-9005-0920e32422df.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 261,
+      "name": "agent-console-craft",
+      "project_id": "7a179422-696d-43e2-b428-6f0ccef4a9dd",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--7a179422-696d-43e2-b428-6f0ccef4a9dd.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 262,
+      "name": "browser-bot-live",
+      "project_id": "3a9ee607-5ff1-413c-8d9b-d1d980c136a8",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--3a9ee607-5ff1-413c-8d9b-d1d980c136a8.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 263,
+      "name": "pashtun-heritage-roots",
+      "project_id": "6e85e37b-5e4b-4874-bb0f-f16bd165943b",
+      "status": "completed; published",
+      "live_url": "https://pashtun-heritage-roots.lovable.app",
+      "preview_url": "https://id-preview--6e85e37b-5e4b-4874-bb0f-f16bd165943b.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 264,
+      "name": "pashto-runes",
+      "project_id": "b2d5a40e-af71-4911-9af5-820a707e8860",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--b2d5a40e-af71-4911-9af5-820a707e8860.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 265,
+      "name": "bag-aware-caddie",
+      "project_id": "58e457b6-ebaa-4449-b474-06e2947af4d9",
+      "status": "completed; published",
+      "live_url": "https://bag-aware-caddie.lovable.app",
+      "preview_url": "https://id-preview--58e457b6-ebaa-4449-b474-06e2947af4d9.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 266,
+      "name": "craigslist-poster-pro",
+      "project_id": "a8e21534-e701-4130-8f45-8272fc1f76ee",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--a8e21534-e701-4130-8f45-8272fc1f76ee.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 267,
+      "name": "command-post-ai",
+      "project_id": "b7b65497-2e18-45fa-a0c6-5d7d0d8ee0c7",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--b7b65497-2e18-45fa-a0c6-5d7d0d8ee0c7.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 268,
+      "name": "craigslist-autopilot",
+      "project_id": "bf1441f0-6d5c-46d4-b4cb-caddf03f7814",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--bf1441f0-6d5c-46d4-b4cb-caddf03f7814.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 269,
+      "name": "zoom-draw-learn",
+      "project_id": "ea361000-6039-4909-8b7d-707aa4a5497a",
+      "status": "completed; published",
+      "live_url": "https://zoom-draw-learn.lovable.app",
+      "preview_url": "https://id-preview--ea361000-6039-4909-8b7d-707aa4a5497a.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 270,
+      "name": "post-pal-buddy",
+      "project_id": "f824608e-1189-490e-80b6-b72692b9594f",
+      "status": "completed; published",
+      "live_url": "https://post-pal-buddy.lovable.app",
+      "preview_url": "https://id-preview--f824608e-1189-490e-80b6-b72692b9594f.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 271,
+      "name": "yessicanhandyman",
+      "project_id": "58e9d8ee-517f-4476-9d28-3edd78ea5e42",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--58e9d8ee-517f-4476-9d28-3edd78ea5e42.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 272,
+      "name": "agent-brand-builder",
+      "project_id": "b0d9b4bf-0efd-465e-96bd-f4ff1ec84fb6",
+      "status": "completed; published",
+      "live_url": "https://agent-brand-builder.lovable.app",
+      "preview_url": "https://id-preview--b0d9b4bf-0efd-465e-96bd-f4ff1ec84fb6.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 273,
+      "name": "door-dream-design-boost",
+      "project_id": "0789f744-1bb6-4c8b-92e9-3462836e5da1",
+      "status": "completed; published",
+      "live_url": "https://door-dream-design-boost.lovable.app / https://id-preview--0789f744-1bb6-4c8b-92e9-3462836e5da1.lovable.app",
+      "preview_url": "Only favicon.ico+robots found; missing apple-touch, sized/PWA icons, manifest, OG, sitemap, llms.txt, authority-108. All deep signals UNKNOWN.",
+      "classification": "",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 274,
+      "name": "ad-climber-ascend-pro",
+      "project_id": "3c019653-7581-46eb-b691-ed1d08c61882",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--3c019653-7581-46eb-b691-ed1d08c61882.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 275,
+      "name": "ad-image-ascend",
+      "project_id": "aef8ae38-373c-4593-bcf4-1e7cd708065a",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--aef8ae38-373c-4593-bcf4-1e7cd708065a.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 276,
+      "name": "cosmic-goal-visualizer",
+      "project_id": "c7f560bd-6aa0-4784-8ff7-ee64d9032822",
+      "status": "completed; published",
+      "live_url": "https://cosmic-goal-visualizer.lovable.app",
+      "preview_url": "https://id-preview--c7f560bd-6aa0-4784-8ff7-ee64d9032822.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 277,
+      "name": "ad-climber-genius-ads",
+      "project_id": "1693a300-e208-4192-b82f-0ec11c47af08",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--1693a300-e208-4192-b82f-0ec11c47af08.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 278,
+      "name": "adclimber-ai-scribe",
+      "project_id": "fe521d2f-8048-48d0-a02b-838a50382fa6",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--fe521d2f-8048-48d0-a02b-838a50382fa6.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 279,
+      "name": "ad-pilot-automate-now",
+      "project_id": "d6f34c39-79a1-4011-8f3c-fd6399d1f32a",
+      "status": "completed; published",
+      "live_url": "https://ad-pilot-automate-now.lovable.app",
+      "preview_url": "https://id-preview--d6f34c39-79a1-4011-8f3c-fd6399d1f32a.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 280,
+      "name": "ad-pilot-automate-now-79",
+      "project_id": "a596fc1d-ccf9-4ab4-9bf9-8280aebc4003",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--a596fc1d-ccf9-4ab4-9bf9-8280aebc4003.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 281,
+      "name": "ad-climber-ascend",
+      "project_id": "bc384b05-4d1c-416a-8282-2ca31cff5fd8",
+      "status": "completed; published",
+      "live_url": "https://ad-climber-ascend.lovable.app",
+      "preview_url": "https://id-preview--bc384b05-4d1c-416a-8282-2ca31cff5fd8.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 282,
+      "name": "my-beer-pass-03",
+      "project_id": "36064c06-5cb5-447b-a8f9-53da77aaf4d2",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--36064c06-5cb5-447b-a8f9-53da77aaf4d2.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 283,
+      "name": "flashcard-tabs-mastery-kit",
+      "project_id": "50d85f0a-e711-4147-b304-9322844b7e56",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--50d85f0a-e711-4147-b304-9322844b7e56.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 284,
+      "name": "my-beer-pass",
+      "project_id": "7b9bf043-c968-42eb-98ba-640018dc8271",
+      "status": "completed; published",
+      "live_url": "https://my-beer-pass.lovable.app",
+      "preview_url": "https://id-preview--7b9bf043-c968-42eb-98ba-640018dc8271.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 285,
+      "name": "global-trade-navigator",
+      "project_id": "3ae1a9d5-ba6f-4038-bcf3-f510beb4cb4a",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--3ae1a9d5-ba6f-4038-bcf3-f510beb4cb4a.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 286,
+      "name": "piping-pro-site-builder",
+      "project_id": "b4e5b6ec-0196-48f7-a632-3bac4f44905f",
+      "status": "completed; published",
+      "live_url": "https:",
+      "preview_url": "id-preview--b4e5b6ec-0196-48f7-a632-3bac4f44905f.lovable.app",
+      "classification": "LOCAL",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": true,
+      "ingredient_score": 0.95,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 287,
+      "name": "swing-whisperer-ai",
+      "project_id": "b7c2650e-165b-4536-9a9e-bb80c3fb2604",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--b7c2650e-165b-4536-9a9e-bb80c3fb2604.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 288,
+      "name": "echo-climber-suite",
+      "project_id": "bbe23161-6c6e-4a8c-b205-c0a3d4638a4a",
+      "status": "completed; published",
+      "live_url": "https://echo-climber-suite.lovable.app",
+      "preview_url": "https://id-preview--bbe23161-6c6e-4a8c-b205-c0a3d4638a4a.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 289,
+      "name": "ad-climber-reborn-plus",
+      "project_id": "3d2d1bf8-9e77-49d8-9a52-36dc6322e69f",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--3d2d1bf8-9e77-49d8-9a52-36dc6322e69f.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 290,
+      "name": "golf-gear-deals-galore",
+      "project_id": "b44b6f31-0b89-447e-a79d-9c28f3db6784",
+      "status": "completed; published",
+      "live_url": "https://golf-gear-deals-galore.lovable.app",
+      "preview_url": "https://id-preview--b44b6f31-0b89-447e-a79d-9c28f3db6784.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 291,
+      "name": "glowing-hush-assistant",
+      "project_id": "e88b6aba-dfee-401d-bdb6-2905eab55218",
+      "status": "completed; published",
+      "live_url": "https://glowing-hush-assistant.lovable.app",
+      "preview_url": "https://id-preview--e88b6aba-dfee-401d-bdb6-2905eab55218.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 292,
+      "name": "adphantom-builder",
+      "project_id": "43329437-cb90-44bb-b7ba-ea5289fd36d6",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--43329437-cb90-44bb-b7ba-ea5289fd36d6.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 293,
+      "name": "elite-trader-ai",
+      "project_id": "c2658998-1d82-4034-b680-b1763577b609",
+      "status": "completed; published",
+      "live_url": "https://elite-trader-ai.lovable.app",
+      "preview_url": "https://id-preview--c2658998-1d82-4034-b680-b1763577b609.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 294,
+      "name": "gentry-taskbot",
+      "project_id": "c0ea53c3-1b90-4594-b20b-a5235f5d4a65",
+      "status": "completed; published",
+      "live_url": "https://gentry-taskbot.lovable.app",
+      "preview_url": "https://id-preview--c0ea53c3-1b90-4594-b20b-a5235f5d4a65.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 295,
+      "name": "adclimb-universe",
+      "project_id": "d15fada3-ea00-4db1-bf4b-26d6703f9aae",
+      "status": "completed; published",
+      "live_url": "https://adclimb-universe.lovable.app",
+      "preview_url": "https://id-preview--d15fada3-ea00-4db1-bf4b-26d6703f9aae.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 296,
+      "name": "automated-adventure-land",
+      "project_id": "1f5bdb5a-814e-4499-acdf-fe61871b9830",
+      "status": "completed; published",
+      "live_url": "https://automated-adventure-land.lovable.app",
+      "preview_url": "https://id-preview--1f5bdb5a-814e-4499-acdf-fe61871b9830.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.75,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    },
+    {
+      "global_index": 297,
+      "name": "craigslist-lead-harvester",
+      "project_id": "f859b965-0166-432a-89cd-7a754c196d76",
+      "status": "completed; not published",
+      "live_url": null,
+      "preview_url": "https://id-preview--f859b965-0166-432a-89cd-7a754c196d76.lovable.app",
+      "classification": "N/A",
+      "source_batch": "audit-batch-c.md",
+      "is_local_eligible": false,
+      "ingredient_score": 0.6,
+      "flags": [],
+      "license": "study-only",
+      "remix_permission": false,
+      "provenance": {
+        "source": "siteforge-reverse-audit-2026-07-15",
+        "connector_access": "read-only",
+        "missing_scopes": [
+          "projects:write"
+        ]
+      }
+    }
+  ]
+}

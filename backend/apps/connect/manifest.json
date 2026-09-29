@@ -1,0 +1,33 @@
+{
+  "name": "WSS Connect",
+  "short_name": "Connect",
+  "description": "Your leads, one inbox — by WSS Labs",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "en",
+  "categories": ["business", "communication"],
+  "background_color": "#08080B",
+  "theme_color": "#08080B",
+  "icons": [
+    {
+      "src": "/wss-connect-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wss-connect-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wss-connect-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

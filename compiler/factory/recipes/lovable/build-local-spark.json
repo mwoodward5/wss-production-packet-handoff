@@ -1,0 +1,90 @@
+{
+ "id": "build-local-spark",
+ "source": "34880eed-604a-42e4-bb02-c96708571a7f",
+ "palette": {
+  "vars": {
+   "--background": "36 33% 97%",
+   "--foreground": "220 45% 10%",
+   "--card": "0 0% 100%",
+   "--card-foreground": "220 45% 10%",
+   "--popover": "0 0% 100%",
+   "--popover-foreground": "220 45% 10%",
+   "--primary": "220 60% 16%",
+   "--primary-foreground": "36 50% 96%",
+   "--secondary": "220 25% 92%",
+   "--secondary-foreground": "220 45% 14%",
+   "--muted": "220 20% 94%",
+   "--muted-foreground": "220 14% 38%",
+   "--accent": "36 90% 52%",
+   "--accent-foreground": "220 60% 12%",
+   "--destructive": "0 70% 50%",
+   "--destructive-foreground": "0 0% 100%",
+   "--border": "220 20% 88%",
+   "--input": "220 20% 88%",
+   "--ring": "36 90% 52%",
+   "--steel": "220 18% 28%",
+   "--concrete": "30 8% 75%",
+   "--gradient-hero": "linear-gradient(135deg, hsl(220 60% 10% / 0.92) 0%, hsl(220 55% 18% / 0.78) 50%, hsl(36 90% 38% / 0.55) 100%)",
+   "--gradient-amber": "linear-gradient(135deg, hsl(36 95% 55%), hsl(28 90% 48%))",
+   "--gradient-steel": "linear-gradient(180deg, hsl(220 60% 14%), hsl(220 50% 8%))",
+   "--sidebar-background": "0 0% 98%",
+   "--sidebar-foreground": "240 5.3% 26.1%",
+   "--sidebar-primary": "240 5.9% 10%",
+   "--sidebar-primary-foreground": "0 0% 98%",
+   "--sidebar-accent": "240 4.8% 95.9%",
+   "--sidebar-accent-foreground": "240 5.9% 10%",
+   "--sidebar-border": "220 13% 91%",
+   "--sidebar-ring": "217.2 91.2% 59.8%"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "220 50% 6%",
+   "--foreground": "36 40% 95%",
+   "--card": "220 45% 9%",
+   "--card-foreground": "36 40% 95%",
+   "--primary": "36 90% 55%",
+   "--primary-foreground": "220 60% 10%",
+   "--border": "220 30% 18%"
+  }
+ },
+ "fonts": {
+  "display": "Bebas Neue",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.5rem",
+ "shadows": [
+  "0 30px 60px -20px hsl(220 60% 10% / 0.35)",
+  "0 18px 40px -12px hsl(36 90% 45% / 0.55)"
+ ],
+ "keyframes": [
+  {
+   "name": "fade-up",
+   "css": "@keyframes fade-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "slow-zoom",
+   "css": "@keyframes slow-zoom { from { transform: scale(1.05); } to { transform: scale(1.15); } }"
+  },
+  {
+   "name": "light-sweep",
+   "css": "@keyframes light-sweep { 0% { transform: translateX(-120%) skewX(-18deg); } 100% { transform: translateX(220%) skewX(-18deg); } }"
+  },
+  {
+   "name": "drift",
+   "css": "@keyframes drift { 0% { transform: translate3d(0,0,0); opacity: 0; } 10% { opacity: 0.7; } 100% { transform: translate3d(40px, -120px, 0); opacity: 0; } }"
+  },
+  {
+   "name": "float-y",
+   "css": "@keyframes float-y { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }"
+  },
+  {
+   "name": "ticker",
+   "css": "@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }"
+  }
+ ],
+ "signatures": [
+  "float",
+  "gradient-heavy"
+ ]
+}

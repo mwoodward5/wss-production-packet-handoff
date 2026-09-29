@@ -1,0 +1,49 @@
+{
+  "templateName": "plumbing-pressure-lens",
+  "vertical": "plumbing",
+  "identity": {
+    "names": [
+      "Northline Plumbing Works",
+      "Northline Plumbing"
+    ],
+    "people": [
+      "Mara Voss"
+    ],
+    "phones": [
+      "(202) 555-0147",
+      "202-555-0147",
+      "2025550147",
+      "+1 202 555 0147"
+    ],
+    "emails": [
+      "hello@northline-plumbing.example"
+    ],
+    "domains": [
+      "northline-plumbing.example"
+    ],
+    "cities": [
+      "Riverton"
+    ],
+    "regions": [
+      "Colorado"
+    ],
+    "counties": [
+      "Clearwater County"
+    ],
+    "geo": [
+      "39.7392",
+      "-104.9903",
+      "39.7392,-104.9903"
+    ],
+    "profileUrls": [
+      "https://example.com/northline-plumbing"
+    ],
+    "postal": [
+      "80014"
+    ]
+  },
+  "assets": {
+    "logos": [],
+    "photos": []
+  }
+}

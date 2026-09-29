@@ -1,0 +1,224 @@
+<!doctype html>
+<!--
+  APPROVED DESIGN — WSS Command Center console redesign.
+  Source: claude.ai artifact 97850b8b-58c7-49a3-b73b-b984736a972c, approved by
+  the owner 2026-08-01. This file is the CONTRACT for the console-page.js port:
+  copy these pixels, wire the numbers to /api/admin/console-data. No design
+  decisions remain — do not reinterpret spacing, color, type, or structure.
+  The numbers baked in below are the Aug-1 snapshot; every metric becomes live.
+-->
+<html><head>
+<meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WSS Command Center — approved redesign</title>
+<style>
+  :root{
+    --void:#08080B; --carbon:#131318; --carbon-2:#17171d; --ice:#F2F2F5; --slate:#9B9AA4;
+    --graphite:#6F6E79; --signal:#7C6CF6; --circuit:#4A6CF7; --pulse:#34D399;
+    --sky:#6E8BFF; --ember:#E0A44A; --rose:#F26D6D; --hair:rgba(255,255,255,.07);
+    --grad-signal:linear-gradient(135deg,#4A6CF7 0%,#8B5CF6 100%);
+    --grad-pulse:linear-gradient(135deg,#0E6B52 0%,#34D399 100%);
+    --sans:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:'IBM Plex Mono','SFMono-Regular',Consolas,Menlo,monospace;
+  }
+  html{background:var(--void)}
+  body{margin:0;background:var(--void);color:var(--ice);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 22px 64px}
+  .label{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--graphite)}
+  .num{font-variant-numeric:tabular-nums}
+  a{color:var(--sky)}
+  /* ------- masthead ------- */
+  header{display:flex;align-items:center;gap:15px;padding-bottom:22px;border-bottom:1px solid var(--hair)}
+  .mark{width:64px;height:64px;border-radius:15px;background:var(--carbon);border:1px solid rgba(255,255,255,.09);flex:none;display:grid;place-items:center}
+  .lockup .t{font-size:29px;font-weight:800;letter-spacing:-.025em;line-height:1}
+  .lockup .s{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.4em;color:#8A8994;margin-top:5px}
+  .head-right{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--hair);color:var(--slate);white-space:nowrap}
+  .pill.live{color:var(--pulse);border-color:rgba(52,211,153,.35)}
+  .pill.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pulse);margin-right:7px;vertical-align:1px;animation:beat 2.4s infinite}
+  .pill.warn{color:var(--ember);border-color:rgba(224,164,74,.35)}
+  .pill.off{color:var(--graphite)}
+  @keyframes beat{0%,100%{opacity:1}50%{opacity:.35}}
+  @media (prefers-reduced-motion:reduce){.pill.live::before{animation:none}}
+  /* ------- sections ------- */
+  section{margin-top:34px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .sec-head h2{font-size:21px;font-weight:700;letter-spacing:-.02em;margin:0}
+  .sec-head .label{position:relative;top:-1px}
+  /* ------- assembly line (hero) ------- */
+  .line{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+  @media(max-width:900px){.line{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.line{grid-template-columns:repeat(2,1fr)}}
+  .stage{background:var(--carbon);border:1px solid var(--hair);border-radius:16px;padding:18px 16px;position:relative}
+  .stage .metric{font-size:30px;font-weight:700;margin:8px 0 2px}
+  .stage .sub{font-size:12.5px;color:var(--slate);line-height:1.45}
+  .stage.gate{border-color:rgba(124,108,246,.4)}
+  .stage.gate::after{content:"RENDER GATE";position:absolute;top:-9px;right:12px;font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--signal);background:var(--void);padding:0 6px}
+  .flow{height:3px;border-radius:2px;background:var(--grad-pulse);margin:14px 0 0;opacity:.55}
+  /* ------- launch ------- */
+  .launch{display:flex;gap:12px;flex-wrap:wrap;align-items:stretch}
+  .btn{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:-.01em;color:#fff;background:var(--grad-signal);border:none;border-radius:10px;padding:14px 26px;cursor:pointer}
+  .btn:hover{filter:brightness(1.08)}
+  .btn:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+  .btn.ghost{background:transparent;border:1px solid var(--hair);color:var(--slate);font-weight:600}
+  .launch-note{background:var(--carbon);border:1px solid var(--hair);border-radius:12px;padding:12px 16px;font-size:13px;color:var(--slate);flex:1;min-width:260px;line-height:1.55}
+  .launch-note b{color:var(--ice);font-weight:600}
+  code{font-family:var(--mono);font-size:12px;color:var(--sky);background:rgba(110,139,255,.09);padding:1px 6px;border-radius:6px}
+  /* ------- panel grid ------- */
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+  .card{background:var(--carbon);border:1px solid var(--hair);border-radius:16px;padding:22px}
+  .c4{grid-column:span 4}.c6{grid-column:span 6}.c8{grid-column:span 8}.c12{grid-column:span 12}
+  @media(max-width:900px){.c4,.c6,.c8{grid-column:span 12}}
+  .card h3{margin:0 0 4px;font-size:16.5px;font-weight:700;letter-spacing:-.015em}
+  .card .why{font-size:12.5px;color:var(--graphite);margin:0 0 14px;line-height:1.5}
+  .row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;border-top:1px solid var(--hair);font-size:13.5px}
+  .row:first-of-type{border-top:none}
+  .row .k{color:var(--slate)}
+  .row .v{font-family:var(--mono);font-size:12px;text-align:right}
+  .ok{color:var(--pulse)} .warn{color:var(--ember)} .bad{color:var(--rose)} .mut{color:var(--graphite)}
+  .bar{height:6px;border-radius:3px;background:var(--carbon-2);overflow:hidden;margin-top:6px}
+  .bar i{display:block;height:100%;border-radius:3px;background:var(--grad-pulse)}
+  /* funnel rows */
+  .fr{display:grid;grid-template-columns:150px 1fr 64px;gap:12px;align-items:center;padding:6px 0;font-size:13px}
+  .fr .fb{height:10px;border-radius:5px;background:var(--grad-signal);opacity:.9}
+  .fr .fk{color:var(--slate)} .fr .fv{font-family:var(--mono);font-size:12px;text-align:right;color:var(--ice)}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--hair);display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--graphite)}
+</style>
+</head><body>
+
+<div class="wrap">
+  <header>
+    <div class="mark" aria-label="WSS Labs mark">
+      <!-- The W drawn as a live signal — one stroke, five points, always ending up. -->
+      <svg width="44" height="44" viewBox="8 14 48 34" fill="none" aria-hidden="true">
+        <defs><linearGradient id="g" x1="12" y1="42" x2="50" y2="20" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#4A6CF7"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs>
+        <path d="M12 24 L21 42 L30 26 L39 42 L50 20" stroke="url(#g)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="50" cy="20" r="3.4" fill="#34D399"/>
+      </svg>
+    </div>
+    <div class="lockup"><div class="t">WSS</div><div class="s">COMMAND CENTER</div></div>
+    <div class="head-right">
+      <span class="pill live">ready · blockers 0</span>
+      <span class="pill">ci 609 / 609</span>
+      <span class="pill">head 3d14ed6</span>
+    </div>
+  </header>
+
+  <!-- ============ THE ASSEMBLY LINE ============ -->
+  <section>
+    <div class="sec-head"><h2>The assembly line</h2><span class="label">mine → build → gate → queue → approve → send</span></div>
+    <div class="line">
+      <div class="stage"><span class="label">1 · Mine</span><div class="metric num">140</div>
+        <div class="sub">candidates entered, run 7 — Firecrawl first, Places only on survivors</div></div>
+      <div class="stage"><span class="label">2 · Qualify</span><div class="metric num">3</div>
+        <div class="sub">C+ both axes · own-domain logo · verified email — 2.1% true yield</div></div>
+      <div class="stage gate"><span class="label">3 · Build</span><div class="metric num ok">revealable</div>
+        <div class="sub">their logo byte-matched · 8 of their own photos · @type correct</div></div>
+      <div class="stage"><span class="label">4 · Queue</span><div class="metric num">2</div>
+        <div class="sub">proof emails rendered from live-DOM evidence, never QC text</div></div>
+      <div class="stage"><span class="label">5 · Approve</span><div class="metric warn">yours</div>
+        <div class="sub">per-batch, in this console — no auto-send path exists</div></div>
+      <div class="stage"><span class="label">6 · Send</span><div class="metric num">2</div>
+        <div class="sub">internal-test to owner inbox · Flint 0.18s · Wilbourn 0.22s, measured</div></div>
+    </div>
+    <div class="flow" role="presentation"></div>
+  </section>
+
+  <!-- ============ LAUNCH ============ -->
+  <section>
+    <div class="sec-head"><h2>Launch</h2><span class="label">one click runs the whole line</span></div>
+    <div class="launch">
+      <button class="btn">Mine 50</button>
+      <button class="btn">Mine 100</button>
+      <button class="btn ghost">Mine 500</button>
+      <div class="launch-note">
+        Buttons run mine → build → render-gate → queue and stop at <b>your approval</b>.
+        The polished engine is wired and one switch from primary: <code>GHOST_MIRROR_LANE=1</code>.
+        Until it's flipped, builds fall through to the legacy lane — flip it when concrete or
+        fencing has qualified leads to spend.
+      </div>
+    </div>
+  </section>
+
+  <div class="grid" style="margin-top:34px">
+
+    <!-- ============ MODEL CAPACITY ============ -->
+    <div class="card c6">
+      <h3>Model capacity</h3>
+      <p class="why">What the factory can truthfully build. A vertical with no clean donor refuses — it never trade-swaps.</p>
+      <div class="row"><span class="k">Concrete — elconstruction</span><span class="v ok">OPEN · mineable</span></div>
+      <div class="row"><span class="k">Fencing — sterling</span><span class="v ok">OPEN · mineable</span></div>
+      <div class="row"><span class="k">Plumbing — clean, premier</span><span class="v warn">builds · outreach retired</span></div>
+      <div class="row"><span class="k">Roofing — falcon-clean</span><span class="v warn">builds · outreach retired</span></div>
+      <div class="row"><span class="k">Tekline · tree-care-dark</span><span class="v bad">RETIRED — refused by name</span></div>
+      <div class="row"><span class="k">Landscaping · HVAC · dental</span><span class="v mut">no clean donor yet</span></div>
+    </div>
+
+    <!-- ============ GATES ============ -->
+    <div class="card c6">
+      <h3>Gates &amp; safety</h3>
+      <p class="why">Every one fail-closed. A blocked verdict must name its causes — an empty reason is treated as a bug.</p>
+      <div class="row"><span class="k">Readiness</span><span class="v ok num">ready:true · blockers []</span></div>
+      <div class="row"><span class="k">Review hold</span><span class="v ok">off — owner approved 08-01</span></div>
+      <div class="row"><span class="k">Delivery pause</span><span class="v ok">cleared, audit event kept</span></div>
+      <div class="row"><span class="k">Domain purchases</span><span class="v warn">LOCKED — flag off, caps unset</span></div>
+      <div class="row"><span class="k">Prospect sends</span><span class="v warn">owner-lock evaluated on every path</span></div>
+      <div class="row"><span class="k">Genie NAP / ratings</span><span class="v bad">QUARANTINED — self-attested ≠ evidence</span></div>
+    </div>
+
+    <!-- ============ FUNNEL ============ -->
+    <div class="card c6">
+      <h3>Qualification funnel — run 7, measured</h3>
+      <p class="why">Each stage kills what the next would waste money on. 22 Firecrawl + 3.3 Places calls per qualified lead.</p>
+      <div class="fr"><span class="fk">Entered</span><div class="fb" style="width:100%"></div><span class="fv num">140</span></div>
+      <div class="fr"><span class="fk">Not a directory</span><div class="fb" style="width:80%"></div><span class="fv num">112</span></div>
+      <div class="fr"><span class="fk">New domain</span><div class="fb" style="width:76%"></div><span class="fv num">107</span></div>
+      <div class="fr"><span class="fk">Weak-site prefilter</span><div class="fb" style="width:47%"></div><span class="fv num">66</span></div>
+      <div class="fr"><span class="fk">Weak site (C+ ↓)</span><div class="fb" style="width:21%"></div><span class="fv num">29</span></div>
+      <div class="fr"><span class="fk">Real email</span><div class="fb" style="width:6.4%"></div><span class="fv num">9</span></div>
+      <div class="fr"><span class="fk">Own-domain logo</span><div class="fb" style="width:2.1%;min-width:8px"></div><span class="fv num">3</span></div>
+    </div>
+
+    <!-- ============ LAST CAR ============ -->
+    <div class="card c6">
+      <h3>Last car off the line</h3>
+      <p class="why">Wilbourn &amp; McCabe Plumbing — raw mined record in, no hand-editing. Proof is the rendered DOM, never a checkmark.</p>
+      <div class="row"><span class="k">Logo</span><span class="v ok num">sha 9152c161 = their own bytes</span></div>
+      <div class="row"><span class="k">Their photography</span><span class="v ok num">11 harvested · 8 shipped</span></div>
+      <div class="row"><span class="k">Schema</span><span class="v ok">@type Plumber — no trade swap</span></div>
+      <div class="row"><span class="k">Phone</span><span class="v mut">none published → quote CTA</span></div>
+      <div class="row"><span class="k">Console · pageerror · 4xx</span><span class="v ok num">0 · 0 · 0</span></div>
+      <div class="row"><span class="k">Proof email</span><span class="v num">7e1ff98e → owner inbox</span></div>
+    </div>
+
+    <!-- ============ RILEY ============ -->
+    <div class="card c8">
+      <h3>Riley — the client's private web developer</h3>
+      <p class="why">She works for the client: they call or text, their site changes. Never a chatbot for their customers.</p>
+      <div class="row"><span class="k">Line</span><span class="v num">+1 (949) 339-5562 · "Woodward Labs — Local Growth"</span></div>
+      <div class="row"><span class="k">Caller resolution</span><span class="v ok">Client-ID · phone · name — ambiguity reads back, never guesses</span></div>
+      <div class="row"><span class="k">Persona baseline</span><span class="v ok">saved from the good 714 call — additive-only changes</span></div>
+      <div class="row"><span class="k">Edit engine</span><span class="v warn">1 of 4 proven live (SEO page) — plan-based editor deployed</span></div>
+      <div class="row"><span class="k">send_note</span><span class="v warn">built · allowlisted · BLOCKED on VAPI_API_KEY</span></div>
+      <div class="bar" aria-hidden="true"><i style="width:55%"></i></div>
+    </div>
+
+    <!-- ============ NEXT ============ -->
+    <div class="card c4">
+      <h3>What unlocks next</h3>
+      <p class="why">Owner keys, in order of leverage.</p>
+      <div class="row"><span class="k">VAPI_API_KEY</span><span class="v bad">Riley's voice sends</span></div>
+      <div class="row"><span class="k">Swarm reset</span><span class="v num">Aug 3 · 11pm PT</span></div>
+      <div class="row"><span class="k">Landscaping donor</span><span class="v mut">next vertical open</span></div>
+      <div class="row"><span class="k">Raster logo (email)</span><span class="v mut">kit ships SVG only</span></div>
+    </div>
+  </div>
+
+  <footer>
+    <span>WSS LABS · LIVE COCKPIT</span>
+    <span>MIRROR LANE WIRED · FLAG OFF · 609/609 GREEN</span>
+    <span>NOTHING SENDS WITHOUT YOUR APPROVAL</span>
+  </footer>
+</div>
+
+</body></html>

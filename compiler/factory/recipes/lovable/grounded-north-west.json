@@ -1,0 +1,76 @@
+{
+ "id": "grounded-north-west",
+ "source": "bf8b3e52-37b4-46c8-beb4-a877958b4f1e",
+ "palette": {
+  "vars": {
+   "--background": "210 30% 99%",
+   "--foreground": "220 40% 12%",
+   "--card": "0 0% 100%",
+   "--card-foreground": "220 40% 12%",
+   "--popover": "0 0% 100%",
+   "--popover-foreground": "220 40% 12%",
+   "--primary": "218 70% 28%",
+   "--primary-foreground": "0 0% 100%",
+   "--primary-glow": "214 88% 48%",
+   "--secondary": "0 72% 48%",
+   "--secondary-foreground": "0 0% 100%",
+   "--muted": "215 25% 95%",
+   "--muted-foreground": "220 15% 38%",
+   "--accent": "210 90% 50%",
+   "--accent-foreground": "0 0% 100%",
+   "--destructive": "0 75% 50%",
+   "--destructive-foreground": "0 0% 100%",
+   "--border": "218 25% 88%",
+   "--input": "218 25% 90%",
+   "--ring": "218 70% 28%",
+   "--gradient-copper": "linear-gradient(135deg, hsl(218 70% 28%), hsl(214 88% 48%))",
+   "--gradient-trust": "linear-gradient(135deg, hsl(218 70% 28%), hsl(0 72% 48%))",
+   "--gradient-card": "linear-gradient(160deg, hsl(0 0% 100%), hsl(214 30% 97%))",
+   "--gradient-line": "linear-gradient(90deg, transparent, hsl(218 70% 35% / 0.45), transparent)",
+   "--sidebar-background": "0 0% 100%",
+   "--sidebar-foreground": "220 40% 12%",
+   "--sidebar-primary": "218 70% 28%",
+   "--sidebar-primary-foreground": "0 0% 100%",
+   "--sidebar-accent": "215 25% 95%",
+   "--sidebar-accent-foreground": "220 40% 12%",
+   "--sidebar-border": "218 25% 88%",
+   "--sidebar-ring": "218 70% 28%"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter Tight",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+ },
+ "radius": "0.75rem",
+ "shadows": [
+  "0 18px 50px -18px hsl(218 70% 28% / 0.35)",
+  "0 24px 60px -28px hsl(218 50% 25% / 0.25)",
+  "inset 0 1px 0 hsl(0 0% 100% / 0.6)",
+  "0 0 0 0 hsl(0 72% 48% / 0.55)"
+ ],
+ "keyframes": [
+  {
+   "name": "conduit-pan",
+   "css": "@keyframes conduit-pan { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }"
+  },
+  {
+   "name": "orb-drift",
+   "css": "@keyframes orb-drift { 0%, 100% { transform: translate3d(0,0,0) scale(1); opacity: 0.85; } 50% { transform: translate3d(40px,-30px,0) scale(1.1); opacity: 1; } }"
+  },
+  {
+   "name": "ticker",
+   "css": "@keyframes ticker { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }"
+  },
+  {
+   "name": "pulse-dot",
+   "css": "@keyframes pulse-dot { 0%, 100% { box-shadow: 0 0 0 0 hsl(0 72% 48% / 0.55); } 50% { box-shadow: 0 0 0 8px hsl(0 72% 48% / 0); } }"
+  }
+ ],
+ "signatures": [
+  "gradient-text",
+  "glow",
+  "gradient-heavy"
+ ]
+}

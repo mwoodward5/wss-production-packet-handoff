@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://falcon-roofing.net/sitemap.xml

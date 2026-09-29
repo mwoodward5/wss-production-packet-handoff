@@ -1,0 +1,424 @@
+{
+  "version": 2,
+  "key": "19-classy-clean-auto-detail-repair",
+  "name": "Classy Clean Auto Detail & Repair",
+  "category": "auto detailing",
+  "vertical": "auto detailing",
+  "requested_vertical": "cleaning",
+  "routing_conflict": true,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "1c346810-1f27-4996-afcf-d061cb5edf6b",
+  "lovable_source_commit": "3520e39938a62e800a78d0ca9a5e64c32b7db5ac",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "1c346810-1f27-4996-afcf-d061cb5edf6b",
+    "ref": "3520e39938a62e800a78d0ca9a5e64c32b7db5ac",
+    "repository": "https://github.com/mwoodward5/geo-craft-sites",
+    "git_tree": "bfe736e3886a3c57ab8128db838a1586b2af8e06"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/api/contact",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/llms.txt"
+  ],
+  "design_tokens": {
+    "palette": {
+      "loam": "oklch(0.16 0.005 240)",
+      "moss": "oklch(0.55 0.21 27)",
+      "moss_deep": "oklch(0.42 0.20 28)",
+      "ember": "oklch(0.63 0.23 27)",
+      "bark": "oklch(0.28 0.005 240)",
+      "parchment": "oklch(0.985 0.002 240)",
+      "bone": "oklch(0.995 0.001 240)"
+    },
+    "typography": {
+      "display": "\"Playfair Display\", \"Cormorant Garamond\", Georgia, serif",
+      "sans": "\"Inter\", ui-sans-serif, system-ui, sans-serif",
+      "mono": "\"JetBrains Mono\", ui-monospace, monospace"
+    },
+    "radii": {
+      "base": "0.5rem",
+      "cards": "1rem",
+      "pills": "9999px"
+    },
+    "shadows": {
+      "elevated": "0 30px 80px -30px color-mix(in oklab, var(--moss-deep) 65%, transparent)",
+      "card": "0 20px 50px -25px color-mix(in oklab, var(--loam) 70%, transparent)"
+    }
+  },
+  "hero_contract": {
+    "selector": "#top",
+    "dimensions": "min-h-[100svh] w-full",
+    "media_container": "absolute inset-0 -z-10",
+    "media_classes": "h-full w-full object-cover object-[60%_55%] scale-[1.04]",
+    "video_replacement_compatible": true,
+    "required_overlays": [
+      "linear-gradient(100deg, oklch(0.10 0.005 240 / 0.94) 0%, oklch(0.10 0.005 240 / 0.78) 38%, oklch(0.12 0.005 240 / 0.34) 60%, oklch(0.12 0.005 240 / 0.18) 100%)",
+      "linear-gradient(180deg, oklch(0.13 0.005 240 / 0.5) 0%, transparent 14%, transparent 62%, oklch(0.10 0.005 240 / 0.94) 100%)",
+      "radial-gradient(circle at center, oklch(0.55 0.21 27 / 0.45), transparent 65%)"
+    ],
+    "headline_structure": {
+      "display_font": true,
+      "staggered_lines": 4,
+      "accent_word_with_svg_underline": "Honest"
+    },
+    "action_buttons": [
+      {
+        "type": "primary_pill",
+        "label": "Book a detail",
+        "target": "#contact"
+      },
+      {
+        "type": "frosted_phone_pill",
+        "label": "Direct Call",
+        "target": "tel:+12314632719"
+      }
+    ]
+  },
+  "media_slots": [
+    {
+      "id": "hero_backdrop",
+      "route": "/",
+      "section": "Hero",
+      "role": "hero",
+      "file_path": "src/assets/hero-detailing.jpg",
+      "aspect_ratio": "16:9",
+      "dimensions": "1920x1080",
+      "fit": "cover"
+    },
+    {
+      "id": "hero_orbital_medallion",
+      "route": "/",
+      "section": "Hero",
+      "role": "macro_work",
+      "file_path": "src/assets/texture-paint.jpg",
+      "aspect_ratio": "1:1",
+      "dimensions": "1024x1024",
+      "fit": "cover"
+    },
+    {
+      "id": "brand_mark",
+      "route": "/",
+      "section": "TopBar, Hero, Footer",
+      "role": "logo",
+      "file_path": "src/assets/logo-mark.png",
+      "aspect_ratio": "1:1",
+      "dimensions": "512x512",
+      "fit": "contain"
+    },
+    {
+      "id": "gallery_item_1",
+      "route": "/",
+      "section": "Gallery",
+      "role": "work_paint",
+      "file_path": "src/assets/work-paint.jpg",
+      "aspect_ratio": "4:3",
+      "dimensions": "1280x960",
+      "fit": "cover"
+    },
+    {
+      "id": "gallery_item_2",
+      "route": "/",
+      "section": "Gallery",
+      "role": "work_interior",
+      "file_path": "src/assets/work-interior.jpg",
+      "aspect_ratio": "4:3",
+      "dimensions": "1280x960",
+      "fit": "cover"
+    },
+    {
+      "id": "gallery_item_3",
+      "route": "/",
+      "section": "Gallery",
+      "role": "work_diagnostics",
+      "file_path": "src/assets/work-diagnostics.jpg",
+      "aspect_ratio": "4:3",
+      "dimensions": "1280x960",
+      "fit": "cover"
+    },
+    {
+      "id": "gallery_item_4",
+      "route": "/",
+      "section": "Gallery",
+      "role": "work_undercoat",
+      "file_path": "src/assets/work-undercoat.jpg",
+      "aspect_ratio": "4:3",
+      "dimensions": "1280x960",
+      "fit": "cover"
+    }
+  ],
+  "content_slots": [
+    {
+      "field": "business_name",
+      "location": "src/lib/business.ts:BUSINESS.name"
+    },
+    {
+      "field": "short_name",
+      "location": "src/lib/business.ts:BUSINESS.shortName"
+    },
+    {
+      "field": "tagline",
+      "location": "src/lib/business.ts:BUSINESS.tagline"
+    },
+    {
+      "field": "phone",
+      "location": "src/lib/business.ts:BUSINESS.phone"
+    },
+    {
+      "field": "phone_href",
+      "location": "src/lib/business.ts:BUSINESS.phoneHref"
+    },
+    {
+      "field": "email",
+      "location": "src/lib/business.ts:BUSINESS.email"
+    },
+    {
+      "field": "address",
+      "location": "src/lib/business.ts:BUSINESS.address"
+    },
+    {
+      "field": "city",
+      "location": "src/lib/business.ts:BUSINESS.city"
+    },
+    {
+      "field": "state",
+      "location": "src/lib/business.ts:BUSINESS.state"
+    },
+    {
+      "field": "zip",
+      "location": "src/lib/business.ts:BUSINESS.zip"
+    },
+    {
+      "field": "county",
+      "location": "src/lib/business.ts:BUSINESS.county"
+    },
+    {
+      "field": "hours",
+      "location": "src/lib/business.ts:BUSINESS.hours"
+    },
+    {
+      "field": "hours_short",
+      "location": "src/lib/business.ts:BUSINESS.hoursShort"
+    },
+    {
+      "field": "place_id",
+      "location": "src/lib/business.ts:BUSINESS.placeId"
+    },
+    {
+      "field": "geo_coordinates",
+      "location": "src/lib/business.ts:BUSINESS.geo"
+    },
+    {
+      "field": "service_areas",
+      "location": "src/lib/business.ts:BUSINESS.serviceAreas"
+    },
+    {
+      "field": "services_catalog",
+      "location": "src/lib/business.ts:BUSINESS.services"
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "hero_live_status",
+      "section": "Hero",
+      "content": "Pulsing live beacon · In the bay today"
+    },
+    {
+      "slot": "hero_top_hairline",
+      "section": "Hero",
+      "content": "Licensed & Insured · Detail Bay Vol. I"
+    },
+    {
+      "slot": "trust_cards_grid",
+      "section": "Trust",
+      "capacity": 4,
+      "items": [
+        "Licensed & Insured",
+        "Local to Traverse City",
+        "Detail + Repair, one shop",
+        "Open 7 days · 9AM–8PM"
+      ]
+    },
+    {
+      "slot": "service_area_pills",
+      "section": "Trust",
+      "capacity": 10
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "AutoRepair",
+      "target": "src/routes/__root.tsx"
+    },
+    {
+      "type": "AutoDetailing",
+      "target": "src/routes/__root.tsx"
+    },
+    {
+      "type": "LocalBusiness",
+      "target": "src/routes/__root.tsx"
+    },
+    {
+      "type": "PostalAddress",
+      "target": "src/routes/__root.tsx"
+    },
+    {
+      "type": "GeoCoordinates",
+      "target": "src/routes/__root.tsx"
+    },
+    {
+      "type": "OpeningHoursSpecification",
+      "target": "src/routes/__root.tsx"
+    },
+    {
+      "type": "OfferCatalog",
+      "target": "src/routes/__root.tsx"
+    },
+    {
+      "type": "FAQPage",
+      "target": "src/routes/__root.tsx"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "query": "Auto detailing Traverse City, MI",
+      "anchor_file": "src/routes/index.tsx",
+      "component": "Hero.tsx"
+    },
+    {
+      "query": "Car undercoating cost Traverse City",
+      "anchor_file": "src/components/site/Faq.tsx",
+      "component": "Faq.tsx"
+    },
+    {
+      "query": "Mobile auto detailing Grand Traverse County",
+      "anchor_file": "src/components/site/Services.tsx",
+      "component": "Services.tsx"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "conversational_intent": "Where is the shop located?",
+      "component": "src/components/site/Faq.tsx",
+      "item": "01"
+    },
+    {
+      "conversational_intent": "What services are provided?",
+      "component": "src/components/site/Faq.tsx",
+      "item": "02"
+    },
+    {
+      "conversational_intent": "Can they come to my house for detailing?",
+      "component": "src/components/site/Faq.tsx",
+      "item": "05"
+    }
+  ],
+  "map_location_slot": {
+    "section": "Contact",
+    "embed_type": "OpenStreetMap_or_GoogleMaps",
+    "aspect_ratio": "16:10",
+    "directions_cta_url": "https://www.google.com/maps/dir/?api=1&destination=1669+Barlow,+Traverse+City,+MI+49686",
+    "gbp_profile_url": "https://maps.app.goo.gl/24ctrciSFc4YDBHA9"
+  },
+  "content_density": {
+    "overall": "editorial_luxury_balanced",
+    "hero_density": "moderate",
+    "services_density": "8_cards_fixed",
+    "estimator_density": "5_paths_interactive",
+    "trust_density": "4_pillars_plus_geo_strip",
+    "gallery_density": "4_editorial_cards",
+    "faq_density": "6_items"
+  },
+  "mobile_rules": {
+    "breakpoint_390": "Stack 1-column; TopBar collapses nav links; sticky footer active",
+    "breakpoint_768": "2-column grid active; sticky footer active",
+    "breakpoint_1440": "Full 12-column grid; 4-column services; sticky footer hidden"
+  },
+  "non_negotiables": [
+    "Retain crimson oklch palette (never introduce unbranded blues or purples)",
+    "Retain Playfair Display serif for headings and Inter for body text",
+    "Preserve 1px razor-line border style for 8 services cards",
+    "Preserve circular orbital medallion animation in hero section",
+    "Maintain alternating dark-to-light section cadence",
+    "Strictly avoid any generic marketing agency upsell banners in footer"
+  ],
+  "safe_replacements": [
+    "BUSINESS object fields in src/lib/business.ts",
+    "Hero backdrop image with 10-second client-specific video",
+    "Medallion texture image with client macro photo",
+    "Gallery images with verified client project photographs",
+    "Logo mark with verified client logo file",
+    "Form recipient inbox in src/routes/api/contact.ts"
+  ],
+  "leak_terms": [
+    "Classy Clean Auto Detail & Repair"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Playfair Display",
+      "Cormorant Garamond",
+      "Georgia",
+      "serif",
+      "Inter",
+      "ui-sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.995 0.001 240)"
+  ],
+  "fonts": [
+    "Playfair Display",
+    "Cormorant Garamond",
+    "Georgia",
+    "serif",
+    "Inter",
+    "ui-sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "6c1677fabb771c9232ec3eef3ea43aa1b71d5533a83dbc2d8321db4a6b29f88d",
+    "files": {
+      "assets/index-CaChEdkE.css": "931d7cfd70fb593bc2936f8a20b135a86c63d36a982f1b9b76141cd995ba06c4",
+      "assets/index-CpomQstw.js": "cc8a376a720501e6d03ea453ab4fd7874301287b6358897de92f0dba489347c8",
+      "index.html": "7faf5cf443510bb3c9101fdf7aa37dc2f689824e0a5d45fc7ab31a1026831419"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

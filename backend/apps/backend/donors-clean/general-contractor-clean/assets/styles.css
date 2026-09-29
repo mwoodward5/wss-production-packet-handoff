@@ -1,0 +1,500 @@
+:root {
+  --ink: #101817;
+  --ink-soft: #1a2523;
+  --paper: #f5f0e7;
+  --paper-deep: #e7dfd2;
+  --line: rgba(16, 24, 23, 0.18);
+  --copper: #d66b38;
+  --copper-bright: #f08a52;
+  --sage: #9db6a9;
+  --white: #fffdf8;
+  --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --body: "Inter", Arial, sans-serif;
+  --radius: 1.15rem;
+  --shadow: 0 28px 80px rgba(8, 14, 13, 0.18);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--paper);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, transparent 49.9%, rgba(16, 24, 23, 0.035) 50%, transparent 50.1%),
+    var(--paper);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+img, video { display: block; max-width: 100%; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.24em; }
+button, input, select, textarea { font: inherit; }
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.8rem;
+  left: 0.8rem;
+  padding: 0.7rem 1rem;
+  color: var(--ink);
+  background: var(--white);
+  border: 2px solid var(--copper);
+  transform: translateY(-180%);
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+:focus-visible {
+  outline: 3px solid var(--copper-bright);
+  outline-offset: 4px;
+}
+
+.site-header {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: min(100% - 3rem, 92rem);
+  margin-inline: auto;
+  padding: 1.35rem 0;
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 253, 248, 0.2);
+}
+
+.brand {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-mark,
+.footer-mark {
+  position: relative;
+  display: inline-grid;
+  width: 2.15rem;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.brand-mark::before,
+.footer-mark::before {
+  content: "";
+  width: 46%;
+  height: 46%;
+  border: 1px solid var(--copper-bright);
+}
+
+.brand-mark span,
+.footer-mark span {
+  position: absolute;
+  width: 140%;
+  height: 1px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  opacity: 0.45;
+}
+
+.brand-logo {
+  width: auto;
+  max-width: 13rem;
+  height: 2.3rem;
+  object-fit: contain;
+}
+
+.brand-wordmark {
+  overflow: hidden;
+  max-width: 20rem;
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 2.1vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.4rem);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-nav a { text-decoration: none; }
+.site-nav a:hover { color: var(--copper-bright); }
+
+.nav-call {
+  padding: 0.6rem 0.85rem;
+  border: 1px solid rgba(255, 253, 248, 0.4);
+  /* Comet audit item 1: the phone CTA never wraps mid-number. */
+  white-space: nowrap;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 50rem;
+  grid-template-columns: minmax(0, 0.88fr) minmax(28rem, 1.12fr);
+  align-items: stretch;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--ink);
+}
+
+.hero-grid {
+  position: absolute;
+  z-index: -1;
+  inset: 0 48% 0 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 20% 30%, rgba(214, 107, 56, 0.18), transparent 35%);
+  background-size: 2.5rem 2.5rem, 2.5rem 2.5rem, auto;
+  mask-image: linear-gradient(90deg, #000 65%, transparent);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  max-width: 48rem;
+  padding: 10rem clamp(2rem, 5.5vw, 6.5rem) 5rem max(1.5rem, calc((100vw - 92rem) / 2));
+}
+
+.eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.1rem;
+  margin: 0 0 1.4rem;
+  color: var(--copper-bright);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.eyebrow span + span::before { content: "/"; margin-right: 1.1rem; opacity: 0.55; }
+
+h1, h2, h3, p { text-wrap: pretty; }
+
+h1, h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 0.94;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(4.1rem, 7.5vw, 8.2rem);
+}
+
+h2 { font-size: clamp(2.8rem, 5.4vw, 5.4rem); }
+
+.hero-lede {
+  max-width: 37rem;
+  margin: 2rem 0 0;
+  color: rgba(255, 253, 248, 0.72);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+}
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.25rem; }
+
+.button {
+  display: inline-flex;
+  min-height: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.button:hover { transform: translateY(-2px); }
+.button-primary { color: #141816; background: var(--copper-bright); }
+.button-primary:hover { background: color-mix(in srgb, var(--copper-bright) 72%, #fff); }
+.button-quiet { color: var(--white); border-color: rgba(255, 253, 248, 0.35); background: transparent; }
+
+.hero-location {
+  display: flex;
+  max-width: 32rem;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  color: rgba(255, 253, 248, 0.56);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.location-rule { width: 3rem; height: 1px; flex: 0 0 auto; background: var(--copper); }
+
+.hero-media {
+  position: relative;
+  z-index: 1;
+  min-height: 50rem;
+  margin: 0;
+  overflow: hidden;
+  background: var(--ink-soft);
+}
+
+.hero-media > img,
+.hero-media > video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-media > img { transform: scale(1.015); }
+.hero-media > video { z-index: 1; opacity: 0; transition: opacity 700ms ease; }
+.hero-media > video[data-hero-armed="1"] { opacity: 1; }
+
+.media-veil {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--ink), transparent 24%),
+    linear-gradient(180deg, rgba(8, 14, 13, 0.05), rgba(8, 14, 13, 0.54));
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 10%;
+  right: 7%;
+  width: 8rem;
+  aspect-ratio: 1;
+  border-top: 1px solid rgba(255, 253, 248, 0.5);
+  border-right: 1px solid rgba(255, 253, 248, 0.5);
+}
+
+.hero-media figcaption {
+  position: absolute;
+  z-index: 4;
+  right: clamp(1.5rem, 4vw, 4rem);
+  bottom: 2.2rem;
+  left: clamp(1.5rem, 4vw, 4rem);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.85rem;
+  color: rgba(255, 253, 248, 0.78);
+  border-top: 1px solid rgba(255, 253, 248, 0.3);
+  font-size: 0.69rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.media-index { color: var(--copper-bright); }
+
+.services-section,
+.planning-strip,
+.brief-section {
+  width: min(100% - 3rem, 84rem);
+  margin-inline: auto;
+}
+
+.services-section { padding: clamp(5.5rem, 9vw, 9rem) 0; }
+.section-heading { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 1.5rem 4rem; align-items: end; }
+.section-heading .eyebrow { grid-column: 1 / -1; margin-bottom: 0; }
+.section-heading p:last-child { max-width: 30rem; margin: 0; color: rgba(16, 24, 23, 0.65); }
+
+.service-ledger {
+  display: grid;
+  margin-top: 4rem;
+  border-top: 1px solid var(--line);
+}
+
+.service-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6rem minmax(12rem, 0.8fr) minmax(14rem, 1.2fr);
+  gap: 1rem 2rem;
+  align-items: baseline;
+  padding: 1.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background: var(--copper);
+  transition: width 250ms ease;
+}
+
+.service-card:hover::after { width: 35%; }
+.service-number { color: var(--copper); font: 500 0.72rem/1 var(--body); letter-spacing: 0.12em; }
+.service-card h3 { margin: 0; font: 600 clamp(1.65rem, 3vw, 2.55rem)/1 var(--display); }
+.service-card p { margin: 0; color: rgba(16, 24, 23, 0.62); }
+
+.planning-strip {
+  padding: clamp(4rem, 7vw, 7rem);
+  color: var(--white);
+  background: var(--ink-soft);
+  box-shadow: var(--shadow);
+}
+
+.planning-strip h2 { max-width: 10ch; }
+.planning-strip ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 4rem 0 0; padding: 0; list-style: none; }
+.planning-strip li { border-top: 1px solid rgba(255, 253, 248, 0.22); }
+.planning-strip li span { display: block; margin-top: 1.1rem; color: var(--copper-bright); font-size: 0.7rem; letter-spacing: 0.14em; }
+.planning-strip li p { margin: 2rem 0 0; color: rgba(255, 253, 248, 0.7); }
+
+.brief-section {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: clamp(3rem, 8vw, 8rem);
+  padding: clamp(6rem, 10vw, 10rem) 0;
+}
+
+.brief-intro > p:not(.eyebrow) { max-width: 33rem; color: rgba(16, 24, 23, 0.64); }
+.contact-list { margin: 3rem 0 0; }
+.contact-list > div { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: 0.75rem 0; border-top: 1px solid var(--line); }
+.contact-list dt { color: rgba(16, 24, 23, 0.5); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.contact-list dd { margin: 0; overflow-wrap: anywhere; }
+
+.brief-form {
+  display: grid;
+  align-self: start;
+  gap: 1.1rem;
+  padding: clamp(1.6rem, 4vw, 3.2rem);
+  background: var(--white);
+  border: 1px solid rgba(16, 24, 23, 0.12);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.brief-form label { display: grid; gap: 0.45rem; color: rgba(16, 24, 23, 0.66); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.brief-form input,
+.brief-form select,
+.brief-form textarea {
+  width: 100%;
+  min-height: 3.1rem;
+  padding: 0.75rem 0.85rem;
+  color: var(--ink);
+  background: #faf7f1;
+  border: 1px solid rgba(16, 24, 23, 0.2);
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.brief-form textarea { min-height: 8rem; resize: vertical; }
+.brief-form input:focus,
+.brief-form select:focus,
+.brief-form textarea:focus { border-color: var(--copper); outline: 2px solid rgba(214, 107, 56, 0.2); outline-offset: 0; }
+.brief-form .button { justify-self: start; border: 0; }
+.form-note { margin: 0; color: rgba(16, 24, 23, 0.52); font-size: 0.76rem; }
+.honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+
+.site-footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2.2rem max(1.5rem, calc((100vw - 84rem) / 2));
+  color: rgba(255, 253, 248, 0.68);
+  background: #0a1110;
+  font-size: 0.78rem;
+}
+
+.site-footer strong { color: var(--white); font: 600 1.25rem/1.1 var(--display); text-transform: uppercase; }
+.site-footer p { margin: 0; }
+.footer-mark { color: var(--white); }
+
+/* Comet audit item 1: collapse the nav links below 1024px so the brand and
+   the phone CTA never collide on mid-width viewports (the call CTA stays). */
+@media (max-width: 1024px) {
+  .site-nav > a:not(.nav-call) { display: none; }
+}
+
+@media (max-width: 980px) {
+  .hero { min-height: auto; grid-template-columns: 1fr; }
+  .hero-copy { min-height: 42rem; padding: 9rem 1.5rem 4rem; }
+  .hero-media { min-height: min(70vw, 38rem); }
+  .media-veil { background: linear-gradient(180deg, rgba(8, 14, 13, 0.05), rgba(8, 14, 13, 0.55)); }
+  .section-heading, .brief-section { grid-template-columns: 1fr; }
+  .planning-strip ol { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 680px) {
+  .site-header { width: calc(100% - 2rem); gap: 1rem; }
+  .site-nav > a:not(.nav-call) { display: none; }
+  .nav-call { padding: 0.55rem 0.7rem; font-size: 0.68rem; }
+  .brand-wordmark { max-width: 10rem; }
+  h1 { font-size: clamp(3.8rem, 20vw, 5.5rem); }
+  .services-section, .planning-strip, .brief-section { width: calc(100% - 2rem); }
+  .section-heading { gap: 1.2rem; }
+  .service-card { grid-template-columns: 3.2rem 1fr; }
+  .service-card p { grid-column: 2; }
+  .planning-strip { padding: 3.5rem 1.4rem; }
+  .field-row { grid-template-columns: 1fr; }
+  .brief-form .button { width: 100%; }
+  .site-footer { grid-template-columns: auto 1fr; padding-inline: 1rem; }
+  .site-footer > a { grid-column: 2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  video[data-hero-video] { display: none !important; }
+}
+
+@media print {
+  .site-header, .hero-media, .hero-actions, .brief-form, .site-footer { display: none !important; }
+  .hero { display: block; min-height: auto; color: #000; background: #fff; }
+  .hero-copy, .services-section, .planning-strip, .brief-section { width: 100%; padding: 1rem 0; color: #000; background: #fff; box-shadow: none; }
+}
+
+/* THE HERO CLIP CAN NEVER PRESENT AS A BLACK RECTANGLE. The donor resets
+   `img, video { display: block; }` above, which defeats the `hidden`
+   attribute's UA rule — so `hidden` and the walker's terminal
+   `data-hero-dead` flag are re-enforced here. The container's own
+   background (var(--ink-soft)) and the planning-field image beneath the video are
+   what paint while the clip is hidden, loading, or gone. */
+video[data-hero-video][hidden] { display: none !important; }
+video[data-hero-video][data-hero-dead] { display: none !important; }

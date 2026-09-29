@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://southern-charm-blueprint.lovable.app/sitemap.xml

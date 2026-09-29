@@ -1,0 +1,5136 @@
+[
+  {
+    "name": "service-marquee-ticker-with-star-dividers",
+    "uses": 2,
+    "verticals": [
+      "Local Moving & Storage Service",
+      "excavation and dirtwork"
+    ],
+    "sources": [
+      "https://incrediblemoversil.com/",
+      "https://velvet-razzle-sparkle.lovable.app"
+    ]
+  },
+  {
+    "name": "marquee-service-ticker-band",
+    "uses": 2,
+    "verticals": [
+      "Roofing Contractor",
+      "landscaping (arborist/tree-service)"
+    ],
+    "sources": [
+      "https://pin-premiere.wss-ai.com/",
+      "https://favoritetreeservice.com/"
+    ]
+  },
+  {
+    "name": "live-worksite-feed-cctv-widget-with-timestamp-and-metadata",
+    "uses": 1,
+    "verticals": [
+      "Home Repair & Remodeling"
+    ],
+    "sources": [
+      "https://caldwell-atelier-project.lovable.app/"
+    ]
+  },
+  {
+    "name": "command-console-project-router-with-lane-and-timeline-selection",
+    "uses": 1,
+    "verticals": [
+      "Home Repair & Remodeling"
+    ],
+    "sources": [
+      "https://caldwell-atelier-project.lovable.app/"
+    ]
+  },
+  {
+    "name": "technical-plate-portfolio-with-job-id-and-proof-micro-labels",
+    "uses": 1,
+    "verticals": [
+      "Home Repair & Remodeling"
+    ],
+    "sources": [
+      "https://caldwell-atelier-project.lovable.app/"
+    ]
+  },
+  {
+    "name": "document-themed-process-timeline-with-work-order-styling",
+    "uses": 1,
+    "verticals": [
+      "Home Repair & Remodeling"
+    ],
+    "sources": [
+      "https://caldwell-atelier-project.lovable.app/"
+    ]
+  },
+  {
+    "name": "service-area-atlas-with-coverage-radius-and-pulsing-city-pins",
+    "uses": 1,
+    "verticals": [
+      "Home Repair & Remodeling"
+    ],
+    "sources": [
+      "https://caldwell-atelier-project.lovable.app/"
+    ]
+  },
+  {
+    "name": "rfi-sheet-faq-with-utility-monospaced-typography-and-document-metadata",
+    "uses": 1,
+    "verticals": [
+      "Home Repair & Remodeling"
+    ],
+    "sources": [
+      "https://caldwell-atelier-project.lovable.app/"
+    ]
+  },
+  {
+    "name": "repair-path-console-v1-diagnostic-router",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair & Diagnostics"
+    ],
+    "sources": [
+      "https://cntautomotive.com/"
+    ]
+  },
+  {
+    "name": "accepts-tows-24-7-status-badge",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair & Diagnostics"
+    ],
+    "sources": [
+      "https://cntautomotive.com/"
+    ]
+  },
+  {
+    "name": "service-area-city-pill-cloud",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair & Diagnostics"
+    ],
+    "sources": [
+      "https://cntautomotive.com/"
+    ]
+  },
+  {
+    "name": "process-timeline-stepper-numbered",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair & Diagnostics"
+    ],
+    "sources": [
+      "https://cntautomotive.com/"
+    ]
+  },
+  {
+    "name": "emergency-call-now-header-cta",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair & Diagnostics"
+    ],
+    "sources": [
+      "https://cntautomotive.com/"
+    ]
+  },
+  {
+    "name": "diagnostic-first-approach-badge",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair & Diagnostics"
+    ],
+    "sources": [
+      "https://cntautomotive.com/"
+    ]
+  },
+  {
+    "name": "tree-ring-specimen-graphic-with-pulsing-status-dot",
+    "uses": 1,
+    "verticals": [
+      "Logging & Forestry Management"
+    ],
+    "sources": [
+      "https://beasleysforestrymgmt.com/"
+    ]
+  },
+  {
+    "name": "field-record-header-with-gps-coordinates",
+    "uses": 1,
+    "verticals": [
+      "Logging & Forestry Management"
+    ],
+    "sources": [
+      "https://beasleysforestrymgmt.com/"
+    ]
+  },
+  {
+    "name": "outcome-based-job-planner-router-with-timeline-estimates",
+    "uses": 1,
+    "verticals": [
+      "Logging & Forestry Management"
+    ],
+    "sources": [
+      "https://beasleysforestrymgmt.com/"
+    ]
+  },
+  {
+    "name": "verified-service-area-pill-cloud-with-radius-list",
+    "uses": 1,
+    "verticals": [
+      "Logging & Forestry Management"
+    ],
+    "sources": [
+      "https://beasleysforestrymgmt.com/"
+    ]
+  },
+  {
+    "name": "video-clip-gallery-grid-linking-to-drive",
+    "uses": 1,
+    "verticals": [
+      "Logging & Forestry Management"
+    ],
+    "sources": [
+      "https://beasleysforestrymgmt.com/"
+    ]
+  },
+  {
+    "name": "status-chip-on-the-saw-today-indicator",
+    "uses": 1,
+    "verticals": [
+      "Logging & Forestry Management"
+    ],
+    "sources": [
+      "https://beasleysforestrymgmt.com/"
+    ]
+  },
+  {
+    "name": "pcb-instant-quote-calculator-with-lead-time-and-volume-sliders",
+    "uses": 1,
+    "verticals": [
+      "Manufacturing & Hardware Development"
+    ],
+    "sources": [
+      "https://intercon.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "global-office-contact-grid-with-named-leads-and-direct-comms",
+    "uses": 1,
+    "verticals": [
+      "Manufacturing & Hardware Development"
+    ],
+    "sources": [
+      "https://intercon.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "infinite-marquee-service-ticker-with-red-dot-separators",
+    "uses": 1,
+    "verticals": [
+      "Manufacturing & Hardware Development"
+    ],
+    "sources": [
+      "https://intercon.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "industrial-video-hero-with-technical-blueprint-overlay",
+    "uses": 1,
+    "verticals": [
+      "Manufacturing & Hardware Development"
+    ],
+    "sources": [
+      "https://intercon.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "trust-logo-cloud-with-tier-1-global-brand-labels",
+    "uses": 1,
+    "verticals": [
+      "Manufacturing & Hardware Development"
+    ],
+    "sources": [
+      "https://intercon.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "gps-coordinate-location-verification-text-block",
+    "uses": 1,
+    "verticals": [
+      "Commercial Concrete Contractor"
+    ],
+    "sources": [
+      "https://elc.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "hyper-local-soil-and-monsoon-expertise-editorial-section",
+    "uses": 1,
+    "verticals": [
+      "Commercial Concrete Contractor"
+    ],
+    "sources": [
+      "https://elc.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "city-chip-grid-with-service-area-map-split-widget",
+    "uses": 1,
+    "verticals": [
+      "Commercial Concrete Contractor"
+    ],
+    "sources": [
+      "https://elc.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "itemized-quote-transparency-guarantee-ribbon",
+    "uses": 1,
+    "verticals": [
+      "Commercial Concrete Contractor"
+    ],
+    "sources": [
+      "https://elc.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "cinematic-hero-with-floating-ticker-and-trust-chips",
+    "uses": 1,
+    "verticals": [
+      "Commercial Concrete Contractor"
+    ],
+    "sources": [
+      "https://elc.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "multi-step-material-quote-configurator-card",
+    "uses": 1,
+    "verticals": [
+      "Landscape & Construction Material Supplier"
+    ],
+    "sources": [
+      "https://jkbmaterials.com/"
+    ]
+  },
+  {
+    "name": "atlas-service-area-county-overlay-map",
+    "uses": 1,
+    "verticals": [
+      "Landscape & Construction Material Supplier"
+    ],
+    "sources": [
+      "https://jkbmaterials.com/"
+    ]
+  },
+  {
+    "name": "from-the-yard-masonry-proof-gallery",
+    "uses": 1,
+    "verticals": [
+      "Landscape & Construction Material Supplier"
+    ],
+    "sources": [
+      "https://jkbmaterials.com/"
+    ]
+  },
+  {
+    "name": "specialized-sandbag-service-split-section",
+    "uses": 1,
+    "verticals": [
+      "Landscape & Construction Material Supplier"
+    ],
+    "sources": [
+      "https://jkbmaterials.com/"
+    ]
+  },
+  {
+    "name": "contractor-wholesale-pricing-resource-grid",
+    "uses": 1,
+    "verticals": [
+      "Landscape & Construction Material Supplier"
+    ],
+    "sources": [
+      "https://jkbmaterials.com/"
+    ]
+  },
+  {
+    "name": "project-tracking-id-marquee-ticker",
+    "uses": 1,
+    "verticals": [
+      "Roofing & Exterior Home Improvements"
+    ],
+    "sources": [
+      "https://southern-charm-blueprint.lovable.app"
+    ]
+  },
+  {
+    "name": "multi-step-tiled-project-intake-brief",
+    "uses": 1,
+    "verticals": [
+      "Roofing & Exterior Home Improvements"
+    ],
+    "sources": [
+      "https://southern-charm-blueprint.lovable.app"
+    ]
+  },
+  {
+    "name": "dual-platform-maps-directions-buttons-block",
+    "uses": 1,
+    "verticals": [
+      "Roofing & Exterior Home Improvements"
+    ],
+    "sources": [
+      "https://southern-charm-blueprint.lovable.app"
+    ]
+  },
+  {
+    "name": "project-metadata-gallery-cards-with-season-and-year",
+    "uses": 1,
+    "verticals": [
+      "Roofing & Exterior Home Improvements"
+    ],
+    "sources": [
+      "https://southern-charm-blueprint.lovable.app"
+    ]
+  },
+  {
+    "name": "lane-based-service-architecture-grid",
+    "uses": 1,
+    "verticals": [
+      "Roofing & Exterior Home Improvements"
+    ],
+    "sources": [
+      "https://southern-charm-blueprint.lovable.app"
+    ]
+  },
+  {
+    "name": "corporate-partner-logo-grid-with-visit-site-links",
+    "uses": 1,
+    "verticals": [
+      "Executive Car Service / Transportation"
+    ],
+    "sources": [
+      "https://tmroc.com/"
+    ]
+  },
+  {
+    "name": "livery-license-tcp-number-footer-trust-signal",
+    "uses": 1,
+    "verticals": [
+      "Executive Car Service / Transportation"
+    ],
+    "sources": [
+      "https://tmroc.com/"
+    ]
+  },
+  {
+    "name": "luxury-serif-display-typography-composition-with-centered-hero",
+    "uses": 1,
+    "verticals": [
+      "Executive Car Service / Transportation"
+    ],
+    "sources": [
+      "https://tmroc.com/"
+    ]
+  },
+  {
+    "name": "stats-horizontal-band-with-icon-metric-label-group",
+    "uses": 1,
+    "verticals": [
+      "Executive Car Service / Transportation"
+    ],
+    "sources": [
+      "https://tmroc.com/"
+    ]
+  },
+  {
+    "name": "bespoke-testimonial-cards-with-local-city-citations",
+    "uses": 1,
+    "verticals": [
+      "Executive Car Service / Transportation"
+    ],
+    "sources": [
+      "https://tmroc.com/"
+    ]
+  },
+  {
+    "name": "editorial-blueprint-annotation-hero-composition",
+    "uses": 1,
+    "verticals": [
+      "Residential Remodeling & Construction"
+    ],
+    "sources": [
+      "https://peppersstructuralandlandmanagement.com/"
+    ]
+  },
+  {
+    "name": "voice-search-optimized-local-city-faq-silos",
+    "uses": 1,
+    "verticals": [
+      "Residential Remodeling & Construction"
+    ],
+    "sources": [
+      "https://peppersstructuralandlandmanagement.com/"
+    ]
+  },
+  {
+    "name": "multi-step-project-router-configurator-widget",
+    "uses": 1,
+    "verticals": [
+      "Residential Remodeling & Construction"
+    ],
+    "sources": [
+      "https://peppersstructuralandlandmanagement.com/"
+    ]
+  },
+  {
+    "name": "technical-drawing-joinery-sheet-identity-widget",
+    "uses": 1,
+    "verticals": [
+      "Residential Remodeling & Construction"
+    ],
+    "sources": [
+      "https://peppersstructuralandlandmanagement.com/"
+    ]
+  },
+  {
+    "name": "HomeAdvisor-verified-review-carousel-with-star-ratings",
+    "uses": 1,
+    "verticals": [
+      "Residential Remodeling & Construction"
+    ],
+    "sources": [
+      "https://peppersstructuralandlandmanagement.com/"
+    ]
+  },
+  {
+    "name": "town-specific-estimate-link-grid-with-county-labels",
+    "uses": 1,
+    "verticals": [
+      "Residential Remodeling & Construction"
+    ],
+    "sources": [
+      "https://peppersstructuralandlandmanagement.com/"
+    ]
+  },
+  {
+    "name": "technical-operating-panel-with-mileage-and-drive-times",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texans-hvac-build.lovable.app/"
+    ]
+  },
+  {
+    "name": "comfort-dial-interactive-mode-selector",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texans-hvac-build.lovable.app/"
+    ]
+  },
+  {
+    "name": "blueprint-overlay-media-treatment-with-metadata-labels",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texans-hvac-build.lovable.app/"
+    ]
+  },
+  {
+    "name": "standard-badge-grid-with-roman-numerals (I, II, III, IV)",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texans-hvac-build.lovable.app/"
+    ]
+  },
+  {
+    "name": "technical-coordinate-footer-branding (30.07°N · 95.93°W)",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texans-hvac-build.lovable.app/"
+    ]
+  },
+  {
+    "name": "marquee-service-ticker-with-hours-and-dot-separators",
+    "uses": 1,
+    "verticals": [
+      "Landscaping & Design"
+    ],
+    "sources": [
+      "https://razzle-dazzle-reimagined.lovable.app/"
+    ]
+  },
+  {
+    "name": "satellite-map-dashboard-widget-with-city-grid-pins",
+    "uses": 1,
+    "verticals": [
+      "Landscaping & Design"
+    ],
+    "sources": [
+      "https://razzle-dazzle-reimagined.lovable.app/"
+    ]
+  },
+  {
+    "name": "editorial-numbered-service-lane-cards-with-request-cta",
+    "uses": 1,
+    "verticals": [
+      "Landscaping & Design"
+    ],
+    "sources": [
+      "https://razzle-dazzle-reimagined.lovable.app/"
+    ]
+  },
+  {
+    "name": "fraunces-italic-serif-display-typography-composition",
+    "uses": 1,
+    "verticals": [
+      "Landscaping & Design"
+    ],
+    "sources": [
+      "https://razzle-dazzle-reimagined.lovable.app/"
+    ]
+  },
+  {
+    "name": "three-step-consultation-path-with-forest-deep-background",
+    "uses": 1,
+    "verticals": [
+      "Landscaping & Design"
+    ],
+    "sources": [
+      "https://razzle-dazzle-reimagined.lovable.app/"
+    ]
+  },
+  {
+    "name": "industrial-live-status-board-dashboard-widget",
+    "uses": 1,
+    "verticals": [
+      "Commercial Material Supply & Staging Logistics"
+    ],
+    "sources": [
+      "https://supply-spark-suite.lovable.app"
+    ]
+  },
+  {
+    "name": "dual-button-google-apple-maps-routing-block",
+    "uses": 1,
+    "verticals": [
+      "Commercial Material Supply & Staging Logistics"
+    ],
+    "sources": [
+      "https://supply-spark-suite.lovable.app"
+    ]
+  },
+  {
+    "name": "masonry-proof-wall-with-numbered-metadata-overlays",
+    "uses": 1,
+    "verticals": [
+      "Commercial Material Supply & Staging Logistics"
+    ],
+    "sources": [
+      "https://supply-spark-suite.lovable.app"
+    ]
+  },
+  {
+    "name": "construction-intake-lane-selector-form",
+    "uses": 1,
+    "verticals": [
+      "Commercial Material Supply & Staging Logistics"
+    ],
+    "sources": [
+      "https://supply-spark-suite.lovable.app"
+    ]
+  },
+  {
+    "name": "monochrome-blueprint-utility-typography-system",
+    "uses": 1,
+    "verticals": [
+      "Commercial Material Supply & Staging Logistics"
+    ],
+    "sources": [
+      "https://supply-spark-suite.lovable.app"
+    ]
+  },
+  {
+    "name": "site-readiness-scope-tiled-estimator-widget",
+    "uses": 1,
+    "verticals": [
+      "Excavating Contractor"
+    ],
+    "sources": [
+      "https://sdhexcavatingandlandsolutions.com/"
+    ]
+  },
+  {
+    "name": "cinematic-golden-hour-earthwork-hero-composition",
+    "uses": 1,
+    "verticals": [
+      "Excavating Contractor"
+    ],
+    "sources": [
+      "https://sdhexcavatingandlandsolutions.com/"
+    ]
+  },
+  {
+    "name": "five-phase-site-prep-process-timeline",
+    "uses": 1,
+    "verticals": [
+      "Excavating Contractor"
+    ],
+    "sources": [
+      "https://sdhexcavatingandlandsolutions.com/"
+    ]
+  },
+  {
+    "name": "cream-and-zinc-contractor-palette",
+    "uses": 1,
+    "verticals": [
+      "Excavating Contractor"
+    ],
+    "sources": [
+      "https://sdhexcavatingandlandsolutions.com/"
+    ]
+  },
+  {
+    "name": "open-street-map-service-area-component",
+    "uses": 1,
+    "verticals": [
+      "Excavating Contractor"
+    ],
+    "sources": [
+      "https://sdhexcavatingandlandsolutions.com/"
+    ]
+  },
+  {
+    "name": "interactive-comfort-dial-widget-with-outside-vs-inside-temp-comparison",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texanshvac.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "atlas-distance-drive-time-service-area-list",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texanshvac.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "live-dispatch-status-indicator-strip-in-header",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texanshvac.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "field-card-editorial-style-with-read-time-micro-label",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texanshvac.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "orange-accent-on-dark-cinematic-theme-preset",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://texanshvac.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "atlas-service-map-with-coastal-neighborhood-pins",
+    "uses": 1,
+    "verticals": [
+      "Local Moving & Storage Service"
+    ],
+    "sources": [
+      "https://incrediblemoversil.com/"
+    ]
+  },
+  {
+    "name": "editorial-numbered-section-prefix-system-with-slashes",
+    "uses": 1,
+    "verticals": [
+      "Local Moving & Storage Service"
+    ],
+    "sources": [
+      "https://incrediblemoversil.com/"
+    ]
+  },
+  {
+    "name": "hero-floating-headquarters-info-card-widget",
+    "uses": 1,
+    "verticals": [
+      "Local Moving & Storage Service"
+    ],
+    "sources": [
+      "https://incrediblemoversil.com/"
+    ]
+  },
+  {
+    "name": "gold-concierge-seal-of-approval-badge",
+    "uses": 1,
+    "verticals": [
+      "Local Moving & Storage Service"
+    ],
+    "sources": [
+      "https://incrediblemoversil.com/"
+    ]
+  },
+  {
+    "name": "gps-coordinate-hero-eyebrow-label",
+    "uses": 1,
+    "verticals": [
+      "Local Moving & Storage Service"
+    ],
+    "sources": [
+      "https://incrediblemoversil.com/"
+    ]
+  },
+  {
+    "name": "terminal-style-repair-bay-configurator-widget",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair"
+    ],
+    "sources": [
+      "https://wrench-wizardry-web.lovable.app/"
+    ]
+  },
+  {
+    "name": "live-bay-status-indicator-eyebrow-label",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair"
+    ],
+    "sources": [
+      "https://wrench-wizardry-web.lovable.app/"
+    ]
+  },
+  {
+    "name": "mechanic-service-timeline-step-component",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair"
+    ],
+    "sources": [
+      "https://wrench-wizardry-web.lovable.app/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-automotive-accented-palette",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair"
+    ],
+    "sources": [
+      "https://wrench-wizardry-web.lovable.app/"
+    ]
+  },
+  {
+    "name": "red-utility-button-with-arrow-icon",
+    "uses": 1,
+    "verticals": [
+      "Auto Repair"
+    ],
+    "sources": [
+      "https://wrench-wizardry-web.lovable.app/"
+    ]
+  },
+  {
+    "name": "docket-style-numbered-triage-tabs",
+    "uses": 1,
+    "verticals": [
+      "Legal - Personal Injury Law Firm"
+    ],
+    "sources": [
+      "https://savannah-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "forensic-evidence-ledger-comparison-table",
+    "uses": 1,
+    "verticals": [
+      "Legal - Personal Injury Law Firm"
+    ],
+    "sources": [
+      "https://savannah-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "atlas-service-map-with-pulsing-office-pin-and-connectors",
+    "uses": 1,
+    "verticals": [
+      "Legal - Personal Injury Law Firm"
+    ],
+    "sources": [
+      "https://savannah-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "gps-coordinate-and-plate-number-micro-labels",
+    "uses": 1,
+    "verticals": [
+      "Legal - Personal Injury Law Firm"
+    ],
+    "sources": [
+      "https://savannah-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "two-year-statute-window-countdown-chip",
+    "uses": 1,
+    "verticals": [
+      "Legal - Personal Injury Law Firm"
+    ],
+    "sources": [
+      "https://savannah-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "job-command-3-step-project-router-with-urgency-slider",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Excavation"
+    ],
+    "sources": [
+      "https://radiant-legacy-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "atlas-service-map-with-dual-map-direction-buttons",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Excavation"
+    ],
+    "sources": [
+      "https://radiant-legacy-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "illustrative-cross-section-diagram-for-technical-services",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Excavation"
+    ],
+    "sources": [
+      "https://radiant-legacy-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "cinematic-jobsite-portfolio-masonry-with-captions",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Excavation"
+    ],
+    "sources": [
+      "https://radiant-legacy-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "text-for-faster-quote-sms-cta-with-photo-intent",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Excavation"
+    ],
+    "sources": [
+      "https://radiant-legacy-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "live-job-board-marquee-ticker-for-transparency",
+    "uses": 1,
+    "verticals": [
+      "General Contracting & Home Remodeling"
+    ],
+    "sources": [
+      "https://gfgeneralcontracting.com/"
+    ]
+  },
+  {
+    "name": "voice-assistant-optimized-short-answer-blocks",
+    "uses": 1,
+    "verticals": [
+      "General Contracting & Home Remodeling"
+    ],
+    "sources": [
+      "https://gfgeneralcontracting.com/"
+    ]
+  },
+  {
+    "name": "split-hero-intake-console-widget",
+    "uses": 1,
+    "verticals": [
+      "General Contracting & Home Remodeling"
+    ],
+    "sources": [
+      "https://gfgeneralcontracting.com/"
+    ]
+  },
+  {
+    "name": "satellite-live-atlas-map-treatment-with-dual-map-links",
+    "uses": 1,
+    "verticals": [
+      "General Contracting & Home Remodeling"
+    ],
+    "sources": [
+      "https://gfgeneralcontracting.com/"
+    ]
+  },
+  {
+    "name": "stats-band-with-process-verification-chips",
+    "uses": 1,
+    "verticals": [
+      "General Contracting & Home Remodeling"
+    ],
+    "sources": [
+      "https://gfgeneralcontracting.com/"
+    ]
+  },
+  {
+    "name": "cinematic-video-hero-with-dual-cta-and-scrolling-indicator",
+    "uses": 1,
+    "verticals": [
+      "Luxury Real Estate"
+    ],
+    "sources": [
+      "https://ocean-glide-digital.lovable.app"
+    ]
+  },
+  {
+    "name": "partner-brand-marquee-ticker-with-diamond-dividers",
+    "uses": 1,
+    "verticals": [
+      "Luxury Real Estate"
+    ],
+    "sources": [
+      "https://ocean-glide-digital.lovable.app"
+    ]
+  },
+  {
+    "name": "interest-selector-tile-buttons-in-contact-form",
+    "uses": 1,
+    "verticals": [
+      "Luxury Real Estate"
+    ],
+    "sources": [
+      "https://ocean-glide-digital.lovable.app"
+    ]
+  },
+  {
+    "name": "italic-serif-blend-display-typography-composition",
+    "uses": 1,
+    "verticals": [
+      "Luxury Real Estate"
+    ],
+    "sources": [
+      "https://ocean-glide-digital.lovable.app"
+    ]
+  },
+  {
+    "name": "shimmer-effect-on-gold-primary-buttons",
+    "uses": 1,
+    "verticals": [
+      "Luxury Real Estate"
+    ],
+    "sources": [
+      "https://ocean-glide-digital.lovable.app"
+    ]
+  },
+  {
+    "name": "rotating-background-watermark-logo-motion",
+    "uses": 1,
+    "verticals": [
+      "Luxury Real Estate"
+    ],
+    "sources": [
+      "https://ocean-glide-digital.lovable.app"
+    ]
+  },
+  {
+    "name": "jobsite-command-10-second-project-router-with-tiles",
+    "uses": 1,
+    "verticals": [
+      "Excavation & Land Clearing"
+    ],
+    "sources": [
+      "https://dirtwork-heart-hollow.lovable.app"
+    ]
+  },
+  {
+    "name": "atlas-service-map-with-parish-list-overlay",
+    "uses": 1,
+    "verticals": [
+      "Excavation & Land Clearing"
+    ],
+    "sources": [
+      "https://dirtwork-heart-hollow.lovable.app"
+    ]
+  },
+  {
+    "name": "four-pass-straight-process-timeline-steps",
+    "uses": 1,
+    "verticals": [
+      "Excavation & Land Clearing"
+    ],
+    "sources": [
+      "https://dirtwork-heart-hollow.lovable.app"
+    ]
+  },
+  {
+    "name": "orange-accent-cinematic-dark-grid-theme",
+    "uses": 1,
+    "verticals": [
+      "Excavation & Land Clearing"
+    ],
+    "sources": [
+      "https://dirtwork-heart-hollow.lovable.app"
+    ]
+  },
+  {
+    "name": "dual-google-apple-maps-directions-buttons",
+    "uses": 1,
+    "verticals": [
+      "Excavation & Land Clearing"
+    ],
+    "sources": [
+      "https://dirtwork-heart-hollow.lovable.app"
+    ]
+  },
+  {
+    "name": "technical-dossier-eyebrow-with-file-number",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://falcon-roofing.net/"
+    ]
+  },
+  {
+    "name": "project-spec-hero-overlay-card-with-lead-time-and-crew-lead",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://falcon-roofing.net/"
+    ]
+  },
+  {
+    "name": "material-matrix-service-table-with-rs-codes",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://falcon-roofing.net/"
+    ]
+  },
+  {
+    "name": "blueprint-grid-background-overlay",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://falcon-roofing.net/"
+    ]
+  },
+  {
+    "name": "owner-led-process-timeline-with-mike-mentions",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://falcon-roofing.net/"
+    ]
+  },
+  {
+    "name": "michigan-state-silhouette-logo-with-internal-road-visual",
+    "uses": 1,
+    "verticals": [
+      "Asphalt Contractor (Sealcoating & Maintenance)"
+    ],
+    "sources": [
+      "https://kwiek-pagehub-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "dual-cta-header-mobile-band-call-plus-sms",
+    "uses": 1,
+    "verticals": [
+      "Asphalt Contractor (Sealcoating & Maintenance)"
+    ],
+    "sources": [
+      "https://kwiek-pagehub-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "service-area-township-grid-with-neighborhood-pins",
+    "uses": 1,
+    "verticals": [
+      "Asphalt Contractor (Sealcoating & Maintenance)"
+    ],
+    "sources": [
+      "https://kwiek-pagehub-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "high-contrast-asphalt-yellow-action-buttons",
+    "uses": 1,
+    "verticals": [
+      "Asphalt Contractor (Sealcoating & Maintenance)"
+    ],
+    "sources": [
+      "https://kwiek-pagehub-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "bbb-accredited-footer-badge-link",
+    "uses": 1,
+    "verticals": [
+      "Asphalt Contractor (Sealcoating & Maintenance)"
+    ],
+    "sources": [
+      "https://kwiek-pagehub-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "before-after-static-gallery-labels-grid",
+    "uses": 1,
+    "verticals": [
+      "Asphalt Contractor (Sealcoating & Maintenance)"
+    ],
+    "sources": [
+      "https://kwiek-pagehub-craft.lovable.app"
+    ]
+  },
+  {
+    "name": "multi-step-project-router-configurator-with-tiled-options",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Clearance Center"
+    ],
+    "sources": [
+      "https://boxdropgreenvillesc.com/"
+    ]
+  },
+  {
+    "name": "retail-vs-clearance-comparison-path-table",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Clearance Center"
+    ],
+    "sources": [
+      "https://boxdropgreenvillesc.com/"
+    ]
+  },
+  {
+    "name": "neighborhood-specific-service-area-check-list",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Clearance Center"
+    ],
+    "sources": [
+      "https://boxdropgreenvillesc.com/"
+    ]
+  },
+  {
+    "name": "three-step-visit-checklist-widget",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Clearance Center"
+    ],
+    "sources": [
+      "https://boxdropgreenvillesc.com/"
+    ]
+  },
+  {
+    "name": "person-centric-trust-bio ('TJ-level service')",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Clearance Center"
+    ],
+    "sources": [
+      "https://boxdropgreenvillesc.com/"
+    ]
+  },
+  {
+    "name": "source-attributed-review-wall-with-thematic-grouping",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Clearance Center"
+    ],
+    "sources": [
+      "https://boxdropgreenvillesc.com/"
+    ]
+  },
+  {
+    "name": "in-short-voice-search-answer-grid",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://pin-premiere.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "google-review-source-attributed-card-carousel",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://pin-premiere.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "dual-maps-directions-button-set-google-apple",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://pin-premiere.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-roofing-hero-with-overlapping-project-cards",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://pin-premiere.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "floating-media-hero-card-with-live-hours-and-review-chip",
+    "uses": 1,
+    "verticals": [
+      "Electrician (Local Service)"
+    ],
+    "sources": [
+      "https://dknelectrical.com/"
+    ]
+  },
+  {
+    "name": "numbered-service-process-timeline-clean-minimal",
+    "uses": 1,
+    "verticals": [
+      "Electrician (Local Service)"
+    ],
+    "sources": [
+      "https://dknelectrical.com/"
+    ]
+  },
+  {
+    "name": "manufacturer-partner-logo-strip-with-certified-badges",
+    "uses": 1,
+    "verticals": [
+      "Electrician (Local Service)"
+    ],
+    "sources": [
+      "https://dknelectrical.com/"
+    ]
+  },
+  {
+    "name": "service-area-neighborhood-grid-with-base-camp-description",
+    "uses": 1,
+    "verticals": [
+      "Electrician (Local Service)"
+    ],
+    "sources": [
+      "https://dknelectrical.com/"
+    ]
+  },
+  {
+    "name": "glassmorphism-floating-contact-card-composition",
+    "uses": 1,
+    "verticals": [
+      "Electrician (Local Service)"
+    ],
+    "sources": [
+      "https://dknelectrical.com/"
+    ]
+  },
+  {
+    "name": "today-ticket-urgency-card (live dispatch simulation)",
+    "uses": 1,
+    "verticals": [
+      "Appliance Repair"
+    ],
+    "sources": [
+      "https://preventiveappliancerepair.com/"
+    ]
+  },
+  {
+    "name": "verified-platform-icon-strip (trust visualization)",
+    "uses": 1,
+    "verticals": [
+      "Appliance Repair"
+    ],
+    "sources": [
+      "https://preventiveappliancerepair.com/"
+    ]
+  },
+  {
+    "name": "question-seo-accordion (high-density Q&A)",
+    "uses": 1,
+    "verticals": [
+      "Appliance Repair"
+    ],
+    "sources": [
+      "https://preventiveappliancerepair.com/"
+    ]
+  },
+  {
+    "name": "header-trust-chip-band (scrolling value props)",
+    "uses": 1,
+    "verticals": [
+      "Appliance Repair"
+    ],
+    "sources": [
+      "https://preventiveappliancerepair.com/"
+    ]
+  },
+  {
+    "name": "branded-van-cinematic-hero-frame",
+    "uses": 1,
+    "verticals": [
+      "Appliance Repair"
+    ],
+    "sources": [
+      "https://preventiveappliancerepair.com/"
+    ]
+  },
+  {
+    "name": "marquee-brand-and-review-ticker-strip",
+    "uses": 1,
+    "verticals": [
+      "Bicycle Shop / Service & Repair"
+    ],
+    "sources": [
+      "https://parallax-alchemy-97.lovable.app/"
+    ]
+  },
+  {
+    "name": "masonry-ride-location-gallery-with-hover-labels",
+    "uses": 1,
+    "verticals": [
+      "Bicycle Shop / Service & Repair"
+    ],
+    "sources": [
+      "https://parallax-alchemy-97.lovable.app/"
+    ]
+  },
+  {
+    "name": "founder-story-with-sidebar-philosophy-bullets",
+    "uses": 1,
+    "verticals": [
+      "Bicycle Shop / Service & Repair"
+    ],
+    "sources": [
+      "https://parallax-alchemy-97.lovable.app/"
+    ]
+  },
+  {
+    "name": "stats-count-up-band-with-stars",
+    "uses": 1,
+    "verticals": [
+      "Bicycle Shop / Service & Repair"
+    ],
+    "sources": [
+      "https://parallax-alchemy-97.lovable.app/"
+    ]
+  },
+  {
+    "name": "hyper-local-trail-tuned-service-copy-block",
+    "uses": 1,
+    "verticals": [
+      "Bicycle Shop / Service & Repair"
+    ],
+    "sources": [
+      "https://parallax-alchemy-97.lovable.app/"
+    ]
+  },
+  {
+    "name": "sticky-mobile-conversion-bar-with-dual-call-text-ctas",
+    "uses": 1,
+    "verticals": [
+      "Home Remodeling & General Contracting"
+    ],
+    "sources": [
+      "https://futurehome-visions.lovable.app"
+    ]
+  },
+  {
+    "name": "service-area-marquee-ticker-strip",
+    "uses": 1,
+    "verticals": [
+      "Home Remodeling & General Contracting"
+    ],
+    "sources": [
+      "https://futurehome-visions.lovable.app"
+    ]
+  },
+  {
+    "name": "split-hero-with-rounded-corner-image-carousel-overlay",
+    "uses": 1,
+    "verticals": [
+      "Home Remodeling & General Contracting"
+    ],
+    "sources": [
+      "https://futurehome-visions.lovable.app"
+    ]
+  },
+  {
+    "name": "license-number-eyebrow-micro-label-widget",
+    "uses": 1,
+    "verticals": [
+      "Home Remodeling & General Contracting"
+    ],
+    "sources": [
+      "https://futurehome-visions.lovable.app"
+    ]
+  },
+  {
+    "name": "partnership-logo-grid-in-footer-with-external-links",
+    "uses": 1,
+    "verticals": [
+      "Home Remodeling & General Contracting"
+    ],
+    "sources": [
+      "https://futurehome-visions.lovable.app"
+    ]
+  },
+  {
+    "name": "local-comfort-weather-outlook-widget-with-seasonal-pro-tips",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://coolandcleanllc.com/"
+    ]
+  },
+  {
+    "name": "numbered-hvac-process-timeline-with-direct-person-callout",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://coolandcleanllc.com/"
+    ]
+  },
+  {
+    "name": "neighborhood-service-area-chip-grid-with-local-context-text",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://coolandcleanllc.com/"
+    ]
+  },
+  {
+    "name": "dual-action-header-with-sms-and-call-prominence",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://coolandcleanllc.com/"
+    ]
+  },
+  {
+    "name": "trust-chip-ribbon-integrated-into-hero-bottom",
+    "uses": 1,
+    "verticals": [
+      "HVAC Contractor"
+    ],
+    "sources": [
+      "https://coolandcleanllc.com/"
+    ]
+  },
+  {
+    "name": "hero-video-configurator-combo-router",
+    "uses": 1,
+    "verticals": [
+      "Electrical Contractor / Local Home Services"
+    ],
+    "sources": [
+      "https://voltagevalorelectric.com/"
+    ]
+  },
+  {
+    "name": "hyper-local-community-pill-list",
+    "uses": 1,
+    "verticals": [
+      "Electrical Contractor / Local Home Services"
+    ],
+    "sources": [
+      "https://voltagevalorelectric.com/"
+    ]
+  },
+  {
+    "name": "people-also-ask-seo-qa-grid",
+    "uses": 1,
+    "verticals": [
+      "Electrical Contractor / Local Home Services"
+    ],
+    "sources": [
+      "https://voltagevalorelectric.com/"
+    ]
+  },
+  {
+    "name": "licensed-contractor-footer-legal-strip",
+    "uses": 1,
+    "verticals": [
+      "Electrical Contractor / Local Home Services"
+    ],
+    "sources": [
+      "https://voltagevalorelectric.com/"
+    ]
+  },
+  {
+    "name": "grayscale-custom-styled-google-map-embed",
+    "uses": 1,
+    "verticals": [
+      "Electrical Contractor / Local Home Services"
+    ],
+    "sources": [
+      "https://voltagevalorelectric.com/"
+    ]
+  },
+  {
+    "name": "hero-split-image-grid-with-trust-chips",
+    "uses": 1,
+    "verticals": [
+      "Local Mattress & Furniture Retailer"
+    ],
+    "sources": [
+      "https://sitebot-wizard.lovable.app"
+    ]
+  },
+  {
+    "name": "social-hub-linktree-integration-button",
+    "uses": 1,
+    "verticals": [
+      "Local Mattress & Furniture Retailer"
+    ],
+    "sources": [
+      "https://sitebot-wizard.lovable.app"
+    ]
+  },
+  {
+    "name": "service-area-list-footer-column",
+    "uses": 1,
+    "verticals": [
+      "Local Mattress & Furniture Retailer"
+    ],
+    "sources": [
+      "https://sitebot-wizard.lovable.app"
+    ]
+  },
+  {
+    "name": "locally-veteran-owned-trust-badge-text",
+    "uses": 1,
+    "verticals": [
+      "Local Mattress & Furniture Retailer"
+    ],
+    "sources": [
+      "https://sitebot-wizard.lovable.app"
+    ]
+  },
+  {
+    "name": "google-plus-apple-maps-dual-link-footer-row",
+    "uses": 1,
+    "verticals": [
+      "Local Mattress & Furniture Retailer"
+    ],
+    "sources": [
+      "https://sitebot-wizard.lovable.app"
+    ]
+  },
+  {
+    "name": "sms-first-primary-cta-strategy",
+    "uses": 1,
+    "verticals": [
+      "Electrician"
+    ],
+    "sources": [
+      "https://voltage-valor-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "technical-grid-background-overlay-system",
+    "uses": 1,
+    "verticals": [
+      "Electrician"
+    ],
+    "sources": [
+      "https://voltage-valor-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "license-number-anchored-footer-with-nap-consistency",
+    "uses": 1,
+    "verticals": [
+      "Electrician"
+    ],
+    "sources": [
+      "https://voltage-valor-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "electric-green-on-dark-cinematic-palette",
+    "uses": 1,
+    "verticals": [
+      "Electrician"
+    ],
+    "sources": [
+      "https://voltage-valor-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "four-step-diag-to-followup-process-timeline",
+    "uses": 1,
+    "verticals": [
+      "Electrician"
+    ],
+    "sources": [
+      "https://voltage-valor-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "floating-service-ticket-configurator-hero-widget",
+    "uses": 1,
+    "verticals": [
+      "Property Maintenance & Handyman Services"
+    ],
+    "sources": [
+      "https://houck-estate-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "desert-proven-material-trust-strip",
+    "uses": 1,
+    "verticals": [
+      "Property Maintenance & Handyman Services"
+    ],
+    "sources": [
+      "https://houck-estate-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "tiled-service-urgency-project-router-form",
+    "uses": 1,
+    "verticals": [
+      "Property Maintenance & Handyman Services"
+    ],
+    "sources": [
+      "https://houck-estate-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "polaroid-collage-portfolio-composition",
+    "uses": 1,
+    "verticals": [
+      "Property Maintenance & Handyman Services"
+    ],
+    "sources": [
+      "https://houck-estate-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "dual-map-provider-directions-buttons-block",
+    "uses": 1,
+    "verticals": [
+      "Property Maintenance & Handyman Services"
+    ],
+    "sources": [
+      "https://houck-estate-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "service-area-travel-time-distance-chips ('18 MIN FROM HQ')",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Lawn Care"
+    ],
+    "sources": [
+      "https://gogreenlawnandtree.com/"
+    ]
+  },
+  {
+    "name": "hiring-guide-safety-checklist-component",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Lawn Care"
+    ],
+    "sources": [
+      "https://gogreenlawnandtree.com/"
+    ]
+  },
+  {
+    "name": "trade-specific-pricing-factor-breakdown-list",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Lawn Care"
+    ],
+    "sources": [
+      "https://gogreenlawnandtree.com/"
+    ]
+  },
+  {
+    "name": "oklahoma-clay-soil-problem-solution-grid",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Lawn Care"
+    ],
+    "sources": [
+      "https://gogreenlawnandtree.com/"
+    ]
+  },
+  {
+    "name": "short-answer-voice-search-summary-block",
+    "uses": 1,
+    "verticals": [
+      "Tree Service & Lawn Care"
+    ],
+    "sources": [
+      "https://gogreenlawnandtree.com/"
+    ]
+  },
+  {
+    "name": "project-router-hero-card-with-category-links",
+    "uses": 1,
+    "verticals": [
+      "General Contractor"
+    ],
+    "sources": [
+      "https://mhbbuild.com/"
+    ]
+  },
+  {
+    "name": "geographic-coordinate-eyebrow-micro-label",
+    "uses": 1,
+    "verticals": [
+      "General Contractor"
+    ],
+    "sources": [
+      "https://mhbbuild.com/"
+    ]
+  },
+  {
+    "name": "marquee-service-ticker-running-text-strip",
+    "uses": 1,
+    "verticals": [
+      "General Contractor"
+    ],
+    "sources": [
+      "https://mhbbuild.com/"
+    ]
+  },
+  {
+    "name": "process-timeline-01-04-numbered-cards",
+    "uses": 1,
+    "verticals": [
+      "General Contractor"
+    ],
+    "sources": [
+      "https://mhbbuild.com/"
+    ]
+  },
+  {
+    "name": "real-project-verified-photo-badge",
+    "uses": 1,
+    "verticals": [
+      "General Contractor"
+    ],
+    "sources": [
+      "https://mhbbuild.com/"
+    ]
+  },
+  {
+    "name": "hyper-local-service-area-split-with-status-icons",
+    "uses": 1,
+    "verticals": [
+      "General Contractor"
+    ],
+    "sources": [
+      "https://mhbbuild.com/"
+    ]
+  },
+  {
+    "name": "tap-to-triage-hero-card-with-problem-routing",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://yellowroseplumbing.com/"
+    ]
+  },
+  {
+    "name": "review-starter-template-copy-paste-widget",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://yellowroseplumbing.com/"
+    ]
+  },
+  {
+    "name": "ticket-style-service-grid-with-diagnostic-labels",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://yellowroseplumbing.com/"
+    ]
+  },
+  {
+    "name": "blueprint-grid-background-texture-overlay",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://yellowroseplumbing.com/"
+    ]
+  },
+  {
+    "name": "google-directions-dual-link-service-area-block",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://yellowroseplumbing.com/"
+    ]
+  },
+  {
+    "name": "hero-plumbing-triage-multi-step-configurator-card",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://lakebluff-movers-pro.lovable.app"
+    ]
+  },
+  {
+    "name": "sacred-coordinate-eyebrow-label",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://lakebluff-movers-pro.lovable.app"
+    ]
+  },
+  {
+    "name": "italic-serif-blend-editorial-typography-scale",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://lakebluff-movers-pro.lovable.app"
+    ]
+  },
+  {
+    "name": "four-stage-rhythm-process-timeline-with-numbered-steps",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://lakebluff-movers-pro.lovable.app"
+    ]
+  },
+  {
+    "name": "marquee-service-offering-ticker-strip",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://lakebluff-movers-pro.lovable.app"
+    ]
+  },
+  {
+    "name": "dual-cta-header-with-phone-and-button-emphasis",
+    "uses": 1,
+    "verticals": [
+      "Plumbing Services"
+    ],
+    "sources": [
+      "https://lakebluff-movers-pro.lovable.app"
+    ]
+  },
+  {
+    "name": "operational-comparison-dual-column-checklist-with-checks-and-crosses",
+    "uses": 1,
+    "verticals": [
+      "Property Management & Maintenance Services"
+    ],
+    "sources": [
+      "https://kodiak-integrated-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "multi-step-property-type-estimate-configurator-ui",
+    "uses": 1,
+    "verticals": [
+      "Property Management & Maintenance Services"
+    ],
+    "sources": [
+      "https://kodiak-integrated-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "pnw-climate-specific-service-grid-with-localized-pain-points",
+    "uses": 1,
+    "verticals": [
+      "Property Management & Maintenance Services"
+    ],
+    "sources": [
+      "https://kodiak-integrated-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "trusted-network-scrolling-logo-marquee-band",
+    "uses": 1,
+    "verticals": [
+      "Property Management & Maintenance Services"
+    ],
+    "sources": [
+      "https://kodiak-integrated-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "google-attributed-review-carousel-with-source-link",
+    "uses": 1,
+    "verticals": [
+      "Property Management & Maintenance Services"
+    ],
+    "sources": [
+      "https://kodiak-integrated-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "localized-service-area-city-grid-with-near-me-optimized-copy",
+    "uses": 1,
+    "verticals": [
+      "Property Management & Maintenance Services"
+    ],
+    "sources": [
+      "https://kodiak-integrated-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "power-readiness-3-step-scope-configurator-with-tiles",
+    "uses": 1,
+    "verticals": [
+      "Electrician / Electrical Contractor"
+    ],
+    "sources": [
+      "https://power-readiness-hub.lovable.app"
+    ]
+  },
+  {
+    "name": "direct-owner-contact-stat-chip-composition",
+    "uses": 1,
+    "verticals": [
+      "Electrician / Electrical Contractor"
+    ],
+    "sources": [
+      "https://power-readiness-hub.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-blueprint-grid-background-overlay",
+    "uses": 1,
+    "verticals": [
+      "Electrician / Electrical Contractor"
+    ],
+    "sources": [
+      "https://power-readiness-hub.lovable.app"
+    ]
+  },
+  {
+    "name": "service-area-county-link-grid",
+    "uses": 1,
+    "verticals": [
+      "Electrician / Electrical Contractor"
+    ],
+    "sources": [
+      "https://power-readiness-hub.lovable.app"
+    ]
+  },
+  {
+    "name": "numbered-horizontal-service-slider-with-count-indicator",
+    "uses": 1,
+    "verticals": [
+      "Electrician / Electrical Contractor"
+    ],
+    "sources": [
+      "https://power-readiness-hub.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-floating-trust-badge-overlay",
+    "uses": 1,
+    "verticals": [
+      "Roofing Services"
+    ],
+    "sources": [
+      "https://radiant-relaunch-kit.lovable.app"
+    ]
+  },
+  {
+    "name": "process-step-grid-with-large-serif-numbers-and-gold-accents",
+    "uses": 1,
+    "verticals": [
+      "Roofing Services"
+    ],
+    "sources": [
+      "https://radiant-relaunch-kit.lovable.app"
+    ]
+  },
+  {
+    "name": "service-area-split-section-with-google-map-and-city-tags",
+    "uses": 1,
+    "verticals": [
+      "Roofing Services"
+    ],
+    "sources": [
+      "https://radiant-relaunch-kit.lovable.app"
+    ]
+  },
+  {
+    "name": "sms-cta-button-integration-for-quick-contact",
+    "uses": 1,
+    "verticals": [
+      "Roofing Services"
+    ],
+    "sources": [
+      "https://radiant-relaunch-kit.lovable.app"
+    ]
+  },
+  {
+    "name": "sticky-gold-call-button-header-with-shadow-blur",
+    "uses": 1,
+    "verticals": [
+      "Roofing Services"
+    ],
+    "sources": [
+      "https://radiant-relaunch-kit.lovable.app"
+    ]
+  },
+  {
+    "name": "burlington-device-bench-diagnostic-ui-with-pulsing-ready-status",
+    "uses": 1,
+    "verticals": [
+      "electronics-retail-and-repair"
+    ],
+    "sources": [
+      "https://concept-to-catalog-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "ai-voice-intent-matrix-table-mapping-search-patterns-to-pages",
+    "uses": 1,
+    "verticals": [
+      "electronics-retail-and-repair"
+    ],
+    "sources": [
+      "https://concept-to-catalog-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "neon-glow-dual-cta-button-composition-cyan-and-lime",
+    "uses": 1,
+    "verticals": [
+      "electronics-retail-and-repair"
+    ],
+    "sources": [
+      "https://concept-to-catalog-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "city-anchor-service-grid-with-near-me-relevance-copy",
+    "uses": 1,
+    "verticals": [
+      "electronics-retail-and-repair"
+    ],
+    "sources": [
+      "https://concept-to-catalog-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "diagnostic-confidence-checklist-strip-with-authority-signals",
+    "uses": 1,
+    "verticals": [
+      "electronics-retail-and-repair"
+    ],
+    "sources": [
+      "https://concept-to-catalog-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "category-native-product-discovery-wall-with-compare-cues",
+    "uses": 1,
+    "verticals": [
+      "electronics-retail-and-repair"
+    ],
+    "sources": [
+      "https://concept-to-catalog-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "rv-house-system-specialty-cards-with-icons",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair / Automotive Services"
+    ],
+    "sources": [
+      "https://busybeemobilervrepair.com/"
+    ]
+  },
+  {
+    "name": "process-timeline-01-04-numbered-steps",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair / Automotive Services"
+    ],
+    "sources": [
+      "https://busybeemobilervrepair.com/"
+    ]
+  },
+  {
+    "name": "service-area-cities-list-grid-with-military-base-mentions",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair / Automotive Services"
+    ],
+    "sources": [
+      "https://busybeemobilervrepair.com/"
+    ]
+  },
+  {
+    "name": "rv-specific-contact-form-with-make-model-field",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair / Automotive Services"
+    ],
+    "sources": [
+      "https://busybeemobilervrepair.com/"
+    ]
+  },
+  {
+    "name": "amber-pill-eyebrow-label-composition",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair / Automotive Services"
+    ],
+    "sources": [
+      "https://busybeemobilervrepair.com/"
+    ]
+  },
+  {
+    "name": "voice-search-ready-quick-answer-block",
+    "uses": 1,
+    "verticals": [
+      "Bike Shop (Retail & Service)"
+    ],
+    "sources": [
+      "https://locale-canvas-prime.lovable.app"
+    ]
+  },
+  {
+    "name": "service-area-grid-with-drive-time-indicators",
+    "uses": 1,
+    "verticals": [
+      "Bike Shop (Retail & Service)"
+    ],
+    "sources": [
+      "https://locale-canvas-prime.lovable.app"
+    ]
+  },
+  {
+    "name": "scrolling-brand-and-service-marquee-ticker",
+    "uses": 1,
+    "verticals": [
+      "Bike Shop (Retail & Service)"
+    ],
+    "sources": [
+      "https://locale-canvas-prime.lovable.app"
+    ]
+  },
+  {
+    "name": "review-grid-with-source-attribution-badges",
+    "uses": 1,
+    "verticals": [
+      "Bike Shop (Retail & Service)"
+    ],
+    "sources": [
+      "https://locale-canvas-prime.lovable.app"
+    ]
+  },
+  {
+    "name": "local-landing-page-with-embedded-map-and-neighborhood-context",
+    "uses": 1,
+    "verticals": [
+      "Bike Shop (Retail & Service)"
+    ],
+    "sources": [
+      "https://locale-canvas-prime.lovable.app"
+    ]
+  },
+  {
+    "name": "hero-split-with-floating-scope-planner-widget",
+    "uses": 1,
+    "verticals": [
+      "General Contractor / Finish Carpentry"
+    ],
+    "sources": [
+      "https://nextstep-site-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "horizontal-numbered-process-timeline-with-clean-typography",
+    "uses": 1,
+    "verticals": [
+      "General Contractor / Finish Carpentry"
+    ],
+    "sources": [
+      "https://nextstep-site-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "carpentry-macro-detail-media-gallery-style",
+    "uses": 1,
+    "verticals": [
+      "General Contractor / Finish Carpentry"
+    ],
+    "sources": [
+      "https://nextstep-site-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "service-grid-with-concise-descriptions-and-clear-headers",
+    "uses": 1,
+    "verticals": [
+      "General Contractor / Finish Carpentry"
+    ],
+    "sources": [
+      "https://nextstep-site-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "footer-nap-with-embedded-hours-and-direct-contact-links",
+    "uses": 1,
+    "verticals": [
+      "General Contractor / Finish Carpentry"
+    ],
+    "sources": [
+      "https://nextstep-site-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "marquee-city-ticker-with-neighborhood-diamonds",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://radiant-vision-legacy.lovable.app/"
+    ]
+  },
+  {
+    "name": "layout-first-methodology-stats-band",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://radiant-vision-legacy.lovable.app/"
+    ]
+  },
+  {
+    "name": "section-numbering-prefix-system-with-section-symbol",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://radiant-vision-legacy.lovable.app/"
+    ]
+  },
+  {
+    "name": "project-brief-form-with-specific-discipline-dropdown",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://radiant-vision-legacy.lovable.app/"
+    ]
+  },
+  {
+    "name": "dark-mode-toggle-with-cinematic-theme-support",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://radiant-vision-legacy.lovable.app/"
+    ]
+  },
+  {
+    "name": "golden-hour-hero-with-floating-trust-chips",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://fence-magic-wow.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-luxury-service-card-grid",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://fence-magic-wow.lovable.app"
+    ]
+  },
+  {
+    "name": "granular-service-area-seo-footer-links",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://fence-magic-wow.lovable.app"
+    ]
+  },
+  {
+    "name": "sticky-mobile-quick-call-button",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://fence-magic-wow.lovable.app"
+    ]
+  },
+  {
+    "name": "google-review-source-attributed-testimonial-strip",
+    "uses": 1,
+    "verticals": [
+      "Fence Contractor"
+    ],
+    "sources": [
+      "https://fence-magic-wow.lovable.app"
+    ]
+  },
+  {
+    "name": "stats-band-horizontal-with-localized-trust-chips",
+    "uses": 1,
+    "verticals": [
+      "Mexican Restaurant"
+    ],
+    "sources": [
+      "https://artesanalgrill.net/"
+    ]
+  },
+  {
+    "name": "menu-category-tabs-with-smooth-anchor-scroll",
+    "uses": 1,
+    "verticals": [
+      "Mexican Restaurant"
+    ],
+    "sources": [
+      "https://artesanalgrill.net/"
+    ]
+  },
+  {
+    "name": "localized-review-carousel-with-customer-city-badges",
+    "uses": 1,
+    "verticals": [
+      "Mexican Restaurant"
+    ],
+    "sources": [
+      "https://artesanalgrill.net/"
+    ]
+  },
+  {
+    "name": "red-accent-high-contrast-cta-system",
+    "uses": 1,
+    "verticals": [
+      "Mexican Restaurant"
+    ],
+    "sources": [
+      "https://artesanalgrill.net/"
+    ]
+  },
+  {
+    "name": "full-bleed-food-hero-with-stylized-serif-typography",
+    "uses": 1,
+    "verticals": [
+      "Mexican Restaurant"
+    ],
+    "sources": [
+      "https://artesanalgrill.net/"
+    ]
+  },
+  {
+    "name": "ninja-premium-cutter-brand-composition",
+    "uses": 1,
+    "verticals": [
+      "Health & Life Insurance Agency"
+    ],
+    "sources": [
+      "https://hero-plan-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "sms-direct-vcard-contact-strip",
+    "uses": 1,
+    "verticals": [
+      "Health & Life Insurance Agency"
+    ],
+    "sources": [
+      "https://hero-plan-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "coverage-path-router-lead-generator-cards",
+    "uses": 1,
+    "verticals": [
+      "Health & Life Insurance Agency"
+    ],
+    "sources": [
+      "https://hero-plan-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "license-verified-trust-chip-header",
+    "uses": 1,
+    "verticals": [
+      "Health & Life Insurance Agency"
+    ],
+    "sources": [
+      "https://hero-plan-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "plain-english-insurance-triage-editorial-block",
+    "uses": 1,
+    "verticals": [
+      "Health & Life Insurance Agency"
+    ],
+    "sources": [
+      "https://hero-plan-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "multi-state-licensing-footer-compliance-block",
+    "uses": 1,
+    "verticals": [
+      "Health & Life Insurance Agency"
+    ],
+    "sources": [
+      "https://hero-plan-spark.lovable.app"
+    ]
+  },
+  {
+    "name": "pool-care-readiness-panel-configurator",
+    "uses": 1,
+    "verticals": [
+      "Pool Cleaning & Maintenance"
+    ],
+    "sources": [
+      "https://bridgeville-pool-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "seasonal-service-rhythm-timeline",
+    "uses": 1,
+    "verticals": [
+      "Pool Cleaning & Maintenance"
+    ],
+    "sources": [
+      "https://bridgeville-pool-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "south-hills-community-service-area-grid",
+    "uses": 1,
+    "verticals": [
+      "Pool Cleaning & Maintenance"
+    ],
+    "sources": [
+      "https://bridgeville-pool-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "high-contrast-serif-display-typography",
+    "uses": 1,
+    "verticals": [
+      "Pool Cleaning & Maintenance"
+    ],
+    "sources": [
+      "https://bridgeville-pool-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "pool-tile-texture-hero-background",
+    "uses": 1,
+    "verticals": [
+      "Pool Cleaning & Maintenance"
+    ],
+    "sources": [
+      "https://bridgeville-pool-shine.lovable.app"
+    ]
+  },
+  {
+    "name": "roofing-specialists-online-live-pulse-counter",
+    "uses": 1,
+    "verticals": [
+      "Roof Restoration & Rejuvenation"
+    ],
+    "sources": [
+      "https://roof-revive-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "multi-step-eligibility-project-router-modal",
+    "uses": 1,
+    "verticals": [
+      "Roof Restoration & Rejuvenation"
+    ],
+    "sources": [
+      "https://roof-revive-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "roof-savings-calculator-with-asphalt-restoration-vs-replacement-logic",
+    "uses": 1,
+    "verticals": [
+      "Roof Restoration & Rejuvenation"
+    ],
+    "sources": [
+      "https://roof-revive-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "lead-magnet-pdf-grid-with-download-counts",
+    "uses": 1,
+    "verticals": [
+      "Roof Restoration & Rejuvenation"
+    ],
+    "sources": [
+      "https://roof-revive-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "sticky-mobile-conversion-footer-with-dual-cta-and-phone-icon",
+    "uses": 1,
+    "verticals": [
+      "Roof Restoration & Rejuvenation"
+    ],
+    "sources": [
+      "https://roof-revive-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "before-after-labeled-project-cards-with-meta-data-labels",
+    "uses": 1,
+    "verticals": [
+      "Roof Restoration & Rejuvenation"
+    ],
+    "sources": [
+      "https://roof-revive-flow.lovable.app"
+    ]
+  },
+  {
+    "name": "live-load-calculator-demand-dial-widget",
+    "uses": 1,
+    "verticals": [
+      "Electrical Services / Master Electrician"
+    ],
+    "sources": [
+      "https://electricdn.com/"
+    ]
+  },
+  {
+    "name": "multi-step-project-router-with-urgency-selector",
+    "uses": 1,
+    "verticals": [
+      "Electrical Services / Master Electrician"
+    ],
+    "sources": [
+      "https://electricdn.com/"
+    ]
+  },
+  {
+    "name": "technical-file-folder-branding-elements",
+    "uses": 1,
+    "verticals": [
+      "Electrical Services / Master Electrician"
+    ],
+    "sources": [
+      "https://electricdn.com/"
+    ]
+  },
+  {
+    "name": "city-tile-grid-with-state-eyebrow-labels",
+    "uses": 1,
+    "verticals": [
+      "Electrical Services / Master Electrician"
+    ],
+    "sources": [
+      "https://electricdn.com/"
+    ]
+  },
+  {
+    "name": "dark-mode-industrial-service-marquee",
+    "uses": 1,
+    "verticals": [
+      "Electrical Services / Master Electrician"
+    ],
+    "sources": [
+      "https://electricdn.com/"
+    ]
+  },
+  {
+    "name": "monsoon-ready-tucson-crews-hero-eyebrow",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://tucson-roof-zen.lovable.app"
+    ]
+  },
+  {
+    "name": "tucson-neighborhood-service-area-pills",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://tucson-roof-zen.lovable.app"
+    ]
+  },
+  {
+    "name": "5-step-simple-honest-process-timeline",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://tucson-roof-zen.lovable.app"
+    ]
+  },
+  {
+    "name": "tucson-specific-roof-failure-pain-point-editorial",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://tucson-roof-zen.lovable.app"
+    ]
+  },
+  {
+    "name": "combobox-service-router-contact-form",
+    "uses": 1,
+    "verticals": [
+      "Roofing Contractor"
+    ],
+    "sources": [
+      "https://tucson-roof-zen.lovable.app"
+    ]
+  },
+  {
+    "name": "forest-green-tinted-hero-with-fraunces-italic-accent-headline",
+    "uses": 1,
+    "verticals": [
+      "Tree Care & Removal Service"
+    ],
+    "sources": [
+      "https://junipertreecareinc.com/"
+    ]
+  },
+  {
+    "name": "dual-call-text-cta-group-for-mobile-leads",
+    "uses": 1,
+    "verticals": [
+      "Tree Care & Removal Service"
+    ],
+    "sources": [
+      "https://junipertreecareinc.com/"
+    ]
+  },
+  {
+    "name": "service-area-county-list-footer-block",
+    "uses": 1,
+    "verticals": [
+      "Tree Care & Removal Service"
+    ],
+    "sources": [
+      "https://junipertreecareinc.com/"
+    ]
+  },
+  {
+    "name": "parchment-cream-and-forest-green-brand-palette",
+    "uses": 1,
+    "verticals": [
+      "Tree Care & Removal Service"
+    ],
+    "sources": [
+      "https://junipertreecareinc.com/"
+    ]
+  },
+  {
+    "name": "bbb-accredited-business-footer-link-composition",
+    "uses": 1,
+    "verticals": [
+      "Tree Care & Removal Service"
+    ],
+    "sources": [
+      "https://junipertreecareinc.com/"
+    ]
+  },
+  {
+    "name": "dispatch-status-hero-card-with-issue-toggle-and-status-indicator",
+    "uses": 1,
+    "verticals": [
+      "plumbing-services"
+    ],
+    "sources": [
+      "https://lucky-plumbing-hero.lovable.app"
+    ]
+  },
+  {
+    "name": "sms-expert-cta-with-prefilled-body-generator",
+    "uses": 1,
+    "verticals": [
+      "plumbing-services"
+    ],
+    "sources": [
+      "https://lucky-plumbing-hero.lovable.app"
+    ]
+  },
+  {
+    "name": "localized-recent-work-gallery-grid-with-city-attribution-alt-tags",
+    "uses": 1,
+    "verticals": [
+      "plumbing-services"
+    ],
+    "sources": [
+      "https://lucky-plumbing-hero.lovable.app"
+    ]
+  },
+  {
+    "name": "service-checklist-footer-column-with-direct-dial-links",
+    "uses": 1,
+    "verticals": [
+      "plumbing-services"
+    ],
+    "sources": [
+      "https://lucky-plumbing-hero.lovable.app"
+    ]
+  },
+  {
+    "name": "high-contrast-serif-display-typography-pairing",
+    "uses": 1,
+    "verticals": [
+      "plumbing-services"
+    ],
+    "sources": [
+      "https://lucky-plumbing-hero.lovable.app"
+    ]
+  },
+  {
+    "name": "studio-status-live-time-ticker",
+    "uses": 1,
+    "verticals": [
+      "Deck Builder"
+    ],
+    "sources": [
+      "https://urban.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "technical-coordinate-hero-eyebrow",
+    "uses": 1,
+    "verticals": [
+      "Deck Builder"
+    ],
+    "sources": [
+      "https://urban.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "technical-3D-rendering-image-plate-with-callout-labels",
+    "uses": 1,
+    "verticals": [
+      "Deck Builder"
+    ],
+    "sources": [
+      "https://urban.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "service-area-climate-capability-grid-summer-winter-shoulder",
+    "uses": 1,
+    "verticals": [
+      "Deck Builder"
+    ],
+    "sources": [
+      "https://urban.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "editorial-field-manual-typography-layout",
+    "uses": 1,
+    "verticals": [
+      "Deck Builder"
+    ],
+    "sources": [
+      "https://urban.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "marquee-service-ticker-with-diamond-dividers",
+    "uses": 1,
+    "verticals": [
+      "Deck Builder"
+    ],
+    "sources": [
+      "https://urban.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "multi-step-floor-selector-configurator-widget",
+    "uses": 1,
+    "verticals": [
+      "Epoxy Flooring & Concrete Coatings"
+    ],
+    "sources": [
+      "https://shine-slab-selector.lovable.app/"
+    ]
+  },
+  {
+    "name": "dark-glassmorphism-hero-stats-card",
+    "uses": 1,
+    "verticals": [
+      "Epoxy Flooring & Concrete Coatings"
+    ],
+    "sources": [
+      "https://shine-slab-selector.lovable.app/"
+    ]
+  },
+  {
+    "name": "marquee-service-ticker-ribbon",
+    "uses": 1,
+    "verticals": [
+      "Epoxy Flooring & Concrete Coatings"
+    ],
+    "sources": [
+      "https://shine-slab-selector.lovable.app/"
+    ]
+  },
+  {
+    "name": "owner-on-every-job-trust-block-with-name-attribution",
+    "uses": 1,
+    "verticals": [
+      "Epoxy Flooring & Concrete Coatings"
+    ],
+    "sources": [
+      "https://shine-slab-selector.lovable.app/"
+    ]
+  },
+  {
+    "name": "high-contrast-condensed-display-typography-system",
+    "uses": 1,
+    "verticals": [
+      "Epoxy Flooring & Concrete Coatings"
+    ],
+    "sources": [
+      "https://shine-slab-selector.lovable.app/"
+    ]
+  },
+  {
+    "name": "numbered-wellness-board-grid-system (WP-01 format)",
+    "uses": 1,
+    "verticals": [
+      "Veterinary Services"
+    ],
+    "sources": [
+      "https://boise-pet-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "compassion-care-step-timeline (T-00 format)",
+    "uses": 1,
+    "verticals": [
+      "Veterinary Services"
+    ],
+    "sources": [
+      "https://boise-pet-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "pet-type-patient-configurator-tabs with tailored service lists",
+    "uses": 1,
+    "verticals": [
+      "Veterinary Services"
+    ],
+    "sources": [
+      "https://boise-pet-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "atlas-neighborhood-service-cards with 'Plan a Visit' deep-links",
+    "uses": 1,
+    "verticals": [
+      "Veterinary Services"
+    ],
+    "sources": [
+      "https://boise-pet-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "appointment-concierge-form-with-pet-specific-metadata-fields",
+    "uses": 1,
+    "verticals": [
+      "Veterinary Services"
+    ],
+    "sources": [
+      "https://boise-pet-plan-build.lovable.app"
+    ]
+  },
+  {
+    "name": "interactive-project-router-tile-grid",
+    "uses": 1,
+    "verticals": [
+      "landscaping/handyman (Home Improvement)"
+    ],
+    "sources": [
+      "https://848propertyservices.com/"
+    ]
+  },
+  {
+    "name": "cinematic-status-bar-with-local-time-and-file-number",
+    "uses": 1,
+    "verticals": [
+      "landscaping/handyman (Home Improvement)"
+    ],
+    "sources": [
+      "https://848propertyservices.com/"
+    ]
+  },
+  {
+    "name": "numbered-faq-accordion-with-plus-toggle",
+    "uses": 1,
+    "verticals": [
+      "landscaping/handyman (Home Improvement)"
+    ],
+    "sources": [
+      "https://848propertyservices.com/"
+    ]
+  },
+  {
+    "name": "marquee-service-ticker-with-diamond-stars",
+    "uses": 1,
+    "verticals": [
+      "landscaping/handyman (Home Improvement)"
+    ],
+    "sources": [
+      "https://848propertyservices.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-grid-texture-overlay",
+    "uses": 1,
+    "verticals": [
+      "landscaping/handyman (Home Improvement)"
+    ],
+    "sources": [
+      "https://848propertyservices.com/"
+    ]
+  },
+  {
+    "name": "stats-band-with-thin-divider-lines",
+    "uses": 1,
+    "verticals": [
+      "landscaping/handyman (Home Improvement)"
+    ],
+    "sources": [
+      "https://848propertyservices.com/"
+    ]
+  },
+  {
+    "name": "editorial-polaroid-stack-hero-composition",
+    "uses": 1,
+    "verticals": [
+      "landscaping and property maintenance"
+    ],
+    "sources": [
+      "https://razzle-dazzle-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "interactive-service-ticket-configurator",
+    "uses": 1,
+    "verticals": [
+      "landscaping and property maintenance"
+    ],
+    "sources": [
+      "https://razzle-dazzle-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "blueprint-grid-paper-background-system",
+    "uses": 1,
+    "verticals": [
+      "landscaping and property maintenance"
+    ],
+    "sources": [
+      "https://razzle-dazzle-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "high-contrast-serif-italic-headline-blend",
+    "uses": 1,
+    "verticals": [
+      "landscaping and property maintenance"
+    ],
+    "sources": [
+      "https://razzle-dazzle-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "masonry-portfolio-with-metadata-labels",
+    "uses": 1,
+    "verticals": [
+      "landscaping and property maintenance"
+    ],
+    "sources": [
+      "https://razzle-dazzle-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "stats-ticker-with-all-caps-micro-labels",
+    "uses": 1,
+    "verticals": [
+      "landscaping and property maintenance"
+    ],
+    "sources": [
+      "https://razzle-dazzle-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "scope-builder-configurator-with-tree-dials",
+    "uses": 1,
+    "verticals": [
+      "landscaping (arborist/tree-service)"
+    ],
+    "sources": [
+      "https://favoritetreeservice.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-split-widget-layout",
+    "uses": 1,
+    "verticals": [
+      "landscaping (arborist/tree-service)"
+    ],
+    "sources": [
+      "https://favoritetreeservice.com/"
+    ]
+  },
+  {
+    "name": "hiring-guide-checklist-with-safety-focus",
+    "uses": 1,
+    "verticals": [
+      "landscaping (arborist/tree-service)"
+    ],
+    "sources": [
+      "https://favoritetreeservice.com/"
+    ]
+  },
+  {
+    "name": "field-archive-masonry-gallery-with-serial-numbers",
+    "uses": 1,
+    "verticals": [
+      "landscaping (arborist/tree-service)"
+    ],
+    "sources": [
+      "https://favoritetreeservice.com/"
+    ]
+  },
+  {
+    "name": "arborist-specific-pricing-factor-grid",
+    "uses": 1,
+    "verticals": [
+      "landscaping (arborist/tree-service)"
+    ],
+    "sources": [
+      "https://favoritetreeservice.com/"
+    ]
+  },
+  {
+    "name": "hero-split-with-timeline-configurator-card",
+    "uses": 1,
+    "verticals": [
+      "handyman-remodeling"
+    ],
+    "sources": [
+      "https://custom-craft-scroll.lovable.app"
+    ]
+  },
+  {
+    "name": "scrolling-diamond-separator-marquee",
+    "uses": 1,
+    "verticals": [
+      "handyman-remodeling"
+    ],
+    "sources": [
+      "https://custom-craft-scroll.lovable.app"
+    ]
+  },
+  {
+    "name": "gps-coordinate-typography-eyebrow",
+    "uses": 1,
+    "verticals": [
+      "handyman-remodeling"
+    ],
+    "sources": [
+      "https://custom-craft-scroll.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-to-cream-section-transition-cinematic",
+    "uses": 1,
+    "verticals": [
+      "handyman-remodeling"
+    ],
+    "sources": [
+      "https://custom-craft-scroll.lovable.app"
+    ]
+  },
+  {
+    "name": "horizontal-numbered-process-steps",
+    "uses": 1,
+    "verticals": [
+      "handyman-remodeling"
+    ],
+    "sources": [
+      "https://custom-craft-scroll.lovable.app"
+    ]
+  },
+  {
+    "name": "contact-footer-with-embedded-google-map-pin",
+    "uses": 1,
+    "verticals": [
+      "handyman-remodeling"
+    ],
+    "sources": [
+      "https://custom-craft-scroll.lovable.app"
+    ]
+  },
+  {
+    "name": "showroom-widget-with-live-status-and-sms-router",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Outlet"
+    ],
+    "sources": [
+      "https://mattressfurnitureoutletri.com/"
+    ]
+  },
+  {
+    "name": "financing-estimate-slider-with-fixed-deposit-logic",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Outlet"
+    ],
+    "sources": [
+      "https://mattressfurnitureoutletri.com/"
+    ]
+  },
+  {
+    "name": "zip-code-service-area-lookup-card",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Outlet"
+    ],
+    "sources": [
+      "https://mattressfurnitureoutletri.com/"
+    ]
+  },
+  {
+    "name": "social-proof-strip-with-source-percentage-ratings",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Outlet"
+    ],
+    "sources": [
+      "https://mattressfurnitureoutletri.com/"
+    ]
+  },
+  {
+    "name": "real-customer-gallery-with-caption-cards",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Outlet"
+    ],
+    "sources": [
+      "https://mattressfurnitureoutletri.com/"
+    ]
+  },
+  {
+    "name": "buying-guide-reading-list-strip",
+    "uses": 1,
+    "verticals": [
+      "Mattress & Furniture Outlet"
+    ],
+    "sources": [
+      "https://mattressfurnitureoutletri.com/"
+    ]
+  },
+  {
+    "name": "six-step-campaign-rhythm-process-timeline",
+    "uses": 1,
+    "verticals": [
+      "B2B Telemarketing & Lead Generation"
+    ],
+    "sources": [
+      "https://businessbuilderssolutionsllc.com/"
+    ]
+  },
+  {
+    "name": "signature-founder-philosophy-editorial-block",
+    "uses": 1,
+    "verticals": [
+      "B2B Telemarketing & Lead Generation"
+    ],
+    "sources": [
+      "https://businessbuilderssolutionsllc.com/"
+    ]
+  },
+  {
+    "name": "industry-segmentation-grid-smb-midmarket-enterprise",
+    "uses": 1,
+    "verticals": [
+      "B2B Telemarketing & Lead Generation"
+    ],
+    "sources": [
+      "https://businessbuilderssolutionsllc.com/"
+    ]
+  },
+  {
+    "name": "sticky-pill-header-cta-button",
+    "uses": 1,
+    "verticals": [
+      "B2B Telemarketing & Lead Generation"
+    ],
+    "sources": [
+      "https://businessbuilderssolutionsllc.com/"
+    ]
+  },
+  {
+    "name": "serif-display-sans-body-high-contrast-pairing",
+    "uses": 1,
+    "verticals": [
+      "B2B Telemarketing & Lead Generation"
+    ],
+    "sources": [
+      "https://businessbuilderssolutionsllc.com/"
+    ]
+  },
+  {
+    "name": "jobsite-scope-console-status-dashboard",
+    "uses": 1,
+    "verticals": [
+      "Demolition & Excavation"
+    ],
+    "sources": [
+      "https://cyclonedemolitionandexcavating.com/"
+    ]
+  },
+  {
+    "name": "tactical-coordinate-and-dispatch-hero-labels",
+    "uses": 1,
+    "verticals": [
+      "Demolition & Excavation"
+    ],
+    "sources": [
+      "https://cyclonedemolitionandexcavating.com/"
+    ]
+  },
+  {
+    "name": "construction-orange-caution-stripe-accents",
+    "uses": 1,
+    "verticals": [
+      "Demolition & Excavation"
+    ],
+    "sources": [
+      "https://cyclonedemolitionandexcavating.com/"
+    ]
+  },
+  {
+    "name": "marquee-service-category-ticker",
+    "uses": 1,
+    "verticals": [
+      "Demolition & Excavation"
+    ],
+    "sources": [
+      "https://cyclonedemolitionandexcavating.com/"
+    ]
+  },
+  {
+    "name": "multi-step-project-intake-router-configurator",
+    "uses": 1,
+    "verticals": [
+      "Demolition & Excavation"
+    ],
+    "sources": [
+      "https://cyclonedemolitionandexcavating.com/"
+    ]
+  },
+  {
+    "name": "hurley-service-atlas-card-with-neighborhood-pins",
+    "uses": 1,
+    "verticals": [
+      "landscaping (asphalt paving)"
+    ],
+    "sources": [
+      "https://hurleyasphalt.com/"
+    ]
+  },
+  {
+    "name": "seasonal-prime-paving-calendar-widget",
+    "uses": 1,
+    "verticals": [
+      "landscaping (asphalt paving)"
+    ],
+    "sources": [
+      "https://hurleyasphalt.com/"
+    ]
+  },
+  {
+    "name": "4-step-estimate-configurator-with-property-tiles",
+    "uses": 1,
+    "verticals": [
+      "landscaping (asphalt paving)"
+    ],
+    "sources": [
+      "https://hurleyasphalt.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-fraunces-italic-accents",
+    "uses": 1,
+    "verticals": [
+      "landscaping (asphalt paving)"
+    ],
+    "sources": [
+      "https://hurleyasphalt.com/"
+    ]
+  },
+  {
+    "name": "institutional-client-trust-marquee",
+    "uses": 1,
+    "verticals": [
+      "landscaping (asphalt paving)"
+    ],
+    "sources": [
+      "https://hurleyasphalt.com/"
+    ]
+  },
+  {
+    "name": "process-step-grid-with-cream-paper-cards",
+    "uses": 1,
+    "verticals": [
+      "landscaping (asphalt paving)"
+    ],
+    "sources": [
+      "https://hurleyasphalt.com/"
+    ]
+  },
+  {
+    "name": "industrial-glass-estimator-widget",
+    "uses": 1,
+    "verticals": [
+      "landscaping (excavation focus)"
+    ],
+    "sources": [
+      "https://knk-earth-shapers.lovable.app"
+    ]
+  },
+  {
+    "name": "blueprint-style-eyebrow-labels",
+    "uses": 1,
+    "verticals": [
+      "landscaping (excavation focus)"
+    ],
+    "sources": [
+      "https://knk-earth-shapers.lovable.app"
+    ]
+  },
+  {
+    "name": "heavy-industrial-dark-hero",
+    "uses": 1,
+    "verticals": [
+      "landscaping (excavation focus)"
+    ],
+    "sources": [
+      "https://knk-earth-shapers.lovable.app"
+    ]
+  },
+  {
+    "name": "construction-yellow-accent-system",
+    "uses": 1,
+    "verticals": [
+      "landscaping (excavation focus)"
+    ],
+    "sources": [
+      "https://knk-earth-shapers.lovable.app"
+    ]
+  },
+  {
+    "name": "marquee-service-ticker-strip",
+    "uses": 1,
+    "verticals": [
+      "landscaping (excavation focus)"
+    ],
+    "sources": [
+      "https://knk-earth-shapers.lovable.app"
+    ]
+  },
+  {
+    "name": "atlas-style-service-area-grid",
+    "uses": 1,
+    "verticals": [
+      "landscaping (excavation focus)"
+    ],
+    "sources": [
+      "https://knk-earth-shapers.lovable.app"
+    ]
+  },
+  {
+    "name": "proof-wall-horizontal-carousel",
+    "uses": 1,
+    "verticals": [
+      "landscaping / roofing / exterior contracting"
+    ],
+    "sources": [
+      "https://dazzle-site-shaper.lovable.app"
+    ]
+  },
+  {
+    "name": "multi-step-service-brief-configurator",
+    "uses": 1,
+    "verticals": [
+      "landscaping / roofing / exterior contracting"
+    ],
+    "sources": [
+      "https://dazzle-site-shaper.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-cinematic-photo-hero-with-floating-contact-pills",
+    "uses": 1,
+    "verticals": [
+      "landscaping / roofing / exterior contracting"
+    ],
+    "sources": [
+      "https://dazzle-site-shaper.lovable.app"
+    ]
+  },
+  {
+    "name": "service-marquee-ticker-strip",
+    "uses": 1,
+    "verticals": [
+      "landscaping / roofing / exterior contracting"
+    ],
+    "sources": [
+      "https://dazzle-site-shaper.lovable.app"
+    ]
+  },
+  {
+    "name": "process-timeline-with-roman-numerals",
+    "uses": 1,
+    "verticals": [
+      "landscaping / roofing / exterior contracting"
+    ],
+    "sources": [
+      "https://dazzle-site-shaper.lovable.app"
+    ]
+  },
+  {
+    "name": "location-grid-with-direct-contact-pills",
+    "uses": 1,
+    "verticals": [
+      "landscaping / roofing / exterior contracting"
+    ],
+    "sources": [
+      "https://dazzle-site-shaper.lovable.app"
+    ]
+  },
+  {
+    "name": "blueprint-data-overlay-hero-markers (Sheet A-01, Scale 1:50, Coordinates)",
+    "uses": 1,
+    "verticals": [
+      "concrete-construction-and-demolition"
+    ],
+    "sources": [
+      "https://essence-reshaper-lab.lovable.app/"
+    ]
+  },
+  {
+    "name": "ticket-styled-intake-form-with-numbered-rows",
+    "uses": 1,
+    "verticals": [
+      "concrete-construction-and-demolition"
+    ],
+    "sources": [
+      "https://essence-reshaper-lab.lovable.app/"
+    ]
+  },
+  {
+    "name": "marquee-horizontal-service-ticker-with-diamond-separators",
+    "uses": 1,
+    "verticals": [
+      "concrete-construction-and-demolition"
+    ],
+    "sources": [
+      "https://essence-reshaper-lab.lovable.app/"
+    ]
+  },
+  {
+    "name": "section-heading-with-symbol-and-numbered-eyebrow (e.g. § 01 · CAPABILITIES)",
+    "uses": 1,
+    "verticals": [
+      "concrete-construction-and-demolition"
+    ],
+    "sources": [
+      "https://essence-reshaper-lab.lovable.app/"
+    ]
+  },
+  {
+    "name": "atlas-coordinates-footer-strip-with-radius-data",
+    "uses": 1,
+    "verticals": [
+      "concrete-construction-and-demolition"
+    ],
+    "sources": [
+      "https://essence-reshaper-lab.lovable.app/"
+    ]
+  },
+  {
+    "name": "repair-triage-multi-step-card",
+    "uses": 1,
+    "verticals": [
+      "handyman"
+    ],
+    "sources": [
+      "https://pinebeltrepairco.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-gold-accent-cta",
+    "uses": 1,
+    "verticals": [
+      "handyman"
+    ],
+    "sources": [
+      "https://pinebeltrepairco.com/"
+    ]
+  },
+  {
+    "name": "horizontal-scrolling-service-marquee",
+    "uses": 1,
+    "verticals": [
+      "handyman"
+    ],
+    "sources": [
+      "https://pinebeltrepairco.com/"
+    ]
+  },
+  {
+    "name": "four-step-process-timeline-with-numeric-labels",
+    "uses": 1,
+    "verticals": [
+      "handyman"
+    ],
+    "sources": [
+      "https://pinebeltrepairco.com/"
+    ]
+  },
+  {
+    "name": "split-editorial-portfolio-blocks",
+    "uses": 1,
+    "verticals": [
+      "handyman"
+    ],
+    "sources": [
+      "https://pinebeltrepairco.com/"
+    ]
+  },
+  {
+    "name": "atlas-style-neighborhood-service-list",
+    "uses": 1,
+    "verticals": [
+      "handyman"
+    ],
+    "sources": [
+      "https://pinebeltrepairco.com/"
+    ]
+  },
+  {
+    "name": "finish-advisor-multi-step-configurator-with-L1-L5-logic",
+    "uses": 1,
+    "verticals": [
+      "drywall and plastering services"
+    ],
+    "sources": [
+      "https://americandrywallandplasterllc.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-red-accents-and-serif-typography",
+    "uses": 1,
+    "verticals": [
+      "drywall and plastering services"
+    ],
+    "sources": [
+      "https://americandrywallandplasterllc.com/"
+    ]
+  },
+  {
+    "name": "process-timeline-with-bold-numeric-step-indicators",
+    "uses": 1,
+    "verticals": [
+      "drywall and plastering services"
+    ],
+    "sources": [
+      "https://americandrywallandplasterllc.com/"
+    ]
+  },
+  {
+    "name": "masonry-craftsmanship-gallery-with-lightbox",
+    "uses": 1,
+    "verticals": [
+      "drywall and plastering services"
+    ],
+    "sources": [
+      "https://americandrywallandplasterllc.com/"
+    ]
+  },
+  {
+    "name": "trust-signal-chip-band-with-family-owned-badge",
+    "uses": 1,
+    "verticals": [
+      "drywall and plastering services"
+    ],
+    "sources": [
+      "https://americandrywallandplasterllc.com/"
+    ]
+  },
+  {
+    "name": "sticky-cta-footer-with-multi-contact-options",
+    "uses": 1,
+    "verticals": [
+      "drywall and plastering services"
+    ],
+    "sources": [
+      "https://americandrywallandplasterllc.com/"
+    ]
+  },
+  {
+    "name": "i81-response-status-board-widget",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://roadie-rocket-launch.lovable.app/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-emergency-hero-with-red-pulsing-eyebrow",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://roadie-rocket-launch.lovable.app/"
+    ]
+  },
+  {
+    "name": "highway-exit-service-area-map-badge-grid",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://roadie-rocket-launch.lovable.app/"
+    ]
+  },
+  {
+    "name": "emergency-safety-checklist-cards",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://roadie-rocket-launch.lovable.app/"
+    ]
+  },
+  {
+    "name": "indicative-pricing-list-dark-mode",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://roadie-rocket-launch.lovable.app/"
+    ]
+  },
+  {
+    "name": "sticky-mobile-emergency-call-bar",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://roadie-rocket-launch.lovable.app/"
+    ]
+  },
+  {
+    "name": "fma-angle-numbering-interactive-library",
+    "uses": 1,
+    "verticals": [
+      "martial-arts-training"
+    ],
+    "sources": [
+      "https://blade-discipline-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "six-beats-daily-immersion-schedule-block",
+    "uses": 1,
+    "verticals": [
+      "martial-arts-training"
+    ],
+    "sources": [
+      "https://blade-discipline-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-cinematic-video-frame-grid",
+    "uses": 1,
+    "verticals": [
+      "martial-arts-training"
+    ],
+    "sources": [
+      "https://blade-discipline-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "expedition-map-with-seal-pins",
+    "uses": 1,
+    "verticals": [
+      "martial-arts-training"
+    ],
+    "sources": [
+      "https://blade-discipline-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "edge-progression-tabbed-timeline",
+    "uses": 1,
+    "verticals": [
+      "martial-arts-training"
+    ],
+    "sources": [
+      "https://blade-discipline-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "minimalist-gold-accent-sticky-cta-bar",
+    "uses": 1,
+    "verticals": [
+      "martial-arts-training"
+    ],
+    "sources": [
+      "https://blade-discipline-forge.lovable.app"
+    ]
+  },
+  {
+    "name": "cinematic-media-card-with-metadata-badges (Rating, Year, Votes)",
+    "uses": 1,
+    "verticals": [
+      "Entertainment Discovery Platform"
+    ],
+    "sources": [
+      "https://airingtoday.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "horizontal-scrolling-category-carousel-system",
+    "uses": 1,
+    "verticals": [
+      "Entertainment Discovery Platform"
+    ],
+    "sources": [
+      "https://airingtoday.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "interactive-surprise-me-content-randomizer-widget",
+    "uses": 1,
+    "verticals": [
+      "Entertainment Discovery Platform"
+    ],
+    "sources": [
+      "https://airingtoday.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "dark-mode-high-contrast-entertainment-ui-kit",
+    "uses": 1,
+    "verticals": [
+      "Entertainment Discovery Platform"
+    ],
+    "sources": [
+      "https://airingtoday.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "micro-label-tagging-system (Hidden Gem, High Score, Airing Today)",
+    "uses": 1,
+    "verticals": [
+      "Entertainment Discovery Platform"
+    ],
+    "sources": [
+      "https://airingtoday.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "virtual-farm-rewards-widget (Coco Grove)",
+    "uses": 1,
+    "verticals": [
+      "beverage-wellness"
+    ],
+    "sources": [
+      "https://cocolove.lovable.app"
+    ]
+  },
+  {
+    "name": "product-card-with-custom-badge-and-add-to-cart",
+    "uses": 1,
+    "verticals": [
+      "beverage-wellness"
+    ],
+    "sources": [
+      "https://cocolove.lovable.app"
+    ]
+  },
+  {
+    "name": "floating-icon-marquee-divider",
+    "uses": 1,
+    "verticals": [
+      "beverage-wellness"
+    ],
+    "sources": [
+      "https://cocolove.lovable.app"
+    ]
+  },
+  {
+    "name": "stats-band-with-illustrated-numbers",
+    "uses": 1,
+    "verticals": [
+      "beverage-wellness"
+    ],
+    "sources": [
+      "https://cocolove.lovable.app"
+    ]
+  },
+  {
+    "name": "mission-split-section-with-icon-grid",
+    "uses": 1,
+    "verticals": [
+      "beverage-wellness"
+    ],
+    "sources": [
+      "https://cocolove.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-floating-product-composites",
+    "uses": 1,
+    "verticals": [
+      "beverage-wellness"
+    ],
+    "sources": [
+      "https://cocolove.lovable.app"
+    ]
+  },
+  {
+    "name": "cream-paper-studio-highlight-card",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and reiki)"
+    ],
+    "sources": [
+      "https://mantra-botanicals-wellness.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "serif-hero-with-cinematic-botanical-media",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and reiki)"
+    ],
+    "sources": [
+      "https://mantra-botanicals-wellness.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "dual-stat-modality-counter-badge",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and reiki)"
+    ],
+    "sources": [
+      "https://mantra-botanicals-wellness.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "split-editorial-wellness-guide-layout",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and reiki)"
+    ],
+    "sources": [
+      "https://mantra-botanicals-wellness.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "google-review-invitation-band-with-location-keywords",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and reiki)"
+    ],
+    "sources": [
+      "https://mantra-botanicals-wellness.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "disclaimer-in-short-text-block",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and reiki)"
+    ],
+    "sources": [
+      "https://mantra-botanicals-wellness.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "floating-badge-identity-widget-hero",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://deuceslandscapingexcavationllc.com/"
+    ]
+  },
+  {
+    "name": "sticky-owner-direct-call-badge-with-status-dot",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://deuceslandscapingexcavationllc.com/"
+    ]
+  },
+  {
+    "name": "high-contrast-gold-on-dark-cinematic-theme",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://deuceslandscapingexcavationllc.com/"
+    ]
+  },
+  {
+    "name": "detailed-county-service-area-grid",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://deuceslandscapingexcavationllc.com/"
+    ]
+  },
+  {
+    "name": "jobsite-photo-counter-gallery-strip",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://deuceslandscapingexcavationllc.com/"
+    ]
+  },
+  {
+    "name": "dark-mode-toggle-system",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://deuceslandscapingexcavationllc.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-integrated-lead-form",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair & Service"
+    ],
+    "sources": [
+      "https://otramobilerv.com/"
+    ]
+  },
+  {
+    "name": "technical-certification-badge-strip",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair & Service"
+    ],
+    "sources": [
+      "https://otramobilerv.com/"
+    ]
+  },
+  {
+    "name": "RV-specific-service-configurator-form",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair & Service"
+    ],
+    "sources": [
+      "https://otramobilerv.com/"
+    ]
+  },
+  {
+    "name": "sticky-mobile-phone-call-bar",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair & Service"
+    ],
+    "sources": [
+      "https://otramobilerv.com/"
+    ]
+  },
+  {
+    "name": "pricing-card-with-hourly-min-label",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair & Service"
+    ],
+    "sources": [
+      "https://otramobilerv.com/"
+    ]
+  },
+  {
+    "name": "google-yelp-review-link-tiles",
+    "uses": 1,
+    "verticals": [
+      "Mobile RV Repair & Service"
+    ],
+    "sources": [
+      "https://otramobilerv.com/"
+    ]
+  },
+  {
+    "name": "job-command-hero-configurator-card",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://kaups-tree-service-tn.lovable.app"
+    ]
+  },
+  {
+    "name": "storm-shelter-cross-section-diagram-composition",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://kaups-tree-service-tn.lovable.app"
+    ]
+  },
+  {
+    "name": "atlas-service-map-with-regional-location-pins",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://kaups-tree-service-tn.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-forest-hero-with-grain-and-amber-pill-buttons",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://kaups-tree-service-tn.lovable.app"
+    ]
+  },
+  {
+    "name": "numbered-step-process-timeline-with-outline-numbers",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://kaups-tree-service-tn.lovable.app"
+    ]
+  },
+  {
+    "name": "trust-badge-marquee-strip",
+    "uses": 1,
+    "verticals": [
+      "landscaping-and-excavation"
+    ],
+    "sources": [
+      "https://kaups-tree-service-tn.lovable.app"
+    ]
+  },
+  {
+    "name": "service-area-pill-grid",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and holistic therapy)"
+    ],
+    "sources": [
+      "https://mantra.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "cinematic-editorial-service-card-with-overlay-labels",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and holistic therapy)"
+    ],
+    "sources": [
+      "https://mantra.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "vertical-process-timeline-with-number-badges",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and holistic therapy)"
+    ],
+    "sources": [
+      "https://mantra.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "floating-map-info-cards-overlay",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and holistic therapy)"
+    ],
+    "sources": [
+      "https://mantra.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "botanical-themed-testimonial-cards-with-stars",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and holistic therapy)"
+    ],
+    "sources": [
+      "https://mantra.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "forest-green-contact-form-split-with-disclaimer",
+    "uses": 1,
+    "verticals": [
+      "wellness (hypnosis and holistic therapy)"
+    ],
+    "sources": [
+      "https://mantra.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-floating-gallery-frames",
+    "uses": 1,
+    "verticals": [
+      "photography"
+    ],
+    "sources": [
+      "https://xaviers-cinematic-canvas.lovable.app"
+    ]
+  },
+  {
+    "name": "diamond-stats-strip-integrated-in-hero",
+    "uses": 1,
+    "verticals": [
+      "photography"
+    ],
+    "sources": [
+      "https://xaviers-cinematic-canvas.lovable.app"
+    ]
+  },
+  {
+    "name": "signed-photographer-letter-composition",
+    "uses": 1,
+    "verticals": [
+      "photography"
+    ],
+    "sources": [
+      "https://xaviers-cinematic-canvas.lovable.app"
+    ]
+  },
+  {
+    "name": "editorial-service-grid-with-hover-image-reveal",
+    "uses": 1,
+    "verticals": [
+      "photography"
+    ],
+    "sources": [
+      "https://xaviers-cinematic-canvas.lovable.app"
+    ]
+  },
+  {
+    "name": "high-contrast-serif-mixed-italic-headline",
+    "uses": 1,
+    "verticals": [
+      "photography"
+    ],
+    "sources": [
+      "https://xaviers-cinematic-canvas.lovable.app"
+    ]
+  },
+  {
+    "name": "signature-frame-gallery-counter",
+    "uses": 1,
+    "verticals": [
+      "photography"
+    ],
+    "sources": [
+      "https://xaviers-cinematic-canvas.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-particle-canvas-overlay",
+    "uses": 1,
+    "verticals": [
+      "luxury-black-car-service"
+    ],
+    "sources": [
+      "https://ride-luxe.lovable.app"
+    ]
+  },
+  {
+    "name": "luxury-gold-accented-service-grid-cards",
+    "uses": 1,
+    "verticals": [
+      "luxury-black-car-service"
+    ],
+    "sources": [
+      "https://ride-luxe.lovable.app"
+    ]
+  },
+  {
+    "name": "fleet-card-with-passenger-capacity-badge",
+    "uses": 1,
+    "verticals": [
+      "luxury-black-car-service"
+    ],
+    "sources": [
+      "https://ride-luxe.lovable.app"
+    ]
+  },
+  {
+    "name": "yelp-verified-testimonial-card-composition",
+    "uses": 1,
+    "verticals": [
+      "luxury-black-car-service"
+    ],
+    "sources": [
+      "https://ride-luxe.lovable.app"
+    ]
+  },
+  {
+    "name": "location-badge-service-area-grid",
+    "uses": 1,
+    "verticals": [
+      "luxury-black-car-service"
+    ],
+    "sources": [
+      "https://ride-luxe.lovable.app"
+    ]
+  },
+  {
+    "name": "signed-owner-style-footer-license-strip",
+    "uses": 1,
+    "verticals": [
+      "luxury-black-car-service"
+    ],
+    "sources": [
+      "https://ride-luxe.lovable.app"
+    ]
+  },
+  {
+    "name": "welcome-audio-quick-intro-widget",
+    "uses": 1,
+    "verticals": [
+      "Roadside Assistance & Automotive Services"
+    ],
+    "sources": [
+      "https://bananaroadside.com/"
+    ]
+  },
+  {
+    "name": "industrial-dark-hero-with-bebas-neue-typography",
+    "uses": 1,
+    "verticals": [
+      "Roadside Assistance & Automotive Services"
+    ],
+    "sources": [
+      "https://bananaroadside.com/"
+    ]
+  },
+  {
+    "name": "european-marque-luxury-logo-strip",
+    "uses": 1,
+    "verticals": [
+      "Roadside Assistance & Automotive Services"
+    ],
+    "sources": [
+      "https://bananaroadside.com/"
+    ]
+  },
+  {
+    "name": "verified-google-review-carousel-cards",
+    "uses": 1,
+    "verticals": [
+      "Roadside Assistance & Automotive Services"
+    ],
+    "sources": [
+      "https://bananaroadside.com/"
+    ]
+  },
+  {
+    "name": "neighborhood-chip-service-area-layout",
+    "uses": 1,
+    "verticals": [
+      "Roadside Assistance & Automotive Services"
+    ],
+    "sources": [
+      "https://bananaroadside.com/"
+    ]
+  },
+  {
+    "name": "yellow-accent-industrial-button-set",
+    "uses": 1,
+    "verticals": [
+      "Roadside Assistance & Automotive Services"
+    ],
+    "sources": [
+      "https://bananaroadside.com/"
+    ]
+  },
+  {
+    "name": "glassmorphism-instant-estimator-card",
+    "uses": 1,
+    "verticals": [
+      "landscaping (fencing)"
+    ],
+    "sources": [
+      "https://charmed-looks.lovable.app"
+    ]
+  },
+  {
+    "name": "filmstrip-process-timeline-widget",
+    "uses": 1,
+    "verticals": [
+      "landscaping (fencing)"
+    ],
+    "sources": [
+      "https://charmed-looks.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-floating-widget",
+    "uses": 1,
+    "verticals": [
+      "landscaping (fencing)"
+    ],
+    "sources": [
+      "https://charmed-looks.lovable.app"
+    ]
+  },
+  {
+    "name": "property-service-grid-with-status-eyebrows",
+    "uses": 1,
+    "verticals": [
+      "landscaping (fencing)"
+    ],
+    "sources": [
+      "https://charmed-looks.lovable.app"
+    ]
+  },
+  {
+    "name": "satellite-map-contact-split",
+    "uses": 1,
+    "verticals": [
+      "landscaping (fencing)"
+    ],
+    "sources": [
+      "https://charmed-looks.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-cinematic-roofing-configurator-hero",
+    "uses": 1,
+    "verticals": [
+      "roofing-restoration"
+    ],
+    "sources": [
+      "https://rise-above-roar.lovable.app"
+    ]
+  },
+  {
+    "name": "3D-metallic-branding-logo-composition",
+    "uses": 1,
+    "verticals": [
+      "roofing-restoration"
+    ],
+    "sources": [
+      "https://rise-above-roar.lovable.app"
+    ]
+  },
+  {
+    "name": "illustrated-atlas-service-map-with-neighborhood-links",
+    "uses": 1,
+    "verticals": [
+      "roofing-restoration"
+    ],
+    "sources": [
+      "https://rise-above-roar.lovable.app"
+    ]
+  },
+  {
+    "name": "glassmorphism-service-grid-cards",
+    "uses": 1,
+    "verticals": [
+      "roofing-restoration"
+    ],
+    "sources": [
+      "https://rise-above-roar.lovable.app"
+    ]
+  },
+  {
+    "name": "orange-accented-trust-chip-band",
+    "uses": 1,
+    "verticals": [
+      "roofing-restoration"
+    ],
+    "sources": [
+      "https://rise-above-roar.lovable.app"
+    ]
+  },
+  {
+    "name": "multi-step-lead-diagnostic-widget",
+    "uses": 1,
+    "verticals": [
+      "roofing-restoration"
+    ],
+    "sources": [
+      "https://rise-above-roar.lovable.app"
+    ]
+  },
+  {
+    "name": "technical-coordinate-eyebrow-label",
+    "uses": 1,
+    "verticals": [
+      "landscaping (Tree Care)"
+    ],
+    "sources": [
+      "https://all-aroundtreecare.com/"
+    ]
+  },
+  {
+    "name": "floating-dispatch-console-configurator-card",
+    "uses": 1,
+    "verticals": [
+      "landscaping (Tree Care)"
+    ],
+    "sources": [
+      "https://all-aroundtreecare.com/"
+    ]
+  },
+  {
+    "name": "tactical-sat-nav-service-atlas-map",
+    "uses": 1,
+    "verticals": [
+      "landscaping (Tree Care)"
+    ],
+    "sources": [
+      "https://all-aroundtreecare.com/"
+    ]
+  },
+  {
+    "name": "real-crew-field-proof-masonry-gallery",
+    "uses": 1,
+    "verticals": [
+      "landscaping (Tree Care)"
+    ],
+    "sources": [
+      "https://all-aroundtreecare.com/"
+    ]
+  },
+  {
+    "name": "cream-paper-forest-editorial-sections",
+    "uses": 1,
+    "verticals": [
+      "landscaping (Tree Care)"
+    ],
+    "sources": [
+      "https://all-aroundtreecare.com/"
+    ]
+  },
+  {
+    "name": "sticky-safety-orange-mobile-call-bar",
+    "uses": 1,
+    "verticals": [
+      "landscaping (Tree Care)"
+    ],
+    "sources": [
+      "https://all-aroundtreecare.com/"
+    ]
+  },
+  {
+    "name": "concentric-atlas-service-map-with-labels",
+    "uses": 1,
+    "verticals": [
+      "excavation and dirtwork"
+    ],
+    "sources": [
+      "https://velvet-razzle-sparkle.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-topographic-texture",
+    "uses": 1,
+    "verticals": [
+      "excavation and dirtwork"
+    ],
+    "sources": [
+      "https://velvet-razzle-sparkle.lovable.app"
+    ]
+  },
+  {
+    "name": "geographic-coordinate-micro-labeling",
+    "uses": 1,
+    "verticals": [
+      "excavation and dirtwork"
+    ],
+    "sources": [
+      "https://velvet-razzle-sparkle.lovable.app"
+    ]
+  },
+  {
+    "name": "grain-noise-overlay-system",
+    "uses": 1,
+    "verticals": [
+      "excavation and dirtwork"
+    ],
+    "sources": [
+      "https://velvet-razzle-sparkle.lovable.app"
+    ]
+  },
+  {
+    "name": "numbered-service-grid-with-slash-dividers",
+    "uses": 1,
+    "verticals": [
+      "excavation and dirtwork"
+    ],
+    "sources": [
+      "https://velvet-razzle-sparkle.lovable.app"
+    ]
+  },
+  {
+    "name": "glass-card-hero-with-status-badge",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://grounded-north-west.lovable.app"
+    ]
+  },
+  {
+    "name": "mesh-gradient-isolate-background",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://grounded-north-west.lovable.app"
+    ]
+  },
+  {
+    "name": "city-marquee-ticker-with-arrow-indicator",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://grounded-north-west.lovable.app"
+    ]
+  },
+  {
+    "name": "all-caps-micro-label-eyebrows",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://grounded-north-west.lovable.app"
+    ]
+  },
+  {
+    "name": "dark-county-grid-service-area-band",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://grounded-north-west.lovable.app"
+    ]
+  },
+  {
+    "name": "generac-authorized-dealer-footer-composition",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://grounded-north-west.lovable.app"
+    ]
+  },
+  {
+    "name": "canopy-care-triage-multi-step-tile-selector",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://nextstep-scroll-story.lovable.app"
+    ]
+  },
+  {
+    "name": "cinematic-split-editorial-hero-with-serif-display",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://nextstep-scroll-story.lovable.app"
+    ]
+  },
+  {
+    "name": "numbered-process-timeline-01-04-grid",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://nextstep-scroll-story.lovable.app"
+    ]
+  },
+  {
+    "name": "atlas-service-area-map-integration",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://nextstep-scroll-story.lovable.app"
+    ]
+  },
+  {
+    "name": "clean-faq-accordion-with-eyebrow-labels",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://nextstep-scroll-story.lovable.app"
+    ]
+  },
+  {
+    "name": "paper-textured-contact-band-with-large-action-links",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://nextstep-scroll-story.lovable.app"
+    ]
+  },
+  {
+    "name": "multi-step-comfort-triage-estimator-with-icons",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://missionmechanicalllc.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-hero-with-grain-noise-overlay",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://missionmechanicalllc.com/"
+    ]
+  },
+  {
+    "name": "service-area-neighborhood-list-grid",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://missionmechanicalllc.com/"
+    ]
+  },
+  {
+    "name": "integrated-google-satellite-map-service-atlas",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://missionmechanicalllc.com/"
+    ]
+  },
+  {
+    "name": "process-timeline-with-oversized-numbers",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://missionmechanicalllc.com/"
+    ]
+  },
+  {
+    "name": "signed-brand-footer-with-sitemap",
+    "uses": 1,
+    "verticals": [
+      "landscaping"
+    ],
+    "sources": [
+      "https://missionmechanicalllc.com/"
+    ]
+  },
+  {
+    "name": "dusk-sky-cinematic-hero-with-integrated-stats-band",
+    "uses": 1,
+    "verticals": [
+      "roofing"
+    ],
+    "sources": [
+      "https://may-roofing.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "numbered-01-04-process-stepper-timeline",
+    "uses": 1,
+    "verticals": [
+      "roofing"
+    ],
+    "sources": [
+      "https://may-roofing.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "city-chip-service-area-grid-with-map-iframe",
+    "uses": 1,
+    "verticals": [
+      "roofing"
+    ],
+    "sources": [
+      "https://may-roofing.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "magnetic-sweep-reliability-block",
+    "uses": 1,
+    "verticals": [
+      "roofing"
+    ],
+    "sources": [
+      "https://may-roofing.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "climate-specific-cold-weather-feature-cards",
+    "uses": 1,
+    "verticals": [
+      "roofing"
+    ],
+    "sources": [
+      "https://may-roofing.wss-ai.com/"
+    ]
+  },
+  {
+    "name": "technical-camera-metadata-ui-labels",
+    "uses": 1,
+    "verticals": [
+      "Photography (Wedding & Portrait)"
+    ],
+    "sources": [
+      "https://xphotography20.com/"
+    ]
+  },
+  {
+    "name": "sms-direct-booking-pricing-cards-with-prefill",
+    "uses": 1,
+    "verticals": [
+      "Photography (Wedding & Portrait)"
+    ],
+    "sources": [
+      "https://xphotography20.com/"
+    ]
+  },
+  {
+    "name": "editorial-founder-letter-with-mixed-serif-typography",
+    "uses": 1,
+    "verticals": [
+      "Photography (Wedding & Portrait)"
+    ],
+    "sources": [
+      "https://xphotography20.com/"
+    ]
+  },
+  {
+    "name": "gps-coordinate-location-branding-element",
+    "uses": 1,
+    "verticals": [
+      "Photography (Wedding & Portrait)"
+    ],
+    "sources": [
+      "https://xphotography20.com/"
+    ]
+  },
+  {
+    "name": "cinematic-photo-reel-with-index-counter",
+    "uses": 1,
+    "verticals": [
+      "Photography (Wedding & Portrait)"
+    ],
+    "sources": [
+      "https://xphotography20.com/"
+    ]
+  },
+  {
+    "name": "gold-italic-headline-accents",
+    "uses": 1,
+    "verticals": [
+      "Photography (Wedding & Portrait)"
+    ],
+    "sources": [
+      "https://xphotography20.com/"
+    ]
+  },
+  {
+    "name": "dark-cinematic-forest-hero-with-location-pill",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://grishabersarborcarewv.com/"
+    ]
+  },
+  {
+    "name": "multi-step-urgency-aware-service-estimator",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://grishabersarborcarewv.com/"
+    ]
+  },
+  {
+    "name": "cream-paper-interactive-tile-cards",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://grishabersarborcarewv.com/"
+    ]
+  },
+  {
+    "name": "kanawha-valley-neighborhood-link-grid",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://grishabersarborcarewv.com/"
+    ]
+  },
+  {
+    "name": "masonry-portfolio-with-location-captions",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://grishabersarborcarewv.com/"
+    ]
+  },
+  {
+    "name": "high-contrast-serif-display-typography-pair",
+    "uses": 1,
+    "verticals": [
+      "landscaping (tree services)"
+    ],
+    "sources": [
+      "https://grishabersarborcarewv.com/"
+    ]
+  },
+  {
+    "name": "live-try-it-ad-generator-input-with-tags",
+    "uses": 1,
+    "verticals": [
+      "AI Ad Automation & Publishing Platform"
+    ],
+    "sources": [
+      "https://ad-alchemy-studio-43.lovable.app"
+    ]
+  },
+  {
+    "name": "cinematic-dark-mode-vertical-service-stack",
+    "uses": 1,
+    "verticals": [
+      "AI Ad Automation & Publishing Platform"
+    ],
+    "sources": [
+      "https://ad-alchemy-studio-43.lovable.app"
+    ]
+  },
+  {
+    "name": "logo-marquee-with-platform-labels",
+    "uses": 1,
+    "verticals": [
+      "AI Ad Automation & Publishing Platform"
+    ],
+    "sources": [
+      "https://ad-alchemy-studio-43.lovable.app"
+    ]
+  },
+  {
+    "name": "glassmorphism-pricing-toggle-cards",
+    "uses": 1,
+    "verticals": [
+      "AI Ad Automation & Publishing Platform"
+    ],
+    "sources": [
+      "https://ad-alchemy-studio-43.lovable.app"
+    ]
+  },
+  {
+    "name": "stats-divider-with-micro-labels",
+    "uses": 1,
+    "verticals": [
+      "AI Ad Automation & Publishing Platform"
+    ],
+    "sources": [
+      "https://ad-alchemy-studio-43.lovable.app"
+    ]
+  },
+  {
+    "name": "cta-band-with-purple-gradient-glow",
+    "uses": 1,
+    "verticals": [
+      "AI Ad Automation & Publishing Platform"
+    ],
+    "sources": [
+      "https://ad-alchemy-studio-43.lovable.app"
+    ]
+  }
+]

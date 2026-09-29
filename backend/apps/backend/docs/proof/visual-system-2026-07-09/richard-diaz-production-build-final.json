@@ -1,0 +1,507 @@
+{
+  "ok": true,
+  "prospect_id": "richard-diaz-landscape",
+  "business_name": "Richard Diaz Landscape & Masonry",
+  "status": "previewed",
+  "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/ghost-report.json",
+  "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/",
+  "checkout_url": "https://ghost-agency-backend.vercel.app/api/checkout-link?token=eyJ2IjoxLCJleHAiOjE3ODc1MjcwNzMxMTQsImpvYl9pZCI6InNpdGVmb3JnZV9yaWNoYXJkLWRpYXotbGFuZHNjYXBlXzE3ODM2MzkwNzMxMTQiLCJwcm9zcGVjdF9pZCI6InJpY2hhcmQtZGlhei1sYW5kc2NhcGUiLCJidXNpbmVzc19uYW1lIjoiUmljaGFyZCBEaWF6IExhbmRzY2FwZSAmIE1hc29ucnkiLCJpbmR1c3RyeSI6ImxhbmRzY2FwaW5nIiwiY2l0eSI6Ik9yYW5nZSIsInN0YXRlIjoiQ0EifQ&sig=mJSXuUEm5T95yFffVkVRscZoEScKM5yP05vcgfyCjlA",
+  "renderer": "05-build-v7",
+  "required_renderer": "05-build-v7",
+  "qc_passed": true,
+  "grade": "B",
+  "persistence": "live_upsert",
+  "truth_packet": {
+    "meta": {
+      "version": "goldilocks.v1",
+      "source": "https://richarddiazlandscaping.com/",
+      "bounded": true,
+      "local_market_status": "not_configured"
+    },
+    "identity": {
+      "name": {
+        "value": "Richard Diaz Landscape & Masonry",
+        "confidence": 0.99
+      },
+      "phone": {
+        "value": "(714) 673-2643",
+        "confidence": 0.99
+      },
+      "address": {
+        "value": "633 North Heatherstone Drive, Orange, CA 92869",
+        "confidence": 0.98
+      },
+      "city": {
+        "value": "Orange",
+        "confidence": 0.99
+      },
+      "state": {
+        "value": "CA",
+        "confidence": 0.99
+      },
+      "category": {
+        "value": "landscaping",
+        "confidence": 0.99
+      }
+    },
+    "napConsistency": {
+      "consistent": false,
+      "checks": [
+        {
+          "field": "phone",
+          "match": false,
+          "site": "(480) 692-9646",
+          "other": "(714) 673-2643"
+        }
+      ],
+      "mismatches": [
+        {
+          "field": "phone",
+          "site": "(480) 692-9646",
+          "other": "(714) 673-2643"
+        }
+      ]
+    },
+    "logo": "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/IMG_3283-Richard-Diaz.png",
+    "photos": [
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/masonry-67f02b2002118-e1771881308671.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/custom-landscape-design-67f02b67e57ac.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s1.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s2-67f0258ed6d4d.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s3-67f0256fedb4a.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s4-67f0258c58c74.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s5-67f0258902f73.webp",
+      "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s6.webp"
+    ],
+    "services": [
+      "Landscape design",
+      "Masonry",
+      "Hardscaping",
+      "Concrete",
+      "Retaining and block walls",
+      "Pavers",
+      "Outdoor kitchens and BBQs",
+      "Pergolas"
+    ],
+    "reviewThemes": {
+      "count": 33,
+      "themes": [],
+      "quotes": []
+    },
+    "opportunities": [
+      {
+        "type": "nap_mismatch",
+        "severity": "high",
+        "headline": "The website phone does not match the Google business profile",
+        "detail": "The site header shows (480) 692-9646 while the Google profile and primary contact use (714) 673-2643."
+      }
+    ],
+    "counts": {
+      "photos": 8,
+      "services": 8,
+      "reviews": 33
+    },
+    "latlng": {
+      "lat": 33.7976494,
+      "lng": -117.8101447
+    },
+    "localSearchPlan": {
+      "version": "local-search-plan.v1",
+      "status": "candidate_only",
+      "claimLevel": "planned",
+      "location": {
+        "city": "Orange",
+        "state": "CA",
+        "coordinatesVerified": true
+      },
+      "targetTerms": [
+        {
+          "term": "landscape design orange",
+          "intent": "service-and-location",
+          "evidence": "candidate"
+        },
+        {
+          "term": "masonry orange",
+          "intent": "service-and-location",
+          "evidence": "candidate"
+        },
+        {
+          "term": "hardscaping orange",
+          "intent": "service-and-location",
+          "evidence": "candidate"
+        },
+        {
+          "term": "concrete orange",
+          "intent": "service-and-location",
+          "evidence": "candidate"
+        },
+        {
+          "term": "retaining and block walls orange",
+          "intent": "service-and-location",
+          "evidence": "candidate"
+        },
+        {
+          "term": "pavers orange",
+          "intent": "service-and-location",
+          "evidence": "candidate"
+        }
+      ],
+      "trustSignals": [
+        {
+          "key": "business_profile",
+          "label": "Verified business profile",
+          "status": "found",
+          "detail": "A public business profile was matched to this company.",
+          "action": "Connect the verified identity, hours, location, and customer actions to the website."
+        },
+        {
+          "key": "contact_consistency",
+          "label": "Name, address, and phone consistency",
+          "status": "needs_attention",
+          "detail": "1 contact detail mismatch found.",
+          "action": "Use one verified identity in visible contact details, maps, and structured business data."
+        },
+        {
+          "key": "reviews",
+          "label": "Review and reputation proof",
+          "status": "not_verified",
+          "detail": "No review count was verified in this intake.",
+          "action": "Use only sourced ratings, counts, themes, or quotes at decision points."
+        },
+        {
+          "key": "citations",
+          "label": "Directory and citation signals",
+          "status": "not_verified",
+          "detail": "Directory matches are waiting for local-market enrichment.",
+          "action": "Carry verified trust references into the launch checklist without copying unsupported claims."
+        },
+        {
+          "key": "coordinates",
+          "label": "Map and nearby-search context",
+          "status": "found",
+          "detail": "A verified location or coordinate pair is available.",
+          "action": "Add satellite directions, geographic business markup, and one honest service-area page."
+        },
+        {
+          "key": "structured_data",
+          "label": "Search and AI understanding",
+          "status": "not_verified",
+          "detail": "Current structured data coverage was not assumed.",
+          "action": "Publish matching business, service, FAQ, breadcrumb, website, and geographic markup."
+        },
+        {
+          "key": "answer_content",
+          "label": "Conversational and voice-search answers",
+          "status": "not_verified",
+          "detail": "Current question coverage was not assumed.",
+          "action": "Answer a short set of buying questions in visible copy that can also be read by search and voice tools."
+        },
+        {
+          "key": "social_profiles",
+          "label": "Connected public profiles",
+          "status": "not_verified",
+          "detail": "No public social profile was verified in this intake.",
+          "action": "Connect only sourced profiles to reinforce the same business identity."
+        }
+      ],
+      "citations": [],
+      "currentVisibility": {
+        "measured": false,
+        "termsMeasured": 0,
+        "top10Terms": 0
+      },
+      "contentPlan": {
+        "servicePages": 4,
+        "serviceAreaPages": 1,
+        "faqQuestions": 6,
+        "principle": "one_compact_local_chapter"
+      },
+      "limits": {
+        "targetTerms": 6,
+        "servicePages": 4,
+        "serviceAreaPages": 1,
+        "faqQuestions": 6
+      },
+      "launchWork": [
+        "verified business identity and contact consistency",
+        "local service titles and page descriptions",
+        "business, service, FAQ, breadcrumb, website, and geographic markup",
+        "satellite map, directions, and verified coordinates when available",
+        "short conversational answers for search, AI, and voice discovery",
+        "sourced reviews, directories, and public profiles only"
+      ],
+      "generatedAt": "2026-07-09T23:17:53.114Z"
+    }
+  },
+  "dispatch": {
+    "mode": "http_dispatch",
+    "configured": true,
+    "ok": true,
+    "status": 200,
+    "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/ghost-report.json",
+    "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/",
+    "ready": true,
+    "renderer": "05-build-v7",
+    "required_renderer": "05-build-v7",
+    "qc_passed": true,
+    "grade": "B",
+    "score": 89,
+    "blocked": []
+  },
+  "prospect": {
+    "id": "richard-diaz-landscape",
+    "prospect_id": "richard-diaz-landscape",
+    "businessName": "Richard Diaz Landscape & Masonry",
+    "business_name": "Richard Diaz Landscape & Masonry",
+    "industry": "landscaping",
+    "city": "Orange",
+    "state": "CA",
+    "ownerEmail": "",
+    "email": "",
+    "phone": "(714) 673-2643",
+    "address": "633 North Heatherstone Drive, Orange, CA 92869",
+    "place_id": "ChIJK8sV71Lb3IARY5sNO69fenc",
+    "latlng": {
+      "lat": 33.7976494,
+      "lng": -117.8101447
+    },
+    "currentWebsite": "https://richarddiazlandscaping.com/",
+    "current_website": "https://richarddiazlandscaping.com/",
+    "services": [
+      "Landscape design",
+      "Masonry",
+      "Hardscaping",
+      "Concrete",
+      "Retaining and block walls",
+      "Pavers",
+      "Outdoor kitchens and BBQs",
+      "Pergolas"
+    ],
+    "source": "golden_richard_build_only",
+    "truth_packet": {
+      "meta": {
+        "version": "goldilocks.v1",
+        "source": "https://richarddiazlandscaping.com/",
+        "bounded": true,
+        "local_market_status": "not_configured"
+      },
+      "identity": {
+        "name": {
+          "value": "Richard Diaz Landscape & Masonry",
+          "confidence": 0.99
+        },
+        "phone": {
+          "value": "(714) 673-2643",
+          "confidence": 0.99
+        },
+        "address": {
+          "value": "633 North Heatherstone Drive, Orange, CA 92869",
+          "confidence": 0.98
+        },
+        "city": {
+          "value": "Orange",
+          "confidence": 0.99
+        },
+        "state": {
+          "value": "CA",
+          "confidence": 0.99
+        },
+        "category": {
+          "value": "landscaping",
+          "confidence": 0.99
+        }
+      },
+      "napConsistency": {
+        "consistent": false,
+        "checks": [
+          {
+            "field": "phone",
+            "match": false,
+            "site": "(480) 692-9646",
+            "other": "(714) 673-2643"
+          }
+        ],
+        "mismatches": [
+          {
+            "field": "phone",
+            "site": "(480) 692-9646",
+            "other": "(714) 673-2643"
+          }
+        ]
+      },
+      "logo": "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/IMG_3283-Richard-Diaz.png",
+      "photos": [
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/masonry-67f02b2002118-e1771881308671.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/custom-landscape-design-67f02b67e57ac.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s1.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s2-67f0258ed6d4d.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s3-67f0256fedb4a.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s4-67f0258c58c74.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s5-67f0258902f73.webp",
+        "https://richarddiazlandscaping.com/wp-content/uploads/2025/04/s6.webp"
+      ],
+      "services": [
+        "Landscape design",
+        "Masonry",
+        "Hardscaping",
+        "Concrete",
+        "Retaining and block walls",
+        "Pavers",
+        "Outdoor kitchens and BBQs",
+        "Pergolas"
+      ],
+      "reviewThemes": {
+        "count": 33,
+        "themes": [],
+        "quotes": []
+      },
+      "opportunities": [
+        {
+          "type": "nap_mismatch",
+          "severity": "high",
+          "headline": "The website phone does not match the Google business profile",
+          "detail": "The site header shows (480) 692-9646 while the Google profile and primary contact use (714) 673-2643."
+        }
+      ],
+      "counts": {
+        "photos": 8,
+        "services": 8,
+        "reviews": 33
+      },
+      "latlng": {
+        "lat": 33.7976494,
+        "lng": -117.8101447
+      },
+      "localSearchPlan": {
+        "version": "local-search-plan.v1",
+        "status": "candidate_only",
+        "claimLevel": "planned",
+        "location": {
+          "city": "Orange",
+          "state": "CA",
+          "coordinatesVerified": true
+        },
+        "targetTerms": [
+          {
+            "term": "landscape design orange",
+            "intent": "service-and-location",
+            "evidence": "candidate"
+          },
+          {
+            "term": "masonry orange",
+            "intent": "service-and-location",
+            "evidence": "candidate"
+          },
+          {
+            "term": "hardscaping orange",
+            "intent": "service-and-location",
+            "evidence": "candidate"
+          },
+          {
+            "term": "concrete orange",
+            "intent": "service-and-location",
+            "evidence": "candidate"
+          },
+          {
+            "term": "retaining and block walls orange",
+            "intent": "service-and-location",
+            "evidence": "candidate"
+          },
+          {
+            "term": "pavers orange",
+            "intent": "service-and-location",
+            "evidence": "candidate"
+          }
+        ],
+        "trustSignals": [
+          {
+            "key": "business_profile",
+            "label": "Verified business profile",
+            "status": "found",
+            "detail": "A public business profile was matched to this company.",
+            "action": "Connect the verified identity, hours, location, and customer actions to the website."
+          },
+          {
+            "key": "contact_consistency",
+            "label": "Name, address, and phone consistency",
+            "status": "needs_attention",
+            "detail": "1 contact detail mismatch found.",
+            "action": "Use one verified identity in visible contact details, maps, and structured business data."
+          },
+          {
+            "key": "reviews",
+            "label": "Review and reputation proof",
+            "status": "not_verified",
+            "detail": "No review count was verified in this intake.",
+            "action": "Use only sourced ratings, counts, themes, or quotes at decision points."
+          },
+          {
+            "key": "citations",
+            "label": "Directory and citation signals",
+            "status": "not_verified",
+            "detail": "Directory matches are waiting for local-market enrichment.",
+            "action": "Carry verified trust references into the launch checklist without copying unsupported claims."
+          },
+          {
+            "key": "coordinates",
+            "label": "Map and nearby-search context",
+            "status": "found",
+            "detail": "A verified location or coordinate pair is available.",
+            "action": "Add satellite directions, geographic business markup, and one honest service-area page."
+          },
+          {
+            "key": "structured_data",
+            "label": "Search and AI understanding",
+            "status": "not_verified",
+            "detail": "Current structured data coverage was not assumed.",
+            "action": "Publish matching business, service, FAQ, breadcrumb, website, and geographic markup."
+          },
+          {
+            "key": "answer_content",
+            "label": "Conversational and voice-search answers",
+            "status": "not_verified",
+            "detail": "Current question coverage was not assumed.",
+            "action": "Answer a short set of buying questions in visible copy that can also be read by search and voice tools."
+          },
+          {
+            "key": "social_profiles",
+            "label": "Connected public profiles",
+            "status": "not_verified",
+            "detail": "No public social profile was verified in this intake.",
+            "action": "Connect only sourced profiles to reinforce the same business identity."
+          }
+        ],
+        "citations": [],
+        "currentVisibility": {
+          "measured": false,
+          "termsMeasured": 0,
+          "top10Terms": 0
+        },
+        "contentPlan": {
+          "servicePages": 4,
+          "serviceAreaPages": 1,
+          "faqQuestions": 6,
+          "principle": "one_compact_local_chapter"
+        },
+        "limits": {
+          "targetTerms": 6,
+          "servicePages": 4,
+          "serviceAreaPages": 1,
+          "faqQuestions": 6
+        },
+        "launchWork": [
+          "verified business identity and contact consistency",
+          "local service titles and page descriptions",
+          "business, service, FAQ, breadcrumb, website, and geographic markup",
+          "satellite map, directions, and verified coordinates when available",
+          "short conversational answers for search, AI, and voice discovery",
+          "sourced reviews, directories, and public profiles only"
+        ],
+        "generatedAt": "2026-07-09T23:17:53.114Z"
+      }
+    },
+    "report_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/ghost-report.json",
+    "preview_url": "https://siteforge-app-rocketsites.vercel.app/ghost-preview/8eNhobcZvS8W6fAE_TY3snPN/",
+    "checkout_url": "https://ghost-agency-backend.vercel.app/api/checkout-link?token=eyJ2IjoxLCJleHAiOjE3ODc1MjcwNzMxMTQsImpvYl9pZCI6InNpdGVmb3JnZV9yaWNoYXJkLWRpYXotbGFuZHNjYXBlXzE3ODM2MzkwNzMxMTQiLCJwcm9zcGVjdF9pZCI6InJpY2hhcmQtZGlhei1sYW5kc2NhcGUiLCJidXNpbmVzc19uYW1lIjoiUmljaGFyZCBEaWF6IExhbmRzY2FwZSAmIE1hc29ucnkiLCJpbmR1c3RyeSI6ImxhbmRzY2FwaW5nIiwiY2l0eSI6Ik9yYW5nZSIsInN0YXRlIjoiQ0EifQ&sig=mJSXuUEm5T95yFffVkVRscZoEScKM5yP05vcgfyCjlA"
+  }
+}

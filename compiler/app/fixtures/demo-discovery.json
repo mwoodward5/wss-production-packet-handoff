@@ -1,0 +1,19 @@
+{
+  "note": "Fixture used only when SITEFORGE_DEMO_FIXTURES=1 and no FIRECRAWL_API_KEY is set — lets the discovery/import screen be demonstrated offline with clearly-fictional data.",
+  "found": {
+    "logo": "https://images.example.com/harborflow-logo.png",
+    "colors": ["#1B4B5A", "#E8A33D", "#F4EFE6"],
+    "photos": [
+      "https://images.example.com/harborflow-truck.jpg",
+      "https://images.example.com/harborflow-crew.jpg",
+      "https://images.example.com/harborflow-jobsite.jpg"
+    ],
+    "services": ["Repiping", "Water heater installation", "Drain cleaning", "Leak detection"],
+    "reviews": [],
+    "copy": "Fictional fixture copy for demo purposes.",
+    "contact": { "phone": "(253) 555-0177", "email": "office@harborflow.example", "address": "4410 Harbor Ave, Tacoma" },
+    "socials": ["https://facebook.com/harborflowdemo"],
+    "tech": "wordpress",
+    "seo_gaps": ["no structured data detected", "no FAQ surface for AI answer engines"]
+  }
+}

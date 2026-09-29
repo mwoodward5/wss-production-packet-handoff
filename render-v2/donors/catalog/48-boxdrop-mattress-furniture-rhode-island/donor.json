@@ -1,0 +1,357 @@
+{
+  "version": 2,
+  "key": "48-boxdrop-mattress-furniture-rhode-island",
+  "name": "BoxDrop Mattress & Furniture Rhode Island",
+  "category": "mattress store",
+  "vertical": "mattress store",
+  "requested_vertical": "hvac",
+  "routing_conflict": true,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "aa3845d2-5617-48c1-b969-02be493208bc",
+  "lovable_source_commit": "7b892166466ce52332ea671f8a7df5fe1cf6d402",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "aa3845d2-5617-48c1-b969-02be493208bc",
+    "ref": "7b892166466ce52332ea671f8a7df5fe1cf6d402",
+    "repository": "https://github.com/mwoodward5/rhode-island-authority-drop",
+    "git_tree": "cca57bdb138577233cf9fc03605fbc4183fad829"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/mattresses",
+    "/furniture",
+    "/locations",
+    "/guides",
+    "/faq",
+    "/contact",
+    "/mattress-and-furniture-financing-rhode-island",
+    "/mattress-store-rhode-island",
+    "/furniture-store-rhode-island",
+    "/queen-mattresses-rhode-island",
+    "/king-mattresses-rhode-island",
+    "/hybrid-mattresses-rhode-island",
+    "/memory-foam-mattresses-rhode-island",
+    "/pillow-top-mattresses-rhode-island",
+    "/adjustable-bases-rhode-island",
+    "/budget-mattresses-rhode-island",
+    "/sectionals-rhode-island",
+    "/sofas-rhode-island",
+    "/loveseats-rhode-island",
+    "/recliners-rhode-island",
+    "/living-room-furniture-rhode-island",
+    "/discount-furniture-rhode-island",
+    "/mattress-store-warren-ri",
+    "/furniture-store-warren-ri",
+    "/mattress-store-bristol-ri",
+    "/furniture-store-bristol-ri",
+    "/mattress-store-barrington-ri",
+    "/furniture-store-barrington-ri",
+    "/mattress-store-tiverton-ri",
+    "/furniture-store-tiverton-ri",
+    "/mattress-store-east-providence-ri",
+    "/furniture-store-east-providence-ri",
+    "/mattress-store-providence-ri",
+    "/furniture-store-providence-ri",
+    "/mattress-store-warwick-ri",
+    "/furniture-store-warwick-ri",
+    "/mattress-store-fall-river-ma",
+    "/furniture-store-fall-river-ma",
+    "/mattress-store-swansea-ma",
+    "/furniture-store-swansea-ma",
+    "/mattress-store-somerset-ma",
+    "/furniture-store-somerset-ma",
+    "/mattress-store-seekonk-ma",
+    "/furniture-store-seekonk-ma",
+    "/guides/best-mattress-for-side-sleepers-rhode-island",
+    "/guides/hybrid-vs-memory-foam-mattress",
+    "/guides/how-to-choose-a-queen-mattress",
+    "/guides/sectional-sofa-buying-guide-rhode-island",
+    "/guides/adjustable-base-benefits",
+    "/guides/mattress-financing-guide-rhode-island",
+    "/guides/mattress-delivery-pickup-guide-rhode-island",
+    "/guides/best-time-to-buy-a-mattress-rhode-island",
+    "/guides/boxdrop-vs-big-box-mattress-stores-rhode-island",
+    "/guides/mattress-store-near-me-voice-search-playbook"
+  ],
+  "design_tokens": {
+    "canvas_background": "oklch(0.985 0.008 80)",
+    "text_foreground": "oklch(0.20 0.05 260)",
+    "primary_navy": "oklch(0.22 0.075 265)",
+    "primary_navy_deep": "oklch(0.15 0.06 265)",
+    "brand_cta_green": "oklch(0.70 0.20 145)",
+    "brand_glow": "oklch(0.82 0.22 140)",
+    "accent_gold": "oklch(0.78 0.15 75)",
+    "font_display": "Fraunces, Plus Jakarta Sans, Inter, serif",
+    "font_sans": "Inter, Plus Jakarta Sans, sans-serif",
+    "border_radius_base": "0.85rem",
+    "glass_blur": "22px"
+  },
+  "hero_contract": {
+    "component": "src/components/site/HeroHome.tsx",
+    "layout": "2-column split (1.05fr copy / 1fr interactive widget)",
+    "media_type": "Full-bleed background image or 10-second cinematic looping video",
+    "overlay": "Directional gradient scrim (92% navy left fading to 18% center and 55% right)",
+    "ctas": [
+      "Call button (btn-glow btn-beam)",
+      "Text showroom button (glass-dark)"
+    ],
+    "widget": "HeroQuickAction multi-tab stock and price check widget"
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_media",
+      "route": "/",
+      "component": "HeroHome",
+      "aspect_ratio": "16:9",
+      "description": "Showroom floor or facility backdrop with calmed right third"
+    },
+    {
+      "slot_id": "logo",
+      "route": "sitewide",
+      "component": "SiteHeader",
+      "aspect_ratio": "4:1",
+      "description": "Transparent brand logo wordmark"
+    },
+    {
+      "slot_id": "category_icons",
+      "route": "/",
+      "component": "CategoryShowcase",
+      "aspect_ratio": "1:1",
+      "description": "6 cutout studio assets representing mattress configurations"
+    },
+    {
+      "slot_id": "gallery_photos",
+      "route": "/",
+      "component": "PhotoGallery",
+      "aspect_ratio": "4:3",
+      "description": "Authentic customer delivery and purchase photos"
+    }
+  ],
+  "content_slots": [
+    {
+      "field": "business.name",
+      "file": "src/data/business.ts"
+    },
+    {
+      "field": "business.displayPhone",
+      "file": "src/data/business.ts"
+    },
+    {
+      "field": "business.telephone",
+      "file": "src/data/business.ts"
+    },
+    {
+      "field": "business.smsHref",
+      "file": "src/data/business.ts"
+    },
+    {
+      "field": "business.address",
+      "file": "src/data/business.ts"
+    },
+    {
+      "field": "business.hours",
+      "file": "src/data/business.ts"
+    },
+    {
+      "field": "business.financing",
+      "file": "src/data/business.ts"
+    },
+    {
+      "field": "business.brands",
+      "file": "src/data/business.ts"
+    },
+    {
+      "field": "cities",
+      "file": "src/content/cities.ts"
+    },
+    {
+      "field": "serviceAreas",
+      "file": "src/data/serviceAreas.ts"
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "open_now_pill",
+      "component": "OpenNowPill",
+      "proof": "Computed from hours array"
+    },
+    {
+      "type": "external_reviews",
+      "component": "HomePage Review Strip",
+      "proof": "Yelp rating + Facebook recommendation %"
+    },
+    {
+      "type": "customer_gallery",
+      "component": "PhotoGallery",
+      "proof": "10 real customer showroom photos"
+    },
+    {
+      "type": "map_location_card",
+      "component": "ShowroomMapCard",
+      "proof": "Google Place CID embed"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "file": "src/lib/schema/index.ts",
+      "target": "Sitewide head"
+    },
+    {
+      "type": "Product",
+      "file": "src/lib/schema/index.ts",
+      "target": "Category and Hub routes"
+    },
+    {
+      "type": "FAQPage",
+      "file": "src/lib/schema/index.ts",
+      "target": "Routes with FAQAccordion"
+    },
+    {
+      "type": "BreadcrumbList",
+      "file": "src/lib/schema/index.ts",
+      "target": "All non-home routes"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "file": "public/entity.json",
+      "purpose": "Canonical entity and graph definitions"
+    },
+    {
+      "file": "public/answer-engine.json",
+      "purpose": "Q&A corpus for LLM synthesis"
+    },
+    {
+      "file": "public/near-me-intents.json",
+      "purpose": "Geo distance and transit corridor mappings"
+    },
+    {
+      "file": "public/llms.txt",
+      "purpose": "Plaintext brand and inventory reference"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "route": "/guides/mattress-store-near-me-voice-search-playbook",
+      "target": "Conversational intent indexing"
+    },
+    {
+      "component": "FAQAccordion",
+      "target": "First 15-word self-contained spoken audio answers"
+    }
+  ],
+  "map_location_slot": {
+    "component": "src/components/widgets/ShowroomMapCard.tsx",
+    "destination_url": "https://www.google.com/maps/dir/?api=1&destination=...",
+    "embed_url": "https://www.google.com/maps?q=...&output=embed",
+    "drive_times_display": true
+  },
+  "content_density": {
+    "hero": "High density, conversion focused",
+    "categories": "Clean modular bento grid",
+    "authority_body": "Deep, 600-900 words structured local content",
+    "reviews": "Restrained, 3 aggregate platforms + proof-gated quotes"
+  },
+  "mobile_rules": {
+    "breakpoint_sm": "390px",
+    "sticky_bottom_nav": true,
+    "sticky_nav_height": "64px",
+    "body_padding_bottom": "4.5rem",
+    "primary_tap_target_min": "48px"
+  },
+  "non_negotiables": [
+    "Do not alter the navy (#0f172a equivalent OKLCH) and cream palette contrast",
+    "Do not replace the emerald green high-sheen CTA buttons with muted alternatives",
+    "Do not drop the Fraunces display typography",
+    "Do not remove the 5-item mobile sticky contact footer",
+    "Always maintain paired Call and Text options across conversion modules"
+  ],
+  "safe_replacements": [
+    "business.name",
+    "business.telephone",
+    "business.displayPhone",
+    "business.smsHref",
+    "business.address",
+    "business.hours",
+    "business.financing",
+    "business.brands",
+    "hero_background_media",
+    "category_icons",
+    "gallery_photos",
+    "target_cities_list"
+  ],
+  "leak_terms": [
+    "BoxDrop Mattress & Furniture Rhode Island"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "Plus Jakarta Sans",
+      "Inter",
+      "serif",
+      "sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.985 0.008 80)",
+    "oklch(0.20 0.05 260)",
+    "oklch(0.22 0.075 265)",
+    "oklch(0.15 0.06 265)",
+    "oklch(0.70 0.20 145)",
+    "oklch(0.78 0.15 75)"
+  ],
+  "fonts": [
+    "Fraunces",
+    "Plus Jakarta Sans",
+    "Inter",
+    "serif",
+    "sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "5400e14c9654471ff5d38518349888692295e8af9fd94848a89fbcbff48a35f5",
+    "files": {
+      "assets/App-mBtFhMah.js": "ca5b43221c4f7ef9a360eaa8c60308004e20f77e4857222f97c8952ccf2c5f2d",
+      "assets/index-CbsbaxvJ.css": "f996fdbb497c889924bfa594d403a3adc279fe7f9ddf46a3ea688ccafa46e0a4",
+      "assets/index-udBxmg0x.js": "0982fa9ca7a7710cd33faf302c5cb123950e7bfb3d5366bdae04bcc21a513fa9",
+      "index.html": "1b70ea5ced63c87ccac1e42befa9c041a8f32900897eb8277134e9db8d1cbd28"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

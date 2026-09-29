@@ -1,0 +1,13 @@
+import { WSS, bridge } from '@/wss/bridge';
+export const CLIENT={businessName:WSS.identity.businessName,tagline:WSS.hero.emphasis,shortDescription:WSS.hero.support,phone:WSS.identity.phoneDisplay,phoneE164:WSS.identity.phoneTel.slice(4),email:WSS.identity.email,city:WSS.identity.city,region:WSS.identity.state,serviceAreaLabel:WSS.trust.areas.join(' · '),serviceAreaCities:WSS.trust.areas.map((name,i)=>({name,slug:String(i)})),gbp:{mapsUrl:WSS.trust.mapUrl,reviewsUrl:WSS.trust.aggregate?.sourceUrl || '',writeReviewUrl:''}};
+export const BRAND={logoDark:WSS.identity.logoOnDark,logoLight:WSS.identity.logoOnLight};
+export const SERVICES=WSS.services.map(s=>({...s,slug:s.href.slice(1),shortDesc:s.description,icon:/landscap/i.test(s.name)?'Trees':'Mountain'}));
+export const PROTECTED_SERVICE_TERMS=WSS.services.map(s=>s.name);
+export const HERO={eyebrow:WSS.hero.eyebrow,headline:WSS.hero.line1,subheadline:WSS.hero.support,primaryCta:{label:'Call '+CLIENT.phone,href:WSS.identity.phoneTel},secondaryCta:{label:'Contact us',href:'/#contact'}};
+export const TRUST={badges:WSS.trust.badges.map(b=>({...b,image:'',href:''})),certifications:[] as string[]};
+export const REVIEWS=WSS.trust.reviews.map(r=>({...r,body:r.text,initial:r.author[0],date:''}));
+export const SOCIAL={facebook:WSS.trust.socials.find(s=>new URL(s).hostname==='www.facebook.com'||new URL(s).hostname==='facebook.com')||''};
+export const FEATURES={mobileCallBar:true};
+export const SEO={defaultDescription:WSS.hero.support,defaultOgImage:WSS.hero.poster};
+export const absoluteUrl=(path:string)=>new URL(path,WSS.identity.website).href;
+export const HOURS=bridge.hours;

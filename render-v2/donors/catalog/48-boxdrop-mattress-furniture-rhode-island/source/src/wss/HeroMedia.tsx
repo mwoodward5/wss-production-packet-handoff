@@ -1,0 +1,3 @@
+import {useEffect,useState} from 'react';
+import {client} from './bridge';
+export function HeroMedia(){const [motion,setMotion]=useState(false);useEffect(()=>{const q=matchMedia('(prefers-reduced-motion: reduce)');const update=()=>setMotion(!q.matches);update();q.addEventListener('change',update);return()=>q.removeEventListener('change',update)},[]);const [failed,setFailed]=useState(false);const cls='absolute inset-0 -z-10 h-full w-full object-cover object-left';return <><img src={client.hero.poster} alt="" width={1600} height={1024} fetchPriority="high" className={cls}/>{client.hero.video&&motion&&!failed&&<video className={cls} src={client.hero.video} poster={client.hero.poster} autoPlay muted loop playsInline onError={()=>setFailed(true)}/>}</>}

@@ -1,0 +1,20 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "codex/**": false,
+      "design/**": false,
+      "zcode/**": false,
+      "chatgpt/**": false
+    }
+  },
+  "ignoreCommand": "git rev-parse --verify HEAD^ >/dev/null 2>&1 && git diff --quiet HEAD^ HEAD -- .",
+  "routes": [
+    { "src": "/terms", "headers": { "cache-control": "public, max-age=0, must-revalidate" }, "dest": "/terms.html" },
+    { "src": "/privacy", "headers": { "cache-control": "public, max-age=0, must-revalidate" }, "dest": "/privacy.html" },
+    { "src": "/legal/terms", "headers": { "cache-control": "public, max-age=0, must-revalidate" }, "dest": "/terms.html" },
+    { "src": "/legal/privacy", "headers": { "cache-control": "public, max-age=0, must-revalidate" }, "dest": "/privacy.html" },
+    { "src": "/sw.js", "headers": { "cache-control": "no-cache" }, "dest": "/sw.js" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "headers": { "cache-control": "public, max-age=0, must-revalidate" }, "dest": "/index.html" }
+  ]
+}

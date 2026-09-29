@@ -1,0 +1,12 @@
+{
+  "name": "@wss/site-router",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fail-closed immutable release router for WSS preview sites",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "project_name": "On The Road Again Mobile RV Service",
+  "vertical": "rv-repair",
+  "classification": "Multi-page",
+  "routes": [
+    {
+      "path": "/",
+      "name": "Home",
+      "purpose": "Primary lead and call conversion page"
+    },
+    {
+      "path": "/services",
+      "name": "Services",
+      "purpose": "Full service catalog and pricing transparency"
+    },
+    {
+      "path": "/about-us",
+      "name": "About Us",
+      "purpose": "Technician credentials, story, and trust signals"
+    },
+    {
+      "path": "/contact",
+      "name": "Contact",
+      "purpose": "Direct contact options, phone, SMS, and lead intake form"
+    }
+  ],
+  "design_tokens": {
+    "font_display": "Source Serif 4, Georgia, serif",
+    "font_sans": "Inter, sans-serif",
+    "color_primary": "oklch(0.50 0.08 104)",
+    "color_accent": "oklch(0.74 0.08 104)",
+    "color_background": "oklch(0.99 0.005 100)",
+    "color_card": "oklch(1 0 0)",
+    "border_radius": "0.875rem",
+    "hero_gradient": "linear-gradient(135deg, oklch(0.16 0.01 100 / 0.88), oklch(0.45 0.08 104 / 0.55))"
+  },
+  "hero_contract": {
+    "type": "cinematic_kenburns",
+    "slideshow_interval_ms": 5200,
+    "transition_duration_ms": 1600,
+    "overlays": [
+      "duotone_olive_veil",
+      "atmospheric_grain_18pct",
+      "svg_route_schematic"
+    ],
+    "headline_font": "Source Serif 4",
+    "cta_primary": "Call Now",
+    "cta_secondary": "See Rates",
+    "desktop_layout": "split_1.25_to_0.9"
+  },
+  "media_slots": [
+    {
+      "slot": "hero_slides",
+      "count": 5,
+      "aspect": "16:9",
+      "role": "Atmospheric field and rig shots"
+    },
+    {
+      "slot": "home_gallery",
+      "count": 12,
+      "aspect": "4:3",
+      "role": "Real client work, tools, and vehicles"
+    },
+    {
+      "slot": "founder_portrait",
+      "count": 1,
+      "aspect": "3:4",
+      "role": "Lead technician in uniform on site"
+    },
+    {
+      "slot": "cert_badges",
+      "count": 2,
+      "aspect": "variable",
+      "role": "RVTAA / RVTI certification marks"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business_name",
+      "target": "CLIENT.businessName"
+    },
+    {
+      "key": "phone",
+      "target": "CLIENT.phone"
+    },
+    {
+      "key": "email",
+      "target": "CLIENT.email"
+    },
+    {
+      "key": "hub_city",
+      "target": "CLIENT.city"
+    },
+    {
+      "key": "service_call_fee",
+      "target": "Rates card & FAQ"
+    },
+    {
+      "key": "hourly_rate",
+      "target": "Rates card & FAQ"
+    },
+    {
+      "key": "operating_hours",
+      "target": "CLIENT.hours (Mon-Fri 8am-5pm)"
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "badges",
+      "location": "Hero trust strip and About page"
+    },
+    {
+      "type": "reviews",
+      "location": "Homepage verified reviews section"
+    },
+    {
+      "type": "transparent_rates",
+      "location": "Rates card above the fold"
+    },
+    {
+      "type": "real_photos",
+      "location": "12-image On The Job gallery"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "AutomotiveBusiness",
+      "route": "global"
+    },
+    {
+      "type": "AggregateRating",
+      "route": "/"
+    },
+    {
+      "type": "FAQPage",
+      "route": "/"
+    },
+    {
+      "type": "Service",
+      "route": "/services"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "hub": "Hendersonville, TN",
+      "radius_miles": 40
+    },
+    {
+      "cities": [
+        "Nashville",
+        "Gallatin",
+        "Lebanon",
+        "Goodlettsville",
+        "Hermitage",
+        "La Vergne",
+        "Joelton",
+        "Murfreesboro"
+      ]
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "intent": "Cost of mobile RV repair",
+      "target": "FAQ item 1"
+    },
+    {
+      "intent": "Service coverage radius",
+      "target": "FAQ item 2"
+    },
+    {
+      "intent": "Certified technician qualification",
+      "target": "About Us overview"
+    }
+  ],
+  "map_location_slot": {
+    "type": "hybrid_embed_and_vector",
+    "center_lat": 36.305,
+    "center_lng": -86.62,
+    "radius": 40,
+    "cid": "12648757077651088484"
+  },
+  "content_density": {
+    "hero": "high visual / medium copy",
+    "rates": "minimal / high contrast",
+    "services": "structured bullet lists",
+    "gallery": "dense 12-image grid",
+    "faq": "collapsible accordions"
+  },
+  "mobile_rules": {
+    "min_tap_target_px": 48,
+    "sticky_bar": "MobileCallBar with Call & Text SMS buttons",
+    "estimator_position": "Stacks beneath hero copy on mobile"
+  },
+  "non_negotiables": [
+    "Source Serif 4 for headings",
+    "Olive and brass color tokens",
+    "Transparent $150 service call + $170/hr labor display",
+    "No weekend hours or weekend rate copy",
+    "40-mile service radius centered on Hendersonville"
+  ],
+  "safe_replacements": [
+    "client.config.ts business metadata",
+    "media.ts photo arrays",
+    "reviews.config.ts verified testimonials",
+    "services.config.ts specific trade capabilities"
+  ],
+  "lovable_classification": "AutomotiveBusiness",
+  "classification_basis": "4 distinct documented routes; WSS scope label only",
+  "project_id": "f9cbfac3-15fd-493a-b553-c4e620f3a9f0",
+  "project_url": "https://lovable.dev/projects/f9cbfac3-15fd-493a-b553-c4e620f3a9f0",
+  "source_plan_file": "24-on-the-road-again-mobile-rv-service-multi-page-premier-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

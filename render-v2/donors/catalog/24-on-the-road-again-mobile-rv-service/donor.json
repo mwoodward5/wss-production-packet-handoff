@@ -1,0 +1,276 @@
+{
+  "version": 2,
+  "key": "24-on-the-road-again-mobile-rv-service",
+  "name": "On The Road Again Mobile RV Service",
+  "category": "rv repair",
+  "vertical": "rv repair",
+  "requested_vertical": "rv repair",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "f9cbfac3-15fd-493a-b553-c4e620f3a9f0",
+  "lovable_source_commit": "d27e546e4ab73b42e2c9e2025045b28d6db33fbf",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "f9cbfac3-15fd-493a-b553-c4e620f3a9f0",
+    "ref": "d27e546e4ab73b42e2c9e2025045b28d6db33fbf",
+    "repository": "https://github.com/mwoodward5/site-whisperer-855",
+    "git_tree": "a985c380fb48a6f919af60d78e12d66935b7fc45"
+  },
+  "classification": "MULTI_PAGE",
+  "routes": [
+    "/",
+    "/services",
+    "/about-us",
+    "/contact"
+  ],
+  "design_tokens": {
+    "font_display": "Source Serif 4, Georgia, serif",
+    "font_sans": "Inter, sans-serif",
+    "color_primary": "oklch(0.50 0.08 104)",
+    "color_accent": "oklch(0.74 0.08 104)",
+    "color_background": "oklch(0.99 0.005 100)",
+    "color_card": "oklch(1 0 0)",
+    "border_radius": "0.875rem",
+    "hero_gradient": "linear-gradient(135deg, oklch(0.16 0.01 100 / 0.88), oklch(0.45 0.08 104 / 0.55))"
+  },
+  "hero_contract": {
+    "type": "cinematic_kenburns",
+    "slideshow_interval_ms": 5200,
+    "transition_duration_ms": 1600,
+    "overlays": [
+      "duotone_olive_veil",
+      "atmospheric_grain_18pct",
+      "svg_route_schematic"
+    ],
+    "headline_font": "Source Serif 4",
+    "cta_primary": "Call Now",
+    "cta_secondary": "See Rates",
+    "desktop_layout": "split_1.25_to_0.9"
+  },
+  "media_slots": [
+    {
+      "slot": "hero_slides",
+      "count": 5,
+      "aspect": "16:9",
+      "role": "Atmospheric field and rig shots"
+    },
+    {
+      "slot": "home_gallery",
+      "count": 12,
+      "aspect": "4:3",
+      "role": "Real client work, tools, and vehicles"
+    },
+    {
+      "slot": "founder_portrait",
+      "count": 1,
+      "aspect": "3:4",
+      "role": "Lead technician in uniform on site"
+    },
+    {
+      "slot": "cert_badges",
+      "count": 2,
+      "aspect": "variable",
+      "role": "RVTAA / RVTI certification marks"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business_name",
+      "target": "CLIENT.businessName"
+    },
+    {
+      "key": "phone",
+      "target": "CLIENT.phone"
+    },
+    {
+      "key": "email",
+      "target": "CLIENT.email"
+    },
+    {
+      "key": "hub_city",
+      "target": "CLIENT.city"
+    },
+    {
+      "key": "service_call_fee",
+      "target": "Rates card & FAQ"
+    },
+    {
+      "key": "hourly_rate",
+      "target": "Rates card & FAQ"
+    },
+    {
+      "key": "operating_hours",
+      "target": "CLIENT.hours (Mon-Fri 8am-5pm)"
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "badges",
+      "location": "Hero trust strip and About page"
+    },
+    {
+      "type": "reviews",
+      "location": "Homepage verified reviews section"
+    },
+    {
+      "type": "transparent_rates",
+      "location": "Rates card above the fold"
+    },
+    {
+      "type": "real_photos",
+      "location": "12-image On The Job gallery"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "AutomotiveBusiness",
+      "route": "global"
+    },
+    {
+      "type": "AggregateRating",
+      "route": "/"
+    },
+    {
+      "type": "FAQPage",
+      "route": "/"
+    },
+    {
+      "type": "Service",
+      "route": "/services"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "hub": "Hendersonville, TN",
+      "radius_miles": 40
+    },
+    {
+      "cities": [
+        "Nashville",
+        "Gallatin",
+        "Lebanon",
+        "Goodlettsville",
+        "Hermitage",
+        "La Vergne",
+        "Joelton",
+        "Murfreesboro"
+      ]
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "intent": "Cost of mobile RV repair",
+      "target": "FAQ item 1"
+    },
+    {
+      "intent": "Service coverage radius",
+      "target": "FAQ item 2"
+    },
+    {
+      "intent": "Certified technician qualification",
+      "target": "About Us overview"
+    }
+  ],
+  "map_location_slot": {
+    "type": "hybrid_embed_and_vector",
+    "center_lat": 36.305,
+    "center_lng": -86.62,
+    "radius": 40,
+    "cid": "12648757077651088484"
+  },
+  "content_density": {
+    "hero": "high visual / medium copy",
+    "rates": "minimal / high contrast",
+    "services": "structured bullet lists",
+    "gallery": "dense 12-image grid",
+    "faq": "collapsible accordions"
+  },
+  "mobile_rules": {
+    "min_tap_target_px": 48,
+    "sticky_bar": "MobileCallBar with Call & Text SMS buttons",
+    "estimator_position": "Stacks beneath hero copy on mobile"
+  },
+  "non_negotiables": [
+    "Source Serif 4 for headings",
+    "Olive and brass color tokens",
+    "Transparent $150 service call + $170/hr labor display",
+    "No weekend hours or weekend rate copy",
+    "40-mile service radius centered on Hendersonville"
+  ],
+  "safe_replacements": [
+    "client.config.ts business metadata",
+    "media.ts photo arrays",
+    "reviews.config.ts verified testimonials",
+    "services.config.ts specific trade capabilities"
+  ],
+  "leak_terms": [
+    "On The Road Again Mobile RV Service"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Source Serif 4",
+      "Georgia",
+      "serif",
+      "Inter",
+      "sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.50 0.08 104)",
+    "oklch(0.74 0.08 104)",
+    "oklch(0.99 0.005 100)",
+    "oklch(1 0 0)"
+  ],
+  "fonts": [
+    "Source Serif 4",
+    "Georgia",
+    "serif",
+    "Inter",
+    "sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "4bb6cb8224b911b2dccc9e5f36b43bb933d57d0984307e01628c2f6bfd58a6fd",
+    "files": {
+      "assets/app-41Y31DDX.js": "ccd3b34daddf40bffd22a2a3fb440331b750574a052299a5cb2ca43db2c598ac",
+      "assets/index-D4_3hS13.css": "8adbb7d60427007740619e110e0b9bbc3b5aae04ae0c754e6a61ff8c3309c330",
+      "assets/index-DW-3_QtH.js": "e629a78a49879d3dc2c8c4e9643751266f75db3a1bd607198f0d8d58e7e05aa3",
+      "index.html": "534673dad7647c53e59154c7753e115995f946f55cc7e51782cde9501e622fd5"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

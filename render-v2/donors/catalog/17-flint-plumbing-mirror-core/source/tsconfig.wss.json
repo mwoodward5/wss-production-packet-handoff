@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/wss-main.tsx", "src/wss-contract-types.d.ts"],
+  "compilerOptions": { "noUncheckedSideEffectImports": false }
+}

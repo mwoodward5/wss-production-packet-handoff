@@ -1,0 +1,62 @@
+{
+  "to": "woodwardsoftware@gmail.com",
+  "subject": "Mirror Engine — five live samples, fully dressed (owner proof)",
+  "intro": "Five real prospects, one frozen renderer (mirror-engine@v1, commit 6230365). Each site: their logo in header + footer, their measured brand color (contrast-clamped), their real photos in the donor slots, their services/story/coverage/FAQ from their own pages via the Intake Genie, a 14-17-node schema graph, live Google map on their real listing, llms.txt + sitemap. Every mirror passed all 8 named gates; nothing below is asserted without evidence. Known cosmetics flagged inline — nothing hidden. Zero prospect emails; all slugs are wss-test-*.",
+  "mirrors": [
+    {
+      "business": "Lyons Roofing — Tucson, AZ",
+      "url": "https://wss-test-lyons-roofing-tucson.wss-ai.com/",
+      "revealable": true,
+      "score": "62/99 proven (108-pt stack)",
+      "accent": "#cf3037 (engine-measured from their lion logo)",
+      "phone": "(520) 900-1442 + ROC# 348074",
+      "donor": "roofing-falcon-clean",
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/b28e9c2e-4ceb-4a46-b34a-e43b43b1fc9b/scratchpad/sizzle3/wss-test-lyons-roofing-tucson.png",
+      "notes": "12 services + 18 Tucson-area coverage + 24-hour table + 8 of their own FAQs. Genie returned their Phoenix HQ; overridden to Tucson (documented). Cosmetic: footer prints city twice after the full address."
+    },
+    {
+      "business": "Kingdom Plumbing — Las Vegas, NV",
+      "url": "https://wss-test-kingdom-plumbing-las-vegas.wss-ai.com/",
+      "revealable": true,
+      "score": "61/98 proven",
+      "accent": "#e05909 (from their og-image; logo is monochrome)",
+      "phone": "(702) 213-6112 + NV #0085422",
+      "donor": "plumbing-clean",
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/b28e9c2e-4ceb-4a46-b34a-e43b43b1fc9b/scratchpad/sizzle3/wss-test-kingdom-plumbing-las-vegas.png",
+      "notes": "CALL button now fully legible (contrast clamp). 9 services, 10 areas, 24/7 hours, their Our Story. Cosmetic: hero dial widget has garbled small text (donor decoration)."
+    },
+    {
+      "business": "Ramon Roofing — Fort Worth, TX",
+      "url": "https://wss-test-ramon-roofing-fort-worth.wss-ai.com/",
+      "revealable": true,
+      "score": "60/99 proven",
+      "accent": "#C53F34 (their own SVG fill, measurement-corroborated)",
+      "phone": "(817) 924-1645",
+      "donor": "roofing-falcon-clean",
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/b28e9c2e-4ceb-4a46-b34a-e43b43b1fc9b/scratchpad/sizzle3/wss-test-ramon-roofing-fort-worth.png",
+      "notes": "THE proof of the truth-law fix: zero gutter/siding words on the whole page — the luxury-roofing specialist is no longer described as a siding contractor. 12 luxury services (clay tile, slate, copper), their 1995 founding story, 4 of their project photos (2 auto-transcoded)."
+    },
+    {
+      "business": "Music City Roofers — Nashville, TN",
+      "url": "https://wss-test-music-city-roofers-nashville.wss-ai.com/",
+      "revealable": true,
+      "score": "60/99 proven",
+      "accent": "#253b5e (engine-measured, share 1.00)",
+      "phone": "(615) 802-4999",
+      "donor": "roofing-falcon-clean",
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/b28e9c2e-4ceb-4a46-b34a-e43b43b1fc9b/scratchpad/sizzle3/wss-test-music-city-roofers-nashville.png",
+      "notes": "Their hero line (Your Last Roof. Ever.), FEAZEL lockup preserved as part of their mark, 18 real TN coverage cities, their city-ordinance FAQ answers. Cosmetic: the Commercial card photo (their video poster) is the weakest asset — worth a swap."
+    },
+    {
+      "business": "ENCO Plumbing, Inc. — The Colony, TX",
+      "url": "https://wss-test-enco-plumbing-the-colony.wss-ai.com/",
+      "revealable": true,
+      "score": "58/108 met",
+      "accent": "#003eac (their blue, 73.7% of logo pixels)",
+      "phone": "(214) 222-4464 + RMP#35843",
+      "donor": "plumbing-clean",
+      "screenshot": "C:/Users/Main/AppData/Local/Temp/claude/C--Users-Main-Documents-Dark-Signal/b28e9c2e-4ceb-4a46-b34a-e43b43b1fc9b/scratchpad/sizzle3/wss-test-enco-plumbing-the-colony.png",
+      "notes": "Eric + Richard Neal 1994 story in About (told, not falsely bylined), 24/7 hours, 18 areas. Honest flag: big CTA contrast improved 1.99:1 to 2.59:1 — legible but still sub-WCAG; per-accent ink flip queued for next donor rev."
+    }
+  ]
+}

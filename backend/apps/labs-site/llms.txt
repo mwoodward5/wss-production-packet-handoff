@@ -1,0 +1,23 @@
+# WSS Labs
+
+WSS Labs builds managed websites and optional customer automation for local businesses.
+
+Core website offer:
+- A working website preview and focused local visibility plan before purchase.
+- Managed activation starts at $199 per month after customer approval.
+- Includes the finished website on the customer's domain, hosting, security, managed edits and a monthly local visibility report.
+- Preview requests do not publish a website or charge a card.
+
+Primary pages:
+- https://wss-ai.com/
+- https://wss-ai.com/products
+- https://wss-ai.com/managed-website
+- https://wss-ai.com/answercrew
+- https://wss-ai.com/activate
+- https://wss-ai.com/intake
+- https://wss-ai.com/legal
+
+Separate customer communication product:
+- https://getanswercrew.com/
+
+Support: support@woodwardsoftware.com

@@ -1,0 +1,137 @@
+{
+  "schema": "siteforge-lovable-runtime-catalog-v2",
+  "policy": {
+    "reuse": "abstract-layout-effect-widget-dna-only",
+    "cohort": "newest-100-mirrored-lovable-web-projects",
+    "excluded": ["identity", "names", "copy", "media", "reviews", "urls", "source-paths", "endpoints", "credentials", "claims"]
+  },
+  "evidence": {
+    "cohort_size": 100,
+    "mirrored_size": 100,
+    "lovable_marked_size": 100,
+    "metadata_basis": "cohort-ranking-plus-local-design-dna",
+    "promotion": "candidate-patterns-require-runtime-fit-and-qc"
+  },
+  "patterns": [
+    {
+      "id": "cinematic-overlay",
+      "priority": 1,
+      "weight": 24,
+      "trades": ["automotive", "concrete", "excavation", "landscaping", "plumbing", "roofing", "default"],
+      "anatomy": "full-bleed-overlay",
+      "motion": ["kinetic-reveal", "cinematic-drift"],
+      "media": "image-background",
+      "typography": "serif-display",
+      "mode": "dark",
+      "capabilities": ["lead-form"]
+    },
+    {
+      "id": "scroll-story",
+      "priority": 2,
+      "weight": 18,
+      "trades": ["automotive", "landscaping", "realestate", "roofing", "default"],
+      "anatomy": "full-bleed-overlay",
+      "motion": ["cinematic-drift", "restrained-reveal"],
+      "media": "image-background",
+      "typography": "geometric-sans",
+      "mode": "dark",
+      "capabilities": ["counters"]
+    },
+    {
+      "id": "video-cinema",
+      "priority": 3,
+      "weight": 12,
+      "trades": ["automotive", "electrical", "hvac", "roadside", "roofing", "default"],
+      "anatomy": "full-bleed-overlay",
+      "motion": ["video-loop", "kinetic-reveal"],
+      "media": "video-background",
+      "typography": "condensed-display",
+      "mode": "dark",
+      "capabilities": ["lead-form"]
+    },
+    {
+      "id": "split-editorial",
+      "priority": 4,
+      "weight": 14,
+      "trades": ["electrical", "landscaping", "plumbing", "retail", "default"],
+      "anatomy": "split-left-copy",
+      "motion": ["kinetic-reveal"],
+      "media": "split-media",
+      "typography": "serif-display",
+      "mode": "light",
+      "capabilities": ["lead-form"]
+    },
+    {
+      "id": "service-atlas",
+      "priority": 5,
+      "weight": 10,
+      "trades": ["landscaping", "plumbing", "realestate", "roofing", "default"],
+      "anatomy": "full-bleed-overlay",
+      "motion": ["cinematic-drift", "kinetic-reveal"],
+      "media": "image-background",
+      "typography": "geometric-sans",
+      "mode": "dark",
+      "capabilities": ["map", "lead-form"]
+    },
+    {
+      "id": "material-configurator",
+      "priority": 6,
+      "weight": 8,
+      "trades": ["concrete", "excavation", "fencing", "landscaping", "paving", "default"],
+      "anatomy": "tool-led",
+      "motion": ["kinetic-reveal", "restrained-reveal"],
+      "media": "split-media",
+      "typography": "technical-mono",
+      "mode": "light",
+      "capabilities": ["configurator", "lead-form"]
+    },
+    {
+      "id": "editorial-letter",
+      "priority": 7,
+      "weight": 7,
+      "trades": ["automotive", "food", "wellness", "retail", "default"],
+      "anatomy": "editorial-asymmetric",
+      "motion": ["restrained-reveal"],
+      "media": "split-media",
+      "typography": "serif-display",
+      "mode": "light",
+      "capabilities": ["lead-form"]
+    },
+    {
+      "id": "media-atlas",
+      "priority": 8,
+      "weight": 6,
+      "trades": ["automotive", "landscaping", "photography", "realestate", "default"],
+      "anatomy": "media-led-grid",
+      "motion": ["cinematic-drift", "kinetic-reveal"],
+      "media": "image-grid",
+      "typography": "geometric-sans",
+      "mode": "light",
+      "capabilities": ["counters"]
+    },
+    {
+      "id": "focused-stack",
+      "priority": 9,
+      "weight": 5,
+      "trades": ["food", "parking", "roadside", "service", "default"],
+      "anatomy": "centered-stack",
+      "motion": ["kinetic-reveal"],
+      "media": "image-background",
+      "typography": "condensed-display",
+      "mode": "dark",
+      "capabilities": ["lead-form"]
+    },
+    {
+      "id": "quiet-stack",
+      "priority": 10,
+      "weight": 4,
+      "trades": ["legal", "wellness", "default"],
+      "anatomy": "centered-stack",
+      "motion": ["restrained-reveal"],
+      "media": "split-media",
+      "typography": "geometric-sans",
+      "mode": "light",
+      "capabilities": ["lead-form"]
+    }
+  ]
+}

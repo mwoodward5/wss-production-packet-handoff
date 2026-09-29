@@ -1,0 +1,258 @@
+{
+  "project_name": "Card Concrete Construction",
+  "vertical": "Concrete Contracting & Controlled Demolition",
+  "classification": "Multi-page",
+  "routes": [
+    {
+      "path": "/",
+      "type": "conversion_page",
+      "component": "src/routes/index.tsx"
+    },
+    {
+      "path": "/trust",
+      "type": "compliance_page",
+      "component": "src/routes/trust.tsx"
+    },
+    {
+      "path": "/sitemap.xml",
+      "type": "xml_feed",
+      "component": "src/routes/sitemap[.]xml.ts"
+    },
+    {
+      "path": "/api/public/quote",
+      "type": "server_endpoint",
+      "component": "src/routes/api/public/quote.ts"
+    }
+  ],
+  "design_tokens": {
+    "brand_color": "oklch(0.78 0.24 142)",
+    "brand_hex_fallback": "#12C11A",
+    "background_dark": "oklch(0.13 0.02 240)",
+    "background_dark_hex": "#04080E",
+    "background_light": "oklch(0.985 0 0)",
+    "font_display": "Archivo, sans-serif",
+    "font_body": "Inter, sans-serif",
+    "font_mono": "ui-monospace, monospace",
+    "border_radius_base": "0.125rem",
+    "shadow_card": "8px 8px 0px 0px #04080E",
+    "shadow_active": "10px 10px 0px 0px #12C11A"
+  },
+  "hero_contract": {
+    "location": "top_of_page",
+    "min_height": "100vh",
+    "media_type": "video_or_image",
+    "recommended_video_length_seconds": 10,
+    "media_opacity_range": [
+      0.18,
+      0.22
+    ],
+    "overlay_elements": [
+      "blueprint_grid",
+      "grade_laser_line",
+      "hazard_stripe",
+      "slab_perspective_floor",
+      "dust_particles",
+      "cad_dimension_callouts"
+    ],
+    "integrated_widget": "job_triage_console_form_cc_q1"
+  },
+  "media_slots": [
+    {
+      "slot_id": "media-hero",
+      "role": "hero_cinematic_background",
+      "aspect_ratio": "16:9",
+      "recommended_content": "active_laser_screed_or_commercial_pour"
+    },
+    {
+      "slot_id": "media-logo",
+      "role": "brand_identity",
+      "aspect_ratio": "3:1",
+      "recommended_content": "transparent_vector_logo"
+    },
+    {
+      "slot_id": "media-svc-01",
+      "role": "service_feature_1",
+      "aspect_ratio": "16:10",
+      "recommended_content": "laser_screed_floor"
+    },
+    {
+      "slot_id": "media-svc-02",
+      "role": "service_feature_2",
+      "aspect_ratio": "16:10",
+      "recommended_content": "commercial_foundation_slab"
+    },
+    {
+      "slot_id": "media-svc-03",
+      "role": "service_feature_3",
+      "aspect_ratio": "16:10",
+      "recommended_content": "flatwork_driveway_sidewalk"
+    },
+    {
+      "slot_id": "media-svc-04",
+      "role": "service_feature_4",
+      "aspect_ratio": "16:10",
+      "recommended_content": "stamped_decorative_patio"
+    },
+    {
+      "slot_id": "media-svc-05",
+      "role": "service_feature_5",
+      "aspect_ratio": "16:10",
+      "recommended_content": "structural_wall_demolition"
+    },
+    {
+      "slot_id": "media-gal-bento-01",
+      "role": "gallery_hero_anchor",
+      "aspect_ratio": "1:1",
+      "recommended_content": "signature_finished_project"
+    },
+    {
+      "slot_id": "media-gal-bento-02_09",
+      "role": "gallery_grid_items",
+      "aspect_ratio": "4:3",
+      "count": 8,
+      "recommended_content": "jobsite_work_crew_equipment_turnover"
+    }
+  ],
+  "content_slots": [
+    {
+      "file": "src/lib/site.ts",
+      "fields": [
+        "name",
+        "shortName",
+        "phone",
+        "email",
+        "address",
+        "serviceRadiusMiles",
+        "hours",
+        "nearbyCities"
+      ]
+    },
+    {
+      "file": "src/content/services.ts",
+      "fields": [
+        "slug",
+        "name",
+        "blurb",
+        "details",
+        "ideal",
+        "icon"
+      ]
+    },
+    {
+      "file": "src/content/faqs.ts",
+      "fields": [
+        "q",
+        "a"
+      ]
+    }
+  ],
+  "trust_slots": [
+    {
+      "id": "hero_live_status",
+      "location": "hero_spec_strip",
+      "content": "LIVE DISPATCH + PHONE"
+    },
+    {
+      "id": "hero_cad_specs",
+      "location": "hero_headline_annotations",
+      "content": "TOLERANCE_SPECS_AND_RADIUS"
+    },
+    {
+      "id": "process_proof_badges",
+      "location": "pour_sequence_left_rail",
+      "content": "OWNER_LED_LICENSING_INSURANCE_FF_FL"
+    }
+  ],
+  "schema_slots": [
+    {
+      "target": "src/routes/index.tsx",
+      "schemas": [
+        "LocalBusiness",
+        "FAQPage",
+        "OfferCatalog"
+      ]
+    },
+    {
+      "target": "src/routes/__root.tsx",
+      "schemas": [
+        "Organization"
+      ]
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "section": "service_area",
+      "city_anchor": "SITE.address.city",
+      "radius_miles": "SITE.serviceRadiusMiles",
+      "sub_cities_pill_list": "SITE.nearbyCities",
+      "map_lat_lng": [
+        "SITE.address.lat",
+        "SITE.address.lng"
+      ]
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "section": "faq_accordion",
+      "target_queries": [
+        "concrete curing time",
+        "slab thickness requirements",
+        "stamped concrete vs pavers",
+        "demolition haul-off"
+      ]
+    }
+  ],
+  "map_location_slot": {
+    "section": "ServiceArea",
+    "filter_style": "grayscale(0.7) contrast(1.05) brightness(0.7) hue-rotate(70deg) saturate(0.9)",
+    "radar_ring": true,
+    "hud_telemetry_labels": true,
+    "deep_link_google": true,
+    "deep_link_apple": true
+  },
+  "content_density": {
+    "hero_density": "high_visual_minimal_text",
+    "services_density": "expandable_technical_spec",
+    "gallery_density": "9_item_bento_grid",
+    "process_density": "4_stage_pour_timeline",
+    "faq_density": "7_item_accordion",
+    "intake_density": "6_field_work_order_ticket"
+  },
+  "mobile_rules": {
+    "viewport_390": {
+      "nav": "compact_logo_plus_quote_button",
+      "hero_headline": "text-5xl_font_black",
+      "cad_annotations": "hidden",
+      "triage_inputs": "stacked_single_col",
+      "service_cards": "stacked_image_over_copy",
+      "gallery": "2_column_grid",
+      "sticky_cta": "bottom_docked_call_and_quote_bar"
+    }
+  },
+  "non_negotiables": [
+    "dark_command_hero_with_blueprint_and_grade_laser",
+    "two_tone_alternating_ink_and_paper_section_rhythm",
+    "brutalist_sharp_radii_and_hard_offset_shadows",
+    "monospace_architectural_drawing_spec_marks",
+    "single_column_work_order_intake_ticket_form"
+  ],
+  "safe_replacements": [
+    "business_name_and_contact_info",
+    "logo_and_brand_accent_color",
+    "hero_background_video_and_photo",
+    "service_line_titles_and_descriptions",
+    "portfolio_jobsite_photographs",
+    "service_radius_and_city_list",
+    "faqs_and_spec_tolerances"
+  ],
+  "lovable_classification": "Commercial & Residential Specialty Trade Contractor",
+  "classification_basis": "4 distinct documented routes; WSS scope label only",
+  "project_id": "6ec92ab6-ba9d-4e0e-8931-7057c7b9abd7",
+  "project_url": "https://lovable.dev/projects/6ec92ab6-ba9d-4e0e-8931-7057c7b9abd7",
+  "source_plan_file": "50-card-concrete-command-lovable-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

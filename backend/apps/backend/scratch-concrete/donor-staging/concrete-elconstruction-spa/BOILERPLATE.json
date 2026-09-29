@@ -1,0 +1,488 @@
+{
+  "name": "concrete-elconstruction-spa",
+  "vertical": "concrete",
+  "hero_wash": {
+    "selector": "main > section:first-of-type",
+    "background": "#1B1D2F",
+    "text_color": "#FFFFFF",
+    "pages_verified": [
+      "/about",
+      "/contact",
+      "/flatwork-driveways"
+    ],
+    "verified": "Render-proven 2026-08-13 on a themed local serve of this donor's dist (engine theme pass applied, then the real heroWashCss output appended with the scrim from the themed slab/slabInk): the first <section> under <main class=\"flex-1\"> carries /assets/hero-wash.* on the inner pages, stripping only that image changes about 80 percent of hero pixels on /about, and the headline still resolves on top via elementFromPoint. The HOME hero is a full-bleed IMG (hero-concrete) so the wash sits behind it there; that image is now a photo_slot the client fills."
+  },
+  "hero_wash_note": "ON 2026-08-13. Selector targets each route's first <section> child of the single <main class=\"flex-1\">. background and text_color are the RAW donor hero sample (dark navy band, white headline) used ONLY when the theme pass does not apply; the shipped scrim is derived by engine.js from the THEME pass slab/slabInk, exactly as on hvac-premier. On the service pages and /about and /contact the hero is a gradient band and the wash paints visibly; on the home page the hero is a full-bleed IMG so the wash is the fallback behind the client's own photo.",
+  "label": "EL Construction design, client-SPA recompile — concrete & general contracting, deep multi-page, video hero",
+  "source": "Client-SPA recompile of the SAME owner-approved EL Construction design already shipping as concrete-elconstruction. Built 2026-08-19 from the source-tokenized port tree at C:/ports/el_construction_1 (src/ copied verbatim, zero content edits) using the recipe proven by C:/ports/_builds/plumbing-verbatim -> donors-clean/plumbing-clean: plain Vite + @vitejs/plugin-react + @tailwindcss/vite, no @lovable.dev/vite-tanstack-config, no tanstackStart, no nitro, no Cloudflare plugin.",
+  "sanitised": "2026-07-30",
+  "donorIdentityGate": "tools/donor.elconstruction.manifest.json (GATE 4A: PASS — 36 page-renders over 18 routes x 2 viewports, 45k surfaces, 6 map queries, zero findings)",
+  "classification": {
+    "verticalFamilies": [
+      "heavy-trade",
+      "property-transformation"
+    ],
+    "conversionArchetypes": [
+      "request-estimate"
+    ],
+    "routeDepth": "deep",
+    "photoDemand": "high"
+  },
+  "requiredTokens": [
+    "{{BUSINESS_NAME}}",
+    "{{CITY}}",
+    "{{ADDRESS_CITY}}",
+    "{{STATE}}",
+    "{{HERO_HEADLINE}}"
+  ],
+  "optionalTokens": [
+    "{{PHONE}}",
+    "{{PHONE_DIGITS}}",
+    "{{EMAIL}}",
+    "{{PROFILE_URL}}",
+    "{{LOGO_URL}}",
+    "{{SITE_URL}}",
+    "{{GEO_LAT}}",
+    "{{GEO_LNG}}",
+    "{{LICENSE}}",
+    "{{RATING}}",
+    "{{REVIEW_COUNT}}",
+    "{{HERO_LINE_A}}",
+    "{{HERO_LINE_B}}"
+  ],
+  "collapsibleBlocks": {
+    "note": "The verbatim re-port collapses optional constructs at RUNTIME, not by data-collapse markers: every optional token rides a NEED phrase marker in the shipped bytes (the hydrator strips the whole phrase when the fact is blank — whole-property in ld+json, whole-sentence in prose), and interactive constructs (call CTAs, sticky-bar halves, stat tiles, license/rating claims) resolve through the WSSC store (src/lib/wssc.ts), whose blank facts collapse their construct during the hydration render without ever shipping an empty shell. The hero-video-ladder island is inert data and never collapses.",
+    "markers": []
+  },
+  "consumes_content": true,
+  "renders": [
+    "services",
+    "faqs",
+    "areas",
+    "reviews",
+    "hours",
+    "about"
+  ],
+  "contentIslandNotes": [
+    "The donor renders the island itself — the engine should NOT append its own services/FAQ/coverage block under the footer.",
+    "Read through useSyncExternalStore (src/lib/wssc.ts). The island is injected before the bundle boots, but the prerendered HTML was built with NO island, so the empty server snapshot keeps the hydration render identical to the shipped markup; verified island content wins on the next commit.",
+    "facts.license, facts.rating and facts.review_count drive the hero stat ribbon and the counters. Nothing else can — no invented claim has a path.",
+    "areas[] drives the service-area chips and the footer area links; the market {{CITY}} is the template default when nothing verified exists."
+  ],
+  "spa_routes": [
+    "/about",
+    "/contact",
+    "/service-area",
+    "/commercial-concrete",
+    "/foundations-excavation",
+    "/flatwork-driveways",
+    "/concrete-demolition",
+    "/commercial-renovation",
+    "/home-renovation",
+    "/flooring-services"
+  ],
+  "routes": [
+    "/",
+    "/about",
+    "/contact",
+    "/service-area",
+    "/commercial-concrete",
+    "/foundations-excavation",
+    "/flatwork-driveways",
+    "/concrete-demolition",
+    "/commercial-renovation",
+    "/home-renovation",
+    "/flooring-services"
+  ],
+  "routeNotes": [
+    "Twelve client-side routes from the design's own TanStack route tree. /service-area renders its area chips from the content island at boot ({#city} anchors, slugified) — no positional area-N slugs, no donor city in any URL.",
+    "sitemap.xml (shipped from public/) lists exactly these routes and robots.txt stays neutral. Every listed route resolves through the injected SPA rewrite.",
+    "TRADE-OFF vs the SSG variant, recorded honestly: per-route <head> is no longer prerendered. The shell's title/description/og/ld+json are the same tokenized bytes on every route, and the route-level head() blocks in src/routes/*.tsx are inert in this build. This is the identical trade donors-clean/plumbing-clean already ships under."
+  ],
+  "leadCapture": {
+    "endpoint": "https://ghost.wss-ai.com/api/quote-request",
+    "contract": "src/lib/lead.ts — one endpoint, one payload { slug, name, phone, email, service, message, website }. `slug` is the first label of the serving host, `website` is the honeypot and must arrive empty.",
+    "forms": [
+      "ContactForm (home, contact, every service page, every area page)",
+      "QuoteEstimator (contact page, 4 steps)"
+    ],
+    "donorBehaviourReplaced": "Both forms previously did nothing recoverable — ContactForm handed the browser to a mailto: link and QuoteEstimator set a success flag without transmitting anything at all."
+  },
+  "photo_slots": [
+    "assets/hero-concrete-4-_vKHA0.webp",
+    "assets/project-01-DQoyWgSZ.jpg",
+    "assets/project-02-DryefWmE.jpg",
+    "assets/project-02-DrP55orE.webp",
+    "assets/project-03-CvQUsHX1.jpg",
+    "assets/project-04-COIZBclF.jpg",
+    "assets/project-05-Bx8bNHnQ.jpg",
+    "assets/project-06-DEMnSYxR.jpg",
+    "assets/project-06-Bgh5mB8h.webp",
+    "assets/project-07-BoKUrMSH.jpg",
+    "assets/project-07-CBpmszNO.webp",
+    "assets/project-08-D5N7Gkuz.jpg",
+    "assets/project-09-CgP0Rw6w.jpg",
+    "assets/project-10-CJuEF55K.jpg",
+    "assets/project-10-C2jFdp3s.webp",
+    "assets/project-11-DLtPg2sn.jpg",
+    "assets/project-12-D4SHiPhW.jpg"
+  ],
+  "photo_slots_note": "FLAT ARRAY OF DIST-RELATIVE PATHS — the only shape lib/mirror-engine/engine.js reads (Array.isArray(manifest.photo_slots), else zero slots). Slot 1 is the hero poster webp — ladder rung 3: a filled hero photo and the video poster are the same image. The next twelve are the ProjectGallery tiles (the four <picture> tiles ship jpg+webp pairs, webp immediately after its jpg so a pair fills together); the service imagery is the cinematic layer and is never swapped. The re-port ships the hero as a SINGLE webp (the source imports no jpg half). Filenames are content-hashed by Vite: REGENERATE THIS ARRAY FROM THE BUILT TREE ON EVERY REBUILD.",
+  "photo_slots_verified": "2026-08-19 — regenerated from the staged client-SPA build. All 17 entries present. Vite emitted content-hashed names IDENTICAL to the SSG build (same source bytes, same hashing), so the slot array is unchanged from the shipping donor.",
+  "photo_slots_detail": {
+    "note": "Every slot ships as a .webp/.jpg PAIR and both files are referenced through <picture> (src/components/Photo.tsx). The donor referenced only the .webp half, so the .jpg never reached the built tree and the pair was fictional. Filenames below are content-hashed by Vite and change per build; match on the stem.",
+    "hero": [
+      {
+        "stem": "hero-concrete",
+        "role": "hero poster / LCP",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      }
+    ],
+    "service": [
+      {
+        "stem": "service-flatwork",
+        "role": "commercial-concrete card + hero",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "service-foundations",
+        "role": "foundations-excavation card + hero",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "service-driveways",
+        "role": "flatwork-driveways card + hero",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "service-demolition",
+        "role": "concrete-demolition card + hero",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "service-area",
+        "role": "service-area + area-page hero",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "stem": "project-01",
+        "subject": "Finished concrete flatwork",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-02",
+        "subject": "Commercial concrete pour",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-03",
+        "subject": "Residential driveway",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-04",
+        "subject": "Foundation excavation",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-05",
+        "subject": "Concrete demolition",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-06",
+        "subject": "Completed bathroom remodel",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-07",
+        "subject": "Tile flooring installation",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-08",
+        "subject": "Interior renovation work",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-09",
+        "subject": "Poured concrete deck",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-10",
+        "subject": "Commercial tenant improvement",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-11",
+        "subject": "Vinyl plank flooring",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      },
+      {
+        "stem": "project-12",
+        "subject": "Finished concrete patio",
+        "formats": [
+          "webp",
+          "jpg"
+        ]
+      }
+    ],
+    "altTextRule": "Captions are a neutral subject plus {{BUSINESS_NAME}}. The donor's alt text asserted that each photo was EL Construction's work in a named Maricopa County city; a stock photo captioned as somebody's job is a claim."
+  },
+  "media": {
+    "hero-loop.mp4": {
+      "bytes": 7498958,
+      "role": "hero loop, 1920x1088 — ARCHIVED MASTER + operations alternate for rung 2 (deploy it by copying over assets/hero-fallback-concrete.mp4; a file swap, not a code change)",
+      "provenance": "Dereferenced at ingest from src/assets/hero-video.mp4.asset.json, a Lovable CDN POINTER with no bytes in the repo. The downloaded archive was 32656057 bytes, matching the pointer's declared size exactly. Archiving it is the point: when that CDN URL rotates, a donor that still linked it would silently lose its hero on every mirror ever built.",
+      "reencoded_2026_07_30": "THE FOOTAGE IS KEPT AND VISUALLY UNCHANGED. Owner directive 2026-07-30: the Lovable template heroes are generic, and 90%+ of them stay exactly as they look, with only verbiage changing. The objection was never the video, it was the bitrate: the archived original ran 26 Mbps at 1920x1088 for 10.04s — a mezzanine rate, 6-8x more than web delivery needs, and 31 MB of the donor tree's 40 MB, re-uploaded for EVERY customer and re-downloaded whole by deploy.js byteDiff() under a 20s timeout. Re-encoded x264 CRF 26 preset slow, audio stripped, +faststart: same 1920x1088, same 24 fps, same 10.041667s duration, 7498958 bytes (-77%). SSIM 0.970 against the archived original; a 2x nearest-neighbour crop comparison (harsher than any real viewing) showed no visible blocking or banding. The 26 Mbps archive is NOT deleted — it is the master.",
+      "reencode_caution": "This fixes the COMPILED donor only. The ingest step that dereferences the Lovable CDN pointer still archives at source bitrate, so a re-port of this donor will reintroduce a ~31 MB hero unless the same re-encode runs at ingest. Fix it there when the next donor is ported."
+    },
+    "hero-loop-lite.mp4": {
+      "bytes": 1445584,
+      "role": "hero loop, 1270x720 — THE SHIPPED RUNG 2: an identical copy of this file ships at assets/hero-fallback-concrete.mp4 on every build",
+      "provenance": "ffmpeg re-encode of hero-loop.mp4 (scale=-2:720, crf 30, audio stripped, faststart)."
+    },
+    "fallback": "Save-Data, 2G/3G and prefers-reduced-motion all render the poster only, with no video request at all."
+  },
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-concrete.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-concrete.mp4",
+    "poster": "assets/hero-concrete-4-_vKHA0.webp",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (REAL bytes ship today: the re-encoded 1270x720 generic concrete pour loop, 1445584-byte faststart mp4; rung 2 plays on every build as-is)",
+      "the client photograph photo slot 1 (the hero picture element and the video poster attribute are the same file; the engine swaps the slot with the prospect's own photo)",
+      "the drawn gold-on-navy hero composition (gradient meshes, mesh-animated and noise layers under everything)"
+    ],
+    "note": "Verbatim re-port, owner's order 2026-08-17 (the same ladder every verbatim donor ships): the marked <video> ships in the hydrated React hero with NO src, full autoplay attrs and the design's own poster; the ladder is data — the hero-video-ladder JSON island in every prerendered page's <head> carries the rung order (client clip first, WSS clip second) and the small runtime beside it arms the first rung whose bytes shipped, unhides the element on loadedmetadata, steps down silently on error and never arms under reduced motion. assets/hero-fallback-concrete.mp4 is a copy of media/hero-loop-lite.mp4 (the mobile-weight re-encode), so rung 2 PLAYS today without borrowing a clip; media/hero-loop.mp4 (1920x1088, 7498958 bytes) stays in the tree as the operations alternate — swapping it in at the assets path is a file swap, not a code change. The engine writes an approved clip to client_video_path (mp4 only — the slot extension is binding); never a borrowed or fabricated clip."
+  },
+  "componentsPreserved": [
+    "ProjectGallery (12 slots + lightbox)",
+    "QuoteEstimator (4 steps, now posting to the shared lead contract)",
+    "Testimonials (island reviews / review-ask / nothing)",
+    "StatCounter + useCountUp (now decimal-aware so a verified 4.9 does not round to 5)",
+    "TrustChips",
+    "StickyCallBar",
+    "Reveal + useReveal",
+    "useParallax",
+    "Marquee",
+    "TiltCard",
+    "ProcessSteps",
+    "HeroVideo",
+    "CityChips",
+    "RelatedServices",
+    "ServiceLayout",
+    "InShortBlock",
+    "FAQ",
+    "SectionHeading",
+    "SectionDivider",
+    "CallButton",
+    "Logo"
+  ],
+  "componentsAdded": [
+    "ClaimStrip / ClaimChips — the backed-claims-only replacement for the donor's five-slot hero assertion strip",
+    "NapLine — address as independently-collapsible parts",
+    "Photo — dual-format image slot"
+  ],
+  "truthLaw": {
+    "hardestThingInThisDonor": "The hero claim strip asserted '100% Licensed & Insured', 'Same-Week Site Visits', 'Written Workmanship Warranty', 'Direct Crews — No Brokers' and '13+ Cities Served', and the same five claims were repeated in the marquee, the stat band, the trust chips, the process steps, every service page and every one of the thirteen city pages. Ramon's crawl found ZERO warranty language on the prospect's site and the build was correctly blocked.",
+    "rule": "A claim renders only when it is EVIDENCE (a verified licence, a verified rating + count), COMPOSED (a count over verified areas or services) or PUBLISHED (something the prospect published, arriving on the island). Warranty, insurance, response time, crew structure and years-in-business have no evidence or composed path — they are published or they are absent.",
+    "alsoRemoved": [
+      "Every $/sq ft range on every service page and city page, plus the schema priceSpecification of $6.00",
+      "The schema's 65 km GeoCircle, priceRange, paymentAccepted, slogan, bilingual contact points and Mon–Sat opening hours",
+      "The Google Tag Manager loader (a container id on a mirror either does nothing or sends the prospect's traffic somewhere they do not control)",
+      "13 city pages of soil geology, named building departments, neighbourhood lists and populations"
+    ],
+    "proof": "tools/collapse-proof.cjs renders the mirror with every optional token blank AND no content island, across 13 routes x 2 viewports, and fails on any of that vocabulary, on any stranded empty container, on any empty href and on any React hydration error."
+  },
+  "verification": {
+    "build": "node node_modules/vite/bin/vite.js build — 1918 modules transformed, 1 js chunk (532,766 B), 1 css chunk, 0 errors",
+    "esm": "the ESM_SYNTAX regex from test/donor-esm-invariant.test.js returns false on the bundle — plain .js is safe here",
+    "bare_tokens": "acorn full-AST scan of the bundle: 0 bare token Identifier nodes (242 literal double-brace token occurrences, all inside string literals; 29 NEED markers)",
+    "identity": "gate-a-scan identityScan() over the hydrated tree using this manifest's own atoms — see scratch-concrete/prove-staged-donor.cjs",
+    "render": "Playwright chromium over all 12 routes of the hydrated tree served locally with the engine's own SPA rewrite semantics — see scratch-concrete/prove-staged-donor.cjs"
+  },
+  "notes": "Hydrate from this boilerplate only. Never re-forge from the donor source per customer — the point of a pre-compiled donor is seconds per mirror.",
+  "registered_on": "2026-08-19",
+  "installed_at": "apps/backend/scratch-concrete/donor-staging/concrete-elconstruction-spa (STAGED — not in donors-clean)",
+  "alias_verticals": [
+    "masonry",
+    "mason",
+    "hardscaping",
+    "hardscape",
+    "concrete contractor",
+    "flatwork"
+  ],
+  "alias_note": "Applied by lib/donor-verticals.js from data/donor-verticals.json. The engine itself still resolves ONLY the exact \"vertical\" value above.",
+  "fixes_2026_07_30": [
+    {
+      "what": "The home-page service-area block read \"Where we work, starting from <City> <City>\".",
+      "found_by": "Gate 4A doubled-proper-noun on an all-blank hydration with no content island — i.e. a prospect with no published service area, which is the common case.",
+      "why_it_matters": "The heading already ends with the primary city and CityChips always resolves that same city, so with no other verified area the two sat adjacent. The prose line that normally separated them is itself conditional on areas.length > 1.",
+      "fix": "Prose and chips now share one condition. area-1 stays reachable via the \"See the full service area\" link.",
+      "file": "src/routes/index.tsx"
+    },
+    {
+      "what": "photo_slots was a descriptive OBJECT, so the engine saw ZERO slots and no mirror from this donor could ever show the prospect's own photographs.",
+      "found_by": "engine.js reads Array.isArray(manifest.photo_slots); this manifest failed that test, silently.",
+      "why_it_matters": "Every concrete mirror would have shipped the template stock gallery regardless of how many photos the prospect supplied — and still been marked revealable, because photo fill is not one of the named release gates.",
+      "fix": "photo_slots is now a flat array of the twelve dist-relative gallery paths (descriptive form retained as photo_slots_detail). ProjectGallery was changed from a <picture> webp/jpg pair to a single <img>, because the engine fills one file per slot and a pair would consume two prospect photos per visible tile.",
+      "files": [
+        "BOILERPLATE.json",
+        "src/components/ProjectGallery.tsx"
+      ],
+      "proof": "12/12 slots present in the dist AND referenced by the shipped html/js/css (no dead slots); 12 supplied photos place into 12 visible tiles.",
+      "caution": "Vite content-hashes these filenames. REGENERATE photo_slots from the built tree on every rebuild or the engine will skip every slot again."
+    }
+  ],
+  "spa_routes_note": "TRUE SPA ROUTES — every one of these has NO file behind it in this tree (the dist is one index.html), which is exactly the precondition deploy.js deepLinkCheck() asserts: it probes spa_routes[0] and requires the response to be byte-identical to index.html. The SSG variant had to declare spa_routes EMPTY because Vercel checks the filesystem before rewrites and /service-area served its own 34,808-byte prerendered page against the 71,193-byte shell, failing deployed_verification. This tree ships NO vercel.json, so deploy.js withSpaRewrite() injects {cleanUrls:true, rewrites:[each route -> \"/\"]}.",
+  "donor_business_name": "EL Construction",
+  "donor_phone": "(480) 256-2343",
+  "donor_email": "elconstructionaz@gmail.com",
+  "donor_city": "Tempe",
+  "donor_county": "Maricopa County",
+  "donor_domain": "elconstructionaz.com",
+  "persons": [],
+  "zips": [
+    "85281",
+    "85282",
+    "85283"
+  ],
+  "geo": [
+    "33.5327396",
+    "-111.9173586",
+    "33.4255",
+    "-111.9400"
+  ],
+  "account_ids": [
+    "GTM-XXXXXXX",
+    "G-XXXXXXXXXX"
+  ],
+  "socials": [
+    "https://www.google.com/maps/place/EL+Construction+LLC",
+    "https://search.google.com/local/writereview?placeid=ChIJI6guXEgIK4cRABILl-7tNiI",
+    "g.page/el-construction-tempe",
+    "ChIJI6guXEgIK4cRABILl-7tNiI",
+    "0x872b08485c2ea823",
+    "0x2236edee970b0212",
+    "el-construction",
+    "elconstruction",
+    "elconstructionaz",
+    "Maricopa",
+    "Phoenix",
+    "Scottsdale",
+    "Chandler",
+    "Glendale",
+    "Avondale",
+    "Ahwatukee",
+    "Queen Creek",
+    "Apache Junction",
+    "Paradise Valley",
+    "Arizona",
+    "lovableproject.com",
+    "lovable.app",
+    "/__l5e/assets-v1/"
+  ],
+  "identity_atoms_note": "Added 2026-07-30. lib/mirror-engine/scan.js identityScan() builds its atom list ONLY from these BOILERPLATE fields; this donor declared none, so gate-a-scan produced an EMPTY token list and returned clean:true for any bytes while engine.js:389 still reported identity_scan:passed. Values copied from tools/donor.elconstruction.manifest.json and data/donor-registry.json. NOTE the manifest itself never ships — hydrate.js:27,166 drops BOILERPLATE.json from the output tree — it is read from disk by donor.js readManifest(), so declaring identity here does not leak it. DELIBERATELY EXCLUDED as unsafe atoms even with word-boundary matching: \"Mesa\", \"Gilbert\", \"Peoria\", \"Surprise\" — ordinary English words that would fire on neutral trade copy. \"Tempe\" is only safe because gate-a-scan now word-boundary matches alphabetic atoms; under the old substring matcher it hit \"temperature\" in three shipped files.",
+  "photo_slots_paired_note": "PAIRED SLOTS — 2026-07-30 (A3, option 2). project-02/06/07/10 ship as a <picture> webp+jpg PAIR: the .jpg is the <img>, the .webp is the <source>. Only the .jpg halves were declared, so on the home page and 7 service pages the browser picked the donor <source> and rendered EL CONSTRUCTION's photograph over the customer's. The alternative fixes (delete the <source>, or repoint the constants) both change React render: Ey/Ty/My are passed to ServiceLayout as heroImage, so a blind edit is a hydration gamble. Declaring BOTH halves is the only fix with ZERO markup change - whichever variant the browser picks, it is the customer's. COST, accepted deliberately: those four tiles consume TWO of the prospect's photos each, so 16 slots back 12 visible tiles. engine.js fills in array order and stops when the pool empties, hence each webp sits immediately after its jpg twin so a pair fills together rather than the webps starving at the end.",
+  "fixes_2026_08_17": [
+    {
+      "what": "The build prerendered NOTHING — dist/client had assets but no HTML, silently.",
+      "why": "The prerender block was nested under `vite:` in defineConfig(); the lovable wrapper only forwards a TOP-LEVEL `tanstackStart` key, and Vite dropped the unknown nested key without a warning.",
+      "fix": "Hoisted tanstackStart to the top level; documented the gotcha in vite.config.ts."
+    },
+    {
+      "what": "Three {{CITY}}/{{STATE}} tokens sat as raw JSX TEXT (Based in {{CITY}}., the home InShortBlock, the about h1), which compiles to bare object-literal shorthand identifiers — ReferenceError at SSR and bare CITY/STATE identifiers in the bundle.",
+      "fix": "Wrapped each in a string expression ({\"{{CITY}}\"}); added check-tokens.cjs (quote-aware line scanner) at the port root so a future edit cannot reintroduce one."
+    },
+    {
+      "what": "scanbare2.cjs (the fleet's naive bare-token gate) reported dozens of false bare tokens once React+TanStack internals shared a chunk with the routeTree's token strings.",
+      "why": "React ships a quote inside its /[\\n\"\\\\]/g HTML-escape regex and TanStack ships /(\\\\|\")/g — quote characters INSIDE regex literals break a quote-skipping scanner's parity for the rest of the file.",
+      "fix": "manualChunks vendor split (node_modules minus the START entry shim) so index-*.js chunks are src-only; the gate now scans clean AND an acorn-based cross-check confirmed zero real bare identifiers anywhere."
+    },
+    {
+      "what": "The hero video ladder runtime lived only in the old donor's hand-staged index.html; the re-port source had the marked element but no island/runtime.",
+      "fix": "The ladder island + fleet-standard runtime now ship from src/routes/__root.tsx into EVERY prerendered page's <head>, with rung-2 real bytes at assets/hero-fallback-concrete.mp4 (copy of media/hero-loop-lite.mp4)."
+    }
+  ],
+  "staging_only": true,
+  "staging_note": "STAGED, NOT INSTALLED. This tree lives under apps/backend/scratch-concrete/donor-staging/ and is invisible to lib/mirror-engine/donor.js, lib/donor-verticals.js and lib/buildable-verticals.js, all of which read donors-clean/ (or MIRROR_DONOR_ROOT). Installing it is a deliberate move of this directory into donors-clean plus the canonical pointer flip in data/donor-verticals.json — see scratch-concrete/RUNBOOK.md.",
+  "stack": "compiled Vite 7 + React 19 (TanStack Router running CLIENT-SIDE, Tailwind CSS v4) — ONE self-contained bundle, Fraunces/Inter via Google Fonts; static hosting, no request-time build, no SSR/SSG half",
+  "howItWasMadeSpa": {
+    "problem": "The SSG variant of this donor is the only tree in donors-clean that ships (a) a serialized TanStack Start hydration payload ($_TSR stream barrier, per-route timestamps) that React must re-match at boot, and (b) twenty cross-importing ESM chunks. Both are the shapes that produced the fleet's two worst serve-time failures: React hydration errors on a page that passed every build gate, and \"exports is not defined\" when Vercel's function builder CommonJS-transpiles traced ESM. The .js.raw sidecar convention (lib/mirror-engine/donor.js loadDonorFiles) works around (b); nothing works around (a) except not shipping a hydration payload.",
+    "solution": "Recompile the identical src/ as a client SPA. The route tree and createFileRoute calls are router-CORE, so all twelve routes keep working; only the root route changes shape (no shellComponent/head()/HeadContent/Scripts) and the WSS shell index.html owns <head> instead. Result: nothing to hydrate (empty #root, client render), and ONE chunk with zero ESM syntax, so the sidecar convention is not needed at all.",
+    "changedFiles": [
+      "src/routes/__root.tsx — shellComponent + head() + HeadContent/Scripts removed; the design frame (SiteHeader / Outlet / SiteFooter / StickyCallBar / spacer) is byte-identical",
+      "src/main.tsx — added (createRoot + RouterProvider + styles.css), the plumbing-verbatim entry",
+      "index.html — the WSS shell: the <head> of the SHIPPED SSG donor lifted verbatim, minus its modulepreload links and its own stylesheet link (Vite injects the new ones). Same tokens, same NEED blocks, same three ld+json blocks, same hero-video-ladder island and runtime.",
+      "vite.config.ts — plain Vite; rollupOptions.output.inlineDynamicImports for a single chunk"
+    ],
+    "unchanged": "src/components, src/routes/*.tsx (all twelve), src/lib (schema, site, lead, track, wssc content bridge), src/hooks, src/styles.css and src/assets are copied verbatim from the port tree. No copy, no claim, no photo and no token was edited.",
+    "deployRoot": "dist"
+  },
+  "assets_built": {
+    "js": [
+      "index-BFny53Fb.js"
+    ],
+    "css": [
+      "index-PR5w8tQz.css"
+    ]
+  },
+  "esm_invariant": "NOT APPLICABLE BY CONSTRUCTION. The single bundle contains no ESM syntax (no top-level import/export, no import.meta, no dynamic import()), verified against the exact regex in test/donor-esm-invariant.test.js, so it ships as a plain .js and there is nothing for Vercel's builder to transpile. The SSG variant needs twenty .js.raw sidecars to survive the same builder.",
+  "gate_4a_note": "The SSG variant's recorded GATE 4A PASS is NOT inherited — it was run against a different compiled tree. Its known_limitation still applies to the design either way: this manifest lists every Phoenix-metro city and \"Arizona\" as donor geography, so gate 4A cannot pass for an Arizona prospect until donor geography can be told from client geography."
+}

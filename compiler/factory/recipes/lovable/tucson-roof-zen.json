@@ -1,0 +1,68 @@
+{
+ "id": "tucson-roof-zen",
+ "source": "f4e38100-88f8-49a8-b7de-166035c963c9",
+ "palette": {
+  "vars": {
+   "--background": "0 0% 100%",
+   "--foreground": "210 17% 16%",
+   "--surface": "0 0% 97%",
+   "--surface-2": "0 0% 94%",
+   "--surface-3": "0 0% 90%",
+   "--card": "0 0% 100%",
+   "--card-foreground": "210 17% 16%",
+   "--popover": "0 0% 100%",
+   "--popover-foreground": "210 17% 16%",
+   "--primary": "83 78% 42%",
+   "--primary-foreground": "0 0% 100%",
+   "--secondary": "96 45% 28%",
+   "--secondary-foreground": "0 0% 100%",
+   "--accent": "46 96% 54%",
+   "--accent-foreground": "210 17% 16%",
+   "--muted": "0 0% 94%",
+   "--muted-foreground": "220 9% 28%",
+   "--destructive": "0 75% 52%",
+   "--destructive-foreground": "0 0% 100%",
+   "--border": "0 0% 88%",
+   "--input": "0 0% 90%",
+   "--ring": "83 78% 42%",
+   "--navy": "210 17% 16%",
+   "--navy-2": "0 0% 97%",
+   "--clay": "83 70% 38%",
+   "--clay-deep": "96 55% 28%",
+   "--copper": "96 45% 28%",
+   "--bone": "210 17% 16%",
+   "--bone-on-dark": "0 0% 100%",
+   "--safety": "46 96% 54%",
+   "--gradient-hero": "linear-gradient(180deg, hsl(210 17% 8% / 0.55) 0%, hsl(210 17% 8% / 0.78) 60%, hsl(210 17% 10% / 0.85) 100%)",
+   "--gradient-clay": "linear-gradient(135deg, hsl(83 70% 38%) 0%, hsl(96 55% 28%) 100%)",
+   "--gradient-desert": "linear-gradient(180deg, hsl(96 45% 28% / 0.06), transparent 80%)",
+   "--sidebar-background": "0 0% 100%",
+   "--sidebar-foreground": "210 17% 16%",
+   "--sidebar-primary": "83 70% 38%",
+   "--sidebar-primary-foreground": "0 0% 100%",
+   "--sidebar-accent": "0 0% 94%",
+   "--sidebar-accent-foreground": "210 17% 16%",
+   "--sidebar-border": "0 0% 88%",
+   "--sidebar-ring": "83 70% 38%"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "0 0% 100%",
+   "--foreground": "210 17% 16%"
+  }
+ },
+ "fonts": {
+  "display": "Barlow Condensed",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.25rem",
+ "shadows": [
+  "0 30px 80px -20px hsl(210 17% 16% / 0.25)",
+  "0 18px 40px -12px hsl(83 70% 38% / 0.35)"
+ ],
+ "keyframes": [],
+ "signatures": [
+  "noise"
+ ]
+}

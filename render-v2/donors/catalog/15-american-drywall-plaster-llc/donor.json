@@ -1,0 +1,346 @@
+{
+  "version": 2,
+  "key": "15-american-drywall-plaster-llc",
+  "name": "American Drywall & Plaster, LLC",
+  "category": "general contractor",
+  "vertical": "general contractor",
+  "requested_vertical": "general contractor",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "72e8240d-e547-4061-800a-9a64f8a88069",
+  "lovable_source_commit": "3bd26ef25337cc1985aadc009cc6a8fa2ebbc01b",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "72e8240d-e547-4061-800a-9a64f8a88069",
+    "ref": "3bd26ef25337cc1985aadc009cc6a8fa2ebbc01b",
+    "repository": "https://github.com/mwoodward5/craft-build-genius",
+    "git_tree": "2fb380a8e332b5e799bdb7237b158e798e2ce0d1"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/services",
+    "/drywall",
+    "/plaster",
+    "/painting",
+    "/about",
+    "/reviews",
+    "/gallery",
+    "/service-area",
+    "/contact",
+    "/privacy-policy"
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "oklch(0.978 0.004 250)",
+      "foreground": "oklch(0.20 0.045 255)",
+      "primary": "oklch(0.24 0.060 255)",
+      "secondary": "oklch(0.94 0.010 250)",
+      "accent": "oklch(0.56 0.205 27)",
+      "border": "oklch(0.88 0.010 250)",
+      "card": "oklch(1 0 0)",
+      "ink": "oklch(0.20 0.045 255)",
+      "bone": "oklch(0.978 0.004 250)",
+      "amber": "oklch(0.56 0.205 27)"
+    },
+    "typography": {
+      "display": "Fraunces, Cormorant Garamond, serif",
+      "sans": "Inter, ui-sans-serif, system-ui, sans-serif",
+      "mono": "JetBrains Mono, ui-monospace, monospace"
+    },
+    "radii": {
+      "button": "4px",
+      "card": "6px",
+      "badge": "2px"
+    },
+    "shadows": {
+      "soft": "0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -12px rgb(0 0 0 / 0.12)",
+      "lift": "0 20px 60px -28px rgb(0 0 0 / 0.30), 0 4px 16px -8px rgb(0 0 0 / 0.10)",
+      "accent": "0 18px 50px -20px oklch(0.56 0.205 27 / 0.45)"
+    }
+  },
+  "hero_contract": {
+    "component": "WallStudioHero",
+    "video_slot": "/__l5e/assets-v1/b0d5cf87-b044-4012-8b2c-ff1c46fa0b1c/hero-trowel.mp4",
+    "poster_slot": "src/assets/hero-poster.jpg",
+    "overlays": [
+      "linear-gradient(to right, oklch(0.20 0.045 255 / 0.85), oklch(0.20 0.045 255 / 0.55), oklch(0.20 0.045 255 / 0.20))",
+      "linear-gradient(to top, oklch(0.20 0.045 255 / 0.85), oklch(0.20 0.045 255 / 0.10), oklch(0.20 0.045 255 / 0.40))",
+      "grain_texture"
+    ],
+    "widget": "FinishAdvisor",
+    "controls": {
+      "play_pause": true,
+      "mute_unmute": true,
+      "reduced_motion_aware": true
+    }
+  },
+  "media_slots": [
+    {
+      "id": "hero_ambient",
+      "route": "/",
+      "ratio": "16:9",
+      "role": "hero_video"
+    },
+    {
+      "id": "craft_tape_1_to_7",
+      "route": "/",
+      "ratio": "4:5",
+      "role": "project_work_strip"
+    },
+    {
+      "id": "commercial_proof",
+      "route": "/",
+      "ratio": "16:10",
+      "role": "commercial_facility"
+    },
+    {
+      "id": "about_owner",
+      "route": "/about",
+      "ratio": "3:4",
+      "role": "owner_crew"
+    },
+    {
+      "id": "drywall_hero",
+      "route": "/drywall",
+      "ratio": "4:3",
+      "role": "trade_execution"
+    },
+    {
+      "id": "plaster_hero",
+      "route": "/plaster",
+      "ratio": "4:3",
+      "role": "trade_execution"
+    },
+    {
+      "id": "painting_hero",
+      "route": "/painting",
+      "ratio": "4:3",
+      "role": "trade_execution"
+    },
+    {
+      "id": "gallery_grid_1_to_14",
+      "route": "/gallery",
+      "ratio": "4:5",
+      "role": "project_archive"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business.name",
+      "type": "string",
+      "target": "src/lib/business.ts"
+    },
+    {
+      "key": "business.phone",
+      "type": "string",
+      "target": "src/lib/business.ts"
+    },
+    {
+      "key": "business.email",
+      "type": "string",
+      "target": "src/lib/business.ts"
+    },
+    {
+      "key": "business.city",
+      "type": "string",
+      "target": "src/lib/business.ts"
+    },
+    {
+      "key": "serviceAreas",
+      "type": "array",
+      "target": "src/lib/business.ts"
+    },
+    {
+      "key": "services",
+      "type": "object",
+      "target": "src/lib/business.ts"
+    },
+    {
+      "key": "testimonials",
+      "type": "array",
+      "target": "src/lib/business.ts"
+    }
+  ],
+  "trust_slots": [
+    {
+      "location": "hero_brand_strip",
+      "format": "mono_chip"
+    },
+    {
+      "location": "hero_stat_grid",
+      "format": "border_left_stats"
+    },
+    {
+      "location": "process_panel",
+      "format": "truthful_scope_badge"
+    },
+    {
+      "location": "reviews_block",
+      "format": "source_tagged_quote_cards"
+    },
+    {
+      "location": "reviews_footer",
+      "format": "outbound_portal_links"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "scope": "global",
+      "file": "src/lib/seo.ts"
+    },
+    {
+      "type": "BreadcrumbList",
+      "scope": "all_routes",
+      "file": "src/lib/seo.ts"
+    },
+    {
+      "type": "FAQPage",
+      "scope": "home_drywall_plaster",
+      "file": "src/lib/seo.ts"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "route": "/service-area",
+      "format": "two_column_city_matrix"
+    },
+    {
+      "route": "/about",
+      "format": "declarative_aeo_answer_block"
+    },
+    {
+      "route": "/contact",
+      "format": "direct_nap_card"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "query_type": "near_me_specialty",
+      "route": "/drywall",
+      "section": "FAQ"
+    },
+    {
+      "query_type": "surface_restoration",
+      "route": "/plaster",
+      "section": "FAQ"
+    }
+  ],
+  "map_location_slot": {
+    "route": "/service-area",
+    "style": "clean_card_list",
+    "cid_outbound": true
+  },
+  "content_density": {
+    "home_reviews_max": 3,
+    "home_services_max": 4,
+    "home_faqs_max": 4,
+    "gallery_photos_total": 14
+  },
+  "mobile_rules": {
+    "viewport_390": {
+      "sticky_cta": true,
+      "hamburger_nav": true,
+      "single_column_grids": true
+    },
+    "viewport_768": {
+      "two_column_grids": true,
+      "header_visible_contact": true
+    },
+    "viewport_1440": {
+      "full_horizontal_nav": true,
+      "two_column_hero_split": true
+    }
+  },
+  "non_negotiables": [
+    "Preserve Fraunces display serif with italic accents",
+    "Keep 4px architectural tight corner radius on buttons",
+    "Retain WallStudioHero FinishAdvisor interactive widget",
+    "Maintain high-contrast ink/bone/slate section alternation",
+    "Keep sticky mobile dual CTA dock"
+  ],
+  "safe_replacements": [
+    "Business name, phone, email, and geographic address",
+    "Service area city array and capability bullet points",
+    "10-second hero video MP4 and poster image",
+    "All project gallery and marquee photography",
+    "Customer review quotes and third-party profile links"
+  ],
+  "leak_terms": [
+    "American Drywall & Plaster, LLC"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "Cormorant Garamond",
+      "serif",
+      "Inter",
+      "ui-sans-serif",
+      "system-ui"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.978 0.004 250)",
+    "oklch(0.20 0.045 255)",
+    "oklch(0.24 0.060 255)",
+    "oklch(0.94 0.010 250)",
+    "oklch(0.56 0.205 27)",
+    "oklch(0.88 0.010 250)",
+    "oklch(1 0 0)",
+    "oklch(0.20 0.045 255)"
+  ],
+  "fonts": [
+    "Fraunces",
+    "Cormorant Garamond",
+    "serif",
+    "Inter",
+    "ui-sans-serif",
+    "system-ui"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "fc6780429af20e654bc40f3db3bf42aec7298d9b7ac62bd494a68d906333d670",
+    "files": {
+      "assets/bootstrap-DDGmrHVT.js": "3e4397560ec7d5658eea751b66f3089bead17f3a98b15d4fc317ce42dc028f40",
+      "assets/index-7HUypprT.js": "319cc1077f4362630c6620ea09e51b3655c5576bd5381d743e9768f55825cd81",
+      "assets/index-DLRh18_A.css": "7b7c84cfd849c991851650d9ff71437ac48be3c551a2a713fb6c48d51403a3a0",
+      "index.html": "00052386c755c95572511d4badf0ce14a1554238e3c4612179b0e2ec8d05918b"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

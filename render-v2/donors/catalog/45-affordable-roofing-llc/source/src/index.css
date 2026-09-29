@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Affordable Roofing — Tucson light theme, lime+charcoal */
+
+@layer base {
+  :root {
+    /* Core palette (HSL) — light theme */
+    --background: 0 0% 100%;            /* white */
+    --foreground: 210 17% 16%;          /* #1f2933 charcoal body text */
+
+    --surface: 0 0% 97%;                /* #F7F7F7 alternating sections */
+    --surface-2: 0 0% 94%;
+    --surface-3: 0 0% 90%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 17% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 17% 16%;
+
+    /* Lime green = primary brand (logo) */
+    --primary: 83 78% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Deep green = secondary */
+    --secondary: 96 45% 28%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Safety yellow accent */
+    --accent: 46 96% 54%;
+    --accent-foreground: 210 17% 16%;
+
+    --muted: 0 0% 94%;
+    --muted-foreground: 220 9% 28%;     /* #374151 muted */
+
+    --destructive: 0 75% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 90%;
+    --ring: 83 78% 42%;
+
+    --radius: 0.25rem;
+
+    /* Brand specifics — repurposed for light theme.
+       Components reference these by name; keep names stable. */
+    --navy: 210 17% 16%;          /* dark charcoal (was dark bg) — now used as dark text/elements */
+    --navy-2: 0 0% 97%;           /* light card surface */
+    --clay: 83 70% 38%;           /* lime green, readable on white */
+    --clay-deep: 96 55% 28%;      /* deep green */
+    --copper: 96 45% 28%;
+    --bone: 210 17% 16%;          /* "bone" repurposed as primary text color (#1f2933) */
+    --bone-on-dark: 0 0% 100%;    /* white text for use on dark hero */
+    --safety: 46 96% 54%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(210 17% 8% / 0.55) 0%, hsl(210 17% 8% / 0.78) 60%, hsl(210 17% 10% / 0.85) 100%);
+    --gradient-clay: linear-gradient(135deg, hsl(83 70% 38%) 0%, hsl(96 55% 28%) 100%);
+    --gradient-desert: linear-gradient(180deg, hsl(96 45% 28% / 0.06), transparent 80%);
+
+    --shadow-elevated: 0 30px 80px -20px hsl(210 17% 16% / 0.25);
+    --shadow-clay: 0 18px 40px -12px hsl(83 70% 38% / 0.35);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 17% 16%;
+    --sidebar-primary: 83 70% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 210 17% 16%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 83 70% 38%;
+  }
+
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 210 17% 16%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #ffffff;
+  }
+  h1,h2,h3,h4 { font-family: 'Barlow Condensed', 'Inter', sans-serif; letter-spacing: -0.01em; color: hsl(var(--foreground)); }
+}
+
+@layer components {
+  .display { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; line-height: 0.95; text-transform: uppercase; }
+  .eyebrow { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; font-size: 0.8rem; }
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  .btn-clay {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-4 font-semibold tracking-wide uppercase text-sm rounded-sm transition;
+    background: var(--gradient-clay);
+    color: #ffffff;
+    box-shadow: var(--shadow-clay);
+  }
+  .btn-clay:hover { transform: translateY(-1px); filter: brightness(1.05); }
+
+  .btn-outline-bone {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-4 font-semibold tracking-wide uppercase text-sm rounded-sm border-2 transition;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  .btn-outline-bone:hover { background: #ffffff; color: hsl(var(--foreground)); }
+
+  .btn-charcoal {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-4 font-semibold tracking-wide uppercase text-sm rounded-sm border-2 transition;
+    border-color: hsl(var(--foreground));
+    color: hsl(var(--foreground));
+    background: transparent;
+  }
+  .btn-charcoal:hover { background: hsl(var(--foreground)); color: #ffffff; }
+
+  .btn-safety {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-4 font-bold tracking-wide uppercase text-sm rounded-sm transition;
+    background: hsl(var(--safety));
+    color: hsl(var(--foreground));
+  }
+  .btn-safety:hover { filter: brightness(1.05); }
+
+  /* Hero overrides — hero sits on dark image; keep text white & readable */
+  .hero-text { color: #ffffff; }
+  .hero-text-muted { color: rgba(255,255,255,0.92); }
+
+  .alt-section { background-color: #F7F7F7; }
+
+  .roof-divider {
+    height: 18px;
+    background: hsl(var(--clay));
+  }
+
+  .grain::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.04; mix-blend-mode: multiply;
+    background-image: radial-gradient(hsl(var(--foreground)) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) { html {scroll-behavior:auto} *, *::before, *::after {transition:none !important;animation:none !important} }

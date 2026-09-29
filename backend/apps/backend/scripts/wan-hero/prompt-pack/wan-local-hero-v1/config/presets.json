@@ -1,0 +1,18 @@
+{
+  "cheap_5s": {
+    "duration_seconds": 5,
+    "goal": "default production hero",
+    "cameraRule": "one simple camera move only",
+    "motionRule": "subtle environment motion",
+    "recommendedGenerations": 1,
+    "retryOnlyWhen": ["identity failure","geometry failure","severe temporal artifact","unusable composition"]
+  },
+  "premium_10s": {
+    "duration_seconds": 10,
+    "goal": "best prospects / strongest source photos",
+    "cameraRule": "one continuous cinematic move; no scene changes",
+    "motionRule": "subtle environment motion with progressive parallax",
+    "recommendedGenerations": 1,
+    "retryOnlyWhen": ["identity failure","geometry failure","severe temporal artifact","unusable composition"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "variant": "cinematic-video",
+  "headline": "",
+  "subheadline": "",
+  "ctaPrimary": { "label": "Get a Quote", "href": "/contact" },
+  "ctaSecondary": { "label": "Call Now", "href": "tel:" },
+  "media": {
+    "video": "hero.mp4",
+    "poster": "hero-poster.webp",
+    "images": ["hero-1.webp", "hero-2.webp", "hero-3.webp"]
+  }
+}

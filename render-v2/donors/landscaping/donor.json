@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "name": "landscaping-greenfront-spa-v2",
+  "category": "landscaping",
+  "renderer": "spa-v2",
+  "source": {
+    "provider": "Lovable",
+    "project_id": "bac7c069-3279-4616-a0ee-e4e447042003",
+    "ref": "ecd99943844c7b92edd3898521ea29bcced88457"
+  },
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "data_island_id": "wss-client-data",
+  "content_render_targets": {
+    "services": [{ "path": "/", "selector": "section#services" }],
+    "faqs": [{ "path": "/", "selector": "section#faq" }]
+  },
+  "content_channel_availability": {
+    "reviews": "unavailable_until_source_bound_render",
+    "hours": "unavailable_until_source_bound_render",
+    "areas": "unavailable_until_source_bound_render"
+  },
+  "visual": {
+    "expected_animations": 16,
+    "fonts": [
+      "Instrument Serif",
+      "Work Sans"
+    ],
+    "glass": {
+      "backdrop_filter": "blur(22px) saturate(1.45)",
+      "border": "1px solid rgba(243, 241, 232, 0.18)"
+    },
+    "hero": {
+      "min_height": "100svh",
+      "heading_desktop": "7.5rem",
+      "heading_mobile": "3.75rem"
+    }
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "coverflow-carousel",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "bundle": {
+    "tree_sha256": "23dcd1ec66598bf985fddcd6ce66bbaefece55ac2c8ce47298565a8fa7baf38a",
+    "files": {
+      "assets/grass-texture-DzVvb9xl.jpg": "f65d7e4cb2e88471d8c424fda29bac141b3cec511b60ec2dc1a7fc2cc8fd4c0a",
+      "assets/index-CGd_BGKq.js": "d42ff71aa4307be0d2e52d7cf193db3360a9ac9a339d023ec267aa7c067e18dd",
+      "assets/index-CljSjkPi.css": "b3a776520aad4262f27ada3ef0b78e87bdd0841ed7fcd6bcbd0b6673f5f34c8c",
+      "index.html": "42aeb02e9a5ad657822d9f097dd5c8dc34f458b491dcfe48f1b03c9fb4649e05"
+    }
+  }
+}

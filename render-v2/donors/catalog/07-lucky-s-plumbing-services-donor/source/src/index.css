@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+@layer base {
+  :root {
+    --background: 222 40% 7%;
+    --foreground: 40 30% 95%;
+
+    --card: 222 35% 10%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 222 35% 10%;
+    --popover-foreground: 40 30% 95%;
+
+    /* Gold primary palette: deep gold #48381d → light gold #9f885c */
+    --primary: 36 28% 49%;
+    --primary-foreground: 35 40% 8%;
+
+    /* Blue secondary #3143c1 */
+    --secondary: 232 60% 47%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 222 25% 15%;
+    --muted-foreground: 222 15% 68%;
+
+    --accent: 232 60% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 40 30% 95%;
+
+    --border: 222 25% 18%;
+    --input: 222 25% 16%;
+    --ring: 36 28% 49%;
+
+    --radius: 0.875rem;
+
+    --copper: 36 28% 49%;
+    --copper-glow: 38 50% 72%;
+    --gold-deep: 34 43% 20%;
+    --water: 232 60% 47%;
+    --deep: 222 45% 5%;
+
+    --gradient-hero: radial-gradient(ellipse at 70% 30%, hsl(36 35% 45% / 0.18), transparent 55%),
+                     radial-gradient(ellipse at 20% 80%, hsl(232 60% 47% / 0.18), transparent 50%),
+                     linear-gradient(180deg, hsl(222 45% 5%), hsl(222 35% 9%));
+    --gradient-copper: linear-gradient(135deg, hsl(34 43% 20%), hsl(36 35% 55%), hsl(38 55% 75%));
+    --gradient-water: linear-gradient(135deg, hsl(232 60% 47%), hsl(220 80% 65%));
+    --gradient-card: linear-gradient(160deg, hsl(222 30% 12% / 0.9), hsl(222 35% 8% / 0.9));
+
+    --shadow-copper: 0 20px 60px -20px hsl(36 40% 50% / 0.45);
+    --shadow-elevated: 0 30px 80px -30px hsl(0 0% 0% / 0.6), 0 0 0 1px hsl(222 25% 20%);
+    --shadow-glow: 0 0 40px hsl(36 40% 55% / 0.35);
+
+    --transition-smooth: cubic-bezier(0.32, 0.72, 0.24, 1);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html, body { overflow-x: hidden; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .lucky-hero, .lucky-chrome {
+    --background: 222 40% 7%;
+    --foreground: 40 30% 95%;
+    --card: 222 35% 10%;
+    --card-foreground: 40 30% 95%;
+    --muted: 222 25% 15%;
+    --muted-foreground: 222 15% 68%;
+    --primary: 36 28% 49%;
+    --primary-foreground: 35 40% 8%;
+    --secondary: 232 60% 47%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 232 60% 47%;
+    --accent-foreground: 0 0% 100%;
+    --border: 222 25% 18%;
+    --input: 222 25% 16%;
+  }
+  html .lucky-hero { background-color: hsl(222 55% 5%) !important; color: hsl(40 30% 95%) !important; }
+  html .lucky-chrome { background-color: hsl(222 40% 7% / 0.96) !important; color: hsl(40 30% 95%) !important; }
+  #top .lucky-hero :is(h1, h2, h3, strong, button), html .lucky-chrome { color: hsl(40 30% 95%) !important; }
+  #top .lucky-hero :is(p, li, .text-muted-foreground), html .lucky-chrome .text-muted-foreground { color: hsl(220 25% 88%) !important; }
+  #top .lucky-hero .text-gradient-copper {
+    background: linear-gradient(135deg, hsl(34 43% 38%), hsl(36 45% 62%), hsl(38 60% 82%)) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+  }
+  #top .lucky-hero h1 > span:last-child { color: hsl(224 85% 72%) !important; }
+  #top .lucky-hero h1 > span:last-child {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.22em !important;
+    overflow-wrap: anywhere;
+  }
+  @media (min-width: 640px) {
+    #top .lucky-hero h1 > span:last-child { font-size: 1.125rem !important; letter-spacing: 0.3em !important; }
+  }
+  @media (min-width: 768px) {
+    #top .lucky-hero h1 > span:last-child { font-size: 1.25rem !important; }
+  }
+  html body #top .lucky-hero .text-gradient-copper {
+    background-image: linear-gradient(135deg, #8b6637, #caa772, #edd8b6) !important;
+  }
+  html .lucky-hero .bg-card-glass {
+    background: linear-gradient(160deg, hsl(222 30% 12% / 0.94), hsl(222 35% 8% / 0.96)) !important;
+  }
+  html body #top .lucky-hero .bg-card-glass :is(div, span, a, button) { color: hsl(40 30% 94%) !important; }
+  html body #top .lucky-hero .bg-card-glass a {
+    background-color: hsl(232 55% 24% / 0.9) !important;
+    border-color: hsl(232 70% 58% / 0.7) !important;
+  }
+  .text-gradient-copper {
+    background: var(--gradient-copper);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-water {
+    background: var(--gradient-water);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-card-glass {
+    background: var(--gradient-card);
+    backdrop-filter: blur(12px);
+  }
+  .shadow-copper { box-shadow: var(--shadow-copper); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(192 80% 55% / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(192 80% 55% / 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  @keyframes drip {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(8px); opacity: 1; }
+  }
+  .animate-drip { animation: drip 2.4s ease-in-out infinite; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { animation: fade-up 0.8s var(--transition-smooth) both; }
+
+  @keyframes pressure-ring {
+    0% { transform: scale(0.55); opacity: 0.55; }
+    100% { transform: scale(1.9); opacity: 0; }
+  }
+  .pressure-ring {
+    border: 1px solid hsl(var(--secondary) / 0.55);
+    animation: pressure-ring 4.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  }
+
+  @keyframes aurora-shift {
+    0%, 100% { transform: translate3d(0,0,0) rotate(0deg) scale(1); }
+    50% { transform: translate3d(3%,-2%,0) rotate(6deg) scale(1.06); }
+  }
+  .aurora-layer { animation: aurora-shift 18s ease-in-out infinite; }
+
+  @keyframes pipe-flow { to { stroke-dashoffset: -240; } }
+  .pipe-flow { stroke-dasharray: 6 14; animation: pipe-flow 6s linear infinite; }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.55; }
+    50% { opacity: 1; }
+  }
+  .animate-glow-pulse { animation: glow-pulse 3.2s ease-in-out infinite; }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-marquee { animation: marquee 38s linear infinite; }
+
+  .hero-clip {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 72px), 64% 100%, 36% calc(100% - 32px), 0 calc(100% - 56px));
+  }
+  @media (max-width: 768px) {
+    .hero-clip { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), 70% 100%, 30% calc(100% - 20px), 0 calc(100% - 32px)); }
+  }
+
+  .water-mesh {
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 30%, hsl(192 90% 55% / 0.35), transparent 60%),
+      radial-gradient(ellipse 50% 50% at 85% 20%, hsl(210 95% 60% / 0.32), transparent 60%),
+      radial-gradient(ellipse 60% 60% at 70% 90%, hsl(180 90% 55% / 0.28), transparent 60%),
+      radial-gradient(ellipse 50% 60% at 10% 90%, hsl(220 90% 50% / 0.30), transparent 60%);
+    filter: blur(40px) saturate(1.2);
+  }
+}
+
+/* Hide Lovable editor badge on published site */
+html body #lovable-badge,
+html body #lovable-badge * {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

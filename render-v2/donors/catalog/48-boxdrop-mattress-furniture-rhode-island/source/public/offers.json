@@ -1,0 +1,17 @@
+{
+  "merchant": "BoxDrop Rhode Island",
+  "offerPolicy": "No fake item prices. Use verified current inventory only.",
+  "knownValuePropositions": [
+    "current site says up to 60% off retail pricing",
+    "brand-new/in-plastic product positioning",
+    "financing/payment options may be available",
+    "delivery services available; confirm details"
+  ],
+  "callsToAction": [
+    "Call",
+    "Text",
+    "Get Directions",
+    "Ask About Financing",
+    "Check Today's Inventory"
+  ]
+}

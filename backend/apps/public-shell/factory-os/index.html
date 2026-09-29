@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Growth Console | WSS Labs</title>
+    <meta name="description" content="The WSS Labs command surface for opportunity review, market briefs, preview sites, consent-based follow-up, and delivery workflows." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css?v=20260706-2235" />
+    <script src="/app.js?v=20260706-2235" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-copy"><strong>Woodward</strong><span>Growth Console</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/previews/dallas-roofers">Demo Preview</a>
+          <a href="/intake?industry=Roofing&city=Dallas&businessName=Dallas%20Roofers%20Preview%20Market">Growth Intake</a>
+          <a href="/report">Market Brief</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="split-page compact-title">
+        <div class="page-copy">
+          <p class="eyeline">Growth Console</p>
+          <h1>Control the path from opportunity to live site.</h1>
+          <p>
+            A clean command room for our internal local-growth flow: lead discovery,
+            market briefs, site previews, paid launch workspaces, follow-up handoffs, and
+            delivery status.
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="/previews/dallas-roofers">
+              Open Demo Preview
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
+            </a>
+            <a class="button button-quiet" href="/intake?industry=Roofing&city=Dallas&businessName=Dallas%20Roofers%20Preview%20Market">Create Paid Launch</a>
+          </div>
+          <div id="backendHealth" class="provider-grid" aria-live="polite"></div>
+        </div>
+
+        <div class="factory-board" aria-label="Growth console launch status preview">
+          <div class="flowline">
+            <div class="flowline-row">
+              <b>Opportunity Review</b>
+              <div class="progress-line"><i style="width: 78%"></i></div>
+              <span>Leads ready</span>
+            </div>
+            <div class="flowline-row">
+              <b>Market Brief</b>
+              <div class="progress-line"><i style="width: 66%"></i></div>
+              <span>Report queued</span>
+            </div>
+            <div class="flowline-row">
+              <b>Preview Site</b>
+              <div class="progress-line"><i style="width: 86%"></i></div>
+              <span>Visual ready</span>
+            </div>
+            <div class="flowline-row">
+              <b>Opt-in Follow-up</b>
+              <div class="progress-line"><i style="width: 42%"></i></div>
+              <span>Consent gated</span>
+            </div>
+            <div class="flowline-row">
+              <b>Vercel Deploy</b>
+              <div class="progress-line"><i style="width: 38%"></i></div>
+              <span>Build dispatch</span>
+            </div>
+          </div>
+          <div class="status-note">
+            <strong>Current production spine</strong>
+            The live backend can create orchestration jobs, request secure checkout sessions, and prepare follow-up actions behind consent gates. The remaining heavy gate is connecting the WSS Labs build-ticket endpoint and persistent delivery ledger.
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

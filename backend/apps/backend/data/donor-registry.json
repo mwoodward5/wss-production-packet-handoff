@@ -1,0 +1,461 @@
+{
+ "version": 1,
+ "updated": "2026-07-30",
+ "donors": [
+  {
+   "donor_id": "falcon-roof-craft",
+   "vertical": "__retired__roofing",
+   "source": {
+    "type": "local_mirror",
+    "path": "_falcon-roof-craft"
+   },
+   "page_type": "multi-page (9 pages: Index, Residential, Commercial, RoofRepair, RoofReplacement, GuttersSiding, ServiceArea, Contact, NotFound)",
+   "quality_tier": "A",
+   "stack": "vite-spa (react-router, static vercel)",
+   "donor_manifest": {
+    "name": "Falcon Roofing LLC",
+    "phone": "(614) 715-0496",
+    "email": "mforchione@falcon-roofing.net",
+    "city": "Powell",
+    "region": "OH",
+    "county": "",
+    "domain": "falcon-roofing.net",
+    "zips": [
+     "43065"
+    ],
+    "geo": [
+     "-83.0752",
+     "40.1581"
+    ],
+    "socials": [
+     "https://www.bbb.org/us/oh/powell/profile/roofing-contractors/falcon-roofing-llc-0302-70163347",
+     "https://www.facebook.com/share/16rhQWHwU2/?mibextid=wwXIfr"
+    ],
+    "account_ids": [
+     "G-NM0SE1M1T4"
+    ],
+    "asset_md5": {
+     "falcon-commercial-bundled.jpg": "5fe48f60554365bcaa9dc3d3f67d3172",
+     "falcon-gutters-bundled.jpg": "0181f05c7581dcdada2112255279e58e",
+     "falcon-hero-roof-bundled.jpg": "3c2a8acbad87b9b1039fced97d6a0c15",
+     "falcon-hero-sky-mark.png": "b1ecd2a99cc9f8abedca6dfe6f945ec4",
+     "falcon-logo.jpg": "4700f2aff5abed4f3d3714782c119ed5",
+     "falcon-map-bundled.jpg": "4e39c54b140c6814a66ab653decf490a",
+     "falcon-process-bundled.jpg": "866b51f34859027f571b0c94ba60e31c",
+     "falcon-residential-bundled.jpg": "f2add3899fee7687a45a74ba19fbaae2",
+     "falcon-roofing-logo-transparent.png": "8511cea02f782037606a49a3fd7bf282",
+     "falcon-roofing-logo.png": "a661ff1e36943f91fd065001b2f36bf1",
+     "apple-touch-icon.png": "6246eff24f353f83179622904399b24a",
+     "favicon-16x16.png": "b659f647b9ef6b3d70ce621395f9d8e5",
+     "favicon-32x32.png": "7217b8775cc2a22bca0b1a4548dc67e3",
+     "favicon-48x48.png": "87a819a5340a333cdf78383d9398bf80",
+     "favicon.ico": "c147d2f472a7d7eb9aa3a41a545ebde3",
+     "icon-192.png": "88eec02fc726628bd225f9dd8ecbf698",
+     "icon-512.png": "af8dc4cd1a1bbcda5cdb886a302323a1",
+     "llms.txt": "96a0843e4b1afada63bc584b68f0d0b7",
+     "og-image.jpg": "a689c46f1104524f0e37fde36a86e4e4",
+     "og-logo.png": "a661ff1e36943f91fd065001b2f36bf1",
+     "placeholder.svg": "4a57334f2b44f8eed3356ede2944d8a4",
+     "robots.txt": "31391c489e161adab869968aeb943995",
+     "site.webmanifest": "7b30421127a2507062407ef96761140b",
+     "sitemap.xml": "3b78b70e9b43299df6e53a092ca3a768"
+    },
+    "source_path": "_falcon-roof-craft"
+   },
+   "last_used_metros": [
+    {
+     "metro": "Seattle, WA",
+     "build": "tekline-roofing-seattle",
+     "date": "2026-07-24"
+    },
+    {
+     "metro": "Redmond, WA",
+     "build": "nearme-roofing-redmond",
+     "date": "2026-07-24"
+    },
+    {
+     "metro": "Spokane, WA",
+     "build": "morris-clark-siding-roofing-spokane",
+     "date": "2026-07-24"
+    },
+    {
+     "metro": "Tucson, AZ",
+     "build": "modern-desert-roofing-tucson",
+     "date": "2026-07-24"
+    },
+    {
+     "metro": "Phoenix, AZ",
+     "build": "multi-pro-roof-solutions-phoenix",
+     "date": "2026-07-24"
+    }
+   ],
+   "vertical_before_retirement": "roofing",
+   "retired_for_outreach": true,
+   "retired_on": "2026-07-30",
+   "retired_reason": "Owner retired ROOFING as a target category on 2026-07-30. Entry RETAINED in full — only automatic vertical selection is off. pickDonor(vertical) compares d.vertical exactly, so no caller asking for \"roofing\" can reach these."
+  },
+  {
+   "donor_id": "rise-above-command",
+   "vertical": "__retired__roofing",
+   "source": {
+    "type": "local_mirror",
+    "path": "github-template-intelligence/mirrors/rise-above-command-lovable-source",
+    "lovable_project_id": "210188ce-0697-4194-8cdf-2e0f7f175325"
+   },
+   "page_type": "tanstack-start ssr (CinematicHero, StormBanner, StormConsole, ServiceAreaMap; routes: index, about, contact, services, roofing.$city)",
+   "quality_tier": "A (newest stack — requires SSR→SPA port + supabase strip before use in static lane)",
+   "stack": "tanstack-start ssr + supabase auth",
+   "donor_manifest": {
+    "name": "Rise Above Roofing & Restoration LLC",
+    "phone": "+18288554785",
+    "email": "riseaboveroofingandrestoration@yahoo.com",
+    "city": "Statesville",
+    "region": "NC",
+    "county": "Iredell County",
+    "domain": "",
+    "zips": [
+     "28677"
+    ],
+    "geo": [
+     "-80.8101",
+     "-80.8853",
+     "-80.8873",
+     "-81.1786",
+     "-81.3445",
+     "35.5848",
+     "35.7029",
+     "35.7344"
+    ],
+    "socials": [],
+    "account_ids": [],
+    "asset_md5": {
+     "og-cover.jpg": "48849fc85ec9d9a17fca998a0ef6e779"
+    },
+    "source_path": "github-template-intelligence/mirrors/rise-above-command-lovable-source"
+   },
+   "last_used_metros": [],
+   "vertical_before_retirement": "roofing",
+   "retired_for_outreach": true,
+   "retired_on": "2026-07-30",
+   "retired_reason": "Owner retired ROOFING as a target category on 2026-07-30. Entry RETAINED in full — only automatic vertical selection is off. pickDonor(vertical) compares d.vertical exactly, so no caller asking for \"roofing\" can reach these."
+  },
+  {
+   "donor_id": "rise-above-roar",
+   "vertical": "__retired__roofing",
+   "source": {
+    "type": "local_mirror",
+    "path": "github-template-intelligence/mirrors/rise-above-roar",
+    "lovable_project_id": null
+   },
+   "page_type": "tanstack-start ssr (CinematicHero, StormBanner, StormConsole; routes: index, about, contact, insights, glossary, ai-answers)",
+   "quality_tier": "B+ (requires SSR→SPA port + supabase strip)",
+   "stack": "tanstack-start ssr + supabase auth",
+   "donor_manifest": {
+    "name": "Rise Above Roofing & Restoration LLC",
+    "phone": "+18288554785",
+    "email": "riseaboveroofingandrestoration@yahoo.com",
+    "city": "Statesville",
+    "region": "NC",
+    "county": "Iredell County",
+    "domain": "",
+    "zips": [
+     "28092",
+     "28115",
+     "28117",
+     "28166",
+     "28601",
+     "28602",
+     "28603",
+     "28613"
+    ],
+    "geo": [
+     "-80.8101",
+     "-80.8853",
+     "-80.8873",
+     "-81.1786",
+     "-81.2173",
+     "-81.2218",
+     "-81.2545",
+     "-81.3445"
+    ],
+    "socials": [],
+    "account_ids": [],
+    "asset_md5": {
+     "og-cover.jpg": "48849fc85ec9d9a17fca998a0ef6e779"
+    },
+    "source_path": "github-template-intelligence/mirrors/rise-above-roar"
+   },
+   "last_used_metros": [],
+   "vertical_before_retirement": "roofing",
+   "retired_for_outreach": true,
+   "retired_on": "2026-07-30",
+   "retired_reason": "Owner retired ROOFING as a target category on 2026-07-30. Entry RETAINED in full — only automatic vertical selection is off. pickDonor(vertical) compares d.vertical exactly, so no caller asking for \"roofing\" can reach these."
+  },
+  {
+   "donor_id": "tucson-roof-zen",
+   "vertical": "__retired__roofing",
+   "source": {
+    "type": "local_mirror",
+    "path": "github-template-intelligence/mirrors/tucson-roof-zen"
+   },
+   "page_type": "one-page (no business.ts — structural donor only, identity is fully token-driven)",
+   "quality_tier": "B",
+   "stack": "vite-spa",
+   "donor_manifest": {
+    "name": "",
+    "phone": "",
+    "email": "",
+    "city": "",
+    "region": "",
+    "county": "",
+    "domain": "",
+    "zips": [],
+    "geo": [],
+    "socials": [
+     "https://www.bbb.org/us/az/tucson/profile/roofing-contractors/affordable-roofing-llc-1286-20109223",
+     "https://www.facebook.com/61567327842952"
+    ],
+    "account_ids": [
+     "GTM-MRXS5VCD"
+    ],
+    "asset_md5": {
+     "favicon.png": "873994b7b495c009a831ad41fb6dabb1",
+     "llms.txt": "4e5216d5420c2e5e367608e3b7412aea",
+     "placeholder.svg": "4a57334f2b44f8eed3356ede2944d8a4",
+     "robots.txt": "d5b0219787ffd31d10caf68bc69de57a",
+     "sitemap.xml": "d37229f49b8c0eadc4921f1276c2da24"
+    },
+    "source_path": "github-template-intelligence/mirrors/tucson-roof-zen"
+   },
+   "last_used_metros": [],
+   "vertical_before_retirement": "roofing",
+   "retired_for_outreach": true,
+   "retired_on": "2026-07-30",
+   "retired_reason": "Owner retired ROOFING as a target category on 2026-07-30. Entry RETAINED in full — only automatic vertical selection is off. pickDonor(vertical) compares d.vertical exactly, so no caller asking for \"roofing\" can reach these."
+  },
+  {
+   "donor_id": "storm-ready-build",
+   "vertical": "__retired__roofing",
+   "source": {
+    "type": "lovable_project",
+    "lovable_project_id": "a855e874-200b-4bd3-8ad6-a8ad223d4554",
+    "published": false
+   },
+   "page_type": "unknown — NOT mirrored locally; needs Lovable MCP read before registration",
+   "quality_tier": "pending-verification",
+   "stack": "unknown",
+   "donor_manifest": null,
+   "last_used_metros": [],
+   "vertical_before_retirement": "roofing",
+   "retired_for_outreach": true,
+   "retired_on": "2026-07-30",
+   "retired_reason": "Owner retired ROOFING as a target category on 2026-07-30. Entry RETAINED in full — only automatic vertical selection is off. pickDonor(vertical) compares d.vertical exactly, so no caller asking for \"roofing\" can reach these."
+  },
+  {
+   "donor_id": "five-star-roofing",
+   "vertical": "__retired__roofing",
+   "source": {
+    "type": "lovable_project",
+    "lovable_project_id": "c0558f84-e57c-4a9b-90cd-b483f0e3af31",
+    "published": true
+   },
+   "page_type": "one-page — NOT mirrored locally; needs Lovable MCP read before registration",
+   "quality_tier": "pending-verification",
+   "stack": "unknown",
+   "donor_manifest": null,
+   "last_used_metros": [],
+   "vertical_before_retirement": "roofing",
+   "retired_for_outreach": true,
+   "retired_on": "2026-07-30",
+   "retired_reason": "Owner retired ROOFING as a target category on 2026-07-30. Entry RETAINED in full — only automatic vertical selection is off. pickDonor(vertical) compares d.vertical exactly, so no caller asking for \"roofing\" can reach these."
+  },
+  {
+   "donor_id": "roofing-tekline",
+   "vertical": "__retired__roofing",
+   "source": {
+    "type": "boilerplate",
+    "path": "boilerplates/roofing-tekline"
+   },
+   "page_type": "one-page SPA (falcon-derived)",
+   "quality_tier": "A",
+   "stack": "vite-spa static",
+   "donor_manifest": {
+    "name": "Tekline Roofing",
+    "phone": "(206) 246-7663",
+    "email": "info@teklineroofing.com",
+    "city": "Seattle",
+    "region": "WA",
+    "county": "King",
+    "domain": "teklineroofing.com",
+    "zips": [
+     "98188"
+    ],
+    "geo": [
+     "47.4526",
+     "-122.2481"
+    ],
+    "socials": [],
+    "account_ids": [],
+    "asset_md5": {},
+    "accent_color": "#289427"
+   },
+   "last_used_metros": [
+    {
+     "metro": "Seattle, WA",
+     "build": "tekline-roofing-seattle",
+     "date": "2026-07-24"
+    }
+   ],
+   "vertical_before_retirement": "roofing",
+   "retired_for_outreach": true,
+   "retired_on": "2026-07-30",
+   "retired_reason": "Owner retired ROOFING as a target category on 2026-07-30. Entry RETAINED in full — only automatic vertical selection is off. pickDonor(vertical) compares d.vertical exactly, so no caller asking for \"roofing\" can reach these."
+  },
+  {
+   "donor_id": "plumbing-pressure-lens",
+   "vertical": "plumbing",
+   "source": {
+    "type": "boilerplate",
+    "path": "boilerplates/plumbing-pressure-lens"
+   },
+   "page_type": "one-page SPA",
+   "quality_tier": "A",
+   "stack": "vite-spa static",
+   "donor_manifest": {
+    "name": "Northline Plumbing Works",
+    "phone": "(202) 555-0147",
+    "email": "hello@northline-plumbing.example",
+    "city": "Riverton",
+    "region": "Colorado",
+    "county": "Clearwater County",
+    "domain": "northline-plumbing.example",
+    "zips": [],
+    "geo": [
+     "39.7392",
+     "-104.9903"
+    ],
+    "socials": [],
+    "account_ids": [],
+    "asset_md5": {},
+    "accent_color": "#1e6f1f"
+   },
+   "last_used_metros": [],
+   "retired_for_outreach": true,
+   "retired_on": "2026-07-30",
+   "retired_reason": "Retired as an OUTREACH target category. Routing deliberately UNCHANGED — vertical is still \"plumbing\"."
+  },
+  {
+   "donor_id": "fencing-sterling",
+   "vertical": "fencing",
+   "alias_verticals": [
+    "deck",
+    "decking",
+    "fence",
+    "fence contractor",
+    "fencing and decking"
+   ],
+   "alias_note": "Alias verticals are applied by lib/donor-verticals.js via data/donor-verticals.json, not by this file. Listed here so the registry shows the real coverage.",
+   "source": {
+    "type": "donors_clean",
+    "path": "donors-clean/fencing-sterling"
+   },
+   "page_type": "multi-page SPA + 22 prerendered files (home, /fence-guides, 20 guide pages); /services/:slug and /service-area/:slug are dynamic and island-driven",
+   "quality_tier": "A",
+   "stack": "vite 5 + react 18 + react-router 6 (plain SPA) + custom static prerender (scripts/prerender.mjs)",
+   "routes_verified": 34,
+   "photo_slots": 9,
+   "gate_4a": "PASS (exit 0) — 2026-07-30, re-verified from the installed dist on full, blank and island-bearing hydrations",
+   "donor_manifest": {
+    "name": "Sterling Fence",
+    "phone": "(270) 799-3969",
+    "email": "williamsterling40@icloud.com",
+    "city": "Bowling Green",
+    "region": "KY",
+    "county": "Warren County",
+    "domain": "sterlingfenceky.com",
+    "zips": [
+     "42104"
+    ],
+    "geo": [
+     "36.9685",
+     "-86.4808"
+    ],
+    "socials": [],
+    "account_ids": [
+     "GTM-PJGW9JXW"
+    ],
+    "persons": [
+     "William Sterling",
+     "W. Sterling"
+    ],
+    "asset_md5": {},
+    "source_path": "donors-clean/fencing-sterling"
+   },
+   "last_used_metros": []
+  },
+  {
+   "donor_id": "concrete-elconstruction",
+   "vertical": "concrete",
+   "alias_verticals": [
+    "masonry",
+    "mason",
+    "hardscaping",
+    "hardscape",
+    "concrete contractor",
+    "flatwork"
+   ],
+   "alias_note": "Alias verticals are applied by lib/donor-verticals.js via data/donor-verticals.json, not by this file. Listed here so the registry shows the real coverage.",
+   "source": {
+    "type": "donors_clean",
+    "path": "donors-clean/concrete-elconstruction"
+   },
+   "page_type": "25 prerendered pages (home, about, contact, service-area, 7 service pages, 13 positional area slots) — real SSG, not an SPA shell",
+   "quality_tier": "A",
+   "stack": "tanstack start (vite) prerendered to a static tree; dist/client is the deploy root, dist/server is a build artefact and must never ship",
+   "routes_verified": 24,
+   "photo_slots": 18,
+   "gate_4a": "PASS (exit 0) — 2026-07-30, re-verified from the installed dist on full, blank and island-bearing hydrations",
+   "donor_manifest": {
+    "name": "EL Construction LLC",
+    "phone": "(480) 256-2343",
+    "email": "elconstructionaz@gmail.com",
+    "city": "Tempe",
+    "region": "AZ",
+    "county": "Maricopa County",
+    "domain": "elconstructionaz.com",
+    "zips": [
+     "85281",
+     "85282",
+     "85283"
+    ],
+    "geo": [
+     "33.5327396",
+     "-111.9173586",
+     "111.9173586",
+     "33.5327",
+     "-111.9173",
+     "33.4255",
+     "-111.9400"
+    ],
+    "socials": [
+     "https://www.google.com/maps/place/EL+Construction+LLC",
+     "https://search.google.com/local/writereview?placeid=ChIJI6guXEgIK4cRABILl-7tNiI",
+     "g.page/el-construction-tempe"
+    ],
+    "account_ids": [
+     "GTM-XXXXXXX",
+     "G-XXXXXXXXXX"
+    ],
+    "place_ids": [
+     "ChIJI6guXEgIK4cRABILl-7tNiI",
+     "0x872b08485c2ea823",
+     "0x2236edee970b0212"
+    ],
+    "asset_md5": {},
+    "source_path": "donors-clean/concrete-elconstruction"
+   },
+   "last_used_metros": []
+  }
+ ],
+ "donor_root_note": "donors-clean/ is the Mirror Engine donor root (MIRROR_DONOR_ROOT). Entries with source.type=\"donors_clean\" are the pre-compiled dists the engine actually hydrates. Older entries describe source mirrors from the SiteForge lane."
+}

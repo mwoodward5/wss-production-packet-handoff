@@ -1,0 +1,2 @@
+import { WSS } from '@/wss/bridge';
+export function ServiceAreaMap(){if(!WSS.trust.areas.length)return null;return <div className="rounded-2xl overflow-hidden border border-border bg-card p-6"><div className="flex flex-wrap gap-2">{WSS.trust.areas.map(a=><span className="chip" key={a}>{a}</span>)}</div>{WSS.trust.mapUrl&&<a className="inline-block mt-6 text-primary" href={WSS.trust.mapUrl}>View service area map</a>}</div>}

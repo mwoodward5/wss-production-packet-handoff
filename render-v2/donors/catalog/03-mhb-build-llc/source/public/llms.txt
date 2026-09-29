@@ -1,0 +1,29 @@
+# MHB Build, LLC
+
+> General contractor based in Independence, Kentucky. Serves residential and small-scale construction across Northern Kentucky. Services include general contracting, home building, home improvements, roofing, carpentry, decorative moldings, exterior painting, concrete flatwork, flooring installation, and tile installation.
+
+- Business: MHB Build, LLC
+- Location: Independence, KY (serving Northern Kentucky)
+- Phone: (859) 393-9006
+- Email: mhbbuild@yahoo.com
+- Website: https://mhbbuild.wss-ai.com
+
+## Pages
+- [Home](https://mhbbuild.wss-ai.com/)
+- [Services](https://mhbbuild.wss-ai.com/services)
+- [Service Area](https://mhbbuild.wss-ai.com/service-area)
+- [Projects](https://mhbbuild.wss-ai.com/projects)
+- [About](https://mhbbuild.wss-ai.com/about)
+- [Contact / Estimate](https://mhbbuild.wss-ai.com/contact)
+
+## Services
+- General Contracting
+- Home Builder
+- Home Improvements
+- Roofing
+- Carpentry
+- Decorative Moldings
+- Exterior Painting
+- Concrete Flatwork
+- Flooring Installation
+- Tile Installation

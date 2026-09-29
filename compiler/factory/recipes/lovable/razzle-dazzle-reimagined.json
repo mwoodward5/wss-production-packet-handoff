@@ -1,0 +1,78 @@
+{
+ "id": "razzle-dazzle-reimagined",
+ "source": "d3d9c4fc-e38f-4475-ad79-1fa36b8291d7",
+ "palette": {
+  "vars": {
+   "--paper": "oklch(0.972 0.014 88)",
+   "--cream": "oklch(0.945 0.024 86)",
+   "--ink": "oklch(0.18 0.018 140)",
+   "--ink-soft": "oklch(0.40 0.018 135)",
+   "--rule": "oklch(0.84 0.020 95)",
+   "--forest": "oklch(0.42 0.07 148)",
+   "--forest-deep": "oklch(0.28 0.055 148)",
+   "--moss": "oklch(0.62 0.07 135)",
+   "--clay": "oklch(0.58 0.13 45)",
+   "--gold": "oklch(0.74 0.13 78)",
+   "--stone": "oklch(0.72 0.015 95)",
+   "--background": "var(--paper)",
+   "--foreground": "var(--ink)",
+   "--card": "var(--paper)",
+   "--card-foreground": "var(--ink)",
+   "--popover": "var(--paper)",
+   "--popover-foreground": "var(--ink)",
+   "--primary": "var(--forest-deep)",
+   "--primary-foreground": "var(--paper)",
+   "--secondary": "var(--cream)",
+   "--secondary-foreground": "var(--ink)",
+   "--muted": "var(--cream)",
+   "--muted-foreground": "var(--ink-soft)",
+   "--accent": "var(--clay)",
+   "--accent-foreground": "var(--paper)",
+   "--destructive": "oklch(0.55 0.2 27)",
+   "--destructive-foreground": "var(--paper)",
+   "--border": "var(--rule)",
+   "--input": "var(--rule)",
+   "--ring": "var(--forest)"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter Tight",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.25rem",
+ "shadows": [],
+ "keyframes": [
+  {
+   "name": "kenburns",
+   "css": "@keyframes kenburns { 0% { transform: scale(1.02) translate3d(0, 0, 0); } 100% { transform: scale(1.08) translate3d(-0.6%, -0.4%, 0); } }"
+  },
+  {
+   "name": "firefly",
+   "css": "@keyframes firefly { 0%, 100% { opacity: 0; transform: translate3d(0, 0, 0) scale(0.85); } 40% { opacity: 0.95; transform: translate3d(2px, -4px, 0) scale(1.05); } 60% { opacity: 0.7; transform: translate3d(-2px, -7px, 0) scale(1); } 80% { opacity: 0.2; transform: translate3d(0, -10px, 0) scale(0.95); } }"
+  },
+  {
+   "name": "breathe",
+   "css": "@keyframes breathe { 0%, 100% { opacity: 0.85; } 50% { opacity: 1; } }"
+  },
+  {
+   "name": "scrolldraw",
+   "css": "@keyframes scrolldraw { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }"
+  },
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "pulse-dot",
+   "css": "@keyframes pulse-dot { 0%, 100% { box-shadow: 0 0 0 3px color-mix(in oklab, var(--gold) 22%, transparent); } 50% { box-shadow: 0 0 0 7px color-mix(in oklab, var(--gold) 10%, transparent); } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "marquee",
+  "noise",
+  "ken-burns"
+ ]
+}

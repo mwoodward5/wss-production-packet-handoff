@@ -1,0 +1,509 @@
+{
+  "version": 2,
+  "key": "41-card-concrete-construction",
+  "name": "Card Concrete Construction",
+  "category": "concrete",
+  "vertical": "concrete",
+  "requested_vertical": "concrete",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "a3c9badc-32eb-4443-a350-13729d7970ca",
+  "lovable_source_commit": "d8ad7b38249fd963574634301eafbe221fd36caa",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "a3c9badc-32eb-4443-a350-13729d7970ca",
+    "ref": "d8ad7b38249fd963574634301eafbe221fd36caa",
+    "repository": "https://github.com/mwoodward5/essence-reshaper-lab",
+    "git_tree": "3304a07edb19bbe974e63276c848061198a07727"
+  },
+  "classification": "MULTI_PAGE",
+  "routes": [
+    "/",
+    "/privacy",
+    "/terms"
+  ],
+  "design_tokens": {
+    "colors": {
+      "ink": "oklch(0.16 0.005 60)",
+      "bone": "oklch(0.95 0.012 80)",
+      "cement": "oklch(0.82 0.012 75)",
+      "cement_soft": "oklch(0.72 0.012 75)",
+      "rebar": "oklch(0.35 0.008 70)",
+      "amber": "oklch(0.78 0.27 142)",
+      "amber_soft": "oklch(0.86 0.22 142)",
+      "card": "oklch(0.20 0.006 65)"
+    },
+    "fonts": {
+      "display": "Fraunces, ui-serif, Georgia, serif",
+      "sans": "Inter Tight, ui-sans-serif, system-ui, sans-serif",
+      "mono": "JetBrains Mono, ui-monospace, SFMono-Regular, monospace"
+    },
+    "radii": {
+      "cards": "rounded-sm (0.125rem - 0.25rem)",
+      "interactive_pills": "rounded-full"
+    },
+    "textures": {
+      "grain": "SVG fractal noise opacity 0.14 overlay",
+      "glass": "backdrop-filter blur(20px) saturate(140%)"
+    }
+  },
+  "hero_contract": {
+    "container_dimensions": "min-h-[100svh] w-full relative isolate",
+    "media_layer": "absolute inset-0 -z-10 object-cover",
+    "video_specs": "10s seamless loop, 24fps, muted, playsInline, autoPlay",
+    "overlays": [
+      "linear-gradient vertical from-ink/70 via-ink/35 to-ink",
+      "linear-gradient horizontal from-ink/85 via-ink/20 to-transparent",
+      "hero-glow radial screen blend green accent",
+      "ambient fractal noise texture"
+    ],
+    "typography": "Editorial display serif clamp(2.8rem, 8.4vw, 8rem) with green italic punchline",
+    "blueprint_rails": "Monospace GPS coordinates, radius, and sheet IDs",
+    "spec_counters": [
+      {
+        "label": "Tolerance",
+        "value": "±1/8\""
+      },
+      {
+        "label": "Radius",
+        "value": "50 MI"
+      },
+      {
+        "label": "Crew",
+        "value": "Owner-led"
+      }
+    ]
+  },
+  "media_slots": [
+    {
+      "id": "media-logo",
+      "route": "/",
+      "section": "Nav & Footer",
+      "role": "brand_logo",
+      "aspect_ratio": "1:1",
+      "crop": "contain"
+    },
+    {
+      "id": "media-hero",
+      "route": "/",
+      "section": "Hero",
+      "role": "cinematic_hero",
+      "aspect_ratio": "16:9",
+      "crop": "cover"
+    },
+    {
+      "id": "svc-img-01",
+      "route": "/",
+      "section": "Services",
+      "role": "service_laser_screed",
+      "aspect_ratio": "5:4",
+      "crop": "cover"
+    },
+    {
+      "id": "svc-img-02",
+      "route": "/",
+      "section": "Services",
+      "role": "service_commercial_slabs",
+      "aspect_ratio": "5:4",
+      "crop": "cover"
+    },
+    {
+      "id": "svc-img-03",
+      "route": "/",
+      "section": "Services",
+      "role": "service_flat_work",
+      "aspect_ratio": "5:4",
+      "crop": "cover"
+    },
+    {
+      "id": "svc-img-04",
+      "route": "/",
+      "section": "Services",
+      "role": "service_stamped_concrete",
+      "aspect_ratio": "5:4",
+      "crop": "cover"
+    },
+    {
+      "id": "svc-img-05",
+      "route": "/",
+      "section": "Services",
+      "role": "service_interior_demo",
+      "aspect_ratio": "5:4",
+      "crop": "cover"
+    },
+    {
+      "id": "svc-img-06",
+      "route": "/",
+      "section": "Services",
+      "role": "service_wall_demo",
+      "aspect_ratio": "5:4",
+      "crop": "cover"
+    },
+    {
+      "id": "svc-img-07",
+      "route": "/",
+      "section": "Services",
+      "role": "service_total_demo",
+      "aspect_ratio": "5:4",
+      "crop": "cover"
+    },
+    {
+      "id": "gal-img-01",
+      "route": "/",
+      "section": "Gallery",
+      "role": "portfolio_bento_01",
+      "aspect_ratio": "16:11",
+      "crop": "cover"
+    },
+    {
+      "id": "gal-img-02",
+      "route": "/",
+      "section": "Gallery",
+      "role": "portfolio_bento_02",
+      "aspect_ratio": "4:5",
+      "crop": "cover"
+    },
+    {
+      "id": "gal-img-03",
+      "route": "/",
+      "section": "Gallery",
+      "role": "portfolio_bento_03",
+      "aspect_ratio": "5:4",
+      "crop": "cover"
+    },
+    {
+      "id": "gal-img-04",
+      "route": "/",
+      "section": "Gallery",
+      "role": "portfolio_bento_04",
+      "aspect_ratio": "16:10",
+      "crop": "cover"
+    },
+    {
+      "id": "gal-img-05",
+      "route": "/",
+      "section": "Gallery",
+      "role": "portfolio_bento_05",
+      "aspect_ratio": "4:5",
+      "crop": "cover"
+    },
+    {
+      "id": "gal-img-06",
+      "route": "/",
+      "section": "Gallery",
+      "role": "portfolio_bento_06",
+      "aspect_ratio": "4:5",
+      "crop": "cover"
+    },
+    {
+      "id": "gal-img-07",
+      "route": "/",
+      "section": "Gallery",
+      "role": "portfolio_bento_07",
+      "aspect_ratio": "4:5",
+      "crop": "cover"
+    },
+    {
+      "id": "gal-img-08",
+      "route": "/",
+      "section": "Gallery",
+      "role": "portfolio_bento_08",
+      "aspect_ratio": "16:9",
+      "crop": "cover"
+    },
+    {
+      "id": "gal-img-09",
+      "route": "/",
+      "section": "Gallery",
+      "role": "portfolio_bento_09",
+      "aspect_ratio": "21:9",
+      "crop": "cover"
+    }
+  ],
+  "content_slots": [
+    {
+      "slot": "business_name",
+      "selector": ".font-display text-xl text-bone"
+    },
+    {
+      "slot": "phone_display",
+      "selector": "span.font-display.text-2xl"
+    },
+    {
+      "slot": "phone_href",
+      "selector": "a[href^='tel:']"
+    },
+    {
+      "slot": "email_address",
+      "selector": "a[href^='mailto:']"
+    },
+    {
+      "slot": "headquarters_address",
+      "selector": "#area p.font-display"
+    },
+    {
+      "slot": "operating_hours",
+      "selector": "#area .font-mono-spec"
+    },
+    {
+      "slot": "geo_radius_text",
+      "selector": "#area h2, .spec-rail"
+    },
+    {
+      "slot": "services_array",
+      "source": "src/components/card-concrete/data.ts -> SERVICES"
+    },
+    {
+      "slot": "process_array",
+      "source": "src/components/card-concrete/data.ts -> PROCESS"
+    },
+    {
+      "slot": "towns_array",
+      "source": "src/components/card-concrete/data.ts -> TOWNS"
+    },
+    {
+      "slot": "faq_array",
+      "source": "src/components/card-concrete/data.ts -> FAQ"
+    }
+  ],
+  "trust_slots": [
+    {
+      "id": "trust-live-dispatch",
+      "section": "Hero",
+      "type": "beacon_status_pill",
+      "label": "LIVE · DISPATCH"
+    },
+    {
+      "id": "trust-spec-metrics",
+      "section": "Hero",
+      "type": "tri_metric_list",
+      "metrics": [
+        "Tolerance",
+        "Radius",
+        "Crew"
+      ]
+    },
+    {
+      "id": "trust-card-specs",
+      "section": "Services",
+      "type": "card_spec_matrix",
+      "metrics": [
+        "Tolerance/Thickness",
+        "Method/Rebar",
+        "Finish/Seal"
+      ]
+    },
+    {
+      "id": "trust-process-badges",
+      "section": "Process",
+      "type": "pill_checklist",
+      "badges": [
+        "Owner-led",
+        "Utility-safe demo",
+        "Spec-ready FF/FL",
+        "Clean turnover"
+      ]
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "GeneralContractor",
+      "location": "src/routes/index.tsx (head.scripts)"
+    },
+    {
+      "type": "PostalAddress",
+      "location": "src/routes/index.tsx (head.scripts)"
+    },
+    {
+      "type": "GeoCoordinates",
+      "location": "src/routes/index.tsx (head.scripts)"
+    },
+    {
+      "type": "GeoCircle",
+      "location": "src/routes/index.tsx (head.scripts)"
+    },
+    {
+      "type": "OfferCatalog",
+      "location": "src/routes/index.tsx (head.scripts)"
+    },
+    {
+      "type": "FAQPage",
+      "location": "Dynamic injection via FAQ array"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "entity": "Hub Municipality",
+      "current": "Sparta, TN"
+    },
+    {
+      "entity": "Region Identifier",
+      "current": "Upper Cumberland"
+    },
+    {
+      "entity": "Operational Radius",
+      "current": "50 Miles"
+    },
+    {
+      "entity": "GPS Coordinates",
+      "current": "35.93° N, 85.46° W"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "target_query": "Cure time before driving on concrete",
+      "source": "FAQ Q-01"
+    },
+    {
+      "target_query": "Required slab thickness for commercial pour",
+      "source": "FAQ Q-02"
+    },
+    {
+      "target_query": "Stamped concrete vs pavers comparison",
+      "source": "FAQ Q-03"
+    }
+  ],
+  "map_location_slot": {
+    "section": "ServiceArea",
+    "visualization": "Custom SVG Radial Radar Diagram with concentric distance rings",
+    "navigation_deep_links": [
+      "Google Maps API destination route",
+      "Apple Maps daddr route"
+    ],
+    "headquarters_card": "575 Pin Hook Rd, Sparta, TN 38583"
+  },
+  "content_density": {
+    "hero_density": "Sparse / High breathing room / Dramatic serif typography",
+    "services_density": "Moderate / Structured 3-tier card / Micro spec-table",
+    "gallery_density": "Heavy / 9-item asymmetric bento mosaic / Lightbox modal",
+    "process_density": "Structured chronological / 4 units",
+    "max_services": 8,
+    "max_process_steps": 4,
+    "max_faqs": 8
+  },
+  "mobile_rules": {
+    "breakpoint_390": {
+      "sticky_dispatch": "Fixed bottom pill active",
+      "spec_rails": "Hidden",
+      "hero_title": "Scales down to 2.8rem",
+      "services_grid": "1 column",
+      "gallery_grid": "2 column bento",
+      "nav_behavior": "Full-screen slideover overlay"
+    },
+    "breakpoint_768": {
+      "spec_rails": "Visible",
+      "services_grid": "2 column",
+      "contact_grid": "2 column"
+    },
+    "breakpoint_1440": {
+      "full_blueprint_layout": "Active",
+      "services_grid": "3 column",
+      "gallery_grid": "12 column asymmetric mosaic"
+    }
+  },
+  "non_negotiables": [
+    "Wet-concrete charcoal (#0E0E0D) dark canvas must be preserved",
+    "Fraunces serif display for primary headlines and section numbers",
+    "JetBrains Mono uppercase for all spec data, coordinates, and technical tags",
+    "Inter Tight for body paragraphs and form input fields",
+    "Sharp slab borders (rounded-sm) on cards and images",
+    "Ambient concrete grit texture overlay on main sections",
+    "Hover-triggered corner architectural brackets on service cards",
+    "Construction signal green (#00D20A) for all interactive states and pings"
+  ],
+  "safe_replacements": [
+    "company_name",
+    "logo_asset",
+    "hero_cinematic_media",
+    "phone_number",
+    "email_address",
+    "street_address",
+    "gps_coordinates",
+    "operating_hours",
+    "service_radius",
+    "town_names_list",
+    "services_data_array",
+    "process_data_array",
+    "faq_data_array",
+    "gallery_images_array",
+    "google_maps_url_parameters"
+  ],
+  "leak_terms": [
+    "Card Concrete Construction"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "ui-serif",
+      "Georgia",
+      "serif",
+      "Inter Tight",
+      "ui-sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.16 0.005 60)",
+    "oklch(0.95 0.012 80)",
+    "oklch(0.82 0.012 75)",
+    "oklch(0.72 0.012 75)",
+    "oklch(0.35 0.008 70)",
+    "oklch(0.78 0.27 142)",
+    "oklch(0.86 0.22 142)",
+    "oklch(0.20 0.006 65)"
+  ],
+  "fonts": [
+    "Fraunces",
+    "ui-serif",
+    "Georgia",
+    "serif",
+    "Inter Tight",
+    "ui-sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "734527581d799f65667b1e923e41f757c1b1f14abb086559937ed7ddd9873124",
+    "files": {
+      "assets/fraunces-700-De-xehB5.ttf": "f0a9d39b9f14079c55070189562da36c794f824cbcf514b50a0ad0ef20c69379",
+      "assets/index-BwIQ5auR.css": "3770a2fdce0ea559bf93984a61dcc5d5a6f96002eb4aa58bdac2191978898927",
+      "assets/index-DX5vNVC9.js": "e4efebb584bf5fb6dbd8bf8c0458608192f4f365280ccecc6150cbe9763125f4",
+      "assets/inter-tight-500-BEW8SBpr.ttf": "a40a1fdc93cadcbb0e3ba16d6010988118a1a3add06a097330b09cb41c2b8d45",
+      "assets/jetbrains-mono-400-B6W8R_vR.ttf": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3",
+      "index.html": "8fc9b874fcd4ac1cbd3e3bce91a3267e274b998873980979b04f85456222780d"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

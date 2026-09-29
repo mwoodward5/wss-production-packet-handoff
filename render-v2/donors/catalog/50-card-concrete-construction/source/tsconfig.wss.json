@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/main.tsx",
+    "src/routes/__root.tsx",
+    "src/routes/index.tsx",
+    "src/routes/trust.tsx",
+    "src/lib/contracts.d.ts",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "src/routeTree.gen.ts",
+    "src/server.ts",
+    "src/start.ts",
+    "src/router.tsx",
+    "src/routes/api",
+    "src/routes/sitemap[.]xml.ts"
+  ]
+}

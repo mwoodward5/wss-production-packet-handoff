@@ -1,0 +1,58 @@
+# Peppers Structural and Land Management — Full AI Reference
+
+## Identity
+- Legal name: Peppers Structural and Land Management LLC
+- Owner: Jim Peppers
+- Founded: June 20, 2015
+- Entity: LLC, owner-operated (1 employee, owner)
+- Based in: Genoa, Ohio 43430 (Ottawa County, Northwest Ohio)
+- Coordinates: 41.5169°N, 83.3597°W
+- Phone: (517) 438-2423
+- Email: jimpeppers707@gmail.com
+- Website: https://pepper.wss-ai.com/
+
+## Verified Authority
+- BBB-listed business profile (NOT BBB Accredited). Business start date 6/20/2015.
+- 5.0/5.0 average rating on HomeAdvisor (17 reviews on public profile).
+- Owner-operated; Jim Peppers personally on every project.
+- Address shown on HomeAdvisor: 407 Main Street, Genoa, OH.
+
+## Services
+- Kitchen Remodeling
+- Basement Remodeling (waterproofing recommendations, framing, finish)
+- Decks & Porches (cedar, hardwood, composite; code-compliant)
+- Home Additions (full tie-in to existing home)
+- Custom Greenhouses (real foundations, real ventilation)
+- General Repair & Carpentry (drywall, trim, doors, plumbing fixtures, garage doors)
+
+## Service Area
+Primary: Genoa, OH (43430). Counties served: Ottawa, Wood, Sandusky,
+eastern Lucas. Towns include Genoa, Elmore, Oak Harbor, Curtice, Williston,
+Walbridge, Millbury, Northwood, Lindsey, Martin, Graytown, Woodville.
+
+## Trust & Operations
+- Free written, line-itemed estimates
+- Workmanship warranty in writing
+- Emergency services available
+- Hours: Mon–Fri 7:00 AM – 5:00 PM; Sat & Sun by appointment
+
+## Pages
+- / — Home with project-readiness intelligence widget
+- /services — Service overview
+- /services/{slug} — Per-service detail (kitchen-remodeling, basement-remodeling,
+  decks-porches, home-additions, custom-greenhouses, general-contracting)
+- /gallery — Project gallery
+- /about — About Jim and the company
+- /reviews — Verified HomeAdvisor reviews
+- /service-area — Towns & counties served
+- /faq — Frequently asked questions
+- /contact — Estimate request form (Resend-backed delivery)
+
+## Verified Sources
+- BBB: https://www.bbb.org/us/oh/genoa/profile/remodeling/pepper-structural-and-land-management-0422-211010196
+- HomeAdvisor: https://www.homeadvisor.com/rated.peppersstructuralrehab.91013165.html
+
+## Truth Guardrails
+This site contains no fabricated awards, certifications, license numbers,
+years-in-business inflation, or invented review counts. Where a fact could
+not be verified, it has been omitted or softened.

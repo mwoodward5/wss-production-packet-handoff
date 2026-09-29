@@ -1,0 +1,15 @@
+# {{BUSINESS_NAME}}
+# Plain-text site context for LLM crawlers (ChatGPT, Perplexity, Claude, Gemini).
+
+About: {{SHORT_DESCRIPTION}}
+Service area: {{SERVICE_AREA_LABEL}}
+Phone: {{PHONE}}
+Email: {{EMAIL}}
+Address: {{FULL_ADDRESS}}
+
+Primary services:
+- (list)
+
+Top FAQs:
+- Q:
+  A:

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electrician in {{CITY}}, {{STATE}} | {{BUSINESS_NAME}}</title>
+    <meta
+      name="description"
+      content="{{BUSINESS_NAME}} provides residential and commercial electrical service in {{CITY}}, {{STATE}}[[NEED:COUNTY]] and the surrounding {{COUNTY}} area[[/NEED]] — panel upgrades, EV chargers, generators, wiring and troubleshooting."
+    />
+    <meta property="og:title" content="Electrician in {{CITY}}, {{STATE}} | {{BUSINESS_NAME}}" />
+    <meta
+      property="og:description"
+      content="Residential and commercial electrical work in {{CITY}}, {{STATE}} — panels, EV chargers, generators, fixtures, wiring and troubleshooting."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-C-NxoyKA.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BFOG4pkM.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+  <!-- THE HERO VIDEO LADDER, as data. The runtime walks it top-down and arms
+       the first rung whose bytes shipped in this build; a rung that errors
+       steps down to the next. The client's own clip always outranks ours.
+       SPA note: the <video> element is mounted by the React hero layer
+       (marked data-hero-video in the bundle, no static src); the walker
+       waits for that element, then arms rung by rung. -->
+  <script type="application/json" id="hero-video-ladder">
+    { "sources": ["assets/hero-client-electrical.mp4", "assets/hero-fallback-electrical.mp4"] }
+  </script>
+
+  <script>
+  (function(){
+    "use strict";
+    var heroRungs=(function(){try{return (JSON.parse(document.getElementById("hero-video-ladder").textContent)||{}).sources||[];}catch(e){return [];}})();
+    if(!heroRungs.length||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+    function arm(clip,i){
+      var src=heroRungs[i];
+      if(!src)return;
+      clip.src=src.charAt(0)==="/"?src:"/"+src;
+      clip.addEventListener("loadedmetadata",function(){clip.hidden=false;clip.setAttribute("data-hero-armed","1");},{once:true});
+      clip.addEventListener("error",function(){clip.removeAttribute("src");clip.load();arm(clip,i+1);},{once:true});
+    }
+    var mounted=document.querySelector("video[data-hero-video]");
+    if(mounted){arm(mounted,0);return;}
+    var mo=new MutationObserver(function(){
+      var clip=document.querySelector("video[data-hero-video]");
+      if(clip){mo.disconnect();arm(clip,0);}
+    });
+    mo.observe(document.documentElement,{childList:true,subtree:true});
+    setTimeout(function(){mo.disconnect();},20000);
+  })();
+  </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "mirror-donor",
+  "vertical": "roofing",
+  "label": "Test fixture donor - clean-room synthetic, never a real business",
+  "wordmarkFill": "#f5f5f4",
+  "source": "synthetic:test-fixture",
+  "sanitised": "2026-07-29",
+  "donor_business_name": "Synthetic Fixture Roofing Co",
+  "donor_phone": "(999) 555-0000",
+  "donor_email": "fixture@example-donor.invalid",
+  "donor_city": "Fixtureville",
+  "donor_domain": "example-donor.invalid",
+  "persons": ["Fixture Q. Donorson"]
+}

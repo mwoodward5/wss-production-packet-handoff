@@ -1,0 +1,1815 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wss-ai.com/schemas/mirror-request.schema.json",
+  "title": "WSS MirrorRequest",
+  "description": "The only input accepted by POST /mirror. All facts must already be verified by the caller.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "slug",
+    "facts"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "description": "Vercel project name and wss-ai.com subdomain label.",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{1,61}[a-z0-9])$",
+      "minLength": 3,
+      "maxLength": 63,
+      "examples": [
+        "first-rate-roofing-services-spokane"
+      ]
+    },
+    "donor": {
+      "type": "string",
+      "description": "Optional explicit donor directory name under donors/.",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62})$",
+      "minLength": 1,
+      "maxLength": 63,
+      "examples": [
+        "roofing-riseabove"
+      ]
+    },
+    "facts": {
+      "$ref": "#/$defs/MirrorFacts"
+    },
+    "brand": {
+      "$ref": "#/$defs/MirrorBrand"
+    },
+    "hero": {
+      "$ref": "#/$defs/MirrorHero"
+    },
+    "content": {
+      "$ref": "#/$defs/MirrorContent"
+    },
+    "client_surface": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "MEASURED light/dark reading of the prospect's OWN current website, from scripts/measure-fleet-surfaces.js. Decides whether this mirror ships light (the default, and what 95.2% of the measured fleet is) or keeps dark. Omit it and the engine defaults to light and records that it defaulted rather than measured — it never guesses a dark site into existence.",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "light",
+            "dark",
+            "mid"
+          ],
+          "description": "Verdict for the CONTENT surface."
+        },
+        "basis": {
+          "type": "string",
+          "enum": [
+            "paper",
+            "hero-only"
+          ],
+          "description": "'paper' = measured from the content sections below the fold, the only reading that decides anything. 'hero-only' = the page had nothing below the fold; never grounds for dark, because a dark photographic hero is not a dark website."
+        },
+        "brightShare": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "darkShare": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "surface": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Dominant surface colour of the measured band."
+        },
+        "measured_at": {
+          "type": "string"
+        }
+      }
+    },
+    "donor_fingerprint": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "OPTIONAL measured fingerprint of the DONOR design (lib/mirror-engine/donor-fingerprint.js, the measurement lane). Consumed by the template-diversification system (lib/mirror-engine/component-variants.js) to pick component variants so two prospects built from the same donor cannot converge on the same look: a dark/photo-led reading pins the full-bleed hero variant, a light/text-minimal reading pins the minimal variant, a typography cue pins the heading scale, and section_order preserves the donor's meaningful section sequence instead of every site walking the same template rhythm. Absent: the engine derives conservative cues from the request itself (client_surface, brand_identity background/font, hero video, photo count) and per-prospect deterministic seeds — never a guess, and the selection is always deterministic per prospect. At least 2 of {hero variant, section order, CTA treatment, typography scale} differ between any two same-donor sites (the similarity budget).",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["light", "dark", "mid"],
+          "description": "Measured content-surface verdict of the donor design. 'dark' + photo-led pins the full-bleed-overlay hero variant."
+        },
+        "photo_led": {
+          "type": "boolean",
+          "description": "True when the donor's design leads with photography (cinematic heroes, galleries); false when it is text-minimal. Pins full-bleed-overlay vs minimal-texture respectively."
+        },
+        "typography": {
+          "type": "string",
+          "enum": ["condensed", "normal", "wide"],
+          "description": "The donor's own heading-scale reading. Pins the mirror's typography scale (condensed-tall / normal / wide-short) unless the similarity budget must diverge two same-donor sites."
+        },
+        "section_order": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 40 },
+          "uniqueItems": true,
+          "maxItems": 12,
+          "description": "The donor's own meaningful section sequence (e.g. [\"reviews\",\"services\",\"gallery\",\"contact\"]). When carried, the generated static-HTML pages preserve that order rather than the template's fixed rhythm; unknown names are ignored, never guessed."
+        }
+      }
+    },
+    "brand_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "OPTIONAL direct brand verdict from the extraction lane (lib/brand-extractor.js), measured from ANY website. When present with HIGH or MEDIUM confidence it OVERRIDES the donor template's default palette: the accent flows into the donor's CSS custom properties (--accent, --accent-ink, ...) appended AFTER the donor's stylesheet, so the donor's LAYOUT is kept and only the COLOURS change to the client's brand. A LOW-confidence verdict is refused at render time and the build falls back to the neutral path (the donor's own defaults and the existing logo/vertical research) — it is accepted by this schema so the contract documents the refusal instead of masking it as a transport error.",
+      "required": [
+        "accent_color",
+        "extraction_method",
+        "confidence"
+      ],
+      "properties": {
+        "accent_color": {
+          "$ref": "#/$defs/HexColor",
+          "description": "The client's accent, verbatim. Becomes --accent / --accent-ink-roles in the generated override sheet, replacing the donor's default (no donor gold when the client is red)."
+        },
+        "secondary_color": {
+          "$ref": "#/$defs/HexColor",
+          "description": "OPTIONAL second brand colour. Overrides the donor's secondary tokens (--secondary / --secondary-foreground) and becomes the surface-hue source, exactly as brand.primary does today."
+        },
+        "background": {
+          "$ref": "#/$defs/HexColor",
+          "description": "OPTIONAL dominant background colour of the client's own site. A light value shifts the theme to light mode; a dark value keeps the theme dark. Present, it outranks both the donor's cinematic-dark default and client_surface — it is the extraction lane's direct reading of the canvas the client's brand lives on."
+        },
+        "logo_url": {
+          "$ref": "#/$defs/RequiredHttpsUri",
+          "description": "OPTIONAL client logo, hot-linked. When present and no verified brand.logo bytes were supplied, the header renders this logo <img> (alt text from the business name) on every breakpoint, with height constraints so a wide mark cannot blow out the header. A supplied brand.logo (fetched, sniffed, hashed) still outranks it."
+        },
+        "font_family": {
+          "type": "string",
+          "pattern": "\\S",
+          "maxLength": 60,
+          "description": "OPTIONAL display typeface. Used ONLY when it is a web-safe family or a known Google Font (allowlisted — an unknown family is skipped and the donor keeps its typography rather than referencing a face that was never loaded)."
+        },
+        "extraction_method": {
+          "type": "string",
+          "pattern": "\\S",
+          "maxLength": 60,
+          "description": "How this verdict was produced (e.g. 'css_variables+logo_sample'). Carried into the theme report so a human can audit where the colours came from. Never inferred by the engine."
+        },
+        "confidence": {
+          "type": "string",
+          "pattern": "^(?:[Hh][Ii][Gg][Hh]|[Mm][Ee][Dd][Ii][Uu][Mm]|[Ll][Oo][Ww])$",
+          "description": "Extractor self-assessment. HIGH and MEDIUM are applied; LOW is refused and the build takes the neutral fallback."
+        }
+      }
+    },
+    "site_palette": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "OPTIONAL whole-website palette verdict (lib/mirror-engine/site-palette.js), measured from the homepage HTML stage 2_homepage_fetch already fetched plus the site's own stylesheets the brand-extraction lane already pulls. This is the owner's whole-site directive made transportable: 'we want to take THEIR SITE colors not just their LOGO colors.' In buildPalette it is the PRIMARY source for surfaces, ink and the dark-band rhythm — where the site and the logo disagree, the SITE wins the surfaces and the ink; the logo may still win the accent when the site's own is absent or too weak (saturation-floored like every accent lane). The palette's `source` records which lane won ('site' when this verdict dressed the page), and the theme report carries the role-level split. A colourless verdict is normalized to absence at render time and the build falls through logo → donor token → vertical research exactly as before — this lane adds a source, never a gate.",
+      "required": [
+        "mode",
+        "extraction_method"
+      ],
+      "properties": {
+        "surface": {
+          "$ref": "#/$defs/HexColor",
+          "description": "The page's own paper: <body> background, meta theme-color, else the most frequent light background its sections paint."
+        },
+        "ink": {
+          "$ref": "#/$defs/HexColor",
+          "description": "The page's own text colour: <body> color, else the most frequent dark colour it paints as text."
+        },
+        "link": {
+          "$ref": "#/$defs/HexColor",
+          "description": "The declared anchor colour, when chromatic."
+        },
+        "accent": {
+          "$ref": "#/$defs/HexColor",
+          "description": "The chromatic colour the page itself spends most (frequency over its whole CSS pool, saturation- and lightness-banded so a slab or a paper can never win the accent role)."
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["light", "dark"],
+          "description": "The canvas verdict from the surface's luminance — the same threshold theme.decideMode holds for extraction backgrounds."
+        },
+        "has_dark_slabs": {
+          "type": "boolean",
+          "description": "True when the original paints genuinely dark background bands. A light mirror keeps its paper light but leans its slab dark in the site's own hue, so the rebuild keeps the original's rhythm instead of flattening it to a pale tint."
+        },
+        "dark_section_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 999,
+          "description": "How many dark background declarations the homepage carries."
+        },
+        "light_section_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 999,
+          "description": "How many light background declarations the homepage carries."
+        },
+        "extracted_from": {
+          "$ref": "#/$defs/RequiredHttpsUri",
+          "description": "The client page the palette was read from — audit trail only."
+        },
+        "extraction_method": {
+          "type": "string",
+          "pattern": "\\S",
+          "maxLength": 60,
+          "description": "How this verdict was produced (e.g. 'site_html_css'). Carried into the theme report so a human can audit where the colours came from. Never inferred by the engine."
+        }
+      }
+    },
+    "donor_fingerprint": {
+      "$ref": "#/$defs/DonorFingerprint"
+    },
+    "signup": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Left-side sign-up panel. Omitted entirely when neither a checkout nor a Riley line exists.",
+      "properties": {
+        "clientId": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "rileyTel": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "rileyDisplay": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "checkoutUrl": {
+          "type": "string",
+          "maxLength": 2048
+        },
+        "domain": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "price": {
+          "type": "string",
+          "maxLength": 8
+        }
+      }
+    }
+  },
+  "$defs": {
+    "NonBlankString": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "OptionalVerifiedString": {
+      "type": "string",
+      "description": "May be omitted or supplied as an empty string. The engine must never infer a value."
+    },
+    "OptionalUri": {
+      "anyOf": [
+        {
+          "const": ""
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        }
+      ]
+    },
+    "RequiredHttpsUri": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "HexColor": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "examples": [
+        "#fd7e00"
+      ]
+    },
+    "OptionalHexColor": {
+      "anyOf": [
+        {
+          "const": ""
+        },
+        {
+          "$ref": "#/$defs/HexColor"
+        }
+      ],
+      "description": "A colour, or the honest empty string when the client's site declares none."
+    },
+    "DonorFingerprint": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "OPTIONAL measured visual DNA of the CLIENT'S OWN live website (lib/mirror-engine/donor-fingerprint.js; 'donor' = the client's original site, not the template). Extracted at mine time from the homepage HTML the miner already holds, palette consumed from brand_identity's extractor. Pure INSTRUMENTATION input: it never changes the render, never enters the build hash, and powers the donor_fingerprint distinctiveness score in the build report (logo_used, palette_proximity, hero_provenance, taxonomy_retention, proof_retention; below 50 the release gate logs a warning — never a block).",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "prospect_id": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "The prospect row this fingerprint was extracted for (first-party key)."
+        },
+        "extracted_from": {
+          "type": "string",
+          "maxLength": 2048,
+          "description": "The client page the fingerprint was read from."
+        },
+        "extracted_at": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "logo_candidates": {
+          "type": "array",
+          "maxItems": 8,
+          "description": "Every header-grade image the client's own site offers (class=logo, header img, schema.org logo), best first, with dimensions and alt text.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "url"
+            ],
+            "properties": {
+              "url": {
+                "$ref": "#/$defs/RequiredHttpsUri"
+              },
+              "width": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "height": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "alt": {
+                "type": "string",
+                "maxLength": 200
+              },
+              "grade": {
+                "type": "string",
+                "maxLength": 40
+              }
+            }
+          }
+        },
+        "palette": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "accent_color": {
+              "$ref": "#/$defs/OptionalHexColor"
+            },
+            "secondary_color": {
+              "$ref": "#/$defs/OptionalHexColor"
+            },
+            "background": {
+              "$ref": "#/$defs/OptionalHexColor"
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "light",
+                "dark",
+                "unknown"
+              ]
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "HIGH",
+                "MEDIUM",
+                "LOW"
+              ]
+            }
+          }
+        },
+        "typography": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "font_family": {
+              "type": "string",
+              "maxLength": 60
+            },
+            "heading_weight_pattern": {
+              "type": "string",
+              "enum": [
+                "condensed",
+                "normal",
+                "light",
+                "unknown"
+              ],
+              "description": "The heading voice: heavy-tight-loud is condensed, <=300 is light."
+            },
+            "heading_scale": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "description": "Largest declared heading size over body size."
+            }
+          }
+        },
+        "hero_motif": {
+          "type": "string",
+          "enum": [
+            "photo-led",
+            "texture-led",
+            "illustration-led",
+            "video-led",
+            "text-minimal",
+            "unknown"
+          ]
+        },
+        "section_ordering": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "nav_labels": {
+              "type": "array",
+              "maxItems": 16,
+              "items": {
+                "type": "string",
+                "maxLength": 60
+              }
+            },
+            "heading_sequence": {
+              "type": "array",
+              "maxItems": 24,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "level",
+                  "text"
+                ],
+                "properties": {
+                  "level": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 3
+                  },
+                  "text": {
+                    "type": "string",
+                    "maxLength": 160
+                  }
+                }
+              }
+            }
+          }
+        },
+        "service_taxonomy": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "The client's ACTUAL service names, as they spell them. 'Stamped Concrete' + 'Concrete Driveways' + 'Concrete Patios' must never collapse into 'Concrete Services' — retention is scored by name.",
+          "properties": {
+            "naming_pattern": {
+              "type": "string",
+              "enum": [
+                "named_specialties",
+                "umbrella_terms",
+                "none"
+              ]
+            },
+            "services": {
+              "type": "array",
+              "maxItems": 24,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 80
+                  },
+                  "source": {
+                    "type": "string",
+                    "maxLength": 24,
+                    "description": "jsonld | heading | list | prose_list | nav"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "proof_inventory": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "reviews": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "displayed": {
+                  "type": "boolean"
+                },
+                "rating": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "count": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "source": {
+                  "type": "string",
+                  "maxLength": 40
+                }
+              }
+            },
+            "project_photos": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 99
+            },
+            "certifications": {
+              "type": "array",
+              "maxItems": 12,
+              "items": {
+                "type": "string",
+                "maxLength": 80
+              }
+            },
+            "years_in_business": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "displayed": {
+                  "type": "boolean"
+                },
+                "claim": {
+                  "type": "string",
+                  "maxLength": 80
+                },
+                "since": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "cta_structure": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "dominant": {
+              "type": "string",
+              "enum": [
+                "phone-dominant",
+                "form-dominant",
+                "quote-dominant",
+                "unknown"
+              ]
+            },
+            "signals": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "tel_links": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 99
+                },
+                "forms": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 99
+                },
+                "quote_ctas": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 99
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "MirrorFacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "business_name",
+        "industry",
+        "city",
+        "state"
+      ],
+      "dependentRequired": {
+        "latitude": [
+          "longitude"
+        ],
+        "longitude": [
+          "latitude"
+        ]
+      },
+      "properties": {
+        "business_name": {
+          "$ref": "#/$defs/NonBlankString",
+          "description": "Verified display name of the prospect business."
+        },
+        "industry": {
+          "$ref": "#/$defs/NonBlankString",
+          "description": "Verified industry value used for donor selection."
+        },
+        "city": {
+          "$ref": "#/$defs/NonBlankString",
+          "description": "Verified city."
+        },
+        "state": {
+          "type": "string",
+          "description": "Verified uppercase two-letter state or region code.",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "phone": {
+          "description": "OPTIONAL verified display-form phone number. Absent or \"\" means the business publishes no number: every call CTA collapses and the lead form becomes the primary conversion action. When present, PHONE_DIGITS derivation (exactly 10 NANP digits, no extensions) is enforced by application validation.",
+          "anyOf": [
+            {
+              "const": ""
+            },
+            {
+              "type": "string",
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "email": {
+          "anyOf": [
+            {
+              "const": ""
+            },
+            {
+              "type": "string",
+              "format": "email"
+            }
+          ]
+        },
+        "address": {
+          "$ref": "#/$defs/OptionalVerifiedString"
+        },
+        "county": {
+          "$ref": "#/$defs/OptionalVerifiedString"
+        },
+        "postal_code": {
+          "$ref": "#/$defs/OptionalVerifiedString"
+        },
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "place_id": {
+          "$ref": "#/$defs/OptionalVerifiedString"
+        },
+        "google_place_id": {
+          "$ref": "#/$defs/OptionalVerifiedString",
+          "description": "CERTIFIED business fact (2026-09-02 spec): the canonical Google Place ID the owner confirmed, carried in the signed intake packet's facts. Distinct from `place_id`, which may carry any profile identifier. Optional — omit rather than infer."
+        },
+        "rating": {
+          "type": "number",
+          "description": "Verified rating. Omit when unknown; never default."
+        },
+        "review_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Verified review count. Omit when unknown; never default."
+        },
+        "license": {
+          "$ref": "#/$defs/OptionalVerifiedString"
+        },
+        "license_number": {
+          "type": "string",
+          "pattern": "\\S",
+          "maxLength": 60,
+          "description": "OPTIONAL client-supplied licence/registration number for the trust-badge rail. Absent = no badge renders. Never inferred from a mined site."
+        },
+        "insured": {
+          "type": "boolean",
+          "description": "OPTIONAL client-supplied insurance status. true = an Insured badge renders; false/absent renders nothing — an insurance claim is never printed unless it was given."
+        },
+        "associations": {
+          "type": "array",
+          "maxItems": 12,
+          "description": "OPTIONAL trade/industry association names for the trust-badge rail, rendered verbatim, one seal chip each.",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          }
+        },
+        "financing": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "OPTIONAL financing module. Renders a Financing available section ONLY when enabled is true AND apply_url is an https URI; absent or disabled renders nothing.",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "partner": {
+              "type": "string",
+              "maxLength": 80,
+              "description": "Optional financing partner name shown in the section copy."
+            },
+            "apply_url": {
+              "$ref": "#/$defs/RequiredHttpsUri"
+            },
+            "payment_methods": {
+              "type": "array",
+              "maxItems": 8,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40
+              }
+            }
+          }
+        },
+        "profile_url": {
+          "$ref": "#/$defs/OptionalUri"
+        },
+        "socials": {
+          "type": "array",
+          "maxItems": 12,
+          "description": "Social and trust profiles the business PROVABLY owns — linked from their own site, or carrying their name unambiguously (lib/mirror-engine/social-discovery). Rendered as the social bar under the hero. Omit the array, or any network, that could not be proved; a stranger's profile under the client's banner is the manufacturer-badge failure with a bigger blast radius.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "network",
+              "url"
+            ],
+            "properties": {
+              "network": {
+                "type": "string",
+                "enum": [
+                  "facebook",
+                  "instagram",
+                  "youtube",
+                  "linkedin",
+                  "tiktok",
+                  "twitter",
+                  "yelp",
+                  "bbb",
+                  "angi",
+                  "nextdoor",
+                  "houzz"
+                ]
+              },
+              "url": {
+                "$ref": "#/$defs/RequiredHttpsUri"
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "handle": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "provenance": {
+                "type": "string",
+                "enum": [
+                  "own_site_link",
+                  "named_match"
+                ],
+                "description": "How ownership was established. There is no third way in."
+              }
+            }
+          }
+        },
+        "owner_name": {
+          "$ref": "#/$defs/OptionalVerifiedString"
+        },
+        "current_website": {
+          "$ref": "#/$defs/OptionalUri"
+        },
+        "service_area": {
+          "$ref": "#/$defs/OptionalVerifiedString",
+          "description": "MARKETING city: the market the business's own first-party site asserts it sells into. Drives CITY / the title / the hero headline. NOT the mailing address — `city` remains the NAP locality for schema.org PostalAddress and the visible address block. Omit when the site asserts nothing; never inferred."
+        },
+
+        "sms_capable": {
+          "type": "boolean",
+          "default": false,
+          "description": "TRUE only when the business's own published phone line is VERIFIED textable (a mobile/SMS-capable line). Together with the features.sms_cta flag it gates the mirror's sms: 'Text Us' action, aimed at the business's own line for ITS customers — never at Riley's voice-only channel. Absent or false renders no sms: link; a voice-only number is never given one."
+        },
+        "primary_cta": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "pattern": "\\S",
+              "maxLength": 24,
+              "description": "Visible button label of the business's primary call to action, e.g. 'Book Online'."
+            },
+            "href": {
+              "$ref": "#/$defs/RequiredHttpsUri",
+              "description": "The primary CTA target — https only. Rendered verbatim on the sticky mobile CTA bar when features.sticky_cta is promoted; absent or invalid drops the button, never fakes one."
+            }
+          },
+          "description": "The business's PRIMARY call to action. Data for the sticky mobile CTA bar's second action. Optional; absent = the bar's CTA slot falls back to the chat affordance."
+        },
+        "features": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "sticky_cta": {
+              "type": "boolean",
+              "default": false,
+              "description": "Feature 2: the sticky mobile CTA bar (<768px only). Default OFF."
+            },
+            "sms_cta": {
+              "type": "boolean",
+              "default": false,
+              "description": "Feature 5: the sms: 'Text Us' bar action; also requires the sms_capable fact. Default OFF."
+            },
+            "chat_handoff": {
+              "type": "boolean",
+              "default": false,
+              "description": "Feature 11: the chat panel's 'Prefer to talk? Call Riley' handoff to the resolved Riley line. Default OFF."
+            },
+            "seasonal": {
+              "type": "boolean",
+              "default": false,
+              "description": "Feature 10: the vertical-aware seasonal merchandising section on the home page (lib/mirror-engine/seasonal.js). Default OFF. A flag on does not relax any truth gate; seasonal copy still names only services on the verified service list."
+            }
+          },
+          "description": "Per-business feature flags. Every flag defaults to false and ABSENT means OFF: a flag that is missing, false, or not the exact boolean true renders its component NOWHERE. The engine never defaults a feature on and never promotes a flag fleet-wide. A flag on never relaxes a truth gate."
+        },
+        "project_photos": {
+          "type": "array",
+          "maxItems": 12,
+          "description": "OPTIONAL before/after project photographs for the project gallery section (lib/mirror-engine/project-gallery.js). Each entry is ONE completed project: its before URL, its after URL, and an optional caption in the client's own words. Only COMPLETE pairs render; a section with no complete pair is absent from the site. Every URL must be https and plausibly an image (an image extension in the path, or a known media host) — enforced again by application validation at the facts boundary, where a junk URL is a named 422 rather than a broken pane.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "before_url",
+              "after_url"
+            ],
+            "properties": {
+              "before_url": {
+                "$ref": "#/$defs/RequiredHttpsUri"
+              },
+              "after_url": {
+                "$ref": "#/$defs/RequiredHttpsUri"
+              },
+              "caption": {
+                "type": "string",
+                "maxLength": 160,
+                "description": "Optional caption shown under the pair."
+              }
+            }
+          }
+
+        }
+      }
+    },
+    "MirrorBrand": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "media_mode": {
+          "type": "string",
+          "enum": [
+            "origin",
+            "housed"
+          ],
+          "default": "housed",
+          "description": "HOTLINK-UNTIL-PAY (docs/standards/hotlink-until-pay.md). \"origin\": the prospect's OWN photos/hero video are verified once at build time (fetch + magic-byte sniff + sha256 — the truth law is unchanged) and shipped as their origin URLs via a manifest at assets/wss-origin-media.json; zero of their media bytes are housed. \"housed\" (the default, and today's behaviour): the verified bytes are placed into the donor's media slots. The checkout webhook re-mirrors with media_mode:\"housed\" on payment. The logo is housed in both modes — the accent measurement and logo gates read its bytes."
+        },
+        "source_packet": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "contract",
+            "packet_id",
+            "snapshot_sha256"
+          ],
+          "description": "Receipt for the immutable PageHub Packet2 snapshot that supplied optional render inputs. This identifies evidence only; no packet body, NAP, trust value, prose, credential or secret may cross this seam.",
+          "properties": {
+            "contract": {
+              "const": "pagehub-build-packet"
+            },
+            "packet_id": {
+              "type": "string",
+              "pattern": "^pagehub:[0-9a-f]{24}$"
+            },
+            "snapshot_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "accent": {
+          "$ref": "#/$defs/HexColor",
+          "description": "Pre-measured dominant saturated color from the prospect's own logo."
+        },
+        "accent_source": {
+          "$ref": "#/$defs/RequiredHttpsUri",
+          "description": "URL the accent was measured from. Required whenever accent is supplied; runs through the same third-party denylist as logo."
+        },
+        "accent_fallback": {
+          "$ref": "#/$defs/HexColor",
+          "description": "Accent ALREADY measured elsewhere: by the miner from this same logo, or by the design brief from the client's own action elements (lib/design-brief.js — deterministic, saturation-floored, vision-confirmed when a key exists). Used ONLY when this runtime cannot decode the logo bytes itself: measureAccent reads PNG in pure JS and shells out to ffmpeg for everything else, and ffmpeg is absent from the serverless runtime, so a JPEG or WebP mark measures null and refuses its own mirror as brand=unbranded. The logo always outranks the page; never overrides a measurement; never a donor default."
+        },
+        "accent_fallback_source": {
+          "$ref": "#/$defs/RequiredHttpsUri",
+          "description": "URL the fallback accent was measured from. Required whenever accent_fallback is supplied; runs through the same third-party denylist as logo and accent_source."
+        },
+        "site_accent": {
+          "$ref": "#/$defs/HexColor",
+          "description": "The colour the client's SITE CHROME actually wears — the design brief's measured action colour (lib/design-brief.js: computed styles of real buttons/links, deterministic, saturation-floored, vision-confirmed when a key exists). Unlike accent_fallback this is supplied WHENEVER the brief is confident, because its job is to challenge the logo: when this and the logo's measured colour are different hue families, the site wins the primary accent and the logo colour steps down to the secondary paint role. Family Heating is the incident: blue-dominant site, a logo containing red, and the mirror opened pinkish-red."
+        },
+        "site_accent_source": {
+          "$ref": "#/$defs/RequiredHttpsUri",
+          "description": "URL of the client page the site accent was measured from. Required whenever site_accent is supplied; runs through the same third-party denylist as logo and accent_source."
+        },
+        "logo": {
+          "$ref": "#/$defs/RequiredHttpsUri",
+          "description": "URL of the prospect's own logo. Must pass first-party asset and SSRF validation before fetching."
+        },
+        "logo_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "Optional caller-supplied sha256 of the logo bytes. When present, fetched bytes must match or the build fails brand_asset_rejected."
+        },
+        "mark": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "rung",
+            "value",
+            "reason"
+          ],
+          "description": "Brand-mark downgrade selected by the contract-frozen logo ladder when no verified logo exists. This is evidence of an intentional fallback, never permission to replace a rejected or foreign logo candidate.",
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "rung": {
+                    "const": "wordmark"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "value": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "type",
+                      "text",
+                      "color"
+                    ],
+                    "properties": {
+                      "type": {
+                        "const": "wordmark"
+                      },
+                      "text": {
+                        "type": "string"
+                      },
+                      "color": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "rung": {
+                    "const": "monogram"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "value": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "type",
+                      "initials",
+                      "color",
+                      "background"
+                    ],
+                    "properties": {
+                      "type": {
+                        "const": "monogram"
+                      },
+                      "initials": {
+                        "type": "string"
+                      },
+                      "color": {
+                        "type": "string"
+                      },
+                      "background": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "rung": {
+                    "const": "donor_default"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "value": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "type"
+                    ],
+                    "properties": {
+                      "type": {
+                        "const": "donor_default"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "rung": {
+              "type": "string",
+              "enum": [
+                "wordmark",
+                "monogram",
+                "donor_default"
+              ]
+            },
+            "value": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "wordmark",
+                    "monogram",
+                    "donor_default"
+                  ]
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "initials": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 8
+                },
+                "color": {
+                  "type": "string",
+                  "pattern": "^(?:#[0-9a-fA-F]{6})?$"
+                },
+                "background": {
+                  "type": "string",
+                  "maxLength": 40
+                }
+              }
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            }
+          }
+        },
+        "photos": {
+          "type": "array",
+          "maxItems": 20,
+          "uniqueItems": true,
+          "description": "URLs of the prospect's OWN imagery only (their real site/GBP photos). Placed into the donor's declared photo_slots; never generated, never stock.",
+          "items": {
+            "$ref": "#/$defs/RequiredHttpsUri"
+          }
+        },
+        "hero_video": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "url"
+          ],
+          "properties": {
+            "url": {
+              "$ref": "#/$defs/RequiredHttpsUri"
+            },
+            "provenance": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "client_derived_reel",
+                    "seedance_generated",
+                    "seedance_ffmpeg_boomerang"
+                  ]
+                },
+                "generator": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                "hero_job_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "attempt_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "checkpoint_schema": {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                "provider_job_id": {
+                  "type": "string",
+                  "maxLength": 160
+                },
+                "output_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-fA-F0-9]{64}$"
+                }
+              }
+            }
+          },
+          "description": "The prospect's OWN hero/background video (mp4 or webm), captured from their own current site. Fetched, denylisted, and verified by magic bytes, then placed at the donor's declared hero_video.client_video_path when the extension matches. A generated reel must carry its durable provenance; Seedance additionally requires the accepted provider checkpoint, provider job, attempt and output hash. Absent means the donor's ladder falls to its truthful fallback. Never a borrowed or stock clip."
+        },
+        "photo_bank": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "The RANKED photo bank from lib/client-photo-bank (same photographs as `photos`, with the grade, sha256 and stock-caption verdict the plain URL list cannot carry). Optional and additive: it exists so the hero wash can pick their BEST hero-grade picture instead of merely their first. It was absent from this schema while lib/hero-wash.js was written against it, and because the schema is additionalProperties:false a caller that supplied one got a 400 — so the hero wash could never have received a photograph from any caller. Absent, the engine falls back to the first usable photo and says so in checks.brand.hero_wash.photo_source.",
+          "properties": {
+            "photos": {
+              "type": "array",
+              "maxItems": 64,
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "url": {
+                    "$ref": "#/$defs/RequiredHttpsUri"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "grade": {
+                    "type": "string",
+                    "enum": [
+                      "hero",
+                      "gallery",
+                      "thumbnail"
+                    ]
+                  },
+                  "stock_caption_suspect": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "primary": {
+          "$ref": "#/$defs/HexColor",
+          "description": "The prospect's own PRIMARY/surface brand colour. Re-hues the donor's oklch surface palette (lightness preserved, chroma budgeted) so the mirror wears their colour family, not the donor's."
+        },
+        "fonts": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Typefaces read from the CLIENT's own site (lib/font-capture). Absent when we could not identify one — the donor keeps its typography rather than guessing.",
+          "properties": {
+            "display": {
+              "type": "string",
+              "maxLength": 60
+            },
+            "body": {
+              "type": "string",
+              "maxLength": 60
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^https://fonts.googleapis.com/"
+            },
+            "source": {
+              "type": "string"
+            },
+            "provider": {
+              "type": "string",
+              "enum": [
+                "google",
+                "declared"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MirrorContent": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Verified CONTENT from the Intake Genie packet. Every field is optional; a blank field renders no section (TRUTH LAW). Nothing here may be invented by the engine.",
+      "properties": {
+        "truth_source": {
+          "type": "array",
+          "maxItems": 12,
+          "description": "GATE 4C provenance. Absolute path(s) to the first-party packet(s) this content was compiled from. Each one is verified against the client's stamp (clients/<slug>/client.stamp.json) at build start: a source carrying zero client identifiers, or dominated by another business, REFUSES the build. Root incident: a reused scratchpad packet labelled 'Ramon' held Music City Roofers data and passed every downstream gate.",
+          "items": {
+            "$ref": "#/$defs/NonBlankString"
+          }
+        },
+        "services": {
+          "type": "array",
+          "maxItems": 24,
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/NonBlankString"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "$ref": "#/$defs/NonBlankString"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "faqs": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "q",
+              "a"
+            ],
+            "properties": {
+              "q": {
+                "$ref": "#/$defs/NonBlankString"
+              },
+              "a": {
+                "$ref": "#/$defs/NonBlankString"
+              }
+            }
+          }
+        },
+        "reviews": {
+          "type": "array",
+          "maxItems": 10,
+          "description": "Verified reviews only. A reviewer name may appear ONLY when the Genie attested it. avatarUrl is Google's own CDN URL, served verbatim and never re-hosted.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "$ref": "#/$defs/NonBlankString"
+              },
+              "author": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "avatarUrl": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https://[a-z0-9-]+\\.googleusercontent\\.com/",
+                "description": "Reviewer photo, Google CDN only. Rendered with referrerpolicy=no-referrer."
+              },
+              "publishedAt": {
+                "type": "string",
+                "description": "ISO-8601 timestamp the review was written."
+              }
+            }
+          }
+        },
+        "areas": {
+          "type": "array",
+          "maxItems": 18,
+          "items": {
+            "$ref": "#/$defs/NonBlankString"
+          }
+        },
+        "hours": {
+          "description": "Verified hours. Accepts the Genie's map form ({mon:'7-5'}) or list form ([{day,open,close}]); null when unknown.",
+          "anyOf": [
+            {
+              "type": "object"
+            },
+            {
+              "type": "array",
+              "maxItems": 14
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "about": {
+          "type": "string",
+          "maxLength": 4000
+        },
+        "research": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "BrightData-derived local research (lib/mirror-engine/local-research.js). Neighborhoods/landmarks are observed strings tied to the prospect's own city; GBP copy is generated from verified facts only.",
+          "properties": {
+            "neighborhoods": {
+              "type": "array",
+              "maxItems": 10,
+              "items": {
+                "$ref": "#/$defs/NonBlankString"
+              }
+            },
+            "landmarks": {
+              "type": "array",
+              "maxItems": 8,
+              "items": {
+                "$ref": "#/$defs/NonBlankString"
+              }
+            },
+            "questions": {
+              "type": "array",
+              "maxItems": 12,
+              "items": {
+                "$ref": "#/$defs/NonBlankString"
+              }
+            },
+            "related": {
+              "type": "array",
+              "maxItems": 12,
+              "items": {
+                "$ref": "#/$defs/NonBlankString"
+              }
+            },
+            "authoritative": {
+              "type": "array",
+              "maxItems": 3,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "href"
+                ],
+                "properties": {
+                  "href": {
+                    "$ref": "#/$defs/RequiredHttpsUri"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "gbp": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "descriptions": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "short_250": {
+                      "type": "string"
+                    },
+                    "medium_500": {
+                      "type": "string"
+                    },
+                    "long_750": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "categories": {
+                  "type": "array",
+                  "maxItems": 8,
+                  "items": {
+                    "$ref": "#/$defs/NonBlankString"
+                  }
+                }
+              }
+            },
+            "citations_csv": {
+              "type": "string",
+              "maxLength": 20000
+            },
+            "sources": {
+              "type": "array",
+              "maxItems": 12,
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "mission": {
+          "type": "string",
+          "maxLength": 600,
+          "description": "The business's OWN mission/values statement, quoted or tightly paraphrased from their material."
+        },
+        "founded_year": {
+          "type": "integer",
+          "minimum": 1800,
+          "maximum": 2100,
+          "description": "Verified founding year."
+        },
+        "team": {
+          "type": "array",
+          "maxItems": 12,
+          "description": "Real named team members the business publishes. Never invented.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "$ref": "#/$defs/NonBlankString"
+              },
+              "role": {
+                "type": "string"
+              },
+              "bio": {
+                "type": "string",
+                "maxLength": 800
+              }
+            }
+          }
+        },
+        "awards": {
+          "type": "array",
+          "maxItems": 10,
+          "description": "Real awards/certifications the business publishes.",
+          "items": {
+            "$ref": "#/$defs/NonBlankString"
+          }
+        },
+        "press": {
+          "type": "array",
+          "maxItems": 6,
+          "description": "Real press mentions with links.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "href"
+            ],
+            "properties": {
+              "label": {
+                "$ref": "#/$defs/NonBlankString"
+              },
+              "href": {
+                "$ref": "#/$defs/RequiredHttpsUri"
+              }
+            }
+          }
+        },
+        "keywords": {
+          "type": "array",
+          "maxItems": 24,
+          "items": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "description": "Search terms from the Intake Compiler SERP work. They only decide which verified service LEADS the description — they can never introduce a service."
+        },
+        "seo_description": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Search-facing description. Compiler copy when supplied, else built from verified facts."
+        },
+        "nearby": {
+          "type": "array",
+          "maxItems": 8,
+          "description": "Real towns around the business, MEASURED from verified coordinates against the US Census geocoder (lib/mirror-engine/nearby-cities). Rendered as driving-direction links, not as a service-area claim: we know where a town is, we do not know whether this business works there. Never a hand-written list.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "miles"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "state": {
+                "type": "string",
+                "maxLength": 2
+              },
+              "miles": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 200
+              },
+              "km": {
+                "type": "number",
+                "minimum": 0
+              },
+              "lat": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              },
+              "lng": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              },
+              "source": {
+                "type": "string",
+                "maxLength": 60
+              }
+            }
+          }
+        },
+        "pride": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "The OWNER'S PRIDE POINTS, already reduced to what the sources prove (lib/owner-pride.js prideFromExtraction). Every entry cleared status FOUND + confidence above low + at least one evidence quote carrying a source URL, and is rendered VERBATIM. The engine never composes, paraphrases or defaults anything in this block: an absent section is an absent section. This exists because two audited rebuilds shipped a beautiful shell with a generic business inside it — the motto, the real maintenance-plan prices, the manufacturer relationship and a twelve-city footprint all dropped (docs/owner-behind/owner-behind-audit-report.md).",
+          "properties": {
+            "schema": {
+              "type": "string",
+              "maxLength": 40
+            },
+            "sections": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "tagline": {
+                  "$ref": "#/$defs/PrideValue"
+                },
+                "heritage": {
+                  "$ref": "#/$defs/PrideValue"
+                },
+                "ownership": {
+                  "$ref": "#/$defs/PrideValue"
+                },
+                "financing": {
+                  "$ref": "#/$defs/PrideValue"
+                },
+                "credentials": {
+                  "type": "array",
+                  "maxItems": 24,
+                  "description": "Licences, certifications and manufacturer relationships. A credential is NEVER an identity: `image` may only be set when the badge asset is hosted on the client's own registrable domain, because a manufacturer's mark served from the manufacturer's host is the manufacturer's mark. This codebase shipped Mastercool's logo as a client's identity once already.",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "label"
+                    ],
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "enum": [
+                          "credential"
+                        ]
+                      },
+                      "label": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 120
+                      },
+                      "image": {
+                        "type": "string",
+                        "maxLength": 500
+                      },
+                      "proof": {
+                        "$ref": "#/$defs/PrideProof"
+                      }
+                    }
+                  }
+                },
+                "differentiators": {
+                  "type": "array",
+                  "maxItems": 24,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "text"
+                    ],
+                    "properties": {
+                      "key": {
+                        "type": "string",
+                        "maxLength": 60
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 200
+                      },
+                      "proof": {
+                        "$ref": "#/$defs/PrideProof"
+                      }
+                    }
+                  }
+                },
+                "plans": {
+                  "type": "array",
+                  "maxItems": 12,
+                  "description": "Productized offers with their REAL prices. A plan without its real price is not printed — half a plan is an invitation to invent the other half.",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "name",
+                      "price"
+                    ],
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 60
+                      },
+                      "price": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 60
+                      },
+                      "details": {
+                        "type": "array",
+                        "maxItems": 5,
+                        "items": {
+                          "type": "string",
+                          "maxLength": 120
+                        }
+                      },
+                      "proof": {
+                        "$ref": "#/$defs/PrideProof"
+                      }
+                    }
+                  }
+                },
+                "promotions": {
+                  "type": "array",
+                  "maxItems": 12,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "text"
+                    ],
+                    "properties": {
+                      "text": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 160
+                      },
+                      "proof": {
+                        "$ref": "#/$defs/PrideProof"
+                      }
+                    }
+                  }
+                },
+                "footprint": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "The service-area footprint the client publishes themselves. Every name has already passed the plausible-place-name rule, so \"9, LA\" can never re-enter through this door.",
+                  "properties": {
+                    "cities": {
+                      "type": "array",
+                      "maxItems": 16,
+                      "items": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 40
+                      }
+                    },
+                    "regions": {
+                      "type": "array",
+                      "maxItems": 6,
+                      "items": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 40
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "PrideProof": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Where the value was observed. Carried so a downstream gate can re-check a published pride point without re-crawling the client's site.",
+      "properties": {
+        "source": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "quote": {
+          "type": "string",
+          "maxLength": 200
+        }
+      }
+    },
+    "PrideValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 160
+        },
+        "proof": {
+          "$ref": "#/$defs/PrideProof"
+        }
+      }
+    },
+    "MirrorHero": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "headline": {
+          "type": "string",
+          "description": "Optional operator override for the FIRST headline line only. Missing or blank composes it from verified facts (their proven motto, else their business name)."
+        },
+        "tagline": {
+          "$ref": "#/$defs/OptionalVerifiedString",
+          "description": "The client's OWN motto/tagline, verbatim, from one of exactly two evidence doors: the owner-pride bar (status FOUND, confidence above low, at least one evidence quote with a source URL) or the design brief's hero slogan (lib/design-brief.js heroSlogan — the DOM's own hero text, textVerified, case-folded only when the DOM shouts). It becomes the first line of the hero headline, above the name+city+rating fallback. Never our paraphrase of their positioning, never a slogan we wrote."
+        },
+        "accent": {
+          "$ref": "#/$defs/OptionalVerifiedString",
+          "description": "Verified differentiator only."
+        },
+        "badge": {
+          "$ref": "#/$defs/OptionalVerifiedString",
+          "description": "Verified badge copy only."
+        }
+      }
+    }
+  }
+}

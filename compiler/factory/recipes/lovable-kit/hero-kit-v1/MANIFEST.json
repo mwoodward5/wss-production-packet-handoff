@@ -1,0 +1,298 @@
+{
+  "version": "1.0",
+  "generated": "2026-07-11",
+  "count": 8,
+  "heroes": [
+    {
+      "id": "01_excavation_knk",
+      "name": "KNK Excavation",
+      "source_project": "a7035343-579e-4d1b-a7b7-05c89cd706c7",
+      "source_url": "https://knk.wss-ai.com",
+      "vertical_primary": "excavation",
+      "verticals_reusable": [
+        "excavation",
+        "earthworks",
+        "demolition",
+        "septic",
+        "heavy-trades",
+        "industrial"
+      ],
+      "main_file": "Hero.tsx",
+      "deps": [
+        "_deps/Marquee.tsx",
+        "_deps/CountUp.tsx",
+        "_deps/SchematicOverlay.tsx",
+        "_deps/YardageEstimator.tsx (widget \u2014 build custom per vertical)"
+      ],
+      "style_tags": [
+        "video",
+        "parallax",
+        "schematic",
+        "grain",
+        "cinematic",
+        "marquee",
+        "countup",
+        "live-widget"
+      ],
+      "has_video": true,
+      "complexity": "high",
+      "runtime_deps": [
+        "react",
+        "tailwindcss",
+        "lucide-react"
+      ]
+    },
+    {
+      "id": "02_paving_hurley",
+      "name": "Hurley Asphalt Flagship",
+      "source_project": "dfbf05b8-faea-440d-ab00-9b2ac7beaaaa",
+      "source_url": "https://asphalt-truth-architect.lovable.app",
+      "vertical_primary": "paving",
+      "verticals_reusable": [
+        "paving",
+        "sealcoating",
+        "concrete",
+        "asphalt",
+        "heritage-trades",
+        "construction-heritage"
+      ],
+      "main_file": "HeroFlagship.tsx",
+      "deps": [],
+      "style_tags": [
+        "ken-burns",
+        "parallax",
+        "topographic",
+        "seasonal-logic",
+        "live-widget",
+        "atlas-map",
+        "mouse-reactive",
+        "grain"
+      ],
+      "has_video": false,
+      "complexity": "very-high",
+      "runtime_deps": [
+        "react",
+        "tailwindcss",
+        "lucide-react",
+        "@tanstack/react-router"
+      ]
+    },
+    {
+      "id": "03_photography_xavier",
+      "name": "Xavier Cinematic",
+      "source_project": "f707cc11-42cf-4106-b1ad-628684ac727a",
+      "source_url": "https://xaviers-cinematic-canvas.lovable.app",
+      "vertical_primary": "photography",
+      "verticals_reusable": [
+        "photography",
+        "videography",
+        "wedding",
+        "editorial",
+        "creative-services",
+        "luxury-events"
+      ],
+      "main_file": "CinematicHero.tsx",
+      "deps": [],
+      "style_tags": [
+        "editorial",
+        "split-layout",
+        "parallax",
+        "grain",
+        "ken-burns",
+        "gold-accents"
+      ],
+      "has_video": false,
+      "complexity": "high",
+      "runtime_deps": [
+        "react",
+        "tailwindcss",
+        "lucide-react",
+        "react-router-dom"
+      ]
+    },
+    {
+      "id": "04_roadside_video",
+      "name": "Roadside Cinematic Video",
+      "source_project": "1e039e20-1795-491e-a87a-674e5fb46abe",
+      "source_url": "https://banana-roadside-hero.lovable.app",
+      "vertical_primary": "roadside",
+      "verticals_reusable": [
+        "roadside",
+        "rv",
+        "tow",
+        "mobile-repair",
+        "emergency",
+        "24-7-service"
+      ],
+      "main_file": "HeroCinematic.tsx",
+      "deps": [
+        "_deps/HeroWelcomeAudio.tsx",
+        "_deps/manifest.example.ts"
+      ],
+      "style_tags": [
+        "video",
+        "cinematic",
+        "welcome-audio",
+        "full-bleed",
+        "trust-strip"
+      ],
+      "has_video": true,
+      "complexity": "medium",
+      "runtime_deps": [
+        "react",
+        "tailwindcss",
+        "lucide-react",
+        "@tanstack/react-router"
+      ]
+    },
+    {
+      "id": "05_automotive_luxury",
+      "name": "OC Ride Luxury",
+      "source_project": "5f381dcb-8440-4913-9389-25400f884f6d",
+      "source_url": "https://ride-luxe.lovable.app",
+      "vertical_primary": "automotive",
+      "verticals_reusable": [
+        "automotive-luxury",
+        "transport",
+        "chauffeur",
+        "private-jet",
+        "yacht",
+        "high-ticket-services"
+      ],
+      "main_file": "Hero.tsx",
+      "deps": [
+        "_deps/GoldParticles.tsx"
+      ],
+      "style_tags": [
+        "framer-motion",
+        "canvas",
+        "particle",
+        "gold-shimmer",
+        "frosted-glass",
+        "radiating-rings",
+        "serif"
+      ],
+      "has_video": false,
+      "complexity": "medium-high",
+      "runtime_deps": [
+        "react",
+        "tailwindcss",
+        "lucide-react",
+        "framer-motion"
+      ]
+    },
+    {
+      "id": "06_beverage_immersive",
+      "name": "Coco Love Immersive",
+      "source_project": "53432cc4-3f7a-4eca-8d03-e22affff1a7a",
+      "source_url": "https://cocolove.lovable.app",
+      "vertical_primary": "beverage",
+      "verticals_reusable": [
+        "beverage",
+        "cpg-lifestyle",
+        "wellness-product",
+        "cosmetics",
+        "surf-brand",
+        "hospitality-experiential"
+      ],
+      "main_file": "Hero.tsx",
+      "deps": [
+        "Note: this hero has ~8 child components (TropicalEnvironment, FloatingCan, WaterSurface, InteractiveRipples, HeroContent, AmbientEffects, PremiumPalmTree) + 2 hooks (useTimeOfDay, useGyroscope). Full extraction was skipped due to depth. See README.md for reconstruction guidance."
+      ],
+      "style_tags": [
+        "framer-motion",
+        "parallax",
+        "scroll-linked",
+        "time-of-day",
+        "gyroscope",
+        "interactive",
+        "ripples",
+        "canvas",
+        "3d-ish",
+        "water-surface"
+      ],
+      "has_video": false,
+      "complexity": "very-high",
+      "runtime_deps": [
+        "react",
+        "tailwindcss",
+        "framer-motion",
+        "+8 child components (see README)"
+      ]
+    },
+    {
+      "id": "07_fencing_estimator",
+      "name": "Straight Line Fencing Flagship",
+      "source_project": "303ffc41-860c-4845-a711-bbfd6998587d",
+      "source_url": "https://charmed-looks.lovable.app",
+      "vertical_primary": "fencing",
+      "verticals_reusable": [
+        "fencing",
+        "landscape-hardscape",
+        "outdoor-construction",
+        "decks",
+        "hardscaping",
+        "custom-install-trades"
+      ],
+      "main_file": "HeroFlagship.tsx",
+      "deps": [
+        "_deps/AtmosphereLayers.tsx",
+        "_deps/EstimatorWidget.tsx",
+        "_deps/slfAssets.example.ts"
+      ],
+      "style_tags": [
+        "framer-motion",
+        "ken-burns",
+        "atmosphere",
+        "fog",
+        "light-sweep",
+        "dust-particles",
+        "letterbox",
+        "split-tone",
+        "live-widget",
+        "spring-animated-counter"
+      ],
+      "has_video": false,
+      "complexity": "very-high",
+      "runtime_deps": [
+        "react",
+        "tailwindcss",
+        "lucide-react",
+        "framer-motion"
+      ]
+    },
+    {
+      "id": "08_wellness_minimal",
+      "name": "Mantra Botanicals Minimal",
+      "source_project": "fb577cc2-d738-41db-9d71-36f8dba3b880",
+      "source_url": "https://botanicals-whispers-ai.lovable.app",
+      "vertical_primary": "wellness",
+      "verticals_reusable": [
+        "wellness",
+        "medical",
+        "spa",
+        "legal",
+        "finance",
+        "professional-services",
+        "minimalist-premium"
+      ],
+      "main_file": "ServiceHero.tsx",
+      "deps": [],
+      "style_tags": [
+        "minimal",
+        "gradient-veil",
+        "eyebrow-chip",
+        "soft-rise",
+        "photography-forward"
+      ],
+      "has_video": false,
+      "complexity": "low",
+      "runtime_deps": [
+        "react",
+        "tailwindcss",
+        "lucide-react",
+        "react-router-dom"
+      ]
+    }
+  ]
+}

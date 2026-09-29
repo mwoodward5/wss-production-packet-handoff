@@ -1,0 +1,28 @@
+/* WSS Labs — brand tokens v1.0 */
+:root {
+  /* core */
+  --wss-void: #08080B;        /* canvas */
+  --wss-carbon: #131318;      /* panels & tiles */
+  --wss-ice: #F2F2F5;         /* primary text */
+  --wss-slate: #9B9AA4;       /* secondary text */
+  --wss-graphite: #6F6E79;    /* labels & captions */
+  --wss-hairline: rgba(255,255,255,.07);
+
+  /* accent */
+  --wss-violet: #7C6CF6;      /* brand · actions · clicks */
+  --wss-blue: #4A6CF7;        /* gradient partner */
+  --wss-green: #34D399;       /* live · success · opens */
+
+  /* semantic */
+  --wss-sky: #6E8BFF;         /* info · replies */
+  --wss-ember: #E0A44A;       /* warning · paused */
+  --wss-rose: #F26D6D;        /* error · bounce */
+
+  /* gradients */
+  --wss-grad-signal: linear-gradient(135deg, #4A6CF7 0%, #8B5CF6 100%);
+  --wss-grad-pulse: linear-gradient(135deg, #0E6B52 0%, #34D399 100%);
+
+  /* type */
+  --wss-font-ui: "Hanken Grotesk", system-ui, sans-serif;
+  --wss-font-mono: "IBM Plex Mono", monospace;
+}

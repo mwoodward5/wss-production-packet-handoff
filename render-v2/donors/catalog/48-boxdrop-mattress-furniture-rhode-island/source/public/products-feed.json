@@ -1,0 +1,47 @@
+{
+  "merchant": "BoxDrop Rhode Island",
+  "feedType": "category-only-no-live-prices",
+  "disclaimer": "Inventory changes often. Call or text before visiting if you need a specific size, brand, style, or configuration.",
+  "categories": [
+    {
+      "name": "Queen Mattresses",
+      "url": "https://boxdroprhodeisland.com/queen-mattresses-rhode-island",
+      "availability": "ask today's inventory"
+    },
+    {
+      "name": "King Mattresses",
+      "url": "https://boxdroprhodeisland.com/king-mattresses-rhode-island",
+      "availability": "ask today's inventory"
+    },
+    {
+      "name": "Hybrid Mattresses",
+      "url": "https://boxdroprhodeisland.com/hybrid-mattresses-rhode-island",
+      "availability": "ask today's inventory"
+    },
+    {
+      "name": "Memory Foam Mattresses",
+      "url": "https://boxdroprhodeisland.com/memory-foam-mattresses-rhode-island",
+      "availability": "ask today's inventory"
+    },
+    {
+      "name": "Adjustable Bases",
+      "url": "https://boxdroprhodeisland.com/adjustable-bases-rhode-island",
+      "availability": "ask today's inventory"
+    },
+    {
+      "name": "Sectionals",
+      "url": "https://boxdroprhodeisland.com/sectionals-rhode-island",
+      "availability": "ask today's inventory"
+    },
+    {
+      "name": "Sofas",
+      "url": "https://boxdroprhodeisland.com/sofas-rhode-island",
+      "availability": "ask today's inventory"
+    },
+    {
+      "name": "Recliners",
+      "url": "https://boxdroprhodeisland.com/recliners-rhode-island",
+      "availability": "ask today's inventory"
+    }
+  ]
+}

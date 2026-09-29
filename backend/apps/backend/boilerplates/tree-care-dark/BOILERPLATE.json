@@ -1,0 +1,49 @@
+{
+  "templateName": "tree-care-dark",
+  "vertical": "tree-service",
+  "sanitizedAt": "2026-07-17T21:52:48.881Z",
+  "requiredTokens": [
+    "{{BUSINESS_NAME}}",
+    "{{EMAIL}}",
+    "{{DOMAIN}}",
+    "{{COUNTY}}",
+    "{{PHONE}}",
+    "{{OWNER_NAME}}",
+    "{{CITY}}",
+    "{{REGION}}",
+    "{{GEO}}",
+    "{{POSTAL}}",
+    "{{LOGO_URL}}"
+  ],
+  "requiredAssets": [
+    "assets/tree-service-DK7bEZJu.webp",
+    "assets/tree-removal-BpnQBwcM.webp",
+    "assets/tree-care-KJUl9w_V.webp",
+    "assets/landscaping-2x7ZPJiT.webp",
+    "assets/lawn-care-s90fgUt8.webp",
+    "assets/firewood-for-sale-DOAwG36b.webp",
+    "assets/services-image-tree-removal-img-uDYoIQpg.jpg",
+    "assets/services-image-ttree-care-img--hlq8MOw.jpg",
+    "assets/services-image-dead-wood-cleanup-img-ReGJdhi6.jpg"
+  ],
+  "notes": "Hydrate from this boilerplate only. Never re-forge from the donor build.",
+
+  "retired": {
+    "since": "2026-07-31",
+    "repairable": true,
+    "reason": "Shipped a donor person-name leak, a fully missing asset set, and a wrong-trade schema. Out of service until all three are fixed and a render proves it.",
+    "enforced_by": "lib/mirror-engine/donor.js donorRetirement() — resolveDonor refuses this donor by NAME and by vertical, error donor_retired. Proof: test/donor-retirement.test.js.",
+    "keep_the_directory": "Deliberate. The dist is repairable and the defects below are the repair list. Deleting it loses the only tree-service donor in the library.",
+    "defects": [
+      "PERSON-NAME LEAK (P0). The live hero rendered the donor owner's first name: the literal string 'Text Curt'. It is still in index.html and in assets/index-CvAaQhnG.js; DONOR_PROFILE.json names the source as Curt Lewis of All-Around Tree Care. QC passed anyway — a donor person name is the leak class that survives every gate.",
+      "MISSING ASSET SET (P0). All nine paths under requiredAssets exist on disk only as .PLACEHOLDER stubs, so every one of them 404s. The live render logged 196 failed requests over 23 distinct 404s. A boilerplate that cannot serve its own requiredAssets is not a buildable dist.",
+      "WRONG-TRADE SCHEMA (P1). A tree-service client published as LandscapingBusiness. The type is chosen in lib/mirror-engine/content-inject.js, where the industry regex /landscap|lawn|tree/ collapses tree work into landscaping — so this one is an ENGINE fix, not a donor fix, and it will mislabel any future tree donor too."
+    ],
+    "unretire_requires": [
+      "Every requiredAssets path present as real bytes, not a .PLACEHOLDER.",
+      "Zero hits for the donor person name across every hydrated file, verified against DONOR_PROFILE.json identity.people.",
+      "A schema type that names the trade the client actually sells.",
+      "A rendered DOM on a live URL: 0 console errors, 0 pageerrors, 0 failed requests. A green gate is not evidence."
+    ]
+  }
+}

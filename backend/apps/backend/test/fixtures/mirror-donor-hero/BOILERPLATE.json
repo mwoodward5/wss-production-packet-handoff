@@ -1,0 +1,16 @@
+{
+  "name": "mirror-donor-hero",
+  "vertical": "roofing",
+  "label": "Test fixture donor with a word-span hero (flex-bomb regression lane) - synthetic, never a real business",
+  "wordmarkFill": "#f5f5f4",
+  "source": "synthetic:test-fixture",
+  "sanitised": "2026-09-04",
+  "donor_business_name": "Synthetic Fixture Hero Roofing Co",
+  "donor_phone": "(999) 555-0100",
+  "donor_email": "fixture@example-donor.invalid",
+  "donor_city": "Fixtureville",
+  "donor_domain": "example-donor.invalid",
+  "persons": [
+    "Hero Q. Donorson"
+  ]
+}

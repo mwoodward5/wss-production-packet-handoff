@@ -1,0 +1,74 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "codex/**": false,
+      "design/**": false,
+      "zcode/**": false,
+      "chatgpt/**": false
+    }
+  },
+  "ignoreCommand": "git rev-parse --verify HEAD^ >/dev/null 2>&1 && git diff --quiet HEAD^ HEAD -- .",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/customer/dashboard", "destination": "/dashboard", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/api/preview-request", "destination": "https://ghost-agency-backend.vercel.app/api/ghost-agency/orchestrate" },
+    { "source": "/api/checkout", "destination": "https://ghost-agency-backend.vercel.app/api/checkout" },
+    { "source": "/api/discover", "destination": "https://ghost-agency-backend.vercel.app/api/discover" },
+    { "source": "/api/connect/threads", "destination": "https://ghost-agency-backend.vercel.app/api/connect/threads" },
+    { "source": "/api/connect/messages", "destination": "https://ghost-agency-backend.vercel.app/api/connect/messages" },
+    { "source": "/api/connect/send", "destination": "https://ghost-agency-backend.vercel.app/api/connect/send" },
+    { "source": "/api/connect/visibility", "destination": "https://ghost-agency-backend.vercel.app/api/connect/visibility" },
+    { "source": "/api/connect/site", "destination": "https://ghost-agency-backend.vercel.app/api/connect/site" },
+    { "source": "/api/connect/edit", "destination": "https://ghost-agency-backend.vercel.app/api/connect/edit" },
+    { "source": "/api/connect/edits", "destination": "https://ghost-agency-backend.vercel.app/api/connect/edits" },
+    { "source": "/api/connect/upload", "destination": "https://ghost-agency-backend.vercel.app/api/connect/upload" },
+    { "source": "/api/connect/assistant", "destination": "https://ghost-agency-backend.vercel.app/api/connect/assistant" },
+    { "source": "/api/connect/voice-config", "destination": "https://ghost-agency-backend.vercel.app/api/connect/voice-config" },
+    { "source": "/api/connect/push-subscribe", "destination": "https://ghost-agency-backend.vercel.app/api/connect/push-subscribe" },
+    { "source": "/api/connect/dashboard-login", "destination": "https://ghost-agency-backend.vercel.app/api/connect/dashboard-login" },
+    { "source": "/api/connect/verify-link", "destination": "https://ghost-agency-backend.vercel.app/api/connect/verify-link" },
+    { "source": "/dashboard", "destination": "/dashboard/index.html" },
+    { "source": "/intake", "destination": "/intake/index.html" },
+    { "source": "/legal", "destination": "/legal/index.html" },
+    { "source": "/products", "destination": "/products/index.html" },
+    { "source": "/managed-website", "destination": "/managed-website/index.html" },
+    { "source": "/answercrew", "destination": "/answercrew/index.html" },
+    { "source": "/activate", "destination": "/activate/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(self), geolocation=(), payment=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; base-uri 'self'; connect-src 'self' https://*.vapi.ai wss://*.vapi.ai https://*.daily.co wss://*.daily.co https://prod-ks.pluot.blue wss://prod-ks.pluot.blue; font-src 'self'; form-action 'self'; frame-ancestors 'none'; frame-src https://*.wss-ai.com https://*.daily.co; img-src 'self' data:; media-src 'self' blob:; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://c.daily.co; style-src 'self' 'unsafe-inline'; worker-src 'self' blob:; upgrade-insecure-requests" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" },
+        { "key": "Service-Worker-Allowed", "value": "/" }
+      ]
+    },
+    {
+      "source": "/dashboard/manifest.webmanifest",
+      "headers": [
+        { "key": "Content-Type", "value": "application/manifest+json; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}

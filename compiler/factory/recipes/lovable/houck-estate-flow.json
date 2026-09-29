@@ -1,0 +1,74 @@
+{
+ "id": "houck-estate-flow",
+ "source": "477bd546-1d04-43a8-b7d6-2f2a3789d133",
+ "palette": {
+  "vars": {
+   "--cream": "oklch(0.965 0.018 80)",
+   "--paper": "oklch(0.985 0.01 80)",
+   "--charcoal": "oklch(0.225 0.012 60)",
+   "--ink": "oklch(0.16 0.014 60)",
+   "--clay": "oklch(0.68 0.155 48)",
+   "--clay-deep": "oklch(0.56 0.145 38)",
+   "--clay-soft": "oklch(0.92 0.045 60)",
+   "--foil": "oklch(0.78 0.12 75)",
+   "--rule": "oklch(0.86 0.018 70)",
+   "--background": "var(--cream)",
+   "--foreground": "var(--charcoal)",
+   "--card": "var(--paper)",
+   "--card-foreground": "var(--charcoal)",
+   "--popover": "var(--paper)",
+   "--popover-foreground": "var(--charcoal)",
+   "--primary": "var(--clay)",
+   "--primary-foreground": "oklch(0.99 0.005 80)",
+   "--secondary": "oklch(0.92 0.015 70)",
+   "--secondary-foreground": "var(--charcoal)",
+   "--muted": "oklch(0.93 0.012 70)",
+   "--muted-foreground": "oklch(0.42 0.012 60)",
+   "--accent": "var(--clay-deep)",
+   "--accent-foreground": "oklch(0.99 0.005 80)",
+   "--destructive": "oklch(0.55 0.22 27)",
+   "--destructive-foreground": "oklch(0.99 0 0)",
+   "--border": "var(--rule)",
+   "--input": "oklch(0.88 0.014 70)",
+   "--ring": "var(--clay)"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "var(--charcoal)",
+   "--foreground": "var(--cream)",
+   "--card": "oklch(0.26 0.012 60)",
+   "--card-foreground": "var(--cream)",
+   "--border": "oklch(0.32 0.012 60)"
+  }
+ },
+ "fonts": {
+  "display": "Fraunces",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+ },
+ "radius": "0.5rem",
+ "shadows": [
+  "inset 0 1px 0 oklch(1 0 0 / 0.7),\n    inset 0 -1px 2px oklch(0.5 0.05 50 / 0.18),\n    0 1px 0 oklch(1 0 0 / 0.4),\n    0 8px 24px -10px oklch(0.3 0.06 40 / 0.25)",
+  "inset 0 1px 0 oklch(1 0 0 / 0.08),\n    inset 0 -1px 0 oklch(0 0 0 / 0.4),\n    0 12px 30px -12px oklch(0 0 0 / 0.5)",
+  "0 1px 0 oklch(1 0 0 / 0.5),\n    0 1px 2px oklch(0 0 0 / 0.04),\n    0 12px 32px -16px oklch(0.3 0.06 40 / 0.22),\n    0 30px 60px -40px oklch(0.3 0.06 40 / 0.28)",
+  "0 0 0 0 oklch(0.78 0.16 75 / 0.45)"
+ ],
+ "keyframes": [
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "rise-in",
+   "css": "@keyframes rise-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "pulse-ring",
+   "css": "@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 oklch(0.78 0.16 75 / 0.45); } 70% { box-shadow: 0 0 0 18px oklch(0.78 0.16 75 / 0); } 100% { box-shadow: 0 0 0 0 oklch(0.78 0.16 75 / 0); } }"
+  }
+ ],
+ "signatures": [
+  "marquee",
+  "noise"
+ ]
+}

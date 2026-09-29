@@ -1,0 +1,32 @@
+[
+  {
+    "name": "M & M Heating & Cooling, LLC",
+    "trade": "hvac",
+    "their": "https://mmheatingandcooling.com/",
+    "ours": "https://wss-test-m-and-m-heating-and-cooling-llc-bridgeport.wss-ai.com/"
+  },
+  {
+    "name": "Summit Heat & Air Tulsa",
+    "trade": "hvac",
+    "their": "https://summitheatandair.com/",
+    "ours": "https://wss-test-summit-heat-and-air-tulsa-tulsa.wss-ai.com/"
+  },
+  {
+    "name": "Holt Plumbing Company",
+    "trade": "plumbing",
+    "their": "https://www.holtplumbing.com/",
+    "ours": "https://wss-test-holt-plumbing-company-nashville.wss-ai.com/"
+  },
+  {
+    "name": "Pioneer Fence Co., Inc",
+    "trade": "fencing",
+    "their": "https://www.pioneerfence.net/",
+    "ours": "https://wss-test-pioneer-fence-co-inc-broken-arrow.wss-ai.com/"
+  },
+  {
+    "name": "Monolith Tattoo Co.",
+    "trade": "tattoo",
+    "their": "https://www.monolithtattoocompany.com/",
+    "ours": "https://wss-test-monolith-tattoo-co-nashville.wss-ai.com/"
+  }
+]

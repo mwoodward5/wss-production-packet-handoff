@@ -1,0 +1,307 @@
+{
+  "project_name": "Straight Line Fencing of Louisiana",
+  "vertical": "Fence Contracting & Perimeter Construction",
+  "classification": "Single-page",
+  "routes": [
+    {
+      "path": "/",
+      "type": "landing_page",
+      "sections": [
+        "hero",
+        "intro_approach",
+        "services",
+        "craft_philosophy",
+        "work_gallery",
+        "process",
+        "service_area",
+        "estimate_quote",
+        "faq",
+        "footer"
+      ]
+    }
+  ],
+  "design_tokens": {
+    "fonts": {
+      "display_serif": "Fraunces, ui-serif, Georgia, serif",
+      "body_sans": "Inter Tight Variable, Inter Tight, ui-sans-serif, system-ui, sans-serif"
+    },
+    "colors_light": {
+      "background": "oklch(0.985 0.006 80)",
+      "surface": "oklch(0.96 0.008 80)",
+      "foreground": "oklch(0.18 0.010 60)",
+      "primary_brass": "oklch(0.52 0.115 55)",
+      "brass_deep": "oklch(0.42 0.115 50)",
+      "hairline": "oklch(0.18 0.010 60 / 0.22)"
+    },
+    "colors_dark": {
+      "background": "oklch(0.10 0.008 60)",
+      "surface": "oklch(0.14 0.008 60)",
+      "foreground": "oklch(0.94 0.012 80)",
+      "primary_brass": "oklch(0.78 0.10 75)",
+      "hairline": "oklch(0.94 0.012 80 / 0.22)"
+    },
+    "hero_isolated": {
+      "background": "oklch(0.10 0.010 60)",
+      "foreground": "oklch(0.96 0.012 80)",
+      "brass": "oklch(0.78 0.10 75)"
+    },
+    "radii": {
+      "base": "0.25rem",
+      "cards": "0px",
+      "badges": "999px"
+    }
+  },
+  "hero_contract": {
+    "dimensions": "100svh full width",
+    "media_type": "video_or_image",
+    "media_filters": "brightness(0.78) contrast(1.08) saturate(1.05)",
+    "zoom_animation": "slow-zoom 22s ease-out forwards",
+    "parallax_behavior": "mouse spring (stiffness: 40, damping: 18) + scroll transform",
+    "scrim_stack": [
+      "linear-gradient(180deg, oklch(0.08 0.01 60 / 0.55) 0%, oklch(0.08 0.01 60 / 0.20) 35%, oklch(0.08 0.01 60 / 0.45) 70%, oklch(0.06 0.01 60 / 0.92) 100%)",
+      "radial-gradient(80% 60% at 18% 60%, oklch(0.06 0.01 60 / 0.55) 0%, transparent 60%)",
+      "radial-gradient(120% 80% at 50% 30%, transparent 0%, oklch(0.08 0.01 60 / 0.25) 60%, oklch(0.06 0.01 60 / 0.88) 100%)"
+    ],
+    "headline_formula": "Fences built straight, [italic white emphasis], and made for [Location] yards.",
+    "cta_primary": {
+      "label": "Request Estimate",
+      "action": "tel:+1[PHONE]"
+    },
+    "cta_secondary": {
+      "label": "Send Project Details",
+      "action": "#quote"
+    }
+  },
+  "media_slots": [
+    {
+      "id": "HERO_MEDIA",
+      "section": "hero",
+      "aspect": "16:9",
+      "role": "hero",
+      "behavior": "slow_zoom_parallax"
+    },
+    {
+      "id": "LOGO_MARK",
+      "section": "global",
+      "aspect": "1:1",
+      "role": "identity",
+      "behavior": "brass_medallion"
+    },
+    {
+      "id": "SERVICE_01",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_02",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_03",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_04",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_05",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "SERVICE_06",
+      "section": "services",
+      "aspect": "4:3",
+      "role": "service",
+      "behavior": "hover_zoom"
+    },
+    {
+      "id": "CRAFT_SPECIMEN",
+      "section": "craft",
+      "aspect": "4:5",
+      "role": "craftsmanship",
+      "behavior": "corner_framed"
+    },
+    {
+      "id": "GALLERY_01_TO_10",
+      "section": "gallery",
+      "aspect": "mixed_4:3_and_3:4",
+      "role": "portfolio",
+      "behavior": "lightbox_modal"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business_name",
+      "selector": ".brand-name"
+    },
+    {
+      "key": "phone_raw",
+      "selector": "a[href^='tel:']"
+    },
+    {
+      "key": "email_raw",
+      "selector": "a[href^='mailto:']"
+    },
+    {
+      "key": "city_state_zip",
+      "selector": ".geo-nap"
+    },
+    {
+      "key": "opening_hours",
+      "selector": ".hours-block"
+    },
+    {
+      "key": "services_items",
+      "selector": "services[]",
+      "count": 6
+    },
+    {
+      "key": "gallery_items",
+      "selector": "gallery[]",
+      "count": 10
+    },
+    {
+      "key": "process_steps",
+      "selector": "process[]",
+      "count": 4
+    },
+    {
+      "key": "faq_items",
+      "selector": "faqs[]",
+      "count": 5
+    },
+    {
+      "key": "service_cities",
+      "selector": "places[]",
+      "count": 11
+    }
+  ],
+  "trust_slots": [
+    {
+      "location": "hero_chips",
+      "type": "floating_pills",
+      "count": 4
+    },
+    {
+      "location": "intro_stats",
+      "type": "stat_grid",
+      "count": 4
+    },
+    {
+      "location": "quote_guarantee",
+      "type": "sub_form_microcopy",
+      "count": 1
+    }
+  ],
+  "schema_slots": [
+    "FenceContractor",
+    "PostalAddress",
+    "GeoCoordinates",
+    "OpeningHoursSpecification",
+    "OfferCatalog",
+    "FAQPage"
+  ],
+  "geo_aeo_slots": [
+    {
+      "slot": "hero_bottom_bar",
+      "target_intent": "location_hours"
+    },
+    {
+      "slot": "approach_manifesto",
+      "target_intent": "methodology_quality"
+    },
+    {
+      "slot": "service_area_ticker",
+      "target_intent": "service_territory"
+    },
+    {
+      "slot": "faq_accordion",
+      "target_intent": "repair_and_estimate_policies"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "slot": "hero_eyebrow",
+      "pattern": "[State/City] Fence Contractor"
+    },
+    {
+      "slot": "faq_02",
+      "pattern": "Can I get an estimate first?"
+    },
+    {
+      "slot": "faq_04",
+      "pattern": "Do you repair leaning posts or damaged sections?"
+    }
+  ],
+  "map_location_slot": {
+    "section": "service_area",
+    "treatment": "kinetic_marquee_and_outbound_links",
+    "external_providers": [
+      "google_maps",
+      "apple_maps",
+      "facebook"
+    ]
+  },
+  "content_density": {
+    "hero": "minimal_high_gravity",
+    "services": "structured_grid_strict_6",
+    "craft": "editorial_spacious",
+    "gallery": "visual_dense_10",
+    "process": "sequential_4",
+    "quote": "functional_high_density",
+    "faq": "accordion_5"
+  },
+  "mobile_rules": {
+    "cursor": "disabled_coarse",
+    "hero_h1_clamp": "clamp(2.6rem, 7.8vw, 7.8rem)",
+    "service_grid": "single_column_below_768px",
+    "stats_grid": "2x2_below_768px",
+    "form_touch_target": "minimum_48px"
+  },
+  "non_negotiables": [
+    "Retain Fraunces serif on all headings and numbers",
+    "Preserve hero multi-stop scrim overlay matrix",
+    "Maintain minimal bottom-border underline form inputs",
+    "Retain oklch metallic bronze and warm parchment palette",
+    "Keep circular brass-rimmed logo medallion treatment",
+    "Preserve Lenis smooth scrolling and custom cursor interactions"
+  ],
+  "safe_replacements": [
+    "business_name",
+    "logo_mark_image",
+    "hero_background_media",
+    "phone_and_email",
+    "operating_hours",
+    "service_titles_and_descriptions",
+    "service_photographs",
+    "portfolio_gallery_photographs",
+    "process_copy",
+    "faq_questions_and_answers",
+    "service_area_city_list"
+  ],
+  "lovable_classification": "Luxury Trade Craftsman / Local Contractor",
+  "classification_basis": "1 distinct documented routes; WSS scope label only",
+  "project_id": "4f780298-cc58-477f-a3d3-142255e01c9c",
+  "project_url": "https://lovable.dev/projects/4f780298-cc58-477f-a3d3-142255e01c9c",
+  "source_plan_file": "42-crimson-canvas-lovable-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

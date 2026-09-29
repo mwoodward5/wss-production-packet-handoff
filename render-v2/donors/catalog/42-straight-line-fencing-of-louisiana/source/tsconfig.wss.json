@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/main.tsx", "src/wss/**/*.ts", "src/wss/**/*.tsx", "src/wss/**/*.cts", "vite.wss.config.ts"],
+  "compilerOptions": { "noUncheckedSideEffectImports": false }
+}

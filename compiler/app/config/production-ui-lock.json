@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "canonical_repository": "https://github.com/mwoodward5/wss-intake-compiler-siteforge.git",
+  "canonical_branch": "main",
+  "public_aliases": [
+    "siteforge-app-seven.vercel.app"
+  ],
+  "files": {
+    "app/views/page-home-prompt.mjs": "259e2d2a4ac3efb9c18d703f4c66bc6ae66c451ad2f2a4f4add4eb9640308769",
+    "app/views/pages-templates.mjs": "b805281b5b876e431e376016cebb5f5a9b607952aaba861385e77886b32a3798",
+    "app/views/layout.mjs": "095bc96d93d270462eb026b63f2255f7daa29d1d8c6938403af48fcc1ac90b9f",
+    "app/public/molten-theme.css": "d3dbb5bac9d2d67285f7c8043956aaaa3db8311afa0af57979b9177da8443721"
+  }
+}

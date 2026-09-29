@@ -1,0 +1,17 @@
+# {{BUSINESS_NAME}}
+
+Medical aesthetics and skin care in {{CITY}}, {{STATE}}.
+[[NEED:PHONE]]
+Phone: {{PHONE}}[[/NEED]]
+Area: {{CITY}}, {{STATE}}
+
+## Services
+- Wrinkle Relaxers: Injectable treatments that soften the look of expression lines. Individual results vary.
+- Dermal Fillers: Restore volume and contour with clinician-administered fillers.
+- Laser Treatments: Laser-based options for skin tone, texture, and rejuvenation.
+- Facials & Skin Care: Medical-grade facials and personalized skin-care plans.
+- Chemical Peels: Professional peels to refresh and resurface the skin.
+- Consultations: One-on-one assessments to build a plan that fits your goals.
+
+## Notes
+No price is quoted online. Treatments follow a consultation; results vary by individual.

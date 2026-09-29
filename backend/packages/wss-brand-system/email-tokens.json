@@ -1,0 +1,12 @@
+{
+  "background": "#F7F7FA",
+  "panel": "#FFFFFF",
+  "ink": "#16151B",
+  "muted": "#5F5E68",
+  "line": "rgba(22,21,27,.10)",
+  "accent": "#4A6CF7",
+  "accentAlt": "#8B5CF6",
+  "success": "#0E6B52",
+  "danger": "#C94C4C",
+  "footer": "Woodward Software Labs"
+}

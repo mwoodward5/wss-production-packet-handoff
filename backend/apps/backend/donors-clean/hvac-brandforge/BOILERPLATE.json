@@ -1,0 +1,281 @@
+{
+  "name": "hvac-brandforge",
+  "vertical": "hvac",
+  "hero_wash": {
+    "selector": "main > section:first-of-type",
+    "background": "#070D10",
+    "text_color": "#FBFAF8",
+    "pages_verified": [],
+    "verified": "Render-proven 2026-08-13 on a themed local serve: the selector MATCHES this single-page donor's hero (first <section> under <main>) and the engine wash applies (worst-case contrast 4.52 against the themed slab), but the hero is a full-bleed IMG (hero-hvac) that covers the wash, so pages_verified is empty by honesty: no page paints the wash visibly. The client's photo now fills that hero IMG as a photo_slot; the wash is the behind-the-image fallback and drives the mobile fold."
+  },
+  "hero_wash_note": "ON 2026-08-13 for the mobile fold and fallback. NOTE: this is the RETIRED incumbent (hvac-premier is the live HVAC donor) and its single hero is an IMG, so the wash never paints over that image. The real client-photo mechanism here is the hero-hvac photo_slot. background and text_color are the raw dark hero sample; the shipped scrim comes from the theme pass.",
+  "label": "Brandforge",
+  "wordmarkFill": "#0C2A3A",
+  "source": "site-forge-lane/donors/brand-forge-express — a forge template authored for the HVAC vertical, not scraped from a real contractor. Registered in that lane's registry.json and indexed as vertical hvac in repo-vertical-index.json.",
+  "sanitised": "2026-08-06",
+  "stack": "Vite 5 + React 18 + TypeScript (single-page SPA, anchor-nav sections, GSAP motion, no router)",
+  "donor_business_name": "Mission Mechanical",
+  "donor_phone": "(555) 000-0000",
+  "donor_email": "hello@example.com",
+  "donor_city": "",
+  "donor_county": "",
+  "donor_domain": "",
+  "persons": [
+    "mission-mechanical",
+    "mission-gallery"
+  ],
+  "fabricated_persons": [],
+  "socials": [],
+  "zips": [],
+  "geo": [],
+  "account_ids": [
+    "+1-555-000-0000",
+    "5550000000"
+  ],
+  "consumes_content": false,
+  "renders": [],
+  "renders_note": "Fixed template copy throughout; it does not consume the engine's content-inject islands. Every business-specific string is a token, and every token that can be unverified collapses its own UI (see tokens_note). The service set is the vertical's standard six — furnace repair/installation, AC repair/installation, vent and ductwork service, seasonal maintenance — stated as what the trade does, not as claims about a specific contractor.",
+  "photo_slots": [
+    "assets/hero-hvac-BowSuqa2.jpg",
+    "assets/gallery-1-BET9dtxe.jpg",
+    "assets/gallery-2-BlAOPCIA.jpg",
+    "assets/gallery-3-B-E9grDe.jpg",
+    "assets/gallery-4-B1XyB92d.jpg"
+  ],
+  "photo_slots_note": "FOUR gallery slots. The hero is deliberately NOT a client-photo slot (owner directive 2026-08-06): the hero is the wow-factor piece that hooks the prospect, and a client job-site snapshot — a van in a lot, a basement furnace — is the opposite of that. Their real photography belongs in the gallery, and as low-opacity section backgrounds. The hero renders assets/hero-video.mp4 when a cinematic clip ships with the donor and falls back to the still poster otherwise. Slots are .jpg because engine.js places a client photo only when it can match or transcode to the slot extension, and Vercel serves content-type by extension.",
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-hvac.mp4",
+    "wss_fallback_clip_path": "assets/hero-video.mp4",
+    "poster": "assets/hero-hvac-BowSuqa2.jpg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (operations drop-in at the path the hero layer always named; ships with no code change the day the bytes land)",
+      "the still poster photograph (the hero img branch and the video poster attribute are the same file; the component swaps to the still when it cannot play a clip)",
+      "the drawn hero composition (grain and gradient layers under everything)"
+    ],
+    "note": "Owner's order, 2026-08-16: a source site with a hero video ships that video. The hero layer used to point at assets/hero-video.mp4 through a static src on a file this donor does not ship — a guaranteed 404 request on every page load, papered over by an onError flip to the still. The ladder graft removes the static src and the onError (one failed rung must not strand the ladder) and arms rungs only when their bytes shipped: an error steps down silently, reduced motion never arms the video rungs (the component's own guard decides whether the video mounts at all), and an empty ladder leaves the poster photograph as the honest hero. The engine writes an approved clip to client_video_path (mp4 only — the slot extension is binding); never a borrowed or fabricated clip. This contract replaces the earlier no_hero_video stance."
+  },
+  "spa_routes": [],
+  "spa_routes_note": "No client-side router. One document; sections are #id anchors (#top, #services, #estimate, #process, #gallery, #area, #map, #faq). Every nav and footer link resolves to an id rendered in the same document, so no route structure can produce a dead link.",
+  "prerendered_routes": [
+    "/"
+  ],
+  "prerendered_note": "Plain client-rendered SPA — index.html ships an empty #root plus a full <head> (title/description/OG/Twitter) with tokens already hydrated, so a crawler that does not execute JS still reads a truthful head. Page copy requires JS to paint.",
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [],
+    "catchAll": "* -> 404 page"
+  },
+  "classification": {
+    "verticalFamilies": [
+      "home-services",
+      "trades"
+    ],
+    "conversionArchetypes": [
+      "request-estimate",
+      "emergency-call"
+    ],
+    "shape": "cinematic-onepager",
+    "routeDepth": "flat",
+    "photoDemand": "medium"
+  },
+  "classification_note": "emergency-call: the vertical's real urgency (no-heat, no-cool) is served by a sticky MobileCallBar and header/hero call CTAs — all of which collapse entirely when the business has no verified phone. request-estimate: a 5-step qualifier (issue, system type, urgency, home size, contact) is the primary conversion path and works with or without a phone; the donor's lead-form anchor is #estimate.",
+  "lead_endpoint": {
+    "url": "https://ghost.wss-ai.com/api/quote-request",
+    "payload": [
+      "slug",
+      "name",
+      "phone",
+      "email",
+      "service",
+      "message",
+      "page_url",
+      "website"
+    ],
+    "slug_source": "window.location.hostname.split('.')[0]",
+    "honeypot": "website",
+    "note": "Wired during the port. The source shipped src/lib/leads.functions.ts as a stub that console.logged the payload, slept 600ms and returned {ok:true} — the widget then showed 'We received your request and will call you back', so every lead on every HVAC mirror would have been silently discarded behind a success screen. It now posts to the shared ghost endpoint and THROWS on a non-2xx so the widget shows its error path instead of a false confirmation. The five qualifier answers are folded into `message` so none of that intel is lost."
+  },
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "EMAIL",
+    "CITY",
+    "STATE",
+    "COUNTY",
+    "REGION",
+    "PLACE_ID",
+    "PROFILE_URL",
+    "SITE_URL",
+    "LOGO_URL",
+    "HERO_HEADLINE",
+    "HERO_LINE_B"
+  ],
+  "tokens_note": "Collapse is implemented two ways, because this donor's markup lives in a minified bundle rather than HTML. (1) JS-side: src/data/tokens.ts reads each token through a Record lookup (so the bundler cannot constant-fold the placeholder before the engine substitutes it) and treats a value still starting with a single bracket or a double brace as ABSENT. Blank PHONE removes the header CTA, hero CTA, footer line, sticky mobile call bar, final-CTA button, the widget's 'need help right now' line and its post-submit call button, and rewrites two FAQ answers to point at the form instead. Blank EMAIL removes the footer mail line. Blank LOGO_URL renders the business name as a wordmark rather than a broken image. Blank PROFILE_URL removes both Google links and the schema sameAs. Blank PLACE_ID removes the 'leave a review' link; a missing city collapses the whole map section. (2) Prose-side: COUNTY appears inside seven sentences and is guarded by [[NEED:COUNTY]] … [[/NEED]] spans, so a business with no verified county reads 'serving Nashville' rather than 'serving Nashville and the surrounding  area'. data-collapse-if-empty is NOT used — hydrate.js applies that attribute to HTML, and there is no HTML here to attach it to.",
+  "truth_law_removals": [
+    "Hardcoded fake NAP: '+1-555-000-0000' / '(555) 000-0000' in nine places and 'hello@example.com' in three, including the HVACBusiness JSON-LD. A mirror inherits its client's real phone or none at all, so both became collapsing tokens and the schema now omits telephone/email entirely when unverified rather than publishing a placeholder.",
+    "[AREA_2] through [AREA_8]: seven invented neighbouring towns, rendered as a chip grid, repeated in the 'what areas do you serve' FAQ answer, and published in schema.org areaServed. The engine verifies exactly ONE service-area city, so the list collapses to that city, the chip grid hides itself rather than show a lone orphan chip, and areaServed carries one entry.",
+    "[BUSINESS_TAGLINE]: no verified source for a tagline; removed from the logo alt text.",
+    "Dead endpoints: five '#DISABLED_DONOR_ENDPOINT' anchors — 'Find us on Google', 'Leave a Google review', 'Open in Google Maps' and the map iframe src. Now driven by PROFILE_URL / PLACE_ID and a keyless maps.google.com embed built from the verified name + city + state; the whole map section returns null when there is nothing verified to point at. The keyless embed form is used deliberately because the keyed Embed API renders a grey auth error without a browser key this lane does not ship.",
+    "Third-party asset names: mission-mechanical-logo.png and mission-gallery-1..4.jpg named a real business (Mission Mechanical). The logo import was removed outright and the gallery files renamed; the compiled bundle carries no trace of the name."
+  ],
+  "notes": "Ported from a forge-authored template rather than a scraped site, which is why the only identity residue was in filenames. Visual DNA preserved end to end: same Tailwind CSS-var theme, Inter type, GSAP reveal/split-heading motion system, and the full section order (Hero, Trust, Services, EstimateWidget, Process, Gallery, ServiceArea, ServiceMap, FAQ, FinalCTA, Footer, MobileCallBar). Built with npx vite build after npx tsc --noEmit passed clean; installed by converting single-bracket tokens to the double-brace convention on the compiled output, never on the .tsx source, because a bare double-brace token in a JSX text position is a parse error.",
+  "registered_on": "2026-08-06",
+  "installed_at": "apps/backend/donors-clean/hvac-brandforge",
+  "alias_verticals": [
+    "heating",
+    "cooling",
+    "air conditioning",
+    "ac repair",
+    "heating and air",
+    "heating & cooling",
+    "heating and cooling",
+    "furnace",
+    "heat pump",
+    "hvac contractor",
+    "air conditioning contractor",
+    "heating contractor"
+  ],
+  "alias_note": "Applied by lib/donor-verticals.js from data/donor-verticals.json. The engine resolves ONLY the exact \"vertical\" value above, which must match the render-gate.js VERTICALS key \"hvac\" (schema HVACBusiness) exactly.",
+  "identity_atoms_note": "This donor ships no real business identity — it was forged from a written spec, not scraped. The atoms declared here are (a) Mission Mechanical, the real business whose name survived in the SOURCE asset filenames before this port removed it, and (b) the placeholder NAP the source hardcoded. Neither appears in the installed bytes today; they are declared so the identity scan has real needles to hunt and can never return clean:true for arbitrary bytes, and so a future rebuild that reintroduces either is blocked rather than shipped.",
+  "retired_for_outreach": true,
+  "retired_on": "2026-08-06",
+  "retired_reason": "Superseded by hvac-premier (owner decision 2026-08-06). Not a contamination retirement: this donor is clean and still builds. It is closed to outreach so \"hvac\" resolves to one donor rather than whichever name sorts first in donors-clean. hvac-premier wins on every axis a prospect sees — eleven pages vs one, real imagery vs the flat gradient placeholders this donor shipped, an interactive comfort dial, and a three-family type system. To roll back, delete these three fields.",
+  "hero_headline_2026_08_11": "The hero read \"Warm in January. Cool in July. Handled.\" with \"Handled.\" as the accent word — the donor's copy, identical on every mirror. text is HERO_HEADLINE and accent is HERO_LINE_B, which is a substring of it by construction so the accent still highlights.",
+  "lineage": "brandforge",
+  "requiredTokens": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "LICENSE",
+    "PROFILE_URL",
+    "LOGO_URL"
+  ],
+  "fictionalIdentity": {
+    "businessName": "Northvane Heating & Air",
+    "owner": "Priya Nandal",
+    "phones": [
+      "+19065550121",
+      "906-555-0121",
+      "(906) 555-0121",
+      "906.555.0121"
+    ],
+    "emails": [
+      "service@northvaneair.com",
+      "dispatch@northvaneair.com",
+      "nandal@northvaneair.com"
+    ],
+    "domain": "northvaneair.com",
+    "city": "Marquette",
+    "region": "MI",
+    "county": "Marquette County",
+    "postal": "49855",
+    "geo": "46.5436;-87.3954",
+    "license": "MI-MEC-71204",
+    "profileUrl": "https://maps.example.com/place/northvane-heating-air",
+    "logoUrl": "assets/logo-fallback.svg"
+  },
+  "paletteDefaults": {
+    "accent": "#1f7a8c",
+    "accentInk": "#155c6b",
+    "accentText": "#ffffff",
+    "surface": "#ffffff",
+    "surfaceAlt": "#eef4f5",
+    "slab": "#0f1d21",
+    "slabInk": "#eff7f8",
+    "text": "#101a1d",
+    "border": "#d3e0e3"
+  },
+  "variants": {
+    "hero": [
+      "hero/video",
+      "hero/split-right",
+      "hero/editorial-slab"
+    ],
+    "services": [
+      "services/bento",
+      "services/three-column-cards",
+      "services/list-rail"
+    ],
+    "gallery": [
+      "gallery/masonry-grid",
+      "gallery/before-after-pairs",
+      "gallery/wide-filmstrip"
+    ],
+    "testimonials": [
+      "testimonials/cards",
+      "testimonials/single-pullquote",
+      "testimonials/logo-and-quote-split"
+    ],
+    "process": [
+      "process/numeral-rail",
+      "process/vertical-timeline",
+      "process/two-up-steps"
+    ],
+    "faq": [
+      "faq/accordion",
+      "faq/two-column",
+      "faq/inline-list"
+    ],
+    "cta": [
+      "cta/panel",
+      "cta/full-bleed-slab",
+      "cta/split-form-and-call"
+    ],
+    "ticker": [
+      "ticker/marquee",
+      "ticker/static-chip-row",
+      "ticker/none"
+    ]
+  },
+  "heroVideo": {
+    "slot": "main > section.hero video[data-desktop-autoplay]",
+    "poster": "assets/hero-poster.svg",
+    "note": "Video variant is default when the engine has a clip; poster hero serves otherwise."
+  },
+  "engineInjectionPoint": "ENGINE INJECTION POINT comment immediately before <footer>",
+  "identity": {
+    "atoms": {
+      "names": [
+        "Mission Mechanical"
+      ],
+      "people": [
+        "mission-mechanical",
+        "mission-gallery"
+      ],
+      "phones": [
+        "+15550000000",
+        "5550000000",
+        "555-000-0000",
+        "(555) 000-0000",
+        "555.000.0000"
+      ],
+      "emails": [
+        "hello@example.com"
+      ],
+      "domains": [],
+      "cities": [],
+      "regions": [],
+      "counties": [],
+      "zips": [],
+      "geo": [],
+      "license": [],
+      "account_ids": [
+        "+1-555-000-0000",
+        "5550000000"
+      ]
+    },
+    "note": "Donor-side identity atoms, declared so lib/mirror-engine/scan.js identityScan() builds a non-empty atom list. Never shipped: hydrate.js drops BOILERPLATE.json from the output tree."
+  }
+}

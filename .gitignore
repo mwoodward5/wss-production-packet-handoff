@@ -1,0 +1,14 @@
+**/node_modules/
+**/.env
+**/.env.*
+**/.secrets/
+**/.cache/
+**/.vercel/
+**/test-results/
+**/playwright-report/
+**/__pycache__/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+compiler/factory/proof/

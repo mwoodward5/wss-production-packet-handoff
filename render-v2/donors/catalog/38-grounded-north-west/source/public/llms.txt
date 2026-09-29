@@ -1,0 +1,21 @@
+# Grounded North West
+
+> Licensed-mindset residential electrical contractor serving Bothell, WA and the greater Seattle region (Snohomish, King, Skagit, Island counties).
+
+Contact: (503) 890-5523 — groundednw@gmail.com
+
+## Pages
+- [Home](/): Residential electrical contractor overview and service summary.
+- [Services](/services): Full list of residential electrical services offered.
+- [New Construction & Custom Home Wiring](/residential-electrician-bothell-wa): Full new construction, additions, ADUs and custom home electrical.
+- [Panel & Service Upgrades](/panel-upgrades-electrical-troubleshooting): Service replacements, panel changes, meter upgrades, mast work.
+- [EV Charger Installation Bothell WA](/ev-charger-installation-bothell-wa): Level 1 and Level 2 EV charger installation for Tesla, BMW, ChargePoint, Eaton, Wallbox, Rivian, Generac.
+- [Whole Home Generator Installation Bothell WA](/whole-home-generator-installation-bothell-wa): Generac Authorized Dealer and Service Dealer — standby generator sales, installation, maintenance, warranty repair, automatic transfer switch installation.
+- [Indoor & Outdoor Lighting Upgrades](/custom-lighting-design-installation): Recessed, accent, kitchen, exterior, landscape and security lighting.
+- [Troubleshooting & Repairs](/troubleshooting-repairs): Tripping breakers, dead outlets, flickering lights, warm devices.
+- [Full Home Re-Wires](/full-home-rewires-knob-tube-aluminum): Knob & tube and aluminum wiring remediation.
+- [Custom Electrical Solutions](/custom-electrical-solutions): Sub-panels, outbuildings, RV pedestals, hot tubs and shop power.
+- [Projects](/projects): Recent residential jobsite photos.
+- [Service Area](/service-area): Counties and cities served across greater Seattle.
+- [FAQ](/faq): Common questions about residential electrical service.
+- [Contact](/contact): Phone, email and review links.

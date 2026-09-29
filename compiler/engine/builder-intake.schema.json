@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://woodwardsoftwarelabs.com/schemas/bespoke-site-builder-intake.json",
+  "title": "Bespoke Site Builder Intake",
+  "type": "object",
+  "required": ["businessName", "category", "city", "state", "buildType"],
+  "properties": {
+    "businessName": { "type": "string" },
+    "category": { "type": "string" },
+    "city": { "type": "string" },
+    "state": { "type": "string" },
+    "currentWebsite": { "type": "string" },
+    "googleBusinessProfileUrl": { "type": "string" },
+    "phone": { "type": "string" },
+    "sourcePlatform": {
+      "type": "string",
+      "enum": ["unknown", "wix", "wordpress", "squarespace", "shopify", "custom", "no_website"]
+    },
+    "buildType": {
+      "type": "string",
+      "enum": ["single_page_cinematic", "premier_multi_page", "service_landing_page", "offer_page"]
+    },
+    "offer": { "type": "string" },
+    "serviceAreas": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "toggles": {
+      "type": "object",
+      "properties": {
+        "firecrawl": { "type": "boolean" },
+        "googleBusinessProfile": { "type": "boolean" },
+        "localSerp": { "type": "boolean" },
+        "videoGeneration": { "type": "boolean" },
+        "mapEmbed": { "type": "boolean" },
+        "aiChat": { "type": "boolean" },
+        "voiceNarration": { "type": "boolean" },
+        "paymentCta": { "type": "boolean" }
+      }
+    },
+    "prompt": { "type": "string" },
+    "operatorNotes": { "type": "string" }
+  }
+}
+

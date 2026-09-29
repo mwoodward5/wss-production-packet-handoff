@@ -1,0 +1,146 @@
+{
+  "name": "realestate-waterline",
+  "vertical": "real estate agent",
+  "hero_wash": {
+    "selector": "section#top",
+    "background": "#192234",
+    "text_color": "#F9F8F6",
+    "pages_verified": ["/"],
+    "verified": "Render-proven 2026-08-20 on a local Chromium serve (scratch-realestate/prove-realestate-donor.cjs): section#top is the hero and its first painted child is the design's own full-bleed hero IMG. 2026-09-02 static rebuild: the hero is now a full-bleed video/poster hero on the same section#top selector, static and visible with zero JS; the copy column sits left (the poster's waterfront subject sits right-of-center and keeps its center-safe zone clear) on the donor's own scrim floor — stacked black gradients holding >=0.62 combined alpha under the copy, which keeps #fff-family hero ink above 4.5:1 on the raw poster and on any video frame, independent of the client palette. The recorded colours are the RAW donor hero sample (deep charcoal hsl 220 15 15 behind warm ivory display type); the shipped scrim comes from the theme pass when it applies. What declaring the selector buys is a MEASURABLE hero: heroWash and mobile_fold never report donor_hero_unmeasured."
+  },
+  "hero_wash_note": "background and text_color are the raw dark hero sample from the source design system (hsl 220 15% 15% charcoal slab, hsl 40 20% 97% ivory ink); the shipped scrim comes from the theme pass.",
+  "label": "Waterline — cinematic luxury real-estate one-pager: full-screen media hero with gold editorial type, credibility strip, editorial about, three persona panels, horizontal lifestyle reel, collections mosaic, process, island-only testimonials, FAQ accordion, private-consultation CTA band and contact rails",
+  "wordmarkFill": "#F9F8F6",
+  "source": "Owner's Lovable workspace, project wss-donor-realestate-waterline (id 1546dbe3-d7dc-4e96-82b9-66c7fa1a854e, commit 665ada03) — a luxury real-estate agent one-pager. Source was read file-by-file over the Lovable MCP (no remix, no credits) and rebuilt as a client SPA with the scratch-concrete/plumbing-verbatim recipe; every business fact, platform claim, fabricated metric and Miami/South-Florida geography was excised or tokenized at source before the first compile. The six generated photographs were captured byte-exact from the project's built preview (no EXIF present) and renamed so no geography rides a filename.",
+  "sanitised": "2026-08-20",
+  "stack": "Static A+ rebuild (2026-09-02): one hand-authored index.html (real header/main/footer markup, no framework, no CDN, no external requests) + one hand-authored stylesheet at assets/realestate-waterline.css. Progressive enhancement only — the first inline script adds .js to <html> before first paint, and every sizzle layer (scroll reveals, count-up stats, scroll-progress rule, glass chips' backdrop, CTA light-sweep, hero video arming) is inert without JS or under prefers-reduced-motion (the stylesheet pins html:not(.js) .reveal-up/.reveal-scale/.reveal-clip fully visible). The compiled Vite/React bundle assets/index-CFSL4NkR.js is retained UNLOADED: it is the ladder-donor contract artifact (the marked hidden+poster hero video mount the library's hero-video-fallback gate reads) and the compiled evidence for the identity scan; the static page never references it. The former SPA stylesheet (index-BNpdxCaf.css) was removed when this rebuild replaced it.",
+  "donor_business_name": "JRE Realty",
+  "donor_phone": "(305) 555-0100",
+  "donor_email": "hello@jrerealty.com",
+  "donor_city": "Miami",
+  "donor_county": "Miami-Dade County",
+  "donor_domain": "jrerealty.com",
+  "persons": ["Chad Carroll"],
+  "persons_note": "The source brief named a real luxury agent's site as stylistic inspiration; the name never appears in shipped bytes, but it is declared so any resurrection is blocked, and person atoms are never excused by the client-place carve-out.",
+  "fabricated_persons": ["J. & M. Hartwell", "R. Castellano", "The Beaumont Family"],
+  "fabricated_persons_note": "The source design shipped three template testimonials under these invented names. The testimonials section now renders ONLY verified island reviews (see renders_note); these names were excised at source and are recorded here because person names have leaked through every gate before — QC PASS is never proof.",
+  "socials": ["prestigemiami.com", "Renobeast", "Renocarmen", "Coconut Grove", "Brickell", "Key Biscayne", "Fisher Island", "Coral Gables", "Miami Beach", "South Florida", "Bay Harbor Islands", "Indian Creek", "North Bay Road", "Star Island"],
+  "socials_note": "Generic list atoms, two kinds: (1) the source project's third-party platform references (Renobeast, Renocarmen) and its fabricated canonical host — hard identity, never excusable; (2) the source's Miami-area neighborhood claims. The place-like entries ride this bucket deliberately: scan.js treats socials as CLIENT_SHAREABLE_PLACE_BUCKETS, so a real Miami-area prospect whose own verified places include one of these names is excused by BF-5, while any donor-copy resurrection on a non-Miami build is blocked.",
+  "zips": [],
+  "geo": [],
+  "account_ids": [
+    "+13055550100",
+    "3055550100",
+    "305-555-0100",
+    "jrerealty",
+    "prestigemiami",
+    "www.prestigemiami.com",
+    "thechadcarrollgroup"
+  ],
+  "consumes_content": false,
+  "renders": [],
+  "renders_note": "Since the 2026-09-02 static rebuild the page renders only trade-generic marketing frames (collections mosaic, personas, reel, process) tokenized to the client's facts. The former window.__WSS_CONTENT__ bridge lived in the compiled SPA and left with the SPA page; the engine's shared content-inject island now provides the verified services, FAQs, reviews, coverage and lead-capture form on every mirror (the electrical-livewire shape), so no donor-local stub can swallow content or leads, and no claimed channel needs an audited native target.",
+  "photo_slots": [
+    "assets/hero-waterfront-ChfRm_1l.jpg",
+    "assets/lifestyle-interior-C6rlevbM.jpg",
+    "assets/luxury-kitchen-CFb1ZAw3.jpg",
+    "assets/skyline-dusk-B6fZhHJy.jpg",
+    "assets/yacht-lifestyle-D1S_YqQ2.jpg",
+    "assets/aerial-estates-Cb2YyTZF.jpg"
+  ],
+  "photo_slots_note": "FLAT ARRAY OF DIST-RELATIVE PATHS — the only shape engine.js reads. Slot 1 is the hero photograph: the full-bleed cinematic hero layer, the hero_video poster AND the buyers persona panel, so a filled slot 1 puts the client's own photograph in all three places at once (the concrete-elconstruction rung-3 pattern). Slots 2-6 are the about editorial image, the interiors frames, the skyline frames, the dock-lifestyle frames and the aerial enclave frames, each reused across sections by the design. All six are Lovable-generated photographs captured from the source project's built preview after a frame-by-frame vet: no people, no brand marks, no EXIF; the skyline and aerial files were RENAMED at source (miami-skyline, aerial-neighborhood) so no geography rides a filename. Slots are .jpg because engine.js places a client photo only when it can match or transcode to the slot extension. Filenames are content-hashed by Vite: REGENERATE THIS ARRAY FROM THE BUILT TREE ON EVERY REBUILD.",
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-realestate.mp4",
+    "wss_fallback_clip_path": "assets/hero-fallback-realestate.mp4",
+    "poster": "assets/hero-waterfront-ChfRm_1l.jpg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (ships in this donor; see note on provenance)",
+      "the still poster photograph (the design's full-bleed hero img and the video poster attribute are the same file; the runtime leaves the poster painted when no rung arms)",
+      "the drawn hero composition (charcoal gradients, gold particles, vignette, grain under everything)"
+    ],
+    "note": "PLACEHOLDER CLIP, the electrical-livewire precedent (owner directive 2026-08-19): the shipped fallback bytes are a copy of the vetted trade-neutral clip already in the library (hvac-brandforge assets/hero-video.mp4 — byte-identical, sha256-verified at install). It stands in until the owner's Google AI Studio (Veo) lane generates a proper waterfront/architectural clip; swapping the bytes at wss_fallback_clip_path IS the deployment, no code change. Since the 2026-09-02 static rebuild the hero markup itself mounts <video data-hero-video muted loop playsinline preload=none hidden> with the poster photograph permanently painted beneath it, so the poster IS the complete hero with zero JS; the ladder runtime in index.html arms rungs only when their bytes shipped, reduced motion never arms the video (guarded in the runtime AND in the poster-first controller), mobile is poster-first with a tap-to-play glass chip, and the clip pauses when the hero scrolls away or the tab hides. The retained (unloaded) compiled bundle carries the same marked mount for the ladder contract."
+  },
+  "spa_routes": [],
+  "spa_routes_note": "One document; sections are #id anchors (#top, #credibility, #collections, #about, #expertise, #process, #reel, #testimonials, #faq, #ready, #contact), every one carrying scroll-margin-block-start. No client routing of any kind since the 2026-09-02 static rebuild — there is no SPA to declare routes for.",
+  "prerendered_routes": [
+    "/"
+  ],
+  "prerendered_note": "Fully static since the 2026-09-02 rebuild — index.html ships the complete page as real header/main/footer markup in source order, so crawlers and no-JS visitors read every word. JS adds sizzle only (reveals, count-ups, scroll progress, hero clip arming), each gated behind the pre-paint .js class and prefers-reduced-motion.",
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [],
+    "catchAll": "* -> 404 page"
+  },
+  "classification": {
+    "verticalFamilies": [
+      "professional-services",
+      "real-estate"
+    ],
+    "conversionArchetypes": [
+      "request-estimate"
+    ],
+    "shape": "cinematic-onepager",
+    "routeDepth": "flat",
+    "photoDemand": "high"
+  },
+  "classification_note": "request-estimate: conversion routes through the private-consultation form (the donor-native lead form posting to the shared WSS lead endpoint) plus tel:/mailto: rails; the hero carries data-cta hero-call (collapses without a verified phone) and hero-quote, the contact section data-cta dock-call and dock-quote. There is no emergency-call archetype — nobody books a listing agent at 2am.",
+  "lead_endpoint": null,
+  "lead_endpoint_note": "No donor-native form since the 2026-09-02 static rebuild (a static form POSTing cross-origin to the API without fetch is fragile UX, and a JS-fetch form is not static-first). Conversion runs through the tel:/mailto: rails plus consultation CTAs aimed at #contact, all token-driven and collapse-guarded. The engine's content-inject lead-capture island (POST /api/quote-request) provides the form path on every mirror, so no stub endpoint could silently swallow leads.",
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "ADDRESS_CITY",
+    "STATE",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "GEO_LAT",
+    "GEO_LNG",
+    "LICENSE",
+    "PROFILE_URL",
+    "LOGO_URL",
+    "RATING",
+    "REVIEW_COUNT",
+    "REVIEW_TEXT",
+    "REVIEW_AUTHOR",
+    "HERO_HEADLINE",
+    "HERO_LINE_A",
+    "HERO_LINE_B",
+    "HERO_LINE_C",
+    "SITE_URL"
+  ],
+  "tokens_note": "Collapse is implemented two ways. (1) Markup-side [[NEED:TOKEN]] / [[NEED:!TOKEN]] phrase markers around every weld of an OPTIONAL token in the static page: blank PHONE removes the header call chip, the drawer call row, the hero call CTA (a Book-a-consultation anchor takes the primary slot), the CTA-band call button, the contact call rail and the footer phone segment, and reroutes the service-area FAQ to the page's contact options; blank EMAIL removes the contact and footer mail rails; blank LOGO_URL renders the BUSINESS_NAME wordmark instead of a broken image; blank PROFILE_URL renders the service-area copy without the profile link; blank LICENSE removes the hero license chip, the about credentials card, the contact credentials rail and the footer license line (the licensing FAQ falls back to 'details provided in writing'); blank OWNER_NAME swaps the about sentence to the business-led reading; blank DOMAIN drops canonical/og:url/og:image/twitter:image and the footer domain segment; blank GEO drops the geo.position meta (data-collapse-if-empty) and the JSON-LD geo node. The testimonial section rides data-collapse-if-empty=REVIEW_TEXT (island-only truth law: with no verified quote the whole section collapses AND its header/drawer/footer Reviews links collapse with it via NEED guards), and RATING/REVIEW_COUNT chips and count-ups exist only when the pair is verified. The static h1 is HERO_HEADLINE — the engine-composed client headline, never a baked donor sentence. Dialable links are href=tel:{{PHONE_DIGITS}} everywhere (the hydrator normalizes them), so a phone-less build carries no dangling tel: href and no bare '+1' literal. (2) robots.txt SITE_URL rides a NEED phrase marker. The retained (unloaded) compiled bundle keeps its own facts-Record collapse behavior unchanged — its STATE and HERO_LINE_A/B/C literals are why those tokens stay listed above.",
+  "truth_law_removals": [
+    "Full identity of the source concept: 'JRE Realty' brand (nav wordmark, preloader, footer, copyright), 'Prestige Miami Luxury Real Estate' schema/OG identity, phone +1 (305) 555-0100 and email hello@jrerealty.com, canonical www.prestigemiami.com, and both brand logo images (logo.png, logo-gold.png — the rotating hero/footer watermarks and the preloader mark). Header, footer, preloader and watermarks now render the LOGO_URL token or the BUSINESS_NAME wordmark; the donor ships no mark of its own.",
+    "Third-party platform claims: 'Connected with Renobeast & Renocarmen', 'Informed by Miami MLS Market Insight' (credibility marquee, about copy, FAQ off-market answer). The marquee now carries only what is true of any build: audience, service posture, the verified market, and the verified rating (which collapses). No MLS, platform or partnership claim survives.",
+    "Fabricated prestige metrics: '$500M+ Portfolio Value', '15+ Years of Expertise', '100% Client Focused' animated counters. Replaced by a stat rail that renders only the verified RATING and REVIEW_COUNT tokens and collapses entirely when neither exists.",
+    "Fabricated testimonials: three template quotes attributed to invented clients ('J. & M. Hartwell', 'R. Castellano', 'The Beaumont Family') with Miami-neighborhood detail lines. The section is now island-only (see renders_note); no template quote or reviewer name ships.",
+    "Miami / South-Florida geography saturation: page title, meta, OG, RealEstateAgent + FAQPage JSON-LD areaServed lists, hero eyebrow 'Miami Luxury Real Estate', neighborhood name-drops across collections/footer/FAQ (Coral Gables, Coconut Grove, Key Biscayne, Fisher Island, Brickell, Miami Beach, Bay Harbor Islands, Indian Creek, North Bay Road, Star Island), 'relocating from New York to Miami' testimonial copy, and the miami-skyline / aerial-neighborhood asset filenames. All copy now rides CITY/STATE/COUNTY tokens or is geography-free; the two files were renamed at source; the donor JSON-LD was removed outright (the engine's content-inject writes the full verified graph).",
+    "Unverifiable capability claims: 'inventory others can't access', 'off-market opportunities' via 'established relationships' and 'private networks', 'global-quality exposure', 'reputation that commands respect', school-district and tax advisory claims. Rewritten as what the trade does (listing strategy, buyer advisory, relocation orientation, negotiation) without asserting this agent's network, record or reach.",
+    "Dead chrome: placeholder social links (Instagram / LinkedIn / YouTube → '#'), Privacy Policy / Terms / Sitemap '#' links, and the neighborhoods footer column. The footer now links only sections that render, the verified profile, and the Built by wss-ai.com attribution.",
+    "Lovable dev scaffolding: the cdn.gpteng.co script tag, lovable-tagger, and the Lenis smooth-scroll dependency (replaced by the stylesheet's native scroll-behavior with a reduced-motion override — no scroll hijacking). The shipped tree makes no request to any lovable.app or CDN host (Google Fonts excepted, as on every donor)."
+  ],
+  "identity_atoms_note": "The atoms declared here are the source concept's identity (brand names, NAP, canonical host, platform references, fabricated reviewer names, neighborhood claims) as it stood in the Lovable source. None of it appears in the installed bytes — the port excised it before the first compile — but the scan needs real needles so it can never return clean for arbitrary bytes, and so a future rebuild that reintroduces any of it is blocked rather than shipped. donor_city Miami and donor_county Miami-Dade County are PLACE atoms: a legitimate Miami real-estate prospect is excused by the client-place carve-out (scan.js BF-5) because the words on the page are then the client's own verified truth; the neighborhood atoms ride the socials bucket for the same excuse path (see socials_note).",
+  "notes": "Ported 2026-08-20 in the realestate-donor lane. Visual DNA preserved end to end: deep-charcoal + warm-ivory + champagne-gold design system, editorial serif display type, full-screen cinematic media hero with gold particle drift and film grain, credibility strip, editorial about with gold-frame offset imagery, three persona panels, horizontal-snap lifestyle reel with a progress rule, collections mosaic with number watermarks, process, rotating testimonial frame, FAQ accordion, private-consultation CTA band, contact rails. Built with the junctioned vite_react_shadcn_ts toolchain from C:/ports/yellow_rose_plumbing (same stack generation as the source); one bundle, acorn-parses as script, zero ESM syntax, zero bare tokens (every literal rides the facts.ts Record). A+ REBUILD 2026-09-02 (zcode/realestate-waterline-a-plus): the SPA page was replaced by the static build described in stack — same DNA (slab hero with gold particles + grain + scrim, credibility strip, collections mosaic with number watermarks, gold-frame editorial about, persona panels, snap reel, process, FAQ accordion, slab CTA band, contact rails) re-expressed in palette-var CSS. The stylesheet consumes 17 distinct --wss-* properties with achromatic fallbacks only (no hardcoded brand hex anywhere); hero accent gradients are color-mix stops off var(--wss-accent) with a flat-accent fallback and no -webkit-text-fill-color anywhere; three commented VARIANT blocks per required section type (hero, services, gallery, testimonials, process, FAQ, CTA) with exactly one active each; hero h1 is clamp(2.25rem,6vw,5.5rem)/20ch/balanced; every interactive element is >=48px, all text >=16px, primary CTAs go full-width under 480px, a safe-area-padded action dock pins the mobile fold, and zero horizontal scroll exists at 390px. Web fonts were dropped with the CDN ban (system serif + system sans stacks carry the editorial voice); every image src resolves to a shipped asset with slot-semantic alt text. The hero-video-fallback contract is shipped twice over: the static page mounts <video data-hero-video> hidden-with-poster with kill-switch CSS and a paint-under surface, and the retained unloaded bundle keeps the compiled marked mount the library gate reads.",
+  "registered_on": "2026-08-20",
+  "installed_at": "apps/backend/donors-clean/realestate-waterline",
+  "alias_verticals": [
+    "realtor",
+    "realtors",
+    "real estate",
+    "real estate agency",
+    "real estate broker",
+    "realty"
+  ],
+  "alias_note": "Applied by lib/donor-verticals.js from data/donor-verticals.json. The engine resolves ONLY the exact vertical value above, which must match the render-gate.js VERTICALS key 'real estate agent' (schema RealEstateAgent) exactly. The copilot APPROVED_CATEGORIES entry deliberately does NOT claim the bare alias 'real estate': approvedIndustry matches by substring with longest-alias-first, and bare 'real estate' would misroute 'real estate attorney' leads (the attorney category's own aliases are shorter). The donor-verticals alias table CAN carry 'real estate' safely — it matches whole facts.industry strings, not substrings."
+}

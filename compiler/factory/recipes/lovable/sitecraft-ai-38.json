@@ -1,0 +1,81 @@
+{
+ "id": "sitecraft-ai-38",
+ "source": "01a519b2-cfd8-400e-8311-f32434aca551",
+ "palette": {
+  "vars": {
+   "--background": "oklch(0.957 0.008 95)",
+   "--foreground": "oklch(0.16 0.02 155)",
+   "--card": "oklch(1 0 0)",
+   "--card-foreground": "oklch(0.16 0.02 155)",
+   "--popover": "oklch(1 0 0)",
+   "--popover-foreground": "oklch(0.16 0.02 155)",
+   "--primary": "oklch(0.27 0.05 155)",
+   "--primary-foreground": "oklch(0.957 0.008 95)",
+   "--primary-glow": "oklch(0.45 0.09 153)",
+   "--secondary": "oklch(0.85 0.008 95)",
+   "--secondary-foreground": "oklch(0.22 0.03 155)",
+   "--muted": "oklch(0.92 0.008 95)",
+   "--muted-foreground": "oklch(0.42 0.012 150)",
+   "--accent": "oklch(0.71 0.135 70)",
+   "--accent-foreground": "oklch(0.16 0.02 155)",
+   "--destructive": "oklch(0.6 0.22 27)",
+   "--destructive-foreground": "oklch(0.98 0.01 100)",
+   "--border": "oklch(0.86 0.008 95)",
+   "--input": "oklch(0.86 0.008 95)",
+   "--ring": "oklch(0.71 0.135 70)",
+   "--surface": "oklch(0.16 0.02 155)",
+   "--surface-foreground": "oklch(0.957 0.008 95)",
+   "--gradient-cta": "linear-gradient(135deg, oklch(0.74 0.135 70), oklch(0.62 0.13 55))",
+   "--gradient-card": "linear-gradient(145deg, oklch(0.22 0.03 155 / 0.85), oklch(0.12 0.02 155 / 0.92))",
+   "--gradient-amber-line": "linear-gradient(90deg, transparent, oklch(0.71 0.135 70 / 0.9), transparent)"
+  },
+  "mode": "light"
+ },
+ "fonts": {
+  "display": "Manrope",
+  "body": "Manrope",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
+ },
+ "radius": "0.625rem",
+ "shadows": [
+  "0 0 0 1px oklch(0.71 0.135 70 / 0.18), 0 30px 80px -20px oklch(0.08 0.015 155 / 0.65)",
+  "0 40px 100px -30px oklch(0.08 0.015 155 / 0.55)",
+  "0 14px 50px -12px oklch(0.71 0.135 70 / 0.55)",
+  "0 0 0 0 oklch(0.78 0.16 75 / 0.5)"
+ ],
+ "keyframes": [
+  {
+   "name": "pulse-glow",
+   "css": "@keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 0 0 oklch(0.78 0.16 75 / 0.5); } 50% { box-shadow: 0 0 0 12px oklch(0.78 0.16 75 / 0); } }"
+  },
+  {
+   "name": "fade-up",
+   "css": "@keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "hero-glow",
+   "css": "@keyframes hero-glow { 0%, 100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }"
+  },
+  {
+   "name": "ken-burns",
+   "css": "@keyframes ken-burns { 0% { transform: scale(1.06) translate3d(0, 0, 0); } 50% { transform: scale(1.12) translate3d(-1.5%, -1%, 0); } 100% { transform: scale(1.06) translate3d(0, 0, 0); } }"
+  },
+  {
+   "name": "yard-drift",
+   "css": "@keyframes yard-drift { 0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); } 50% { transform: translate3d(0.5rem, -0.35rem, 0) rotate(1deg); } }"
+  },
+  {
+   "name": "shimmer-sweep",
+   "css": "@keyframes shimmer-sweep { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }"
+  }
+ ],
+ "signatures": [
+  "gradient-text",
+  "parallax",
+  "noise",
+  "ken-burns",
+  "glow",
+  "shimmer",
+  "gradient-heavy"
+ ]
+}

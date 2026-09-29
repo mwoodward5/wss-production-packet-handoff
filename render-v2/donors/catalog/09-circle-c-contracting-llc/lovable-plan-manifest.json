@@ -1,0 +1,216 @@
+{
+  "project_name": "Circle C Contracting, LLC",
+  "vertical": "Excavation and Underground Utilities",
+  "classification": "Single-page",
+  "routes": [
+    {
+      "path": "/",
+      "file": "src/routes/index.tsx",
+      "type": "page",
+      "title": "Circle C Contracting | Excavation & Utilities · Onawa, IA",
+      "sections": [
+        "Nav",
+        "Hero",
+        "Services",
+        "Work",
+        "WhyUs",
+        "Process",
+        "ServiceArea",
+        "Contact",
+        "Footer",
+        "StickyMobileCTA"
+      ]
+    }
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "oklch(0.985 0.008 80)",
+      "foreground": "oklch(0.18 0.02 60)",
+      "card": "oklch(1 0 0)",
+      "primary": "oklch(0.22 0.02 60)",
+      "secondary": "oklch(0.94 0.015 75)",
+      "accent": "oklch(0.78 0.16 65)",
+      "accent_amber": "oklch(0.82 0.16 70)",
+      "brand_clay": "oklch(0.55 0.13 50)",
+      "brand_steel": "oklch(0.32 0.015 250)",
+      "brand_ink": "oklch(0.16 0.015 60)"
+    },
+    "typography": {
+      "display": "Oswald, Impact, system-ui, sans-serif",
+      "body": "Inter, system-ui, sans-serif"
+    },
+    "radii": {
+      "base": "0.5rem",
+      "cards": "1rem"
+    },
+    "shadows": {
+      "card": "0 8px 24px -12px oklch(0.16 0.015 60 / 0.18)",
+      "deep": "0 24px 60px -20px oklch(0.16 0.015 60 / 0.35)",
+      "glow_amber": "0 30px 80px -30px oklch(0.78 0.16 65 / 0.55)"
+    }
+  },
+  "hero_contract": {
+    "type": "Surveyor Plat Sheet Split",
+    "desktop_spine_width_px": 220,
+    "media_clip_path": "polygon(0 0, 100% 0, 100% 100%, 8% 100%)",
+    "parallax_enabled": true,
+    "motion_elements": [
+      "trench_line_draw",
+      "dust_motes"
+    ],
+    "subsurface_artifact": "SoilProfile.tsx",
+    "seasonal_playbook": "FieldConditions.tsx"
+  },
+  "media_slots": [
+    {
+      "id": "hero_plate",
+      "role": "hero",
+      "route": "/",
+      "section": "Hero",
+      "aspect_ratio": "16:9",
+      "recommended_content": "Excavator trenching on rural site",
+      "crop_behavior": "object-cover with right-bias scale"
+    },
+    {
+      "id": "service_water_sewer",
+      "role": "service_main",
+      "route": "/",
+      "section": "Services",
+      "aspect_ratio": "4:3",
+      "recommended_content": "Water and sewer line installation"
+    },
+    {
+      "id": "service_septic",
+      "role": "service_secondary",
+      "route": "/",
+      "section": "Services",
+      "aspect_ratio": "16:9",
+      "recommended_content": "Septic system installation"
+    },
+    {
+      "id": "gallery_grid_01_11",
+      "role": "gallery",
+      "route": "/",
+      "section": "Work",
+      "aspect_ratio": "4:5",
+      "recommended_content": "11 authentic jobsite proof photographs"
+    }
+  ],
+  "content_slots": [
+    {
+      "slot": "business_name",
+      "value": "Circle C Contracting, LLC"
+    },
+    {
+      "slot": "phone",
+      "value": "(712) 420-9512",
+      "href": "tel:+17124209512"
+    },
+    {
+      "slot": "email",
+      "value": "info@circle-c-contracting.com",
+      "href": "mailto:info@circle-c-contracting.com"
+    },
+    {
+      "slot": "location_city",
+      "value": "Onawa"
+    },
+    {
+      "slot": "location_region",
+      "value": "Iowa"
+    },
+    {
+      "slot": "coordinates",
+      "lat": 42.0269,
+      "lng": -96.0972,
+      "elevation": "1,043 FT"
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "technical_stamp",
+      "location": "Hero Work Order Card",
+      "label": "REV A · New Request"
+    },
+    {
+      "type": "turnaround_commitment",
+      "location": "Hero Work Order Card",
+      "label": "Typical response: same business day"
+    },
+    {
+      "type": "operational_pillars",
+      "location": "Why Us Section",
+      "count": 4
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "engine": "schema.org",
+      "file": "src/routes/__root.tsx"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "target": "ServiceArea",
+      "coverage": "Monona County and surrounding communities",
+      "towns_count": 12
+    },
+    {
+      "target": "KnowledgeBase",
+      "file": "public/llms.txt"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "intent": "near_me_trenching",
+      "section": "Services"
+    },
+    {
+      "intent": "emergency_pipe_repair",
+      "section": "Contact"
+    }
+  ],
+  "map_location_slot": {
+    "engine": "OpenStreetMap Leaflet Iframe",
+    "marker_lat": 42.0269,
+    "marker_lng": -96.0972,
+    "hq_label": "Onawa, IA"
+  },
+  "content_density": {
+    "headline_style": "Compressed monumental uppercase",
+    "copy_density": "Sparse, factual, foreman-briefing tone",
+    "imagery_dominance": "High (authentic heavy equipment jobsite photos)"
+  },
+  "mobile_rules": {
+    "breakpoint_sm": "640px",
+    "breakpoint_md": "768px",
+    "breakpoint_lg": "1024px",
+    "sticky_dock_active": true,
+    "hero_spine_collapsed_on_mobile": true
+  },
+  "non_negotiables": [
+    "Preserve Oswald font for display headings",
+    "Preserve safety amber accent against deep charcoal/ink surfaces",
+    "Preserve SoilProfile.tsx subsurface diagram",
+    "Retain dual-action phone/quote conversion hierarchy"
+  ],
+  "safe_replacements": [
+    "business_name",
+    "phone_number",
+    "email_address",
+    "jobsite_photos",
+    "service_area_towns",
+    "geographic_coordinates"
+  ],
+  "lovable_classification": "Single-Page Custom Single-Scroll",
+  "classification_basis": "1 distinct documented routes; WSS scope label only",
+  "project_id": "0320b2df-7290-4e5f-8c6d-db0d772e37ce",
+  "project_url": "https://lovable.dev/projects/0320b2df-7290-4e5f-8c6d-db0d772e37ce",
+  "source_plan_file": "09-circle-c-single-page-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:35:06.118141Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

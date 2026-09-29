@@ -1,0 +1,123 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-clay: var(--clay);
+  --color-clay-soft: var(--clay-soft);
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  /* Southern Home palette */
+  --cream: oklch(0.97 0.012 85);          /* #F4EFE6 warm paper */
+  --cream-soft: oklch(0.94 0.014 82);
+  --paper: oklch(0.99 0.006 85);
+  --ink: oklch(0.27 0.04 240);            /* #163040 deep navy */
+  --ink-deep: oklch(0.20 0.035 240);
+  --ink-soft: oklch(0.42 0.04 240);
+  --clay: oklch(0.62 0.16 42);            /* #C25B2E terracotta */
+  --clay-soft: oklch(0.78 0.09 50);
+  --line: oklch(0.88 0.012 70);
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--cream);
+  --secondary: oklch(0.93 0.013 75);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.94 0.012 78);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--clay);
+  --accent-foreground: var(--cream);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--clay);
+  --ease-warm: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.dark { /* not used, kept for shadcn compat */
+  --background: var(--ink);
+  --foreground: var(--cream);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility shadow-warm {
+  box-shadow: 0 30px 60px -30px color-mix(in oklab, var(--ink) 40%, transparent),
+              0 10px 20px -10px color-mix(in oklab, var(--ink) 18%, transparent);
+}
+@utility shadow-card {
+  box-shadow: 0 12px 28px -16px color-mix(in oklab, var(--ink) 30%, transparent);
+}
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+@utility hairline {
+  height: 1px;
+  background: var(--line);
+}
+@utility color-ink-deep { color: var(--ink-deep); }
+@utility bg-ink-deep { background-color: var(--ink-deep); }
+@utility bg-cream-soft { background-color: var(--cream-soft); }
+@utility ease-warm { transition-timing-function: var(--ease-warm); }

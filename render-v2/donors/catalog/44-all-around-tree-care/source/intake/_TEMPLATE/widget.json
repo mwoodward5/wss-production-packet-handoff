@@ -1,0 +1,5 @@
+{
+  "chatWidget": false,
+  "heygenAvatar": false,
+  "verticalWidget": { "enabled": true, "type": "auto-from-industry" }
+}

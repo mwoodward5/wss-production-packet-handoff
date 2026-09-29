@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wss://ghost-agency/contracts/site-packet.schema.json",
+  "title": "Site Build Packet",
+  "description": "The complete input to a site build. Compiled by Agent 04 from prospect + enrichment + report. Consumed by the v5 factory (lane routing via tier) or by Lovable PROMPT A/B.",
+  "type": "object",
+  "required": ["packet_id", "prospect_id", "tier", "business", "seo", "compiled_at"],
+  "properties": {
+    "packet_id": { "type": "string" },
+    "prospect_id": { "type": "string" },
+    "tier": { "type": "string", "enum": ["cinematic_single", "premier_hub"], "description": "cinematic_single -> PROMPT A / v5 single-page lane. premier_hub -> PROMPT B / 5-8 page authority lane." },
+    "engine": { "type": "string", "enum": ["v5_factory", "lovable"], "description": "Which build engine executes this packet." },
+    "business": {
+      "type": "object",
+      "required": ["name", "city", "state", "primary_services"],
+      "properties": {
+        "name": {"type":"string"}, "phone": {"type":"string"}, "email": {"type":"string"},
+        "city": {"type":"string"}, "state": {"type":"string"}, "service_area": {"type":"array","items":{"type":"string"}},
+        "primary_services": {"type":"array","items":{"type":"string"}},
+        "hours": {"type":"object"}, "geo": {"type":"object","properties":{"lat":{"type":"number"},"lng":{"type":"number"}}}
+      }
+    },
+    "brand": {
+      "type": "object",
+      "properties": {
+        "logo_url": {"type":"string"},
+        "palette": {"type":"array","items":{"type":"string"},"description":"Extracted from real brand evidence. Never invented against evidence."},
+        "typography_pair": {"type":"string","description":"From master-glue-kitchen/tokens/font-pairs.json. Never Inter+purple default."},
+        "photo_urls": {"type":"array","items":{"type":"string"},"description":"Owner/public business photos, rescued through content-rescue pipelines before placement."},
+        "voice_notes": {"type":"string"}
+      }
+    },
+    "proof": { "type": "array", "items": { "type": "object", "required":["claim","source_url"], "properties": { "claim":{"type":"string"}, "source_url":{"type":"string"} } }, "description": "Only verifiable claims. Each entry MUST carry a source. Empty array is acceptable." },
+    "seo": {
+      "type": "object",
+      "properties": {
+        "primary_keywords": {"type":"array","items":{"type":"string"}},
+        "city_service_pairs": {"type":"array","items":{"type":"string"}},
+        "competitor_context": {"type":"object","description":"PRIVATE — informs copy strategy, never rendered verbatim"},
+        "schema_types": {"type":"array","items":{"type":"string"},"default":["LocalBusiness","FAQPage"]}
+      }
+    },
+    "hero_media": { "type": "object", "properties": { "type": {"type":"string","enum":["video","cinemagraph","cinematic_still"]}, "source": {"type":"string","enum":["generated","owner_asset","approved_fallback"]}, "url": {"type":"string"} } },
+    "widget": { "type": "string", "description": "One vertical-specific conversion widget id (e.g. quote-estimator, booking, before-after-slider)" },
+    "banned_copy_check": { "type": "boolean", "const": true, "description": "Compiler asserts no internal/banned language entered the packet copy fields." },
+    "report_url": { "type": "string", "description": "The visibility report tied to this prospect — used in follow-up, never in public site copy." },
+    "compiled_at": { "type": "string", "format": "date-time" }
+  }
+}

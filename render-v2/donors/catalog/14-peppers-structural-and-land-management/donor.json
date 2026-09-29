@@ -1,0 +1,464 @@
+{
+  "version": 2,
+  "key": "14-peppers-structural-and-land-management",
+  "name": "Peppers Structural and Land Management",
+  "category": "general contractor",
+  "vertical": "general contractor",
+  "requested_vertical": "general contractor",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "cfd022fd-a3ee-4ed5-a77d-d7743b1945e2",
+  "lovable_source_commit": "23c3f13d8e9a8e16ded511d540a7eeb729c4e6cb",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "cfd022fd-a3ee-4ed5-a77d-d7743b1945e2",
+    "ref": "23c3f13d8e9a8e16ded511d540a7eeb729c4e6cb",
+    "repository": "https://github.com/mwoodward5/pepper-pillar-site",
+    "git_tree": "9e8a530ea516e1d09c93641175c32e75ecb9f295"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/services",
+    "/services/$slug",
+    "/gallery",
+    "/about",
+    "/reviews",
+    "/service-area",
+    "/faq",
+    "/contact"
+  ],
+  "design_tokens": {
+    "fonts": {
+      "display": "\"Fraunces\", Georgia, serif",
+      "body": "\"Inter\", system-ui, sans-serif",
+      "mono": "\"JetBrains Mono\", ui-monospace, monospace"
+    },
+    "colors": {
+      "cream": "#FFFFFF",
+      "bone": "#F4F4F5",
+      "ink": "#2D0905",
+      "charcoal": "#2A2A2A",
+      "umber": "oklch(0.45 0.09 45)",
+      "amber_glow": "#EA0606",
+      "clay": "#A32F2F",
+      "rule": "#E5E5E5"
+    },
+    "radii": {
+      "default": "0.25rem",
+      "tight": "0.125rem"
+    },
+    "grid": {
+      "container_max": "1400px",
+      "hero_max": "1500px",
+      "cell_border": "gap-px bg-rule"
+    }
+  },
+  "hero_contract": {
+    "layout": "12-column asymmetric split (7 left / 5 right)",
+    "left_column": [
+      "dashed_journal_masthead",
+      "fraunces_pencil_headline",
+      "artisan_body_paragraph",
+      "dual_action_cta_block",
+      "hand_drawn_svg_arrow_note",
+      "4_cell_dossier_matrix"
+    ],
+    "right_column": [
+      "craftsman_portrait_plate_with_ink_wash",
+      "rotated_verified_corner_badge",
+      "tilted_polaroid_stack_bottom_left",
+      "framed_10s_film_insert_top_right",
+      "live_operating_status_pill",
+      "rotating_woodgrain_seal"
+    ],
+    "video_rules": {
+      "placement": "framed_insert_only",
+      "dimensions": "w-64 h-44",
+      "rotation_deg": 3,
+      "border": "6px solid #2D0905",
+      "autoplay": true,
+      "muted": true,
+      "loop": true,
+      "playsinline": true,
+      "duration_seconds": 10
+    }
+  },
+  "media_slots": [
+    {
+      "id": "HERO_CRAFTSMAN",
+      "aspect": "4:5",
+      "role": "owner_on_jobsite"
+    },
+    {
+      "id": "HERO_VIDEO_POSTER",
+      "aspect": "16:9",
+      "role": "cinematic_detail"
+    },
+    {
+      "id": "HERO_POLAROID_1",
+      "aspect": "1:1",
+      "role": "close_up_joinery"
+    },
+    {
+      "id": "HERO_POLAROID_2",
+      "aspect": "1:1",
+      "role": "close_up_carpentry"
+    },
+    {
+      "id": "SERVICE_01",
+      "aspect": "4:5",
+      "role": "kitchen_remodeling"
+    },
+    {
+      "id": "SERVICE_02",
+      "aspect": "4:5",
+      "role": "basement_remodeling"
+    },
+    {
+      "id": "SERVICE_03",
+      "aspect": "4:5",
+      "role": "decks_porches"
+    },
+    {
+      "id": "SERVICE_04",
+      "aspect": "4:5",
+      "role": "home_additions"
+    },
+    {
+      "id": "SERVICE_05",
+      "aspect": "4:5",
+      "role": "custom_greenhouses"
+    },
+    {
+      "id": "SERVICE_06",
+      "aspect": "4:5",
+      "role": "general_contracting"
+    },
+    {
+      "id": "SHOWCASE_01",
+      "aspect": "16:10",
+      "role": "dome_or_ceiling_work"
+    },
+    {
+      "id": "SHOWCASE_02",
+      "aspect": "16:10",
+      "role": "molding_or_trim_work"
+    },
+    {
+      "id": "GEO_BACKDROP",
+      "aspect": "16:9",
+      "role": "regional_landscape_or_exterior"
+    },
+    {
+      "id": "ABOUT_PORTRAIT",
+      "aspect": "4:5",
+      "role": "lead_craftsman_portrait"
+    },
+    {
+      "id": "GALLERY_ARCHIVE",
+      "count": 16,
+      "aspect": "4:3",
+      "role": "real_project_photos"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "business.name",
+      "type": "string",
+      "target": "global_identity"
+    },
+    {
+      "key": "business.shortName",
+      "type": "string",
+      "target": "header_logo_subline"
+    },
+    {
+      "key": "business.owner",
+      "type": "string",
+      "target": "founder_narrative"
+    },
+    {
+      "key": "business.phone",
+      "type": "string",
+      "target": "visible_contact_triggers"
+    },
+    {
+      "key": "business.phoneTel",
+      "type": "string",
+      "target": "telephony_targets"
+    },
+    {
+      "key": "business.email",
+      "type": "string",
+      "target": "footer_and_contact_channel"
+    },
+    {
+      "key": "business.city",
+      "type": "string",
+      "target": "municipality_anchors"
+    },
+    {
+      "key": "business.state",
+      "type": "string",
+      "target": "state_anchors"
+    },
+    {
+      "key": "business.zip",
+      "type": "string",
+      "target": "postal_code"
+    },
+    {
+      "key": "business.yearFounded",
+      "type": "number",
+      "target": "dossier_and_badges"
+    },
+    {
+      "key": "business.lat",
+      "type": "number",
+      "target": "geo_coordinates"
+    },
+    {
+      "key": "business.lng",
+      "type": "number",
+      "target": "geo_coordinates"
+    },
+    {
+      "key": "services",
+      "type": "array",
+      "target": "core_offerings_matrix"
+    },
+    {
+      "key": "reviews",
+      "type": "array",
+      "target": "reputation_cards"
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "hero_masthead_stamp",
+      "type": "free_estimates_or_license"
+    },
+    {
+      "slot": "hero_corner_badge",
+      "type": "jobsite_verification_year"
+    },
+    {
+      "slot": "hero_dossier_matrix",
+      "type": "operational_facts_grid"
+    },
+    {
+      "slot": "trust_marquee_ribbon",
+      "type": "third_party_affiliations"
+    },
+    {
+      "slot": "featured_review_cards",
+      "type": "verbatim_client_reviews"
+    },
+    {
+      "slot": "workmanship_warranty_box",
+      "type": "written_guarantee"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "scope": "global_root"
+    },
+    {
+      "type": "GeoCircle",
+      "scope": "service_radius_25mi"
+    },
+    {
+      "type": "areaServed",
+      "scope": "itemized_city_county_nodes"
+    },
+    {
+      "type": "AggregateRating",
+      "scope": "reviews_page"
+    },
+    {
+      "type": "FAQPage",
+      "scope": "homepage_and_faq_routes"
+    },
+    {
+      "type": "Service",
+      "scope": "service_detail_routes"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "component": "HeroFAQMicro",
+      "position": "sub_hero_strip",
+      "format": "conversational_qa"
+    },
+    {
+      "component": "AEOFaqBlock",
+      "position": "service_area_page",
+      "format": "structured_answer_capsules"
+    },
+    {
+      "component": "TownMatrix",
+      "position": "service_area_section",
+      "format": "hairline_grid_cells"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "location": "HeroFAQMicro",
+      "query_type": "near_me_service_in_city"
+    },
+    {
+      "location": "FAQBlock",
+      "query_type": "pricing_and_timeline"
+    },
+    {
+      "location": "ServiceArea",
+      "query_type": "radius_coverage_inquiry"
+    }
+  ],
+  "map_location_slot": {
+    "component": "LocationMap",
+    "provider": "OpenStreetMap",
+    "coordinates": {
+      "lat": 41.5169,
+      "lng": -83.3597
+    },
+    "bounding_box": "calculated_radius_25mi",
+    "directions_target": "Google_Maps_Universal_URI",
+    "address_policy": "locality_and_coordinates_only_for_sab"
+  },
+  "content_density": {
+    "hero": "high_tactile_density",
+    "services_homepage": "exactly_6_cards",
+    "showcase_homepage": "exactly_2_cards",
+    "reviews_homepage": "exactly_3_cards",
+    "process_timeline": "exactly_5_steps",
+    "gallery_page": "16_high_density_plates"
+  },
+  "mobile_rules": {
+    "390px": {
+      "sticky_bar": "visible_call_and_estimate",
+      "hero_right_stack": "simplify_to_craftsman_plate_only",
+      "polaroids": "hidden",
+      "film_insert": "hidden",
+      "grids": "single_column_reflow",
+      "tap_targets": "min_48px"
+    },
+    "768px": {
+      "services_grid": "2_column",
+      "reviews_grid": "2_column",
+      "sticky_bar": "visible"
+    },
+    "1440px": {
+      "hero_layout": "12_column_split",
+      "polaroids": "visible_tilted",
+      "film_insert": "visible_rotated_3deg",
+      "sticky_bar": "hidden"
+    }
+  },
+  "non_negotiables": [
+    "Retain_Fraunces_and_JetBrains_Mono_typography",
+    "Preserve_hairline_cell_grid_layout_with_gap_px_bg_rule",
+    "Keep_video_inside_framed_rotated_film_insert_never_full_bleed",
+    "Preserve_tactile_hand_drawn_arrows_and_pencil_underline_animations",
+    "Enforce_first_person_craftsman_voice_and_prevent_agency_jargon",
+    "Require_real_jobsite_photography_for_all_portfolio_and_service_slots"
+  ],
+  "safe_replacements": [
+    "business_name_and_short_name",
+    "owner_name_and_craftsman_title",
+    "phone_number_and_email",
+    "city_state_zip_and_service_towns",
+    "geographic_coordinates",
+    "founding_year_and_age",
+    "hero_craftsman_photo_and_detail_polaroids",
+    "10_second_cinematic_hero_video_and_poster",
+    "core_service_titles_summaries_and_images",
+    "gallery_archive_photography_and_captions",
+    "client_review_quotes_dates_and_ratings",
+    "header_and_footer_brand_logos_and_favicons"
+  ],
+  "leak_terms": [
+    "Peppers Structural and Land Management",
+    "Peppers Structural & Land Management",
+    "Jim Peppers",
+    "jimpeppers707@gmail.com",
+    "(517) 438-2423",
+    "5174382423"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Fraunces",
+      "Georgia",
+      "serif",
+      "Inter",
+      "system-ui",
+      "sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "#FFFFFF",
+    "#F4F4F5",
+    "#2D0905",
+    "#2A2A2A",
+    "oklch(0.45 0.09 45)",
+    "#EA0606",
+    "#A32F2F",
+    "#E5E5E5"
+  ],
+  "fonts": [
+    "Fraunces",
+    "Georgia",
+    "serif",
+    "Inter",
+    "system-ui",
+    "sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "6b1f3273e2b672bf078321ef6d21804f57bce57e2c8fbdab28eb12a71f9dc092",
+    "files": {
+      "assets/index-BTZEL79g.js": "0a5bae54f2fc1c7c6b08c3c35a66fd8d644bf98d016068662fc0a0becf18ea25",
+      "assets/index-DUDoCNqy.css": "32c7edbdf3df1f3f62bf08398361f07fa8f7f9160f3694bf7aad5cd108ca8ad4",
+      "assets/wss-hQePKwUb.js": "5e552165ec03d1b10665617e729fa5dd9d629f4a18f69ae73cb5fb2b5ed42d7b",
+      "assets/WssApp-Cx__CWuM.js": "5344845f8c3f58960c394dac5a44502696d3c9af93bfcb34623d0bc6cb1f68c9",
+      "index.html": "a351875baaf7082dbfbe60c8a44fb0976909d1868b1643b57835b36b6b0465a8"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

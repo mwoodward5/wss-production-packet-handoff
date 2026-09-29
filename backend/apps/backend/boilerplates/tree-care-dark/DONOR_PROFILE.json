@@ -1,0 +1,62 @@
+{
+  "templateName": "tree-care-dark",
+  "vertical": "tree-service",
+  "identity": {
+    "names": [
+      "All-Around Tree Care",
+      "All Around Tree Care"
+    ],
+    "people": [
+      "Curt Lewis"
+    ],
+    "phones": [
+      "931-367-0634",
+      "9313670634",
+      "(931) 367-0634"
+    ],
+    "emails": [
+      "curtlewis378@gmail.com"
+    ],
+    "domains": [
+      "all-aroundtreecare.com"
+    ],
+    "cities": [
+      "Clarksville"
+    ],
+    "regions": [
+      "Tennessee",
+      "TN"
+    ],
+    "counties": [
+      "Montgomery County"
+    ],
+    "geo": [
+      "36.5298",
+      "-87.3595",
+      "36.53",
+      "87.36"
+    ],
+    "profileUrls": [],
+    "postal": [
+      "37040",
+      "37042",
+      "37043"
+    ]
+  },
+  "assets": {
+    "logos": [
+      "assets/all-around-tree-care-logo-new-img-C5EMKs-k.png"
+    ],
+    "photos": [
+      "assets/tree-service-DK7bEZJu.webp",
+      "assets/tree-removal-BpnQBwcM.webp",
+      "assets/tree-care-KJUl9w_V.webp",
+      "assets/landscaping-2x7ZPJiT.webp",
+      "assets/lawn-care-s90fgUt8.webp",
+      "assets/firewood-for-sale-DOAwG36b.webp",
+      "assets/services-image-tree-removal-img-uDYoIQpg.jpg",
+      "assets/services-image-ttree-care-img--hlq8MOw.jpg",
+      "assets/services-image-dead-wood-cleanup-img-ReGJdhi6.jpg"
+    ]
+  }
+}

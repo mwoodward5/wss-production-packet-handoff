@@ -1,0 +1,17 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {readTree,treeHash}=require('../build/file-tree.cjs');
+const {assertBundle}=require('../gates/bundle.cjs');
+const {assertClean}=require('../gates/donor-leak.cjs');
+const {assertTruth}=require('../gates/truth.cjs');
+const {assertMedia}=require('../gates/media.cjs');
+const summary=JSON.parse(fs.readFileSync(path.join(__dirname,'../evidence/burns-build-result.json'),'utf8'));
+const files=readTree(path.join(__dirname,'../evidence/burns-build'));
+const result={...summary,files};
+test('immutable SPA bundle is pinned and all generic polish is disabled',()=>{const r=assertBundle();assert.equal(r.ok,true);assert.equal(r.hash,summary.manifest.donor_content_hash);});
+test('Burns output contains no donor identity leakage',()=>assert.equal(assertClean(files).ok,true));
+test('Burns output truth contract has six certified services and no fabricated reviews',()=>{const r=assertTruth({client_data:summary.client_data});assert.equal(r.services,6);assert.equal(r.reviews,0);});
+test('all original client media bytes preserve their certified SHA-256',()=>assert.equal(assertMedia({files,media_evidence:summary.media_evidence}).count,17));
+test('downstream build hash equals the exact output tree',()=>assert.equal(treeHash(files),summary.build_hash));
+test('SPA output contract retains renderer, routes and release evidence',()=>{assert.equal(summary.manifest.renderer,'spa-v2');assert.equal(summary.manifest.routes.length,12);assert.equal(summary.release_evidence.build_hash,summary.build_hash);assert.equal(summary.release_evidence.prospect_id,'lm-5fc8274e4324bff121368303b318bd9a7f22f466');});
+test('Lovable fonts and animation acceptance are pinned',()=>{assert.deepEqual(summary.manifest.checks.fonts,['Instrument Serif','Work Sans']);assert.equal(summary.manifest.checks.expected_animations,16);assert.deepEqual(summary.manifest.checks.breakpoints,[1440,768,390]);});

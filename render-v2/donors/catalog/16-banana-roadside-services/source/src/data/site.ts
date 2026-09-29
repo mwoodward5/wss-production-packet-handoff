@@ -1,0 +1,10 @@
+import {client,hoursText} from './bridge';
+export const PHONE_DISPLAY=client.identity.phoneDisplay;
+export const PHONE_TEL=client.identity.phoneTel.slice(4);
+export const HOURS_LINE=hoursText;
+export const AFTER_HOURS_NOTE='';
+export const SERVICE_AREA_LINE=client.trust.areas.join(' · ');
+export const GOOGLE_REVIEW_URL=client.trust.aggregate?.sourceUrl||'';
+export const GBP_URL=client.trust.mapUrl;
+export const MAP_EMBED_SRC='';
+export const COMPANY={name:client.identity.businessName,city:client.identity.city,region:client.identity.state};

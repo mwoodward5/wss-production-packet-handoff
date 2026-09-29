@@ -1,0 +1,28 @@
+{
+  "schema_version": "siteforge-build-request-v1",
+  "idempotency_key": "req_01JCX3W2C0Y3H1E4B7L9N2P8V5",
+  "requested_at": "2026-07-15T07:31:52Z",
+  "caller": {
+    "source": "siteforge-app",
+    "operator_id": "op_woodward5",
+    "trace_id": "trace_01JCX3W2ABCDEF"
+  },
+  "plan_tier": "free-preview",
+  "mode": "single-page-cinematic",
+  "truth_packet": {
+    "business_name": "Hurley Asphalt",
+    "legal_name": "John R Hurley Asphalt, Inc.",
+    "city": "Peyton",
+    "state": "CO",
+    "phone_e164": "+17195316783",
+    "website_url": "https://hurleyasphalt.com",
+    "vertical": "landscape.hardscape.paving-asphalt",
+    "services": ["driveways", "parking-lots", "sealcoating", "rubberized-crack-fill"],
+    "service_area_cities": ["Colorado Springs", "Peyton", "Black Forest", "Kissing Camels"],
+    "established_year": 1976
+  },
+  "assets": {},
+  "resonance_hint": {
+    "vocabulary_triggers": ["cinematic", "editorial", "no-nonsense", "family-owned"]
+  }
+}

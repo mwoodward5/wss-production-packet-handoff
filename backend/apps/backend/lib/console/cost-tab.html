@@ -1,0 +1,1232 @@
+<section id="cost-tab" aria-label="Cost meter">
+  <style>
+    #cost-tab {
+      --ct-bg: #0b0d10;
+      --ct-panel: #11151a;
+      --ct-panel-2: #151a21;
+      --ct-border: #252c35;
+      --ct-text: #eef2f6;
+      --ct-muted: #8994a3;
+      --ct-dim: #606b78;
+      --ct-green: #38d996;
+      --ct-red: #ff5d68;
+      --ct-amber: #ffbd4a;
+      --ct-blue: #58a6ff;
+      --ct-track: #20262e;
+      --ct-radius: 8px;
+      --ct-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      color: var(--ct-text);
+      background: var(--ct-bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100%;
+      box-sizing: border-box;
+    }
+
+    #cost-tab *,
+    #cost-tab *::before,
+    #cost-tab *::after {
+      box-sizing: border-box;
+    }
+
+    #cost-tab .ct-shell {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+    }
+
+    #cost-tab .ct-panel {
+      background: var(--ct-panel);
+      border: 1px solid var(--ct-border);
+      border-radius: var(--ct-radius);
+      overflow: hidden;
+    }
+
+    #cost-tab .ct-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 38px;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--ct-border);
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    #cost-tab .ct-title {
+      margin: 0;
+      font-family: var(--ct-mono);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #c9d2dc;
+    }
+
+    #cost-tab .ct-est {
+      color: var(--ct-muted);
+      font-family: var(--ct-mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    #cost-tab .ct-headline {
+      display: grid;
+      grid-template-columns: minmax(180px, 1.15fr) minmax(160px, .7fr) minmax(240px, 1.15fr);
+      gap: 1px;
+      background: var(--ct-border);
+      border: 1px solid var(--ct-border);
+      border-radius: var(--ct-radius);
+      overflow: hidden;
+    }
+
+    #cost-tab .ct-kpi {
+      min-width: 0;
+      padding: 14px 16px;
+      background: var(--ct-panel);
+    }
+
+    #cost-tab .ct-label {
+      margin-bottom: 7px;
+      color: var(--ct-muted);
+      font-family: var(--ct-mono);
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    #cost-tab .ct-spend {
+      font-family: var(--ct-mono);
+      font-size: clamp(27px, 4vw, 42px);
+      font-weight: 900;
+      letter-spacing: -.055em;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #cost-tab .ct-subvalue {
+      margin-top: 7px;
+      color: var(--ct-muted);
+      font-family: var(--ct-mono);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    #cost-tab .ct-delta {
+      font-family: var(--ct-mono);
+      font-size: 22px;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #cost-tab .ct-delta.is-up {
+      color: var(--ct-red);
+    }
+
+    #cost-tab .ct-delta.is-down {
+      color: var(--ct-green);
+    }
+
+    #cost-tab .ct-delta.is-flat {
+      color: var(--ct-muted);
+    }
+
+    #cost-tab .ct-savings-value {
+      color: var(--ct-green);
+      font-family: var(--ct-mono);
+      font-size: 22px;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #cost-tab .ct-gauge {
+      position: relative;
+      height: 7px;
+      margin-top: 10px;
+      overflow: hidden;
+      background: var(--ct-track);
+      border-radius: 999px;
+    }
+
+    #cost-tab .ct-gauge-fill {
+      width: 0;
+      height: 100%;
+      background: var(--ct-green);
+      border-radius: inherit;
+      transition: width .25s ease;
+    }
+
+    #cost-tab .ct-alerts {
+      display: none;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 10px 12px;
+      color: #ffd6d9;
+      background: rgba(255, 93, 104, .09);
+      border: 1px solid rgba(255, 93, 104, .45);
+      border-radius: var(--ct-radius);
+      font-family: var(--ct-mono);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    #cost-tab .ct-alerts.is-visible {
+      display: flex;
+    }
+
+    #cost-tab .ct-alert-dot {
+      flex: 0 0 auto;
+      width: 7px;
+      height: 7px;
+      margin-top: 4px;
+      background: var(--ct-red);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(255, 93, 104, .11);
+    }
+
+    #cost-tab .ct-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
+      gap: 10px;
+    }
+
+    #cost-tab .ct-provider-list {
+      padding: 6px 10px 9px;
+    }
+
+    #cost-tab .ct-provider {
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .055);
+    }
+
+    #cost-tab .ct-provider:last-child {
+      border-bottom: 0;
+    }
+
+    #cost-tab .ct-provider-top {
+      display: grid;
+      grid-template-columns: minmax(90px, 150px) minmax(120px, 1fr) auto;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #cost-tab .ct-provider-name {
+      overflow: hidden;
+      color: #dde5ee;
+      font-family: var(--ct-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    #cost-tab .ct-provider-bar {
+      position: relative;
+      height: 7px;
+      overflow: hidden;
+      background: var(--ct-track);
+      border-radius: 2px;
+    }
+
+    #cost-tab .ct-provider-bar > span {
+      display: block;
+      height: 100%;
+      min-width: 1px;
+      background: var(--ct-blue);
+      border-radius: inherit;
+    }
+
+    #cost-tab .ct-money {
+      color: #eef3f8;
+      font-family: var(--ct-mono);
+      font-size: 11px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    #cost-tab .ct-models {
+      display: grid;
+      gap: 3px;
+      margin: 6px 0 0 18px;
+      padding-left: 10px;
+      border-left: 1px solid var(--ct-border);
+    }
+
+    #cost-tab .ct-model {
+      display: grid;
+      grid-template-columns: minmax(100px, 1fr) auto auto;
+      gap: 10px;
+      align-items: baseline;
+      color: var(--ct-muted);
+      font-family: var(--ct-mono);
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    #cost-tab .ct-model-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    #cost-tab .ct-units {
+      color: var(--ct-dim);
+      white-space: nowrap;
+    }
+
+    #cost-tab .ct-sparklines {
+      display: grid;
+      gap: 1px;
+      background: var(--ct-border);
+    }
+
+    #cost-tab .ct-spark-row {
+      display: grid;
+      grid-template-columns: 110px minmax(120px, 1fr) auto;
+      align-items: center;
+      gap: 8px;
+      min-height: 54px;
+      padding: 6px 10px;
+      background: var(--ct-panel);
+    }
+
+    #cost-tab .ct-spark-name {
+      overflow: hidden;
+      font-family: var(--ct-mono);
+      font-size: 10px;
+      font-weight: 800;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    #cost-tab .ct-spark-svg {
+      display: block;
+      width: 100%;
+      height: 36px;
+    }
+
+    #cost-tab .ct-table-wrap {
+      overflow-x: auto;
+    }
+
+    #cost-tab table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--ct-mono);
+      font-size: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #cost-tab th,
+    #cost-tab td {
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(255,255,255,.055);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    #cost-tab th:first-child,
+    #cost-tab td:first-child {
+      text-align: left;
+    }
+
+    #cost-tab th {
+      color: var(--ct-muted);
+      background: rgba(255,255,255,.015);
+      font-size: 9px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    #cost-tab td {
+      color: #d7dee7;
+    }
+
+    #cost-tab tr:last-child td {
+      border-bottom: 0;
+    }
+
+    #cost-tab .ct-lane {
+      color: #f0f4f8;
+      font-weight: 800;
+    }
+
+    #cost-tab .ct-trend-good {
+      color: var(--ct-green);
+    }
+
+    #cost-tab .ct-trend-bad {
+      color: var(--ct-red);
+    }
+
+    #cost-tab .ct-trend-flat {
+      color: var(--ct-muted);
+    }
+
+    #cost-tab .ct-unpriced {
+      display: none;
+      padding: 10px 12px;
+      color: #ffe0a3;
+      background: rgba(255, 189, 74, .08);
+      border: 1px solid rgba(255, 189, 74, .4);
+      border-radius: var(--ct-radius);
+      font-family: var(--ct-mono);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    #cost-tab .ct-unpriced.is-visible {
+      display: block;
+    }
+
+    #cost-tab .ct-empty {
+      padding: 22px 14px;
+      color: var(--ct-muted);
+      font-family: var(--ct-mono);
+      font-size: 11px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    #cost-tab .ct-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--ct-dim);
+      font-family: var(--ct-mono);
+      font-size: 9px;
+      line-height: 1.4;
+    }
+
+    #cost-tab .ct-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #cost-tab .ct-live-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--ct-green);
+      border-radius: 50%;
+    }
+
+    #cost-tab .ct-live-dot.is-paused {
+      background: var(--ct-amber);
+    }
+
+    @media (max-width: 900px) {
+      #cost-tab .ct-headline,
+      #cost-tab .ct-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #cost-tab .ct-shell {
+        padding: 8px;
+      }
+
+      #cost-tab .ct-provider-top {
+        grid-template-columns: 90px minmax(70px, 1fr) auto;
+        gap: 7px;
+      }
+
+      #cost-tab .ct-model {
+        grid-template-columns: minmax(80px, 1fr) auto;
+      }
+
+      #cost-tab .ct-model .ct-units {
+        grid-column: 1 / -1;
+      }
+
+      #cost-tab .ct-spark-row {
+        grid-template-columns: 82px minmax(100px, 1fr);
+      }
+
+      #cost-tab .ct-spark-row .ct-money {
+        grid-column: 2;
+        text-align: right;
+      }
+    }
+  </style>
+
+  <div class="ct-shell">
+    <div class="ct-headline">
+      <div class="ct-kpi">
+        <div class="ct-label">Today · EST. spend</div>
+        <div id="ct-today" class="ct-spend">$0.00</div>
+        <div id="ct-today-meta" class="ct-subvalue">No priced events yet</div>
+      </div>
+
+      <div class="ct-kpi">
+        <div class="ct-label">Vs yesterday · EST.</div>
+        <div id="ct-delta" class="ct-delta is-flat">—</div>
+        <div id="ct-yesterday" class="ct-subvalue">Yesterday EST. $0.00</div>
+      </div>
+
+      <div class="ct-kpi">
+        <div class="ct-label">Subsidized savings · EST. avoided USD</div>
+        <div id="ct-savings" class="ct-savings-value">$0.00</div>
+        <div class="ct-gauge" aria-hidden="true">
+          <div id="ct-savings-fill" class="ct-gauge-fill"></div>
+        </div>
+        <div id="ct-savings-meta" class="ct-subvalue">No subsidized-job savings recorded</div>
+      </div>
+    </div>
+
+    <div id="ct-alerts" class="ct-alerts" role="alert">
+      <span class="ct-alert-dot" aria-hidden="true"></span>
+      <div id="ct-alert-copy"></div>
+    </div>
+
+    <div class="ct-grid">
+      <div class="ct-panel">
+        <div class="ct-panel-head">
+          <h2 class="ct-title">Provider / model spend</h2>
+          <span class="ct-est">EST. USD · measured units</span>
+        </div>
+        <div id="ct-providers" class="ct-provider-list"></div>
+      </div>
+
+      <div class="ct-panel">
+        <div class="ct-panel-head">
+          <h2 class="ct-title">Top providers · rolling 24h</h2>
+          <span class="ct-est">EST.</span>
+        </div>
+        <div id="ct-sparklines" class="ct-sparklines"></div>
+      </div>
+    </div>
+
+    <div class="ct-panel">
+      <div class="ct-panel-head">
+        <h2 class="ct-title">Lane economics · mirror build cost/site</h2>
+        <span class="ct-est">EST. · compare lane versions</span>
+      </div>
+      <div id="ct-lanes" class="ct-table-wrap"></div>
+    </div>
+
+    <div id="ct-unpriced" class="ct-unpriced"></div>
+
+    <div class="ct-footer">
+      <span>All dollar figures are ESTIMATES from the active visible rate table. Unpriced events are never guessed.</span>
+      <span class="ct-live">
+        <span id="ct-live-dot" class="ct-live-dot"></span>
+        <span id="ct-refresh-state">auto-refresh 60s</span>
+      </span>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      /*
+      SHARED COST-EVENT CONTRACT (embed exactly, every piece speaks this shape):
+      A cost event row: {id, created_at: ISO, type: string, payload: {prospect_id?: string, lane?: string, provider?: string, model?: string, units?: number, unit?: 'tokens_in'|'tokens_out'|'requests'|'seconds'|'minutes'|'builds'|'emails', estimateUSD?: number}}.
+      Event types in our system: cost.llm (provider+model+tokens), cost.api (provider=firecrawl|places|brightdata|resend|vapi|veo, units+unit), cost.build (lane, builds), cost.deploy. Aggregation keys: by provider, by model, by lane, by prospect_id, by hour/day. All dollar figures are ESTIMATES from a visible rate table - label them so. Never fabricate a number: unpriced events surface as unpriced, never guessed.
+      */
+
+      const root = document.getElementById('cost-tab');
+      if (!root) return;
+
+      const $ = (id) => root.querySelector('#' + id);
+      const meter = window.WSSCostMeter;
+
+      let refreshTimer = null;
+      let unsubscribe = null;
+      let lastSnapshot = null;
+
+      const els = {
+        today: $('ct-today'),
+        todayMeta: $('ct-today-meta'),
+        delta: $('ct-delta'),
+        yesterday: $('ct-yesterday'),
+        savings: $('ct-savings'),
+        savingsFill: $('ct-savings-fill'),
+        savingsMeta: $('ct-savings-meta'),
+        alerts: $('ct-alerts'),
+        alertCopy: $('ct-alert-copy'),
+        providers: $('ct-providers'),
+        sparklines: $('ct-sparklines'),
+        lanes: $('ct-lanes'),
+        unpriced: $('ct-unpriced'),
+        liveDot: $('ct-live-dot'),
+        refreshState: $('ct-refresh-state')
+      };
+
+      function num(v) {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : 0;
+      }
+
+      function finiteOrNull(v) {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : null;
+      }
+
+      function money(v) {
+        const n = finiteOrNull(v);
+        if (n === null) return 'unpriced';
+        if (Math.abs(n) >= 1000) {
+          return '$' + n.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+        }
+        if (Math.abs(n) > 0 && Math.abs(n) < 0.01) {
+          return '$' + n.toFixed(4);
+        }
+        return '$' + n.toFixed(2);
+      }
+
+      function compact(v) {
+        const n = finiteOrNull(v);
+        if (n === null) return '—';
+        return new Intl.NumberFormat(undefined, {
+          notation: 'compact',
+          maximumFractionDigits: 1
+        }).format(n);
+      }
+
+      function esc(value) {
+        return String(value ?? '')
+          .replaceAll('&', '&amp;')
+          .replaceAll('<', '&lt;')
+          .replaceAll('>', '&gt;')
+          .replaceAll('"', '&quot;')
+          .replaceAll("'", '&#39;');
+      }
+
+      function array(v) {
+        return Array.isArray(v) ? v : [];
+      }
+
+      function objectEntries(v) {
+        if (!v || typeof v !== 'object' || Array.isArray(v)) return [];
+        return Object.entries(v);
+      }
+
+      function pick(snapshot, paths, fallback) {
+        for (const path of paths) {
+          const parts = path.split('.');
+          let cur = snapshot;
+          let ok = true;
+
+          for (const part of parts) {
+            if (cur == null || !Object.prototype.hasOwnProperty.call(cur, part)) {
+              ok = false;
+              break;
+            }
+            cur = cur[part];
+          }
+
+          if (ok && cur !== undefined && cur !== null) return cur;
+        }
+        return fallback;
+      }
+
+      function usdOf(item) {
+        if (!item || typeof item !== 'object') return null;
+        return finiteOrNull(
+          item.estimateUSD ??
+          item.estimatedUSD ??
+          item.estUSD ??
+          item.usd ??
+          item.costUSD ??
+          item.cost
+        );
+      }
+
+      function normalizeModels(raw) {
+        const source = Array.isArray(raw)
+          ? raw
+          : objectEntries(raw).map(([name, value]) => {
+              if (value && typeof value === 'object') return { name, ...value };
+              return { name, estimateUSD: value };
+            });
+
+        return source.map((m) => ({
+          name: String(m.name ?? m.model ?? 'unknown-model'),
+          usd: usdOf(m),
+          units: finiteOrNull(m.units ?? m.totalUnits),
+          unit: m.unit ?? m.unitsLabel ?? ''
+        })).sort((a, b) => num(b.usd) - num(a.usd));
+      }
+
+      function normalizeProviders(snapshot) {
+        const raw = pick(snapshot, [
+          'providers',
+          'byProvider',
+          'aggregates.byProvider',
+          'aggregation.byProvider'
+        ], []);
+
+        const source = Array.isArray(raw)
+          ? raw
+          : objectEntries(raw).map(([name, value]) => {
+              if (value && typeof value === 'object') return { name, ...value };
+              return { name, estimateUSD: value };
+            });
+
+        return source.map((p) => ({
+          name: String(p.name ?? p.provider ?? 'unknown-provider'),
+          usd: usdOf(p),
+          units: finiteOrNull(p.units ?? p.totalUnits),
+          unit: p.unit ?? '',
+          models: normalizeModels(
+            p.models ??
+            p.byModel ??
+            p.modelBreakdown ??
+            {}
+          ),
+          hourly: array(
+            p.hourly ??
+            p.last24h ??
+            p.sparkline ??
+            p.series
+          ).map((x) => {
+            if (typeof x === 'number') return x;
+            return num(
+              x?.estimateUSD ??
+              x?.estimatedUSD ??
+              x?.usd ??
+              x?.value
+            );
+          })
+        })).sort((a, b) => num(b.usd) - num(a.usd));
+      }
+
+      function normalizeLanes(snapshot) {
+        const raw = pick(snapshot, [
+          'lanes',
+          'byLane',
+          'aggregates.byLane',
+          'aggregation.byLane',
+          'laneEconomics'
+        ], []);
+
+        const source = Array.isArray(raw)
+          ? raw
+          : objectEntries(raw).map(([name, value]) => {
+              if (value && typeof value === 'object') return { name, ...value };
+              return { name, estimateUSD: value };
+            });
+
+        return source.map((lane) => {
+          const sites = finiteOrNull(
+            lane.sites ??
+            lane.siteCount ??
+            lane.builds ??
+            lane.count
+          );
+
+          const total = usdOf(lane);
+
+          let perSite = finiteOrNull(
+            lane.estimateUSDPerSite ??
+            lane.estUSDPerSite ??
+            lane.costPerSiteUSD ??
+            lane.perSiteUSD
+          );
+
+          if (perSite === null && total !== null && sites && sites > 0) {
+            perSite = total / sites;
+          }
+
+          return {
+            lane: String(lane.lane ?? lane.name ?? lane.version ?? 'unknown-lane'),
+            version: String(lane.version ?? lane.laneVersion ?? '—'),
+            sites,
+            total,
+            perSite,
+            previousPerSite: finiteOrNull(
+              lane.previousEstimateUSDPerSite ??
+              lane.previousPerSiteUSD ??
+              lane.previousCostPerSiteUSD
+            )
+          };
+        }).sort((a, b) => num(b.perSite) - num(a.perSite));
+      }
+
+      function todayUSD(snapshot) {
+        return finiteOrNull(pick(snapshot, [
+          'today.estimateUSD',
+          'today.estimatedUSD',
+          'todayUSD',
+          'todayEstimateUSD',
+          'totals.today.estimateUSD',
+          'daily.today.estimateUSD'
+        ], null));
+      }
+
+      function yesterdayUSD(snapshot) {
+        return finiteOrNull(pick(snapshot, [
+          'yesterday.estimateUSD',
+          'yesterday.estimatedUSD',
+          'yesterdayUSD',
+          'yesterdayEstimateUSD',
+          'totals.yesterday.estimateUSD',
+          'daily.yesterday.estimateUSD'
+        ], null));
+      }
+
+      function savingsUSD(snapshot) {
+        return finiteOrNull(pick(snapshot, [
+          'savings.estimateAvoidedUSD',
+          'savings.avoidedUSD',
+          'savings.estimateUSD',
+          'savingsUSD',
+          'estimatedAvoidedUSD',
+          'subsidized.estimateAvoidedUSD'
+        ], null));
+      }
+
+      function pricedCount(snapshot) {
+        return finiteOrNull(pick(snapshot, [
+          'pricedEvents',
+          'pricedEventCount',
+          'counts.priced'
+        ], null));
+      }
+
+      function renderHeadline(snapshot) {
+        const today = todayUSD(snapshot);
+        const yesterday = yesterdayUSD(snapshot);
+        const savings = savingsUSD(snapshot);
+
+        els.today.textContent = money(today ?? 0);
+
+        const pc = pricedCount(snapshot);
+        els.todayMeta.textContent =
+          pc === null
+            ? (today === null ? 'No priced events yet' : 'EST. from priced events')
+            : pc + ' priced event' + (pc === 1 ? '' : 's');
+
+        els.yesterday.textContent =
+          'Yesterday EST. ' + money(yesterday ?? 0);
+
+        els.delta.className = 'ct-delta';
+
+        if (today === null || yesterday === null) {
+          els.delta.textContent = '—';
+          els.delta.classList.add('is-flat');
+        } else if (yesterday === 0) {
+          if (today === 0) {
+            els.delta.textContent = '0.0%';
+            els.delta.classList.add('is-flat');
+          } else {
+            els.delta.textContent = '+' + money(today);
+            els.delta.classList.add('is-up');
+          }
+        } else {
+          const pct = ((today - yesterday) / yesterday) * 100;
+          const sign = pct > 0 ? '+' : '';
+          els.delta.textContent = sign + pct.toFixed(1) + '%';
+          els.delta.classList.add(
+            pct > 0 ? 'is-up' :
+            pct < 0 ? 'is-down' :
+            'is-flat'
+          );
+        }
+
+        els.savings.textContent = money(savings ?? 0);
+
+        const denominator =
+          savings !== null && today !== null
+            ? Math.max(0, savings) + Math.max(0, today)
+            : 0;
+
+        const pct = denominator > 0
+          ? Math.min(100, Math.max(0, (savings / denominator) * 100))
+          : 0;
+
+        els.savingsFill.style.width = pct.toFixed(1) + '%';
+        els.savingsMeta.textContent =
+          savings && savings > 0
+            ? 'EST. avoided versus charged + subsidized work'
+            : 'No subsidized-job savings recorded';
+      }
+
+      function renderAlerts(snapshot) {
+        const alerts = array(snapshot?.alerts);
+
+        if (!alerts.length) {
+          els.alerts.classList.remove('is-visible');
+          els.alertCopy.textContent = '';
+          return;
+        }
+
+        els.alertCopy.innerHTML = alerts.map((a) => {
+          if (typeof a === 'string') return esc(a);
+
+          const label =
+            a.message ??
+            a.label ??
+            a.title ??
+            a.type ??
+            'Cost spike detected';
+
+          const value = usdOf(a);
+
+          return value === null
+            ? esc(label)
+            : esc(label) + ' · EST. ' + esc(money(value));
+        }).join('<br>');
+
+        els.alerts.classList.add('is-visible');
+      }
+
+      function renderProviders(snapshot) {
+        const providers = normalizeProviders(snapshot);
+
+        if (!providers.length) {
+          els.providers.innerHTML =
+            '<div class="ct-empty">No events yet — instrumentation ships them.</div>';
+          return;
+        }
+
+        const max = Math.max(...providers.map((p) => num(p.usd)), 0);
+
+        els.providers.innerHTML = providers.map((provider) => {
+          const width = max > 0
+            ? Math.max(1, (num(provider.usd) / max) * 100)
+            : 0;
+
+          const providerUnits =
+            provider.units === null
+              ? ''
+              : ' · ' + compact(provider.units) + (provider.unit ? ' ' + esc(provider.unit) : '');
+
+          const models = provider.models.length
+            ? '<div class="ct-models">' +
+                provider.models.map((model) => {
+                  const unitText =
+                    model.units === null
+                      ? 'units unavailable'
+                      : compact(model.units) + (model.unit ? ' ' + esc(model.unit) : ' units');
+
+                  return (
+                    '<div class="ct-model">' +
+                      '<span class="ct-model-name">' + esc(model.name) + '</span>' +
+                      '<span class="ct-units">' + unitText + '</span>' +
+                      '<span class="ct-money">EST. ' + esc(money(model.usd)) + '</span>' +
+                    '</div>'
+                  );
+                }).join('') +
+              '</div>'
+            : '';
+
+          return (
+            '<div class="ct-provider">' +
+              '<div class="ct-provider-top">' +
+                '<div class="ct-provider-name" title="' + esc(provider.name) + '">' +
+                  esc(provider.name) +
+                '</div>' +
+                '<div class="ct-provider-bar" aria-hidden="true">' +
+                  '<span style="width:' + width.toFixed(2) + '%"></span>' +
+                '</div>' +
+                '<div class="ct-money">EST. ' + esc(money(provider.usd)) + providerUnits + '</div>' +
+              '</div>' +
+              models +
+            '</div>'
+          );
+        }).join('');
+      }
+
+      function svgSpark(values) {
+        const width = 260;
+        const height = 36;
+        const pad = 2;
+        const clean = values.length ? values.slice(-24).map(num) : [];
+
+        if (!clean.length) {
+          return (
+            '<svg class="ct-spark-svg" viewBox="0 0 ' + width + ' ' + height + '" preserveAspectRatio="none" aria-hidden="true">' +
+              '<line x1="0" y1="' + (height / 2) + '" x2="' + width + '" y2="' + (height / 2) + '" stroke="currentColor" stroke-opacity=".18" stroke-width="1"/>' +
+            '</svg>'
+          );
+        }
+
+        const min = Math.min(...clean);
+        const max = Math.max(...clean);
+        const range = max - min || 1;
+
+        const points = clean.map((v, i) => {
+          const x = clean.length === 1
+            ? width / 2
+            : pad + (i / (clean.length - 1)) * (width - pad * 2);
+          const y = height - pad - ((v - min) / range) * (height - pad * 2);
+          return x.toFixed(2) + ',' + y.toFixed(2);
+        }).join(' ');
+
+        return (
+          '<svg class="ct-spark-svg" viewBox="0 0 ' + width + ' ' + height + '" preserveAspectRatio="none" aria-hidden="true">' +
+            '<line x1="0" y1="' + (height - 1) + '" x2="' + width + '" y2="' + (height - 1) + '" stroke="currentColor" stroke-opacity=".10" stroke-width="1"/>' +
+            '<polyline points="' + points + '" fill="none" stroke="currentColor" stroke-opacity=".8" stroke-width="1.5" vector-effect="non-scaling-stroke"/>' +
+          '</svg>'
+        );
+      }
+
+      function renderSparklines(snapshot) {
+        const providers = normalizeProviders(snapshot).slice(0, 5);
+
+        if (!providers.length) {
+          els.sparklines.innerHTML =
+            '<div class="ct-empty">No events yet — instrumentation ships them.</div>';
+          return;
+        }
+
+        els.sparklines.innerHTML = providers.map((provider) => (
+          '<div class="ct-spark-row">' +
+            '<div class="ct-spark-name" title="' + esc(provider.name) + '">' + esc(provider.name) + '</div>' +
+            svgSpark(provider.hourly) +
+            '<div class="ct-money">EST. ' + esc(money(provider.usd)) + '</div>' +
+          '</div>'
+        )).join('');
+      }
+
+      function laneTrend(lane) {
+        if (lane.perSite === null || lane.previousPerSite === null) {
+          return { cls: 'ct-trend-flat', text: '—' };
+        }
+
+        if (lane.previousPerSite === 0) {
+          if (lane.perSite === 0) return { cls: 'ct-trend-flat', text: '0.0%' };
+          return { cls: 'ct-trend-bad', text: 'new cost' };
+        }
+
+        const pct =
+          ((lane.perSite - lane.previousPerSite) / lane.previousPerSite) * 100;
+
+        if (Math.abs(pct) < 0.05) {
+          return { cls: 'ct-trend-flat', text: '0.0%' };
+        }
+
+        return {
+          cls: pct < 0 ? 'ct-trend-good' : 'ct-trend-bad',
+          text: (pct > 0 ? '+' : '') + pct.toFixed(1) + '%'
+        };
+      }
+
+      function renderLanes(snapshot) {
+        const lanes = normalizeLanes(snapshot);
+
+        if (!lanes.length) {
+          els.lanes.innerHTML =
+            '<div class="ct-empty">No build-cost events yet — instrumentation ships them.</div>';
+          return;
+        }
+
+        els.lanes.innerHTML =
+          '<table>' +
+            '<thead>' +
+              '<tr>' +
+                '<th>Lane</th>' +
+                '<th>Version</th>' +
+                '<th>Sites</th>' +
+                '<th>Total EST.</th>' +
+                '<th>EST. / site</th>' +
+                '<th>Vs previous</th>' +
+              '</tr>' +
+            '</thead>' +
+            '<tbody>' +
+              lanes.map((lane) => {
+                const trend = laneTrend(lane);
+
+                return (
+                  '<tr>' +
+                    '<td class="ct-lane">' + esc(lane.lane) + '</td>' +
+                    '<td>' + esc(lane.version) + '</td>' +
+                    '<td>' + (lane.sites === null ? '—' : esc(compact(lane.sites))) + '</td>' +
+                    '<td>' + esc(money(lane.total)) + '</td>' +
+                    '<td>' + esc(money(lane.perSite)) + '</td>' +
+                    '<td class="' + trend.cls + '">' + esc(trend.text) + '</td>' +
+                  '</tr>'
+                );
+              }).join('') +
+            '</tbody>' +
+          '</table>';
+      }
+
+      function unpricedInfo(snapshot) {
+        const raw = pick(snapshot, [
+          'unpricedEvents',
+          'unpriced',
+          'unpriced.events'
+        ], null);
+
+        if (Array.isArray(raw)) {
+          return {
+            count: raw.length,
+            events: raw
+          };
+        }
+
+        const count = finiteOrNull(
+          pick(snapshot, [
+            'unpricedEventCount',
+            'counts.unpriced',
+            'unpriced.count'
+          ], null)
+        );
+
+        return {
+          count: count ?? 0,
+          events: []
+        };
+      }
+
+      function renderUnpriced(snapshot) {
+        const info = unpricedInfo(snapshot);
+
+        if (!info.count) {
+          els.unpriced.classList.remove('is-visible');
+          els.unpriced.textContent = '';
+          return;
+        }
+
+        const examples = info.events.slice(0, 4).map((event) => {
+          const payload = event?.payload || {};
+          const key =
+            payload.model ||
+            payload.provider ||
+            event?.type ||
+            'event';
+          return key;
+        });
+
+        els.unpriced.innerHTML =
+          '<strong>' + esc(info.count) + ' unpriced event' + (info.count === 1 ? '' : 's') + '.</strong> ' +
+          'No estimate was guessed. Add or update the visible rate table to price these events.' +
+          (examples.length
+            ? ' Seen: ' + examples.map(esc).join(', ') + (info.count > examples.length ? ', …' : '') + '.'
+            : '');
+
+        els.unpriced.classList.add('is-visible');
+      }
+
+      function render(snapshot) {
+        const safe = snapshot && typeof snapshot === 'object' ? snapshot : {};
+        lastSnapshot = safe;
+
+        renderHeadline(safe);
+        renderAlerts(safe);
+        renderProviders(safe);
+        renderSparklines(safe);
+        renderLanes(safe);
+        renderUnpriced(safe);
+      }
+
+      function setRefreshState() {
+        const hidden = document.hidden;
+        els.liveDot.classList.toggle('is-paused', hidden);
+        els.refreshState.textContent = hidden
+          ? 'auto-refresh paused · tab hidden'
+          : 'auto-refresh 60s';
+      }
+
+      async function refreshNow() {
+        if (!meter || typeof meter.refresh !== 'function') return;
+
+        try {
+          const result = await meter.refresh();
+          if (result && typeof result === 'object') render(result);
+          else if (typeof meter.snapshot === 'function') render(meter.snapshot());
+        } catch (err) {
+          console.error('[cost-tab] refresh failed', err);
+        }
+      }
+
+      function startTimer() {
+        stopTimer();
+        if (document.hidden) return;
+
+        refreshTimer = window.setInterval(() => {
+          if (!document.hidden) refreshNow();
+        }, 60000);
+      }
+
+      function stopTimer() {
+        if (refreshTimer !== null) {
+          clearInterval(refreshTimer);
+          refreshTimer = null;
+        }
+      }
+
+      function onVisibilityChange() {
+        setRefreshState();
+
+        if (document.hidden) {
+          stopTimer();
+        } else {
+          refreshNow();
+          startTimer();
+        }
+      }
+
+      if (!meter) {
+        render({});
+        els.todayMeta.textContent = 'WSSCostMeter unavailable';
+        els.providers.innerHTML =
+          '<div class="ct-empty">No events yet — instrumentation ships them.</div>';
+        els.sparklines.innerHTML =
+          '<div class="ct-empty">No events yet — instrumentation ships them.</div>';
+        els.lanes.innerHTML =
+          '<div class="ct-empty">No build-cost events yet — instrumentation ships them.</div>';
+        els.liveDot.classList.add('is-paused');
+        els.refreshState.textContent = 'meter unavailable';
+        return;
+      }
+
+      try {
+        if (typeof meter.snapshot === 'function') {
+          render(meter.snapshot());
+        } else {
+          render({});
+        }
+      } catch (err) {
+        console.error('[cost-tab] initial snapshot failed', err);
+        render({});
+      }
+
+      if (typeof meter.onUpdate === 'function') {
+        try {
+          const maybeUnsubscribe = meter.onUpdate((snapshot) => {
+            if (snapshot && typeof snapshot === 'object') {
+              render(snapshot);
+            } else if (typeof meter.snapshot === 'function') {
+              render(meter.snapshot());
+            }
+          });
+
+          if (typeof maybeUnsubscribe === 'function') {
+            unsubscribe = maybeUnsubscribe;
+          }
+        } catch (err) {
+          console.error('[cost-tab] onUpdate subscription failed', err);
+        }
+      }
+
+      document.addEventListener('visibilitychange', onVisibilityChange);
+      setRefreshState();
+      startTimer();
+
+      window.addEventListener('pagehide', () => {
+        stopTimer();
+        document.removeEventListener('visibilitychange', onVisibilityChange);
+        if (unsubscribe) {
+          try { unsubscribe(); } catch (_) {}
+          unsubscribe = null;
+        }
+      }, { once: true });
+    })();
+  </script>
+</section>

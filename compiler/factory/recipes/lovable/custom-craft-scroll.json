@@ -1,0 +1,73 @@
+{
+ "id": "custom-craft-scroll",
+ "source": "5cfe5421-9391-447e-9279-0da7a9162c1c",
+ "palette": {
+  "vars": {
+   "--ink": "oklch(0.18 0.012 250)",
+   "--ink-deep": "oklch(0.12 0.012 250)",
+   "--ink-soft": "oklch(0.24 0.012 250)",
+   "--bone": "oklch(0.965 0.006 80)",
+   "--ember": "oklch(0.51 0.21 22)",
+   "--ember-deep": "oklch(0.40 0.20 22)",
+   "--ember-glow": "oklch(0.62 0.22 25)",
+   "--brass": "oklch(0.78 0.10 75)",
+   "--background": "var(--bone)",
+   "--foreground": "var(--ink)",
+   "--card": "oklch(1 0 0)",
+   "--card-foreground": "var(--ink)",
+   "--popover": "oklch(1 0 0)",
+   "--popover-foreground": "var(--ink)",
+   "--primary": "var(--ember)",
+   "--primary-foreground": "oklch(1 0 0)",
+   "--secondary": "var(--ink)",
+   "--secondary-foreground": "var(--bone)",
+   "--muted": "oklch(0.94 0.005 80)",
+   "--muted-foreground": "oklch(0.45 0.015 250)",
+   "--accent": "var(--brass)",
+   "--accent-foreground": "var(--ink)",
+   "--destructive": "oklch(0.55 0.22 25)",
+   "--destructive-foreground": "oklch(1 0 0)",
+   "--border": "oklch(0.88 0.01 80)",
+   "--input": "oklch(0.92 0.008 80)",
+   "--ring": "var(--ember)",
+   "--grain": "url(\"data:image/svg+xml"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "var(--ink)",
+   "--foreground": "var(--bone)"
+  }
+ },
+ "fonts": {
+  "display": "Fjalla One",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@300;400;500;600;700&display=swap"
+ },
+ "radius": "4px",
+ "shadows": [],
+ "keyframes": [
+  {
+   "name": "marquee",
+   "css": "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }"
+  },
+  {
+   "name": "rise",
+   "css": "@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }"
+  },
+  {
+   "name": "kenburns",
+   "css": "@keyframes kenburns { from { transform: scale(1.05); } to { transform: scale(1.16); } }"
+  },
+  {
+   "name": "shimmer",
+   "css": "@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }"
+  }
+ ],
+ "signatures": [
+  "marquee",
+  "noise",
+  "ken-burns",
+  "glow",
+  "shimmer"
+ ]
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 220" role="img" aria-label="Woodward Software Labs">
+  <defs>
+    <linearGradient id="wslGradH" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="0.55" stop-color="#7C5CFF"/>
+      <stop offset="1" stop-color="#FF4ECD"/>
+    </linearGradient>
+    <linearGradient id="wslBgH" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0F1E"/>
+      <stop offset="1" stop-color="#04060F"/>
+    </linearGradient>
+  </defs>
+  <!-- mark -->
+  <g transform="translate(10,10) scale(0.390625)">
+    <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#wslBgH)"/>
+    <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="url(#wslGradH)" stroke-opacity="0.35" stroke-width="4"/>
+    <path d="M118 152 L186 362 L256 208 L326 362 L394 152"
+          fill="none" stroke="url(#wslGradH)" stroke-width="42"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="118" cy="152" r="18" fill="#00E5FF"/>
+    <circle cx="394" cy="152" r="18" fill="#FF4ECD"/>
+    <circle cx="256" cy="208" r="14" fill="#7C5CFF"/>
+  </g>
+  <!-- wordmark -->
+  <text x="240" y="112" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-weight="700" font-size="76" fill="#E8ECF8" letter-spacing="1">WOODWARD</text>
+  <text x="242" y="172" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-weight="500" font-size="40" fill="url(#wslGradH)" letter-spacing="14">SOFTWARE LABS</text>
+</svg>

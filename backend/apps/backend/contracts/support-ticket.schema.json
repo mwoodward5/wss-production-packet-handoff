@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wss://ghost-agency/contracts/support-ticket.schema.json",
+  "title": "Support / Edit Ticket",
+  "description": "Post-sale customer request. Created from support email, form, or SMS reply. Drives Agent 10 (Support & Edits).",
+  "type": "object",
+  "required": ["ticket_id", "order_id", "kind", "request_text", "state", "created_at"],
+  "properties": {
+    "ticket_id": { "type": "string" },
+    "order_id": { "type": "string" },
+    "kind": { "type": "string", "enum": ["content_edit", "photo_swap", "new_page", "hours_change", "contact_change", "seo_request", "bug", "domain_dns", "billing_question", "cancellation_request", "other"] },
+    "request_text": { "type": "string" },
+    "classification": {
+      "type": "object",
+      "properties": {
+        "in_quota": { "type": "boolean" },
+        "risk": { "type": "string", "enum": ["safe_auto", "needs_review", "needs_owner_approval"], "description": "safe_auto: text/hours/photo swaps validated against packet facts. needs_review: new claims, pricing, legal text. needs_owner_approval: cancellation, refund, domain transfer, anything destructive." },
+        "estimated_effort": { "type": "string", "enum": ["minutes", "hours", "quote_required"] }
+      }
+    },
+    "resolution": { "type": "object", "properties": { "diff_summary": {"type":"string"}, "deployed_url": {"type":"string"}, "qc_rerun_grade": {"type":"string"}, "closed_by": {"type":"string"} } },
+    "sla_due_at": { "type": "string", "format": "date-time" },
+    "state": { "type": "string", "enum": ["open", "classified", "in_progress", "awaiting_customer", "awaiting_owner", "shipped", "closed"] },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

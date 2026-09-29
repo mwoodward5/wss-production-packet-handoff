@@ -1,0 +1,6 @@
+# Add this read-only bind to the existing wss-local-gateway service.
+# Do not replace its existing mounts.
+- type: bind
+  source: C:/Users/Main/ZCodeProject/wss-render-v2/publish/burns/site
+  target: /srv/wss-render-v2/burns
+  read_only: true

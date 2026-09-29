@@ -1,0 +1,9 @@
+{
+  "anchors": ["service", "city", "review", "faq"],
+  "maxLinksPerPage": 6,
+  "rules": [
+    { "from": "service:*", "to": ["service-areas", "reviews", "contact"] },
+    { "from": "area:*",    "to": ["services", "reviews", "contact"] },
+    { "from": "blog:*",    "to": ["services", "contact"] }
+  ]
+}

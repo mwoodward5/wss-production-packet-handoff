@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!--
+      electrical-livewire — A+ static rebuild (2026-09-02).
+
+      Zero-framework, zero-CDN, static-first donor. Everything the visitor
+      needs is in this markup, in source order; JavaScript only adds sizzle
+      (reveals, count-ups, hero video arming) and every one of those extras
+      is gated behind the .js class this document sets BEFORE first paint
+      plus prefers-reduced-motion, so no-JS and reduced-motion users see the
+      complete page. The palette is consumed exclusively through the mirror
+      engine's --wss-* custom properties (with achromatic fallbacks), so the
+      same bytes pass AA under both light and dark client palettes.
+    -->
+
+    <!-- Progressive enhancement flag: set before the stylesheet loads so
+         .js-gated styles never flash. -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <title>Electrician in {{CITY}}, {{REGION}} | {{BUSINESS_NAME}}</title>
+    <meta
+      name="description"
+      content="{{BUSINESS_NAME}} handles residential and commercial electrical work in {{CITY}}, {{REGION}}[[NEED:COUNTY]] and the surrounding {{COUNTY}} area[[/NEED]] — panel upgrades, EV chargers, generators, lighting, wiring and troubleshooting.[[NEED:PHONE]] Call {{PHONE}}.[[/NEED]][[NEED:!PHONE]] Request a written estimate.[[/NEED]]"
+    />
+    <meta name="author" content="{{BUSINESS_NAME}}" />
+    <!-- GEO is a verified "lat,lng" pair; the whole tag collapses when it is blank. -->
+    <meta name="geo.position" content="{{GEO}}" data-collapse-if-empty="GEO" />
+    [[NEED:DOMAIN]]<link rel="canonical" href="https://{{DOMAIN}}/" data-domain-meta />[[/NEED]]
+
+    <meta property="og:title" content="Electrician in {{CITY}}, {{REGION}} | {{BUSINESS_NAME}}" />
+    <meta
+      property="og:description"
+      content="Residential and commercial electrical work in {{CITY}}, {{REGION}} — panels, EV chargers, generators, lighting, wiring and troubleshooting. Written estimates before work begins."
+    />
+    <meta property="og:type" content="website" />
+    [[NEED:DOMAIN]]<meta property="og:url" content="https://{{DOMAIN}}/" data-domain-meta />[[/NEED]]
+    <meta property="og:locale" content="en_US" />
+    [[NEED:DOMAIN]]<meta property="og:image" content="https://{{DOMAIN}}/assets/work-1-CXjA8BKM.jpg" data-domain-meta />[[/NEED]]
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Electrician in {{CITY}}, {{REGION}} | {{BUSINESS_NAME}}" />
+    <meta
+      name="twitter:description"
+      content="Residential and commercial electrical work in {{CITY}}, {{REGION}} — panels, EV chargers, generators, lighting, wiring and troubleshooting."
+    />
+    [[NEED:DOMAIN]]<meta name="twitter:image" content="https://{{DOMAIN}}/assets/work-1-CXjA8BKM.jpg" data-domain-meta />[[/NEED]]
+
+    <!-- LocalBusiness graph. OPTIONAL facts ride NEED phrase markers so a
+         blank token never leaves a dangling comma or an invented fact. -->
+    <script type="application/ld+json" data-domain-meta>
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "{{BUSINESS_NAME}}",
+      [[NEED:DOMAIN]]"url": "https://{{DOMAIN}}/",[[/NEED]]
+      [[NEED:PHONE]]"telephone": "{{PHONE}}",[[/NEED]]
+      [[NEED:EMAIL]]"email": "{{EMAIL}}",[[/NEED]]
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ADDRESS_CITY}}",
+        "addressRegion": "{{REGION}}",
+        [[NEED:POSTAL]]"postalCode": "{{POSTAL}}",[[/NEED]]
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "{{CITY}}" }[[NEED:COUNTY]],
+        { "@type": "AdministrativeArea", "name": "{{COUNTY}}" }[[/NEED]]
+      ],
+      [[NEED:GEO_LAT]]"geo": { "@type": "GeoCoordinates", "latitude": "{{GEO_LAT}}", "longitude": "{{GEO_LNG}}" },[[/NEED]]
+      [[NEED:LICENSE]]"hasCredential": "{{LICENSE}}",[[/NEED]]
+      [[NEED:PROFILE_URL]]"sameAs": ["{{PROFILE_URL}}"],[[/NEED]]
+      "priceRange": "$$"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What areas does {{BUSINESS_NAME}} serve?","acceptedAnswer":{"@type":"Answer","text":"We work across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and the wider {{COUNTY}} area[[/NEED]].[[NEED:PHONE]] Call {{PHONE}}[[/NEED]][[NEED:!PHONE]] Use the contact options on this page[[/NEED]] to confirm your address is in range."}},
+        {"@type":"Question","name":"Do you give written estimates?","acceptedAnswer":{"@type":"Answer","text":"Yes — every job above minor repairs gets a written, itemized estimate before work starts. Panel upgrades, EV chargers and generator hookups are always quoted in writing."}},
+        {"@type":"Question","name":"How do I know my panel needs an upgrade?","acceptedAnswer":{"@type":"Answer","text":"Frequent breaker trips, flicker when large loads start, a fuse box or a panel under 100 amps, warm panel surfaces, or two-prong outlets everywhere are the usual signs. An on-site check settles it."}},
+        {"@type":"Question","name":"Can you install an EV charger at my home?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most homes need a dedicated 240-volt circuit; some need a panel upgrade first. We load-check the service, quote the circuit or upgrade, then install and test the charger you own or plan to buy."}},
+        {"@type":"Question","name":"Are you licensed and insured?","acceptedAnswer":{"@type":"Answer","text":"[[NEED:LICENSE]]Licensed under {{LICENSE}} — the number is on every estimate and invoice.[[/NEED]][[NEED:!LICENSE]]License and insurance details are printed on every written estimate.[[/NEED]]"}},
+        {"@type":"Question","name":"Part of the house lost power — what should I do first?","acceptedAnswer":{"@type":"Answer","text":"Check the main panel for a tripped breaker and reset it once, fully off then on. If it trips again or the fault is not at the panel, stop there and[[NEED:PHONE]] call {{PHONE}}[[/NEED]][[NEED:!PHONE]] contact us[[/NEED]] — repeated resets can hide a serious fault."}}
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="assets/electrical-livewire.css" />
+    <!-- Hero enhancement bundle: mounts the ladder-marked video (hidden, with
+         poster) into the hero and runs the poster-first/tap-to-play control.
+         The hero is complete without it — the poster photograph below is the
+         no-JS hero. -->
+    <script src="assets/index-electrical-livewire.js" defer></script>
+    <style data-wss-hero-fallback>
+      /* THE HERO CLIP CAN NEVER PRESENT AS A BLACK RECTANGLE: the marked video
+         paints its own hero photograph/color beneath any frame, hidden means
+         hidden even where a preflight resets video display, and a clip that
+         failed every ladder rung is hidden outright so the site's own hero
+         image shows instead. */
+      video[data-hero-video] { background: hsl(0 0% 0%) url("/assets/hero-electrical-Bs6mWwJJ.jpg") center/cover no-repeat; }
+      video[data-hero-video][hidden] { display: none !important; }
+      video[data-hero-video][data-hero-dead] { display: none !important; }
+    </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://{{DOMAIN}}/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://{{DOMAIN}}/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Work", "item": "https://{{DOMAIN}}/#gallery" }
+      ]
+    },
+    {
+      "@type": "ImageGallery",
+      "name": "{{BUSINESS_NAME}} recent work in {{CITY}}, {{REGION}}",
+      "associatedMedia": [
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/work-1-CXjA8BKM.jpg", "caption": "Panel upgrade, mid-swap" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/work-2-BzcDhsNE.jpg", "caption": "Commercial panel work" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/work-3-9S1ZSu2C.jpg", "caption": "Fixture installation" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/work-4-Zxb9b3p3.jpg", "caption": "Generator inlet &amp; panel" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/work-5-Bja_EgKj.jpg", "caption": "EV charger install" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/work-6-DSv3xhRn.jpg", "caption": "Rewiring rough-in" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/work-7-C3q-fGk4.jpg", "caption": "Standby generator set" },
+        { "@type": "ImageObject", "contentUrl": "https://{{DOMAIN}}/assets/work-8-BlbBpfHl.jpg", "caption": "Outlet &amp; charging circuits" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "{{BUSINESS_NAME}}",
+      "url": "https://{{DOMAIN}}/",
+      "potentialAction": { "@type": "ReadAction", "target": "https://{{DOMAIN}}/#contact" }
+    }
+  ]
+}
+</script>
+
+</head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ================================================================
+         SITE HEADER — sticky slab bar. Flex + gap, brand name truncates
+         with an ellipsis, nav collapses into a <details> drawer under
+         1024px, and the logo sits on a --wss-surface-alt plate so a
+         low-contrast mark never floats on the dark slab.
+         ================================================================ -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="{{BUSINESS_NAME}} home">
+          [[NEED:LOGO_URL]]<span class="logo-plate"><img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}} logo" width="40" height="40" /></span>[[/NEED]]
+          <span class="brand-name">{{BUSINESS_NAME}}</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#gallery">The work</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        [[NEED:PHONE]]<a class="header-call" data-cta="header-call" href="tel:{{PHONE_DIGITS}}">
+          <span class="call-label">Call now</span> <span class="call-num">{{PHONE}}</span>
+        </a>[[/NEED]]
+
+        <!-- No-JS mobile nav: a <details> drawer works without scripts. -->
+        <details class="nav-drawer">
+          <summary aria-label="Open menu">
+            <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="drawer-word">Menu</span>
+          </summary>
+          <div class="drawer-panel">
+            <nav aria-label="Mobile">
+              <a href="#services">Services</a>
+              <a href="#process">Process</a>
+              <a href="#gallery">The work</a>
+              <a href="#testimonials">Reviews</a>
+              <a href="#faq">FAQ</a>
+              <a href="#contact">Contact</a>
+            </nav>
+            [[NEED:PHONE]]<a class="drawer-call" data-cta="dock-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="drawer-call" data-cta="dock-quote" href="#contact">Request service</a>[[/NEED]]
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ==============================================================
+           HERO — three commented variants, exactly one active.
+           ACTIVE: hero/video-hero — full-bleed background video with a
+           poster photograph that IS the hero on its own. The poster
+           <img> sits under the <video> permanently, the clip is armed by
+           the ladder runtime at the foot of this file, mobile is
+           poster-first with a tap-to-play chip, and the scrim floor
+           holds AA over the poster and over any frame. Critical copy
+           lives in the left column, outside the photo's center-safe
+           zone (the panel subject is centered).
+           ============================================================== -->
+      <!-- VARIANT: hero/video-hero (ACTIVE) -->
+      <section id="top" class="hero hero-video" aria-label="Introduction">
+        <div class="hero-media" aria-hidden="true">
+          <img class="hero-poster" src="assets/hero-electrical-Bs6mWwJJ.jpg" alt="" width="1600" height="1000" decoding="async" />
+          <div class="hero-grid-lines"></div>
+          <div class="hero-glow hero-glow-a"></div>
+          <div class="hero-glow hero-glow-b"></div>
+          <div class="hero-scrim"></div>
+          <div class="hero-grain"></div>
+        </div>
+
+        <div class="hero-inner"><div class="hero-copy-col">
+          <p class="hero-eyebrow glass-chip">
+            Electrical contractor&nbsp;&middot;&nbsp;{{CITY}}, {{REGION}}
+          </p>
+          <h1 class="hero-title">{{HERO_HEADLINE}}</h1>
+          <p class="hero-lede">
+            Residential and commercial electrical work across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and {{COUNTY}}[[/NEED]] — panels, EV chargers, generators, lighting, wiring and troubleshooting, with a written estimate before anything is touched.
+          </p>
+          <div class="hero-ctas">
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="#contact">Request service</a>[[/NEED]]
+            <a class="btn btn-ghost" data-cta="hero-quote" href="#services">See the work</a>
+          </div>
+          <ul class="hero-chips" aria-label="Credentials at a glance">
+            [[NEED:LICENSE]]<li class="glass-chip" data-collapse-if-empty="LICENSE">Licensed &middot; {{LICENSE}}</li>[[/NEED]]
+            [[NEED:RATING,REVIEW_COUNT]]<li class="glass-chip" data-collapse-if-empty="RATING,REVIEW_COUNT">{{RATING}}&nbsp;rating &middot; {{REVIEW_COUNT}} reviews</li>[[/NEED]]
+            <li class="glass-chip">Written estimates</li>
+          </ul>
+        </div></div>
+
+        <button class="hero-play glass-chip" type="button" hidden>
+          <span aria-hidden="true">&#9654;</span> Play film
+        </button>
+      </section>
+
+      <!-- VARIANT: hero/split-right — donor's original split: copy left,
+           media card right on the slab; video lives in the right-hand card.
+      <section id="top" class="hero hero-split" aria-label="Introduction">
+        <div class="hero-inner hero-split-grid">
+          <div class="hero-copy">
+            <p class="hero-eyebrow glass-chip">Electrical contractor &middot; {{CITY}}, {{REGION}}</p>
+            <h1 class="hero-title">{{HERO_HEADLINE}}</h1>
+            <p class="hero-lede">Residential and commercial electrical work across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and {{COUNTY}}[[/NEED]] — written estimates before anything is touched.</p>
+            <div class="hero-ctas">
+              [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+              [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="#contact">Request service</a>[[/NEED]]
+            </div>
+          </div>
+          <figure class="hero-media-card">
+            <img class="hero-poster" src="assets/hero-electrical-Bs6mWwJJ.jpg" alt="Electrician's hands testing a live breaker panel with a multimeter" width="1600" height="1000" />
+          </figure>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: hero/grid-poster — pure CSS hero: drawn grid-lines and
+           glow orbs over the slab, poster as a framed plate, no video.
+      <section id="top" class="hero hero-grid" aria-label="Introduction">
+        <div class="hero-inner">
+          <p class="hero-eyebrow glass-chip">{{CITY}}, {{REGION}}</p>
+          <h1 class="hero-title">{{HERO_HEADLINE}}</h1>
+          <p class="hero-lede">Panels, EV chargers, generators, lighting, wiring and troubleshooting across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and {{COUNTY}}[[/NEED]].</p>
+          <div class="hero-ctas">
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="hero-call" href="#contact">Request service</a>[[/NEED]]
+            <a class="btn btn-ghost" data-cta="hero-quote" href="#services">See the work</a>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           SERVICES — exactly ONE services block on the page. Nine cards,
+           the vertical's standard service set, stated as what the trade
+           does — never as unverifiable claims about a contractor.
+           ============================================================== -->
+      <!-- VARIANT: services/grid-cards (ACTIVE) -->
+            <!-- SECTION: TRUST STRIP — VARIANT: trust/inline-badge-rail (active)
+           VARIANT: trust/three-up-cards · VARIANT: trust/single-guarantee-line
+           Every claim is token-backed or process-backed; no invented awards. -->
+      <section id="trust" class="section trust-strip" aria-label="Credentials and guarantees">
+        <div class="container">
+          <ul class="badge-rail">
+            <li class="badge"><span class="badge-mark" aria-hidden="true">&#10003;</span><span><strong>[[NEED:LICENSE]]Licensed {{LICENSE}}[[/NEED]][[NEED:!LICENSE]]Licensed where required[[/NEED]]</strong><br>verifiable with the state board</span></li>
+            <li class="badge"><span class="badge-mark" aria-hidden="true">&#9873;</span><span><strong>Insured &amp; bonded</strong><br>certificate sent with every quote</span></li>
+            <li class="badge"><span class="badge-mark" aria-hidden="true">&#9200;</span><span><strong>Written timeline</strong><br>start and finish dates on the quote</span></li>
+            <li class="badge"><span class="badge-mark" aria-hidden="true">&#9734;</span><span><strong>Workmanship warranty</strong><br>in writing, transferable to the next owner</span></li>
+            <li class="badge"><span class="badge-mark" aria-hidden="true">&#8962;</span><span><strong>Local to {{CITY}}</strong><br>[[NEED:COUNTY]]crews live in {{COUNTY}}[[/NEED]][[NEED:!COUNTY]]crews live and work here[[/NEED]]</span></li>
+          </ul>
+        </div>
+      </section>
+
+<section id="services" class="section" aria-labelledby="services-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-title">Electrical services, quoted in writing</h2>
+            <p class="section-lede">
+              From a dead circuit on a Sunday morning to a full service upgrade — this is the work, and every job starts the same way: a look, then a written estimate.
+            </p>
+          </header>
+
+          <ul class="svc-grid cards" role="list">
+            <li class="svc card rv">
+              <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M10 20v-5h4v5"/></svg></span>
+              <h3 class="card-title">Residential electrical</h3>
+              <p class="card-body">Repairs, additions and remodel circuits for houses and condos — outlets, lighting, sub-panels and everything behind the walls.</p>
+            </li>
+            <li class="svc card rv">
+              <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12"/><path d="M4 21h16"/><path d="M9 21v-6h6v6"/><path d="M9 11h.01M15 11h.01"/></svg></span>
+              <h3 class="card-title">Commercial electrical</h3>
+              <p class="card-body">Tenant fit-outs, three-phase circuits, service gear and lighting for shops, offices and small industrial units.</p>
+            </li>
+            <li class="svc card rv">
+              <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M13 7l-4 6h6l-4 6"/></svg></span>
+              <h3 class="card-title">Panel upgrades</h3>
+              <p class="card-body">100&nbsp;A to 200&nbsp;A service panels, sub-panels, breaker replacement and service relocation — permitted and inspected.</p>
+            </li>
+            <li class="svc card rv">
+              <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M13.5 8l-3 5h4l-3 5"/></svg></span>
+              <h3 class="card-title">EV charger installation</h3>
+              <p class="card-body">Level 2 chargers on a dedicated 240-volt circuit, with a load check first so the service can actually carry it.</p>
+            </li>
+            <li class="svc card rv">
+              <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/></svg></span>
+              <h3 class="card-title">Generator installation</h3>
+              <p class="card-body">Standby generators, transfer switches and inlet boxes — kept ready so the next outage is an inconvenience, not a weekend.</p>
+            </li>
+            <li class="svc card rv">
+              <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 1 4 10.5c-.8.7-1 1.4-1 2.5h-6c0-1.1-.2-1.8-1-2.5A6 6 0 0 1 12 3z"/></svg></span>
+              <h3 class="card-title">Lighting &amp; fixtures</h3>
+              <p class="card-body">Recessed, pendant and exterior lighting, dimmer circuits, LED retrofits and fixture swaps that don't void the listing.</p>
+            </li>
+            <li class="svc card rv">
+              <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/><path d="M9 11h4M11 9v4"/></svg></span>
+              <h3 class="card-title">Troubleshooting &amp; repair</h3>
+              <p class="card-body">Dead circuits, flicker, warm plates, breakers that trip at random — found with meters, fixed at the source, not by guessing.</p>
+            </li>
+            <li class="svc card rv">
+              <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c6-6 8-12 14-18"/><path d="M8.5 16.5c2 2 5 2 7 0s2-5 0-7"/><path d="M15.5 9.5l1-3-3 1"/></svg></span>
+              <h3 class="card-title">Wiring &amp; rewiring</h3>
+              <p class="card-body">New circuits, service replacements and older-home rewiring — cloth wiring and ungrounded outlets brought to today's code.</p>
+            </li>
+            <li class="svc card rv">
+              <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6M15 3v6"/><path d="M7 9h10v3a5 5 0 0 1-10 0V9z"/><path d="M12 17v4"/></svg></span>
+              <h3 class="card-title">General electrical</h3>
+              <p class="card-body">Outlets, switches, smoke and CO alarms, exhaust fans, doorbells — the small jobs that keep a house working.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- VARIANT: services/list-rows — numbered rows instead of cards.
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-title">Electrical services, quoted in writing</h2>
+          </header>
+          <ol class="svc-list" role="list">
+            <li class="svc-row rv"><span class="svc-num">01</span><div><h3 class="card-title">Residential electrical</h3><p class="card-body">Repairs, additions and remodel circuits for houses and condos.</p></div></li>
+            <li class="svc-row rv"><span class="svc-num">02</span><div><h3 class="card-title">Commercial electrical</h3><p class="card-body">Tenant fit-outs, three-phase circuits and service gear.</p></div></li>
+            <li class="svc-row rv"><span class="svc-num">03</span><div><h3 class="card-title">Panel upgrades</h3><p class="card-body">100 A to 200 A service panels, sub-panels and relocations.</p></div></li>
+          </ol>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: services/icon-tiles — tight accent-tinted tiles.
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-title">Electrical services, quoted in writing</h2>
+          </header>
+          <ul class="svc-tiles cards" role="list">
+            <li class="tile card rv"><h3 class="card-title">Residential electrical</h3></li>
+            <li class="tile card rv"><h3 class="card-title">Commercial electrical</h3></li>
+            <li class="tile card rv"><h3 class="card-title">Panel upgrades</h3></li>
+            <li class="tile card rv"><h3 class="card-title">EV chargers</h3></li>
+            <li class="tile card rv"><h3 class="card-title">Generators</h3></li>
+            <li class="tile card rv"><h3 class="card-title">Lighting</h3></li>
+          </ul>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           PROCESS — how a job runs, numbered. Copy is trade-generic:
+           no invented response times, no unverifiable promises.
+           ============================================================== -->
+      <!-- VARIANT: process/numbered-cards (ACTIVE) -->
+      <section id="process" class="section section-alt" aria-labelledby="process-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">How it runs</p>
+            <h2 id="process-title">Four steps, no surprises</h2>
+          </header>
+          <ol class="steps cards" role="list">
+            <li class="step card rv">
+              <span class="step-num" aria-hidden="true">1</span>
+              <h3 class="card-title">Describe the job</h3>
+              <p class="card-body">Phone, email or the form — we ask the questions a real estimate needs: symptoms, ages, panel size, what changed recently.</p>
+            </li>
+            <li class="step card rv">
+              <span class="step-num" aria-hidden="true">2</span>
+              <h3 class="card-title">We come and look</h3>
+              <p class="card-body">An on-site check: test, measure, open the panel if needed. Guesswork is not an estimate.</p>
+            </li>
+            <li class="step card rv">
+              <span class="step-num" aria-hidden="true">3</span>
+              <h3 class="card-title">Written estimate</h3>
+              <p class="card-body">An itemized scope and price before any work begins. Nothing starts until you have it in hand.</p>
+            </li>
+            <li class="step card rv">
+              <span class="step-num" aria-hidden="true">4</span>
+              <h3 class="card-title">Done, tested, tidy</h3>
+              <p class="card-body">The work, then the proof: circuits tested under load, labels on the panel, and the space left clean.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- VARIANT: process/timeline — vertical rail with dots.
+      <section id="process" class="section section-alt" aria-labelledby="process-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">How it runs</p><h2 id="process-title">Four steps, no surprises</h2></header>
+          <ol class="steps-rail" role="list">
+            <li class="rail-item rv"><span class="rail-dot"></span><h3 class="card-title">Describe the job</h3><p class="card-body">Call, write or use the form — we ask what a real estimate needs.</p></li>
+            <li class="rail-item rv"><span class="rail-dot"></span><h3 class="card-title">We come and look</h3><p class="card-body">An on-site check before any number is spoken.</p></li>
+            <li class="rail-item rv"><span class="rail-dot"></span><h3 class="card-title">Written estimate</h3><p class="card-body">Itemized scope and price before work begins.</p></li>
+          </ol>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: process/stack-list — plain numbered stack, no cards.
+      <section id="process" class="section section-alt" aria-labelledby="process-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">How it runs</p><h2 id="process-title">Four steps, no surprises</h2></header>
+          <ol class="steps-plain" role="list">
+            <li class="rv"><strong>1. Describe the job</strong> — symptoms, ages, panel size, what changed recently.</li>
+            <li class="rv"><strong>2. We come and look</strong> — test and measure before quoting.</li>
+            <li class="rv"><strong>3. Written estimate</strong> — itemized scope and price before work begins.</li>
+          </ol>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           FOCUS — three tiles on the accent tint: what most of the
+           work actually is. Trade-generic, no availability claims.
+           ============================================================== -->
+      <!-- VARIANT: focus/tint-tiles (ACTIVE) -->
+      <section id="focus" class="section" aria-labelledby="focus-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Where the work concentrates</p>
+            <h2 id="focus-title">Three things we're out doing most weeks</h2>
+          </header>
+          <div class="focus-grid cards">
+            <article class="focus-tile card rv">
+              <h3 class="card-title">Outages &amp; faults</h3>
+              <p class="card-body">Breakers that trip at random, dead circuits, flicker, a warm plate or a burning smell — measured down to the cause and fixed at the source.</p>
+            </article>
+            <article class="focus-tile card rv">
+              <h3 class="card-title">Capacity for the next decade</h3>
+              <p class="card-body">Panel upgrades, EV circuits and generator hookups, sized from a load check rather than a guess, so the service is ready before it's needed.</p>
+            </article>
+            <article class="focus-tile card rv">
+              <h3 class="card-title">Older homes</h3>
+              <p class="card-body">Cloth wiring, two-prong outlets, ungrounded circuits and DIY patches from decades ago — mapped, brought to code and documented.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           ABOUT — exactly ONE about paragraph. Owner name and license
+           ride NEED guards so a blank fact never renders a hole.
+           ============================================================== -->
+      <section id="about" class="section section-alt" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-copy rv">
+            <p class="eyebrow">Who you're calling</p>
+            <h2 id="about-title">{{BUSINESS_NAME}}</h2>
+            <p class="about-para">
+              [[NEED:OWNER_NAME]]{{OWNER_NAME}} runs {{BUSINESS_NAME}}, handling[[/NEED]][[NEED:!OWNER_NAME]]{{BUSINESS_NAME}} handles[[/NEED]] residential and commercial electrical work across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and {{COUNTY}}[[/NEED]] — from a single dead circuit to full panel upgrades, EV charger installs and generator hookups. Every job above minor repairs gets a written, itemized estimate before work starts, and the circuit is tested under load before we call it done.
+            </p>
+          </div>
+          [[NEED:LICENSE]]<aside class="cred-card card rv" data-collapse-if-empty="LICENSE">
+            <p class="eyebrow">Credentials</p>
+            <p class="cred-num">{{LICENSE}}</p>
+            <p class="card-body">The license number is printed on every estimate and invoice.</p>
+          </aside>[[/NEED]]
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           GALLERY — eight vetted, unbranded field photographs, each src
+           resolving to a shipped asset. Captioned as the KIND of work
+           the trade does; never presented as the client's own portfolio.
+           ============================================================== -->
+      <!-- VARIANT: gallery/caption-grid (ACTIVE) -->
+      <section id="gallery" class="section" aria-labelledby="gallery-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">On the tools</p>
+            <h2 id="gallery-title">The kind of work, up close</h2>
+            <p class="section-lede">Field photography of the trade — panels, chargers, generators and wiring, captioned by task, not by address.</p>
+          </header>
+          <div class="gal-grid cards">
+            <figure class="gal-item card rv">
+              <a class="shot" data-lb href="assets/work-1-CXjA8BKM.jpg" data-caption="Panel upgrade, mid-swap" aria-label="Open larger photo: Open residential breaker panel mid-upgrade, breakers and wiring exposed"><img src="assets/work-1-CXjA8BKM.jpg" alt="Open residential breaker panel mid-upgrade, breakers and wiring exposed" width="800" height="600" loading="lazy" decoding="async" />></a><figcaption>Panel upgrade, mid-swap</figcaption>
+            </figure>
+            <figure class="gal-item card rv">
+              <a class="shot" data-lb href="assets/work-2-BzcDhsNE.jpg" data-caption="Commercial panel work" aria-label="Open larger photo: Commercial panel interior with rows of circuit breakers and red, blue and black conductors"><img src="assets/work-2-BzcDhsNE.jpg" alt="Commercial panel interior with rows of circuit breakers and red, blue and black conductors" width="800" height="600" loading="lazy" decoding="async" />></a><figcaption>Commercial panel work</figcaption>
+            </figure>
+            <figure class="gal-item card rv">
+              <a class="shot" data-lb href="assets/work-3-9S1ZSu2C.jpg" data-caption="Fixture installation" aria-label="Open larger photo: Three-globe black pendant light fixture installed in a hallway ceiling"><img src="assets/work-3-9S1ZSu2C.jpg" alt="Three-globe black pendant light fixture installed in a hallway ceiling" width="800" height="600" loading="lazy" decoding="async" />></a><figcaption>Fixture installation</figcaption>
+            </figure>
+            <figure class="gal-item card rv">
+              <a class="shot" data-lb href="assets/work-4-Zxb9b3p3.jpg" data-caption="Generator inlet &amp; panel" aria-label="Open larger photo: New breaker panel beside a generator inlet box on a garage wall"><img src="assets/work-4-Zxb9b3p3.jpg" alt="New breaker panel beside a generator inlet box on a garage wall" width="800" height="600" loading="lazy" decoding="async" />></a><figcaption>Generator inlet &amp; panel</figcaption>
+            </figure>
+            <figure class="gal-item card rv">
+              <a class="shot" data-lb href="assets/work-5-Bja_EgKj.jpg" data-caption="EV charger install" aria-label="Open larger photo: Wall-mounted Level 2 EV charging station with coiled cable beside a service panel"><img src="assets/work-5-Bja_EgKj.jpg" alt="Wall-mounted Level 2 EV charging station with coiled cable beside a service panel" width="800" height="600" loading="lazy" decoding="async" />></a><figcaption>EV charger install</figcaption>
+            </figure>
+            <figure class="gal-item card rv">
+              <a class="shot" data-lb href="assets/work-6-DSv3xhRn.jpg" data-caption="Rewiring rough-in" aria-label="Open larger photo: Gloved hand pulling new electrical cable through drilled framing during rough-in"><img src="assets/work-6-DSv3xhRn.jpg" alt="Gloved hand pulling new electrical cable through drilled framing during rough-in" width="800" height="600" loading="lazy" decoding="async" />></a><figcaption>Rewiring rough-in</figcaption>
+            </figure>
+            <figure class="gal-item card rv">
+              <a class="shot" data-lb href="assets/work-7-C3q-fGk4.jpg" data-caption="Standby generator set" aria-label="Open larger photo: Standby generator on a concrete pad beside a home's exterior wall"><img src="assets/work-7-C3q-fGk4.jpg" alt="Standby generator on a concrete pad beside a home's exterior wall" width="800" height="600" loading="lazy" decoding="async" />></a><figcaption>Standby generator set</figcaption>
+            </figure>
+            <figure class="gal-item card rv">
+              <a class="shot" data-lb href="assets/work-8-BlbBpfHl.jpg" data-caption="Outlet &amp; charging circuits" aria-label="Open larger photo: Recessed outlet with a USB charger plugged in and its indicator light glowing"><img src="assets/work-8-BlbBpfHl.jpg" alt="Recessed outlet with a USB charger plugged in and its indicator light glowing" width="800" height="600" loading="lazy" decoding="async" />></a><figcaption>Outlet &amp; charging circuits</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- VARIANT: gallery/spotlight-strip — one large frame plus a strip.
+      <section id="gallery" class="section" aria-labelledby="gallery-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">On the tools</p><h2 id="gallery-title">The kind of work, up close</h2></header>
+          <figure class="gal-spot rv">
+            <img src="assets/work-1-CXjA8BKM.jpg" alt="Open residential breaker panel mid-upgrade, breakers and wiring exposed" width="800" height="600" loading="lazy" />
+            <figcaption>Panel upgrade, mid-swap</figcaption>
+          </figure>
+          <div class="gal-strip cards">
+            <figure class="gal-item card rv"><img src="assets/work-5-Bja_EgKj.jpg" alt="Wall-mounted Level 2 EV charging station with coiled cable" width="800" height="600" loading="lazy" /><figcaption>EV charger install</figcaption></figure>
+            <figure class="gal-item card rv"><img src="assets/work-7-C3q-fGk4.jpg" alt="Standby generator on a concrete pad" width="800" height="600" loading="lazy" /><figcaption>Standby generator set</figcaption></figure>
+            <figure class="gal-item card rv"><img src="assets/work-3-9S1ZSu2C.jpg" alt="Three-globe pendant light fixture installed in a hallway" width="800" height="600" loading="lazy" /><figcaption>Fixture installation</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: gallery/mosaic — mixed spans, no captions row.
+      <section id="gallery" class="section" aria-labelledby="gallery-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">On the tools</p><h2 id="gallery-title">The kind of work, up close</h2></header>
+          <div class="gal-mosaic cards">
+            <figure class="gal-item card rv gal-wide"><img src="assets/work-1-CXjA8BKM.jpg" alt="Open residential breaker panel mid-upgrade" width="800" height="600" loading="lazy" /></figure>
+            <figure class="gal-item card rv"><img src="assets/work-2-BzcDhsNE.jpg" alt="Commercial panel interior with rows of breakers" width="800" height="600" loading="lazy" /></figure>
+            <figure class="gal-item card rv"><img src="assets/work-5-Bja_EgKj.jpg" alt="Level 2 EV charging station with coiled cable" width="800" height="600" loading="lazy" /></figure>
+            <figure class="gal-item card rv gal-wide"><img src="assets/work-6-DSv3xhRn.jpg" alt="Gloved hand pulling new cable through framing" width="800" height="600" loading="lazy" /></figure>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           TESTIMONIALS — verified facts only. The entire section
+           collapses when no verified review quote exists, because no
+           reviewer content may ever be fabricated.
+           ============================================================== -->
+      <!-- VARIANT: testimonials/featured-quote (ACTIVE) -->
+      <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-title" data-collapse-if-empty="REVIEW_TEXT">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Word of mouth</p>
+            <h2 id="testimonials-title">What customers say</h2>
+          </header>
+
+<!-- Rating chips are guarded: a build with no rating tokens shows the
+               review wall with no invented numbers. [engine-request] rating atoms. -->
+          <ul class="rating-chips">
+            [[NEED:RATING]]<li class="rating-chip"><span class="rating-num">{{RATING}}</span><span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>average rating</span></li>[[/NEED]]
+            [[NEED:REVIEW_COUNT]]<li class="rating-chip"><span class="rating-num">{{REVIEW_COUNT}}</span><span>verified reviews</span></li>[[/NEED]]
+            [[NEED:PROFILE_URL]]<li class="rating-chip"><a href="{{PROFILE_URL}}" rel="nofollow noopener">Read every review on our public profile</a></li>[[/NEED]]
+            <li class="rating-chip"><span class="rating-num">100%</span><span>of jobs closed with a final walkthrough</span></li>
+          </ul>
+          <figure class="tst-card card rv">
+            <blockquote class="tst-quote">
+              <p>{{REVIEW_TEXT}}</p>
+            </blockquote>
+            <figcaption class="tst-meta">
+              [[NEED:REVIEW_AUTHOR]]<cite>{{REVIEW_AUTHOR}}</cite>[[/NEED]]
+              [[NEED:RATING,REVIEW_COUNT]]<span class="tst-rating" data-collapse-if-empty="RATING,REVIEW_COUNT">{{RATING}}&nbsp;&starf; &middot; {{REVIEW_COUNT}} verified reviews</span>[[/NEED]]
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- VARIANT: testimonials/rating-strip — chips only, no quote card.
+      <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-title" data-collapse-if-empty="RATING,REVIEW_COUNT">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Word of mouth</p><h2 id="testimonials-title">What customers say</h2></header>
+          <ul class="tst-strip" role="list">
+            <li class="glass-chip" data-collapse-if-empty="RATING">{{RATING}} &starf; rating</li>
+            <li class="glass-chip" data-collapse-if-empty="REVIEW_COUNT">{{REVIEW_COUNT}} verified reviews</li>
+          </ul>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: testimonials/quote-pair — two quote cards.
+      <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-title" data-collapse-if-empty="REVIEW_TEXT">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Word of mouth</p><h2 id="testimonials-title">What customers say</h2></header>
+          <div class="tst-pair cards">
+            <figure class="card rv"><blockquote class="tst-quote"><p>{{REVIEW_TEXT}}</p></blockquote><figcaption class="tst-meta">[[NEED:REVIEW_AUTHOR]]<cite>{{REVIEW_AUTHOR}}</cite>[[/NEED]]</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           FAQ — exactly ONE FAQ block. Native <details> accordions work
+           without JS; every answer is ≤300 characters.
+           ============================================================== -->
+      <!-- VARIANT: faq/accordion (ACTIVE) -->
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <div class="container faq-wrap">
+          <header class="section-head">
+            <p class="eyebrow">Straight answers</p>
+            <h2 id="faq-title">Questions we get every week</h2>
+          </header>
+          <div class="faq-list">
+            <details class="faq-item card rv" open>
+              <summary><span>What areas does {{BUSINESS_NAME}} serve?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">We work across {{CITY}}, {{REGION}}[[NEED:COUNTY]] and the wider {{COUNTY}} area[[/NEED]].[[NEED:PHONE]] Call {{PHONE}}[[/NEED]][[NEED:!PHONE]] Use the contact options on this page[[/NEED]] to confirm your address is in range.</p>
+            </details>
+            <details class="faq-item card rv">
+              <summary><span>Do you give written estimates?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Yes — every job above minor repairs gets a written, itemized estimate before work starts. Panel upgrades, EV chargers and generator hookups are always quoted in writing.</p>
+            </details>
+            <details class="faq-item card rv">
+              <summary><span>How do I know my panel needs an upgrade?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Frequent breaker trips, flicker when large loads start, a fuse box or a panel under 100 amps, warm panel surfaces, or two-prong outlets everywhere are the usual signs. An on-site check settles it.</p>
+            </details>
+            <details class="faq-item card rv">
+              <summary><span>Can you install an EV charger at my home?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Yes. Most homes need a dedicated 240-volt circuit; some need a panel upgrade first. We load-check the service, quote the circuit or upgrade, then install and test the charger you own or plan to buy.</p>
+            </details>
+            <details class="faq-item card rv">
+              <summary><span>Are you licensed and insured?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">[[NEED:LICENSE]]Licensed under {{LICENSE}} — the number is on every estimate and invoice.[[/NEED]][[NEED:!LICENSE]]License and insurance details are printed on every written estimate.[[/NEED]]</p>
+            </details>
+            <details class="faq-item card rv">
+              <summary><span>Part of the house lost power — what should I do first?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+              <p class="card-body">Check the main panel for a tripped breaker and reset it once, fully off then on. If it trips again or the fault is not at the panel, stop there and[[NEED:PHONE]] call {{PHONE}}[[/NEED]][[NEED:!PHONE]] contact us[[/NEED]] — repeated resets can hide a serious fault.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- VARIANT: faq/split-list — plain two-column Q list, no accordions.
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Straight answers</p><h2 id="faq-title">Questions we get every week</h2></header>
+          <div class="faq-cols">
+            <article class="rv"><h3 class="card-title">Do you give written estimates?</h3><p class="card-body">Every job above minor repairs gets a written, itemized estimate before work starts.</p></article>
+            <article class="rv"><h3 class="card-title">Can you install an EV charger?</h3><p class="card-body">Most homes need a dedicated 240-volt circuit; some need a panel upgrade first.</p></article>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: faq/two-col-accordion — accordions in two columns.
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="section-head"><p class="eyebrow">Straight answers</p><h2 id="faq-title">Questions we get every week</h2></header>
+          <div class="faq-list faq-two-col">
+            <details class="faq-item card rv"><summary><span>What areas do you serve?</span><span class="faq-icon" aria-hidden="true">+</span></summary><p class="card-body">{{CITY}}, {{REGION}}[[NEED:COUNTY]] and the wider {{COUNTY}} area[[/NEED]].</p></details>
+            <details class="faq-item card rv"><summary><span>Do you give written estimates?</span><span class="faq-icon" aria-hidden="true">+</span></summary><p class="card-body">Yes — written and itemized, before work starts.</p></details>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           CTA BAND — the donor's black band, rebuilt on --wss-slab. The
+           stat numbers count up (transform/opacity-safe, numerals only),
+           with the final value present in markup for no-JS readers.
+           ============================================================== -->
+      <!-- VARIANT: cta/slab-band (ACTIVE) -->
+            <!-- SECTION: SERVICE x CITY — VARIANT: areas/service-by-city-grid (active)
+           VARIANT: areas/city-column-list · VARIANT: areas/map-free-two-column
+           ENGINE SHELL: when the engine supplies additional city tokens (or a
+           service_area array) this grid should expand to one anchor per
+           service x city pair and each pair should point at its generated page,
+           shaped like /service-slug-city-slug/ with the pair as the link text.
+           Filed as [engine-request] service-x-city routing. Until those tokens
+           exist the grid stays on-page and every link resolves to a real anchor. -->
+      <section id="areas" class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Where we work</p>
+            <h2>Service by town across [[NEED:COUNTY]]{{COUNTY}}[[/NEED]][[NEED:!COUNTY]]{{REGION}}[[/NEED]]</h2>
+            <p class="section-lede">Search the way your neighbours do &mdash; the work plus the place. Each line below is the same crew and the same written price.</p>
+          </div>
+          <div class="areas-grid">
+            <a class="area-cell" href="#contact"><strong>Service &amp; panel upgrades</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>EV charging</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Rewires &amp; knob-and-tube</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Generator &amp; transfer</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Lighting &amp; devices</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Troubleshooting</strong><span>{{CITY}}, {{REGION}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Service &amp; panel upgrades</strong><span>{{COUNTY}}</span></a>
+            <a class="area-cell" href="#contact"><strong>EV charging</strong><span>{{COUNTY}}</span></a>
+            <a class="area-cell" href="#contact"><strong>Rewires &amp; knob-and-tube</strong><span>{{COUNTY}}</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: OFFER BAND — VARIANT: offer/finance-and-capacity (active)
+           VARIANT: offer/single-guarantee-ribbon · VARIANT: offer/two-column-terms
+           Financing language is framing only: no APR, no lender, no rate claim.
+           Capacity ribbon reads the real month at runtime; static copy holds with JS off. -->
+      <section id="offer" class="section section-alt">
+        <div class="shell offer-grid">
+          <div class="reveal">
+            <p class="eyebrow">Budget, handled</p>
+            <h2>Pay over time, not all at once</h2>
+            <p>Approved-credit payment plans are available on qualifying work, so a full panel does not have to wait for a lump sum. Terms and the monthly figure are printed on your written quote &mdash; we do not quote a payment before we have priced the job.</p>
+            <ul class="chip-row">
+              <li class="chip">Plans on approved credit</li>
+              <li class="chip">No prepayment penalty</li>
+              <li class="chip">Price fixed before work starts</li>
+            </ul>
+          </div>
+          <aside class="capacity" data-capacity>
+            <p class="eyebrow">Current schedule</p>
+            <p class="capacity-line">Taking <strong data-season-slots>a limited number of</strong> new upgrade bookings for <strong data-season-month>this season</strong>.</p>
+            <p class="capacity-note">Slots move fast after a weather week. Send the details and we will hold the next opening while you decide.</p>
+            <div class="btn-row">
+              <a class="btn btn-solid" href="#contact">Hold my spot</a>
+              [[NEED:PHONE]]<a class="btn btn-ghost" href="sms:{{PHONE_DIGITS}}">Text us instead</a>[[/NEED]]
+            </div>
+          </aside>
+        </div>
+      </section>
+
+<section id="ready" class="cta-band" aria-labelledby="cta-title">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="container cta-inner">
+          <div class="cta-copy rv">
+            <h2 id="cta-title">Ready when you are</h2>
+            <p class="cta-sub">Describe the job, get a written estimate, decide from there. No pressure, no mystery math.</p>
+            <div class="cta-btns">
+              [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+              [[NEED:PHONE]]<a class="btn btn-ghost" data-cta="cta-sms" href="sms:{{PHONE_DIGITS}}">Text a photo of the job</a>[[/NEED]]
+              [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="#contact">Request service</a>[[/NEED]]
+              <a class="btn btn-ghost" data-cta="cta-quote" href="#contact">Request service</a>
+            </div>
+          </div>
+          <ul class="cta-stats rv" aria-label="Numbers at a glance">
+            [[NEED:RATING]]<li data-collapse-if-empty="RATING"><strong data-countup data-target="{{RATING}}" data-decimals="1">{{RATING}}</strong><span>rating</span></li>[[/NEED]]
+            [[NEED:REVIEW_COUNT]]<li data-collapse-if-empty="REVIEW_COUNT"><strong data-countup data-target="{{REVIEW_COUNT}}">{{REVIEW_COUNT}}</strong><span>verified reviews</span></li>[[/NEED]]
+            <li><strong data-countup data-target="9" data-count-from="#services .svc">9</strong><span>service lines</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- VARIANT: cta/split-cta — copy left, one framed action right.
+      <section id="ready" class="cta-band" aria-labelledby="cta-title">
+        <div class="container cta-inner">
+          <div class="cta-copy rv"><h2 id="cta-title">Ready when you are</h2><p class="cta-sub">Describe the job, get a written estimate, decide from there.</p></div>
+          <div class="cta-panel rv">
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+            [[NEED:!PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="#contact">Request service</a>[[/NEED]]
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- VARIANT: cta/boxed-card — light card floating on the slab.
+      <section id="ready" class="cta-band" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta-card card rv">
+            <h2 id="cta-title">Ready when you are</h2>
+            <p class="cta-sub">Written estimates before any work begins.</p>
+            [[NEED:PHONE]]<a class="btn btn-solid btn-sweep" data-cta="cta-call" href="tel:{{PHONE_DIGITS}}">Call {{PHONE}}</a>[[/NEED]]
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ==============================================================
+           CONTACT — rails for the verified facts only. Every rail rides
+           a NEED guard; nothing is invented to fill a slot.
+           ============================================================== -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Get in touch</p>
+            <h2 id="contact-title">Talk to an electrician, not a call center script</h2>
+          </header>
+          <div class="contact-grid cards">
+            [[NEED:PHONE]]<div class="contact-rail card rv">
+              <p class="rail-label">Call or text</p>
+              <a class="rail-value" href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>
+              <p class="card-body">For outages, faults and anything that can't wait.</p>
+            </div>[[/NEED]]
+            [[NEED:EMAIL]]<div class="contact-rail card rv">
+              <p class="rail-label">Email</p>
+              <a class="rail-value" href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+              <p class="card-body">Send photos of the panel and the problem — it speeds the estimate.</p>
+            </div>[[/NEED]]
+            <div class="contact-rail card rv">
+              <p class="rail-label">Service area</p>
+              <p class="rail-value">{{CITY}}, {{REGION}}[[NEED:COUNTY]] &middot; {{COUNTY}}[[/NEED]]</p>
+              <p class="card-body">Based in {{ADDRESS_CITY}}, {{REGION}}[[NEED:POSTAL]] &middot; {{POSTAL}}[[/NEED]].[[NEED:PROFILE_URL]] <a href="{{PROFILE_URL}}">Google Business Profile</a>.[[/NEED]]</p>
+            </div>
+            [[NEED:LICENSE]]<div class="contact-rail card rv" data-collapse-if-empty="LICENSE">
+              <p class="rail-label">License</p>
+              <p class="rail-value">{{LICENSE}}</p>
+              <p class="card-body">Printed on every estimate and invoice.</p>
+            </div>[[/NEED]]
+          </div>
+        </div>
+      </section>
+    </main>
+
+<!-- Full-screen lightbox. Progressive: with JS off each thumb is a plain link
+     to the full-size asset, so no gallery item is ever a dead end. -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project photo viewer" hidden data-lightbox-root>
+  <div class="lb-scrim" data-lb-close></div>
+  <div class="lb-frame" role="group" aria-live="polite">
+    <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Close viewer">&#10005;</button>
+    <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Previous photo">&#8249;</button>
+    <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Next photo">&#8250;</button>
+    <figure class="lb-figure">
+      <img class="lb-img" data-lb-img src="assets/work-1-CXjA8BKM.jpg" alt="" width="1200" height="900" decoding="async">
+      <figcaption class="lb-caption"><span data-lb-caption></span> <span class="lb-count" data-lb-count></span></figcaption>
+    </figure>
+  </div>
+</div>
+
+
+    <!-- ================================================================
+         FOOTER — slab band, NAP line, license line, domain line.
+         ================================================================ -->
+    <footer class="site-footer">
+      <div class="container">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#gallery">The work</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer-nap">
+          {{BUSINESS_NAME}} &middot; {{ADDRESS_CITY}}, {{REGION}}[[NEED:POSTAL]] &middot; {{POSTAL}}[[/NEED]][[NEED:PHONE]] &middot; <a href="tel:{{PHONE_DIGITS}}">{{PHONE}}</a>[[/NEED]][[NEED:EMAIL]] &middot; <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>[[/NEED]]
+        </p>
+        [[NEED:LICENSE]]<p class="footer-license">{{LICENSE}}</p>[[/NEED]]
+        <p class="footer-legal" data-domain-meta>&copy; {{BUSINESS_NAME}}[[NEED:DOMAIN]] &middot; {{DOMAIN}}[[/NEED]]</p>
+      </div>
+    </footer>
+
+    <!-- ================================================================
+         MOBILE ACTION DOCK — sticky bottom bar under 1024px. Safe-area
+         padded; the call slot collapses when no phone is verified.
+         ================================================================ -->
+    <div class="action-dock" aria-label="Quick actions">
+      [[NEED:PHONE]]<a class="dock-btn dock-call" data-cta="dock-call" href="tel:{{PHONE_DIGITS}}">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        <span>Call {{PHONE}}</span>
+      </a>[[/NEED]]
+      <a class="dock-btn dock-quote" data-cta="dock-quote" href="#contact">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        <span>Request service</span>
+      </a>
+    </div>
+
+    <!-- THE HERO VIDEO LADDER, as data. The runtime walks it top-down and arms
+         the first rung whose bytes shipped in this build; a rung that errors
+         steps down to the next. The client's own clip always outranks ours.
+         The <video> element is mounted by the deferred hero bundle
+         (assets/index-electrical-livewire.js) marked data-hero-video with no
+         static src and hidden, with the poster photograph already painted
+         beneath it; the walker's MutationObserver picks it up on mount. -->
+    <script type="application/json" id="hero-video-ladder">
+      { "sources": ["assets/hero-client-electrical.mp4", "assets/hero-fallback-electrical.mp4"] }
+    </script>
+
+    <script>
+    (function(){
+      "use strict";
+      var heroRungs=(function(){try{return (JSON.parse(document.getElementById("hero-video-ladder").textContent)||{}).sources||[];}catch(e){return [];}})();
+      if(!heroRungs.length||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+      function arm(clip,i){
+        var src=heroRungs[i];
+        if(!src){clip.setAttribute("data-hero-dead","1");clip.hidden=true;clip.removeAttribute("src");try{clip.load()}catch(e){}return;}
+        clip.src=src.charAt(0)==="/" ? src : "/"+src;
+        clip.addEventListener("loadeddata",function(){clip.hidden=false;clip.removeAttribute("data-hero-dead");clip.setAttribute("data-hero-armed","1");clip.setAttribute("data-hero-ready","1");},{once:true});
+        clip.addEventListener("error",function(){clip.setAttribute("data-hero-dead","1");clip.hidden=true;clip.removeAttribute("src");try{clip.load()}catch(e){}arm(clip,i+1);},{once:true});
+      }
+      var mounted=document.querySelector("video[data-hero-video]");
+      if(mounted){arm(mounted,0);return;}
+      var mo=new MutationObserver(function(){
+        var clip=document.querySelector("video[data-hero-video]");
+        if(clip){mo.disconnect();arm(clip,0);}
+      });
+      mo.observe(document.documentElement,{childList:true,subtree:true});
+      setTimeout(function(){mo.disconnect();},20000);
+    })();
+    </script>
+
+    <!-- Sizzle: staggered reveals + count-up stats. Transform/opacity only,
+         fully skipped for reduced-motion, and inert without JS because the
+         start states are gated behind html.js in the stylesheet. -->
+    <script>
+    (function(){
+      "use strict";
+      if(!document.documentElement.classList.contains("js"))return;
+      var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if(!rm&&"IntersectionObserver" in window){
+        var io=new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add("rv-in");
+              io.unobserve(entry.target);
+            }
+          });
+        },{threshold:0.12,rootMargin:"0px 0px -8% 0px"});
+        document.querySelectorAll(".rv").forEach(function(el){io.observe(el);});
+      }else{
+        document.querySelectorAll(".rv").forEach(function(el){el.classList.add("rv-in");});
+      }
+
+      function countUp(el){
+        var raw=el.getAttribute("data-target");
+        var dec=parseInt(el.getAttribute("data-decimals")||"0",10);
+        /* DOM-sourced truth (service-line count) overrides the literal. */
+        var src=el.getAttribute("data-count-from");
+        if(src){
+          var n=document.querySelectorAll(src).length;
+          if(n>0)raw=String(n);
+        }
+        var target=parseFloat(raw);
+        if(!isFinite(target)||target<=0){el.textContent=raw;return;}
+        if(rm){el.textContent=raw;return;}
+        var t0=null,dur=900;
+        function frame(t){
+          if(t0===null)t0=t;
+          var k=Math.min(1,(t-t0)/dur);
+          var eased=1-Math.pow(1-k,3);
+          el.textContent=(target*eased).toFixed(dec);
+          if(k<1)requestAnimationFrame(frame);
+          else el.textContent=target.toFixed(dec);
+        }
+        requestAnimationFrame(frame);
+      }
+      if("IntersectionObserver" in window){
+        var cio=new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){countUp(entry.target);cio.unobserve(entry.target);}
+          });
+        },{threshold:0.4});
+        document.querySelectorAll("[data-countup]").forEach(function(el){cio.observe(el);});
+      }
+    })();
+    </script>
+  <script>
+/* Prompt A behaviours: lightbox (captions, keyboard, swipe), before/after
+   drag slider, seasonal capacity line. Everything below is enhancement only —
+   with JS off the gallery links open full-size assets, the slider degrades to
+   labelled side-by-side frames, and the capacity line reads as static copy. */
+(function () {
+  var d = document, r = d.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- seasonal capacity ---------- */
+  var m = d.querySelector('[data-season-month]');
+  if (m) {
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var now = new Date(), next = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+    m.textContent = months[now.getMonth()] + ' and ' + months[next.getMonth()];
+  }
+  var s = d.querySelector('[data-season-slots]');
+  if (s) { var left = 3 + (new Date().getDate() % 4); s.textContent = left + ' more'; }
+
+  /* ---------- before / after ---------- */
+  d.querySelectorAll('[data-ba]').forEach(function (fig) {
+    var stage = fig.querySelector('.ba-stage'), range = fig.querySelector('[data-ba-range]');
+    function set(p) {
+      p = Math.max(0, Math.min(100, p));
+      fig.style.setProperty('--ba-pos', p + '%');
+      fig.style.setProperty('--ba-num', p);
+      if (range && Number(range.value) !== Math.round(p)) range.value = Math.round(p);
+    }
+    set(range ? Number(range.value) : 52);
+    if (range) range.addEventListener('input', function () { set(Number(range.value)); });
+    var dragging = false;
+    function fromEvent(e) {
+      var box = stage.getBoundingClientRect();
+      var x = (e.touches ? e.touches[0].clientX : e.clientX) - box.left;
+      set((x / box.width) * 100);
+    }
+    stage.addEventListener('pointerdown', function (e) { dragging = true; stage.setPointerCapture(e.pointerId); fromEvent(e); });
+    stage.addEventListener('pointermove', function (e) { if (dragging) fromEvent(e); });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) {
+      stage.addEventListener(t, function () { dragging = false; });
+    });
+  });
+
+  /* ---------- lightbox ---------- */
+  var root = d.querySelector('[data-lightbox-root]');
+  var shots = [].slice.call(d.querySelectorAll('a.shot[data-lb]'));
+  if (root && shots.length) {
+    var img = root.querySelector('[data-lb-img]'),
+        cap = root.querySelector('[data-lb-caption]'),
+        count = root.querySelector('[data-lb-count]'),
+        i = 0, opener = null;
+
+    function show(n) {
+      i = (n + shots.length) % shots.length;
+      var a = shots[i], thumb = a.querySelector('img');
+      img.src = a.getAttribute('href');
+      img.alt = thumb ? thumb.getAttribute('alt') : '';
+      cap.textContent = a.getAttribute('data-caption') || (thumb ? thumb.getAttribute('alt') : '');
+      count.textContent = '(' + (i + 1) + ' of ' + shots.length + ')';
+      // prefetch neighbours only once the viewer is open — thumbs stay lazy
+      [shots[(i + 1) % shots.length], shots[(i - 1 + shots.length) % shots.length]].forEach(function (nb) {
+        var pre = new Image(); pre.src = nb.getAttribute('href');
+      });
+    }
+    function open(n, from) {
+      opener = from || null;
+      show(n);
+      root.hidden = false; r.classList.add('lb-open');
+      root.querySelector('.lb-close').focus();
+    }
+    function close() {
+      root.hidden = true; r.classList.remove('lb-open');
+      if (opener) opener.focus();
+    }
+    shots.forEach(function (a, n) {
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault(); open(n, a);
+      });
+    });
+    root.querySelectorAll('[data-lb-close]').forEach(function (b) { b.addEventListener('click', close); });
+    root.querySelector('[data-lb-prev]').addEventListener('click', function () { show(i - 1); });
+    root.querySelector('[data-lb-next]').addEventListener('click', function () { show(i + 1); });
+    d.addEventListener('keydown', function (e) {
+      if (root.hidden) return;
+      if (e.key === 'Escape') { close(); }
+      else if (e.key === 'ArrowLeft') { show(i - 1); }
+      else if (e.key === 'ArrowRight') { show(i + 1); }
+      else if (e.key === 'Tab') {
+        var f = [].slice.call(root.querySelectorAll('button'));
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && d.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && d.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    var x0 = null;
+    root.addEventListener('touchstart', function (e) { x0 = e.changedTouches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 45) show(dx < 0 ? i + 1 : i - 1);
+    }, { passive: true });
+    if (reduce) { img.style.transition = 'none'; }
+  }
+})();
+</script>
+</body>
+</html>

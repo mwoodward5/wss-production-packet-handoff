@@ -1,0 +1,414 @@
+{
+  "version": 2,
+  "key": "01-falcon-roofing-llc",
+  "name": "Falcon Roofing LLC",
+  "category": "roofing",
+  "vertical": "roofing",
+  "requested_vertical": "roofing",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "61a04a5f-5cb8-4078-a2da-1b60f17fc4a3",
+  "lovable_source_commit": "91872fe470eefb10713070df90c0fa62583570b5",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "61a04a5f-5cb8-4078-a2da-1b60f17fc4a3",
+    "ref": "91872fe470eefb10713070df90c0fa62583570b5",
+    "repository": "https://github.com/mwoodward5/falcon-roof-craft",
+    "git_tree": "3b0b14009f31495c417b0ca9f1dbc2818be3ba9f"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/roof-replacement",
+    "/roof-repair",
+    "/commercial-roofing",
+    "/gutters-siding-trim",
+    "/service-area",
+    "/contact"
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "hsl(36 30% 97%)",
+      "foreground": "hsl(220 18% 11%)",
+      "primary": "hsl(220 18% 11%)",
+      "primary_foreground": "hsl(36 30% 97%)",
+      "accent": "hsl(43 71% 64%)",
+      "accent_glow": "hsl(45 86% 72%)",
+      "secondary": "hsl(215 12% 90%)",
+      "muted": "hsl(35 18% 93%)",
+      "muted_foreground": "hsl(220 8% 38%)",
+      "border": "hsl(220 10% 84%)",
+      "signal": "hsl(46 96% 52%)"
+    },
+    "typography": {
+      "display": "Plus Jakarta Sans, system-ui, sans-serif",
+      "sans": "Inter, system-ui, sans-serif",
+      "mono": "JetBrains Mono, IBM Plex Mono, monospace"
+    },
+    "border_radius": {
+      "base": "0.375rem",
+      "tight_subelements": "2px"
+    },
+    "textures": [
+      "blueprint-grid",
+      "blueprint-grid-dark",
+      "tape-strip",
+      "page-hero-scan"
+    ]
+  },
+  "hero_contract": {
+    "viewport_height_desktop": "88vh",
+    "viewport_height_mobile": "86vh",
+    "media_layer": "src/components/HeroMedia.tsx",
+    "required_scrim": "bg-gradient-hero-strong",
+    "motion_effects": [
+      "hero-flash",
+      "hero-bolt-svg",
+      "blueprint-grid-dark"
+    ],
+    "interactive_widget": {
+      "name": "Roof Command A-01",
+      "slots": 9,
+      "triage_channels": [
+        "tel:",
+        "mailto:",
+        "internal_routes"
+      ]
+    }
+  },
+  "media_slots": [
+    {
+      "slot_id": "MED-01",
+      "route": "/",
+      "section": "Hero",
+      "semantic_role": "Primary Hero Plate",
+      "ideal_ratio": "16:9",
+      "object_position": "center 35%",
+      "asset_key": "heroRoof"
+    },
+    {
+      "slot_id": "MED-02",
+      "route": "/",
+      "section": "ResVsCommercial",
+      "semantic_role": "Residential Spec Plate",
+      "ideal_ratio": "16:10",
+      "object_position": "center",
+      "asset_key": "residential"
+    },
+    {
+      "slot_id": "MED-03",
+      "route": "/",
+      "section": "ResVsCommercial",
+      "semantic_role": "Commercial Spec Plate",
+      "ideal_ratio": "16:10",
+      "object_position": "center",
+      "asset_key": "commercial"
+    },
+    {
+      "slot_id": "MED-04",
+      "route": "/service-area",
+      "section": "ServiceArea",
+      "semantic_role": "Regional Aerial Backdrop",
+      "ideal_ratio": "16:10",
+      "object_position": "center 50%",
+      "asset_key": "serviceAreaMap"
+    },
+    {
+      "slot_id": "MED-05",
+      "route": "/roof-replacement",
+      "section": "PageHero",
+      "semantic_role": "Replacement Authority Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "residential"
+    },
+    {
+      "slot_id": "MED-06",
+      "route": "/roof-repair",
+      "section": "PageHero",
+      "semantic_role": "Repair Authority Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "residential"
+    },
+    {
+      "slot_id": "MED-07",
+      "route": "/commercial-roofing",
+      "section": "PageHero",
+      "semantic_role": "Commercial Authority Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "commercial"
+    },
+    {
+      "slot_id": "MED-08",
+      "route": "/gutters-siding-trim",
+      "section": "PageHero",
+      "semantic_role": "Gutters & Siding Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "gutters"
+    },
+    {
+      "slot_id": "MED-09",
+      "route": "/service-area",
+      "section": "PageHero",
+      "semantic_role": "Service Hub Hero",
+      "ideal_ratio": "16:9",
+      "object_position": "center 40%",
+      "asset_key": "process"
+    }
+  ],
+  "content_slots": [
+    {
+      "slot": "BUSINESS.name",
+      "target_file": "src/lib/business.ts",
+      "usage": "Legal business name site-wide and in schema"
+    },
+    {
+      "slot": "BUSINESS.phoneDisplay",
+      "target_file": "src/lib/business.ts",
+      "usage": "Visible phone formatting across 9 locations"
+    },
+    {
+      "slot": "BUSINESS.phoneTel",
+      "target_file": "src/lib/business.ts",
+      "usage": "Click-to-call link href"
+    },
+    {
+      "slot": "BUSINESS.email",
+      "target_file": "src/lib/business.ts",
+      "usage": "Direct contact, lead notifications, and footer"
+    },
+    {
+      "slot": "BUSINESS.owner",
+      "target_file": "src/lib/business.ts",
+      "usage": "Owner-led trust messaging and process steps"
+    },
+    {
+      "slot": "BUSINESS.street",
+      "target_file": "src/lib/business.ts",
+      "usage": "Physical street address"
+    },
+    {
+      "slot": "BUSINESS.city",
+      "target_file": "src/lib/business.ts",
+      "usage": "Headquarters municipality"
+    },
+    {
+      "slot": "BUSINESS.region",
+      "target_file": "src/lib/business.ts",
+      "usage": "State abbreviation (e.g. OH)"
+    },
+    {
+      "slot": "BUSINESS.postal",
+      "target_file": "src/lib/business.ts",
+      "usage": "ZIP / Postal code"
+    },
+    {
+      "slot": "BUSINESS.serviceArea",
+      "target_file": "src/lib/business.ts",
+      "usage": "Array of 10 primary municipalities covered"
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "Top Spec Bar",
+      "location": "src/components/Header.tsx",
+      "type": "License / Accreditation String"
+    },
+    {
+      "slot": "Hero Jurisdictional Stamp",
+      "location": "src/components/sections/Hero.tsx",
+      "type": "Territory & Postal Code Proof"
+    },
+    {
+      "slot": "BBB Trust Button",
+      "location": "src/components/Footer.tsx",
+      "type": "External verified profile gateway"
+    },
+    {
+      "slot": "Contact Page BBB Card",
+      "location": "src/pages/Contact.tsx",
+      "type": "BBB A- Rating Verification Gateway"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "RoofingContractor",
+      "target_file": "src/lib/schema.ts",
+      "binding": "localBusinessSchema"
+    },
+    {
+      "type": "Service",
+      "target_file": "src/lib/schema.ts",
+      "binding": "serviceSchema"
+    },
+    {
+      "type": "FAQPage",
+      "target_file": "src/lib/schema.ts",
+      "binding": "faqSchema"
+    },
+    {
+      "type": "Organization",
+      "target_file": "src/lib/schema.ts",
+      "binding": "organizationSchema"
+    },
+    {
+      "type": "WebSite",
+      "target_file": "src/lib/schema.ts",
+      "binding": "websiteSchema"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "location": "Hero & PageHero Subtitles",
+      "role": "Direct answer machine-quotable service statements"
+    },
+    {
+      "location": "ServiceArea Coverage Matrix",
+      "role": "Near-me municipal intent and postal targeting"
+    },
+    {
+      "location": "Authority Page Body Blocks",
+      "role": "Zoning, building codes, and severe weather response"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "component": "src/components/sections/Faq.tsx",
+      "pattern": "Conversational natural question matching spoken query"
+    },
+    {
+      "component": "src/pages/RoofReplacement.tsx",
+      "pattern": "First-sentence concise speakable answer"
+    }
+  ],
+  "map_location_slot": {
+    "coordinates": {
+      "lat": 40.1581,
+      "lng": -83.0752
+    },
+    "interactive_components": [
+      "src/components/sections/ServiceArea.tsx",
+      "src/pages/Contact.tsx",
+      "src/pages/ServiceAreaPage.tsx"
+    ],
+    "deep_links": [
+      "Google Maps Search API",
+      "Apple Maps Protocol"
+    ]
+  },
+  "content_density": {
+    "hero_headline_max_words": 6,
+    "services_count": 4,
+    "process_steps_count": 4,
+    "authority_page_word_count_target": 1400,
+    "homepage_faq_count": 5
+  },
+  "mobile_rules": {
+    "breakpoint_sm": "640px",
+    "breakpoint_md": "768px",
+    "breakpoint_lg": "1024px",
+    "sticky_dock_active": "< 1024px",
+    "sticky_dock_component": "src/components/StickyMobileCta.tsx",
+    "tap_target_min_height": "48px"
+  },
+  "non_negotiables": [
+    "Preserve monospace uppercase eyebrows with tracking-0.22em",
+    "Strict 2px to 6px industrial corner radius; zero pill or circular buttons",
+    "Preserve blueprint-grid and tape-strip architectural styling",
+    "Maintain alternating dark graphite and warm plaster section backgrounds",
+    "HeroMedia must maintain poster fallback before video mount",
+    "All media assets must be bundled through src/lib/assets.ts",
+    "No fabricated reviews, licenses, or ratings without certified proof",
+    "Maintain 50/50 split StickyMobileCta on viewports below 1024px"
+  ],
+  "safe_replacements": [
+    "BUSINESS object in src/lib/business.ts",
+    "ASSETS bundled image files in src/lib/assets.ts",
+    "--accent and --accent-glow HSL values in src/index.css",
+    "Client logo files in public/ and src/assets/",
+    "SYSTEMS service definitions in src/components/sections/Services.tsx",
+    "Authority text copy on inner service routes",
+    "FAQ question and answer content across all pages",
+    "Google Tag Manager and Analytics IDs in index.html"
+  ],
+  "leak_terms": [
+    "Falcon Roofing LLC"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 3,
+    "fonts": [
+      "Plus Jakarta Sans",
+      "system-ui",
+      "sans-serif",
+      "Inter",
+      "JetBrains Mono",
+      "IBM Plex Mono"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "hsl(36 30% 97%)",
+    "hsl(220 18% 11%)",
+    "hsl(220 18% 11%)",
+    "hsl(36 30% 97%)",
+    "hsl(43 71% 64%)",
+    "hsl(45 86% 72%)",
+    "hsl(215 12% 90%)",
+    "hsl(35 18% 93%)"
+  ],
+  "fonts": [
+    "Plus Jakarta Sans",
+    "system-ui",
+    "sans-serif",
+    "Inter",
+    "JetBrains Mono",
+    "IBM Plex Mono"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "6ff684e34becde3b5fa81473d8c0b4bd44eaf7280de0c088447d2d1f90086cae",
+    "files": {
+      "assets/App-D0aWMIox.js": "cb50f6366b590807333a82402405afdb996829a19db75673587710b3b161556e",
+      "assets/index-BjJ3_PJ9.js": "64c7756b4b80ee68e19b22a56d8d250da4268e5d51bb7ddac68c46735d3bea05",
+      "assets/index-WUI_6gvh.css": "ab1bfc9ce0dbafaa9998ef4612e5cd1ddcd1734442b3d297b618ea3594de2173",
+      "assets/wss-Dk_iOn3Z.js": "d23ba6e9f9e8d78299dd855f2f225cbe2b418c6c5d843015882d2529538c0279",
+      "index.html": "1dc410c8f1276b7f95fc187482958b9037466bbf10b3f7ff2e33861c96971774"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

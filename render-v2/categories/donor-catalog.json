@@ -1,0 +1,1034 @@
+{
+  "schema": "wss-donor-catalog-v2",
+  "count": 34,
+  "donors": [
+    {
+      "key": "01-falcon-roofing-llc",
+      "vertical": "roofing",
+      "name": "Falcon Roofing LLC",
+      "project_id": "61a04a5f-5cb8-4078-a2da-1b60f17fc4a3",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/roof-replacement",
+        "/roof-repair",
+        "/commercial-roofing",
+        "/gutters-siding-trim",
+        "/service-area",
+        "/contact"
+      ],
+      "bundle": "6ff684e34becde3b5fa81473d8c0b4bd44eaf7280de0c088447d2d1f90086cae",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "91872fe470eefb10713070df90c0fa62583570b5",
+      "source_tree_sha256": "d1a88b92ebe36617ea1c9ce0c59f12425d4eefc45fa0ef0bf1867a49dfd8b3b3"
+    },
+    {
+      "key": "03-mhb-build-llc",
+      "vertical": "general contractor",
+      "name": "MHB Build, LLC",
+      "project_id": "a81032f8-c0a5-4232-bd1d-c9cc0113c326",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/services",
+        "/services/:slug",
+        "/projects",
+        "/service-area",
+        "/about",
+        "/contact",
+        "*"
+      ],
+      "bundle": "4a08b8673860b05d113fb77f9bab0f9e682f9260120351a31ab7f2bd3a758533",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "17991569b1f9f496afc1cd66209b9004204eeea5",
+      "source_tree_sha256": "fc8b0144a1f55d60cca20f81942570296bc5803de4a5bf2d1067600199b1bfa1"
+    },
+    {
+      "key": "04-landscape-connection-inc",
+      "vertical": "landscaping",
+      "name": "Landscape Connection, Inc.",
+      "project_id": "bd298097-cb1c-44a9-a04f-2bd9474bf604",
+      "classification": "CINEMATIC",
+      "routes": [
+        "/"
+      ],
+      "bundle": "0a6c37d8d4c251acba843131450d29949f375c775cfa9e05aa0eeef102fee6b8",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "1e6ce15a338ddb0d043d354abb23def533756b5c",
+      "source_tree_sha256": "c246c6447b0b1ae1c5fc40bd90a2939f964311822d9fa33588b0484efda8b170"
+    },
+    {
+      "key": "05-dn-electric-ltd",
+      "vertical": "electrical",
+      "name": "DN Electric LTD",
+      "project_id": "252c0ca9-144a-4ce4-ab72-0f60c8f1d420",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/services",
+        "/services/$slug",
+        "/about",
+        "/service-area",
+        "/service-areas/$city",
+        "/contact",
+        "/terms-of-service",
+        "/privacy-policy"
+      ],
+      "bundle": "2f3ae7c88a507a153432915d4c0805c97ad610dbbd29a51808d60fa690b2ab49",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "d19085c2178a7918a20a61a7fe9f6405aa6e4c7c",
+      "source_tree_sha256": "778d8210151e5c6f3fa1abf85d5cee4ea0e0b3fb4a2d0db7e206da03f7f456d6"
+    },
+    {
+      "key": "06-el-construction",
+      "vertical": "concrete",
+      "name": "EL Construction",
+      "project_id": "ec977d63-95c1-4527-ba2b-367637d9d247",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/about",
+        "/contact",
+        "/commercial-concrete",
+        "/foundations-excavation",
+        "/flatwork-driveways",
+        "/concrete-demolition",
+        "/commercial-renovation",
+        "/home-renovation",
+        "/flooring-services",
+        "/service-area",
+        "/service-area/$citySlug"
+      ],
+      "bundle": "6b54b28d27354b86dc6d5dfac5f1de5c2f51d02feadf00dbadc372c2896a8bb0",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "8a6d1fa80ca0d1da3b8f3eb2161c11f458c9e8d6",
+      "source_tree_sha256": "ca4b863752624efbc96856c1d755d1d69fb6f08026c91af6a6f63b4d3bc986ef"
+    },
+    {
+      "key": "07-lucky-s-plumbing-services-donor",
+      "vertical": "plumbing",
+      "name": "Lucky's Plumbing Services Donor",
+      "project_id": "6d450437-c06f-4f80-8e04-f5ccb0ab2c4f",
+      "classification": "CINEMATIC",
+      "routes": [
+        "/"
+      ],
+      "bundle": "b399dd04a19bf37bb9eca0ca245f20d510e45904c43ca03e91b618a634272289",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "b2e11db31eeaea32c20fd31823dd3c5003ca83ee",
+      "source_tree_sha256": "46ed8b15ceb43bf1731601fa6eaf2e2a0246d7019253624589843a5338d65495"
+    },
+    {
+      "key": "08-mcguinness-contracting-services",
+      "vertical": "concrete",
+      "name": "McGuinness Contracting Services",
+      "project_id": "dd874d6d-4029-49bd-ad06-bef07ba50356",
+      "classification": "MULTI_PAGE",
+      "routes": [
+        "/",
+        "/sitemap"
+      ],
+      "bundle": "6cb3198abbf954072f7905c03f03b76c29258d1c2614bf964bc12001a43c686f",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "4854ef6157d3ce6edfeb9b701301fe3fbe078ada",
+      "source_tree_sha256": "9f6a600e25f48441cec5412d5995bc30124392851726dd7f32aca5491bf2a39d"
+    },
+    {
+      "key": "09-circle-c-contracting-llc",
+      "vertical": "excavation",
+      "name": "Circle C Contracting, LLC",
+      "project_id": "0320b2df-7290-4e5f-8c6d-db0d772e37ce",
+      "classification": "CINEMATIC",
+      "routes": [
+        "/"
+      ],
+      "bundle": "82ccdd39c53797d41ccae9f73cc6ee3ab19fe5853d6c499689d2e5fc25bdfde4",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "8996e4f040393344459d02d222558e2a1603eedd",
+      "source_tree_sha256": "3b7c97700b871344b9cec317e13a626c8f04220eecd515b56f0f24a5d608cb29"
+    },
+    {
+      "key": "11-urban-decks",
+      "vertical": "landscaping",
+      "name": "Urban Decks",
+      "project_id": "6cdec779-4cd3-4570-8945-ab4ce8314278",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/services",
+        "/services/$slug",
+        "/projects",
+        "/about",
+        "/service-area",
+        "/service-area/$city",
+        "/faq",
+        "/contact",
+        "/blog",
+        "/blog/$slug",
+        "/robots.txt",
+        "/sitemap.xml",
+        "/api/contact"
+      ],
+      "bundle": "c6808dff83badb2d07bdbc6c586c3e33f8c55440b0eaad17d7945192d3bacb0a",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "e2592a191434238d3c503989f842967dff5774eb",
+      "source_tree_sha256": "d3468207aba5478ceacca4feb6b6f9bdb9fba496640ac10b2de4f58e8e2b37b2"
+    },
+    {
+      "key": "12-cnt-automotive-llc-flagship",
+      "vertical": "auto repair",
+      "name": "CNT Automotive LLC Flagship",
+      "project_id": "4a322ce9-89bc-4e75-aa34-7753f16223b8",
+      "classification": "CINEMATIC",
+      "routes": [
+        "/",
+        "*"
+      ],
+      "bundle": "e1f304b9eb3a017ea38434d8cb913d173c2dc643259de8357741509954eea7ea",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "85ca23409d402a15d012db0d5cef5790ea7ebc0a",
+      "source_tree_sha256": "cd75c0e26428b6cfa33262d7c75430519c8a1a4e2ac06b7a4d41e689678d54b2"
+    },
+    {
+      "key": "13-favorite-tree-service-llc",
+      "vertical": "tree service",
+      "name": "Favorite Tree Service, LLC",
+      "project_id": "01a519b2-cfd8-400e-8311-f32434aca551",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/about",
+        "/contact",
+        "/emergency-tree-service",
+        "/tree-removal-stump-grinding",
+        "/services",
+        "/services/tree-pruning",
+        "/services/bucket-truck-service",
+        "/services/lot-clearing",
+        "/services/storm-damage-cleanup",
+        "/services/brush-hogging",
+        "/services/mulching",
+        "/services/landscape-maintenance",
+        "/services/snow-removal",
+        "/service-area",
+        "/tree-service-charlottesville-va",
+        "/tree-service-gordonsville-va",
+        "/tree-service-louisa-va",
+        "/tree-service-madison-va",
+        "/tree-service-orange-va",
+        "/tree-service-ruckersville-va",
+        "/tree-service-stanardsville-va",
+        "/tree-service-zion-crossroads-va"
+      ],
+      "bundle": "916a0f8847fd69e6f4f3ae35edfd8544a71905ac2e77033c09f308c49b873242",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "636e24b176a39b92425b860f7c625be2bb183e36",
+      "source_tree_sha256": "78ef21975dd2380a69e6a89504cc5adea7705ca78245e772746b6180152bcde5"
+    },
+    {
+      "key": "14-peppers-structural-and-land-management",
+      "vertical": "general contractor",
+      "name": "Peppers Structural and Land Management",
+      "project_id": "cfd022fd-a3ee-4ed5-a77d-d7743b1945e2",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/services",
+        "/services/$slug",
+        "/gallery",
+        "/about",
+        "/reviews",
+        "/service-area",
+        "/faq",
+        "/contact"
+      ],
+      "bundle": "6b1f3273e2b672bf078321ef6d21804f57bce57e2c8fbdab28eb12a71f9dc092",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "23c3f13d8e9a8e16ded511d540a7eeb729c4e6cb",
+      "source_tree_sha256": "c5ffa34858f234a9534d2e626d36ec6115640f8223c2a43a0e44bb2dc8298689"
+    },
+    {
+      "key": "15-american-drywall-plaster-llc",
+      "vertical": "general contractor",
+      "name": "American Drywall & Plaster, LLC",
+      "project_id": "72e8240d-e547-4061-800a-9a64f8a88069",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/services",
+        "/drywall",
+        "/plaster",
+        "/painting",
+        "/about",
+        "/reviews",
+        "/gallery",
+        "/service-area",
+        "/contact",
+        "/privacy-policy"
+      ],
+      "bundle": "fc6780429af20e654bc40f3db3bf42aec7298d9b7ac62bd494a68d906333d670",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "3bd26ef25337cc1985aadc009cc6a8fa2ebbc01b",
+      "source_tree_sha256": "56fdffd9ddf931b2dab08300724e8fad4f8fc552b0b7c3ca3c081a843db9ff41"
+    },
+    {
+      "key": "16-banana-roadside-services",
+      "vertical": "roadside assistance",
+      "name": "Banana Roadside Services",
+      "project_id": "1e039e20-1795-491e-a87a-674e5fb46abe",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/about-us",
+        "/services",
+        "/european-battery-services",
+        "/gallery",
+        "/contact-us"
+      ],
+      "bundle": "f46294cbc65ae590b84ffaacaebffd2d7e948d916f002c1c1500eaa412b0e0bf",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "c106457ec5ed45227133eca4bf5ad8660204baa5",
+      "source_tree_sha256": "5f6412e5c63317d3f7f6350a598b45af7fa2ad029900033a5eff27c78977b98a"
+    },
+    {
+      "key": "17-flint-plumbing-mirror-core",
+      "vertical": "plumbing",
+      "name": "flint-plumbing-mirror-core",
+      "project_id": "b0837193-3a75-48d0-a390-b98475e5461a",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/$trade/$area",
+        "/llms.txt",
+        "/sitemap.xml",
+        "/api/chat",
+        "/api/public/refresh-proof"
+      ],
+      "bundle": "0acdfba331290f646a63816713c41078de73186862c7a7e3cf540ad667b70750",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "8c31dc645c21677dabdd93dea1252f4894509306",
+      "source_tree_sha256": "b6177e5bdf4cf0a994a25d43f17f079ebeca6c185c7a23f47191e675bdd6f633"
+    },
+    {
+      "key": "19-classy-clean-auto-detail-repair",
+      "vertical": "auto detailing",
+      "name": "Classy Clean Auto Detail & Repair",
+      "project_id": "1c346810-1f27-4996-afcf-d061cb5edf6b",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/api/contact",
+        "/robots.txt",
+        "/sitemap.xml",
+        "/llms.txt"
+      ],
+      "bundle": "6c1677fabb771c9232ec3eef3ea43aa1b71d5533a83dbc2d8321db4a6b29f88d",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "3520e39938a62e800a78d0ca9a5e64c32b7db5ac",
+      "source_tree_sha256": "30813fe28f0d8c44b26f0c3b74fd1218c80f56e5675dad5efc61847b55d4fe4d"
+    },
+    {
+      "key": "20-southern-home-improvements",
+      "vertical": "roofing",
+      "name": "Southern Home Improvements",
+      "project_id": "c3667c26-b681-47bc-9983-bad9c1f42efd",
+      "classification": "MULTI_PAGE",
+      "routes": [
+        "/",
+        "/privacy",
+        "/sitemap.xml"
+      ],
+      "bundle": "0da9051c574d7aba78cc0d64a68fdd9d8a66e362d71eb4841b4edddb53c3288d",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "cb3447c278eb30b3d0bddf6b7168f8cb57db7db1",
+      "source_tree_sha256": "973ffa1c34e59794df528c3f20e52b67000559d84427abedc4e80d23749b224e"
+    },
+    {
+      "key": "22-paragon-flight-training",
+      "vertical": "flight training",
+      "name": "Paragon Flight Training",
+      "project_id": "44679a20-9622-4d07-aa4a-31144ed2f738",
+      "classification": "MULTI_PAGE",
+      "routes": [
+        "/",
+        "/service-areas",
+        "/flight-school/:city",
+        "/programs/:program"
+      ],
+      "bundle": "fb798a5edbda9c77316c9daafd947915c8827e3f20219901a0fd490bbeca9581",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "ad07ff647c5d6b1e7e83a07473640ed85902e37a",
+      "source_tree_sha256": "774eb14afdda90eac38a4f92228f68de2893c01394debbd40b3885998918d18c"
+    },
+    {
+      "key": "24-on-the-road-again-mobile-rv-service",
+      "vertical": "rv repair",
+      "name": "On The Road Again Mobile RV Service",
+      "project_id": "f9cbfac3-15fd-493a-b553-c4e620f3a9f0",
+      "classification": "MULTI_PAGE",
+      "routes": [
+        "/",
+        "/services",
+        "/about-us",
+        "/contact"
+      ],
+      "bundle": "4bb6cb8224b911b2dccc9e5f36b43bb933d57d0984307e01628c2f6bfd58a6fd",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "d27e546e4ab73b42e2c9e2025045b28d6db33fbf",
+      "source_tree_sha256": "25522a164fb452b18a34563b6518e572772ad96735e20c270456a45d1618db35"
+    },
+    {
+      "key": "32-848-property-services-llc",
+      "vertical": "handyman",
+      "name": "848 Property Services LLC",
+      "project_id": "a218c6fb-f767-4728-9cee-9871ef148fc1",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/services",
+        "/services/$slug",
+        "/service-areas",
+        "/service-areas/$slug",
+        "/about",
+        "/gallery",
+        "/faq",
+        "/bbb-categories",
+        "/contact",
+        "/privacy"
+      ],
+      "bundle": "1fb3e6bf61d6b8229df75f3867f29ce689382b0e8b63eff8e6ab11615da91922",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "72351d72618ecd1604a3adf8ecbaeac3371ce7ac",
+      "source_tree_sha256": "84a5ca46cbb8c661262b32cc594396ea79ec04a820f78679d2a952d1d64a5609"
+    },
+    {
+      "key": "33-deuces-landscaping-excavation",
+      "vertical": "excavation",
+      "name": "DEUCES Landscaping & Excavation",
+      "project_id": "bfa00d82-b2d5-4e12-8bd4-319a6251f8e1",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/excavation",
+        "/landscaping",
+        "/storm-cleanup",
+        "/remodeling"
+      ],
+      "bundle": "57c56d587b0512ca356e41338928af28e4f12c41403a9a79c1293b8d3a4c415e",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "20e298e015ca3f3ba780d8bca4e600cf70c5244e",
+      "source_tree_sha256": "f3ddb8d957107498a2c2757782b8c1579b441c2686b600bfed4f14dfffb60508"
+    },
+    {
+      "key": "36-richard-diaz-landscape-masonry",
+      "vertical": "landscaping",
+      "name": "Richard Diaz Landscape & Masonry",
+      "project_id": "04930364-0a69-4d3c-a517-b6071ccb8442",
+      "classification": "CINEMATIC",
+      "routes": [
+        "/"
+      ],
+      "bundle": "2528d834a09645a12a0217ed73876da2861768235c5c553cfebfbd7231a4912f",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "2280b09f15c52fbf0008d2d0b9e81f23e9c7a827",
+      "source_tree_sha256": "9e118d8b0aeb46ca36feaadc8d7f297b56024b6275a8e0c9590db61f932c5761"
+    },
+    {
+      "key": "37-bajo-el-filo",
+      "vertical": "martial arts",
+      "name": "Bajo El Filo",
+      "project_id": "e8bc0582-7262-4c3c-9292-53359399c02b",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/training",
+        "/seminars",
+        "/arts",
+        "/arts/$slug",
+        "/media",
+        "/contact"
+      ],
+      "bundle": "5cdaa49198bfb08c6a2506dd65be7c0ff8248526ffa13e4540b886f0d0987635",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "2d4c18640710c4997f25e51f805cbee76b0954e4",
+      "source_tree_sha256": "48677c342f1206ff02ff231f34a2d7c5f9943fb383e7618a562d056b057b7e72"
+    },
+    {
+      "key": "38-grounded-north-west",
+      "vertical": "electrical",
+      "name": "Grounded North West",
+      "project_id": "bf8b3e52-37b4-46c8-beb4-a877958b4f1e",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/residential-electrician-bothell-wa",
+        "/new-construction-wiring-bothell-wa",
+        "/panel-upgrades-electrical-troubleshooting",
+        "/ev-charger-installation-bothell-wa",
+        "/whole-home-generator-installation-bothell-wa",
+        "/custom-lighting-design-installation",
+        "/full-home-rewires-knob-tube-aluminum",
+        "/custom-electrical-solutions",
+        "/services",
+        "/projects",
+        "/service-area",
+        "/contact",
+        "/faq",
+        "/troubleshooting-repairs"
+      ],
+      "bundle": "51c0449623fcf5fb71331d8cf0064fddd2164a187bf5c94d1d0da2af06a6e17f",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "a3dd87d0df32c3b71752a427b8bd740221a8ffa9",
+      "source_tree_sha256": "326f51babfc5c519f60ae7a15c9d5274fab5c67612a6e038073d2fc1b1ec4c4f"
+    },
+    {
+      "key": "40-houck-property-services",
+      "vertical": "handyman",
+      "name": "Houck Property Services",
+      "project_id": "a8e18dea-e961-43f6-ace1-765c3093dd62",
+      "classification": "CINEMATIC",
+      "routes": [
+        "/"
+      ],
+      "bundle": "c4071a6883d8143e9a10f90dc29e172767ca6ed065eff5d655fe8bfa8392e1d9",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "84fb4bae12e1559ac51fd4a52233db5e9f5df87a",
+      "source_tree_sha256": "37a4813177d17291116870d5c7e142170c4a864e2f42be0db26af71100b1b15d"
+    },
+    {
+      "key": "41-card-concrete-construction",
+      "vertical": "concrete",
+      "name": "Card Concrete Construction",
+      "project_id": "a3c9badc-32eb-4443-a350-13729d7970ca",
+      "classification": "MULTI_PAGE",
+      "routes": [
+        "/",
+        "/privacy",
+        "/terms"
+      ],
+      "bundle": "734527581d799f65667b1e923e41f757c1b1f14abb086559937ed7ddd9873124",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "d8ad7b38249fd963574634301eafbe221fd36caa",
+      "source_tree_sha256": "065d0552f30db52441699295212546d730ed80fff84386763a36368474abb5ca"
+    },
+    {
+      "key": "42-straight-line-fencing-of-louisiana",
+      "vertical": "fencing",
+      "name": "Straight Line Fencing of Louisiana",
+      "project_id": "4f780298-cc58-477f-a3d3-142255e01c9c",
+      "classification": "CINEMATIC",
+      "routes": [
+        "/"
+      ],
+      "bundle": "62f0f27d1c1b4dba1bae00ec1efc6bcf1710cb58fc781fd8daea8aaa19c882b9",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "a6883ea8be7ba20025e39c2a0db16d8fd3c1b4b6",
+      "source_tree_sha256": "078382664361dbea4cb36dad9b85e9e74ade94801c0bda02facf550564775e85"
+    },
+    {
+      "key": "43-xphotography",
+      "vertical": "photographer",
+      "name": "XPhotography",
+      "project_id": "67d11296-3a10-48b3-b6ff-87b2fd181bd1",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/about",
+        "/weddings",
+        "/portraits",
+        "/corporate",
+        "/pricing",
+        "/contact",
+        "/reserve",
+        "/atlanta",
+        "/buckhead",
+        "/inman-park"
+      ],
+      "bundle": "0f3acc25c7decb1a03697d19789d1af319fb81a0efde959156bff900242f6029",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "5e44048019b5b0a5e5016aecf002c856816f23ec",
+      "source_tree_sha256": "42ab826cefdf00f31a2609891928b71b1d28573f90b0bd176f220c07800e7a6d"
+    },
+    {
+      "key": "44-all-around-tree-care",
+      "vertical": "tree service",
+      "name": "All-Around Tree Care",
+      "project_id": "b76a5484-71f9-4759-8ad7-670034444bc8",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/services",
+        "/tree-removal",
+        "/lawn-landscaping",
+        "/contact"
+      ],
+      "bundle": "57aad3f529b6f7b99b344ce9793343c2a618af5cf88f73657f153d83f90a9190",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "b8087e5426a2dcb7618037176905866efdfd8009",
+      "source_tree_sha256": "8369d9b58855dfbb0dce88381a0269be5de518efa33f2470f64f4fd21c6e0826"
+    },
+    {
+      "key": "45-affordable-roofing-llc",
+      "vertical": "roofing",
+      "name": "Affordable Roofing, LLC",
+      "project_id": "f4e38100-88f8-49a8-b7de-166035c963c9",
+      "classification": "CINEMATIC",
+      "routes": [
+        "/",
+        "*"
+      ],
+      "bundle": "3fd4324b09a4c2d904efaa0fab0ab546f348f518e74bb5bb9198d40680d588a9",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "d7ad6713195bda34dfb2b94400bc24d14b48943b",
+      "source_tree_sha256": "c98f4d541181d72127456d54fba9acfbb39ec21b04c7f1cb594a2886d3c89088"
+    },
+    {
+      "key": "47-kaup-s-tree-service-excavation-donor",
+      "vertical": "tree service",
+      "name": "Kaup's Tree Service & Excavation Donor",
+      "project_id": "1da03c93-74bd-49ff-9fc9-7e771abb7c26",
+      "classification": "MULTI_PAGE",
+      "routes": [
+        "/",
+        "/sitemap.xml",
+        "/robots.txt",
+        "/llms.txt"
+      ],
+      "bundle": "753df9c06b4e31205d7499ac7db0f6b53b380802e1b29dd2f6f7c79c0faeeb0f",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "a01d58d13b5dcdc120b0c1a8ce82d2b381e0fe10",
+      "source_tree_sha256": "fa1f2d8b8870ed31f9afb88b9e71aee5e022c6be83228694ec012fbdd4e38a07"
+    },
+    {
+      "key": "48-boxdrop-mattress-furniture-rhode-island",
+      "vertical": "mattress store",
+      "name": "BoxDrop Mattress & Furniture Rhode Island",
+      "project_id": "aa3845d2-5617-48c1-b969-02be493208bc",
+      "classification": "PREMIER",
+      "routes": [
+        "/",
+        "/mattresses",
+        "/furniture",
+        "/locations",
+        "/guides",
+        "/faq",
+        "/contact",
+        "/mattress-and-furniture-financing-rhode-island",
+        "/mattress-store-rhode-island",
+        "/furniture-store-rhode-island",
+        "/queen-mattresses-rhode-island",
+        "/king-mattresses-rhode-island",
+        "/hybrid-mattresses-rhode-island",
+        "/memory-foam-mattresses-rhode-island",
+        "/pillow-top-mattresses-rhode-island",
+        "/adjustable-bases-rhode-island",
+        "/budget-mattresses-rhode-island",
+        "/sectionals-rhode-island",
+        "/sofas-rhode-island",
+        "/loveseats-rhode-island",
+        "/recliners-rhode-island",
+        "/living-room-furniture-rhode-island",
+        "/discount-furniture-rhode-island",
+        "/mattress-store-warren-ri",
+        "/furniture-store-warren-ri",
+        "/mattress-store-bristol-ri",
+        "/furniture-store-bristol-ri",
+        "/mattress-store-barrington-ri",
+        "/furniture-store-barrington-ri",
+        "/mattress-store-tiverton-ri",
+        "/furniture-store-tiverton-ri",
+        "/mattress-store-east-providence-ri",
+        "/furniture-store-east-providence-ri",
+        "/mattress-store-providence-ri",
+        "/furniture-store-providence-ri",
+        "/mattress-store-warwick-ri",
+        "/furniture-store-warwick-ri",
+        "/mattress-store-fall-river-ma",
+        "/furniture-store-fall-river-ma",
+        "/mattress-store-swansea-ma",
+        "/furniture-store-swansea-ma",
+        "/mattress-store-somerset-ma",
+        "/furniture-store-somerset-ma",
+        "/mattress-store-seekonk-ma",
+        "/furniture-store-seekonk-ma",
+        "/guides/best-mattress-for-side-sleepers-rhode-island",
+        "/guides/hybrid-vs-memory-foam-mattress",
+        "/guides/how-to-choose-a-queen-mattress",
+        "/guides/sectional-sofa-buying-guide-rhode-island",
+        "/guides/adjustable-base-benefits",
+        "/guides/mattress-financing-guide-rhode-island",
+        "/guides/mattress-delivery-pickup-guide-rhode-island",
+        "/guides/best-time-to-buy-a-mattress-rhode-island",
+        "/guides/boxdrop-vs-big-box-mattress-stores-rhode-island",
+        "/guides/mattress-store-near-me-voice-search-playbook"
+      ],
+      "bundle": "5400e14c9654471ff5d38518349888692295e8af9fd94848a89fbcbff48a35f5",
+      "routing_conflict": true,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "7b892166466ce52332ea671f8a7df5fe1cf6d402",
+      "source_tree_sha256": "aa5ea3dafd4160f235dbd6c35ced46c4caa67a9e2985d06ad1f8186afaea1987"
+    },
+    {
+      "key": "49-straight-line-fencing-of-louisiana",
+      "vertical": "fencing",
+      "name": "Straight Line Fencing Of Louisiana",
+      "project_id": "303ffc41-860c-4845-a711-bbfd6998587d",
+      "classification": "CINEMATIC",
+      "routes": [
+        "/",
+        "*"
+      ],
+      "bundle": "342d9d1aa9100d83f04926293432a45c321accd5dab82232fce8c5620846e4c5",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "87eda565ff34143fe2afd8a4355b1503fc6b894e",
+      "source_tree_sha256": "c4589f5bc7076e6683f7616131bf767ee85cdacb79307bee2f3bbcd31b1c85b2"
+    },
+    {
+      "key": "50-card-concrete-construction",
+      "vertical": "concrete",
+      "name": "Card Concrete Construction",
+      "project_id": "6ec92ab6-ba9d-4e0e-8931-7057c7b9abd7",
+      "classification": "MULTI_PAGE",
+      "routes": [
+        "/",
+        "/trust",
+        "/sitemap.xml",
+        "/api/public/quote"
+      ],
+      "bundle": "7ab61cc65e6615ef6996e1901ab6f26db0d69fc02a83509ba133052fe066702f",
+      "routing_conflict": false,
+      "implementation_status": "WSS_ADAPTED",
+      "runtime_eligible": false,
+      "source_import_verified": true,
+      "client_bindings_verified": true,
+      "visual_parity_verified": false,
+      "source_commit": "0d580cdb2a173403fb5c55ebf8317b43e044ec68",
+      "source_tree_sha256": "4e86e8b2aa07088559035711f87d48d46139a41ed24219474baa6261227f7f82"
+    }
+  ],
+  "by_vertical": {
+    "roofing": [
+      "01-falcon-roofing-llc",
+      "20-southern-home-improvements",
+      "45-affordable-roofing-llc"
+    ],
+    "tree service": [
+      "13-favorite-tree-service-llc",
+      "44-all-around-tree-care",
+      "47-kaup-s-tree-service-excavation-donor"
+    ],
+    "general contractor": [
+      "03-mhb-build-llc",
+      "14-peppers-structural-and-land-management",
+      "15-american-drywall-plaster-llc"
+    ],
+    "landscaping": [
+      "04-landscape-connection-inc",
+      "11-urban-decks",
+      "36-richard-diaz-landscape-masonry"
+    ],
+    "electrical": [
+      "05-dn-electric-ltd",
+      "38-grounded-north-west"
+    ],
+    "concrete": [
+      "06-el-construction",
+      "08-mcguinness-contracting-services",
+      "41-card-concrete-construction",
+      "50-card-concrete-construction"
+    ],
+    "plumbing": [
+      "07-lucky-s-plumbing-services-donor",
+      "17-flint-plumbing-mirror-core"
+    ],
+    "excavation": [
+      "09-circle-c-contracting-llc",
+      "33-deuces-landscaping-excavation"
+    ],
+    "auto repair": [
+      "12-cnt-automotive-llc-flagship"
+    ],
+    "roadside assistance": [
+      "16-banana-roadside-services"
+    ],
+    "auto detailing": [
+      "19-classy-clean-auto-detail-repair"
+    ],
+    "flight training": [
+      "22-paragon-flight-training"
+    ],
+    "rv repair": [
+      "24-on-the-road-again-mobile-rv-service"
+    ],
+    "handyman": [
+      "32-848-property-services-llc",
+      "40-houck-property-services"
+    ],
+    "martial arts": [
+      "37-bajo-el-filo"
+    ],
+    "fencing": [
+      "42-straight-line-fencing-of-louisiana",
+      "49-straight-line-fencing-of-louisiana"
+    ],
+    "photographer": [
+      "43-xphotography"
+    ],
+    "mattress store": [
+      "48-boxdrop-mattress-furniture-rhode-island"
+    ]
+  },
+  "conflicts": [
+    {
+      "key": "02-go-green-lawn-tree-services",
+      "requested": "landscaping",
+      "manifest": "tree service"
+    },
+    {
+      "key": "06-el-construction",
+      "requested": "general contractor",
+      "manifest": "concrete"
+    },
+    {
+      "key": "08-mcguinness-contracting-services",
+      "requested": "general contractor",
+      "manifest": "concrete"
+    },
+    {
+      "key": "09-circle-c-contracting-llc",
+      "requested": "general contractor",
+      "manifest": "excavation"
+    },
+    {
+      "key": "11-urban-decks",
+      "requested": "general contractor",
+      "manifest": "landscaping"
+    },
+    {
+      "key": "19-classy-clean-auto-detail-repair",
+      "requested": "cleaning",
+      "manifest": "auto detailing"
+    },
+    {
+      "key": "20-southern-home-improvements",
+      "requested": "general contractor",
+      "manifest": "roofing"
+    },
+    {
+      "key": "21-mantra-botanicals-wellness",
+      "requested": "wellness",
+      "manifest": "hypnotherapy"
+    },
+    {
+      "key": "22-paragon-flight-training",
+      "requested": "black car service",
+      "manifest": "flight training"
+    },
+    {
+      "key": "31-parker-sons-phoenix-comfort-systems-siteforge-concept",
+      "requested": "hvac",
+      "manifest": "electrical"
+    },
+    {
+      "key": "34-black-diamond-paver-stones-landscape-inc-sacramento",
+      "requested": "auto detailing",
+      "manifest": "concrete"
+    },
+    {
+      "key": "37-bajo-el-filo",
+      "requested": "general contractor",
+      "manifest": "martial arts"
+    },
+    {
+      "key": "38-grounded-north-west",
+      "requested": "landscaping",
+      "manifest": "electrical"
+    },
+    {
+      "key": "40-houck-property-services",
+      "requested": "general contractor",
+      "manifest": "handyman"
+    },
+    {
+      "key": "42-straight-line-fencing-of-louisiana",
+      "requested": "painting",
+      "manifest": "fencing"
+    },
+    {
+      "key": "48-boxdrop-mattress-furniture-rhode-island",
+      "requested": "hvac",
+      "manifest": "mattress store"
+    }
+  ],
+  "runtime_ready_count": 0,
+  "status": "ADAPTED_AWAITING_VISUAL_PARITY",
+  "source_imported_count": 35,
+  "adapted_count": 34,
+  "donor_count": 34,
+  "pruned_at": "2026-09-29T01:59:07.909Z",
+  "prune_note": "Kept only V2 46-buildout WSS_ADAPTED donors (34). Dropped REJECTED_GENERIC_SCAFFOLD + ORIGINAL_SOURCE_IMPORTED per owner directive 2026-09-29. Backup: ZCodeProject/backups/donor-catalog-pre-prune-20260929.json"
+}

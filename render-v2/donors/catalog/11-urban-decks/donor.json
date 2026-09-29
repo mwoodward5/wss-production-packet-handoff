@@ -1,0 +1,453 @@
+{
+  "version": 2,
+  "key": "11-urban-decks",
+  "name": "Urban Decks",
+  "category": "landscaping",
+  "vertical": "landscaping",
+  "requested_vertical": "general contractor",
+  "routing_conflict": true,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "6cdec779-4cd3-4570-8945-ab4ce8314278",
+  "lovable_source_commit": "e2592a191434238d3c503989f842967dff5774eb",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "6cdec779-4cd3-4570-8945-ab4ce8314278",
+    "ref": "e2592a191434238d3c503989f842967dff5774eb",
+    "repository": "https://github.com/mwoodward5/urban-craft-blueprint",
+    "git_tree": "87a701e923c5c35322cfdbd3a1d4281d2942c369"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/services",
+    "/services/$slug",
+    "/projects",
+    "/about",
+    "/service-area",
+    "/service-area/$city",
+    "/faq",
+    "/contact",
+    "/blog",
+    "/blog/$slug",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/api/contact"
+  ],
+  "design_tokens": {
+    "palette": {
+      "ink": "oklch(0.18 0.015 60)",
+      "cream": "oklch(0.965 0.018 80)",
+      "cedar": "oklch(0.66 0.14 55)",
+      "cedar_deep": "oklch(0.42 0.12 50)",
+      "moss": "oklch(0.42 0.06 145)",
+      "stone": "oklch(0.55 0.01 60)"
+    },
+    "typography": {
+      "display": "Italiana, Cormorant Garamond, serif",
+      "accent": "Bricolage Grotesque, Inter, sans-serif",
+      "sans": "Inter, system-ui, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "geometry": {
+      "radius_base": "0.5rem",
+      "card_radius": "1rem",
+      "clip_paths": [
+        "clip-cut",
+        "clip-arrow",
+        "clip-blade"
+      ]
+    },
+    "shadows": {
+      "cedar_glow": "0 20px 60px -20px color-mix(in oklab, var(--cedar) 55%, transparent)"
+    }
+  },
+  "hero_contract": {
+    "type": "Layered 13-Layer Editorial Stage",
+    "viewport_height": "min-h-[100svh]",
+    "background_layer": {
+      "media_type": "Cinematic Image / Video Bleed",
+      "motion": "slow-pan 22s ease-in-out infinite",
+      "overlay_gradients": [
+        "radial_vignette",
+        "lateral_ink_fade",
+        "vertical_contrast_fade"
+      ]
+    },
+    "interactive_elements": {
+      "iso_3d_widget": {
+        "perspective": "1400px",
+        "tilt_physics": "mouse_tracking_xy",
+        "decorations": [
+          "wireframe_cad_svg",
+          "status_chips",
+          "pulse_ring"
+        ]
+      },
+      "topo_lines": "animated_bezier_svg",
+      "ambient_particles": 22
+    },
+    "typography_scale": "clamp(2.4rem, 9vw, 9.5rem)",
+    "primary_ctas": [
+      {
+        "label": "Get a free 3D rendering",
+        "type": "magnetic_button_gold"
+      },
+      {
+        "label": "(509) 994-9500",
+        "type": "pill_border_phone"
+      }
+    ],
+    "status_widget": {
+      "shape": "clip-arrow",
+      "elements": [
+        "live_pacific_clock",
+        "free_3d_stat",
+        "single_crew_stat",
+        "experience_stat"
+      ]
+    }
+  },
+  "media_slots": [
+    {
+      "slot_id": "hero_plate",
+      "route": "/",
+      "role": "hero_cinematic_atmosphere",
+      "ideal_ratio": "16:9",
+      "crop": "object-cover",
+      "current_asset": "src/assets/hero-cinematic.jpg"
+    },
+    {
+      "slot_id": "hero_iso_model",
+      "route": "/",
+      "role": "3d_cad_model_render",
+      "ideal_ratio": "1:1",
+      "crop": "object-contain",
+      "current_asset": "src/assets/hero-iso-render.png"
+    },
+    {
+      "slot_id": "hero_blueprint",
+      "route": "/",
+      "role": "architectural_blueprint_polaroid",
+      "ideal_ratio": "4:5",
+      "crop": "object-cover",
+      "current_asset": "src/assets/hero-blueprint.jpg"
+    },
+    {
+      "slot_id": "hero_macro_stone",
+      "route": "/",
+      "role": "material_detail_stone_timber",
+      "ideal_ratio": "1:1",
+      "crop": "clip-cut",
+      "current_asset": "src/assets/hero-detail-stone.jpg"
+    },
+    {
+      "slot_id": "project_pool",
+      "route": "/projects",
+      "role": "project_luxury_pool_deck",
+      "ideal_ratio": "4:5",
+      "crop": "object-cover",
+      "current_asset": "src/assets/project-pool.jpg"
+    },
+    {
+      "slot_id": "project_timber",
+      "route": "/projects",
+      "role": "project_timber_roof_cover",
+      "ideal_ratio": "16:10",
+      "crop": "object-cover",
+      "current_asset": "src/assets/project-timber.jpg"
+    },
+    {
+      "slot_id": "project_modern",
+      "route": "/projects",
+      "role": "project_composite_steel",
+      "ideal_ratio": "16:10",
+      "crop": "object-cover",
+      "current_asset": "src/assets/project-modern.jpg"
+    },
+    {
+      "slot_id": "detail_railing",
+      "route": "/projects",
+      "role": "craft_macro_steel_railing",
+      "ideal_ratio": "1:1",
+      "crop": "object-cover",
+      "current_asset": "src/assets/detail-railing.jpg"
+    },
+    {
+      "slot_id": "craft_hands",
+      "route": "/about",
+      "role": "craftsman_workforce_portrait",
+      "ideal_ratio": "4:5",
+      "crop": "object-cover",
+      "current_asset": "src/assets/craft-hands.jpg"
+    }
+  ],
+  "content_slots": [
+    {
+      "slot": "business_name",
+      "value": "Urban Decks",
+      "binding": "SITE.name"
+    },
+    {
+      "slot": "tagline",
+      "value": "Custom Deck Designs for Your Space",
+      "binding": "SITE.tagline"
+    },
+    {
+      "slot": "phone_display",
+      "value": "(509) 994-9500",
+      "binding": "SITE.phone"
+    },
+    {
+      "slot": "phone_href",
+      "value": "tel:+15099949500",
+      "binding": "SITE.phoneHref"
+    },
+    {
+      "slot": "email",
+      "value": "info@urbandecks.com",
+      "binding": "SITE.email"
+    },
+    {
+      "slot": "city",
+      "value": "Spokane",
+      "binding": "SITE.city"
+    },
+    {
+      "slot": "region",
+      "value": "WA",
+      "binding": "SITE.region"
+    },
+    {
+      "slot": "hours_summary",
+      "value": "Open daily, including Sunday, by appointment",
+      "binding": "SITE.hoursNote"
+    },
+    {
+      "slot": "services_catalog",
+      "count": 8,
+      "binding": "SITE.services"
+    },
+    {
+      "slot": "service_areas",
+      "count": 10,
+      "binding": "SITE.serviceArea"
+    }
+  ],
+  "trust_slots": [
+    {
+      "placement": "hero_status",
+      "label": "Studio Status",
+      "metrics": [
+        "Free 3D",
+        "1× Crew",
+        "10+ Years"
+      ]
+    },
+    {
+      "placement": "below_hero",
+      "type": "4_column_trust_strip",
+      "pillars": [
+        "Free 3D",
+        "One-Stop Build",
+        "Built for Spokane",
+        "Honest Estimates"
+      ]
+    },
+    {
+      "placement": "craft_section",
+      "type": "promise_card",
+      "quote": "You won't find another company that will work harder than us."
+    },
+    {
+      "placement": "service_pages",
+      "type": "specs_checklist",
+      "icon": "CheckCircle2"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "LocalBusiness",
+      "route": "global_root",
+      "scope": "complete_nap_geo_catalog"
+    },
+    {
+      "type": "Organization",
+      "route": "global_root",
+      "scope": "brand_and_contact"
+    },
+    {
+      "type": "Service",
+      "route": "/services/$slug",
+      "scope": "individual_service_spec"
+    },
+    {
+      "type": "FAQPage",
+      "route": "/faq",
+      "scope": "8_core_faqs"
+    },
+    {
+      "type": "FAQPage",
+      "route": "/service-area/$city",
+      "scope": "city_voice_qa"
+    },
+    {
+      "type": "BreadcrumbList",
+      "route": "all_subpages",
+      "scope": "hierarchical_navigation"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "type": "coordinates",
+      "value": "47.6588° N, 117.4260° W",
+      "locations": [
+        "hero_rule",
+        "schema_geo"
+      ]
+    },
+    {
+      "type": "city_landing_pages",
+      "count": 10,
+      "routes": "/service-area/$city"
+    },
+    {
+      "type": "climate_features",
+      "items": [
+        "Inland NW snow load engineering",
+        "UV-resistant composite",
+        "Shoulder season drainage"
+      ]
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "route": "/service-area/$city",
+      "container": "voiceQA",
+      "format": "natural_language_dl"
+    },
+    {
+      "route": "/faq",
+      "container": "FAQS",
+      "format": "conversational_q_and_a"
+    }
+  ],
+  "map_location_slot": {
+    "component": "LocationMap",
+    "query": "Spokane County, Washington",
+    "protection": "County boundary embed (prevents competitor discovery)",
+    "display": "5-col contact details, 7-col responsive iframe"
+  },
+  "content_density": {
+    "hero": "Minimal and cinematic (visual-first)",
+    "homepage_body": "Balanced editorial (high-contrast cards, generous negative space)",
+    "service_detail": "High-density technical prose and specifications",
+    "city_pages": "High-density geo and voice search optimization"
+  },
+  "mobile_rules": {
+    "breakpoint_390": {
+      "headline_clamp": "2.4rem",
+      "hide_3d_widget": true,
+      "hide_polaroids": true,
+      "full_screen_drawer": true
+    },
+    "breakpoint_768": {
+      "service_grid_columns": 2,
+      "show_nav_phone_cta": true
+    },
+    "breakpoint_1440": {
+      "show_3d_iso_widget": true,
+      "show_compass_dial": true,
+      "show_polaroid_cards": true,
+      "bento_grid_layout": true
+    }
+  },
+  "non_negotiables": [
+    "Italiana display font must be preserved for primary headings",
+    "Bricolage Grotesque font must be preserved for accent headings",
+    "OKLCH color space with warm ink and cedar tokens must remain untouched",
+    "Hero must remain a multi-layered moving composition rather than a split box",
+    "3D rendering capability must remain visually signaled on desktop",
+    "Hours must accurately reflect open daily including Sunday by appointment",
+    "Map must remain at county level to safeguard against competitor pins"
+  ],
+  "safe_replacements": [
+    "hero_cinematic_photo_or_video",
+    "hero_3d_cad_model_png",
+    "business_name_and_logo",
+    "phone_and_email_coordinates",
+    "project_gallery_imagery",
+    "service_descriptions_and_faqs",
+    "city_names_and_regional_boundaries"
+  ],
+  "leak_terms": [
+    "Urban Decks"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Italiana",
+      "Cormorant Garamond",
+      "serif",
+      "Bricolage Grotesque",
+      "Inter",
+      "sans-serif"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.18 0.015 60)",
+    "Bricolage Grotesque, Inter, sans-serif"
+  ],
+  "fonts": [
+    "Italiana",
+    "Cormorant Garamond",
+    "serif",
+    "Bricolage Grotesque",
+    "Inter",
+    "sans-serif"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "c6808dff83badb2d07bdbc6c586c3e33f8c55440b0eaad17d7945192d3bacb0a",
+    "files": {
+      "assets/index-DNJFxBXB.css": "e5b53941c37c705669e50e5acd2b9c2e85a160d8189387eb31f2cdd51ef6d20b",
+      "assets/index-DyQTOs-c.js": "f4f558269e2c1d947a60431f63a00005210cfe1a98a2dd8a8b8cb5aa35877cfb",
+      "assets/router-CpGhNBZf.js": "c49d95fc972532bfec8a22d49ced1792eb1dff672ba25c5105030142250b3bdb",
+      "assets/wss-7MI99bAl.js": "c4849115a1dfb6e3faa6fb461cc32cd3337e0eb1dad795f8ad6f37346dd1eb52",
+      "index.html": "226ec76361358b905a4fdb49c14a31482f8441005dfc24cd050d22c343dc30fc"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED"
+}

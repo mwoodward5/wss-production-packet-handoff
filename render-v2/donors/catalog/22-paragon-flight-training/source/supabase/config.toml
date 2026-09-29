@@ -1,0 +1,4 @@
+project_id = "iiqjvzqyozhoabykkobm"
+
+[functions.admissions-inquiry]
+verify_jwt = false

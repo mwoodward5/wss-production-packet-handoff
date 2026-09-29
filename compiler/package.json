@@ -1,0 +1,36 @@
+{
+  "name": "bespoke-site-os",
+  "version": "5.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bespoke Site OS handoff repo: prompt-driven local business site builder engine, three-kitchen design stack, generated examples, and proof artifacts for Lovable review.",
+  "workspaces": [
+    "engine/*"
+  ],
+  "scripts": {
+    "build": "node --check app/server.mjs && node --check factory/pipeline/05-build-v8.mjs && node --check factory/authority/schema-engine.mjs && node --check factory/authority/authority-standard.mjs",
+    "test": "node --test app/test/*.test.mjs factory/lib/*.test.mjs factory/pipeline/*.test.mjs",
+    "ci": "npm run build && npm test && npm run gate:kitchens",
+    "build-site": "node factory/pipeline/run.mjs",
+    "qc": "node qc-audit/qc.mjs",
+    "qc:visual": "node qc-audit/qc-visual-fidelity.mjs",
+    "build:ca-landscape": "node factory/build-ca-landscape-aplus-sites.mjs",
+    "gate:kitchens": "node scripts/three-kitchen-gate.mjs --strict",
+    "release:verify-ui": "node scripts/verify-production-ui-lock.mjs",
+    "smoke:ca-landscape": "node factory/smoke-ca-landscape-sites.mjs",
+    "capture:ca-landscape": "node factory/capture-ca-landscape-sites.mjs",
+    "forge": "node scripts/forge.mjs",
+    "forge:intake": "node scripts/forge.mjs --from-intake",
+    "test:preview-contact": "node --test factory/pipeline/05-build-v8.preview-contact.test.mjs"
+  },
+  "dependencies": {
+    "@vercel/functions": "^2.2.12",
+    "@sparticuz/chromium-min": "149.0.0",
+    "@vercel/blob": "2.4.0",
+    "fflate": "^0.8.3",
+    "jsdom": "^24.0.0",
+    "playwright": "1.61.1",
+    "playwright-core": "1.61.1",
+    "sharp": "^0.33.0"
+  }
+}

@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MHB Build, LLC — Premier Contractor Design System
+   Palette: deep slate (architectural), warm copper-brass (craft accent),
+            warm bone canvas (drafting paper). All colors HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 36 26% 95%;          /* warm bone */
+    --foreground: 215 35% 11%;         /* deep slate ink */
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 11%;
+
+    --primary: 215 40% 13%;            /* slate */
+    --primary-foreground: 36 26% 95%;
+    --primary-glow: 215 35% 22%;
+
+    --ink: 215 45% 7%;                 /* near-black slate */
+    --secondary: 36 18% 90%;
+    --secondary-foreground: 215 35% 11%;
+
+    --muted: 36 14% 92%;
+    --muted-foreground: 215 14% 36%;
+
+    --accent: 22 78% 46%;              /* warm copper */
+    --accent-foreground: 36 26% 96%;
+    --accent-soft: 28 55% 86%;
+    --accent-glow: 24 90% 58%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 14% 86%;
+    --input: 215 14% 86%;
+    --ring: 215 35% 18%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(115deg, hsl(215 45% 7% / 0.92) 0%, hsl(215 40% 12% / 0.78) 45%, hsl(215 32% 22% / 0.32) 100%);
+    --gradient-brass: linear-gradient(135deg, hsl(28 90% 58%) 0%, hsl(20 70% 38%) 100%);
+    --gradient-canvas: linear-gradient(180deg, hsl(36 26% 95%) 0%, hsl(36 18% 88%) 100%);
+    --gradient-ink: linear-gradient(180deg, hsl(215 45% 8%) 0%, hsl(215 38% 14%) 100%);
+    --gradient-glow: radial-gradient(60% 50% at 50% 0%, hsl(24 90% 58% / 0.18) 0%, transparent 70%);
+
+    --shadow-elegant: 0 40px 80px -30px hsl(215 45% 8% / 0.4);
+    --shadow-card: 0 2px 14px -4px hsl(215 45% 8% / 0.08), 0 12px 40px -20px hsl(215 45% 8% / 0.12);
+    --shadow-brass: 0 14px 40px -12px hsl(22 78% 46% / 0.55);
+    --shadow-glow-brass: 0 0 0 1px hsl(24 90% 58% / 0.18), 0 10px 40px -8px hsl(24 90% 58% / 0.4), 0 30px 80px -20px hsl(24 90% 58% / 0.3);
+    --shadow-float: 0 60px 120px -40px hsl(215 45% 8% / 0.55), 0 30px 60px -30px hsl(215 45% 8% / 0.4);
+
+    --gradient-shine: linear-gradient(110deg, transparent 30%, hsl(28 100% 80% / 0.5) 45%, hsl(28 100% 95% / 0.85) 50%, hsl(28 100% 80% / 0.5) 55%, transparent 70%);
+    --gradient-radial-brass: radial-gradient(ellipse 80% 60% at 50% 0%, hsl(24 90% 58% / 0.32) 0%, hsl(24 90% 58% / 0.06) 40%, transparent 75%);
+    --gradient-aurora: conic-gradient(from 220deg at 50% 50%, hsl(24 90% 58% / 0.22), hsl(215 45% 14% / 0), hsl(22 78% 46% / 0.16), hsl(215 50% 28% / 0.18), hsl(24 90% 58% / 0.22));
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+    --grain: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.35 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>");
+    /* Architectural drafting blueprint cross-grid (used as a hero fallback texture) */
+    --bp-grid: linear-gradient(hsl(215 30% 100% / 0.06) 1px, transparent 1px),
+               linear-gradient(90deg, hsl(215 30% 100% / 0.06) 1px, transparent 1px);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .container-tight { @apply mx-auto max-w-6xl px-6 sm:px-8; }
+  .container-wide { @apply mx-auto max-w-[1400px] px-6 sm:px-10; }
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-[11px] uppercase tracking-[0.24em] font-medium text-accent;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block w-8 h-px bg-accent/70;
+  }
+  .section { @apply py-24 md:py-36; }
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.4s var(--transition-smooth);
+  }
+  .link-underline:hover { background-size: 100% 1px; }
+
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .display-italic { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; }
+
+  .grain::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: var(--grain);
+    mix-blend-mode: overlay;
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  .glass {
+    background: hsl(0 0% 100% / 0.06);
+    backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid hsl(0 0% 100% / 0.12);
+  }
+
+  .blueprint {
+    background-image: var(--bp-grid);
+    background-size: 56px 56px;
+  }
+
+  .reveal-up {
+    animation: reveal-up 1s cubic-bezier(0.22,1,0.36,1) both;
+  }
+  @keyframes reveal-up {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .text-shine {
+    background: linear-gradient(110deg,
+      hsl(22 78% 50%) 0%,
+      hsl(28 95% 72%) 35%,
+      hsl(32 100% 92%) 50%,
+      hsl(28 95% 72%) 65%,
+      hsl(22 78% 50%) 100%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine-sweep 7s ease-in-out infinite;
+  }
+  @keyframes shine-sweep {
+    0%, 100% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+  }
+
+  .halo {
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(circle, hsl(24 90% 58% / 0.5) 0%, hsl(24 90% 58% / 0) 65%);
+    filter: blur(40px);
+    pointer-events: none;
+    animation: halo-pulse 6s ease-in-out infinite;
+  }
+  @keyframes halo-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.15); opacity: 1; }
+  }
+
+  .float-y { animation: float-y 9s ease-in-out infinite; }
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  .float-y-slow { animation: float-y 14s ease-in-out infinite; }
+
+  .aurora {
+    background: var(--gradient-aurora);
+    filter: blur(60px);
+    animation: aurora-spin 24s linear infinite;
+  }
+  @keyframes aurora-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .shine-sweep {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .shine-sweep::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-shine);
+    transform: translateX(-120%);
+    transition: transform 0.9s var(--transition-smooth);
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+  .shine-sweep:hover::before { transform: translateX(120%); }
+
+  .btn-glow { position: relative; }
+  .btn-glow::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--gradient-brass);
+    filter: blur(18px);
+    opacity: 0.5;
+    z-index: -1;
+    transition: opacity 0.4s var(--transition-smooth);
+  }
+  .btn-glow:hover::after { opacity: 0.85; }
+
+  .marquee-track { animation: marquee 40s linear infinite; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-shine, .halo, .float-y, .float-y-slow, .aurora, .marquee-track {
+    animation: none !important;
+  }
+}

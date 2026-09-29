@@ -1,0 +1,413 @@
+{
+  "project_name": "XPhotography",
+  "vertical": "Professional Photography & Media Services",
+  "classification": "Premier",
+  "routes": [
+    {
+      "path": "/",
+      "name": "Home",
+      "type": "flagship_landing"
+    },
+    {
+      "path": "/about",
+      "name": "About",
+      "type": "biography_credentials"
+    },
+    {
+      "path": "/weddings",
+      "name": "Weddings",
+      "type": "service_detail"
+    },
+    {
+      "path": "/portraits",
+      "name": "Portraits",
+      "type": "service_detail"
+    },
+    {
+      "path": "/corporate",
+      "name": "Corporate",
+      "type": "service_detail"
+    },
+    {
+      "path": "/pricing",
+      "name": "Pricing",
+      "type": "rate_cards"
+    },
+    {
+      "path": "/contact",
+      "name": "Contact",
+      "type": "contact_details"
+    },
+    {
+      "path": "/reserve",
+      "name": "Reserve",
+      "type": "inquiry_booking_form"
+    },
+    {
+      "path": "/atlanta",
+      "name": "Atlanta",
+      "type": "local_geo_hub"
+    },
+    {
+      "path": "/buckhead",
+      "name": "Buckhead",
+      "type": "local_geo_submarket"
+    },
+    {
+      "path": "/inman-park",
+      "name": "Inman Park",
+      "type": "local_geo_neighborhood"
+    }
+  ],
+  "design_tokens": {
+    "colors": {
+      "background": "#FFFFFF",
+      "foreground": "#1D1815",
+      "paper": "#FFFFFF",
+      "paper_soft": "#F9F7F4",
+      "hairline": "#E3DFDC",
+      "molten": "#BF7D12",
+      "ivory": "#201B17",
+      "ivory_muted": "#625953"
+    },
+    "typography": {
+      "display": "Fraunces, serif (weight 350, opsz 144, soft 50-60)",
+      "sans": "Inter, sans-serif (weight 300)",
+      "mono": "JetBrains Mono, monospace (weight 400-500, tracking 0.32em)"
+    },
+    "radii": {
+      "base": "0.125rem",
+      "cards": "0.125rem",
+      "buttons": "0.125rem"
+    },
+    "textures": [
+      "fractal-noise-grain (4% opacity multiply)",
+      "cinema-overlay (vertical white gradient)"
+    ]
+  },
+  "hero_contract": {
+    "height": "100svh",
+    "min_height": "720px",
+    "layout": "full_bleed_parallax_media",
+    "video_support": true,
+    "video_duration_recommended": "10s",
+    "video_loop": true,
+    "video_muted": true,
+    "required_overlays": [
+      ".cinema-overlay",
+      ".grain"
+    ],
+    "headline_structure": {
+      "line1": "Photography that",
+      "line2_aperture_icon": true,
+      "line2_italic_foil": "remembers",
+      "line2_suffix": " the",
+      "line3": "way it felt."
+    },
+    "ctas": [
+      {
+        "label": "Reserve Your Date",
+        "type": "primary_molten",
+        "to": "/reserve"
+      },
+      {
+        "label": "Phone Number",
+        "type": "secondary_outline",
+        "action": "tel"
+      }
+    ],
+    "side_rails": {
+      "left": [
+        "33.7490° N",
+        "84.3880° W",
+        "ATL · GA"
+      ],
+      "right": [
+        "35MM",
+        "ƒ/1.4",
+        "ISO 400"
+      ]
+    }
+  },
+  "media_slots": [
+    {
+      "id": "hero_flagship",
+      "route": "/",
+      "role": "hero",
+      "aspect": "16:9_or_21:9",
+      "crop": "cover",
+      "animated": true
+    },
+    {
+      "id": "cinema_reel_home",
+      "route": "/",
+      "role": "portfolio_strip",
+      "aspect": "mixed_native",
+      "crop": "contain",
+      "count": 10
+    },
+    {
+      "id": "triptych_weddings",
+      "route": "/",
+      "role": "service_anchor_1",
+      "aspect": "3:2",
+      "crop": "cover"
+    },
+    {
+      "id": "triptych_portraits",
+      "route": "/",
+      "role": "service_anchor_2",
+      "aspect": "3:2",
+      "crop": "cover"
+    },
+    {
+      "id": "triptych_corporate",
+      "route": "/",
+      "role": "service_anchor_3",
+      "aspect": "3:2",
+      "crop": "cover"
+    },
+    {
+      "id": "owner_bio_portrait",
+      "route": "/about",
+      "role": "founder_portrait",
+      "aspect": "3:4",
+      "crop": "contain",
+      "sticky": true
+    },
+    {
+      "id": "service_hero_weddings",
+      "route": "/weddings",
+      "role": "service_hero",
+      "aspect": "16:9",
+      "crop": "cover"
+    },
+    {
+      "id": "service_hero_portraits",
+      "route": "/portraits",
+      "role": "service_hero",
+      "aspect": "16:9",
+      "crop": "cover"
+    },
+    {
+      "id": "service_hero_corporate",
+      "route": "/corporate",
+      "role": "service_hero",
+      "aspect": "16:9",
+      "crop": "cover"
+    },
+    {
+      "id": "location_cover_atlanta",
+      "route": "/atlanta",
+      "role": "geo_cover",
+      "aspect": "16:9",
+      "crop": "cover"
+    },
+    {
+      "id": "location_cover_buckhead",
+      "route": "/buckhead",
+      "role": "geo_cover",
+      "aspect": "16:9",
+      "crop": "cover"
+    },
+    {
+      "id": "location_cover_inman_park",
+      "route": "/inman-park",
+      "role": "geo_cover",
+      "aspect": "16:9",
+      "crop": "cover"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "brand_name",
+      "location": "src/content/brand.ts -> BRAND.name"
+    },
+    {
+      "key": "founder_name",
+      "location": "src/content/brand.ts -> BRAND.owner"
+    },
+    {
+      "key": "phone",
+      "location": "src/content/brand.ts -> BRAND.phone"
+    },
+    {
+      "key": "email",
+      "location": "src/content/brand.ts -> BRAND.email"
+    },
+    {
+      "key": "address",
+      "location": "src/content/brand.ts -> BRAND.address"
+    },
+    {
+      "key": "geo_coords",
+      "location": "src/content/brand.ts -> BRAND.geo"
+    },
+    {
+      "key": "hours",
+      "location": "src/content/brand.ts -> BRAND.hours"
+    },
+    {
+      "key": "services_triptych",
+      "location": "src/pages/Home.tsx -> services"
+    },
+    {
+      "key": "packages",
+      "location": "src/components/PricingPackages.tsx -> packages"
+    },
+    {
+      "key": "testimonials",
+      "location": "src/pages/Home.tsx -> proof"
+    },
+    {
+      "key": "about_bio",
+      "location": "src/content/about.tsx -> AboutBody"
+    }
+  ],
+  "trust_slots": [
+    {
+      "slot": "header_phone",
+      "type": "direct_call",
+      "placement": "header_top_right"
+    },
+    {
+      "slot": "side_rails",
+      "type": "technical_metadata",
+      "placement": "screen_left_right"
+    },
+    {
+      "slot": "testimonials_block",
+      "type": "client_reviews",
+      "placement": "homepage_mid"
+    },
+    {
+      "slot": "pricing_transparency",
+      "type": "transparent_rates",
+      "placement": "pre_footer"
+    },
+    {
+      "slot": "gear_and_experience",
+      "type": "authority_proof",
+      "placement": "about_page"
+    },
+    {
+      "slot": "inclusions_grid",
+      "type": "deliverable_certainty",
+      "placement": "service_pages"
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "ProfessionalService",
+      "provider": "SchemaProvider.tsx",
+      "status": "active"
+    },
+    {
+      "type": "Person",
+      "provider": "SchemaProvider.tsx",
+      "status": "active"
+    },
+    {
+      "type": "WebSite",
+      "provider": "SchemaProvider.tsx",
+      "status": "active"
+    },
+    {
+      "type": "BreadcrumbList",
+      "provider": "LocationPage.tsx & Breadcrumbs.tsx",
+      "status": "active"
+    },
+    {
+      "type": "LocalBusiness",
+      "provider": "LocationPage.tsx",
+      "status": "active"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "type": "geo_landing_routes",
+      "routes": [
+        "/atlanta",
+        "/buckhead",
+        "/inman-park"
+      ]
+    },
+    {
+      "type": "robots_ai_policy",
+      "file": "public/robots.txt",
+      "allows_ai_crawlers": true
+    },
+    {
+      "type": "llm_grounding_document",
+      "file": "public/llms.txt"
+    },
+    {
+      "type": "sitemap",
+      "file": "public/sitemap.xml"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "query_type": "pricing",
+      "target": "/pricing"
+    },
+    {
+      "query_type": "booking_process",
+      "target": "/reserve"
+    },
+    {
+      "query_type": "local_service",
+      "target": "/atlanta"
+    }
+  ],
+  "map_location_slot": {
+    "preferred_route": "/contact",
+    "integration_type": "styled_editorial_frame",
+    "address_display": "1100 Krog St NE, Suite 200, Atlanta, GA 30307",
+    "coordinates": {
+      "lat": 33.7625,
+      "lng": -84.354
+    }
+  },
+  "content_density": {
+    "hero_density": "sparse_editorial",
+    "services_density": "structured_triptych",
+    "review_density": "curated_low_count_high_impact",
+    "about_density": "rich_storytelling",
+    "pricing_density": "three_tier_standardized"
+  },
+  "mobile_rules": {
+    "390px": "hamburger_menu_active, side_rails_hidden, hero_title_vw_scaled, reel_touch_swipe, buttons_stacked",
+    "768px": "two_column_grids, condensed_nav_or_burger, watermark_visible",
+    "1440px": "three_column_grids, full_desktop_nav, side_rails_active, dual_hero_ctas"
+  },
+  "non_negotiables": [
+    "White/paper background (#FFFFFF) with warm paper-soft (#F9F7F4) alternations",
+    "Molten gold accent (#BF7D12 / hsl(36, 78%, 42%))",
+    "Fraunces soft display serif paired with Inter light body and JetBrains Mono eyebrows",
+    "No image cropping in Cinema Reels (object-contain required)",
+    "Cinema overlay gradient and film grain texture on all hero media",
+    "Tight architectural border radius (0.125rem / 2px)",
+    "Monogram aperture geometry preserved in brand lockup"
+  ],
+  "safe_replacements": [
+    "BRAND name, legalName, owner, phone, email, address, coordinates, hours",
+    "Hero photograph / 10s looping cinematic video",
+    "Cinema Reel portfolio photographs",
+    "Service titles, descriptions, and feature bullets",
+    "Pricing tier rates, names, and deliverables checklists",
+    "Testimonial quote text and attributions",
+    "About narrative, founder bio, and owner headshot",
+    "Target geographic city names, coordinates, and local venue recommendations"
+  ],
+  "lovable_classification": "High-End Editorial Solo-Practitioner Studio",
+  "classification_basis": "11 distinct documented routes; WSS scope label only",
+  "project_id": "67d11296-3a10-48b3-b6ff-87b2fd181bd1",
+  "project_url": "https://lovable.dev/projects/67d11296-3a10-48b3-b6ff-87b2fd181bd1",
+  "source_plan_file": "43-xavier-jordan-studios-lovable-lovable-plan.md",
+  "captured_at_utc": "2026-09-28T05:45:38.932871Z",
+  "capture_status": "DOCUMENTED_FROM_LOVABLE_CHAT_UNVERIFIED",
+  "confidence": "SOURCE_REPORTED; NOT_INDEPENDENTLY_VERIFIED",
+  "license": "study-only",
+  "remix_permission": false
+}

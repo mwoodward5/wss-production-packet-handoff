@@ -1,0 +1,258 @@
+{
+  "name": "tattoo-aurelia",
+  "vertical": "tattoo",
+  "hero_wash": {
+    "selector": "main > section:first-of-type",
+    "background": "#261D16",
+    "text_color": "#EFEBE7",
+    "pages_verified": [
+      "/portfolio",
+      "/visit"
+    ],
+    "verified": "Render-proven 2026-08-13 on a themed local serve of this SSR donor: the first <section> under <main> carries /assets/hero-wash.* on every page; stripping it changes about 54 percent of the /portfolio title band and about 13 percent of /visit, headline on top. The HOME hero is a full-bleed IMG (hero-poster) that covers the wash, so it is a photo_slot for the client's own photo; the inner title bands wash visibly."
+  },
+  "hero_wash_note": "ON 2026-08-13. Multipage SSR (TanStack). The home hero is a full-bleed IMG; the six inner pages have title bands the wash paints. background and text_color are the raw dark sample (fallback only); the shipped scrim is the theme pass slab/slabInk. hero-poster is a photo_slot.",
+  "label": "Aurelia",
+  "wordmarkFill": "#F4EFE6",
+  "source": "lovable:inkscribe-booking (67b5cad5) — published build ported; persona was FICTIONAL (AURELIA INK, 555 phone, example.com email), no real business identity ever existed in this donor",
+  "sanitised": "2026-08-02",
+  "stack": "TanStack Start (SSR) published build -> static per-route prerender + hydrating SPA chunks",
+  "donor_business_name": "AURELIA INK",
+  "donor_phone": "(512) 555-0148",
+  "donor_email": "booking@aureliaink.com",
+  "donor_city": "",
+  "donor_domain": "aureliaink.com",
+  "persons": [],
+  "fabricated_persons": [],
+  "socials": [
+    "instagram.com/aureliaink"
+  ],
+  "zips": [],
+  "geo": [],
+  "account_ids": [],
+  "donor_city_note": "Deliberately blank. The persona's Austin is tokenized to {{CITY}} in every file; declaring 'Austin' as an identity atom would hard-fail any legitimate Austin prospect on the naive substring scan (the Tempe/temperature trap, wss-elconstruction-donor-blockers).",
+  "consumes_content": false,
+  "renders": [],
+  "photo_slots": [
+    "assets/hero-poster-Cn6qxxe4.jpg",
+    "assets/gallery-01-5xper6yV.jpg",
+    "assets/gallery-02-CNZgrnPR.jpg",
+    "assets/gallery-03-qnLKNz1Q.jpg",
+    "assets/gallery-04--r36lnwN.jpg",
+    "assets/gallery-05-Dm4ZIyJM.jpg",
+    "assets/gallery-06-r9q99rLn.jpg"
+  ],
+  "photo_slots_note": "Six portfolio slots, filled with the PROSPECT'S own work. The donor originals are Lovable-generated illustrative images of a fictional studio — no real client's skin or real artist's portfolio is in this donor. The four process-XX images are instructional (station, stencil, machine, aftercare) and stay donor-supplied; the hero poster + loop are the cinematic layer and stay donor-supplied.",
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-tattoo.mp4",
+    "wss_fallback_clip_path": "media/hero-loop.mp4",
+    "poster": "assets/hero-poster-Cn6qxxe4.jpg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (REAL bytes ship today: the donor-owned tattoo-studio reel, a 1743972-byte mp4; rung 2 plays on every build as-is)",
+      "the client's photograph — photo slot 1 (the hero img and the video poster attribute are the same file; the engine swaps the slot with the prospect's own photo)",
+      "the drawn ink-dark hero composition (grain overlay, vignette and scrim under everything)"
+    ],
+    "note": "Owner's order, 2026-08-16: a source site with a hero video ships that video; the still photo rung is the emergency fallback, not the contract. The hero video element already carried the autoplay contract, a poster over a ken-burns still, and a Tailwind motion-reduce hide; the static <source> child and the onError display:none (which would strand the ladder after one failed rung) are gone, and the rungs are armed only by the hero-video-ladder runtime in index.html — a rung arms when its bytes shipped, an error steps down silently, and reduced motion never arms the video rungs. The engine writes an approved clip to client_video_path (mp4 only — the slot extension is binding); never a borrowed or fabricated clip."
+  },
+  "media": [
+    "media/hero-loop.mp4"
+  ],
+  "media_note": "Hero loop re-encoded from the source asset (7,715,020b 12.2Mbps -> 1,743,972b crf24 maxrate 2600k faststart), referenced from the router chunk as /media/hero-loop.mp4 (the CDN /__l5e/ URL is rewritten in JS, not just HTML).",
+  "spa_routes": [
+    "/artist",
+    "/portfolio",
+    "/flash",
+    "/process",
+    "/faq",
+    "/visit"
+  ],
+  "spa_routes_note": "Declared EXPLICITLY to keep deriveRoutes off the compiled router: with an empty list the engine reads the route table out of the JS bundle, which still registers the donor's dead Supabase /admin and /auth routes, and deep_link then 404s probing /admin. Every declared route ships its own prerendered index.html; the deep_link probe accepts a route serving its own page (the 40f6cb0 multi-page fix), and the donor ships its own cleanUrls vercel.json — the concrete-elconstruction lesson.",
+  "routes": {
+    "static": [
+      "/",
+      "/artist",
+      "/portfolio",
+      "/flash",
+      "/process",
+      "/faq",
+      "/visit"
+    ],
+    "dynamic": [],
+    "catchAll": "Vercel default 404 (donor ships no 404.html, Sterling-style)"
+  },
+  "lead_endpoint": {
+    "url": "https://ghost.wss-ai.com/api/quote-request",
+    "payload": [
+      "slug",
+      "name",
+      "phone",
+      "email",
+      "service",
+      "message",
+      "website"
+    ],
+    "slug_source": "window.location.hostname.split('.')[0]",
+    "honeypot": "website",
+    "note": "The donor's booking form posted to its own /api/public/booking (TanStack server fn + Supabase storage for reference images) — dead on a static mirror, and every lead would have vanished. The submit path in the router chunk is rewired: endpoint -> quote-request, payload mapped (style/size/placement join into `service`, description -> message), reference-image upload no longer required for submission. The reference-upload UI remains; attaching images is best-effort."
+  },
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "EMAIL",
+    "CITY",
+    "STATE",
+    "POSTAL",
+    "PROFILE_URL",
+    "SITE_URL",
+    "PREVIEW_DOMAIN",
+    "HERO_LINE_A",
+    "HERO_LINE_B"
+  ],
+  "classification": {
+    "verticalFamilies": [
+      "personal-craft"
+    ],
+    "conversionArchetypes": [
+      "booking-request"
+    ],
+    "shape": "cinematic-dark-longform",
+    "routeDepth": "medium",
+    "photoDemand": "high"
+  },
+  "notes": "Ported from the PUBLISHED build (site was born as a WSS donor template: src/config/siteConfig.ts is placeholder identity with explicit 'never ship this placeholder' markers, and src/config/presets.ts ships hairSalon/spa/barber/tutor presets for future lanes). Lovable badge, /~flock.js loader and og:image pointing at the lovable.app host are stripped; the inert window.__lovable* optional-chained error hooks remain (no script defines them, so they no-op). 348 identity replacements pass 1 + 145 pass 2, residual audit clean except a 'you@example.com' form input placeholder, kept deliberately.",
+  "registered_on": "2026-08-02",
+  "installed_at": "apps/backend/donors-clean/tattoo-aurelia",
+  "hero_headline_2026_08_11": "The home h1 was \"Custom tattoos drawn for the body you are in.\" — the donor's sentence on every tattoo mirror. Now HERO_LINE_A + HERO_LINE_B, each the whole value of its own span so a blank can never weld to literal copy.",
+  "lineage": "aurelia",
+  "requiredTokens": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "LICENSE",
+    "PROFILE_URL",
+    "LOGO_URL"
+  ],
+  "fictionalIdentity": {
+    "businessName": "Aurelia Ink Atelier",
+    "owner": "Noor Bramante",
+    "phones": [
+      "+15035550107",
+      "503-555-0107",
+      "(503) 555-0107",
+      "503.555.0107"
+    ],
+    "emails": [
+      "bookings@aureliaink.com",
+      "dispatch@aureliaink.com",
+      "bramante@aureliaink.com"
+    ],
+    "domain": "aureliaink.com",
+    "city": "Portland",
+    "region": "OR",
+    "county": "Multnomah County",
+    "postal": "97214",
+    "geo": "45.5152;-122.6784",
+    "license": "OR-TAT-11480",
+    "profileUrl": "https://maps.example.com/place/aurelia-ink-atelier",
+    "logoUrl": "assets/logo-fallback.svg"
+  },
+  "paletteDefaults": {
+    "accent": "#7b47c4",
+    "accentInk": "#5c3399",
+    "accentText": "#ffffff",
+    "surface": "#fbfaff",
+    "surfaceAlt": "#f1edf9",
+    "slab": "#14101c",
+    "slabInk": "#f4f0fb",
+    "text": "#161221",
+    "border": "#ded6ee"
+  },
+  "variants": {
+    "hero": [
+      "hero/video",
+      "hero/split-right",
+      "hero/editorial-slab"
+    ],
+    "services": [
+      "services/bento",
+      "services/three-column-cards",
+      "services/list-rail"
+    ],
+    "gallery": [
+      "gallery/masonry-grid",
+      "gallery/before-after-pairs",
+      "gallery/wide-filmstrip"
+    ],
+    "testimonials": [
+      "testimonials/cards",
+      "testimonials/single-pullquote",
+      "testimonials/logo-and-quote-split"
+    ],
+    "process": [
+      "process/numeral-rail",
+      "process/vertical-timeline",
+      "process/two-up-steps"
+    ],
+    "faq": [
+      "faq/accordion",
+      "faq/two-column",
+      "faq/inline-list"
+    ],
+    "cta": [
+      "cta/panel",
+      "cta/full-bleed-slab",
+      "cta/split-form-and-call"
+    ],
+    "ticker": [
+      "ticker/marquee",
+      "ticker/static-chip-row",
+      "ticker/none"
+    ]
+  },
+  "heroVideo": {
+    "slot": "main > section.hero video[data-desktop-autoplay]",
+    "poster": "assets/hero-poster.svg",
+    "note": "Video variant is default when the engine has a clip; poster hero serves otherwise."
+  },
+  "engineInjectionPoint": "ENGINE INJECTION POINT comment immediately before <footer>",
+  "identity": {
+    "atoms": {
+      "names": [
+        "AURELIA INK"
+      ],
+      "people": [],
+      "phones": [
+        "+15125550148",
+        "5125550148",
+        "512-555-0148",
+        "(512) 555-0148",
+        "512.555.0148"
+      ],
+      "emails": [
+        "booking@aureliaink.com"
+      ],
+      "domains": [
+        "aureliaink.com",
+        "instagram.com/aureliaink"
+      ],
+      "cities": [],
+      "regions": [],
+      "counties": [],
+      "zips": [],
+      "geo": [],
+      "license": [],
+      "account_ids": []
+    },
+    "note": "Donor-side identity atoms, declared so lib/mirror-engine/scan.js identityScan() builds a non-empty atom list. Never shipped: hydrate.js drops BOILERPLATE.json from the output tree."
+  }
+}

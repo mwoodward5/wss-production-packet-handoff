@@ -1,0 +1,74 @@
+{
+  "Lyons Roofing": {
+    "ok": true,
+    "rating": 4.6,
+    "review_count": 152,
+    "source": "google_knowledge_panel_via_brightdata",
+    "attested_by": {
+      "name_match": true,
+      "city_match": true,
+      "phone_match": false
+    },
+    "panel": {
+      "name": "Lyons Roofing",
+      "address": "895 W Grant Rd, Tucson, AZ 85705, United States",
+      "phone": "+1 520-600-6559"
+    },
+    "observed_at": "2026-07-30T02:57:12.185Z"
+  },
+  "Kingdom Plumbing": {
+    "ok": false,
+    "reason": "no_knowledge_panel"
+  },
+  "Ramon Roofing": {
+    "ok": true,
+    "rating": 4.9,
+    "review_count": 85,
+    "source": "google_knowledge_panel_via_brightdata",
+    "attested_by": {
+      "name_match": true,
+      "city_match": true,
+      "phone_match": false
+    },
+    "panel": {
+      "name": "Ramon Roofing",
+      "address": "3027 Ramona Dr #110, Fort Worth, TX 76116, United States",
+      "phone": "+1 817-402-2493"
+    },
+    "observed_at": "2026-07-30T02:58:04.738Z"
+  },
+  "Music City Roofers": {
+    "ok": true,
+    "rating": 4.7,
+    "review_count": 874,
+    "source": "google_knowledge_panel_via_brightdata",
+    "attested_by": {
+      "name_match": true,
+      "city_match": true,
+      "phone_match": false
+    },
+    "panel": {
+      "name": "Music City Roofers",
+      "address": "2617 Grissom Dr, Nashville, TN 37204, United States",
+      "phone": "+1 615-900-4000"
+    },
+    "observed_at": "2026-07-30T02:58:46.421Z"
+  },
+  "ENCO Plumbing, Inc.": {
+    "ok": true,
+    "rating": 4.9,
+    "review_count": 403,
+    "source": "google_knowledge_panel_via_brightdata",
+    "attested_by": {
+      "name_match": true,
+      "city_match": true,
+      "phone_match": true
+    },
+    "panel": {
+      "name": "ENCO Plumbing, Inc.",
+      "address": "3700 Standridge Dr, The Colony, TX 75056, United States",
+      "phone": "+1 214-222-4464"
+    },
+    "observed_at": "2026-07-30T02:58:58.509Z"
+  }
+}

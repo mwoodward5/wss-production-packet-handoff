@@ -1,0 +1,34 @@
+{
+  "_readme": [
+    "READY TO ATTACH. POST this object to https://api.vapi.ai/tool with the VAPI private key,",
+    "then add the returned tool id to the assistant's model.toolIds (additively — see",
+    "additiveModelPatch in api/admin/vapi-assistants.js, which exists because a naive",
+    "{ model: { toolIds } } patch silently drops every other model field).",
+    "Replace server.secret with the value of VAPI_TOOL_SECRET before sending; it is left as a",
+    "placeholder here so this file can live in the repo.",
+    "This tool is READ-ONLY. It writes nothing, changes nothing, and sends nothing."
+  ],
+  "type": "function",
+  "function": {
+    "name": "look_up_customer",
+    "description": "Look up everything we already know about the caller before you answer them: the emails between us, what they have typed in their dashboard, the chat on their own website, every change they have asked for and what actually happened to it, and any photos they have sent us. CALL THIS ONCE, EARLY, as soon as you know who is on the phone — it changes nothing and costs the caller nothing. Call it whenever they ask about STATE rather than about a change: 'did you get my email', 'did that go through', 'what did I ask for last time', 'did you get the photo I sent'. Do NOT read the answer out as a list — it is background, and you use it to answer the question they actually asked. Every field is a recorded fact; if a section says it could not be read, say you cannot see that right now and never fill the gap with a guess. The response also carries `can_do`, the complete list of changes the website editor can actually make, and `can_do.refusal` — the one sentence to say for anything outside that list. Never promise a change that is not on it. `price_line` is the ONLY pricing you may quote, for any question about cost, plans or what things cost. Never quote a number from memory, from an older script, or from anything else — three different prices once circulated in our own materials, and the caller's email is the truth they can hold. If they were quoted a different figure in writing, say you'll note that and honour what their email says. If `timing` comes back, its `say` is the only duration you are allowed to quote; with no `timing`, put no time on it at all.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "client_ref": {
+          "type": "string",
+          "description": "Whatever the caller gave you to identify themselves — the Client ID from the top of their email, their phone number, or their business name. One field; the server works out which it is. Leave it out entirely if you have already identified them earlier in this same call."
+        },
+        "instruction": {
+          "type": "string",
+          "description": "OPTIONAL. If they have just asked for a website change, pass their words here and the answer will also tell you whether the editor can do it and how long changes like it actually take. Leave it out when they are only asking a question."
+        }
+      },
+      "required": []
+    }
+  },
+  "server": {
+    "url": "https://ghost.wss-ai.com/api/riley/context",
+    "secret": "${VAPI_TOOL_SECRET}"
+  }
+}

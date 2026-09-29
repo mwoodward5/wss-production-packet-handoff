@@ -1,0 +1,462 @@
+{
+  "ok": true,
+  "generated_at": "2026-07-09T23:17:57.893Z",
+  "source": "automated-build",
+  "renderer": "05-build-v7",
+  "qc_passed": true,
+  "project_id": "ghost_4UfgRqMPXTZL",
+  "generation_id": "site_02lfmbOTo6oT",
+  "version": 8,
+  "grade": "B",
+  "business": {
+    "name": "Richard Diaz Landscape & Masonry",
+    "industry": "landscaping",
+    "city": "Orange",
+    "state": "CA",
+    "current_website": "https://richarddiazlandscaping.com/"
+  },
+  "opportunities": [
+    {
+      "type": "nap_mismatch",
+      "severity": "high",
+      "headline": "The website phone does not match the Google business profile",
+      "detail": "The site header shows (480) 692-9646 while the Google profile and primary contact use (714) 673-2643."
+    }
+  ],
+  "local_growth_plan": {
+    "version": "local-search-plan.v1",
+    "status": "candidate_only",
+    "claimLevel": "planned",
+    "location": {
+      "city": "Orange",
+      "state": "CA",
+      "coordinatesVerified": true
+    },
+    "targetTerms": [
+      {
+        "term": "landscape design orange",
+        "intent": "service-and-location",
+        "evidence": "candidate"
+      },
+      {
+        "term": "masonry orange",
+        "intent": "service-and-location",
+        "evidence": "candidate"
+      },
+      {
+        "term": "hardscaping orange",
+        "intent": "service-and-location",
+        "evidence": "candidate"
+      },
+      {
+        "term": "concrete orange",
+        "intent": "service-and-location",
+        "evidence": "candidate"
+      },
+      {
+        "term": "retaining and block walls orange",
+        "intent": "service-and-location",
+        "evidence": "candidate"
+      },
+      {
+        "term": "pavers orange",
+        "intent": "service-and-location",
+        "evidence": "candidate"
+      }
+    ],
+    "trustSignals": [
+      {
+        "key": "business_profile",
+        "label": "Verified business profile",
+        "status": "found",
+        "detail": "A public business profile was matched to this company.",
+        "action": "Connect the verified identity, hours, location, and customer actions to the website."
+      },
+      {
+        "key": "contact_consistency",
+        "label": "Name, address, and phone consistency",
+        "status": "needs_attention",
+        "detail": "1 contact detail mismatch found.",
+        "action": "Use one verified identity in visible contact details, maps, and structured business data."
+      },
+      {
+        "key": "reviews",
+        "label": "Review and reputation proof",
+        "status": "not_verified",
+        "detail": "No review count was verified in this intake.",
+        "action": "Use only sourced ratings, counts, themes, or quotes at decision points."
+      },
+      {
+        "key": "citations",
+        "label": "Directory and citation signals",
+        "status": "not_verified",
+        "detail": "Directory matches are waiting for local-market enrichment.",
+        "action": "Carry verified trust references into the launch checklist without copying unsupported claims."
+      },
+      {
+        "key": "coordinates",
+        "label": "Map and nearby-search context",
+        "status": "found",
+        "detail": "A verified location or coordinate pair is available.",
+        "action": "Add satellite directions, geographic business markup, and one honest service-area page."
+      },
+      {
+        "key": "structured_data",
+        "label": "Search and AI understanding",
+        "status": "not_verified",
+        "detail": "Current structured data coverage was not assumed.",
+        "action": "Publish matching business, service, FAQ, breadcrumb, website, and geographic markup."
+      },
+      {
+        "key": "answer_content",
+        "label": "Conversational and voice-search answers",
+        "status": "not_verified",
+        "detail": "Current question coverage was not assumed.",
+        "action": "Answer a short set of buying questions in visible copy that can also be read by search and voice tools."
+      },
+      {
+        "key": "social_profiles",
+        "label": "Connected public profiles",
+        "status": "not_verified",
+        "detail": "No public social profile was verified in this intake.",
+        "action": "Connect only sourced profiles to reinforce the same business identity."
+      }
+    ],
+    "citations": [],
+    "currentVisibility": {
+      "measured": false,
+      "termsMeasured": 0,
+      "top10Terms": 0
+    },
+    "contentPlan": {
+      "servicePages": 4,
+      "serviceAreaPages": 1,
+      "faqQuestions": 6,
+      "principle": "one_compact_local_chapter"
+    },
+    "limits": {
+      "targetTerms": 6,
+      "servicePages": 4,
+      "serviceAreaPages": 1,
+      "faqQuestions": 6
+    },
+    "launchWork": [
+      "verified business identity and contact consistency",
+      "local service titles and page descriptions",
+      "business, service, FAQ, breadcrumb, website, and geographic markup",
+      "satellite map, directions, and verified coordinates when available",
+      "short conversational answers for search, AI, and voice discovery",
+      "sourced reviews, directories, and public profiles only"
+    ],
+    "generatedAt": "2026-07-09T23:17:53.114Z"
+  },
+  "scorecard": {
+    "renderer": "v7",
+    "build_type": "multi-page",
+    "generated_at": "2026-07-09T23:17:53.705Z",
+    "pages": [
+      {
+        "path": "/",
+        "title": "Richard Diaz Landscape & Masonry — landscaping in Orange, CA"
+      },
+      {
+        "path": "/about/",
+        "title": "About Richard Diaz Landscape & Masonry — landscaping, Orange CA"
+      },
+      {
+        "path": "/services/",
+        "title": "Landscaping services in Orange — Richard Diaz Landscape & Masonry"
+      },
+      {
+        "path": "/services/landscape-design/",
+        "title": "Landscape design — Orange, CA | Richard Diaz Landscape & Masonry"
+      },
+      {
+        "path": "/services/masonry/",
+        "title": "Masonry — Orange, CA | Richard Diaz Landscape & Masonry"
+      },
+      {
+        "path": "/services/hardscaping/",
+        "title": "Hardscaping — Orange, CA | Richard Diaz Landscape & Masonry"
+      },
+      {
+        "path": "/services/concrete/",
+        "title": "Concrete — Orange, CA | Richard Diaz Landscape & Masonry"
+      },
+      {
+        "path": "/process/",
+        "title": "How it works — Richard Diaz Landscape & Masonry, Orange"
+      },
+      {
+        "path": "/service-areas/",
+        "title": "Service areas — Richard Diaz Landscape & Masonry | Orange, CA"
+      },
+      {
+        "path": "/faq/",
+        "title": "FAQ — Richard Diaz Landscape & Masonry, landscaping in Orange"
+      },
+      {
+        "path": "/contact/",
+        "title": "Contact Richard Diaz Landscape & Masonry — Orange, CA"
+      }
+    ],
+    "schema_types": [
+      "LocalBusiness",
+      "AdministrativeArea",
+      "OfferCatalog",
+      "Offer",
+      "Service",
+      "WebSite",
+      "BreadcrumbList",
+      "WebPage",
+      "FAQPage"
+    ],
+    "score": 95,
+    "checks": [
+      {
+        "id": "title-length",
+        "label": "Title ≤ 60 chars with trade + city",
+        "pass": true,
+        "detail": "60 chars"
+      },
+      {
+        "id": "meta-description",
+        "label": "Meta description ≤ 160 chars, owner voice",
+        "pass": true,
+        "detail": "159 chars"
+      },
+      {
+        "id": "single-h1",
+        "label": "Single H1 per page",
+        "pass": true,
+        "detail": "1 found"
+      },
+      {
+        "id": "schema-suite",
+        "label": "LocalBusiness · Service · FAQPage · Breadcrumb · WebSite schema",
+        "pass": true,
+        "detail": "LocalBusiness, AdministrativeArea, OfferCatalog, Offer, Service, WebSite, BreadcrumbList, WebPage, FAQPage"
+      },
+      {
+        "id": "speakable",
+        "label": "Speakable schema for voice/AI search",
+        "pass": true,
+        "detail": "FAQ + intro marked"
+      },
+      {
+        "id": "satellite-map",
+        "label": "Google satellite map + directions",
+        "pass": true,
+        "detail": "pin at 33.7976, -117.8101"
+      },
+      {
+        "id": "hours-schema",
+        "label": "openingHoursSpecification from sourced hours",
+        "pass": false,
+        "detail": "hours not sourced — honest placeholder shipped, never invented"
+      },
+      {
+        "id": "alt-coverage",
+        "label": "Alt text on every image",
+        "pass": true,
+        "detail": "17/17 images"
+      },
+      {
+        "id": "reduced-motion",
+        "label": "prefers-reduced-motion honored",
+        "pass": true,
+        "detail": "all animation gated"
+      },
+      {
+        "id": "mobile-320",
+        "label": "320px zero horizontal scroll",
+        "pass": true,
+        "detail": "overflow clipped + fluid grids"
+      },
+      {
+        "id": "canonical-indexing",
+        "label": "Canonical on public builds; noindex/noarchive on private previews",
+        "pass": true,
+        "detail": "private preview is excluded from indexing"
+      },
+      {
+        "id": "og-card",
+        "label": "Branded PNG social card + complete Twitter metadata",
+        "pass": true,
+        "detail": "media/og.png · 1200×630"
+      },
+      {
+        "id": "hero-motion",
+        "label": "Hero uses video or cinematic photo motion",
+        "pass": true,
+        "detail": "video"
+      },
+      {
+        "id": "service-media",
+        "label": "Real client media fills service visuals when available",
+        "pass": true,
+        "detail": "8/8 service cards use real media"
+      },
+      {
+        "id": "media-provenance",
+        "label": "AI imagery labeled, real photos ranked first",
+        "pass": true,
+        "detail": "video; 8 real photos; 1 video(s)"
+      },
+      {
+        "id": "preview-conversion",
+        "label": "Preview has launch or contact conversion rail",
+        "pass": true,
+        "detail": "purchase + contact"
+      },
+      {
+        "id": "tel-tap",
+        "label": "tap-to-call everywhere",
+        "pass": true,
+        "detail": "tel: links live"
+      },
+      {
+        "id": "sticky-cta",
+        "label": "Persistent quote CTA",
+        "pass": true,
+        "detail": "floating quote bar"
+      },
+      {
+        "id": "multi-page",
+        "label": "5–8 page architecture with per-page heads",
+        "pass": true,
+        "detail": "11 pages"
+      },
+      {
+        "id": "breadcrumbs",
+        "label": "BreadcrumbList on every page",
+        "pass": true,
+        "detail": "all pages"
+      },
+      {
+        "id": "q-headings",
+        "label": "Q-format H2s on service pages (AEO)",
+        "pass": true,
+        "detail": "question headings live"
+      },
+      {
+        "id": "cross-links",
+        "label": "Internal cross-links per page",
+        "pass": true,
+        "detail": "hub + related links"
+      }
+    ],
+    "fixed_from_old_site": [],
+    "media": {
+      "hero_source": "video",
+      "real_photos": 8,
+      "videos": 1,
+      "service_cards_with_media": 8,
+      "policy": "AI imagery is ambiance/texture only, labeled source:ai — never presented as the customer's real jobs."
+    }
+  },
+  "qc": {
+    "id": "site_imqQKGQ75xAI",
+    "created_at": "2026-07-09T23:17:56.194Z",
+    "updated_at": "2026-07-09T23:17:56.194Z",
+    "generation_id": "site_02lfmbOTo6oT",
+    "project_id": "ghost_4UfgRqMPXTZL",
+    "grade": "B",
+    "score": 89,
+    "results": [
+      {
+        "name": "hero-layer-count",
+        "pass": true,
+        "detail": "count≈9 (need ≥ 6)"
+      },
+      {
+        "name": "copy-ban-list",
+        "pass": true,
+        "detail": "clean"
+      },
+      {
+        "name": "json-ld",
+        "pass": true,
+        "detail": "all present"
+      },
+      {
+        "name": "reduced-motion",
+        "pass": true,
+        "detail": "present"
+      },
+      {
+        "name": "enrichment-completeness",
+        "pass": true,
+        "detail": "packet.json present"
+      },
+      {
+        "name": "overflow-320",
+        "pass": false,
+        "deferred": true,
+        "detail": "deferred — headless Chromium unavailable in this environment"
+      },
+      {
+        "name": "screenshots",
+        "pass": false,
+        "deferred": true,
+        "detail": "deferred — headless Chromium unavailable in this environment"
+      },
+      {
+        "name": "public-surface-scrub",
+        "pass": true,
+        "detail": "11 HTML file(s): no internal terms, raw Places types, or malformed locations"
+      },
+      {
+        "name": "media-plane-not-empty",
+        "pass": true,
+        "detail": "hero media: video"
+      },
+      {
+        "name": "hero-motion-and-source-priority",
+        "pass": true,
+        "detail": "mode=video; videos=1; realPhotos=8"
+      },
+      {
+        "name": "real-media-coverage",
+        "pass": true,
+        "detail": "8/8 service cards use real media; required=8; decorativePlaceholders=0"
+      },
+      {
+        "name": "satellite-map-and-directions",
+        "pass": true,
+        "detail": "satellite=true; directions=true"
+      },
+      {
+        "name": "preview-conversion-rail",
+        "pass": true,
+        "detail": "rail=true; purchaseRequired=true; purchase=true"
+      },
+      {
+        "name": "three-kitchen-visual-contract",
+        "pass": true,
+        "detail": "visual=true; kitchens=true"
+      },
+      {
+        "name": "hours-rendered-when-sourced",
+        "pass": true,
+        "detail": "hours not sourced — honest placeholder rendered"
+      },
+      {
+        "name": "ai-imagery-labeled",
+        "pass": true,
+        "detail": "no AI imagery used"
+      },
+      {
+        "name": "structured-data-visible-parity",
+        "pass": true,
+        "detail": "FAQ schema=true; visible FAQ=true; no nonfunctional search action"
+      },
+      {
+        "name": "indexing-and-social-contract",
+        "pass": true,
+        "detail": "preview=true; noindex=true; canonical=false; pngSocial=true"
+      }
+    ],
+    "degraded": true
+  }
+}

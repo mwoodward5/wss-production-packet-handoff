@@ -1,0 +1,437 @@
+{
+  "version": 2,
+  "key": "16-banana-roadside-services",
+  "name": "Banana Roadside Services",
+  "category": "roadside assistance",
+  "vertical": "roadside assistance",
+  "requested_vertical": "roadside assistance",
+  "routing_conflict": false,
+  "aliases": [],
+  "renderer": "spa-v2",
+  "lovable_project_id": "1e039e20-1795-491e-a87a-674e5fb46abe",
+  "lovable_source_commit": "c106457ec5ed45227133eca4bf5ad8660204baa5",
+  "source": {
+    "provider": "Lovable-reference",
+    "project_id": "1e039e20-1795-491e-a87a-674e5fb46abe",
+    "ref": "c106457ec5ed45227133eca4bf5ad8660204baa5",
+    "repository": "https://github.com/mwoodward5/banana-roadside-hero",
+    "git_tree": "8bd98d9b726063d4e241c534d616b0cb326a9619"
+  },
+  "classification": "PREMIER",
+  "routes": [
+    "/",
+    "/about-us",
+    "/services",
+    "/european-battery-services",
+    "/gallery",
+    "/contact-us"
+  ],
+  "design_tokens": {
+    "colors": {
+      "banana": "oklch(0.86 0.18 95)",
+      "banana_deep": "oklch(0.78 0.19 80)",
+      "asphalt": "oklch(0.18 0.012 60)",
+      "cream": "oklch(0.985 0.012 95)",
+      "background": "oklch(0.99 0.008 95)",
+      "foreground": "oklch(0.18 0.012 60)",
+      "card": "oklch(1 0 0)",
+      "border": "oklch(0.91 0.012 90)"
+    },
+    "typography": {
+      "display_font": "Bebas Neue, Anton, Impact, sans-serif",
+      "body_font": "Inter, system-ui, -apple-system, Segoe UI, sans-serif",
+      "display_tracking": "-0.01em",
+      "eyebrow_tracking": "0.18em to 0.22em"
+    },
+    "radii": {
+      "base": "0.875rem",
+      "cards": "rounded-2xl to rounded-3xl",
+      "buttons": "rounded-full"
+    },
+    "shadows": {
+      "sun": "0 10px 30px -10px color-mix(in oklab, var(--banana-deep) 55%, transparent)",
+      "soft": "0 4px 20px -8px color-mix(in oklab, var(--asphalt) 20%, transparent)",
+      "lift": "0 22px 50px -22px color-mix(in oklab, var(--asphalt) 35%, transparent)"
+    }
+  },
+  "hero_contract": {
+    "location": "src/components/site/HeroCinematic.tsx",
+    "viewport_height": "min-h-[92vh]",
+    "media_type": "looping_video_with_audio_controls",
+    "scrim_gradient": "linear-gradient(110deg, color-mix(in oklab, var(--asphalt) 85%, transparent) 0%, color-mix(in oklab, var(--asphalt) 55%, transparent) 55%, color-mix(in oklab, var(--asphalt) 25%, transparent) 100%)",
+    "mobile_rules": "Logo centered at top, tagline beneath logo, call button in navigation slot",
+    "desktop_rules": "Left-aligned display typography, brand marquee and audio button beneath CTAs",
+    "tagline": "Real People, Real Service, Real Quality",
+    "guarantee_display": "45 Minutes or Less."
+  },
+  "media_slots": [
+    {
+      "key": "hero_video",
+      "type": "video/mp4",
+      "aspect": "16:9",
+      "role": "hero_background"
+    },
+    {
+      "key": "hero_poster",
+      "type": "image/jpeg",
+      "aspect": "16:9",
+      "role": "hero_poster_and_og"
+    },
+    {
+      "key": "logo",
+      "type": "image/png",
+      "aspect": "variable",
+      "role": "brand_logo_shimmer"
+    },
+    {
+      "key": "reliable",
+      "type": "image/webp",
+      "aspect": "4:5",
+      "role": "about_tech_in_action"
+    },
+    {
+      "key": "svc_battery",
+      "type": "image/jpeg",
+      "aspect": "3:2",
+      "role": "service_battery_replacement"
+    },
+    {
+      "key": "svc_jump",
+      "type": "image/jpeg",
+      "aspect": "3:2",
+      "role": "service_jump_start"
+    },
+    {
+      "key": "svc_tire",
+      "type": "image/jpeg",
+      "aspect": "3:2",
+      "role": "service_flat_tire"
+    },
+    {
+      "key": "svc_lockout",
+      "type": "image/jpeg",
+      "aspect": "3:2",
+      "role": "service_lockout"
+    },
+    {
+      "key": "euro_front",
+      "type": "image/webp",
+      "aspect": "4:3",
+      "role": "service_european"
+    },
+    {
+      "key": "team_callout",
+      "type": "image/webp",
+      "aspect": "16:9",
+      "role": "global_cta_background"
+    }
+  ],
+  "content_slots": [
+    {
+      "key": "company_name",
+      "path": "src/data/site.ts",
+      "target": "COMPANY.name"
+    },
+    {
+      "key": "phone_display",
+      "path": "src/data/site.ts",
+      "target": "PHONE_DISPLAY"
+    },
+    {
+      "key": "phone_tel",
+      "path": "src/data/site.ts",
+      "target": "PHONE_TEL"
+    },
+    {
+      "key": "hours_line",
+      "path": "src/data/site.ts",
+      "target": "HOURS_LINE"
+    },
+    {
+      "key": "after_hours_note",
+      "path": "src/data/site.ts",
+      "target": "AFTER_HOURS_NOTE"
+    },
+    {
+      "key": "service_area_line",
+      "path": "src/data/site.ts",
+      "target": "SERVICE_AREA_LINE"
+    },
+    {
+      "key": "gbp_url",
+      "path": "src/data/site.ts",
+      "target": "GBP_URL"
+    },
+    {
+      "key": "google_review_url",
+      "path": "src/data/site.ts",
+      "target": "GOOGLE_REVIEW_URL"
+    },
+    {
+      "key": "map_embed_src",
+      "path": "src/data/site.ts",
+      "target": "MAP_EMBED_SRC"
+    }
+  ],
+  "trust_slots": [
+    {
+      "type": "rating_badge",
+      "location": "Header Desktop / Drawer Mobile",
+      "value": "Google 5-Star Badge"
+    },
+    {
+      "type": "seal",
+      "location": "Header Desktop / Drawer Mobile / Hero",
+      "value": "BBB Accredited Business"
+    },
+    {
+      "type": "counter",
+      "location": "Hero & Testimonials",
+      "value": "Over 1,500 five-star reviews"
+    },
+    {
+      "type": "review_carousel",
+      "location": "Sitewide Shared Layout",
+      "source": "src/data/reviews.ts",
+      "count": 10
+    }
+  ],
+  "schema_slots": [
+    {
+      "type": "AutomotiveBusiness",
+      "route": "__root.tsx",
+      "mode": "script"
+    },
+    {
+      "type": "FAQPage",
+      "route": "index.tsx",
+      "mode": "script"
+    },
+    {
+      "type": "Service",
+      "route": "services.tsx",
+      "mode": "script"
+    },
+    {
+      "type": "Service",
+      "route": "european-battery-services.tsx",
+      "mode": "script"
+    }
+  ],
+  "geo_aeo_slots": [
+    {
+      "query": "response_time",
+      "answer": "45 minutes or less across Austin metro"
+    },
+    {
+      "query": "service_areas",
+      "answer": "Austin, Buda, Kyle, San Marcos, and surrounding neighborhoods"
+    },
+    {
+      "query": "operating_hours",
+      "answer": "Sun – Thu, 7am – 5pm. Closed Fri & Sat. Calls after hours incur an extra charge."
+    },
+    {
+      "query": "european_specialty",
+      "answer": "AGM replacement and computer diagnostic coding for BMW, Mercedes, Audi, Porsche, Land Rover"
+    }
+  ],
+  "voice_search_slots": [
+    {
+      "location": "Hero H1",
+      "text": "Reliable Roadside Assistance in Austin TX When You Need It Most."
+    },
+    {
+      "location": "Global CTA H2",
+      "text": "Stuck on the road? We're already moving."
+    },
+    {
+      "location": "Contact H1",
+      "text": "One call. A real person."
+    }
+  ],
+  "map_location_slot": {
+    "component": "src/components/site/ServiceAreaSection.tsx",
+    "embed_type": "iframe_no_key",
+    "aspect": "420px height full width",
+    "surrounding_elements": "City pill badges, address info, direct Google Maps link"
+  },
+  "content_density": {
+    "hero": "Urgent, bold, minimal copy, immediate call trigger",
+    "services": "Rich technical specifications (5 services maximum)",
+    "about": "Medium narrative density, 6 commitment pillars",
+    "reviews": "10 high-quality verified quotes",
+    "contact": "Ultra-sparse, direct dial emphasis, zero forms"
+  },
+  "mobile_rules": {
+    "header": "Logo removed, call button occupies left slot, hamburger drawer on right",
+    "hero": "Logo centered at top, tagline beneath logo, marquee above audio button",
+    "cards": "Single-column full width stacked cards",
+    "tap_targets": "Minimum 48px height on all interactive telephone elements"
+  },
+  "non_negotiables": [
+    "Strictly call-only conversion architecture; no contact forms or SMS triggers",
+    "OKLCH color system with safety yellow (--banana) and deep asphalt charcoal (--asphalt)",
+    "Bebas Neue condensed uppercase typography for impact headings",
+    "Cinematic video hero with dark compound scrims",
+    "Battery Replacement must remain the first item in any service catalog",
+    "Every mention of hours must include the after-hours surcharge note",
+    "Sitewide mounting of Testimonials, Global CTA, and Service Area sections above Footer"
+  ],
+  "safe_replacements": [
+    "Phone number and telephone URLs",
+    "Company name, city, postal code, and region",
+    "Operating hours and surcharge text",
+    "Hero video file, poster JPG, and welcome audio MP3s",
+    "Customer review array quotes, author names, and timestamps",
+    "Field photography assets in manifest.ts",
+    "Car manufacturer artboard logos",
+    "Google Maps embed URL and Google Place ID"
+  ],
+  "leak_terms": [
+    "Banana Roadside Services",
+    "Austin",
+    "Buda",
+    "Kyle",
+    "San Marcos",
+    "17378770267",
+    "7378770267",
+    "45 Minutes or Less",
+    "Over 1,500 five-star reviews",
+    "BBB Accredited Business"
+  ],
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "visual": {
+    "expected_animations": 0,
+    "fonts": [
+      "Bebas Neue",
+      "Anton",
+      "Impact",
+      "sans-serif",
+      "Inter",
+      "system-ui"
+    ]
+  },
+  "trust": {
+    "max_visual_modules": 5,
+    "preferences": [
+      "rating-orb",
+      "holo-badge",
+      "stat-odometer",
+      "entity-card",
+      "quotable-facts-strip",
+      "service-area-answer-grid",
+      "local-business-schema",
+      "service-schema-set",
+      "breadcrumb-site-graph",
+      "faq-how-to-schema",
+      "review-schema-bridge",
+      "citation-footer",
+      "speed-vitals-guard"
+    ]
+  },
+  "colors": [
+    "oklch(0.86 0.18 95)",
+    "oklch(0.78 0.19 80)",
+    "oklch(0.18 0.012 60)",
+    "oklch(0.985 0.012 95)",
+    "oklch(0.99 0.008 95)",
+    "oklch(0.18 0.012 60)",
+    "oklch(1 0 0)",
+    "oklch(0.91 0.012 90)"
+  ],
+  "fonts": [
+    "Bebas Neue",
+    "Anton",
+    "Impact",
+    "sans-serif",
+    "Inter",
+    "system-ui"
+  ],
+  "flags": {
+    "fleet_polish": false,
+    "generic_mobile_polish": false,
+    "generic_theme_reconstruction": false
+  },
+  "implementation_status": "ORIGINAL_SOURCE_IMPORTED",
+  "runtime_eligible": false,
+  "source_import_verified": true,
+  "client_bindings_verified": false,
+  "visual_parity_verified": false,
+  "bundle": {
+    "tree_sha256": "f46294cbc65ae590b84ffaacaebffd2d7e948d916f002c1c1500eaa412b0e0bf",
+    "files": {
+      "assets/bridge-DUMmLKXh.js": "b7eac5aa702a9783f7dbc12d5f38198675a4745270613cfdc9873ebb395b666b",
+      "assets/client-B1L5CEB0.js": "4a8aad7e5fd2d51f09b5d17ad0d03f2b13b6326f97208c362ef5d2aa7e713fa7",
+      "assets/HeadContent-CttcmGHD.js": "66fe2af17efcba2dec16ec2664cbb13ee59d78605a254e3badc204ed2742338c",
+      "assets/index-CRCKypZu.js": "c675d1336277d975b43b5b06d9b6bb2cabe2a070cf05ef265209719f37b010bd",
+      "assets/index-CYfhqgIL.css": "3336081ea0b2c99b3faeffe4c66b999429551f7023b06cec2b57d30ffa6f98ec",
+      "assets/index-CZhrm3r2.js": "6852645495356e4ff00524ce9b0ffb5e4d6dc14577bd9dd5eb9f341f0c031e81",
+      "assets/index-D0SoiyhN.js": "db6aadd620d6ce8c2324c44bf669eff39a39cbb33408b0ac223ac4101ad16945",
+      "assets/index-U7rqpaXq.js": "54622a61c06d51fec786de7186dc94e5b2d7fec0944454c154ea66159e001d6e",
+      "assets/router-Ds8QS0nj.css": "d58304ba1b5679085f04b1e3577d9c384cd6c4e662aef692c465999c5b6809ff",
+      "assets/router-Jlg8cJnI.js": "3c382f1906106dead6024318761785283c8be84265d66eaa5a82dd570c0749d7",
+      "index.html": "4a8e801edb13484f18f066ad579412b7a088a65ba3e8c5d202877e4f7d056c54"
+    }
+  },
+  "adaptation_status": "WSS_ADAPTED",
+  "data_island_id": "wss-client-data",
+  "renders": [
+    "services",
+    "about",
+    "faqs",
+    "reviews",
+    "hours",
+    "areas"
+  ],
+  "content_render_targets": {
+    "services": [
+      {
+        "path": "/",
+        "selector": "main > section:nth-of-type(3) > div > ul"
+      },
+      {
+        "path": "/services",
+        "selector": "main > section:nth-of-type(2)"
+      }
+    ],
+    "about": [
+      {
+        "path": "/",
+        "selector": "main > section:nth-of-type(2)"
+      },
+      {
+        "path": "/about-us",
+        "selector": "main > section:nth-of-type(2)"
+      }
+    ],
+    "faqs": [
+      {
+        "path": "/",
+        "selector": "main > section:nth-of-type(4)"
+      }
+    ],
+    "reviews": [
+      {
+        "path": "/",
+        "selector": "main + section:has(blockquote)"
+      }
+    ],
+    "hours": [
+      {
+        "path": "/",
+        "selector": "footer > div:first-child > div:nth-child(3) > ul"
+      }
+    ],
+    "areas": [
+      {
+        "path": "/",
+        "selector": "footer > div:first-child > div:nth-child(3) > ul"
+      }
+    ]
+  }
+}

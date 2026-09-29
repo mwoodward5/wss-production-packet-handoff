@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AnswerCrew Owner Demo | See your AI phone team at work</title>
+<meta name="description" content="Explore the AnswerCrew owner workspace for calls, follow-ups, safety controls, customer AI team members, setup, and plan management.">
+<link rel="canonical" href="https://getanswercrew.com/demo">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#F4F1EA">
+<meta property="og:title" content="AnswerCrew Owner Demo">
+<meta property="og:description" content="See how AnswerCrew keeps calls, follow-ups, safety, and owner approvals in one calm workspace.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://getanswercrew.com/demo">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+html,body{margin:0;padding:0;background:#F4F1EA}
+*,*::before,*::after{box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden}
+a{color:#2F5FD7;text-decoration:none}
+a:hover{color:#1E47AE}
+::selection{background:rgba(47,95,215,.18)}
+@keyframes mrise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes mpulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+@keyframes mbar{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media(max-width:799px){
+  header>div>span{display:none!important}
+  header>div{align-items:flex-start!important}
+  header button{max-width:100%;white-space:normal}
+  main{width:100%;max-width:100vw!important;overflow:hidden}
+  main *{min-width:0!important;max-width:100%;overflow-wrap:anywhere}
+  main button{white-space:normal}
+}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#F4F1EA;color:#15202F;font:500 15px/1.6 Manrope,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column">
+
+  <!-- ===== Header ===== -->
+  <header style="position:sticky;top:0;z-index:40;background:rgba(244,241,234,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(21,32,47,.08)" data-screen-label="Header">
+    <div style="max-width:1180px;margin:0 auto;padding:12px clamp(14px,3vw,28px);display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:10px;font:800 18px/1 Sora,Manrope,sans-serif;letter-spacing:-0.02em">
+        <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="18" fill="#15202F"></rect><path d="M20 40 C20 28 26 20 32 20 C38 20 44 28 44 40" fill="none" stroke="#4ADE80" stroke-width="6" stroke-linecap="round"></path><circle cx="20" cy="42" r="5" fill="#F4F1EA"></circle><circle cx="44" cy="42" r="5" fill="#F4F1EA"></circle></svg>
+        AnswerCrew
+      </div>
+      <span style="flex:1"></span>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px rgba(21,32,47,.1);color:#445060;font:700 12.5px Manrope,sans-serif">{{ minutesLabel }}</span>
+      <button type="button" onClick="{{ togglePauseAll }}" style="display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px;border:0;border-radius:999px;background: {{ pauseBg }};color: {{ pauseColor }};font:800 13px Manrope,sans-serif;cursor:pointer;box-shadow: {{ pauseShadow }}">
+        <span style="width:9px;height:9px;border-radius:50%;background: {{ pauseDot }}"></span>{{ pauseLabel }}
+      </button>
+    </div>
+  </header>
+
+  <div style="flex:1;display:flex;max-width:1180px;width:100%;margin:0 auto;align-items:stretch">
+
+    <!-- ===== Side rail (desktop) ===== -->
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav style="width:210px;flex:0 0 auto;padding:22px 14px;display:grid;gap:4px;align-content:start" data-screen-label="Navigation">
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="8">
+          <button type="button" onClick="{{ n.onGo }}" style="display:flex;align-items:center;gap:11px;min-height:46px;padding:0 14px;border:0;border-radius:13px;background: {{ n.bg }};color: {{ n.color }};font:700 14px Manrope,sans-serif;cursor:pointer;text-align:left" style-hover="background:#fff">
+            <span style="font-size:16px">{{ n.icon }}</span>
+            <span style="flex:1">{{ n.label }}</span>
+            <sc-if value="{{ n.badge }}" hint-placeholder-val="{{ false }}"><span style="min-width:22px;height:22px;display:grid;place-items:center;border-radius:999px;background:#C9463D;color:#fff;font:800 11px Manrope,sans-serif">{{ n.badge }}</span></sc-if>
+          </button>
+        </sc-for>
+      </nav>
+    </sc-if>
+
+    <!-- ===== Main ===== -->
+    <main style="flex:1;min-width:0;padding:clamp(16px,3vw,30px);padding-bottom:110px">
+
+      <!-- Unpaid banner (honest state) -->
+      <sc-if value="{{ unpaid }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px;padding:18px 20px;border-radius:18px;background:#FFF7E8;box-shadow:inset 0 0 0 1.5px #E8C77E" data-screen-label="Unpaid banner">
+          <span style="font-size:22px">👋</span>
+          <div style="flex:1;min-width:220px">
+            <b style="font:800 15px Sora,Manrope,sans-serif">Your account is ready — calling is off until you pick a plan.</b>
+            <div style="color:#6B5B33;font-size:13px">Nothing is billed yet, and no calls can go out. Pick a plan to put your team on the phones.</div>
+          </div>
+          <button type="button" onClick="{{ goPlan }}" style="min-height:48px;padding:0 22px;border:0;border-radius:14px;background:#15202F;color:#fff;font:800 14px Manrope,sans-serif;cursor:pointer">Choose my plan</button>
+        </div>
+      </sc-if>
+
+      <!-- ============ TODAY ============ -->
+      <sc-if value="{{ rToday }}" hint-placeholder-val="{{ true }}">
+        <section style="display:grid;gap:16px;animation:mrise .3s ease both" data-screen-label="Today">
+          <div>
+            <h1 style="margin:0;font:800 clamp(24px,4vw,32px)/1.15 Sora,Manrope,sans-serif;letter-spacing:-0.03em">Good morning, Mark.</h1>
+            <p style="margin:6px 0 0;color:#5C6673;font-size:15px">{{ todayLine }}</p>
+          </div>
+
+          <!-- Live call card -->
+          <sc-if value="{{ liveVisible }}" hint-placeholder-val="{{ false }}">
+            <div style="border-radius:20px;background:#15202F;color:#EEF2F8;padding:20px 22px;display:grid;gap:12px;box-shadow:0 18px 50px rgba(21,32,47,.18)">
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+                <span style="width:10px;height:10px;border-radius:50%;background:#4ADE80;animation:mpulse 1.6s ease infinite"></span>
+                <b style="font:700 15px Sora,Manrope,sans-serif">Alex is on a call right now</b>
+                <span style="color:#9FB0C4;font-size:13px">with Maria's Bakery · {{ liveTimer }}</span>
+                <span style="flex:1"></span>
+                <span style="display:flex;gap:3px;align-items:flex-end;height:18px">
+                  <span style="width:4px;height:18px;border-radius:2px;background:#4ADE80;animation:mbar 1s ease infinite"></span>
+                  <span style="width:4px;height:18px;border-radius:2px;background:#4ADE80;animation:mbar 1s .2s ease infinite"></span>
+                  <span style="width:4px;height:18px;border-radius:2px;background:#4ADE80;animation:mbar 1s .4s ease infinite"></span>
+                </span>
+              </div>
+              <div style="display:grid;gap:7px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.06)">
+                <sc-for list="{{ liveLines }}" as="l" hint-placeholder-count="0">
+                  <div style="display:flex;gap:10px;font-size:13.5px;line-height:1.5;animation:mrise .3s ease both"><b style="color: {{ l.color }};flex:0 0 auto;font-weight:800">{{ l.who }}</b><span style="color:#C9D4E2">{{ l.text }}</span></div>
+                </sc-for>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <button type="button" onClick="{{ toastListen }}" style="min-height:44px;padding:0 16px;border:0;border-radius:12px;background:rgba(255,255,255,.1);color:#fff;font:700 13px Manrope,sans-serif;cursor:pointer">🔊 Listen in quietly</button>
+                <button type="button" onClick="{{ toastTakeover }}" style="min-height:44px;padding:0 16px;border:0;border-radius:12px;background:rgba(255,255,255,.1);color:#fff;font:700 13px Manrope,sans-serif;cursor:pointer">📞 Join the call</button>
+              </div>
+            </div>
+          </sc-if>
+
+          <!-- Big numbers -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">
+            <sc-for list="{{ todayStats }}" as="s" hint-placeholder-count="4">
+              <button type="button" onClick="{{ s.onGo }}" style="display:grid;gap:2px;padding:18px;border:0;border-radius:18px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05);cursor:pointer;text-align:left" style-hover="box-shadow:0 6px 18px rgba(21,32,47,.1),inset 0 0 0 1.5px rgba(47,95,215,.4)">
+                <b style="font:800 30px/1 Sora,Manrope,sans-serif;letter-spacing:-0.02em;color: {{ s.color }}">{{ s.value }}</b>
+                <span style="color:#5C6673;font:700 12.5px Manrope,sans-serif">{{ s.label }}</span>
+              </button>
+            </sc-for>
+          </div>
+
+          <!-- Needs your OK -->
+          <div style="display:grid;gap:10px">
+            <div style="display:flex;align-items:baseline;gap:10px">
+              <h2 style="margin:0;font:800 18px Sora,Manrope,sans-serif;letter-spacing:-0.02em">Needs your OK</h2>
+              <span style="color:#8A93A0;font-size:12.5px">Nothing goes out without you.</span>
+            </div>
+            <sc-if value="{{ hasApprovals }}" hint-placeholder-val="{{ true }}">
+              <sc-for list="{{ approvals }}" as="ap" hint-placeholder-count="3">
+                <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:16px 18px;border-radius:16px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05)">
+                  <span style="display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background: {{ ap.iconBg }};font-size:17px;flex:0 0 auto">{{ ap.icon }}</span>
+                  <div style="flex:1;min-width:220px">
+                    <b style="font:700 14px Manrope,sans-serif">{{ ap.title }}</b>
+                    <div style="color:#5C6673;font-size:13px;line-height:1.5">{{ ap.detail }}</div>
+                  </div>
+                  <div style="display:flex;gap:8px">
+                    <button type="button" onClick="{{ ap.onYes }}" style="min-height:44px;padding:0 18px;border:0;border-radius:12px;background:#1F8A5B;color:#fff;font:800 13px Manrope,sans-serif;cursor:pointer">{{ ap.yesLabel }}</button>
+                    <button type="button" onClick="{{ ap.onNo }}" style="min-height:44px;padding:0 16px;border:0;border-radius:12px;background:#F0EDE5;color:#5C6673;font:700 13px Manrope,sans-serif;cursor:pointer">Not now</button>
+                  </div>
+                </div>
+              </sc-for>
+            </sc-if>
+            <sc-if value="{{ noApprovals }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:18px;border-radius:16px;background:#EDF7F1;color:#1F8A5B;font:700 13.5px Manrope,sans-serif">✓ All caught up. Your team can handle the rest.</div>
+            </sc-if>
+          </div>
+
+          <!-- Digest -->
+          <div style="padding:18px 20px;border-radius:16px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05)">
+            <b style="font:800 13px Sora,Manrope,sans-serif;color:#2F5FD7">TODAY IN ONE PARAGRAPH</b>
+            <p style="margin:8px 0 0;color:#3C4653;font-size:14.5px;line-height:1.7">Alex made 32 calls and reached 14 people. Two of them booked an appointment, and four asked for a callback — those are waiting in <a href="#" onClick="{{ goFollowupsLink }}">Follow-ups</a>. Sam answered 9 incoming calls; one customer sounded unhappy and is flagged for you in Calls. Nobody asked to be taken off the list today. You've used 88 of your 500 minutes this month.</p>
+          </div>
+        </section>
+      </sc-if>
+
+      <!-- ============ MY TEAM ============ -->
+      <sc-if value="{{ rTeam }}" hint-placeholder-val="{{ false }}">
+        <section style="display:grid;gap:16px;animation:mrise .3s ease both" data-screen-label="My Team">
+          <div>
+            <h1 style="margin:0;font:800 clamp(24px,4vw,32px)/1.15 Sora,Manrope,sans-serif;letter-spacing:-0.03em">My team</h1>
+            <p style="margin:6px 0 0;color:#5C6673;font-size:15px">Your AI staff. They work the phones — you stay in charge.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+            <sc-for list="{{ agents }}" as="ag" hint-placeholder-count="3">
+              <div style="display:grid;gap:12px;padding:20px;border-radius:20px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05)">
+                <div style="display:flex;align-items:center;gap:12px">
+                  <span style="display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background: {{ ag.avatarBg }};color:#fff;font:800 18px Sora,Manrope,sans-serif;flex:0 0 auto">{{ ag.initial }}</span>
+                  <div style="flex:1;min-width:0">
+                    <b style="font:800 16px Sora,Manrope,sans-serif">{{ ag.name }}</b>
+                    <div style="color:#5C6673;font-size:12.5px">{{ ag.job }}</div>
+                  </div>
+                  <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background: {{ ag.statusBg }};color: {{ ag.statusColor }};font:800 11px Manrope,sans-serif"><span style="width:7px;height:7px;border-radius:50%;background: {{ ag.statusDot }}"></span>{{ ag.status }}</span>
+                </div>
+                <div style="display:flex;gap:14px;flex-wrap:wrap;color:#5C6673;font-size:12.5px">
+                  <span><b style="color:#15202F">{{ ag.calls }}</b> calls today</span>
+                  <span><b style="color:#15202F">{{ ag.mins }}</b> min used</span>
+                  <span><b style="color:#15202F">{{ ag.wins }}</b> {{ ag.winsLabel }}</span>
+                </div>
+                <div style="padding:10px 13px;border-radius:11px;background:#F7F5EF;color:#5C6673;font-size:12px">{{ ag.hours }}</div>
+                <div style="display:flex;gap:7px;flex-wrap:wrap">
+                  <button type="button" onClick="{{ ag.onPause }}" style="min-height:42px;padding:0 14px;border:0;border-radius:11px;background:#F0EDE5;color:#3C4653;font:700 12.5px Manrope,sans-serif;cursor:pointer">{{ ag.pauseLabel }}</button>
+                  <button type="button" onClick="{{ ag.onListen }}" style="min-height:42px;padding:0 14px;border:0;border-radius:11px;background:#F0EDE5;color:#3C4653;font:700 12.5px Manrope,sans-serif;cursor:pointer">🔊 Latest call</button>
+                  <button type="button" onClick="{{ ag.onCoach }}" style="min-height:42px;padding:0 14px;border:0;border-radius:11px;background:#EAF0FE;color:#2F5FD7;font:700 12.5px Manrope,sans-serif;cursor:pointer">✏️ Teach {{ ag.name }}</button>
+                </div>
+              </div>
+            </sc-for>
+            <button type="button" onClick="{{ goHire }}" style="display:grid;place-items:center;gap:8px;min-height:220px;border:2px dashed rgba(47,95,215,.35);border-radius:20px;background:rgba(47,95,215,.03);color:#2F5FD7;font:800 15px Sora,Manrope,sans-serif;cursor:pointer" style-hover="background:rgba(47,95,215,.07)">
+              <span style="display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#2F5FD7;color:#fff;font-size:22px">＋</span>
+              Hire a new team member
+              <span style="color:#8A93A0;font:600 12px Manrope,sans-serif">Takes about 2 minutes</span>
+            </button>
+          </div>
+          <p style="margin:0;color:#8A93A0;font-size:12px">Your plan includes 1 team member. Hiring more moves you to the Growth plan — we'll always ask first.</p>
+        </section>
+      </sc-if>
+
+      <!-- ============ HIRE WIZARD ============ -->
+      <sc-if value="{{ rHire }}" hint-placeholder-val="{{ false }}">
+        <section style="display:grid;gap:18px;max-width:640px;margin:0 auto;animation:mrise .3s ease both" data-screen-label="Hire wizard">
+          <div style="text-align:center">
+            <div style="display:flex;justify-content:center;gap:8px;margin-bottom:14px">
+              <sc-for list="{{ hireDots }}" as="d" hint-placeholder-count="3">
+                <span style="width:34px;height:6px;border-radius:999px;background: {{ d.bg }}"></span>
+              </sc-for>
+            </div>
+            <h1 style="margin:0;font:800 clamp(22px,4vw,30px)/1.15 Sora,Manrope,sans-serif;letter-spacing:-0.03em">{{ hireTitle }}</h1>
+            <p style="margin:6px 0 0;color:#5C6673;font-size:14.5px">{{ hireSub }}</p>
+          </div>
+
+          <sc-if value="{{ hireStep1 }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;gap:10px">
+              <sc-for list="{{ hireJobs }}" as="j" hint-placeholder-count="4">
+                <button type="button" onClick="{{ j.onPick }}" style="display:flex;align-items:center;gap:16px;padding:18px 20px;border:0;border-radius:18px;background:#fff;box-shadow: {{ j.ring }};cursor:pointer;text-align:left" style-hover="box-shadow:inset 0 0 0 2px #2F5FD7,0 6px 18px rgba(21,32,47,.08)">
+                  <span style="display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#F0F4FE;font-size:22px;flex:0 0 auto">{{ j.icon }}</span>
+                  <span style="flex:1;min-width:0">
+                    <b style="font:800 15.5px Sora,Manrope,sans-serif">{{ j.title }}</b>
+                    <span style="display:block;color:#5C6673;font-size:13px;line-height:1.5">{{ j.desc }}</span>
+                  </span>
+                </button>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ hireStep2 }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;gap:16px">
+              <div style="display:grid;gap:8px">
+                <b style="font:800 13.5px Sora,Manrope,sans-serif">Pick a name</b>
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <sc-for list="{{ hireNames }}" as="n" hint-placeholder-count="4">
+                    <button type="button" onClick="{{ n.onPick }}" style="min-height:46px;padding:0 20px;border:0;border-radius:999px;background: {{ n.bg }};box-shadow: {{ n.ring }};color: {{ n.color }};font:800 14px Manrope,sans-serif;cursor:pointer">{{ n.name }}</button>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="display:grid;gap:8px">
+                <b style="font:800 13.5px Sora,Manrope,sans-serif">Pick a voice</b>
+                <div style="display:grid;gap:8px">
+                  <sc-for list="{{ hireVoices }}" as="v" hint-placeholder-count="3">
+                    <button type="button" onClick="{{ v.onPick }}" style="display:flex;align-items:center;gap:14px;padding:14px 16px;border:0;border-radius:14px;background:#fff;box-shadow: {{ v.ring }};cursor:pointer;text-align:left">
+                      <span style="display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#F0F4FE;font-size:16px;flex:0 0 auto">▶</span>
+                      <span style="flex:1"><b style="font:700 14px Manrope,sans-serif">{{ v.name }}</b><span style="display:block;color:#5C6673;font-size:12px">{{ v.desc }}</span></span>
+                      <sc-if value="{{ v.on }}" hint-placeholder-val="{{ false }}"><span style="color:#1F8A5B;font:800 12px Manrope,sans-serif">✓ Chosen</span></sc-if>
+                    </button>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="display:grid;gap:8px">
+                <b style="font:800 13.5px Sora,Manrope,sans-serif">When should they work?</b>
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <sc-for list="{{ hireHours }}" as="h" hint-placeholder-count="3">
+                    <button type="button" onClick="{{ h.onPick }}" style="min-height:46px;padding:0 18px;border:0;border-radius:12px;background: {{ h.bg }};box-shadow: {{ h.ring }};color: {{ h.color }};font:700 13px Manrope,sans-serif;cursor:pointer">{{ h.label }}</button>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="display:flex;gap:10px;justify-content:space-between">
+                <button type="button" onClick="{{ hireBack }}" style="min-height:48px;padding:0 18px;border:0;border-radius:13px;background:#F0EDE5;color:#5C6673;font:700 14px Manrope,sans-serif;cursor:pointer">← Back</button>
+                <button type="button" onClick="{{ hireNext }}" style="min-height:48px;padding:0 26px;border:0;border-radius:13px;background:#15202F;color:#fff;font:800 14px Manrope,sans-serif;cursor:pointer">Next →</button>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ hireStep3 }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;gap:14px">
+              <div style="display:grid;gap:10px;padding:22px;border-radius:20px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05)">
+                <div style="display:flex;align-items:center;gap:14px">
+                  <span style="display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#7C5CD6;color:#fff;font:800 20px Sora,Manrope,sans-serif">{{ hireInitial }}</span>
+                  <div><b style="font:800 18px Sora,Manrope,sans-serif">{{ hireName }}</b><div style="color:#5C6673;font-size:13px">{{ hireJobLabel }}</div></div>
+                </div>
+                <div style="display:grid;gap:6px;color:#3C4653;font-size:13.5px;line-height:1.7">
+                  <span>🗣 Voice: <b>{{ hireVoiceLabel }}</b></span>
+                  <span>🕗 Works: <b>{{ hireHoursLabel }}</b></span>
+                  <span>🛡 Follows your safety rules: only calls people who said yes, never before 8am or after 8pm, hangs up immediately if someone says "stop."</span>
+                  <span>💵 Included in your current plan — nothing extra to pay.</span>
+                </div>
+              </div>
+              <button type="button" onClick="{{ hireFinish }}" style="min-height:56px;border:0;border-radius:16px;background:#1F8A5B;color:#fff;font:800 16px Sora,Manrope,sans-serif;cursor:pointer;box-shadow:0 10px 26px rgba(31,138,91,.25)">Start {{ hireName }} working</button>
+              <button type="button" onClick="{{ hireTest }}" style="min-height:48px;border:0;border-radius:13px;background:#fff;box-shadow:inset 0 0 0 1.5px rgba(21,32,47,.12);color:#3C4653;font:700 13.5px Manrope,sans-serif;cursor:pointer">Or call my phone first so I can hear {{ hireName }}</button>
+              <button type="button" onClick="{{ hireBack }}" style="min-height:44px;border:0;background:none;color:#8A93A0;font:700 13px Manrope,sans-serif;cursor:pointer">← Back</button>
+            </div>
+          </sc-if>
+        </section>
+      </sc-if>
+
+      <!-- ============ CALLS ============ -->
+      <sc-if value="{{ rCalls }}" hint-placeholder-val="{{ false }}">
+        <section style="display:grid;gap:14px;animation:mrise .3s ease both" data-screen-label="Calls">
+          <div>
+            <h1 style="margin:0;font:800 clamp(24px,4vw,32px)/1.15 Sora,Manrope,sans-serif;letter-spacing:-0.03em">Calls</h1>
+            <p style="margin:6px 0 0;color:#5C6673;font-size:15px">Every call, in plain English. Tap one to hear it.</p>
+          </div>
+          <div style="display:flex;gap:7px;flex-wrap:wrap">
+            <sc-for list="{{ callFilters }}" as="f" hint-placeholder-count="5">
+              <button type="button" onClick="{{ f.onPick }}" style="min-height:40px;padding:0 15px;border:0;border-radius:999px;background: {{ f.bg }};box-shadow: {{ f.ring }};color: {{ f.color }};font:700 12.5px Manrope,sans-serif;cursor:pointer">{{ f.label }}</button>
+            </sc-for>
+          </div>
+          <div style="display:grid;gap:8px">
+            <sc-for list="{{ calls }}" as="c" hint-placeholder-count="5">
+              <button type="button" onClick="{{ c.onOpen }}" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:15px 18px;border:0;border-radius:16px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05);cursor:pointer;text-align:left;width:100%" style-hover="box-shadow:0 6px 18px rgba(21,32,47,.1),inset 0 0 0 1.5px rgba(47,95,215,.35)">
+                <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background: {{ c.iconBg }};font-size:17px;flex:0 0 auto">{{ c.icon }}</span>
+                <span style="flex:1;min-width:200px">
+                  <b style="font:700 14.5px Manrope,sans-serif">{{ c.who }}</b>
+                  <span style="display:block;color:#5C6673;font-size:13px;line-height:1.5">{{ c.outcome }}</span>
+                </span>
+                <sc-if value="{{ c.flag }}" hint-placeholder-val="{{ false }}"><span style="padding:5px 11px;border-radius:999px;background:#FDEBE9;color:#C9463D;font:800 11px Manrope,sans-serif">{{ c.flag }}</span></sc-if>
+                <span style="color:#8A93A0;font:600 12px Manrope,sans-serif;flex:0 0 auto">{{ c.agent }} · {{ c.when }} · {{ c.length }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </section>
+      </sc-if>
+
+      <!-- ============ FOLLOW-UPS ============ -->
+      <sc-if value="{{ rFollowups }}" hint-placeholder-val="{{ false }}">
+        <section style="display:grid;gap:14px;animation:mrise .3s ease both" data-screen-label="Follow-ups">
+          <div>
+            <h1 style="margin:0;font:800 clamp(24px,4vw,32px)/1.15 Sora,Manrope,sans-serif;letter-spacing:-0.03em">Follow-ups</h1>
+            <p style="margin:6px 0 0;color:#5C6673;font-size:15px">People waiting to hear from you. Promises we made are honored on time.</p>
+          </div>
+          <div style="display:grid;gap:10px">
+            <sc-for list="{{ followups }}" as="fu" hint-placeholder-count="4">
+              <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:17px 19px;border-radius:16px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px {{ fu.ring }}">
+                <div style="flex:1;min-width:220px">
+                  <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+                    <b style="font:700 14.5px Manrope,sans-serif">{{ fu.who }}</b>
+                    <span style="padding:4px 10px;border-radius:999px;background: {{ fu.whenBg }};color: {{ fu.whenColor }};font:800 11px Manrope,sans-serif">{{ fu.when }}</span>
+                  </div>
+                  <div style="color:#5C6673;font-size:13px;line-height:1.5;margin-top:3px">{{ fu.note }}</div>
+                </div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <button type="button" onClick="{{ fu.onAgent }}" style="min-height:44px;padding:0 16px;border:0;border-radius:12px;background:#15202F;color:#fff;font:800 12.5px Manrope,sans-serif;cursor:pointer">Have {{ fu.agent }} call</button>
+                  <button type="button" onClick="{{ fu.onMe }}" style="min-height:44px;padding:0 14px;border:0;border-radius:12px;background:#F0EDE5;color:#3C4653;font:700 12.5px Manrope,sans-serif;cursor:pointer">I'll call myself</button>
+                  <button type="button" onClick="{{ fu.onDone }}" style="min-height:44px;padding:0 13px;border:0;border-radius:12px;background:#EDF7F1;color:#1F8A5B;font:800 12.5px Manrope,sans-serif;cursor:pointer">✓ Done</button>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+      </sc-if>
+
+      <!-- ============ SAFETY ============ -->
+      <sc-if value="{{ rSafety }}" hint-placeholder-val="{{ false }}">
+        <section style="display:grid;gap:16px;max-width:760px;animation:mrise .3s ease both" data-screen-label="Safety">
+          <div>
+            <h1 style="margin:0;font:800 clamp(24px,4vw,32px)/1.15 Sora,Manrope,sans-serif;letter-spacing:-0.03em">Safety &amp; respect</h1>
+            <p style="margin:6px 0 0;color:#5C6673;font-size:15px">These rules are built in. They can't be switched off — not even by us.</p>
+          </div>
+          <div style="display:grid;gap:10px">
+            <sc-for list="{{ safetyRules }}" as="r" hint-placeholder-count="5">
+              <div style="display:flex;align-items:center;gap:14px;padding:15px 18px;border-radius:15px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05)">
+                <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#EDF7F1;color:#1F8A5B;font-size:16px;flex:0 0 auto">✓</span>
+                <div style="flex:1"><b style="font:700 14px Manrope,sans-serif">{{ r.title }}</b><div style="color:#5C6673;font-size:12.5px;line-height:1.5">{{ r.detail }}</div></div>
+                <span style="padding:4px 10px;border-radius:999px;background:#F0EDE5;color:#8A93A0;font:800 10px Manrope,sans-serif">ALWAYS ON</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:grid;gap:10px;padding:20px;border-radius:18px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05)">
+            <b style="font:800 15px Sora,Manrope,sans-serif">Never-call list</b>
+            <p style="margin:0;color:#5C6673;font-size:13px">3 numbers are on your never-call list. Anyone who says "stop calling" is added automatically and instantly.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <input value="{{ dncValue }}" onChange="{{ onDnc }}" placeholder="Add a phone number…" style="flex:1;min-width:200px;min-height:48px;border:0;border-radius:12px;background:#F7F5EF;box-shadow:inset 0 0 0 1.5px rgba(21,32,47,.1);padding:0 16px;font:600 16px Manrope,sans-serif;color:#15202F;outline:none">
+              <button type="button" onClick="{{ addDnc }}" style="min-height:48px;padding:0 18px;border:0;border-radius:12px;background:#15202F;color:#fff;font:800 13px Manrope,sans-serif;cursor:pointer">Add to list</button>
+            </div>
+          </div>
+          <div style="padding:16px 18px;border-radius:15px;background:#F0F4FE;color:#3C4653;font-size:13px;line-height:1.65"><b>Your consent records:</b> 214 people have said yes to hearing from you, each with a date and where they said it. If anyone ever asks, you can show the receipt. Calls only ever go to this list.</div>
+        </section>
+      </sc-if>
+
+      <!-- ============ PLAN & MINUTES ============ -->
+      <sc-if value="{{ rPlan }}" hint-placeholder-val="{{ false }}">
+        <section style="display:grid;gap:16px;animation:mrise .3s ease both" data-screen-label="Plan and minutes">
+          <div>
+            <h1 style="margin:0;font:800 clamp(24px,4vw,32px)/1.15 Sora,Manrope,sans-serif;letter-spacing:-0.03em">{{ planTitle }}</h1>
+            <p style="margin:6px 0 0;color:#5C6673;font-size:15px">{{ planSub }}</p>
+          </div>
+
+          <sc-if value="{{ paid }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;gap:10px;padding:20px;border-radius:18px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05)">
+              <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+                <b style="font:800 15px Sora,Manrope,sans-serif">Minutes this month</b>
+                <span style="color:#5C6673;font:700 13px Manrope,sans-serif">412 of 500 left · resets Aug 1</span>
+              </div>
+              <div style="height:14px;border-radius:999px;background:#F0EDE5;overflow:hidden"><div style="width:17.6%;height:100%;border-radius:999px;background:linear-gradient(90deg,#2F5FD7,#7C5CD6)"></div></div>
+              <span style="color:#8A93A0;font-size:12px">At this pace you'll use about 350 minutes — comfortably inside your plan. We'll warn you at 80% and never bill overage without asking.</span>
+            </div>
+          </sc-if>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;align-items:stretch">
+            <sc-for list="{{ planCards }}" as="p" hint-placeholder-count="3">
+              <div style="display:grid;gap:10px;align-content:start;padding:22px;border-radius:20px;background:#fff;box-shadow: {{ p.ring }}">
+                <div style="display:flex;align-items:center;gap:8px"><b style="font:800 16px Sora,Manrope,sans-serif">{{ p.name }}</b><sc-if value="{{ p.tag }}" hint-placeholder-val="{{ false }}"><span style="margin-left:auto;padding:4px 11px;border-radius:999px;background: {{ p.tagBg }};color: {{ p.tagColor }};font:800 10.5px Manrope,sans-serif">{{ p.tag }}</span></sc-if></div>
+                <div style="font:800 34px/1 Sora,Manrope,sans-serif;letter-spacing:-0.02em">{{ p.price }}<small style="color:#8A93A0;font:600 13px Manrope,sans-serif"> /month</small></div>
+                <ul style="margin:0;padding:0;list-style:none;display:grid;gap:7px;color:#3C4653;font-size:13.5px">
+                  <li>✓ {{ p.mins }} talking minutes</li>
+                  <li>✓ {{ p.agents }}</li>
+                  <li>✓ {{ p.extra }}</li>
+                </ul>
+                <button type="button" onClick="{{ p.onDo }}" style="min-height:50px;border:0;border-radius:14px;background: {{ p.btnBg }};color: {{ p.btnColor }};font:800 14px Manrope,sans-serif;cursor:pointer;margin-top:4px">{{ p.cta }}</button>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;color:#8A93A0;font-size:12.5px">
+            <span>No contracts · cancel anytime · you keep your phone number.</span>
+            <sc-if value="{{ paid }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ openPortal }}" style="border:0;background:none;color:#2F5FD7;font:800 13px Manrope,sans-serif;cursor:pointer">Manage card &amp; receipts →</button></sc-if>
+          </div>
+        </section>
+      </sc-if>
+
+      <!-- ============ SETUP GUIDE ============ -->
+      <sc-if value="{{ rSetup }}" hint-placeholder-val="{{ false }}">
+        <section style="display:grid;gap:16px;max-width:680px;animation:mrise .3s ease both" data-screen-label="Setup guide">
+          <div>
+            <h1 style="margin:0;font:800 clamp(24px,4vw,32px)/1.15 Sora,Manrope,sans-serif;letter-spacing:-0.03em">Set up in 4 easy steps</h1>
+            <p style="margin:6px 0 0;color:#5C6673;font-size:15px">No tech skills needed. Each step takes a couple of minutes, and you can stop anytime.</p>
+          </div>
+          <div style="display:grid;gap:10px">
+            <sc-for list="{{ setupSteps }}" as="st" hint-placeholder-count="4">
+              <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:17px 19px;border-radius:16px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05)">
+                <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background: {{ st.numBg }};color: {{ st.numColor }};font:800 16px Sora,Manrope,sans-serif;flex:0 0 auto">{{ st.num }}</span>
+                <div style="flex:1;min-width:220px">
+                  <b style="font:700 14.5px Manrope,sans-serif">{{ st.title }}</b>
+                  <div style="color:#5C6673;font-size:13px;line-height:1.5">{{ st.detail }}</div>
+                </div>
+                <sc-if value="{{ st.done }}" hint-placeholder-val="{{ false }}"><span style="color:#1F8A5B;font:800 13px Manrope,sans-serif;flex:0 0 auto">✓ Done</span></sc-if>
+                <sc-if value="{{ st.todo }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ st.onDo }}" style="min-height:44px;padding:0 16px;border:0;border-radius:12px;background:#15202F;color:#fff;font:800 13px Manrope,sans-serif;cursor:pointer;flex:0 0 auto">{{ st.cta }}</button></sc-if>
+              </div>
+            </sc-for>
+          </div>
+          <div style="padding:16px 18px;border-radius:15px;background:#F0F4FE;color:#3C4653;font-size:13px;line-height:1.65">Stuck? Tap <b>Help</b> and a real person from our team will call <i>you</i>. You never have to figure this out alone.</div>
+        </section>
+      </sc-if>
+
+      <!-- ============ HELP ============ -->
+      <sc-if value="{{ rHelp }}" hint-placeholder-val="{{ false }}">
+        <section style="display:grid;gap:16px;max-width:680px;animation:mrise .3s ease both" data-screen-label="Help">
+          <div>
+            <h1 style="margin:0;font:800 clamp(24px,4vw,32px)/1.15 Sora,Manrope,sans-serif;letter-spacing:-0.03em">Help</h1>
+            <p style="margin:6px 0 0;color:#5C6673;font-size:15px">Plain answers. Real people if you want them.</p>
+          </div>
+          <button type="button" onClick="{{ toastCallMe }}" style="display:flex;align-items:center;gap:16px;padding:20px;border:0;border-radius:18px;background:#15202F;color:#fff;cursor:pointer;text-align:left">
+            <span style="display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);font-size:20px;flex:0 0 auto">📞</span>
+            <span style="flex:1"><b style="font:800 15.5px Sora,Manrope,sans-serif">Have a real person call me</b><span style="display:block;color:#9FB0C4;font-size:13px">Usually within 15 minutes, 8am–8pm your time.</span></span>
+            <span style="font-size:18px">→</span>
+          </button>
+          <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="5">
+            <details style="border-radius:15px;background:#fff;box-shadow:0 2px 10px rgba(21,32,47,.05),inset 0 0 0 1px rgba(21,32,47,.05);padding:4px 18px">
+              <summary style="min-height:54px;display:flex;align-items:center;font:700 14px Manrope,sans-serif;cursor:pointer;color:#15202F">{{ q.q }}</summary>
+              <p style="margin:0;padding:0 0 16px;color:#5C6673;font-size:13.5px;line-height:1.65">{{ q.a }}</p>
+            </details>
+          </sc-for>
+        </section>
+      </sc-if>
+
+    </main>
+  </div>
+
+  <!-- ===== Mobile bottom tab bar ===== -->
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <nav style="position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;justify-content:space-around;gap:2px;padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:rgba(244,241,234,.97);backdrop-filter:blur(12px);box-shadow:0 -1px 0 rgba(21,32,47,.1)" data-screen-label="Mobile tab bar">
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
+        <button type="button" onClick="{{ t.onGo }}" style="display:grid;justify-items:center;gap:3px;min-width:56px;min-height:50px;padding:5px 8px;border:0;border-radius:13px;background: {{ t.bg }};color: {{ t.color }};font:800 10.5px Manrope,sans-serif;cursor:pointer">
+          <span style="font-size:19px">{{ t.icon }}</span>{{ t.label }}
+        </button>
+      </sc-for>
+    </nav>
+  </sc-if>
+
+  <!-- Call detail sheet -->
+  <sc-if value="{{ callOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:60;display:flex;justify-content:center;align-items:flex-end" data-screen-label="Call detail">
+      <button type="button" onClick="{{ closeCall }}" aria-label="Close" style="position:absolute;inset:0;border:0;background:rgba(21,32,47,.45);backdrop-filter:blur(3px);cursor:pointer"></button>
+      <div style="position:relative;width:min(620px,100%);max-height:86vh;overflow-y:auto;background:#F9F7F2;border-radius:24px 24px 0 0;padding:22px 22px 34px;display:grid;gap:14px;animation:mrise .25s ease both">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background: {{ cdIconBg }};font-size:18px">{{ cdIcon }}</span>
+          <div style="flex:1"><b style="font:800 17px Sora,Manrope,sans-serif">{{ cdWho }}</b><div style="color:#5C6673;font-size:12.5px">{{ cdAgent }} · {{ cdWhen }} · {{ cdLength }}</div></div>
+          <button type="button" onClick="{{ closeCall }}" style="min-width:42px;min-height:42px;border:0;border-radius:12px;background:#F0EDE5;color:#5C6673;cursor:pointer;font-size:15px">✕</button>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;background:#15202F;color:#fff">
+          <button type="button" onClick="{{ toastPlay }}" style="display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:#15202F;font-size:16px;cursor:pointer;flex:0 0 auto">▶</button>
+          <div style="flex:1;height:6px;border-radius:999px;background:rgba(255,255,255,.2)"><div style="width:0%;height:100%;border-radius:999px;background:#4ADE80"></div></div>
+          <span style="font:700 12px Manrope,sans-serif;color:#9FB0C4">{{ cdLength }}</span>
+        </div>
+        <div style="padding:14px 16px;border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px rgba(21,32,47,.06)">
+          <b style="font:800 12px Sora,Manrope,sans-serif;color:#2F5FD7">WHAT HAPPENED</b>
+          <p style="margin:6px 0 0;color:#3C4653;font-size:13.5px;line-height:1.65">{{ cdSummary }}</p>
+        </div>
+        <div style="display:grid;gap:8px;padding:14px 16px;border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px rgba(21,32,47,.06)">
+          <b style="font:800 12px Sora,Manrope,sans-serif;color:#2F5FD7">WORD FOR WORD</b>
+          <sc-for list="{{ cdLines }}" as="l" hint-placeholder-count="4">
+            <div style="display:flex;gap:10px;font-size:13px;line-height:1.55"><b style="color: {{ l.color }};flex:0 0 auto">{{ l.who }}</b><span style="color:#3C4653">{{ l.text }}</span></div>
+          </sc-for>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button type="button" onClick="{{ cdGood }}" style="min-height:46px;padding:0 16px;border:0;border-radius:12px;background:#EDF7F1;color:#1F8A5B;font:800 13px Manrope,sans-serif;cursor:pointer">👍 Good call</button>
+          <button type="button" onClick="{{ cdBad }}" style="min-height:46px;padding:0 16px;border:0;border-radius:12px;background:#FDEBE9;color:#C9463D;font:800 13px Manrope,sans-serif;cursor:pointer">👎 Teach from this</button>
+          <button type="button" onClick="{{ cdFollow }}" style="min-height:46px;padding:0 16px;border:0;border-radius:12px;background:#F0EDE5;color:#3C4653;font:700 13px Manrope,sans-serif;cursor:pointer">Add follow-up</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- toast -->
+  <sc-if value="{{ toastMsg }}" hint-placeholder-val="{{ false }}">
+    <div role="status" aria-live="polite" style="position:fixed;left:50%;bottom:90px;z-index:99;transform:translateX(-50%);max-width:min(460px,calc(100% - 32px));padding:13px 18px;border-radius:13px;background:#15202F;color:#fff;font:700 13px Manrope,sans-serif;box-shadow:0 20px 50px rgba(21,32,47,.35);animation:mrise .2s ease both;text-align:center">{{ toastMsg }}</div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      route: "today", isMobile: false, pausedAll: false,
+      hireStep: 1, hireJob: "", hireName: "Alex", hireVoice: "Warm & friendly", hireHours: "Business hours (8–6)",
+      callFilter: "all", openCall: null, toast: "", dnc: "",
+      liveLineCount: 0, liveSeconds: 154,
+      approvalsDone: [],
+    };
+    this._timers = [];
+    this.CALLS = [
+      { id: 1, who: "Maria's Bakery", icon: "🎉", iconBg: "#EDF7F1", kind: "win", outcome: "Booked! Maria wants the preview walkthrough Thursday at 10am.", agent: "Alex", when: "9:41am", length: "3m 12s",
+        summary: "Maria remembered asking for the visibility check. Alex explained the free preview site, Maria liked that nothing goes live without her OK, and she booked Thursday 10am. She asked whether she keeps her domain — Alex confirmed yes.",
+        lines: [["Alex", "#2F5FD7", "Hi, is this Maria? … Hey Maria, this is Alex with the team you asked for a website look from."], ["Maria", "#15202F", "Oh right! I did fill that out. What did you find?"], ["Alex", "#2F5FD7", "Two things — your site's hard to read on a phone, and your hours aren't showing. So we built a free preview of the fix."], ["Maria", "#15202F", "Okay, I'd want to see that. Can we do Thursday morning?"]] },
+      { id: 2, who: "Hendricks Plumbing", icon: "📞", iconBg: "#F0F4FE", kind: "callback", outcome: "Busy on a job — asked Alex to call back Friday morning.", agent: "Alex", when: "9:12am", length: "0m 58s",
+        summary: "Owner was mid-job. Alex offered a callback and locked in Friday 9am. No voicemail needed. He said texting the preview link was OK — consent logged.",
+        lines: [["Alex", "#2F5FD7", "Sounds like I caught you on a job — when's actually good?"], ["Mr. Hendricks", "#15202F", "Friday morning, before nine thirty."], ["Alex", "#2F5FD7", "Friday at nine, done. I'll text the preview link in the meantime if that's okay?"], ["Mr. Hendricks", "#15202F", "Yeah that's fine."]] },
+      { id: 3, who: "(714) 555-0182", icon: "🚫", iconBg: "#FDEBE9", kind: "flag", flag: "Asked to stop", outcome: "Asked not to be called again. Alex apologized, hung up, and added them to the never-call list automatically.", agent: "Alex", when: "8:56am", length: "0m 21s",
+        summary: "Contact said 'take me off your list.' Alex said the goodbye line and ended the call in under 10 seconds. The number is permanently on your never-call list. No action needed from you.",
+        lines: [["Contact", "#15202F", "Not interested, take me off your list."], ["Alex", "#2F5FD7", "No problem at all — I'll close your file and we won't reach out again. Have a good one."]] },
+      { id: 4, who: "Golden State Dental", icon: "🎧", iconBg: "#F3EFFB", kind: "inbound", outcome: "Called in asking about pricing. Sam answered, explained the care plan, and emailed the summary.", agent: "Sam", when: "Yesterday 4:20pm", length: "4m 05s",
+        summary: "Inbound caller from the office line. Sam answered on the second ring, walked through the $99 care plan, and sent the one-page summary by email. Caller said they'd discuss with their partner — follow-up set for Monday.",
+        lines: [["Caller", "#15202F", "I got your email about the preview — what does it cost after?"], ["Sam", "#7C5CD6", "The care plan starts at ninety-nine a month — hosting, security, and small edits included. Want me to email the one-pager?"]] },
+      { id: 5, who: "Rossi & Sons Roofing", icon: "⚠️", iconBg: "#FFF7E8", kind: "flag", flag: "Sounded upset", outcome: "Customer sounded frustrated about a delay. Flagged for your personal attention.", agent: "Sam", when: "Yesterday 2:03pm", length: "2m 44s",
+        summary: "Existing customer upset about a launch delay. Sam apologized, promised a call from you personally, and logged it. This one is best handled by a human — it's in your Follow-ups.",
+        lines: [["Mr. Rossi", "#15202F", "You said it'd be live last week. What's going on?"], ["Sam", "#7C5CD6", "You're right to ask, and I'm sorry. Mark reviews every launch personally — I'm putting you at the top of his callback list right now."]] }
+    ];
+    this.LIVE_LINES = [
+      { who: "Alex", color: "#4ADE80", text: "…so the preview's already built — nothing goes live until you say so, and looking is free." },
+      { who: "Maria", color: "#9FB0C4", text: "Okay, and I keep my own domain name?" },
+      { who: "Alex", color: "#4ADE80", text: "Always. It's yours no matter what you decide." }
+    ];
+  }
+
+  componentDidMount() {
+    this._onResize = () => this.setState({ isMobile: window.innerWidth < 800 });
+    window.addEventListener("resize", this._onResize);
+    this._onResize();
+    this._onKey = (e) => { if (e.key === "Escape" && this.state.openCall) this.setState({ openCall: null }); };
+    window.addEventListener("keydown", this._onKey);
+    // live call ticker
+    this._liveInt = setInterval(() => {
+      this.setState(s => ({
+        liveSeconds: s.liveSeconds + 1,
+        liveLineCount: Math.min(this.LIVE_LINES.length, s.liveLineCount + (s.liveSeconds % 4 === 0 ? 1 : 0))
+      }));
+    }, 1000);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this._onResize);
+    window.removeEventListener("keydown", this._onKey);
+    clearInterval(this._liveInt);
+    clearTimeout(this._toastTimer);
+  }
+
+  go(route) { this.setState({ route, openCall: null }); }
+  toast(msg) {
+    clearTimeout(this._toastTimer);
+    this.setState({ toast: msg });
+    this._toastTimer = setTimeout(() => this.setState({ toast: "" }), 2800);
+  }
+
+  renderVals() {
+    const s = this.state;
+    const unpaid = this.props.unpaidState ?? false;
+    const showLive = (this.props.showLiveCall ?? true) && !s.pausedAll && !unpaid;
+    const mins = Math.floor(s.liveSeconds / 60), secs = s.liveSeconds % 60;
+
+    const navDef = [
+      ["today", "🏠", "Today"],
+      ["team", "👥", "My Team"],
+      ["calls", "📞", "Calls", "2"],
+      ["followups", "📌", "Follow-ups", "4"],
+      ["safety", "🛡", "Safety"],
+      ["plan", "💳", "Plan & Minutes"],
+      ["setup", "🧭", "Setup Guide"],
+      ["help", "💬", "Help"]
+    ];
+    const nav = navDef.map(([route, icon, label, badge]) => ({
+      icon, label, badge: badge || false,
+      bg: s.route === route ? "#fff" : "transparent",
+      color: s.route === route ? "#15202F" : "#5C6673",
+      onGo: () => this.go(route)
+    }));
+    const tabs = [["today", "🏠", "Today"], ["team", "👥", "Team"], ["calls", "📞", "Calls"], ["followups", "📌", "Follow"], ["help", "💬", "Help"]].map(([route, icon, label]) => ({
+      icon, label,
+      bg: s.route === route ? "#fff" : "transparent",
+      color: s.route === route ? "#15202F" : "#8A93A0",
+      onGo: () => this.go(route)
+    }));
+
+    const pick = (on) => ({
+      bg: on ? "#15202F" : "#fff",
+      color: on ? "#fff" : "#3C4653",
+      ring: on ? "inset 0 0 0 2px #15202F" : "inset 0 0 0 1.5px rgba(21,32,47,.12)"
+    });
+
+    const approvalsAll = [
+      { id: "a1", icon: "📤", iconBg: "#F0F4FE", title: "Alex wants to call 12 new people who asked for a visibility check this week.",
+        detail: "All 12 said yes on your website. Alex will use your normal script and stop the moment anyone asks.", yesLabel: "Yes, call them" },
+      { id: "a2", icon: "🌙", iconBg: "#F3EFFB", title: "Turn on evening answering (6pm–9pm)?",
+        detail: "Sam can pick up calls after you close, take messages, and book appointments for the morning. Uses about 40 extra minutes a month.", yesLabel: "Turn it on" },
+      { id: "a3", icon: "💬", iconBg: "#EDF7F1", title: "Text Hendricks Plumbing the preview link he okayed?",
+        detail: "He said yes on this morning's call (you can listen to that moment). One text, no follow-up barrage.", yesLabel: "Send the text" }
+    ].filter(a => !s.approvalsDone.includes(a.id));
+
+    const filters = [["all", "All calls"], ["win", "🎉 Wins"], ["callback", "📞 Callbacks"], ["inbound", "🎧 Answered"], ["flag", "⚠️ Needs you"]];
+    const calls = this.CALLS
+      .filter(c => s.callFilter === "all" || c.kind === s.callFilter)
+      .map(c => Object.assign({}, c, { flag: c.flag || false, onOpen: () => this.setState({ openCall: c }) }));
+    const oc = s.openCall;
+
+    const hireJobs = [
+      { key: "receptionist", icon: "🎧", title: "Receptionist", desc: "Answers your phone when you can't. Takes messages, books appointments, never puts anyone on hold." },
+      { key: "follower", icon: "📞", title: "Follow-up caller", desc: "Calls back the people who asked to hear from you — quotes, callbacks, and reminders, right on time." },
+      { key: "checker", icon: "💛", title: "Customer check-in", desc: "Calls your existing customers to see how things went and catches problems before they become bad reviews." },
+      { key: "scheduler", icon: "📅", title: "Appointment scheduler", desc: "Confirms tomorrow's appointments and fills cancellations so your calendar stays full." }
+    ];
+    const jobTitles = { receptionist: "Receptionist", follower: "Follow-up caller", checker: "Customer check-in", scheduler: "Appointment scheduler" };
+
+    return {
+      // shell
+      isDesktop: !s.isMobile, isMobile: s.isMobile, nav, tabs,
+      minutesLabel: unpaid ? "No plan yet" : "412 min left",
+      pausedAll: s.pausedAll,
+      pauseLabel: s.pausedAll ? "Paused — tap to resume" : "Pause everything",
+      pauseBg: s.pausedAll ? "#C9463D" : "#fff",
+      pauseColor: s.pausedAll ? "#fff" : "#3C4653",
+      pauseDot: s.pausedAll ? "#fff" : "#4ADE80",
+      pauseShadow: s.pausedAll ? "0 8px 22px rgba(201,70,61,.3)" : "inset 0 0 0 1.5px rgba(21,32,47,.12)",
+      togglePauseAll: () => { const p = !s.pausedAll; this.setState({ pausedAll: p }); this.toast(p ? "Everything is paused. No calls will be made or answered until you resume." : "Back to work — your team is live again."); },
+      unpaid, paid: !unpaid,
+      goPlan: () => this.go("plan"),
+      // routes
+      rToday: s.route === "today", rTeam: s.route === "team", rHire: s.route === "hire", rCalls: s.route === "calls",
+      rFollowups: s.route === "followups", rSafety: s.route === "safety", rPlan: s.route === "plan",
+      rSetup: s.route === "setup", rHelp: s.route === "help",
+      // today
+      todayLine: s.pausedAll ? "Everything is paused. Your team will wait for you." : "Your team made 41 calls so far today. Here's what matters.",
+      liveVisible: showLive,
+      liveTimer: mins + ":" + String(secs).padStart(2, "0"),
+      liveLines: this.LIVE_LINES.slice(0, s.liveLineCount),
+      toastListen: () => this.toast("You're listening quietly — Maria can't hear you."),
+      toastTakeover: () => this.toast("Prototype: this would ring your phone and bridge you in."),
+      todayStats: [
+        { value: "41", label: "Calls made & answered", color: "#15202F", onGo: () => this.go("calls") },
+        { value: "2", label: "Appointments booked", color: "#1F8A5B", onGo: () => this.go("calls") },
+        { value: "4", label: "Follow-ups waiting", color: "#2F5FD7", onGo: () => this.go("followups") },
+        { value: "2", label: "Need your attention", color: "#C9463D", onGo: () => this.go("calls") }
+      ],
+      hasApprovals: approvalsAll.length > 0,
+      noApprovals: approvalsAll.length === 0,
+      approvals: approvalsAll.map(a => Object.assign(a, {
+        onYes: () => { this.setState({ approvalsDone: s.approvalsDone.concat(a.id) }); this.toast("Done — your team is on it."); },
+        onNo: () => { this.setState({ approvalsDone: s.approvalsDone.concat(a.id) }); this.toast("No problem — we'll ask again another time."); }
+      })),
+      goFollowupsLink: (e) => { e.preventDefault(); this.go("followups"); },
+      // team
+      agents: [
+        { name: "Alex", initial: "A", avatarBg: "#2F5FD7", job: "Follow-up caller — new inquiries", status: s.pausedAll ? "Paused" : "On a call", statusBg: s.pausedAll ? "#F0EDE5" : "#EDF7F1", statusColor: s.pausedAll ? "#8A93A0" : "#1F8A5B", statusDot: s.pausedAll ? "#8A93A0" : "#4ADE80", calls: 32, mins: 61, wins: 2, winsLabel: "booked", hours: "Works Mon–Fri, 8am–6pm your time. Never calls outside those hours.", pauseLabel: s.pausedAll ? "Resume Alex" : "Pause Alex" },
+        { name: "Sam", initial: "S", avatarBg: "#7C5CD6", job: "Receptionist — answers your line", status: s.pausedAll ? "Paused" : "Ready", statusBg: s.pausedAll ? "#F0EDE5" : "#F0F4FE", statusColor: s.pausedAll ? "#8A93A0" : "#2F5FD7", statusDot: s.pausedAll ? "#8A93A0" : "#2F5FD7", calls: 9, mins: 27, wins: 9, winsLabel: "answered", hours: "Answers whenever you can't pick up, 8am–6pm. Evening answering is off.", pauseLabel: s.pausedAll ? "Resume Sam" : "Pause Sam" }
+      ].map(ag => Object.assign(ag, {
+        onPause: () => this.toast(ag.pauseLabel + " — done. You're always in control."),
+        onListen: () => this.setState({ route: "calls", openCall: this.CALLS[0] }),
+        onCoach: () => this.toast("Teaching mode: tell " + ag.name + " in plain words, like 'Don't mention prices unless they ask.'")
+      })),
+      goHire: () => { this.setState({ route: "hire", hireStep: 1 }); },
+      // hire wizard
+      hireDots: [1, 2, 3].map(n => ({ bg: s.hireStep >= n ? "#2F5FD7" : "#DDD8CC" })),
+      hireStep1: s.hireStep === 1, hireStep2: s.hireStep === 2, hireStep3: s.hireStep === 3,
+      hireTitle: s.hireStep === 1 ? "What job needs doing?" : s.hireStep === 2 ? "Make them yours" : "Meet your new hire",
+      hireSub: s.hireStep === 1 ? "Pick the job — we handle everything technical." : s.hireStep === 2 ? "Choose a name, voice, and working hours. Your business profile teaches them the rest." : "Review and press go. You can change anything later.",
+      hireJobs: hireJobs.map(j => Object.assign(j, {
+        ring: s.hireJob === j.key ? "inset 0 0 0 2px #2F5FD7, 0 6px 18px rgba(21,32,47,.08)" : "0 2px 10px rgba(21,32,47,.05), inset 0 0 0 1px rgba(21,32,47,.05)",
+        onPick: () => this.setState({ hireJob: j.key, hireStep: 2 })
+      })),
+      hireNames: ["Alex", "Sam", "Jo", "Morgan", "Quinn"].map(name => Object.assign({ name, onPick: () => this.setState({ hireName: name }) }, pick(s.hireName === name))),
+      hireVoices: [
+        { name: "Warm & friendly", desc: "Sounds like a helpful neighbor. Best for most businesses." },
+        { name: "Calm & professional", desc: "Steady and reassuring. Good for medical, legal, finance." },
+        { name: "Upbeat & quick", desc: "Energetic and to the point. Good for busy trades." }
+      ].map(v => ({ name: v.name, desc: v.desc, on: s.hireVoice === v.name, ring: s.hireVoice === v.name ? "inset 0 0 0 2px #2F5FD7" : "inset 0 0 0 1.5px rgba(21,32,47,.1)", onPick: () => { this.setState({ hireVoice: v.name }); this.toast("Prototype: this would play a 5-second voice sample."); } })),
+      hireHours: ["Business hours (8–6)", "Extended (8am–9pm)", "Follow my calendar"].map(label => Object.assign({ label, onPick: () => this.setState({ hireHours: label }) }, pick(s.hireHours === label))),
+      hireBack: () => this.setState({ hireStep: Math.max(1, s.hireStep - 1) }),
+      hireNext: () => this.setState({ hireStep: 3 }),
+      hireName: s.hireName, hireInitial: s.hireName.slice(0, 1),
+      hireJobLabel: jobTitles[s.hireJob] || "Team member",
+      hireVoiceLabel: s.hireVoice, hireHoursLabel: s.hireHours,
+      hireFinish: () => { this.go("team"); this.toast(s.hireName + " is on the team! They'll appear in My Team and wait for work."); },
+      hireTest: () => this.toast("Prototype: " + s.hireName + " would call your phone right now for a practice chat."),
+      // calls
+      callFilters: filters.map(([k, label]) => Object.assign({ label, onPick: () => this.setState({ callFilter: k }) }, pick(s.callFilter === k))),
+      calls,
+      callOpen: !!oc,
+      closeCall: () => this.setState({ openCall: null }),
+      cdWho: oc ? oc.who : "", cdIcon: oc ? oc.icon : "", cdIconBg: oc ? oc.iconBg : "",
+      cdAgent: oc ? oc.agent : "", cdWhen: oc ? oc.when : "", cdLength: oc ? oc.length : "",
+      cdSummary: oc ? oc.summary : "",
+      cdLines: oc ? oc.lines.map(([who, color, text]) => ({ who, color, text })) : [],
+      toastPlay: () => this.toast("Prototype: the real recording would play here."),
+      cdGood: () => { this.setState({ openCall: null }); this.toast("Noted — your team will do more of this."); },
+      cdBad: () => { this.setState({ openCall: null }); this.toast("Tell us what to change in plain words — your team learns from it."); },
+      cdFollow: () => { this.setState({ openCall: null }); this.toast("Follow-up added."); },
+      // follow-ups
+      followups: [
+        { who: "Hendricks Plumbing", when: "Friday 9:00am — promised", whenBg: "#FFF7E8", whenColor: "#8A6A1F", ring: "rgba(232,199,126,.9)", note: "Asked Alex to call back Friday morning. He okayed a preview-link text in the meantime.", agent: "Alex" },
+        { who: "Rossi & Sons Roofing", when: "Today — upset customer", whenBg: "#FDEBE9", whenColor: "#C9463D", ring: "rgba(201,70,61,.35)", note: "Frustrated about the launch delay. Sam promised a personal call from you. Best handled human-to-human.", agent: "Sam" },
+        { who: "Golden State Dental", when: "Monday", whenBg: "#F0F4FE", whenColor: "#2F5FD7", ring: "rgba(21,32,47,.05)", note: "Discussing the care plan with their partner over the weekend. Wants a check-in Monday.", agent: "Sam" },
+        { who: "Maria's Bakery", when: "Thursday 10:00am — booked", whenBg: "#EDF7F1", whenColor: "#1F8A5B", ring: "rgba(21,32,47,.05)", note: "Preview walkthrough appointment. She'll have her daughter on the call too.", agent: "Alex" }
+      ].map(fu => Object.assign(fu, {
+        onAgent: () => this.toast(fu.agent + " will make that call at the promised time."),
+        onMe: () => this.toast("Yours now — we set a reminder and your team will stay off this one."),
+        onDone: () => this.toast("Marked done. Nice work.")
+      })),
+      // safety
+      safetyRules: [
+        { title: "Only calls people who said yes", detail: "Every call goes to someone with a recorded yes — a form they filled out, a call they asked for. No cold lists, ever." },
+        { title: "Hangs up the moment someone says stop", detail: "\"Not interested\" or \"stop calling\" ends the call in seconds and adds them to the never-call list permanently." },
+        { title: "Never pretends to be human", detail: "If anyone asks, your team says exactly who they are and offers a real person instead." },
+        { title: "Respects quiet hours", detail: "No calls before 8am or after 8pm in the other person's time zone. Voicemails max 20 seconds, never two in a row." },
+        { title: "Never takes card numbers by voice", detail: "Payment only ever happens through a secure emailed link — your team physically can't accept card details on a call." }
+      ],
+      dncValue: s.dnc,
+      onDnc: (e) => this.setState({ dnc: e.target.value }),
+      addDnc: () => { if (s.dnc.trim()) { this.setState({ dnc: "" }); this.toast("Added. That number will never be called."); } },
+      // plan
+      planTitle: unpaid ? "Pick your plan" : "Plan & minutes",
+      planSub: unpaid ? "Nothing is billed until you choose. Every plan: no contract, cancel anytime." : "You're on Growth-ready footing. Change anytime — we never bill surprises.",
+      planCards: [
+        { name: "Solo", price: "$49", mins: "500", agents: "1 crew member", extra: "Recordings, transcripts & plain-English summaries", tag: unpaid ? "GOOD FIRST PICK" : "", tagBg: "#EDF7F1", tagColor: "#1F8A5B", ring: unpaid ? "inset 0 0 0 2px #1F8A5B, 0 10px 30px rgba(31,138,91,.12)" : "inset 0 0 0 2px #2F5FD7, 0 10px 30px rgba(47,95,215,.1)", btnBg: unpaid ? "#1F8A5B" : "#F0EDE5", btnColor: unpaid ? "#fff" : "#8A93A0", cta: unpaid ? "Start with Solo" : "Current plan" },
+        { name: "Crew", price: "$129", mins: "1,500", agents: "Up to 3 crew members", extra: "Evening answering + calendar booking + missed-call rescue", tag: "MOST POPULAR", tagBg: "#F0F4FE", tagColor: "#2F5FD7", ring: "0 2px 10px rgba(21,32,47,.05), inset 0 0 0 1px rgba(21,32,47,.08)", btnBg: "#15202F", btnColor: "#fff", cta: unpaid ? "Choose Crew" : "Move up to Crew" },
+        { name: "Front Office", price: "$299", mins: "4,000", agents: "Up to 10 crew members", extra: "Priority human support + multi-location + weekly boss report", tag: "", tagBg: "", tagColor: "", ring: "0 2px 10px rgba(21,32,47,.05), inset 0 0 0 1px rgba(21,32,47,.08)", btnBg: "#F0EDE5", btnColor: "#3C4653", cta: unpaid ? "Choose Front Office" : "Talk to us about Front Office" }
+      ].map(p => Object.assign(p, { onDo: () => this.toast(unpaid ? "Prototype: secure Stripe checkout would open here." : "Prototype: this would open secure Stripe checkout to change plans.") })),
+      openPortal: () => this.toast("Prototype: Stripe billing portal — card, receipts, cancel — opens here."),
+      // setup
+      setupSteps: [
+        { num: "✓", numBg: "#EDF7F1", numColor: "#1F8A5B", title: "Create your account", detail: "Done! You're in.", done: true, todo: false, cta: "" },
+        { num: "2", numBg: "#15202F", numColor: "#fff", title: "Tell us about your business", detail: "Add your services, hours, service area, booking method, emergency keywords, and pricing notes so your team answers accurately. About 3 minutes.", done: false, todo: true, cta: "Start" },
+        { num: "3", numBg: "#F0EDE5", numColor: "#8A93A0", title: "Get your phone number", detail: "Keep your current number and forward missed calls, or get a fresh local number from us. We walk you through it.", done: false, todo: true, cta: "Set up" },
+        { num: "4", numBg: "#F0EDE5", numColor: "#8A93A0", title: "Meet your first team member", detail: "Hire your receptionist or follow-up caller, hear their voice on your own phone, then turn them on when you're ready.", done: false, todo: true, cta: "Hire" }
+      ].map(st => Object.assign(st, { onDo: () => st.cta === "Hire" ? this.setState({ route: "hire", hireStep: 1 }) : this.toast("Prototype: a friendly 3-question form opens here.") })),
+      // help
+      toastCallMe: () => this.toast("Prototype: a real person would call you back within ~15 minutes."),
+      faqs: [
+        { q: "Is this legal? Will I get in trouble for AI calls?", a: "Your team only ever calls people who gave a recorded yes, identifies itself honestly, respects quiet hours, and hangs up instantly on any 'stop.' Those rules are built in and can't be turned off. You can see the consent receipt for every single call." },
+        { q: "Will people know it's not a human?", a: "If they ask, yes — your team never lies. Most conversations are short and helpful, and callers mostly care that their question got answered and their callback happened on time." },
+        { q: "What happens when I run out of minutes?", a: "Calling pauses and we ask you — we never quietly bill overage. You can add minutes, move up a plan, or just wait for the month to reset." },
+        { q: "Can I hear every call?", a: "Yes. Every call is recorded with a word-for-word transcript and a plain-English summary. Anything odd gets flagged to the top of your Today screen." },
+        { q: "What if the AI says something wrong?", a: "Open the call, tap 'Teach from this,' and tell it what to change in plain words — like correcting a new employee. It applies to all future calls, and you can test with a practice call to your own phone." },
+        { q: "How do I cancel?", a: "Plan & Minutes → Manage card & receipts → Cancel. Two taps, no phone call required, no guilt trip. Your recordings stay downloadable for 90 days." }
+      ],
+      // toast
+      toastMsg: s.toast
+    };
+  }
+}
+</script>
+</body>
+</html>

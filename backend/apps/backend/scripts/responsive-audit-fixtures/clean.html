@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clean responsive page — responsive-audit fixture</title>
+  <!--
+    FIXTURE: clean.html
+    The zero-defect baseline. Responsive container, AA-compliant ink in every
+    declared pair, flex rows that wrap, sized images, type scale inside 4x,
+    no oversized fixed widths, no corner-anchored overlays. The self-test
+    asserts this audits fully clean at all five canonical widths.
+  -->
+  <style>
+    :root {
+      --ink: #111827;
+      --ink-soft: #4b5563;
+      --paper: #ffffff;
+      --brand: #1d4ed8;
+      --footer-ink: #e5e7eb;
+      --footer-bg: #111827;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1rem;            /* 16px — the type-scale baseline */
+      line-height: 1.6;
+      color: #111827;             /* 17.0:1 on white */
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 1200px;          /* >= 70% of 1440 — no dead side margin */
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .site-header .container {
+      display: flex;
+      flex-wrap: wrap;            /* wraps, never crushes */
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand { font-weight: 700; color: #111827; background-color: #ffffff; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: #1d4ed8;             /* 6.7:1 on white */
+      background-color: #ffffff;
+      text-decoration: none;
+    }
+
+    .hero { padding: 64px 0 48px; }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 2.25rem;         /* 36px = 2.25x body — inside the 4x limit */
+      line-height: 1.15;
+    }
+
+    .lede {
+      margin: 0 0 24px;
+      max-width: 65ch;
+      color: #4b5563;             /* 7.5:1 on white */
+      background-color: #ffffff;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 10px;
+      color: #ffffff;             /* 6.7:1 on the brand blue */
+      background-color: #1d4ed8;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 0;
+      margin: 0 0 64px;
+      list-style: none;
+    }
+
+    .card {
+      flex: 1 1 300px;
+      max-width: 380px;           /* cards may be narrow — they are cards */
+      padding: 24px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+    }
+
+    .card h2 { font-size: 1.375rem; margin: 0 0 8px; }
+
+    footer { padding: 40px 0; color: #e5e7eb; background-color: #111827; }
+    footer p { margin: 0; }
+
+    /* Desktop refinement — the media query must resolve per width. */
+    @media (min-width: 1024px) {
+      h1 { font-size: 3rem; }     /* 48px = 3x body — still inside the limit */
+      .hero { padding: 96px 0 64px; }
+    }
+
+    /* Phone refinement. */
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .card { flex-basis: 100%; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <span class="brand">Northside Plumbing</span>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container hero" id="top">
+    <h1>Licensed plumbers on call across the north side</h1>
+    <p class="lede">Upfront pricing, same-day dispatch, and a workmanship guarantee on every repair, install, and inspection we take on.</p>
+    <a class="cta" href="tel:+17025550142">Call (702) 555-0142</a>
+
+    <ul class="cards" id="services">
+      <li class="card">
+        <h2>Repairs</h2>
+        <p>Leaks, clogs, and water heater failures diagnosed and fixed the same visit.</p>
+      </li>
+      <li class="card">
+        <h2>Installs</h2>
+        <p>Fixtures, disposals, and full repipes installed to code with permit handling.</p>
+      </li>
+      <li class="card">
+        <h2>Inspections</h2>
+        <p>Camera scopes and pressure tests with a written report you can act on.</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Northside Plumbing LLC &middot; NV Lic #0088742</p>
+    </div>
+  </footer>
+
+  <!-- Every image carries intrinsic width + height (no CLS risk). -->
+  <img src="/img/crew.jpg" alt="Service crew loading a van" width="1200" height="630" loading="lazy">
+</body>
+</html>

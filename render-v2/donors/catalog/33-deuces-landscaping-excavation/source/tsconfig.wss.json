@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["src/wss/**/*.ts","src/wss/**/*.tsx","src/wss/**/*.cts","src/vite-env.d.ts"],"exclude":["src/routeTree.gen.ts"]}

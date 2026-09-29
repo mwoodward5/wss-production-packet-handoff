@@ -1,0 +1,151 @@
+{
+  "name": "hvac-premier",
+  "vertical": "hvac",
+  "hero_wash": {
+    "selector": "section.hero",
+    "background": "#071222",
+    "text_color": "#FBFAF8",
+    "pages_verified": [
+      "/"
+    ],
+    "verified": "Render-proven on this donor shape 2026-09-02: section.hero is the painted slab hero (grain + scrim over the poster photograph), and heroWashCss applied to this spec clears AA - the copy column sits on the donor's own scrim floor holding >=0.6 combined alpha under the copy, which keeps #fff-family hero ink above 4.5:1 on the raw poster and on any video frame, independent of the client palette. background and text_color are the raw dark hero sample; the engine wash rides on top, and the same selector drives the mobile fold."
+  },
+  "hero_wash_note": "background and text_color are the raw dark hero sample from the source design system (navy slab, near-white ink); the shipped scrim comes from the theme pass.",
+  "label": "Premier - premium HVAC one-pager (static A+ rebuild): painted video-ladder hero, systems bento, gallery, commissioning rail, about, reviews, FAQ, comfort-design CTA",
+  "wordmarkFill": "#0F2A4A",
+  "source": "Static A+ rebuild (2026-09-02, Lovable a-plus lane) of the premium HVAC vertical: the earlier verbatim SPA port (source business Texan's HVAC of Waller, TX) was replaced by a fictional-identity one-page template - hand-authored index.html (navy slab hero with grain, ticker, bento systems, SVG gallery, numeral commissioning rail, about, review cards, glass FAQ, comfort-design CTA panel, footer + floater), hand-authored stylesheet on --wss-* properties, one hero-layer bundle. The design language is trade-generic; the real source business's facts exist only as tokens and identity atoms.",
+  "sanitised": "2026-08-06",
+  "stack": "Static A+ build (2026-09-02): one hand-authored index.html (real header/main/footer markup, no framework, no CDN, no external requests) + one hand-authored stylesheet at assets/style.css (consuming --wss-* properties throughout; hex literals exist only as the token declarations themselves) + one script asset, assets/index-hvac-premier.js (the hero video layer: mounts the ladder-marked <video data-hero-video> hidden with the poster photograph and runs the poster-first/tap-to-play control; the hero is complete without it and reduced motion never mounts the clip). Progressive enhancement only - the first inline script adds .js to <html> before first paint, and every sizzle layer (scroll reveals, count-up stats, hero clip arming, magnetic CTA nudge) is inert without JS or under prefers-reduced-motion. The retired React bundle (assets/index-CVU5wGvW.js) is retained UNLOADED as the compiled evidence artifact for the identity scan; the static page never references it.",
+  "donor_business_name": "Texan's HVAC",
+  "donor_phone": "(832) 473-7554",
+  "donor_email": "pywaller@yahoo.com",
+  "donor_city": "Waller",
+  "donor_county": "Waller County",
+  "donor_domain": "texanshvac.com",
+  "persons": [
+    "hallf"
+  ],
+  "fabricated_persons": [
+    "Devon Castellano"
+  ],
+  "socials": [],
+  "zips": [],
+  "geo": [
+    "29.99",
+    "95.93"
+  ],
+  "account_ids": [
+    "+14805550166",
+    "4805550166",
+    "480-555-0166",
+    "saguaropeakair.com",
+    "concierge@saguaropeakair.com",
+    "AZ-ROC-330914",
+    "https://maps.example.com/place/saguaro-peak-air"
+  ],
+  "consumes_content": false,
+  "renders": [],
+  "renders_note": "Fixed template copy throughout; it does not consume the engine's content-inject islands (the engine appends its authority block - services, coverage, FAQ, reviews, hours - at the ENGINE INJECTION POINT before the footer, and this one-pager leaves that seam intact). Every business-specific string is a token, and every token that can be unverified collapses its own UI at hydration (see tokens_note).",
+  "photo_slots": [
+    "assets/hero-poster.svg",
+    "assets/service-install-NME4CeXB.jpg",
+    "assets/service-acrepair-DGd1XHFs.jpg",
+    "assets/service-commercial-BSS65xNz.jpg",
+    "assets/service-heating-CNE_fygP.jpg",
+    "assets/detail-vent-DvWX-mrL.jpg",
+    "assets/hero-technician-BWt1565e.jpg",
+    "assets/grain.svg"
+  ],
+  "hero_video": {
+    "expected_asset_kind": "video",
+    "client_video_path": "assets/hero-client-hvac.mp4",
+    "wss_fallback_clip_path": "hero/hero-loop.mp4",
+    "poster": "hero/hero-poster.jpg",
+    "ladder": [
+      "the client's own verified clip at client_video_path (engine-placed, mp4, magic-byte verified)",
+      "the WSS-owned clip at wss_fallback_clip_path (REAL bytes ship today: the donor-owned generic HVAC loop; rung 2 plays on every build as-is)",
+      "the donor poster photograph hero/hero-poster.jpg (the mount bundle poster attribute and the paint-under CSS surface are the same file - the still rung)",
+      "the drawn navy hero composition (slab, grain and scrim layers under everything)"
+    ],
+    "note": "The marked <video data-hero-video muted loop playsinline preload=none hidden> is MOUNTED by the hero layer bundle (assets/index-hvac-premier.js, the ladder-donor mount contract: hidden, poster photograph as poster, no static src), over the painted hero surface and the poster img that IS the complete zero-JS hero; the ladder runtime in index.html observes for the mount and arms rungs only when their bytes shipped, reduced motion never mounts or arms the video (guarded in the runtime AND in the mount layer), mobile is poster-first with tap-to-play, and the clip pauses when the hero scrolls away or the tab hides."
+  },
+  "spa_routes": [],
+  "spa_routes_note": "One document; sections are #id anchors (#top, #systems, #work, #process, #about, #reviews, #faq, #contact). No client routing of any kind since the 2026-09-02 static rebuild.",
+  "prerendered_routes": [
+    "/"
+  ],
+  "prerendered_note": "Fully static since the 2026-09-02 rebuild — index.html ships the complete page as real header/main/footer markup in source order, so crawlers and no-JS visitors read every word. JS adds sizzle only (reveals, count-ups, hero clip arming), each gated behind the pre-paint .js class and prefers-reduced-motion.",
+  "routes": {
+    "static": [
+      "/"
+    ],
+    "dynamic": [],
+    "catchAll": "* -> 404 page"
+  },
+  "classification": {
+    "verticalFamilies": [
+      "home-services",
+      "trades"
+    ],
+    "conversionArchetypes": [
+      "request-estimate"
+    ],
+    "shape": "cinematic-onepager",
+    "routeDepth": "flat",
+    "photoDemand": "medium"
+  },
+  "classification_note": "request-estimate: conversion routes through the comfort-design CTA panel and the tel:/mailto: rails. The header CTA, hero call button, CTA-panel call button, footer phone segment and the floater all collapse entirely when the business has no verified phone, each falling back to a #contact anchor where a primary slot needs a survivor. There is no emergency-call archetype - premium comfort design is scheduled work.",
+  "lead_endpoint": null,
+  "lead_endpoint_note": "No donor-native form since the static rebuild. The design converts through tel:/mailto: links and #contact anchors, all token-driven and collapse-guarded. The engine's content-inject lead-capture island (POST /api/quote-request) provides the form path on every mirror, so no stub endpoint could silently swallow leads.",
+  "tokens_used": [
+    "BUSINESS_NAME",
+    "OWNER_NAME",
+    "PHONE",
+    "PHONE_DIGITS",
+    "EMAIL",
+    "DOMAIN",
+    "CITY",
+    "STATE",
+    "REGION",
+    "COUNTY",
+    "POSTAL",
+    "GEO",
+    "GEO_LAT",
+    "GEO_LNG",
+    "ADDRESS_CITY",
+    "PROFILE_URL",
+    "LICENSE",
+    "LOGO_URL",
+    "HERO_HEADLINE",
+    "HERO_LINE_A",
+    "HERO_LINE_B",
+    "HERO_LINE_C",
+    "SITE_URL"
+  ],
+  "tokens_note": "Collapse is [[NEED:TOKEN]] / [[NEED:!TOKEN]] phrase markers around every weld of an OPTIONAL token: blank PHONE removes the header CTA (a comfort-design anchor takes the slot), the hero call button, the CTA-panel call button, the footer phone segment and the ld+json telephone line, and flips the floater plus the meta/OG sentences to online-request copy; blank EMAIL removes the mailto rails; blank LICENSE removes the license chip, the partners chip, the footer license line and the ld+json identifier; blank OWNER_NAME swaps the about sentence to the business-led reading and drops the footer ownership clause and the ld+json founder; blank COUNTY unwelds every county mention from copy, headings and the ld+json areaServed entry; blank POSTAL drops the schema postalCode and the footer ZIP; blank GEO drops the geo.position meta and the footer coordinates; blank PROFILE_URL drops the ld+json sameAs and the footer profile link. Dialable links are href=tel:{{PHONE_DIGITS}} everywhere, so a phone-less build carries no dangling tel: href.",
+  "truth_law_removals": [
+    "The verbatim source business's full NAP (Texan's HVAC, Waller TX, (832) 473-7554, pywaller@yahoo.com, texanshvac.com, owner handle hallf) is declared here as identity atoms and ships NOWHERE in the bytes - every identity string is a token; a resurrection is blocked by the identity scan.",
+    "Template stats on the stat strip are design furniture, not claims - the engine's verified-trust islands override them on real builds, and RATING/REVIEW_COUNT are never invented.",
+    "The template's review cards are fictional demo voices (declared in fabricated_persons); the content-inject reviews island supersedes them, and no reviewer content is ever fabricated as a real person's words.",
+    "No maps embed, no hours table, no review-carousel widget shipped: coverage/authorities arrive via the engine's own verified islands."
+  ],
+  "identity_atoms_note": "The primary atoms are the source business's REAL identity (name, NAP, domain, owner handle, surveyed geo) as it stood in the verbatim port - none of it appears in the installed bytes, but the scan needs real needles so it can never return clean for arbitrary bytes. The a-plus template's fictional demo identity (Saguaro Peak Air, Scottsdale AZ) is declared in account_ids for the same reason. donor_city Waller and donor_county Waller County are PLACE atoms: a legitimate Waller, TX HVAC prospect is excused by the client-place carve-out (scan.js BF-5).",
+  "notes": "A-PLUS REBUILD 2026-09-02 (lovable/hvac-premier-a-plus): the verbatim SPA page was replaced by the static build described in stack - navy design system on --wss-* properties, painted slab hero with grain and word-by-word display headline, ticker, bento systems, SVG gallery, numeral commissioning rail, about with partners strip, review cards, glass accordion FAQ, comfort-design CTA panel, four-column footer and a single floater. CI-repair pass 2 (fix2/hvac-premier): restored the WSS manifest schema with the real source identity atoms (plus the template's fictional identity) so the identity gate can fire; vertical back to canonical 'hvac' with the heating/cooling aliases; NEED-guarded every OPTIONAL token weld; added the data-wss-hero-fallback kill-switch + paint-under style block, the ladder island and the walker runtime in index.html, and the ladder-donor mount bundle assets/index-hvac-premier.js; renamed assets/logo-fallback.svg -> mark-fallback.svg (a logo-* filename is a donor brand asset the identity scan must block); restored the realestate-waterline family to its merged main state after the branch carried a stale copy.",
+  "registered_on": "2026-08-06",
+  "installed_at": "apps/backend/donors-clean/hvac-premier",
+  "alias_verticals": [
+    "heating",
+    "cooling",
+    "air conditioning",
+    "ac repair",
+    "heating and air",
+    "heating & cooling",
+    "heating and cooling",
+    "furnace",
+    "heat pump",
+    "hvac contractor",
+    "air conditioning contractor",
+    "heating contractor"
+  ],
+  "alias_note": "Applied by lib/donor-verticals.js from data/donor-verticals.json. The engine itself still resolves ONLY the exact \"vertical\" value above."
+}

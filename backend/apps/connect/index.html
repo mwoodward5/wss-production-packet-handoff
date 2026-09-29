@@ -1,0 +1,3953 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1a73e8">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="WSS Connect — simple lead management for local businesses.">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>WSS Connect</title>
+
+  <style>
+    :root {
+      --accent: #1a73e8;
+      --accent-rgb: 26,115,232;
+
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --surface-2: #f0f4f8;
+      --surface-3: #e8eef5;
+      --text: #15202b;
+      --muted: #657384;
+      --quiet: #8b97a5;
+      --line: #dfe6ee;
+      --good: #18864b;
+      --warning: #b46708;
+      --danger: #c63a3a;
+
+      --shadow-sm: 0 2px 10px rgba(25,42,62,.07);
+      --shadow-md: 0 12px 32px rgba(25,42,62,.12);
+      --shadow-accent: 0 10px 26px rgba(var(--accent-rgb),.22);
+
+      --radius-sm: 12px;
+      --radius: 18px;
+      --radius-lg: 24px;
+
+      --nav-h: 72px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --safe-top: env(safe-area-inset-top, 0px);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --surface: #151b23;
+        --surface-2: #1b232d;
+        --surface-3: #222c38;
+        --text: #f3f6f9;
+        --muted: #a8b3bf;
+        --quiet: #7d8997;
+        --line: #2a3542;
+        --good: #5bce8b;
+        --warning: #ffb757;
+        --danger: #ff7676;
+        --shadow-sm: 0 3px 12px rgba(0,0,0,.18);
+        --shadow-md: 0 14px 38px rgba(0,0,0,.28);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--bg);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background:
+        radial-gradient(circle at 50% -160px, rgba(var(--accent-rgb),.12), transparent 370px),
+        var(--bg);
+      color: var(--text);
+      font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.45;
+      overflow-x: hidden;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      color: inherit;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid rgba(var(--accent-rgb),.32);
+      outline-offset: 2px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0,0,0,0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    .app {
+      width: min(100%, 560px);
+      min-height: 100vh;
+      min-height: 100dvh;
+      margin: 0 auto;
+      position: relative;
+      background: transparent;
+    }
+
+    .sample-banner {
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 6px 12px;
+      background: #ffcf33;
+      color: #171717;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      box-shadow: 0 1px 0 rgba(0,0,0,.1);
+    }
+
+    .view {
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding-bottom: calc(var(--nav-h) + var(--safe-bottom) + 18px);
+    }
+
+    .view.thread-view {
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      position: sticky;
+      z-index: 30;
+      top: 0;
+      padding:
+        calc(14px + var(--safe-top))
+        16px
+        12px;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid color-mix(in srgb, var(--line) 68%, transparent);
+    }
+
+    .sample-banner + .view .topbar {
+      top: 30px;
+    }
+
+    .topbar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-lockup {
+      min-width: 0;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.22), transparent),
+        var(--accent);
+      color: #fff;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .brand-mark svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .eyebrow {
+      margin: 0 0 1px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .1em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .brand-title,
+    .screen-title {
+      margin: 0;
+      font-size: clamp(22px, 6vw, 28px);
+      font-weight: 900;
+      letter-spacing: -.045em;
+      line-height: 1.05;
+    }
+
+    .business-name {
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .icon-button,
+    .action-button,
+    .call-button,
+    .nav-button,
+    .back-button,
+    .connection-button,
+    .install-button {
+      min-width: 44px;
+      min-height: 44px;
+      border: 0;
+      border-radius: 14px;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    .icon-button {
+      flex: 0 0 46px;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .icon-button svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .icon-button:active,
+    .action-button:active,
+    .call-button:active,
+    .connection-button:active,
+    .install-button:active,
+    .nav-button:active,
+    .back-button:active {
+      transform: translateY(1px) scale(.985);
+    }
+
+    .refresh-icon.is-spinning {
+      animation: spin .75s linear infinite;
+    }
+
+    .content {
+      padding: 16px;
+    }
+
+    .heartbeat {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 16px;
+      padding: 18px;
+      border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--line));
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(145deg, rgba(var(--accent-rgb),.115), transparent 62%),
+        var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .heartbeat::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: -95px;
+      right: -50px;
+      border-radius: 50%;
+      background: rgba(var(--accent-rgb),.09);
+      pointer-events: none;
+    }
+
+    .heartbeat-top {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .live-dot {
+      width: 9px;
+      height: 9px;
+      flex: 0 0 9px;
+      border-radius: 50%;
+      background: var(--good);
+      box-shadow: 0 0 0 5px color-mix(in srgb, var(--good) 13%, transparent);
+    }
+
+    .heartbeat-copy {
+      position: relative;
+      z-index: 1;
+      margin: 10px 0 4px;
+      max-width: 340px;
+      font-size: clamp(23px, 6vw, 30px);
+      font-weight: 920;
+      letter-spacing: -.045em;
+      line-height: 1.04;
+    }
+
+    .heartbeat-sub {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      max-width: 380px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 4px 2px 10px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    .section-meta {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .conversation-list {
+      display: grid;
+      gap: 11px;
+    }
+
+    .conversation-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      width: 100%;
+      min-height: 104px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .conversation-card.unread {
+      border-color: color-mix(in srgb, var(--accent) 38%, var(--line));
+      box-shadow:
+        0 8px 25px rgba(var(--accent-rgb),.11),
+        inset 4px 0 0 var(--accent);
+    }
+
+    .conversation-card.unread.is-new {
+      animation: newLeadPulse 2.2s ease-out 1;
+    }
+
+    .conversation-main {
+      min-width: 0;
+      appearance: none;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+      color: inherit;
+    }
+
+    .conversation-topline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .channel-badge {
+      flex: 0 0 30px;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--surface-2);
+      color: var(--accent);
+    }
+
+    .channel-badge svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .lead-name {
+      min-width: 0;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -.025em;
+    }
+
+    .time {
+      flex: 0 0 auto;
+      color: var(--quiet);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .new-label {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 24px;
+      margin-top: 8px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(var(--accent-rgb),.11);
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 950;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .preview {
+      display: -webkit-box;
+      margin: 7px 0 0;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    .card-actions {
+      align-self: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .call-button {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      background: var(--accent);
+      color: white;
+      box-shadow: var(--shadow-accent);
+      text-decoration: none;
+    }
+
+    .call-button svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    .empty-state {
+      padding: 36px 22px;
+      border: 1px dashed color-mix(in srgb, var(--muted) 30%, var(--line));
+      border-radius: var(--radius-lg);
+      background: color-mix(in srgb, var(--surface) 75%, transparent);
+      text-align: center;
+    }
+
+    .empty-icon {
+      width: 62px;
+      height: 62px;
+      margin: 0 auto 15px;
+      display: grid;
+      place-items: center;
+      border-radius: 21px;
+      background: rgba(var(--accent-rgb),.1);
+      color: var(--accent);
+    }
+
+    .empty-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .empty-title {
+      margin: 0 0 7px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+
+    .empty-copy {
+      max-width: 330px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .skeleton-list {
+      display: grid;
+      gap: 11px;
+    }
+
+    .skeleton-card {
+      min-height: 104px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .skeleton-line {
+      height: 13px;
+      margin-bottom: 10px;
+      border-radius: 999px;
+      background:
+        linear-gradient(
+          90deg,
+          var(--surface-2) 25%,
+          var(--surface-3) 45%,
+          var(--surface-2) 65%
+        );
+      background-size: 250% 100%;
+      animation: shimmer 1.25s linear infinite;
+    }
+
+    .skeleton-line.w1 { width: 52%; }
+    .skeleton-line.w2 { width: 86%; }
+    .skeleton-line.w3 { width: 68%; }
+
+    .bottom-nav {
+      position: fixed;
+      z-index: 50;
+      left: 50%;
+      bottom: 0;
+      width: min(100%, 560px);
+      min-height: calc(var(--nav-h) + var(--safe-bottom));
+      transform: translateX(-50%);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 8px 10px calc(8px + var(--safe-bottom));
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      border-top: 1px solid var(--line);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 -10px 30px rgba(10,22,35,.07);
+    }
+
+    .nav-button {
+      min-height: 56px;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      gap: 3px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+    }
+
+    .nav-button svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    .nav-button.active {
+      background: rgba(var(--accent-rgb),.09);
+      color: var(--accent);
+    }
+
+    .nav-count {
+      position: absolute;
+      min-width: 18px;
+      height: 18px;
+      margin: -28px 0 0 27px;
+      padding: 0 5px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--surface);
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      font-size: 10px;
+      font-weight: 950;
+      line-height: 1;
+    }
+
+    /* Thread */
+
+    .thread-topbar {
+      position: sticky;
+      z-index: 35;
+      top: 0;
+      padding:
+        calc(11px + var(--safe-top))
+        12px
+        11px;
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      border-bottom: 1px solid var(--line);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .sample-banner + .thread-view .thread-topbar {
+      top: 30px;
+    }
+
+    .thread-head {
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .back-button {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: transparent;
+    }
+
+    .back-button svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .thread-person {
+      min-width: 0;
+    }
+
+    .thread-name {
+      overflow: hidden;
+      margin: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -.025em;
+    }
+
+    .thread-context {
+      overflow: hidden;
+      margin: 1px 0 0;
+      color: var(--muted);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .thread-call {
+      width: 48px;
+      height: 48px;
+    }
+
+    .back-all {
+      min-height: 44px;
+      margin-top: 4px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .messages {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 18px 14px 134px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .day-label {
+      align-self: center;
+      margin: 8px 0;
+      color: var(--quiet);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .message {
+      max-width: 84%;
+      padding: 11px 13px;
+      border-radius: 17px;
+      box-shadow: 0 2px 6px rgba(22,36,50,.05);
+    }
+
+    .message.in {
+      align-self: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-bottom-left-radius: 5px;
+    }
+
+    .message.out {
+      align-self: flex-end;
+      background: var(--accent);
+      color: #fff;
+      border-bottom-right-radius: 5px;
+    }
+
+    .message-text {
+      margin: 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-size: 15px;
+    }
+
+    .message-meta {
+      margin-top: 5px;
+      color: var(--quiet);
+      font-size: 10px;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .message.out .message-meta {
+      color: rgba(255,255,255,.72);
+    }
+
+    .composer-shell {
+      position: fixed;
+      z-index: 45;
+      left: 50%;
+      bottom: 0;
+      width: min(100%, 560px);
+      transform: translateX(-50%);
+      padding: 10px 12px calc(10px + var(--safe-bottom));
+      background: color-mix(in srgb, var(--surface) 94%, transparent);
+      border-top: 1px solid var(--line);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+    }
+
+    .composer {
+      display: grid;
+      grid-template-columns: 1fr 52px;
+      align-items: end;
+      gap: 8px;
+    }
+
+    .composer textarea {
+      width: 100%;
+      min-height: 52px;
+      max-height: 136px;
+      resize: none;
+      padding: 14px 15px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--surface-2);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .composer textarea::placeholder {
+      color: var(--quiet);
+    }
+
+    .send-button {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 17px;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .send-button svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    .send-button[disabled] {
+      opacity: .48;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .composer-status {
+      min-height: 18px;
+      margin: 5px 4px 0;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .composer-status.error {
+      color: var(--danger);
+    }
+
+    /* Common secondary screens */
+
+    .screen-intro {
+      margin-bottom: 18px;
+    }
+
+    .screen-intro h2 {
+      margin: 0 0 6px;
+      font-size: 27px;
+      font-weight: 920;
+      letter-spacing: -.045em;
+      line-height: 1.05;
+    }
+
+    .screen-intro p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .panel {
+      margin-bottom: 14px;
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel-title {
+      margin: 0 0 4px;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -.025em;
+    }
+
+    .panel-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .connection-list {
+      display: grid;
+      gap: 11px;
+      margin-top: 15px;
+    }
+
+    .connection-row {
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      align-items: center;
+      gap: 11px;
+      min-height: 72px;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .connection-row:first-child {
+      border-top: 0;
+    }
+
+    .connection-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--surface-2);
+      color: var(--accent);
+    }
+
+    .connection-icon svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    .connection-name {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .connection-status {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .connection-button,
+    .install-button,
+    .action-button {
+      min-height: 46px;
+      padding: 0 15px;
+      background: rgba(var(--accent-rgb),.1);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .connection-button.connected {
+      background: var(--surface-2);
+      color: var(--muted);
+    }
+
+    .settings-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .setting-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .setting-copy h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    .setting-copy p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .switch {
+      position: relative;
+      width: 54px;
+      height: 32px;
+      flex: 0 0 54px;
+    }
+
+    .switch input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .switch-track {
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: var(--surface-3);
+      border: 1px solid var(--line);
+      cursor: pointer;
+      transition: .18s ease;
+    }
+
+    .switch-track::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 3px;
+      left: 3px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 2px 7px rgba(0,0,0,.22);
+      transition: .18s ease;
+    }
+
+    .switch input:checked + .switch-track {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .switch input:checked + .switch-track::after {
+      transform: translateX(22px);
+    }
+
+    .code-box {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid var(--line);
+    }
+
+    .code-label {
+      display: block;
+      margin: 0 0 7px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .code-input-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+
+    .code-input {
+      min-width: 0;
+      height: 50px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface-2);
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: .03em;
+    }
+
+    .save-code {
+      min-width: 78px;
+      height: 50px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .show-code {
+      min-height: 44px;
+      margin: 5px 0 -5px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .setting-status {
+      min-height: 18px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .setting-status.error {
+      color: var(--danger);
+    }
+
+    .install-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .install-button {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: var(--shadow-accent);
+    }
+
+    /* Toast */
+
+    .toast-region {
+      position: fixed;
+      z-index: 200;
+      top: calc(12px + var(--safe-top));
+      left: 50%;
+      width: min(calc(100% - 24px), 520px);
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .sample-banner:not([hidden]) ~ .app .toast-region {
+      top: calc(42px + var(--safe-top));
+    }
+
+    .toast {
+      margin-bottom: 8px;
+      padding: 13px 14px;
+      border: 1px solid color-mix(in srgb, var(--accent) 32%, var(--line));
+      border-radius: 16px;
+      background: color-mix(in srgb, var(--surface) 96%, transparent);
+      box-shadow: var(--shadow-md);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+      pointer-events: auto;
+      animation: toastIn .24s ease-out both;
+    }
+
+    .toast.lead {
+      border-color: rgba(var(--accent-rgb),.42);
+      box-shadow:
+        var(--shadow-md),
+        0 0 0 1px rgba(var(--accent-rgb),.07);
+    }
+
+    .toast-title {
+      margin: 0 0 2px;
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .toast-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .error-box {
+      padding: 14px;
+      border: 1px solid color-mix(in srgb, var(--danger) 32%, var(--line));
+      border-radius: var(--radius);
+      background: color-mix(in srgb, var(--danger) 7%, var(--surface));
+      color: var(--text);
+    }
+
+    .error-box strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .error-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes shimmer {
+      from { background-position: 100% 0; }
+      to { background-position: -100% 0; }
+    }
+
+    @keyframes newLeadPulse {
+      0% {
+        transform: scale(.985);
+        box-shadow:
+          0 0 0 0 rgba(var(--accent-rgb),.28),
+          inset 4px 0 0 var(--accent);
+      }
+      35% {
+        transform: scale(1);
+        box-shadow:
+          0 0 0 8px rgba(var(--accent-rgb),0),
+          0 10px 28px rgba(var(--accent-rgb),.14),
+          inset 4px 0 0 var(--accent);
+      }
+      100% {
+        box-shadow:
+          0 8px 25px rgba(var(--accent-rgb),.11),
+          inset 4px 0 0 var(--accent);
+      }
+    }
+
+    @keyframes toastIn {
+      from {
+        opacity: 0;
+        transform: translateY(-8px) scale(.985);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (min-width: 561px) {
+      body {
+        padding: 0 max(0px, calc((100vw - 560px) / 2));
+      }
+
+      .app {
+        border-inline: 1px solid var(--line);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+      }
+    }
+  
+    /* WSS brand strip (brand hexes from packages/wss-brand-system: ink
+       #131318/#08080B, blue #4A6CF7, violet #8B5CF6, green #34D399). */
+    .wss-brand-bar { background: linear-gradient(90deg, #131318, #08080B); color: #F2F2F5; }
+    .wss-brand-bar-inner { max-width: 1080px; margin: 0 auto; padding: 8px 20px; display: flex; align-items: center; gap: 10px; min-height: 42px; }
+    .wss-brand-mark { width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; display: block; }
+    .wss-brand-word { font: 700 12.5px/1 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; letter-spacing: .18em; text-transform: uppercase; color: #F2F2F5; white-space: nowrap; }
+    .wss-brand-tag { margin-left: auto; display: inline-flex; align-items: center; gap: 7px; font: 600 10.5px/1.4 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; color: #34D399; white-space: nowrap; }
+    .wss-brand-tag:before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #34D399; box-shadow: 0 0 8px rgba(52, 211, 153, .55); }
+    .wss-brand-shelf { height: 3px; background: linear-gradient(90deg, #4A6CF7 0%, #7C6CF6 55%, #34D399 100%); }
+    @media (max-width: 600px) {
+      .wss-brand-bar-inner { padding: 7px 14px; gap: 8px; }
+      .wss-brand-tag span { display: none; }
+    }
+</style>
+</head>
+
+<body>
+  <div id="sampleBanner" class="sample-banner" hidden>SAMPLE DATA</div>
+
+  <!-- WSS brand strip: the same ink bar + gradient shelf the customer
+       dashboard and the emails carry, so Connect reads as the same company
+       that sent the emails and runs the dashboard. -->
+  <div class="wss-brand-bar">
+    <div class="wss-brand-bar-inner">
+      <svg class="wss-brand-mark" viewBox="0 0 64 64" role="img" aria-label="WSS Labs"><defs><linearGradient id="wssConnectBarG" x1="12" y1="32" x2="50" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4A6CF7"></stop><stop offset="1" stop-color="#8B5CF6"></stop></linearGradient></defs><rect width="64" height="64" rx="15" fill="#131318"></rect><rect x="0.5" y="0.5" width="63" height="63" rx="14.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"></rect><path d="M12 24 L21 42 L30 26 L39 42 L50 20" fill="none" stroke="url(#wssConnectBarG)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="50" cy="20" r="7" fill="#34D399" opacity="0.22"></circle><circle cx="50" cy="20" r="4" fill="#34D399"></circle></svg>
+      <span class="wss-brand-word">WSS Labs</span>
+      <span class="wss-brand-tag"><span>American AI web studio &#127482;&#127480;</span></span>
+    </div>
+    <div class="wss-brand-shelf" role="presentation"></div>
+  </div>
+
+  <main id="app" class="app">
+    <div id="toastRegion"
+         class="toast-region"
+         role="status"
+         aria-live="polite"
+         aria-atomic="true"></div>
+
+    <!-- INBOX -->
+    <section id="inboxView"
+             class="view"
+             data-view="inbox"
+             aria-labelledby="inboxTitle">
+
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand-lockup">
+            <div id="businessMark" class="brand-mark" aria-hidden="true"></div>
+            <div class="brand-copy">
+              <p class="eyebrow">WSS Connect</p>
+              <h1 id="inboxTitle" class="brand-title business-name">Your leads</h1>
+            </div>
+          </div>
+
+          <button id="refreshButton"
+                  class="icon-button"
+                  type="button"
+                  aria-label="Refresh leads">
+            <span id="refreshIcon" class="refresh-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="heartbeat" aria-labelledby="heartbeatTitle">
+          <div class="heartbeat-top">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span>YOUR WEBSITE IS LIVE</span>
+          </div>
+          <h2 id="heartbeatTitle" class="heartbeat-copy">Checking for leads…</h2>
+          <p id="heartbeatSub" class="heartbeat-sub">
+            New website calls, forms and chats show up here.
+          </p>
+        </section>
+
+        <div class="section-row">
+          <h2 class="section-title">Leads</h2>
+          <span id="conversationCount" class="section-meta"></span>
+        </div>
+
+        <div id="inboxLoading" class="skeleton-list" aria-label="Loading leads">
+          <div class="skeleton-card">
+            <div class="skeleton-line w1"></div>
+            <div class="skeleton-line w2"></div>
+            <div class="skeleton-line w3"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-line w1"></div>
+            <div class="skeleton-line w2"></div>
+            <div class="skeleton-line w3"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-line w1"></div>
+            <div class="skeleton-line w2"></div>
+            <div class="skeleton-line w3"></div>
+          </div>
+        </div>
+
+        <div id="inboxError" hidden></div>
+
+        <div id="conversationList"
+             class="conversation-list"
+             role="list"
+             aria-label="Lead conversations"></div>
+
+        <section id="inboxEmpty" class="empty-state" hidden>
+          <div id="emptyInboxIcon" class="empty-icon" aria-hidden="true"></div>
+          <h2 class="empty-title">No leads yet</h2>
+          <p class="empty-copy">
+            New website calls, forms and chats will appear here automatically.
+            You do not need to keep this screen open.
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <!-- THREAD -->
+    <section id="threadView"
+             class="view thread-view"
+             data-view="thread"
+             aria-labelledby="threadName"
+             hidden>
+
+      <header class="thread-topbar">
+        <div class="thread-head">
+          <button id="threadBack"
+                  class="back-button"
+                  type="button"
+                  aria-label="Back to all messages">
+            <span id="backIcon" aria-hidden="true"></span>
+          </button>
+
+          <div class="thread-person">
+            <h1 id="threadName" class="thread-name">Lead</h1>
+            <p id="threadContext" class="thread-context"></p>
+          </div>
+
+          <a id="threadCall"
+             class="call-button thread-call"
+             href="#"
+             aria-label="Call lead"
+             hidden>
+            <span id="threadCallIcon" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <button id="backAllMessages"
+                class="back-all"
+                type="button">
+          Back to all messages
+        </button>
+      </header>
+
+      <div id="messages"
+           class="messages"
+           role="log"
+           aria-live="polite"
+           aria-label="Conversation messages"></div>
+
+      <div class="composer-shell">
+        <form id="replyForm" class="composer" novalidate>
+          <label class="sr-only" for="replyInput">Reply</label>
+          <textarea id="replyInput"
+                    rows="1"
+                    maxlength="2000"
+                    placeholder="Type a reply…"
+                    enterkeyhint="send"
+                    aria-describedby="composerStatus"></textarea>
+
+          <button id="sendButton"
+                  class="send-button"
+                  type="submit"
+                  aria-label="Send reply">
+            <span id="sendIcon" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <div id="composerStatus"
+             class="composer-status"
+             role="status"
+             aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- CONNECTIONS -->
+    <section id="connectionsView"
+             class="view"
+             data-view="connections"
+             aria-labelledby="connectionsTitle"
+             hidden>
+
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand-lockup">
+            <div class="brand-copy">
+              <p class="eyebrow">WSS Connect</p>
+              <h1 id="connectionsTitle" class="screen-title">Connections</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="screen-intro">
+          <h2>Keep everything together.</h2>
+          <p>
+            Connect the accounts your business uses so lead activity can stay
+            in one simple place.
+          </p>
+        </div>
+
+        <section class="panel">
+          <h2 class="panel-title">Manage Connections</h2>
+          <p class="panel-copy">
+            Your backend controls which connection types are available and
+            handles the secure sign-in flow.
+          </p>
+
+          <div id="connectionList"
+               class="connection-list"
+               aria-live="polite"></div>
+        </section>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settingsView"
+             class="view"
+             data-view="settings"
+             aria-labelledby="settingsTitle"
+             hidden>
+
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand-lockup">
+            <div class="brand-copy">
+              <p class="eyebrow">WSS Connect</p>
+              <h1 id="settingsTitle" class="screen-title">Settings</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="screen-intro">
+          <h2>Keep it simple.</h2>
+          <p>
+            Control how you sign in and how WSS Connect tells you about new leads.
+          </p>
+        </div>
+
+        <div class="settings-stack">
+          <section class="panel">
+            <div class="setting-copy">
+              <h3>Your Client ID</h3>
+              <p>
+                This code identifies your business and is how WSS Connect signs
+                you in.
+              </p>
+            </div>
+
+            <div class="code-box">
+              <label class="code-label" for="clientCode">Client ID</label>
+
+              <div class="code-input-row">
+                <input id="clientCode"
+                       class="code-input"
+                       type="password"
+                       autocomplete="off"
+                       autocapitalize="characters"
+                       spellcheck="false"
+                       placeholder="Enter Client ID">
+
+                <button id="saveClientCode"
+                        class="save-code"
+                        type="button">
+                  Save
+                </button>
+              </div>
+
+              <button id="toggleClientCode"
+                      class="show-code"
+                      type="button"
+                      aria-controls="clientCode"
+                      aria-pressed="false">
+                Show code
+              </button>
+
+              <div id="clientCodeStatus"
+                   class="setting-status"
+                   role="status"
+                   aria-live="polite"></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="setting-row">
+              <div class="setting-copy">
+                <h3>New lead alerts</h3>
+                <p>Get a push notification when a new lead needs you.</p>
+              </div>
+
+              <label class="switch">
+                <span class="sr-only">Enable new lead push notifications</span>
+                <input id="pushToggle" type="checkbox">
+                <span class="switch-track" aria-hidden="true"></span>
+              </label>
+            </div>
+
+            <div id="pushStatus"
+                 class="setting-status"
+                 role="status"
+                 aria-live="polite"></div>
+          </section>
+
+          <section id="installPanel" class="panel install-card">
+            <div class="setting-copy">
+              <h3>Put WSS Connect on your phone</h3>
+              <p>Open leads like a normal app from your home screen.</p>
+            </div>
+
+            <button id="installButton"
+                    class="install-button"
+                    type="button">
+              Install
+            </button>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM NAV -->
+    <nav id="bottomNav"
+         class="bottom-nav"
+         aria-label="Main navigation">
+
+      <button class="nav-button active"
+              type="button"
+              data-nav="inbox"
+              aria-current="page">
+        <span id="navInboxIcon" aria-hidden="true"></span>
+        <span>Leads</span>
+        <span id="navUnreadCount" class="nav-count" hidden></span>
+      </button>
+
+      <button class="nav-button"
+              type="button"
+              data-nav="connections">
+        <span id="navConnectionsIcon" aria-hidden="true"></span>
+        <span>Connections</span>
+      </button>
+
+      <button class="nav-button"
+              type="button"
+              data-nav="settings">
+        <span id="navSettingsIcon" aria-hidden="true"></span>
+        <span>Settings</span>
+      </button>
+    </nav>
+  </main>
+
+  <script>
+  (function () {
+    "use strict";
+
+    /*
+     * WSS CONNECT REAL ADAPTER — the weld between the v2 UI below and the
+     * ghost-agency backend.
+     *
+     * The UI script that follows talks to business data ONLY through
+     * window.CONNECT_DATA, and its install guard keeps whatever adapter is
+     * already in place. This script therefore runs first, in document order,
+     * and installs the real one. Everything the old single-file app knew
+     * about the backend — the API base, the token key, the PIN cipher, the
+     * Web Push dance, the magic-link hash contract — lives here now, so the
+     * UI can stay a pure presentation layer.
+     *
+     * Wire truth this adapter translates (none of it is 1:1):
+     *   GET  /threads          -> { ok, threads[] }   object, NOT an array;
+     *                             rows carry contact_name/first_line/
+     *                             needs_reply/last_message_at, and channels
+     *                             chat|sms|email|voicemail|call|system.
+     *   GET  /messages?thread= -> { ok, messages[] } with body / "inbound" /
+     *                             "outbound" / created_at — the v2 contract
+     *                             wants text / "in" / "out" / createdAt.
+     *   POST /send             -> takes { threadId, body, clientMessageId };
+     *                             a UUID clientMessageId opts into the
+     *                             server-side idempotency machinery, so a
+     *                             retried tap can never double-email a lead.
+     *   GET+POST /push-subscribe -> GET names the VAPID key, the browser
+     *                             mints the subscription, POST stores it —
+     *                             and only a tenant-scoped token may bind a
+     *                             device.
+     */
+
+    /*
+     * ?demo=1 is the UI's own sample mode. Installing the real adapter would
+     * shadow it and turn the demo into a login wall, so the demo keeps the
+     * built-in sample data by our absence.
+     */
+    if (new URLSearchParams(location.search).get("demo") === "1") return;
+
+    var API = "https://ghost-agency-backend.vercel.app/api/connect";
+    var TOKEN_KEY = "wss_connect_token";
+    var NEED_CODE = "Enter your Client ID under Settings to see your leads.";
+
+    /*
+     * The token lives under the SAME localStorage key the previous app used,
+     * so every phone that is already signed in stays signed in across this
+     * redesign. Changing this key would silently log out every customer.
+     */
+    var state = { token: localStorage.getItem(TOKEN_KEY) || "" };
+    var pendingThreadId = "";
+    var lastConversations = [];
+
+    // --- Magic-link + PIN unlock (ported intact from the shipped v1 app) ---
+    // A customer's welcome email carries a 6-digit PIN. The PIN is a local
+    // XOR keystream over this baked-in cipher — the token never travels in
+    // the email, and a wrong PIN fails the sha256 check instead of producing
+    // garbage credentials. Existing printed/emailed PINs keep working only
+    // because these two constants survive verbatim.
+    var PIN_CIPHER = "543484b0e3b719911cda580d12100b4849f71351630fbec70199ba6bda5df9377f0f7edc1339f7dc0eb49c14e971e250"; // token XOR keystream(PIN)
+    var PIN_VERIFY = "2e6ad7e4c7d594ab1d057fdd6a7df80895238b037eee2ee12659df6df4b2f0b8"; // sha256(token)
+    function hexToBytes(h) { var a = new Uint8Array(h.length / 2); for (var i = 0; i < a.length; i++) a[i] = parseInt(h.substr(i * 2, 2), 16); return a; }
+    function bytesToHex(b) { var s = ""; for (var i = 0; i < b.length; i++) s += ("0" + b[i].toString(16)).slice(-2); return s; }
+    async function sha256Bytes(bytes) { var d = await crypto.subtle.digest("SHA-256", bytes); return new Uint8Array(d); }
+    async function keystream(pin, n) {
+      var out = [], block = 0, enc = new TextEncoder();
+      while (out.length < n) { var h = await sha256Bytes(enc.encode(pin + ":" + block)); for (var i = 0; i < h.length; i++) out.push(h[i]); block++; }
+      return new Uint8Array(out.slice(0, n));
+    }
+    async function tokenFromPin(pin) {
+      var cipher = hexToBytes(PIN_CIPHER), ks = await keystream(pin, cipher.length), dec = new Uint8Array(cipher.length);
+      for (var i = 0; i < cipher.length; i++) dec[i] = cipher[i] ^ ks[i];
+      var check = bytesToHex(await sha256Bytes(dec));
+      if (check !== PIN_VERIFY) return null;
+      return new TextDecoder().decode(dec);
+    }
+
+    function cleanCode(s) { return String(s || "").replace(/\s+/g, "").trim(); }
+
+    /*
+     * Error text the composer/status lines will show a business owner, so the
+     * words stay plain and honest — a 401 is "sign in again", never "http 401",
+     * and an ambiguous send is never dressed up as a failure OR a success.
+     */
+    function friendlyError(status, data) {
+      var code = String((data && data.error) || "");
+      if (status === 401) return "Your Client ID stopped working on this device. Open Settings and enter it again.";
+      if (code === "message_in_progress") return "That reply is already sending — give it a few seconds.";
+      if (code === "client_message_conflict") return "A different reply already used this attempt. Write it again and resend.";
+      if (code === "delivery_unknown") return "We can't confirm whether this reply went out. Check the thread before resending.";
+      if (code === "tenant_scope_required") return "Push alerts need your personal Client ID, not the shared code.";
+      if (status === 404) return "That conversation isn't in your inbox any more.";
+      if (status === 429) return "Too many tries — wait a minute and try again.";
+      return code || ("The server answered " + status + ". Try again.");
+    }
+
+    function api(path, opts) {
+      opts = opts || {};
+      var headers = { "Content-Type": "application/json" };
+      /*
+       * dashboard-login's CORS allowlist admits only Content-Type; naming
+       * x-connect-token there would fail the preflight before the PIN is
+       * even judged. Every other Connect route requires it.
+       */
+      if (!opts.noAuth) headers["x-connect-token"] = opts.token == null ? state.token : opts.token;
+      return fetch(API + path, {
+        method: opts.method || "GET",
+        headers: headers,
+        body: opts.body
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (data) {
+          if (!r.ok) {
+            var err = new Error(friendlyError(r.status, data));
+            err.status = r.status; err.code = String((data && data.error) || "");
+            throw err;
+          }
+          return data;
+        });
+      });
+    }
+
+    function newClientMessageId() {
+      if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") return crypto.randomUUID();
+      if (typeof crypto === "undefined" || typeof crypto.getRandomValues !== "function") return "";
+      var bytes = new Uint8Array(16);
+      crypto.getRandomValues(bytes);
+      bytes[6] = (bytes[6] & 15) | 64; bytes[8] = (bytes[8] & 63) | 128;
+      var hex = Array.prototype.map.call(bytes, function (value) { return ("0" + value.toString(16)).slice(-2); }).join("");
+      return hex.slice(0, 8) + "-" + hex.slice(8, 12) + "-" + hex.slice(12, 16) + "-" + hex.slice(16, 20) + "-" + hex.slice(20);
+    }
+
+    // --- Wire-shape translation -------------------------------------------
+
+    /*
+     * Backend channels are chat|sms|email|voicemail|call|system; the UI knows
+     * chat|missed_call|form. A call and a voicemail are, to the owner, the
+     * same event — "someone tried to reach you and didn't" — so both become
+     * missed_call. Unknown channels fall through untouched: the UI already
+     * labels anything unrecognized "Website lead" instead of lying about it.
+     */
+    function v2Channel(channel) {
+      var c = String(channel || "").toLowerCase();
+      if (c === "call" || c === "voicemail") return "missed_call";
+      return c;
+    }
+
+    function conversationFromThread(row) {
+      row = row || {};
+      return {
+        id: row.id,
+        name: row.contact_name || "",
+        phone: row.contact_phone || "",
+        channel: v2Channel(row.channel),
+        // first_line is "what they asked for" — only tenant-scoped rows carry
+        // it, so the subject is the honest fallback for the operator scope.
+        preview: row.first_line || row.subject || "",
+        unread: row.unread === true || Number(row.unread) > 0,
+        // needs_reply drives the NEW badge honestly: a lead the owner already
+        // answered is not "new" no matter how recently it wrote back.
+        isNew: row.needs_reply === true,
+        updatedAt: row.last_message_at || row.created_at || ""
+      };
+    }
+
+    /*
+     * An outbound message is only ever labeled with what the backend proved:
+     * delivery_unknown is a human-check state, never "Sent" — the same words
+     * the previous app used for the same reservation states.
+     */
+    function messageStatus(m) {
+      var delivery = m && m.meta && m.meta.delivery;
+      var status = String((delivery && delivery.status) || "");
+      if (status === "delivery_unknown" || (delivery && delivery.manual === true)) return "Not confirmed";
+      if (status === "pending") return "Sending…";
+      return "Sent";
+    }
+
+    function v2Message(m) {
+      m = m || {};
+      var out = m.direction === "outbound";
+      var mapped = {
+        id: m.id,
+        text: m.body || "",
+        direction: out ? "out" : "in",
+        createdAt: m.created_at || ""
+      };
+      if (out) mapped.status = messageStatus(m);
+      return mapped;
+    }
+
+    // Same sort renderInbox uses; replicated so the deep-link opener can turn
+    // a thread id into "the nth row on screen" without touching UI internals.
+    function parseTime(value) {
+      if (value instanceof Date) return value.getTime();
+      if (typeof value === "number") return value;
+      var time = Date.parse(value);
+      return isFinite(time) ? time : 0;
+    }
+
+    // --- App badge (parity with v1's home-screen unread count) ------------
+    function syncAppBadge(conversations) {
+      try {
+        var unread = 0;
+        for (var i = 0; i < conversations.length; i++) if (conversations[i].unread) unread++;
+        if (unread > 0 && typeof navigator.setAppBadge === "function") navigator.setAppBadge(unread);
+        else if (typeof navigator.clearAppBadge === "function") navigator.clearAppBadge();
+      } catch (e) { /* Badging is progressive enhancement, never a requirement. */ }
+    }
+
+    // --- Auth --------------------------------------------------------------
+
+    /*
+     * Turning off this device's push subscription when the signed-in tenant
+     * changes is not housekeeping: without it, business A's phone keeps
+     * receiving business B-era pushes minted while A was signed in. The
+     * previous app cleared device state on every token swap for exactly this
+     * reason.
+     */
+    async function detachDevicePush() {
+      try {
+        if (!("serviceWorker" in navigator)) return;
+        var reg = await navigator.serviceWorker.getRegistration();
+        var sub = reg && await reg.pushManager.getSubscription();
+        if (sub) await sub.unsubscribe();
+      } catch (e) { /* A device with no subscription has nothing to detach. */ }
+    }
+
+    /*
+     * A token is adopted only after the backend accepts it on the same door
+     * the inbox uses. Persisting an unverified code would strand the owner in
+     * a "saved!" state that can never load anything.
+     */
+    async function adoptToken(candidate) {
+      if (!candidate) return false;
+      try { await api("/threads", { token: candidate }); } catch (e) { return false; }
+      if (state.token && state.token !== candidate) await detachDevicePush();
+      state.token = candidate;
+      try { localStorage.setItem(TOKEN_KEY, candidate); } catch (e) {}
+      return true;
+    }
+
+    /*
+     * One Settings field, three credential shapes:
+     *   1. "you@business.com 123456"  -> the real per-customer login
+     *      (POST /dashboard-login), which answers with a tenant-scoped token;
+     *   2. a bare 6-digit PIN         -> the legacy local cipher unlock;
+     *   3. anything else              -> a raw shared or scoped token.
+     * All three end in adoptToken, so nothing is saved that cannot read the
+     * inbox.
+     */
+    async function setClientCode(code) {
+      var raw = String(code == null ? "" : code).trim();
+      if (!raw) throw new Error("Enter your Client ID first.");
+
+      if (raw.indexOf("@") > 0) {
+        var pair = raw.match(/^(\S+@\S+?)[\s:,]+([0-9]{4,8})$/);
+        if (!pair) throw new Error("Use your email, a space, then your PIN — like you@business.com 123456.");
+        var login;
+        try {
+          login = await api("/dashboard-login", { method: "POST", noAuth: true, body: JSON.stringify({ email: pair[1].toLowerCase(), pin: pair[2] }) });
+        } catch (err) {
+          if (err && err.code === "account_lookup_unavailable") throw new Error("We couldn't reach your account just now — that's us, not your PIN. Try again in a moment.");
+          if (err && err.status === 429) throw new Error("Too many tries — wait a minute and try again.");
+          throw new Error("That email and PIN didn't match. Check your welcome email and try again.");
+        }
+        if (!login || !login.token) throw new Error("That login doesn't unlock a business inbox yet. Reply to your welcome email and we'll fix it.");
+        if (!(await adoptToken(login.token))) throw new Error("Signed in, but the inbox refused the pass. Try again in a moment.");
+        return { ok: true };
+      }
+
+      var candidate = cleanCode(raw);
+      if (/^[0-9]{6}$/.test(candidate)) {
+        var mapped = await tokenFromPin(candidate);
+        if (mapped && await adoptToken(mapped)) return { ok: true };
+        throw new Error("That code didn't work. Check your welcome email and try again — it's okay if you make a mistake!");
+      }
+      if (await adoptToken(candidate)) return { ok: true };
+      throw new Error("That code didn't work. Check your welcome email and try again — it's okay if you make a mistake!");
+    }
+
+    /*
+     * Boot-time hash contract, unchanged from v1 because the outside world
+     * still speaks it: the service worker deep-links "/#thread=<id>" from a
+     * push tap, and every magic link ever emailed carries "#t=<token>" or
+     * "#pin=<6 digits>". The UI below never reads location.hash, so this is
+     * the only place those doors stay open. authReady gates every
+     * authenticated call, so the UI's first load waits for a magic link to
+     * finish unlocking instead of racing it with the stale (or absent) token.
+     */
+    var resolveAuthReady;
+    var authReady = new Promise(function (resolve) { resolveAuthReady = resolve; });
+
+    function threadIdParam(value) {
+      var text = String(value == null ? "" : value).trim();
+      return /^[A-Za-z0-9][A-Za-z0-9._:-]{0,119}$/.test(text) ? text : "";
+    }
+
+    function parseHashParams(hash) {
+      var params = {};
+      String(hash || "").replace(/^#/, "").split("&").forEach(function (kv) {
+        var p = kv.split("=");
+        if (p[0]) params[p[0]] = decodeURIComponent(p[1] || "");
+      });
+      return params;
+    }
+
+    (function bootAuth() {
+      var params = parseHashParams(location.hash);
+      function clearHash() { try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} }
+
+      var thread = threadIdParam(params.thread);
+      if (thread) {
+        pendingThreadId = thread;
+        if (!params.t && !params.pin) clearHash();
+      }
+
+      var work = Promise.resolve(false);
+      if (params.t) {
+        work = adoptToken(cleanCode(params.t)).then(function (ok) { clearHash(); return ok; });
+      } else if (params.pin && /^[0-9]{6}$/.test(params.pin)) {
+        work = tokenFromPin(params.pin).then(function (mapped) {
+          clearHash();
+          return mapped ? adoptToken(mapped) : false;
+        });
+      }
+      // An expired link falls back to whatever token this device already
+      // held; with none, the inbox shows the honest enter-your-Client-ID
+      // message instead of a spinner that never ends.
+      work.catch(function () { return false; }).then(function () { resolveAuthReady(); });
+    })();
+
+    /*
+     * A push tap on an already-open window navigates the fragment; catch it
+     * and reuse the same pending-thread path, then ring the UI's own quiet
+     * refresh doorbell so the (possibly new) thread is in the list.
+     */
+    window.addEventListener("hashchange", function () {
+      var params = parseHashParams(location.hash);
+      var thread = threadIdParam(params.thread);
+      if (!thread) return;
+      pendingThreadId = thread;
+      try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+      openPendingThread(0);
+      try { document.dispatchEvent(new Event("visibilitychange")); } catch (e) {}
+    });
+
+    /*
+     * Deep-link opener. The UI exposes no openThread(); its only public door
+     * is the rendered row itself. renderInbox sorts by updatedAt descending,
+     * so replaying that exact sort maps a thread id onto "the nth
+     * .conversation-main button" and one synthetic click walks the UI's own
+     * code path — loading state, unread clearing and all.
+     */
+    function openPendingThread(attempt) {
+      if (!pendingThreadId) return;
+      var list = document.getElementById("conversationList");
+      var sorted = lastConversations.slice().sort(function (a, b) { return parseTime(b.updatedAt) - parseTime(a.updatedAt); });
+      var index = -1;
+      for (var i = 0; i < sorted.length; i++) {
+        if (String(sorted[i].id) === String(pendingThreadId)) { index = i; break; }
+      }
+      if (index >= 0 && list) {
+        var buttons = list.querySelectorAll(".conversation-main");
+        if (buttons && buttons.length > index) {
+          pendingThreadId = "";
+          buttons[index].click();
+          return;
+        }
+      }
+      // The row may simply not be painted yet (we resolve before the UI
+      // renders). Retry briefly; a thread that never appears is not ours to
+      // invent, so the pending id survives for the next refresh instead.
+      if ((attempt || 0) < 10) setTimeout(function () { openPendingThread((attempt || 0) + 1); }, 150);
+    }
+
+    /*
+     * The v1 app polled every 20 seconds; the v2 UI only refreshes on focus
+     * and navigation. Its visibilitychange handler already implements "quietly
+     * reload the inbox if the person is actually looking at it" — so the poll
+     * does not reach into the UI, it just rings that same doorbell on a
+     * timer. Offline, we stay silent rather than queue up failures.
+     */
+    setInterval(function () {
+      if (!state.token) return;
+      if (typeof navigator !== "undefined" && navigator.onLine === false) return;
+      try { document.dispatchEvent(new Event("visibilitychange")); } catch (e) {}
+    }, 20000);
+
+    /*
+     * Cross-tab truth: signing in (or out) in one tab updates every tab. The
+     * storage event only fires in OTHER tabs, so this never loops. On a
+     * removal the next authenticated call fails with the honest
+     * enter-your-Client-ID message — the v2 page has no login screen to
+     * return to, and pretending the old tenant is still signed in would be
+     * worse.
+     */
+    window.addEventListener("storage", function (event) {
+      if (event.key !== TOKEN_KEY) return;
+      var next = String(event.newValue || "");
+      if (next === state.token) return;
+      state.token = next;
+      try { document.dispatchEvent(new Event("visibilitychange")); } catch (e) {}
+    });
+
+    // --- Push --------------------------------------------------------------
+
+    function vapidKeyBytes(value) {
+      var text = String(value || "").trim();
+      var padding = "=".repeat((4 - text.length % 4) % 4);
+      var raw = atob((text + padding).replace(/-/g, "+").replace(/_/g, "/"));
+      var out = new Uint8Array(raw.length);
+      for (var i = 0; i < raw.length; i++) out[i] = raw.charCodeAt(i);
+      return out;
+    }
+
+    /*
+     * registerPush(enabled) is a toggle in the UI's contract, but enabling is
+     * a four-step dance and every step can honestly refuse:
+     *   1. GET /push-subscribe — the server names the VAPID key AND proves the
+     *      token is tenant-scoped (the shared operator code may never bind a
+     *      customer device);
+     *   2. Notification permission — requested HERE and nowhere else, so the
+     *      prompt only ever appears downstream of the person's own toggle tap;
+     *   3. pushManager.subscribe with that key — the browser mints the
+     *      subscription;
+     *   4. POST it back, where the signed token (never the request body)
+     *      chooses which tenant stores it.
+     */
+    async function registerPush(enabled) {
+      await authReady;
+      if (!state.token) throw new Error(NEED_CODE);
+
+      if (enabled === false) {
+        // Off is device-local: dropping the browser subscription kills
+        // delivery to this phone; the server prunes the dead endpoint on its
+        // next 410. No server round-trip can fail the owner's "off".
+        await detachDevicePush();
+        return { enabled: false };
+      }
+
+      if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window)) {
+        throw new Error("This browser can't receive push alerts. On iPhone, add WSS Connect to your Home Screen first.");
+      }
+
+      var config = await api("/push-subscribe");
+      if (!config || config.scope !== "tenant") throw new Error("Push alerts need your personal Client ID, not the shared code.");
+      if (!config.publicKey) throw new Error("Notifications aren't set up on the server yet. Try again later.");
+
+      var answer = Notification.permission === "default" ? await Notification.requestPermission() : Notification.permission;
+      if (answer !== "granted") return { enabled: false };
+
+      var reg = await navigator.serviceWorker.ready;
+      var sub = await reg.pushManager.getSubscription();
+      if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: vapidKeyBytes(config.publicKey) });
+      var payload = sub && typeof sub.toJSON === "function" ? sub.toJSON() : sub;
+      await api("/push-subscribe", { method: "POST", body: JSON.stringify({ subscription: payload }) });
+      return { enabled: true };
+    }
+
+    /*
+     * The toggle's initial position reports THIS device's truth — granted
+     * permission plus a live subscription — not a server-side wish.
+     */
+    async function getPushState() {
+      try {
+        if (!("Notification" in window) || Notification.permission !== "granted") return false;
+        if (!("serviceWorker" in navigator)) return false;
+        var reg = await navigator.serviceWorker.getRegistration();
+        var sub = reg && await reg.pushManager.getSubscription();
+        return Boolean(sub);
+      } catch (e) { return false; }
+    }
+
+    // --- Connections -------------------------------------------------------
+
+    /*
+     * The OAuth connectors are single-tenant today: the backend's connector
+     * rows are keyed by this fixed slug because the shared Connect app has no
+     * per-site identity in its token (see the same note in the previous app).
+     * When Connect goes properly multi-tenant, derive this from the scoped
+     * token server-side instead.
+     */
+    var CONNECT_SITE_SLUG = "wss-connect";
+
+    var CONNECTABLE = [
+      { key: "facebook", channel: "facebook_messenger", label: "Facebook Messenger", oauth: "meta", platform: "facebook" },
+      { key: "instagram", channel: "instagram_dm", label: "Instagram", oauth: "meta", platform: "instagram" },
+      { key: "linkedin", channel: "linkedin_dm", label: "LinkedIn", oauth: "linkedin" },
+      { key: "twitter", channel: "x_dm", label: "X (Twitter)", oauth: "twitter" },
+      { key: "tiktok", channel: "tiktok_dm", label: "TikTok", oauth: "tiktok" },
+      { key: "google", channel: "google_calendar", label: "Google Calendar" }
+    ];
+
+    function findConnectable(key) {
+      for (var i = 0; i < CONNECTABLE.length; i++) if (CONNECTABLE[i].key === key) return CONNECTABLE[i];
+      return null;
+    }
+
+    function mergedConnectorStatus(status) {
+      // The status route answers with channels at the top level AND under
+      // .connectors; merge so either shape (and future ones) reads the same.
+      return Object.assign({}, status || {}, (status && status.connectors) || {});
+    }
+
+    /*
+     * Calendar reads ONLY status.connectors.google_calendar. The status route
+     * places it there exactly when the calendar service is enabled; a legacy
+     * or injected top-level google_calendar value must never conjure a
+     * Connect button for a service the server did not advertise.
+     */
+    function calendarFromStatus(status) {
+      var cal = status && status.connectors && status.connectors.google_calendar;
+      if (!cal || cal.available === false) return null;
+      return cal;
+    }
+
+    async function listConnections() {
+      await authReady;
+      if (!state.token) return [];
+      var status = await api("/connectors/status");
+      var byChannel = mergedConnectorStatus(status);
+      return CONNECTABLE.filter(function (ch) {
+        if (ch.channel !== "google_calendar") return true;
+        return Boolean(calendarFromStatus(status));
+      }).map(function (ch) {
+        var entry = ch.channel === "google_calendar" ? calendarFromStatus(status) : byChannel[ch.channel];
+        var connected = Boolean(entry && entry.connected);
+        return {
+          key: ch.key,
+          label: ch.label,
+          connected: connected,
+          detail: connected ? (entry && entry.accountName ? String(entry.accountName) : "Connected") : "Not connected"
+        };
+      });
+    }
+
+    /*
+     * Only Google's own HTTPS consent host may enter the calendar popup — a
+     * compromised or confused server response must not be able to navigate
+     * the owner's popup anywhere else.
+     */
+    function safeGoogleAuthorizationUrl(value) {
+      try {
+        var parsed = new URL(String(value || ""));
+        return parsed.protocol === "https:" && parsed.hostname === "accounts.google.com" ? parsed.href : "";
+      } catch (e) { return ""; }
+    }
+
+    /*
+     * The callback routes redirect the popup itself back to this origin with
+     * "#connected=..." or "#connect_error=...". Poll for that hash (readable
+     * only once the popup returns to our origin) and treat a hand-closed
+     * popup as "ask the server what actually happened" rather than guessing
+     * either way.
+     */
+    function awaitOAuthPopup(popup, channel, label) {
+      return new Promise(function (resolve, reject) {
+        var poll = setInterval(function () {
+          var hash = "";
+          try { hash = popup.location.hash || ""; } catch (e) { /* cross-origin while on the provider's consent page — expected */ }
+          if (hash.indexOf("#connected=") === 0 || hash.indexOf("#connect_error=") === 0) {
+            clearInterval(poll);
+            try { popup.close(); } catch (e) {}
+            var params = parseHashParams(hash);
+            if (params.connected) resolve();
+            else reject(new Error(params.connect_error || ("Couldn't connect " + label + " — try again.")));
+            return;
+          }
+          if (popup.closed) {
+            clearInterval(poll);
+            api("/connectors/status").then(function (status) {
+              var entry = channel === "google_calendar" ? calendarFromStatus(status) : mergedConnectorStatus(status)[channel];
+              if (entry && entry.connected) resolve();
+              else reject(new Error("The connection window closed before " + label + " finished."));
+            }).catch(function () {
+              reject(new Error("The connection window closed before " + label + " finished."));
+            });
+          }
+        }, 700);
+      });
+    }
+
+    async function connectAccount(key) {
+      await authReady;
+      if (!state.token) throw new Error(NEED_CODE);
+      var ch = findConnectable(key);
+      if (!ch) throw new Error("That connection isn't available.");
+
+      if (ch.channel === "google_calendar") {
+        // The popup must open synchronously inside the tap's call stack or
+        // the popup blocker eats it; the authorize URL arrives async and is
+        // steered into the already-open window.
+        var popup = window.open("about:blank", "wss_connect_oauth", "width=560,height=680,menubar=no,toolbar=no,status=no");
+        if (!popup) throw new Error("Allow pop-ups to connect " + ch.label + ".");
+        var started;
+        try { started = await api("/calendar/start"); }
+        catch (err) { try { popup.close(); } catch (e) {} throw new Error("Google Calendar is not ready yet. Try again shortly."); }
+        var url = safeGoogleAuthorizationUrl(started && started.authorizationUrl);
+        if (!url) { try { popup.close(); } catch (e) {} throw new Error("Google Calendar is not ready yet. Try again shortly."); }
+        try { popup.location.replace(url); } catch (e) { popup.location.href = url; }
+        return awaitOAuthPopup(popup, ch.channel, ch.label);
+      }
+
+      var qs = ch.platform ? "&platform=" + encodeURIComponent(ch.platform) : "";
+      var startUrl = API + "/" + ch.oauth + "/start?site=" + encodeURIComponent(CONNECT_SITE_SLUG) + qs;
+      var social = window.open(startUrl, "wss_connect_oauth", "width=560,height=680,menubar=no,toolbar=no,status=no");
+      if (!social) throw new Error("Allow pop-ups to connect " + ch.label + ".");
+      return awaitOAuthPopup(social, ch.channel, ch.label);
+    }
+
+    async function disconnectAccount(key) {
+      await authReady;
+      if (!state.token) throw new Error(NEED_CODE);
+      var ch = findConnectable(key);
+      if (!ch) throw new Error("That connection isn't available.");
+      if (ch.channel === "google_calendar") {
+        await api("/calendar/disconnect", { method: "POST", body: JSON.stringify({}) });
+        return;
+      }
+      // The backend has no social-disconnect route (the previous app never
+      // offered one either) — refusing honestly beats a button that lies.
+      throw new Error("Disconnecting " + ch.label + " isn't available yet — ask WSS support and we'll remove it for you.");
+    }
+
+    // --- Presentation ------------------------------------------------------
+
+    /*
+     * /site knows the business by the tenant the token proves. No logoDataUri:
+     * the backend serves logo URLs, the UI only accepts data: URIs, and
+     * fetching + inlining third-party images is a follow-up, not a weld.
+     */
+    async function getBusiness() {
+      await authReady;
+      if (!state.token) return {};
+      try {
+        var data = await api("/site");
+        return {
+          name: String((data && data.businessName) || ""),
+          clientCode: String((data && data.clientId) || "")
+        };
+      } catch (e) { return {}; }
+    }
+
+    // --- The adapter -------------------------------------------------------
+
+    window.CONNECT_DATA = {
+      async listConversations() {
+        await authReady;
+        if (!state.token) throw new Error(NEED_CODE);
+        var data = await api("/threads");
+        var rows = data && Array.isArray(data.threads) ? data.threads : [];
+        var conversations = rows.map(conversationFromThread);
+        lastConversations = conversations;
+        syncAppBadge(conversations);
+        // The click has to wait for the UI to paint these rows; a macrotask
+        // runs after the awaiting renderer's microtask continuation.
+        if (pendingThreadId) setTimeout(function () { openPendingThread(0); }, 0);
+        return conversations;
+      },
+
+      async getThread(id) {
+        await authReady;
+        if (!state.token) throw new Error(NEED_CODE);
+        var data = await api("/messages?thread=" + encodeURIComponent(id));
+        var messages = data && Array.isArray(data.messages) ? data.messages : [];
+        return { id: id, messages: messages.map(v2Message) };
+      },
+
+      async sendReply(id, text) {
+        await authReady;
+        if (!state.token) throw new Error(NEED_CODE);
+        var payload = { threadId: Number(id), body: String(text == null ? "" : text) };
+        // Always ride the server's idempotency machinery when the browser
+        // can mint a UUID: a retried tap or flaky network can then never
+        // double-email a lead. Without one we fall to the legacy branch,
+        // which still delivers — it just cannot dedupe.
+        var clientMessageId = newClientMessageId();
+        if (clientMessageId) payload.clientMessageId = clientMessageId;
+        var data = await api("/send", { method: "POST", body: JSON.stringify(payload) });
+        var message = data && data.message;
+        if (message && typeof message === "object") {
+          return v2Message(Object.assign({ direction: "outbound" }, message));
+        }
+      },
+
+      setClientCode: setClientCode,
+      registerPush: registerPush,
+      getPushState: getPushState,
+      getBusiness: getBusiness,
+      listConnections: listConnections,
+      connectAccount: connectAccount,
+      disconnectAccount: disconnectAccount
+    };
+  })();
+  </script>
+
+  <script>
+  (() => {
+    "use strict";
+
+    /*
+     * WSS CONNECT DATA ADAPTER
+     * ========================
+     *
+     * Replace window.CONNECT_DATA with the real backend adapter.
+     * UI code below talks to backend/business data ONLY through this object.
+     *
+     * REQUIRED METHODS
+     *
+     * listConversations()
+     *   -> Promise<Array<Conversation>>
+     *
+     * getThread(id)
+     *   -> Promise<Thread>
+     *
+     * sendReply(id, text)
+     *   -> Promise<Message|void>
+     *
+     * registerPush(enabled = true)
+     *   -> Promise<boolean|{enabled:boolean}>
+     *
+     * setClientCode(code)
+     *   -> Promise<void|{ok:boolean}>
+     *
+     * OPTIONAL CONNECTION METHODS
+     * These preserve Manage Connections without coupling the UI to any
+     * provider-specific implementation.
+     *
+     * listConnections()
+     *   -> Promise<Array<Connection>>
+     *
+     * connectAccount(key)
+     *   -> Promise<void|Connection>
+     *
+     * disconnectAccount(key)
+     *   -> Promise<void|Connection>
+     *
+     * OPTIONAL PRESENTATION METHODS
+     *
+     * getBusiness()
+     *   -> Promise<{
+     *        name?: string,
+     *        logoDataUri?: string,
+     *        accent?: string,
+     *        clientCode?: string
+     *      }>
+     *
+     * getPushState()
+     *   -> Promise<boolean|{enabled:boolean}>
+     *
+     *
+     * Conversation:
+     * {
+     *   id: string|number,
+     *   name?: string,
+     *   phone?: string,
+     *   channel?: "chat"|"missed_call"|"form"|string,
+     *   preview?: string,
+     *   unread?: boolean,
+     *   isNew?: boolean,
+     *   updatedAt?: string|number|Date
+     * }
+     *
+     * Thread:
+     * {
+     *   id: string|number,
+     *   name?: string,
+     *   phone?: string,
+     *   channel?: string,
+     *   messages: Array<{
+     *     id?: string|number,
+     *     text: string,
+     *     direction?: "in"|"out",
+     *     createdAt?: string|number|Date,
+     *     status?: string
+     *   }>
+     * }
+     *
+     * Connection:
+     * {
+     *   key: string,
+     *   label: string,
+     *   connected: boolean,
+     *   detail?: string
+     * }
+     */
+
+    const IS_DEMO = new URLSearchParams(location.search).get("demo") === "1";
+
+    /*
+     * Demo data exists ONLY behind ?demo=1.
+     * It intentionally contains no fabricated business or customer names.
+     */
+    const DEMO_DATA = IS_DEMO ? {
+      business: {
+        name: "Sample business",
+        accent: "#1a73e8",
+        clientCode: "SAMPLE-001"
+      },
+
+      conversations: [
+        {
+          id: "demo-call",
+          name: "",
+          phone: "+15550101001",
+          channel: "missed_call",
+          preview: "Missed website call. Tap to call them back.",
+          unread: true,
+          isNew: true,
+          updatedAt: Date.now() - 4 * 60 * 1000
+        },
+        {
+          id: "demo-form",
+          name: "",
+          phone: "+15550101002",
+          channel: "form",
+          preview: "Sent a request through the website form.",
+          unread: true,
+          updatedAt: Date.now() - 31 * 60 * 1000
+        },
+        {
+          id: "demo-chat",
+          name: "",
+          phone: "",
+          channel: "chat",
+          preview: "Asked a question through website chat.",
+          unread: false,
+          updatedAt: Date.now() - 3 * 60 * 60 * 1000
+        }
+      ],
+
+      threads: {
+        "demo-call": {
+          id: "demo-call",
+          name: "",
+          phone: "+15550101001",
+          channel: "missed_call",
+          messages: [
+            {
+              id: "m1",
+              direction: "in",
+              text: "Missed website call.",
+              createdAt: Date.now() - 4 * 60 * 1000
+            }
+          ]
+        },
+
+        "demo-form": {
+          id: "demo-form",
+          name: "",
+          phone: "+15550101002",
+          channel: "form",
+          messages: [
+            {
+              id: "m2",
+              direction: "in",
+              text: "Website form received.",
+              createdAt: Date.now() - 31 * 60 * 1000
+            },
+            {
+              id: "m3",
+              direction: "in",
+              text: "I would like to talk about getting an estimate.",
+              createdAt: Date.now() - 30 * 60 * 1000
+            }
+          ]
+        },
+
+        "demo-chat": {
+          id: "demo-chat",
+          name: "",
+          phone: "",
+          channel: "chat",
+          messages: [
+            {
+              id: "m4",
+              direction: "in",
+              text: "Are you available to answer a question?",
+              createdAt: Date.now() - 3 * 60 * 60 * 1000
+            }
+          ]
+        }
+      },
+
+      connections: [
+        {
+          key: "google",
+          label: "Google",
+          connected: true,
+          detail: "Connected"
+        },
+        {
+          key: "facebook",
+          label: "Facebook",
+          connected: false,
+          detail: "Not connected"
+        },
+        {
+          key: "instagram",
+          label: "Instagram",
+          connected: false,
+          detail: "Not connected"
+        }
+      ]
+    } : null;
+
+    const defaultAdapter = {
+      async listConversations() {
+        return IS_DEMO ? structuredCloneSafe(DEMO_DATA.conversations) : [];
+      },
+
+      async getThread(id) {
+        if (!IS_DEMO) {
+          return { id, messages: [] };
+        }
+
+        const thread = DEMO_DATA.threads[String(id)];
+        return thread
+          ? structuredCloneSafe(thread)
+          : { id, messages: [] };
+      },
+
+      async sendReply(id, text) {
+        if (!IS_DEMO) return;
+
+        const thread = DEMO_DATA.threads[String(id)];
+        if (!thread) return;
+
+        const message = {
+          id: "demo-" + Date.now(),
+          direction: "out",
+          text: String(text),
+          createdAt: Date.now(),
+          status: "sent"
+        };
+
+        thread.messages.push(message);
+
+        const conversation =
+          DEMO_DATA.conversations.find(item => String(item.id) === String(id));
+
+        if (conversation) {
+          conversation.preview = text;
+          conversation.updatedAt = Date.now();
+          conversation.unread = false;
+          conversation.isNew = false;
+        }
+
+        return structuredCloneSafe(message);
+      },
+
+      async registerPush(enabled = true) {
+        if (!enabled) {
+          localStorage.setItem("wss-connect-demo-push", "0");
+          return { enabled: false };
+        }
+
+        if ("Notification" in window &&
+            Notification.permission === "default") {
+          const permission = await Notification.requestPermission();
+
+          if (permission !== "granted") {
+            return { enabled: false };
+          }
+        }
+
+        localStorage.setItem("wss-connect-demo-push", "1");
+        return { enabled: true };
+      },
+
+      async setClientCode(code) {
+        if (IS_DEMO) {
+          DEMO_DATA.business.clientCode = String(code);
+        }
+        return { ok: true };
+      },
+
+      async listConnections() {
+        return IS_DEMO
+          ? structuredCloneSafe(DEMO_DATA.connections)
+          : [];
+      },
+
+      async connectAccount(key) {
+        if (!IS_DEMO) return;
+
+        const item = DEMO_DATA.connections.find(x => x.key === key);
+        if (item) {
+          item.connected = true;
+          item.detail = "Connected";
+          return structuredCloneSafe(item);
+        }
+      },
+
+      async disconnectAccount(key) {
+        if (!IS_DEMO) return;
+
+        const item = DEMO_DATA.connections.find(x => x.key === key);
+        if (item) {
+          item.connected = false;
+          item.detail = "Not connected";
+          return structuredCloneSafe(item);
+        }
+      },
+
+      async getBusiness() {
+        return IS_DEMO
+          ? structuredCloneSafe(DEMO_DATA.business)
+          : {};
+      },
+
+      async getPushState() {
+        if (!IS_DEMO) return false;
+        return localStorage.getItem("wss-connect-demo-push") === "1";
+      }
+    };
+
+    /*
+     * Do not overwrite a real adapter if the host installed it before
+     * this UI script runs.
+     */
+    window.CONNECT_DATA = window.CONNECT_DATA || defaultAdapter;
+
+    const state = {
+      view: "inbox",
+      conversations: [],
+      activeConversation: null,
+      activeThread: null,
+      connections: [],
+      business: {},
+      installPrompt: null,
+      pushEnabled: false,
+      refreshing: false,
+      sending: false
+    };
+
+    const el = {};
+
+    const ICONS = {
+      wss: `
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M5 8l4.5 16L16 12l6.5 12L27 8"
+                stroke="currentColor"
+                stroke-width="4.1"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>`,
+
+      refresh: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 7v5h-5M4 17v-5h5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+          <path d="M6.1 8.1A7 7 0 0 1 18.5 6L20 8M4 16l1.5 2A7 7 0 0 0 18 15.9"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"/>
+        </svg>`,
+
+      call: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7.4 3.8l2 4.1-2.2 1.8a15.2 15.2 0 0 0 7.1 7.1l1.8-2.2 4.1 2c.5.2.8.8.6 1.4l-.8 2.4c-.2.6-.8 1-1.4 1C10 20.8 3.2 14 2.6 5.4c0-.6.4-1.2 1-1.4L6 3.2c.6-.2 1.2.1 1.4.6Z"
+                stroke="currentColor"
+                stroke-width="1.9"
+                stroke-linejoin="round"/>
+        </svg>`,
+
+      chat: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"/>
+          <path d="M7.5 9.5h9M7.5 13h6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"/>
+        </svg>`,
+
+      form: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4" y="3" width="16" height="18" rx="2"
+                stroke="currentColor"
+                stroke-width="2"/>
+          <path d="M8 8h8M8 12h8M8 16h5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"/>
+        </svg>`,
+
+      missed_call: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M8.2 4.4l1.5 3.2-2 1.7a14 14 0 0 0 7 7l1.7-2 3.2 1.5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+          <path d="M4 4l4 4M8 4 4 8"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"/>
+        </svg>`,
+
+      back: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M15 5l-7 7 7 7"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>`,
+
+      send: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m4 4 17 8-17 8 3-8-3-8Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"/>
+          <path d="M7 12h14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"/>
+        </svg>`,
+
+      inbox: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 5h16v14H4z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"/>
+          <path d="M4 13h4l2 3h4l2-3h4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"/>
+        </svg>`,
+
+      connections: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M8 12h8M6.5 8.5l-2-2a3.5 3.5 0 1 1 5-5l2 2M17.5 15.5l2 2a3.5 3.5 0 1 1-5 5l-2-2"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"/>
+          <path d="M8.5 15.5l7-7"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"/>
+        </svg>`,
+
+      settings: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
+                stroke="currentColor"
+                stroke-width="2"/>
+          <path d="m19 13.5 1.7 1.3-2 3.5-2-.8a8 8 0 0 1-2 1.2l-.3 2.1h-4l-.3-2.1a8 8 0 0 1-2-1.2l-2 .8-2-3.5L5 13.5a8.2 8.2 0 0 1 0-3L3.3 9.2l2-3.5 2 .8a8 8 0 0 1 2-1.2l.3-2.1h4l.3 2.1a8 8 0 0 1 2 1.2l2-.8 2 3.5L19 10.5a8.2 8.2 0 0 1 0 3Z"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linejoin="round"/>
+        </svg>`,
+
+      empty: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16v12H4z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"/>
+          <path d="M4 13h4l2 3h4l2-3h4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"/>
+        </svg>`,
+
+      google: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 12h-8"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"/>
+          <path d="M18.7 7A8 8 0 1 0 20 12"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"/>
+        </svg>`,
+
+      facebook: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M14 21v-8h3l.5-4H14V7.4c0-1.2.4-2.4 2.1-2.4H18V1.6c-.7-.1-1.7-.2-3-.2-3 0-5 1.8-5 5.3V9H7v4h3v8"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"/>
+        </svg>`,
+
+      instagram: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"
+                stroke="currentColor"
+                stroke-width="2"/>
+          <circle cx="12" cy="12" r="4"
+                  stroke="currentColor"
+                  stroke-width="2"/>
+          <circle cx="17.5" cy="6.5" r="1"
+                  fill="currentColor"/>
+        </svg>`,
+
+      link: `
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.2M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.2"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"/>
+        </svg>`
+    };
+
+    function structuredCloneSafe(value) {
+      if (typeof structuredClone === "function") {
+        return structuredClone(value);
+      }
+      return JSON.parse(JSON.stringify(value));
+    }
+
+    function cacheElements() {
+      [
+        "sampleBanner",
+        "inboxView",
+        "threadView",
+        "connectionsView",
+        "settingsView",
+        "bottomNav",
+        "businessMark",
+        "inboxTitle",
+        "refreshButton",
+        "refreshIcon",
+        "heartbeatTitle",
+        "heartbeatSub",
+        "conversationCount",
+        "inboxLoading",
+        "inboxError",
+        "conversationList",
+        "inboxEmpty",
+        "emptyInboxIcon",
+        "threadBack",
+        "backIcon",
+        "threadName",
+        "threadContext",
+        "threadCall",
+        "threadCallIcon",
+        "backAllMessages",
+        "messages",
+        "replyForm",
+        "replyInput",
+        "sendButton",
+        "sendIcon",
+        "composerStatus",
+        "connectionList",
+        "clientCode",
+        "saveClientCode",
+        "toggleClientCode",
+        "clientCodeStatus",
+        "pushToggle",
+        "pushStatus",
+        "installPanel",
+        "installButton",
+        "navInboxIcon",
+        "navConnectionsIcon",
+        "navSettingsIcon",
+        "navUnreadCount",
+        "toastRegion"
+      ].forEach(id => {
+        el[id] = document.getElementById(id);
+      });
+    }
+
+    function paintIcons() {
+      el.businessMark.innerHTML = ICONS.wss;
+      el.refreshIcon.innerHTML = ICONS.refresh;
+      el.emptyInboxIcon.innerHTML = ICONS.empty;
+      el.backIcon.innerHTML = ICONS.back;
+      el.threadCallIcon.innerHTML = ICONS.call;
+      el.sendIcon.innerHTML = ICONS.send;
+      el.navInboxIcon.innerHTML = ICONS.inbox;
+      el.navConnectionsIcon.innerHTML = ICONS.connections;
+      el.navSettingsIcon.innerHTML = ICONS.settings;
+    }
+
+    function adapter() {
+      return window.CONNECT_DATA;
+    }
+
+    async function callAdapter(method, ...args) {
+      const target = adapter();
+
+      if (!target || typeof target[method] !== "function") {
+        throw new Error(`CONNECT_DATA.${method}() is not implemented.`);
+      }
+
+      return await target[method](...args);
+    }
+
+    function safeText(value, fallback = "") {
+      const result = value == null ? "" : String(value).trim();
+      return result || fallback;
+    }
+
+    function channelLabel(channel) {
+      switch (channel) {
+        case "missed_call":
+          return "Missed call";
+        case "form":
+          return "Website form";
+        case "chat":
+          return "Website chat";
+        default:
+          return "Website lead";
+      }
+    }
+
+    function leadDisplayName(item) {
+      return safeText(item && item.name, channelLabel(item && item.channel));
+    }
+
+    function iconForChannel(channel) {
+      if (channel === "missed_call") return ICONS.missed_call;
+      if (channel === "form") return ICONS.form;
+      return ICONS.chat;
+    }
+
+    function normalizePhone(phone) {
+      const value = safeText(phone);
+      if (!value) return "";
+
+      const leadingPlus = value.startsWith("+") ? "+" : "";
+      const digits = value.replace(/\D/g, "");
+
+      return digits ? leadingPlus + digits : "";
+    }
+
+    function phoneHref(phone) {
+      const normalized = normalizePhone(phone);
+      return normalized ? `tel:${normalized}` : "";
+    }
+
+    function formatPhone(phone) {
+      const digits = safeText(phone).replace(/\D/g, "");
+
+      if (digits.length === 10) {
+        return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+      }
+
+      if (digits.length === 11 && digits[0] === "1") {
+        return `(${digits.slice(1,4)}) ${digits.slice(4,7)}-${digits.slice(7)}`;
+      }
+
+      return safeText(phone);
+    }
+
+    function parseTime(value) {
+      if (value instanceof Date) return value.getTime();
+      if (typeof value === "number") return value;
+
+      const time = Date.parse(value);
+      return Number.isFinite(time) ? time : 0;
+    }
+
+    function timeAgo(value) {
+      const timestamp = parseTime(value);
+      if (!timestamp) return "";
+
+      const seconds = Math.max(0, Math.floor((Date.now() - timestamp) / 1000));
+
+      if (seconds < 30) return "Now";
+      if (seconds < 60) return `${seconds}s`;
+
+      const minutes = Math.floor(seconds / 60);
+      if (minutes < 60) return `${minutes}m`;
+
+      const hours = Math.floor(minutes / 60);
+      if (hours < 24) return `${hours}h`;
+
+      const days = Math.floor(hours / 24);
+      if (days < 7) return `${days}d`;
+
+      const date = new Date(timestamp);
+      return date.toLocaleDateString(undefined, {
+        month: "short",
+        day: "numeric"
+      });
+    }
+
+    function clockTime(value) {
+      const timestamp = parseTime(value);
+      if (!timestamp) return "";
+
+      return new Date(timestamp).toLocaleTimeString(undefined, {
+        hour: "numeric",
+        minute: "2-digit"
+      });
+    }
+
+    function escapeHTML(value) {
+      return String(value == null ? "" : value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function setAccent(value) {
+      const color = safeText(value);
+      if (!/^#[0-9a-fA-F]{6}$/.test(color)) return;
+
+      document.documentElement.style.setProperty("--accent", color);
+
+      const r = parseInt(color.slice(1,3), 16);
+      const g = parseInt(color.slice(3,5), 16);
+      const b = parseInt(color.slice(5,7), 16);
+
+      document.documentElement.style.setProperty(
+        "--accent-rgb",
+        `${r},${g},${b}`
+      );
+
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute("content", color);
+    }
+
+    function toast(title, copy = "", type = "") {
+      const node = document.createElement("div");
+      node.className = `toast ${type}`.trim();
+
+      const heading = document.createElement("p");
+      heading.className = "toast-title";
+      heading.textContent = title;
+
+      node.appendChild(heading);
+
+      if (copy) {
+        const body = document.createElement("p");
+        body.className = "toast-copy";
+        body.textContent = copy;
+        node.appendChild(body);
+      }
+
+      el.toastRegion.appendChild(node);
+
+      window.setTimeout(() => {
+        node.remove();
+      }, 3300);
+    }
+
+    function setView(view) {
+      state.view = view;
+
+      el.inboxView.hidden = view !== "inbox";
+      el.threadView.hidden = view !== "thread";
+      el.connectionsView.hidden = view !== "connections";
+      el.settingsView.hidden = view !== "settings";
+
+      const showNav = view !== "thread";
+      el.bottomNav.hidden = !showNav;
+
+      document.querySelectorAll("[data-nav]").forEach(button => {
+        const active = button.dataset.nav === view;
+        button.classList.toggle("active", active);
+
+        if (active) {
+          button.setAttribute("aria-current", "page");
+        } else {
+          button.removeAttribute("aria-current");
+        }
+      });
+
+      if (view !== "thread") {
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+    }
+
+    function renderHeartbeat() {
+      const total = state.conversations.length;
+      const unread = state.conversations.filter(item => !!item.unread).length;
+
+      if (unread > 1) {
+        el.heartbeatTitle.textContent = `${unread} new leads need you`;
+        el.heartbeatSub.textContent =
+          "Call or reply while they are still thinking about the job.";
+      } else if (unread === 1) {
+        el.heartbeatTitle.textContent = "1 new lead needs you";
+        el.heartbeatSub.textContent =
+          "One tap gets you straight into the conversation.";
+      } else if (total > 0) {
+        el.heartbeatTitle.textContent = "You’re caught up";
+        el.heartbeatSub.textContent =
+          "Your website is connected. New lead activity will show up here.";
+      } else {
+        el.heartbeatTitle.textContent = "Ready for your first lead";
+        el.heartbeatSub.textContent =
+          "Calls, forms and chats from your website will land here automatically.";
+      }
+
+      el.conversationCount.textContent =
+        total === 1 ? "1 conversation" :
+        total > 1 ? `${total} conversations` : "";
+
+      if (unread > 0) {
+        el.navUnreadCount.hidden = false;
+        el.navUnreadCount.textContent = unread > 99 ? "99+" : String(unread);
+      } else {
+        el.navUnreadCount.hidden = true;
+        el.navUnreadCount.textContent = "";
+      }
+    }
+
+    function renderInbox() {
+      renderHeartbeat();
+
+      el.conversationList.innerHTML = "";
+
+      if (!state.conversations.length) {
+        el.inboxEmpty.hidden = false;
+        return;
+      }
+
+      el.inboxEmpty.hidden = true;
+
+      const sorted = [...state.conversations].sort((a, b) =>
+        parseTime(b.updatedAt) - parseTime(a.updatedAt)
+      );
+
+      sorted.forEach(conversation => {
+        const card = document.createElement("article");
+        card.className =
+          "conversation-card" +
+          (conversation.unread ? " unread" : "") +
+          (conversation.unread && conversation.isNew ? " is-new" : "");
+        card.setAttribute("role", "listitem");
+
+        const main = document.createElement("button");
+        main.type = "button";
+        main.className = "conversation-main";
+        main.setAttribute(
+          "aria-label",
+          `Open ${leadDisplayName(conversation)} conversation`
+        );
+
+        main.innerHTML = `
+          <div class="conversation-topline">
+            <span class="channel-badge" aria-hidden="true">
+              ${iconForChannel(conversation.channel)}
+            </span>
+            <span class="lead-name">
+              ${escapeHTML(leadDisplayName(conversation))}
+            </span>
+            <span class="time">
+              ${escapeHTML(timeAgo(conversation.updatedAt))}
+            </span>
+          </div>
+
+          ${conversation.unread
+            ? `<span class="new-label">New lead</span>`
+            : ""}
+
+          <p class="preview">
+            ${escapeHTML(
+              safeText(conversation.preview, channelLabel(conversation.channel))
+            )}
+          </p>
+        `;
+
+        main.addEventListener("click", () => {
+          openThread(conversation);
+        });
+
+        card.appendChild(main);
+
+        const phone = phoneHref(conversation.phone);
+
+        if (phone) {
+          const actions = document.createElement("div");
+          actions.className = "card-actions";
+
+          const call = document.createElement("a");
+          call.className = "call-button";
+          call.href = phone;
+          call.setAttribute(
+            "aria-label",
+            `Call ${leadDisplayName(conversation)}`
+          );
+          call.innerHTML = ICONS.call;
+
+          call.addEventListener("click", event => {
+            event.stopPropagation();
+          });
+
+          actions.appendChild(call);
+          card.appendChild(actions);
+        }
+
+        el.conversationList.appendChild(card);
+      });
+    }
+
+    function showInboxError(message) {
+      el.inboxError.hidden = false;
+      el.inboxError.innerHTML = `
+        <div class="error-box" role="alert">
+          <strong>Couldn’t load leads.</strong>
+          <p>${escapeHTML(message || "Use Refresh to try again.")}</p>
+        </div>
+      `;
+    }
+
+    async function loadInbox({ announce = false } = {}) {
+      if (state.refreshing) return;
+
+      state.refreshing = true;
+      el.refreshButton.disabled = true;
+      el.refreshIcon.classList.add("is-spinning");
+      el.inboxError.hidden = true;
+
+      const firstLoad = !state.conversations.length;
+
+      if (firstLoad) {
+        el.inboxLoading.hidden = false;
+        el.conversationList.hidden = true;
+        el.inboxEmpty.hidden = true;
+      }
+
+      try {
+        const result = await callAdapter("listConversations");
+
+        state.conversations = Array.isArray(result) ? result : [];
+
+        el.inboxLoading.hidden = true;
+        el.conversationList.hidden = false;
+
+        renderInbox();
+
+        if (announce) {
+          toast(
+            "Leads refreshed",
+            state.conversations.length
+              ? "You’re looking at the latest activity."
+              : "No new lead activity yet."
+          );
+        }
+      } catch (error) {
+        el.inboxLoading.hidden = true;
+        el.conversationList.hidden = false;
+
+        showInboxError(error && error.message);
+      } finally {
+        state.refreshing = false;
+        el.refreshButton.disabled = false;
+        el.refreshIcon.classList.remove("is-spinning");
+      }
+    }
+
+    async function openThread(conversation) {
+      state.activeConversation = conversation;
+      state.activeThread = null;
+
+      el.threadName.textContent = leadDisplayName(conversation);
+      el.threadContext.textContent = channelLabel(conversation.channel);
+
+      const href = phoneHref(conversation.phone);
+
+      if (href) {
+        el.threadCall.hidden = false;
+        el.threadCall.href = href;
+        el.threadCall.setAttribute(
+          "aria-label",
+          `Call ${leadDisplayName(conversation)} at ${formatPhone(conversation.phone)}`
+        );
+      } else {
+        el.threadCall.hidden = true;
+        el.threadCall.removeAttribute("href");
+      }
+
+      el.messages.innerHTML = `
+        <div class="skeleton-card">
+          <div class="skeleton-line w1"></div>
+          <div class="skeleton-line w2"></div>
+        </div>
+      `;
+
+      el.replyInput.value = "";
+      setComposerStatus("");
+      setView("thread");
+
+      try {
+        const thread = await callAdapter("getThread", conversation.id);
+
+        state.activeThread = {
+          id: conversation.id,
+          name: safeText(thread && thread.name, conversation.name),
+          phone: safeText(thread && thread.phone, conversation.phone),
+          channel: safeText(thread && thread.channel, conversation.channel),
+          messages: Array.isArray(thread && thread.messages)
+            ? thread.messages
+            : []
+        };
+
+        conversation.unread = false;
+        conversation.isNew = false;
+
+        el.threadName.textContent =
+          leadDisplayName({
+            name: state.activeThread.name,
+            channel: state.activeThread.channel
+          });
+
+        el.threadContext.textContent =
+          [
+            channelLabel(state.activeThread.channel),
+            formatPhone(state.activeThread.phone)
+          ].filter(Boolean).join(" • ");
+
+        const threadPhone = phoneHref(state.activeThread.phone);
+
+        if (threadPhone) {
+          el.threadCall.hidden = false;
+          el.threadCall.href = threadPhone;
+        } else {
+          el.threadCall.hidden = true;
+        }
+
+        renderThread();
+        renderHeartbeat();
+      } catch (error) {
+        el.messages.innerHTML = `
+          <div class="error-box" role="alert">
+            <strong>Couldn’t open this conversation.</strong>
+            <p>${escapeHTML(error && error.message || "Try again.")}</p>
+          </div>
+        `;
+      }
+    }
+
+    function renderThread() {
+      const thread = state.activeThread;
+      el.messages.innerHTML = "";
+
+      if (!thread || !thread.messages.length) {
+        el.messages.innerHTML = `
+          <section class="empty-state">
+            <div class="empty-icon" aria-hidden="true">${ICONS.chat}</div>
+            <h2 class="empty-title">Conversation ready</h2>
+            <p class="empty-copy">
+              There are no message details to show yet. You can still call
+              the lead when a phone number is available.
+            </p>
+          </section>
+        `;
+        return;
+      }
+
+      thread.messages.forEach(message => {
+        const bubble = document.createElement("article");
+        const direction = message.direction === "out" ? "out" : "in";
+        bubble.className = `message ${direction}`;
+
+        const text = document.createElement("p");
+        text.className = "message-text";
+        text.textContent = safeText(message.text);
+
+        const meta = document.createElement("div");
+        meta.className = "message-meta";
+
+        const bits = [
+          clockTime(message.createdAt),
+          direction === "out" ? safeText(message.status) : ""
+        ].filter(Boolean);
+
+        meta.textContent = bits.join(" • ");
+
+        bubble.appendChild(text);
+
+        if (bits.length) {
+          bubble.appendChild(meta);
+        }
+
+        el.messages.appendChild(bubble);
+      });
+
+      requestAnimationFrame(() => {
+        el.messages.scrollTop = el.messages.scrollHeight;
+      });
+    }
+
+    function setComposerStatus(message, error = false) {
+      el.composerStatus.textContent = message;
+      el.composerStatus.classList.toggle("error", error);
+    }
+
+    async function sendCurrentReply() {
+      if (state.sending || !state.activeThread) return;
+
+      const text = el.replyInput.value.trim();
+      if (!text) {
+        el.replyInput.focus();
+        return;
+      }
+
+      state.sending = true;
+      el.sendButton.disabled = true;
+      el.replyInput.disabled = true;
+      setComposerStatus("Sending…");
+
+      try {
+        const returned = await callAdapter(
+          "sendReply",
+          state.activeThread.id,
+          text
+        );
+
+        /*
+         * Refresh the authoritative thread after the write.
+         * If the backend already returns the sent message, we can render
+         * immediately while still re-reading the source of truth.
+         */
+        if (returned && typeof returned === "object") {
+          state.activeThread.messages.push({
+            ...returned,
+            direction: returned.direction || "out",
+            text: safeText(returned.text, text),
+            createdAt: returned.createdAt || Date.now(),
+            status: returned.status || "sent"
+          });
+
+          renderThread();
+        }
+
+        el.replyInput.value = "";
+        autoSizeReply();
+        setComposerStatus("Sent");
+
+        const refreshed = await callAdapter(
+          "getThread",
+          state.activeThread.id
+        );
+
+        if (refreshed && Array.isArray(refreshed.messages)) {
+          state.activeThread = {
+            ...state.activeThread,
+            ...refreshed,
+            messages: refreshed.messages
+          };
+          renderThread();
+        }
+
+        const conversation =
+          state.conversations.find(
+            item => String(item.id) === String(state.activeThread.id)
+          );
+
+        if (conversation) {
+          conversation.preview = text;
+          conversation.updatedAt = Date.now();
+          conversation.unread = false;
+          conversation.isNew = false;
+        }
+
+        renderHeartbeat();
+
+        window.setTimeout(() => {
+          if (el.composerStatus.textContent === "Sent") {
+            setComposerStatus("");
+          }
+        }, 2200);
+      } catch (error) {
+        setComposerStatus(
+          error && error.message
+            ? `Not sent — ${error.message}`
+            : "Not sent. Try again.",
+          true
+        );
+      } finally {
+        state.sending = false;
+        el.sendButton.disabled = false;
+        el.replyInput.disabled = false;
+        el.replyInput.focus();
+      }
+    }
+
+    function autoSizeReply() {
+      el.replyInput.style.height = "auto";
+      el.replyInput.style.height =
+        Math.min(el.replyInput.scrollHeight, 136) + "px";
+    }
+
+    function goBackToInbox() {
+      setView("inbox");
+      state.activeConversation = null;
+      state.activeThread = null;
+      loadInbox();
+    }
+
+    async function loadBusiness() {
+      if (typeof adapter().getBusiness !== "function") return;
+
+      try {
+        const business = await callAdapter("getBusiness");
+        state.business = business && typeof business === "object"
+          ? business
+          : {};
+
+        if (state.business.name) {
+          el.inboxTitle.textContent = state.business.name;
+        } else {
+          el.inboxTitle.textContent = "Your leads";
+        }
+
+        if (state.business.accent) {
+          setAccent(state.business.accent);
+        }
+
+        if (state.business.clientCode) {
+          el.clientCode.value = state.business.clientCode;
+        }
+
+        if (state.business.logoDataUri &&
+            /^data:image\//i.test(state.business.logoDataUri)) {
+          el.businessMark.innerHTML = "";
+          el.businessMark.style.backgroundImage =
+            `url("${state.business.logoDataUri.replaceAll('"', "%22")}")`;
+          el.businessMark.style.backgroundSize = "cover";
+          el.businessMark.style.backgroundPosition = "center";
+        }
+      } catch (_) {
+        /* Presentation metadata is optional. */
+      }
+    }
+
+    async function loadConnections() {
+      if (typeof adapter().listConnections !== "function") {
+        state.connections = [];
+        renderConnections();
+        return;
+      }
+
+      el.connectionList.innerHTML = `
+        <div class="skeleton-card">
+          <div class="skeleton-line w1"></div>
+          <div class="skeleton-line w2"></div>
+        </div>
+      `;
+
+      try {
+        const list = await callAdapter("listConnections");
+        state.connections = Array.isArray(list) ? list : [];
+        renderConnections();
+      } catch (error) {
+        el.connectionList.innerHTML = `
+          <div class="error-box" role="alert">
+            <strong>Couldn’t load connections.</strong>
+            <p>${escapeHTML(error && error.message || "Try again later.")}</p>
+          </div>
+        `;
+      }
+    }
+
+    function renderConnections() {
+      el.connectionList.innerHTML = "";
+
+      if (!state.connections.length) {
+        el.connectionList.innerHTML = `
+          <section class="empty-state">
+            <div class="empty-icon" aria-hidden="true">${ICONS.link}</div>
+            <h2 class="empty-title">No connections available yet</h2>
+            <p class="empty-copy">
+              When your backend provides social or account connections,
+              they will appear here automatically.
+            </p>
+          </section>
+        `;
+        return;
+      }
+
+      state.connections.forEach(connection => {
+        const row = document.createElement("div");
+        row.className = "connection-row";
+
+        const icon = document.createElement("div");
+        icon.className = "connection-icon";
+        icon.setAttribute("aria-hidden", "true");
+        icon.innerHTML =
+          ICONS[connection.key] ||
+          ICONS.link;
+
+        const copy = document.createElement("div");
+
+        const name = document.createElement("p");
+        name.className = "connection-name";
+        name.textContent = safeText(connection.label, "Connection");
+
+        const status = document.createElement("p");
+        status.className = "connection-status";
+        status.textContent =
+          safeText(
+            connection.detail,
+            connection.connected ? "Connected" : "Not connected"
+          );
+
+        copy.append(name, status);
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className =
+          "connection-button" +
+          (connection.connected ? " connected" : "");
+        button.textContent =
+          connection.connected ? "Disconnect" : "Connect";
+
+        button.addEventListener("click", () =>
+          toggleConnection(connection, button)
+        );
+
+        row.append(icon, copy, button);
+        el.connectionList.appendChild(row);
+      });
+    }
+
+    async function toggleConnection(connection, button) {
+      const method =
+        connection.connected ? "disconnectAccount" : "connectAccount";
+
+      if (typeof adapter()[method] !== "function") {
+        toast(
+          "Connection unavailable",
+          `CONNECT_DATA.${method}() is not implemented.`
+        );
+        return;
+      }
+
+      button.disabled = true;
+      const previous = button.textContent;
+      button.textContent =
+        connection.connected ? "Disconnecting…" : "Connecting…";
+
+      try {
+        await callAdapter(method, connection.key);
+        await loadConnections();
+
+        toast(
+          connection.connected ? "Disconnected" : "Connected",
+          safeText(connection.label, "Account")
+        );
+      } catch (error) {
+        button.disabled = false;
+        button.textContent = previous;
+
+        toast(
+          "Couldn’t change connection",
+          error && error.message || "Try again."
+        );
+      }
+    }
+
+    async function saveClientCode() {
+      const code = el.clientCode.value.trim();
+
+      if (!code) {
+        el.clientCodeStatus.textContent = "Enter your Client ID first.";
+        el.clientCodeStatus.classList.add("error");
+        el.clientCode.focus();
+        return;
+      }
+
+      el.saveClientCode.disabled = true;
+      el.clientCodeStatus.classList.remove("error");
+      el.clientCodeStatus.textContent = "Saving…";
+
+      try {
+        await callAdapter("setClientCode", code);
+        el.clientCodeStatus.textContent = "Client ID saved.";
+        toast("Client ID saved", "WSS Connect is ready to use this business.");
+        await loadInbox();
+      } catch (error) {
+        el.clientCodeStatus.classList.add("error");
+        el.clientCodeStatus.textContent =
+          error && error.message
+            ? error.message
+            : "Couldn’t save Client ID.";
+      } finally {
+        el.saveClientCode.disabled = false;
+      }
+    }
+
+    function toggleClientCodeVisibility() {
+      const isHidden = el.clientCode.type === "password";
+
+      el.clientCode.type = isHidden ? "text" : "password";
+      el.toggleClientCode.textContent =
+        isHidden ? "Hide code" : "Show code";
+      el.toggleClientCode.setAttribute(
+        "aria-pressed",
+        isHidden ? "true" : "false"
+      );
+    }
+
+    function normalizePushResult(result, fallback) {
+      if (typeof result === "boolean") return result;
+      if (result && typeof result.enabled === "boolean") {
+        return result.enabled;
+      }
+      return fallback;
+    }
+
+    async function loadPushState() {
+      if (typeof adapter().getPushState !== "function") {
+        state.pushEnabled =
+          "Notification" in window &&
+          Notification.permission === "granted";
+        el.pushToggle.checked = state.pushEnabled;
+        return;
+      }
+
+      try {
+        const result = await callAdapter("getPushState");
+        state.pushEnabled = normalizePushResult(result, false);
+        el.pushToggle.checked = state.pushEnabled;
+      } catch (_) {
+        state.pushEnabled = false;
+        el.pushToggle.checked = false;
+      }
+    }
+
+    async function changePushState() {
+      const requested = el.pushToggle.checked;
+
+      el.pushToggle.disabled = true;
+      el.pushStatus.classList.remove("error");
+      el.pushStatus.textContent =
+        requested ? "Turning alerts on…" : "Turning alerts off…";
+
+      try {
+        const result = await callAdapter("registerPush", requested);
+        state.pushEnabled = normalizePushResult(result, requested);
+        el.pushToggle.checked = state.pushEnabled;
+
+        if (requested && !state.pushEnabled) {
+          el.pushStatus.classList.add("error");
+          el.pushStatus.textContent =
+            "Notifications were not enabled on this device.";
+          return;
+        }
+
+        el.pushStatus.textContent =
+          state.pushEnabled
+            ? "New lead alerts are on."
+            : "New lead alerts are off.";
+
+        toast(
+          state.pushEnabled ? "Lead alerts on" : "Lead alerts off",
+          state.pushEnabled
+            ? "WSS Connect can tell you when a new lead arrives."
+            : "You will not receive new lead push alerts."
+        );
+      } catch (error) {
+        state.pushEnabled = !requested;
+        el.pushToggle.checked = state.pushEnabled;
+        el.pushStatus.classList.add("error");
+        el.pushStatus.textContent =
+          error && error.message
+            ? error.message
+            : "Couldn’t change notifications.";
+      } finally {
+        el.pushToggle.disabled = false;
+      }
+    }
+
+    function setupInstallPrompt() {
+      window.addEventListener("beforeinstallprompt", event => {
+        event.preventDefault();
+        state.installPrompt = event;
+        el.installPanel.hidden = false;
+      });
+
+      window.addEventListener("appinstalled", () => {
+        state.installPrompt = null;
+        el.installPanel.hidden = true;
+        toast("WSS Connect installed", "You can open it from your home screen.");
+      });
+
+      /*
+       * Hide install control unless the browser says this PWA is installable.
+       * Standalone installations do not need the button either.
+       */
+      const standalone =
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.navigator.standalone === true;
+
+      el.installPanel.hidden = standalone || !state.installPrompt;
+    }
+
+    async function installPWA() {
+      if (!state.installPrompt) {
+        toast(
+          "Install isn’t available here",
+          "Use your browser’s Add to Home Screen option if it is offered."
+        );
+        return;
+      }
+
+      const prompt = state.installPrompt;
+      state.installPrompt = null;
+
+      await prompt.prompt();
+
+      try {
+        await prompt.userChoice;
+      } finally {
+        el.installPanel.hidden = true;
+      }
+    }
+
+    function setupServiceWorker() {
+      if (!("serviceWorker" in navigator)) return;
+
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .catch(() => {
+            /*
+             * Existing deployments may use another registration path.
+             * Lead UI remains usable if registration is handled elsewhere.
+             */
+          });
+      });
+    }
+
+    function bindEvents() {
+      el.refreshButton.addEventListener("click", () => {
+        loadInbox({ announce: true });
+      });
+
+      el.threadBack.addEventListener("click", goBackToInbox);
+      el.backAllMessages.addEventListener("click", goBackToInbox);
+
+      el.replyForm.addEventListener("submit", event => {
+        event.preventDefault();
+        sendCurrentReply();
+      });
+
+      el.replyInput.addEventListener("input", autoSizeReply);
+
+      el.replyInput.addEventListener("keydown", event => {
+        if (
+          event.key === "Enter" &&
+          !event.shiftKey &&
+          !event.isComposing
+        ) {
+          event.preventDefault();
+          sendCurrentReply();
+        }
+      });
+
+      el.bottomNav.addEventListener("click", event => {
+        const button = event.target.closest("[data-nav]");
+        if (!button) return;
+
+        const view = button.dataset.nav;
+        setView(view);
+
+        if (view === "inbox") {
+          loadInbox();
+        } else if (view === "connections") {
+          loadConnections();
+        }
+      });
+
+      el.saveClientCode.addEventListener("click", saveClientCode);
+      el.toggleClientCode.addEventListener(
+        "click",
+        toggleClientCodeVisibility
+      );
+
+      el.clientCode.addEventListener("keydown", event => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          saveClientCode();
+        }
+      });
+
+      el.pushToggle.addEventListener("change", changePushState);
+      el.installButton.addEventListener("click", installPWA);
+
+      /*
+       * When the app returns from the background, quietly refresh leads.
+       * The visible list remains in place, improving perceived speed.
+       */
+      document.addEventListener("visibilitychange", () => {
+        if (
+          document.visibilityState === "visible" &&
+          state.view === "inbox"
+        ) {
+          loadInbox();
+        }
+      });
+    }
+
+    async function boot() {
+      cacheElements();
+      paintIcons();
+      bindEvents();
+      setupInstallPrompt();
+      setupServiceWorker();
+
+      el.sampleBanner.hidden = !IS_DEMO;
+
+      await Promise.allSettled([
+        loadBusiness(),
+        loadPushState()
+      ]);
+
+      await loadInbox();
+
+      /*
+       * A real backend can fire this browser event after receiving a lead
+       * through WebSocket/SSE/push foreground handling:
+       *
+       * window.dispatchEvent(new CustomEvent("wss:new-lead", {
+       *   detail: { title: "New lead", message: "A website lead just came in." }
+       * }));
+       *
+       * No backend dependency is embedded here; the event only refreshes
+       * through CONNECT_DATA.listConversations().
+       */
+      window.addEventListener("wss:new-lead", event => {
+        const detail = event.detail || {};
+
+        toast(
+          safeText(detail.title, "NEW LEAD"),
+          safeText(
+            detail.message,
+            "Your website just brought in a new conversation."
+          ),
+          "lead"
+        );
+
+        loadInbox();
+      });
+    }
+
+    boot();
+  })();
+  </script>
+</body>
+</html>

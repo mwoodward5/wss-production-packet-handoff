@@ -1,0 +1,121 @@
+{
+ "id": "slab-planner-pro",
+ "source": "6ec92ab6-ba9d-4e0e-8931-7057c7b9abd7",
+ "palette": {
+  "vars": {
+   "--brand": "oklch(0.78 0.24 142)",
+   "--brand-ink": "oklch(0.18 0.02 240)",
+   "--ink": "oklch(0.13 0.02 240)",
+   "--ink-2": "oklch(0.2 0.015 240)",
+   "--paper": "oklch(0.985 0 0)",
+   "--grit": "oklch(0.86 0.005 240)",
+   "--grit-2": "oklch(0.55 0.01 240)",
+   "--background": "oklch(1 0 0)",
+   "--foreground": "oklch(0.13 0.02 240)",
+   "--card": "oklch(1 0 0)",
+   "--card-foreground": "oklch(0.13 0.02 240)",
+   "--popover": "oklch(1 0 0)",
+   "--popover-foreground": "oklch(0.13 0.02 240)",
+   "--primary": "oklch(0.78 0.24 142)",
+   "--primary-foreground": "oklch(0.13 0.02 240)",
+   "--secondary": "oklch(0.968 0.007 247.896)",
+   "--secondary-foreground": "oklch(0.13 0.02 240)",
+   "--muted": "oklch(0.968 0.007 247.896)",
+   "--muted-foreground": "oklch(0.554 0.046 257.417)",
+   "--accent": "oklch(0.968 0.007 247.896)",
+   "--accent-foreground": "oklch(0.208 0.042 265.755)",
+   "--destructive": "oklch(0.577 0.245 27.325)",
+   "--destructive-foreground": "oklch(0.984 0.003 247.858)",
+   "--border": "oklch(0.929 0.013 255.508)",
+   "--input": "oklch(0.929 0.013 255.508)",
+   "--ring": "oklch(0.704 0.04 256.788)",
+   "--chart-1": "oklch(0.646 0.222 41.116)",
+   "--chart-2": "oklch(0.6 0.118 184.704)",
+   "--chart-3": "oklch(0.398 0.07 227.392)",
+   "--chart-4": "oklch(0.828 0.189 84.429)",
+   "--chart-5": "oklch(0.769 0.188 70.08)",
+   "--sidebar": "oklch(0.984 0.003 247.858)",
+   "--sidebar-foreground": "oklch(0.129 0.042 264.695)",
+   "--sidebar-primary": "oklch(0.208 0.042 265.755)",
+   "--sidebar-primary-foreground": "oklch(0.984 0.003 247.858)",
+   "--sidebar-accent": "oklch(0.968 0.007 247.896)",
+   "--sidebar-accent-foreground": "oklch(0.208 0.042 265.755)",
+   "--sidebar-border": "oklch(0.929 0.013 255.508)",
+   "--sidebar-ring": "oklch(0.704 0.04 256.788)"
+  },
+  "mode": "light",
+  "darkVars": {
+   "--background": "oklch(0.129 0.042 264.695)",
+   "--foreground": "oklch(0.984 0.003 247.858)",
+   "--card": "oklch(0.208 0.042 265.755)",
+   "--card-foreground": "oklch(0.984 0.003 247.858)",
+   "--popover": "oklch(0.208 0.042 265.755)",
+   "--popover-foreground": "oklch(0.984 0.003 247.858)",
+   "--primary": "oklch(0.929 0.013 255.508)",
+   "--primary-foreground": "oklch(0.208 0.042 265.755)",
+   "--secondary": "oklch(0.279 0.041 260.031)",
+   "--secondary-foreground": "oklch(0.984 0.003 247.858)",
+   "--muted": "oklch(0.279 0.041 260.031)",
+   "--muted-foreground": "oklch(0.704 0.04 256.788)",
+   "--accent": "oklch(0.279 0.041 260.031)",
+   "--accent-foreground": "oklch(0.984 0.003 247.858)",
+   "--destructive": "oklch(0.704 0.191 22.216)",
+   "--destructive-foreground": "oklch(0.984 0.003 247.858)",
+   "--border": "oklch(1 0 0 / 10%)",
+   "--input": "oklch(1 0 0 / 15%)",
+   "--ring": "oklch(0.551 0.027 264.364)",
+   "--chart-1": "oklch(0.488 0.243 264.376)",
+   "--chart-2": "oklch(0.696 0.17 162.48)",
+   "--chart-3": "oklch(0.769 0.188 70.08)",
+   "--chart-4": "oklch(0.627 0.265 303.9)",
+   "--chart-5": "oklch(0.645 0.246 16.439)",
+   "--sidebar": "oklch(0.208 0.042 265.755)",
+   "--sidebar-foreground": "oklch(0.984 0.003 247.858)",
+   "--sidebar-primary": "oklch(0.488 0.243 264.376)",
+   "--sidebar-primary-foreground": "oklch(0.984 0.003 247.858)",
+   "--sidebar-accent": "oklch(0.279 0.041 260.031)",
+   "--sidebar-accent-foreground": "oklch(0.984 0.003 247.858)",
+   "--sidebar-border": "oklch(1 0 0 / 10%)",
+   "--sidebar-ring": "oklch(0.551 0.027 264.364)"
+  }
+ },
+ "fonts": {
+  "display": "Archivo",
+  "body": "Inter",
+  "googleImport": "https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+ },
+ "radius": "0.625rem",
+ "shadows": [],
+ "keyframes": [
+  {
+   "name": "grade-sweep",
+   "css": "@keyframes grade-sweep { 0% { transform: translateX(-30%); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateX(130%); opacity: 0; } }"
+  },
+  {
+   "name": "laser-scan",
+   "css": "@keyframes laser-scan { 0% { transform: translateY(-20%); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(120%); opacity: 0; } }"
+  },
+  {
+   "name": "sheen",
+   "css": "@keyframes sheen { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }"
+  },
+  {
+   "name": "dust-drift",
+   "css": "@keyframes dust-drift { 0% { transform: translate3d(0,0,0); opacity: 0.0; } 20% { opacity: 0.7; } 100% { transform: translate3d(40px,-60px,0); opacity: 0; } }"
+  },
+  {
+   "name": "grade-laser-h",
+   "css": "@keyframes grade-laser-h { 0% { transform: translateX(-10%); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(110%); opacity: 0; } }"
+  },
+  {
+   "name": "led-blink",
+   "css": "@keyframes led-blink { 0%, 60% { opacity: 1; box-shadow: 0 0 10px var(--brand); } 70%, 100% { opacity: 0.35; box-shadow: 0 0 2px var(--brand); } }"
+  }
+ ],
+ "signatures": [
+  "glass",
+  "gradient-text",
+  "noise",
+  "gradient-heavy"
+ ]
+}
